@@ -28,11 +28,12 @@ function rebild_news_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Gendan';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '6';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Header: Global: Text area */
+  /* Overskrift: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -46,7 +47,7 @@ function rebild_news_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'Ingen resultater.';
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
-  /* Field: Content: Post date */
+  /* Felt: Indhold: Post date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
   $handler->display->display_options['fields']['created']['table'] = 'node';
   $handler->display->display_options['fields']['created']['field'] = 'created';
@@ -55,7 +56,7 @@ function rebild_news_views_default_views() {
   $handler->display->display_options['fields']['created']['element_wrapper_class'] = 'news-date';
   $handler->display->display_options['fields']['created']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['created']['date_format'] = 'short';
-  /* Field: Content: Title */
+  /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -66,7 +67,7 @@ function rebild_news_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'news-title';
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
-  /* Field: Content: Billede */
+  /* Felt: Indhold: Billede */
   $handler->display->display_options['fields']['field_main_image']['id'] = 'field_main_image';
   $handler->display->display_options['fields']['field_main_image']['table'] = 'field_data_field_main_image';
   $handler->display->display_options['fields']['field_main_image']['field'] = 'field_main_image';
@@ -78,23 +79,23 @@ function rebild_news_views_default_views() {
   $handler->display->display_options['fields']['field_main_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_main_image']['type'] = 'picture';
   $handler->display->display_options['fields']['field_main_image']['settings'] = array(
-    'picture_group' => 'news_block',
+    'picture_group' => 'nyhed',
     'fallback_image_style' => '',
     'image_link' => 'content',
   );
-  /* Sort criterion: Content: Post date */
+  /* Sort criterion: Indhold: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Indhold: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -110,7 +111,7 @@ function rebild_news_views_default_views() {
     t('News Articles'),
     t('more'),
     t('Apply'),
-    t('Reset'),
+    t('Gendan'),
     t('Sort by'),
     t('Asc'),
     t('Desc'),

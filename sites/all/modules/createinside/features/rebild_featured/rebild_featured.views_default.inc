@@ -29,6 +29,7 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Gendan';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -42,7 +43,7 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'Ingen resultater.';
   $handler->display->display_options['empty']['area']['format'] = 'full_html';
-  /* Field: Content: Link */
+  /* Felt: Indhold: Link */
   $handler->display->display_options['fields']['field_featured_link']['id'] = 'field_featured_link';
   $handler->display->display_options['fields']['field_featured_link']['table'] = 'field_data_field_featured_link';
   $handler->display->display_options['fields']['field_featured_link']['field'] = 'field_featured_link';
@@ -51,7 +52,7 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['fields']['field_featured_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_featured_link']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_featured_link']['type'] = 'link_plain';
-  /* Field: Content: Billede */
+  /* Felt: Indhold: Billede */
   $handler->display->display_options['fields']['field_featured_image']['id'] = 'field_featured_image';
   $handler->display->display_options['fields']['field_featured_image']['table'] = 'field_data_field_featured_image';
   $handler->display->display_options['fields']['field_featured_image']['field'] = 'field_featured_image';
@@ -64,11 +65,11 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['fields']['field_featured_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_featured_image']['type'] = 'picture';
   $handler->display->display_options['fields']['field_featured_image']['settings'] = array(
-    'picture_group' => 'grid_block',
-    'fallback_image_style' => '',
+    'picture_group' => 'blok',
+    'fallback_image_style' => 'blok',
     'image_link' => '',
   );
-  /* Field: Content: Title */
+  /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -79,7 +80,7 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'featured-title';
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Resumé */
+  /* Felt: Indhold: Resumé */
   $handler->display->display_options['fields']['field_featured_summary']['id'] = 'field_featured_summary';
   $handler->display->display_options['fields']['field_featured_summary']['table'] = 'field_data_field_featured_summary';
   $handler->display->display_options['fields']['field_featured_summary']['field'] = 'field_featured_summary';
@@ -93,7 +94,7 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['fields']['field_featured_summary']['settings'] = array(
     'trim_length' => '100',
   );
-  /* Field: Content: Post date */
+  /* Felt: Indhold: Post date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
   $handler->display->display_options['fields']['created']['table'] = 'node';
   $handler->display->display_options['fields']['created']['field'] = 'created';
@@ -101,24 +102,24 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['fields']['created']['element_wrapper_class'] = 'featured-date';
   $handler->display->display_options['fields']['created']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['created']['date_format'] = 'short';
-  /* Sort criterion: Content: Sticky */
+  /* Sort criterion: Indhold: Sticky */
   $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
   $handler->display->display_options['sorts']['sticky']['table'] = 'node';
   $handler->display->display_options['sorts']['sticky']['field'] = 'sticky';
   $handler->display->display_options['sorts']['sticky']['order'] = 'DESC';
-  /* Sort criterion: Content: Post date */
+  /* Sort criterion: Indhold: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 0;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Indhold: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -134,7 +135,7 @@ function rebild_featured_views_default_views() {
     t('Aktuelt i Rebild Kommune'),
     t('more'),
     t('Apply'),
-    t('Reset'),
+    t('Gendan'),
     t('Sort by'),
     t('Asc'),
     t('Desc'),

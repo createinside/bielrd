@@ -16,19 +16,16 @@
 
 [GLOBAL]
 
-1. General
-2. Sections
-3. Zones
-4. Blocks general
-5. Blocks specific
-6. Views
-7. Menus
-8. Nodes
+General
+Sections
+Zones
+Menus
+Nodes
 
 -------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------
-	1. General
+	General
 -------------------------------------------------------------------*/
 body {
 	@include background-image(linear-gradient($bg-color-main, $bg-color-main 600px, #d4d4d4 900px, $bg-color-main 1200px));
@@ -62,7 +59,7 @@ img {
 }
 
 /*------------------------------------------------------------------
-	2. Sections
+	Sections
 -------------------------------------------------------------------*/
 #section-header {
 	
@@ -76,7 +73,7 @@ img {
 }
 
 /*------------------------------------------------------------------
-	3. Zones
+	Zones
 -------------------------------------------------------------------*/
 #zone-user-wrapper {
 	background-color: white;
@@ -107,7 +104,7 @@ img {
 }
 
 /*------------------------------------------------------------------
-	4. Regions
+	Regions
 -------------------------------------------------------------------*/
 #region-user-second {
 	padding: $spacing-std/2;
@@ -121,319 +118,7 @@ img {
 }
 
 /*------------------------------------------------------------------
-	5. Blocks - Specific
--------------------------------------------------------------------*/
-
-/* Selfservice block - frontpage */
-#region-header-first {
-	.block {
-		@include grid-box($bg-color-header);
-		padding: $spacing-std;
-		h2 {
-			color: white;
-			font-size: (28/12)*1em;
-			line-height: 1.1em;
-			font-weight: normal;
-			margin-bottom: 14px;
-		}
-		p {
-			font-size: (15/12)*1em;
-			margin-bottom: 15px;	
-			line-height: $line-height-std;
-		}
-		form {
-			margin: 25px 0 20px 0;
-			p {
-				font-style: italic;
-				font-size: $font-size-small;
-				span {
-					padding: 0 5px;
-				}
-			}
-		}
-		p.small-text {
-			font-size: $font-size-std;
-			line-height: 1.4em;
-			margin-bottom: 25px;
-			a, strong {
-				color: $text-color-header;
-				margin-right: 0.9em;
-			}
-		}
-		p.arrow-link {
-			margin-bottom: 0 !important;
-			font-size: $font-size-small;
-			a {
-				text-transform: uppercase;
-				color: $text-color-header;
-				font-weight: bold;
-				text-decoration: none;
-			}
-			a:after {
-				@include icon-prepare();
-				content: "\f061";	
-				color: $bg-color-header;
-				background: $text-color-header;
-				display: inline-block;
-				font-size: 0.75em;
-				line-height: 1em;
-				padding: 0.40em 0.50em;
-				margin: 0 0 0 5px;
-				position: relative;
-				top: -1px;
-				@include border-radius(2px);
-			}
-		}
-		.customSelect {
-			font-style: italic;
-			color: $text-color-header;
-			font-size: 13px;
-			text-align: left;
-			width: 75%;
-		}
-		.customSelect:after {
-			font-style: normal;
-			font-size: 16px;
-			float: right;
-			margin-top: 0.65em;
-			margin-right: 0.2em;
-			@include icon-prepare();
-			content: "\e000";
-		}		
-		.customSelectInner {
-			padding: 1em;
-			display: block;
-		}
-	}
-}
-
-/* Search block - frontpage */
-#region-header-second {
-	.block {
-		font-size: 10px;
-		text-align: center;
-		form {
-			background: #cfcfcf;
-			padding: 10px;
-			position: relative;
-			overflow: hidden;
-			margin-bottom: (17/10)*1em;
-			@include border-radius($border-radius-std);
-			input[type=search],
-			input[type=text] {
-				font-size: 1em;
-				border-top: 1px solid white;
-				font-style: italic;
-				height: (32/13)*1em;
-				line-height: (32/13)*1em;
-				float: left;
-				position: relative;
-				padding: 1.05em 1em;
-				@include border-radius($border-radius-std);
-			}
-			input[type=search]:after {
-				
-			}
-			input[type=submit] {
-				position: absolute;
-				right: 10px;
-				top: 10px;
-				font-size: (20/13)*1em;
-				padding: 0 1.5em;
-				@include border-radius(0 3px 3px 0);
-			}
-		}
-		p.small-text {
-			font-size: 11px;
-			line-height: $line-height-std;
-			color: $link-color;
-			a, strong { 
-				color: $link-color;
-				margin-right: 1em;
-				@include text-shadow(rgba(white, 1) 1px 1px 1px);
-			}
-		}
-	}
-}
-
-/* Contact block - frontpage */
-.front {
-	#region-sidebar-first {
-		.block-block {
-			.block-title {
-				color: white;
-				font-size: $font-size-large;
-				line-height: $line-height-std;
-				@include text-shadow(none);
-			}
-			.content {
-				line-height: 1.25em;
-				a {
-					color: white;
-				}
-			}
-		}
-	}
-}
-
-/* 5 shortcuts - frontpage */
-#region-postscript-first {
-	.block-block {
-		.block-title {
-
-		}
-		.content {
-			ul {
-				li {
-					margin-bottom: 1em;
-				}
-				li:before {
-					@include icon-prepare();
-					content: "\f101";	
-					margin-right: 5px;
-				}
-			}
-		}
-	}	
-}
-
-/* Footer - Contact information */
-#region-footer-first {
-	.block {
-		text-align: center;
-		.content {
-			p {
-				margin-bottom: $spacing-std/2;
-			}
-			table {
-				margin: auto;
-				margin-bottom: 10px;
-				line-height: $line-height-std;
-				text-align: center;
-			}
-			p.large-text {
-				font-size: (20/12)*1em;
-				line-height: $line-height-std;
-			}
-			img {
-				margin-bottom: 5px;
-			}
-			a {
-				color: $text-color-footer;
-				text-decoration: none;
-			}
-			p.bottom-logo {
-				margin-bottom: $spacing-std;				
-				span.icon-bottom_logo {
-					font-size: 50px;
-				}
-			}
-		}
-	}	
-}
-
-/*------------------------------------------------------------------
-	6. Views
--------------------------------------------------------------------*/
-
-/* Frontpage - Aktuelt i Rebild kommune */
-.view-id-rebild_frontpage {
-	.views-row {
-		margin: 0 0 $spacing-std 0;
-		position: relative;
-		@include grid-box(white);
-		.featured-image {
-			img {
-				width: 100%;
-				@include border-radius(3px 3px 0 0);
-			}
-		}
-		.featured-title {
-			padding: $spacing-std $spacing-std 0;
-			font-size: $font-size-large;
-			line-height: $line-height-std;
-			a {
-				color: $text-color;
-				text-decoration: none;
-			}
-		}
-		.featured-summary {
-			padding: $spacing-std/2 $spacing-std $spacing-std*2.4;
-		}
-		.featured-date {
-			padding: $spacing-std/2 0;
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			width: 100%;
-			background: $bg-color-alt;
-			font-size: $font-size-small;
-			font-style: italic;
-			@include border-radius(0 0 3px 3px);
-			span {
-				position: relative; left: $spacing-std;
-			}
-		}
-	}
-}
-
-/* News Articles */
-#block-views-news-articles-block {
-	.view {
-	@include box-shadow(rgba(black, 0.15) 0 0 3px);		
-	}
-	.view-header {
-		img {
-			width: 100%;
-			@include border-radius(3px 3px 0 0);
-		}
-	}
-	.view-content {
-		padding: 0 $spacing-std/2 $spacing-std/2;
-		background-color: $bg-news-block;
-		line-height: $line-height-std;
-		@include border-radius(0 0 3px 3px);
-	}
-	.views-row {
-		position: relative;
-		padding: 1em;
-		.news-date {
-			font-style: italic;
-			font-size: $font-size-small;
-			margin-bottom: 3px;
-			height: $line-height-std;
-		}
-		.news-title {
-			height: $line-height-std;
-			a {
-				color: $text-color;
-				text-decoration: none;
-			}
-		}
-	}
-	.views-row:after {
-		font-style: normal;
-		font-size: 1.33em;
-		position: absolute; 
-		right: 3%;
-		top: 33%;
-		@include icon-prepare();
-		content: "\e001";		
-	}
-	.views-row-first { 
-		padding: $spacing-std $spacing-std/2; 
-		.news-title {
-			font-weight: bold;
-		}
-	}
-	.views-row-first:after {
-		top: 40%;
-	}
-	.views-row-even { background-color: white; }
-}
-
-/*------------------------------------------------------------------
-	7. Menus
+	Menus
 -------------------------------------------------------------------*/
 .ultimenu,
 #region-user-first
@@ -442,7 +127,7 @@ img {
 }
 
 /*------------------------------------------------------------------
-	8. Nodes
+	Nodes
 -------------------------------------------------------------------*/
 .not-front {
 	.block-system-main {
