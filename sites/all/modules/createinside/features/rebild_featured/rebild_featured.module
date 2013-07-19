@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Aktuelt feature.
+ */
+
+include_once 'rebild_featured.features.inc';

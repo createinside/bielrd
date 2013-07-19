@@ -1,0 +1,388 @@
+/* This file will hold styles for all layouts using the alpha grid (i.e. not the mobile layout). */
+
+@import "base";
+
+/*------------------------------------------------------------------
+
+[ALPHA-DEFAULT]
+
+General
+Sections
+Regions
+Zones
+Menus
+Views
+Blocks
+Blocks specific
+Nodes
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+	General
+-------------------------------------------------------------------*/
+#logo {
+	display: block;
+}
+
+/*------------------------------------------------------------------
+	Sections
+-------------------------------------------------------------------*/
+
+.front {
+	#section-content {
+		padding: $spacing-std*2 0 $spacing-std;
+	}
+}
+
+/*------------------------------------------------------------------
+	Regions
+-------------------------------------------------------------------*/
+
+/* Hide mobile regions */
+#region-user-second,
+#region-mobile-menu {
+	display: none;
+}
+
+/* Expose hidden regions */
+#region-user-first,
+#region-footer-second,
+#region-footer-third,
+#region-footer-fourth,
+#region-footer-fifth {
+	display: block;
+}
+
+/*------------------------------------------------------------------
+	Zones
+-------------------------------------------------------------------*/
+#zone-menu-wrapper {
+	padding: 14px 0 0;
+}
+#zone-header-wrapper {
+	background: $bg-color-header;
+	padding: 40px 0 20px 0;
+}
+#zone-preface-wrapper {
+	display: block;
+}
+#zone-footer-wrapper {
+	padding: $spacing-std/2 0;
+	#zone-footer {
+		padding: $spacing-std*2 0;
+	}
+}
+
+/*------------------------------------------------------------------
+	Menus
+-------------------------------------------------------------------*/
+
+/* Main Menu - Level 1+2 */
+#region-menu {
+	ul.ultimenu {
+		margin-top: 28px;
+		width: 100%;
+		display: block;
+		> li:hover,
+		> li.hover {
+			> a {
+				color: $link-color-hover;
+			}	
+		}
+		> li {
+			float: left;
+			list-style: none;
+			margin: 0 38px 0 0;
+			> a {
+				color: $link-color;
+				text-decoration: none;
+				font-size: $font-size-large;
+				text-transform: uppercase;
+			}	
+			a.active,
+			a.active-trail {
+				color: $link-color-active;
+			}	
+		}
+	}
+}
+	/* Sub Menu*/
+	.ultimenu-flyout {
+		width: 1200px;
+		left: -240px;
+		> div {
+			overflow: hidden;
+		}
+	}
+	.ultimenu-flyout {
+		overflow: hidden;
+		font-size: $font-size-std;
+		background-color: white;
+		color: $text-color;
+		font-size: $font-size-std;
+		line-height: $line-height-std;
+		/* Search Block*/
+		.block {
+			width: 33%;
+			float: right;
+			position: relative;
+			z-index: 2;
+			background-color: $bg-mega-menu;
+			@include box-shadow(rgba(black, 0.25) 0 0 20px);
+			min-height: 180px;
+			.block-title {
+				font-size: $font-size-large;
+				font-weight: normal;
+				margin-bottom: 10px;
+			}
+			.block-inner {
+				padding: $spacing-std;	
+				p { 
+					margin-bottom: 10px; 
+				}
+			}
+		}
+		/* Menu Block */
+		.block-menu-block {
+			width: 67%;
+			float: left;
+			position: relative;
+			z-index: 1;
+			background: white;
+			@include box-shadow(none);
+			.block-inner {
+				padding-bottom: $spacing-std/2;
+			}
+			li {
+				float: left;
+				width: 30%;
+				padding-right: 3%;
+				font-size: $font-size-small;
+				line-height: 1.2em;
+				height: 2.75em;
+				position: relative;
+				a {
+					color: $top-menu-color;
+					text-decoration: none;
+					padding-left: 10px;
+					display: block;
+				}
+				a:hover,
+				a.active {
+					text-decoration: underline;
+				}
+				span {
+					color: $link-color;
+					font-size: $font-size-small;
+					height: 2.75em;
+					position: absolute;
+					top: 2px; left: 0;
+				}
+			}
+		}
+	}
+	
+/* Main Menu - Level 3 */
+#region-content {
+	.block-menu-block {
+		ul {
+			li {
+				width: 30%;
+				padding-right: 3%;
+			}
+		}
+	}
+}
+
+#breadcrumb {
+	margin-bottom: $spacing-std*2;
+}
+
+/* Secondary Menu */
+#region-user-first {
+	.menu-block-wrapper {
+		> ul.menu {
+			float: right;
+			li {
+				float: left;
+				list-style: none;
+				font-size: $font-size-small;
+				margin: 0 0 0 5px;
+				a {
+					color: $top-menu-color;
+					background: $top-menu-bg-color;
+					text-decoration: none;
+					display: inline-block;
+					padding: 8px 4px;
+				}
+			}
+		}
+	}
+}
+
+/*------------------------------------------------------------------
+	Views
+-------------------------------------------------------------------*/
+
+/* Frontpage */
+.view-id-rebild_frontpage {
+	.views-row {
+		float: left;
+		@include grid-box(white);
+		.views-field-field-image img {
+			@include border-radius(3px 3px 0 0);
+			height: auto;
+		}
+		.views-field-title {
+			padding: $spacing-std $spacing-std 0;
+			font-size: $font-size-large;
+			line-height: $line-height-std;
+			a {
+				color: $text-color;
+				text-decoration: none;
+			}
+		}
+		.views-field-body {
+			padding: $spacing-std/2 $spacing-std $spacing-std;
+		}
+	}
+	.views-row-odd {
+		margin: 0 $spacing-std/2 $spacing-std 0;
+	}
+	.views-row-even {
+		margin: 0 0 $spacing-std $spacing-std/2;
+	}
+}
+
+/* News Articles - Views Block */
+#block-views-news-articles-block {
+	.view-header {
+		display: block;
+	}
+}
+
+/*------------------------------------------------------------------
+	Blocks
+-------------------------------------------------------------------*/
+
+/* Zone: Footer */
+#zone-footer {
+	.block {
+		margin-bottom: 0;
+	}
+}
+
+/*------------------------------------------------------------------
+	Blocks - Specific
+-------------------------------------------------------------------*/
+
+/* Selfservice block - frontpage */
+#region-header-first {
+	.block {
+		@include box-shadow(none);
+		padding: 0;
+		form {
+			p {
+				display: inline;
+			}
+			p.small-text {
+				font-size: $font-size-small;
+			}
+			.customSelect {
+				width: 30%;
+			}
+		}
+	}
+}
+
+/* Search block - frontpage */
+#region-header-second {
+	.block {
+		font-size: 13px;
+		margin-bottom: $spacing-std*2;
+		form {
+			max-width: 680px;
+			margin: 0 auto (17/10)*1em;
+		}
+	}
+}
+
+/* Search block - Inside mega menu */
+.ultimenu {
+	p.small-text {
+		font-size: $font-size-small;
+		line-height: 1.4em;
+		color: $top-menu-color;
+		border-top: 1px dotted $top-menu-color;
+		padding-top: 10px;
+		margin-bottom: 0 !important;
+		a {
+			color: $top-menu-color;
+			margin: 0 10px 0 0;
+		}
+	}
+	form {
+		background: #e0e0e0;
+		padding: 6px;
+		position: relative;
+		margin-bottom: 10px;
+		@include border-radius($border-radius-std);
+		input[type=search] {
+			font-size: $font-size-small;
+		}
+		input[type=submit] {
+			position: absolute;
+			top: 6px;
+			right: 6px;
+			font-size: $font-size-small;
+		}
+	}
+}
+
+/* Footer - Contact information */
+#region-footer-first {
+	.block {
+		text-align: left;
+		.content {
+			table {
+				margin: 0 0 10px;
+				text-align: left;
+			}
+		}
+	}	
+}
+
+/*------------------------------------------------------------------
+	Nodes
+-------------------------------------------------------------------*/
+
+.node {
+	#content-main.has-sidebar {
+		border-right: 1px dotted $text-color;
+		width: 71%;
+		padding-right: 3%;
+	}
+	#region-content-sidebar {
+		float: right;
+		width: 23%;
+		padding-left: 3%;
+	}
+}
+
+/* Page & News Articles */
+.node-page,
+.node-news-article {
+	/* Node Image Gallery */
+	.field-name-field-main-image-gallery {
+		.field-items {
+			.field-item {
+				width: 21%;
+				padding: 0 2%;
+				float: left;
+				margin-bottom: $spacing-std;
+				text-align: center;
+			}
+		}
+	}
+}

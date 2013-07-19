@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Nyheder feature.
+ */
+
+include_once 'rebild_news.features.inc';

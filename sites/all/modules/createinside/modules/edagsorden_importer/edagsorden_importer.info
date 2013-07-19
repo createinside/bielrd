@@ -1,0 +1,5 @@
+name = eDagsorden Importer
+description = Import af dagsordener fra edagsorden.dk
+core = 7.x
+version = 7.x-1.0
+package = Create Inside

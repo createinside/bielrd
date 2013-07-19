@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Selvbetjening feature.
+ */
+
+include_once 'rebild_self_service.features.inc';

@@ -1,0 +1,74 @@
+/*------------------------------------------------------------------
+
+[NODES]
+
+General
+Basic Page
+News Article
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+	Nodes
+-------------------------------------------------------------------*/
+
+.node {
+	.field {
+		margin-bottom: 1em;
+	}
+	.field-label {
+		margin: $spacing-std 0 $spacing-std/2;
+	}
+	a {
+		color: $link-color-node;
+	}
+}
+
+/*------------------------------------------------------------------
+	Basic Page + News Article
+-------------------------------------------------------------------*/
+
+.node-page,
+.node-news-article {
+	/* Main Image*/
+	.field-name-field-main-image {
+		margin-bottom: $spacing-std;
+		img {
+			width: 100%;
+		}
+	}
+	/* Summary */
+	.field-name-field-main-summary {
+		margin-bottom: $spacing-std;
+		font-size: $font-size-large;
+		line-height: $line-height-std;
+	}
+	/* Fact Box */
+	.field-name-field-main-factbox {
+		float: right;
+		width: 33%;
+		background: $bg-node-box;
+		padding: $spacing-std/2;
+		margin: 0 0 $spacing-std/2 $spacing-std/2;
+		@include border-radius(3px);
+	}
+	.field-body {
+		
+	}
+	/* Node Image Gallery */
+	.field-name-field-main-image-gallery {
+		.field-items {
+			background: $bg-node-box;
+			@include border-radius(3px);
+			padding: $spacing-std $spacing-std 0;
+			overflow: hidden;
+			.field-item {
+				width: 29%;
+				padding: 0 2%;
+				float: left;
+				margin-bottom: $spacing-std;
+				text-align: center;
+			}
+		}
+	}
+}

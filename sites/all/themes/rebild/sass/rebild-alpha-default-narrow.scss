@@ -1,0 +1,83 @@
+/* This file will hold styles that are loaded using the same media query as the narrow grid. */
+/* If you are using the default media queries provided by Omega, these styles will also
+ *  apply to the normal and widescreen layouts. You may override these styles in the normal 
+ *  and widescreen CSS files as appropriate. */
+ 
+@import "base";
+
+/*------------------------------------------------------------------
+
+[ALPHA-DEFAULT-NARROW]
+
+General
+Menus
+Frontpage
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+	General
+-------------------------------------------------------------------*/
+body {
+	font-size: 11px;
+}
+
+/*------------------------------------------------------------------
+	Menus
+-------------------------------------------------------------------*/
+
+/* Main Menu - (Mega Menu) */
+#region-menu {
+	ul.ultimenu {
+		> li {
+			margin: 0 0 0 35px;
+		}
+	}
+}
+ 
+.ultimenu-flyout {
+	width: 700px;
+	left: -180px;
+}
+
+/*------------------------------------------------------------------
+	Frontpage
+-------------------------------------------------------------------*/
+.front {
+	#region-content {
+		.view {
+			.views-row {
+				height: 338px;
+				margin-bottom: $spacing-std;
+			}
+		}
+	}
+	#region-sidebar-first {
+		.block {
+				margin-bottom: $spacing-std;
+		}
+		.block-views {
+			height: 463px;
+			.views-row {
+				
+			}
+		}
+		.block-block {
+			height: 210px;
+		}
+	}
+	#region-postscript-first {
+		.block {
+			.content {
+				height: 190px;
+			}
+		}
+	}
+	#region-postscript-second {
+		.block {
+			.content {
+				height: 190px;
+			}
+		}
+	}
+}

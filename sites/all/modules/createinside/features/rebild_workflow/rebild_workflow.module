@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Workflow indstillinger feature.
+ */
+
+include_once 'rebild_workflow.features.inc';

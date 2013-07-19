@@ -1,0 +1,4 @@
+name = Alter Metatag modulet
+description = Fjerner Metatag formelementer fra node oprettelse/edit. Skal de generelle tokens sættes til eller fjernes, disables dette modul først. 
+core = 7.x
+package = Create Inside

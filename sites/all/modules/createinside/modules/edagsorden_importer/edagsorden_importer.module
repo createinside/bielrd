@@ -1,0 +1,271 @@
+<?php
+
+/**
+ * Implementation of hook_menu().
+ */
+function edagsorden_importer_menu() {
+	$items = array();
+	$items['admin/config/services/edagsorden'] = array(
+	  'title' => 'eDagsorden Importer',
+	  'description' => t('Configure general settings and do manual imports.'),
+	  'page callback' => 'drupal_get_form',
+	  'page arguments' => array('edagsorden_importer_form'),
+	  'access arguments' => array('administer edagsorden importer'),
+	);
+	$items['edagsorden/sync'] = array(
+	    'page callback' => 'edagsorden_importer_sync',
+	    'access arguments' => array('administer edagsorden importer'),
+	    'type' => MENU_CALLBACK,
+	);
+	return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function edagsorden_importer_permission() {
+  return array(
+    'administer edagsorden importer' => array(
+      'title' => t('Administer edagsorden importer'),
+      'description' => t('Administer Edagsorden Importer'),
+    ),
+  );
+}
+
+/**
+ * Settings Form
+ *
+ * Implementation of hook_form().
+ */
+function edagsorden_importer_form($form, &$form_state) {
+
+  $form['description'] = array(
+    '#type' => 'fieldset',
+    '#title' => "Import",
+  ); 
+  $form['description']['markup'] = array(
+  	'#title'	=> "Manuel import",
+    '#markup' => "<p>Udvalg og dagsordener importeres automatisk på cronjob. Man kan også køre en manuel import ved at trykke på nedenstående knap.</p><div>".  l(t('Start import'), 'edagsorden/sync', array('attributes' => array('class' => array('button')))),
+  );
+  $form['edagsorden'] = array(
+    '#type' => 'fieldset',
+    '#title' => "Indstillinger",
+  );  
+  $form['edagsorden']['edagsorden_root_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('eDagsorden root URL'),
+    '#description' => "Indtast URL'en til roden af eDagsorden Publicerings Service på windows serveren",
+    '#default_value' => variable_get('edagsorden_root_url', '')
+  );
+  return system_settings_form($form);
+}
+
+/**
+ * Feeds Tamper Plugin
+ *
+ * hook_ctools_plugin_directory
+ */
+function edagsorden_importer_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'feeds_tamper' && $plugin_type == 'plugins') {
+    return 'custom_plugins/';
+  }
+}
+
+/**
+ * Implementation of hook_cron().
+ */
+function edagsorden_importer_cron() {
+	edagsorden_importer_committees_import();
+  watchdog('edagsorden_importer', t("Agendas have been imported on cron"));
+}
+
+/**
+ * Manual Import
+ * 
+ * Link callback to trigger manual import
+ */
+function edagsorden_importer_sync() {
+	edagsorden_importer_committees_import();
+  watchdog('edagsorden_importer', t("Agendas have been imported manually"));
+  drupal_set_message(t("The manual import has been triggered"));
+  drupal_goto("admin/config/services/edagsorden");
+}
+
+/**
+ * Import Committees
+ *
+ * Create/update committee taxonomy terms
+ */
+function edagsorden_importer_committees_import() {
+	
+	/**
+	 * Initiate feeds committee importer
+	 */
+	$committee_source = "http://localhost/rebild_content/sites/default/files/edagsorden/committees.xml"; //variable_get('edagsorden_root_url', '); //"http://localhost/drupal/sites/default/files/edagsorden/committees.xml"
+							
+	$importer_id = 'edagsorden_committee_importer';
+	$feedSource = feeds_source($importer_id);
+	$config = $feedSource->getConfig();
+	$config['FeedsHTTPFetcher']['source'] = $committee_source;
+	
+	$feedSource->setConfig($config);
+	$feedSource->save();
+	$feedSource->import();
+	
+	/* Load Committees */
+	$xml_file = simplexml_load_file($committee_source);
+	$committees = $xml_file->xpath('//Committee');
+		
+	foreach($committees as $committee) {
+		
+		$com_id 	= (integer)$committee->Id;
+		$com_name = (string)$committee->Name;
+
+		$agendas = $committee->xpath("Agendas/Agenda");
+		
+		foreach($agendas as $agenda) {
+
+			/**
+			 *	Initiate feeds agenda importer	
+			 */
+			$agenda_id = (integer)$agenda->Id;
+
+			$agenda_source = "http://localhost/rebild_content/sites/default/files/edagsorden/committee_".$com_id."/agenda_".$agenda_id."/agenda_".$agenda_id.".xml";
+			
+			$importer_id = 'edagsorden_agenda_importer';
+			$feedSource = feeds_source($importer_id);
+			$config = $feedSource->getConfig();
+			$config['FeedsHTTPFetcher']['source'] = $agenda_source;	
+					
+			$feedSource->setConfig($config);
+			$feedSource->save();
+			$feedSource->import();
+			
+			/**
+			 * Initiate feeds items importer 	
+			 */
+			$importer_id = 'edagsorden_item_importer';
+			$feedSource = feeds_source($importer_id);
+			$config = $feedSource->getConfig();
+			$config['FeedsHTTPFetcher']['source'] = $agenda_source;	
+					
+			$feedSource->setConfig($config);
+			$feedSource->save();
+			$feedSource->import();
+		}
+	}
+}
+
+/**
+ * Get Committee
+ *
+ * Returns committee term based on id
+ *
+ * @param int $com_id
+ *		The committee id
+ * 
+ * @return object 
+ *		The committee term
+ */
+function edagsorden_importer_get_committee($com_id) {
+   
+	// Get Vocabulary Id (Committees)
+	$vid = db_select('taxonomy_vocabulary', 'tv')
+				->fields('tv', array('vid'))
+				->condition('machine_name', 'edagsorden_committees')
+				->execute()
+				->fetchField();
+	
+	// Get Term with Committee Id
+	$query = new EntityFieldQuery();
+	$query->entityCondition('entity_type', 'taxonomy_term')
+				->propertyCondition('vid', $vid)
+				->fieldCondition('field_edagsorden_com_id', 'value', intval($com_id), '=');
+	$result = $query->execute();
+	
+	if (isset($result['taxonomy_term'])) {
+		$tids = array_keys($result['taxonomy_term']);
+		$tid = reset($tids);
+		$term = taxonomy_term_load($tid);
+		return $term;
+	}
+}
+
+/**
+ * Create Committee
+ *
+ * @param int $com_name
+ *		The committee name
+ *
+ * @param int $com_id
+ *		The committee id
+ *
+ * @return int tid 
+ *		The term id of the created committee
+ */
+function edagsorden_importer_create_committee($com_name, $com_id) {
+
+	// Get Vocabulary Id (Committees)
+	$vid = db_select('taxonomy_vocabulary', 'tv')
+				->fields('tv', array('vid'))
+				->condition('machine_name', 'edagsorden_committees')
+				->execute()
+				->fetchField();
+	
+	$term = new stdClass();
+	$term->name = $com_name;
+	$term->vid = $vid;
+	$term->field_edagsorden_com_id[LANGUAGE_NONE][0]["value"] = $com_id;
+	taxonomy_term_save($term);
+	return $term->tid;
+}
+
+/**
+ * Update Committee
+ */
+function edagsorden_importer_update_committee($term, $com_name) {
+	$term->name = $com_name;
+	taxonomy_term_save($term);
+}
+
+/**
+ * Get Agenda
+ *
+ * Returns agenda node based on id
+ *
+ * @param int $agenda_id
+ *		The agenda id
+ * 
+ * @return object 
+ *		The agenda node
+ */
+function edagsorden_importer_get_agenda($agenda_id){
+	
+	// Get Agenda by Agenda id
+	$query = new EntityFieldQuery();
+	$query->entityCondition('entity_type', 'node')
+				->propertyCondition('type', 'agenda')
+				->fieldCondition('field_agenda_id', 'value', intval($agenda_id), '=');
+	$result = $query->execute();
+	
+	if (isset($result['node'])) {
+		$nids = array_keys($result['node']);
+		$nid = reset($nids);
+		$node = node_load($nid);
+		return $node;
+	}
+}
+
+/**
+ * Create Agenda
+ */
+function edagsorden_importer_create_agenda() {
+
+}
+
+/**
+ * Update Agenda
+ */
+function edagsorden_importer_update_agenda() {
+
+}

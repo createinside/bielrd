@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Udbud feature.
+ */
+
+include_once 'rebild_offering.features.inc';

@@ -1,0 +1,77 @@
+/* This file will hold styles that are loaded using the same media query as the normal grid. */
+/* If you are using the default media queries provided by Omega, these styles will also
+ *  apply to the widescreen layout unless they are overridden by the widescreen styles. */
+ 
+@import "base";
+
+/*------------------------------------------------------------------
+
+[ALPHA-DEFAULT-NARROW]
+
+General
+Frontpage
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+	General
+-------------------------------------------------------------------*/
+body {
+	font-size: 12px;
+}
+
+/*------------------------------------------------------------------
+	Menus
+-------------------------------------------------------------------*/
+
+/* Main Menu - (Mega Menu) */
+#region-menu {
+	ul.ultimenu {
+		> li {
+			margin: 0 0 0 35px;
+		}
+	}
+}
+.ultimenu-flyout {
+	width: 940px;
+	left: -240px;
+}
+
+/*------------------------------------------------------------------
+	Frontpage
+-------------------------------------------------------------------*/
+.front {
+	#region-content {
+		.view {
+			.views-row {
+				height: 361px;
+				margin-bottom: $spacing-std;
+			}
+		}
+	}
+	#region-sidebar-first {
+		.block {
+				margin-bottom: $spacing-std;
+		}
+		.block-views {
+			height: 530px;
+		}
+		.block-block {
+			height: 190px;
+		}
+	}
+	#region-postscript-first {
+		.block {
+			.content {
+				height: 150px;
+			}
+		}
+	}
+	#region-postscript-second {
+		.block {
+			.content {
+				height: 150px;
+			}
+		}
+	}
+}

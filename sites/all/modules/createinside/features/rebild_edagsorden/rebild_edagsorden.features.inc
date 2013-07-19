@@ -1,0 +1,47 @@
+<?php
+/**
+ * @file
+ * rebild_edagsorden.features.inc
+ */
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function rebild_edagsorden_ctools_plugin_api() {
+  list($module, $api) = func_get_args();
+  if ($module == "feeds" && $api == "feeds_importer_default") {
+    return array("version" => "1");
+  }
+  list($module, $api) = func_get_args();
+  if ($module == "feeds_tamper" && $api == "feeds_tamper_default") {
+    return array("version" => "2");
+  }
+  list($module, $api) = func_get_args();
+  if ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => "1");
+  }
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function rebild_edagsorden_views_api() {
+  return array("api" => "3.0");
+}
+
+/**
+ * Implements hook_node_info().
+ */
+function rebild_edagsorden_node_info() {
+  $items = array(
+    'agenda' => array(
+      'name' => t('Dagsorden'),
+      'base' => 'node_content',
+      'description' => t('Dagsordener er direkte integrereret med eDagsorden og er ikke beregnet til manuelle oprettelser på websitet.'),
+      'has_title' => '1',
+      'title_label' => t('Titel'),
+      'help' => '',
+    ),
+  );
+  return $items;
+}

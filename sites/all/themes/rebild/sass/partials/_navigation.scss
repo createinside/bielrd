@@ -1,0 +1,279 @@
+/*------------------------------------------------------------------
+
+[NAVIGATION]
+
+Main Menu - Level 1+2
+Main Menu - Level 3
+Mobile Menu
+Footer Menu
+Breadcrumbs
+Tabs
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+	Main Menu - Level 1+2
+-------------------------------------------------------------------*/
+
+.ultimenu {
+	display: block;
+	position: relative;
+	z-index: 9999;
+	> li {
+		height: 44px;
+	}
+}
+.ultimenu-flyout {
+	background: white;
+	border-radius: 0;
+	margin: -10px 0 0 0;
+	padding: 0;
+	@include box-shadow(
+		rgba(black, 0.10) -10px 10px 10px, 
+		rgba(black, 0.10) 10px 10px 10px
+	);
+	@include border-radius(0 0 $border-radius-std $border-radius-std);
+  -moz-transition: visibility 0s linear 0s, opacity 0s linear, margin 0s ease;
+  -ms-transition: visibility 0s linear 0s, opacity 0s linear, margin 0s ease;
+  -o-transition: visibility 0s linear 0s, opacity 0s linear, margin 0s ease;
+  -webkit-transition: visibility 0s linear 0s, opacity 0s linear, margin 0s ease;
+  transition: visibility 0s linear 0s, opacity 0.1s linear, margin 0.1s ease;
+}
+.ultimenu > li:hover > .ultimenu-flyout,
+.ultimenu > li.hover > .ultimenu-flyout {
+	margin-top: 0;
+}
+
+/*------------------------------------------------------------------
+	Main Menu - Level 3
+-------------------------------------------------------------------*/
+
+#region-content {
+	.block-menu-block {
+		@include grid-box($bg-color-alt);
+		padding: $spacing-std;
+		overflow: hidden;
+		ul {
+			li {
+				float: left;
+				width: 44%;
+				padding-right: 3%;
+				font-size: $font-size-std;
+				line-height: 1.2em;
+				height: 2.75em;
+				position: relative;
+				a {
+					color: $link-color;
+					text-decoration: none;
+					padding-left: 10px;
+					display: block;
+				}
+				a:hover,
+				a.active {
+					text-decoration: underline;
+				}
+				span {
+					color: $link-color;
+					font-size: $font-size-small;
+					height: 2.75em;
+					position: absolute;
+					top: 2px; left: 0;
+				}
+			}
+		}
+	}
+}
+
+/*------------------------------------------------------------------
+	Mobile Menu
+-------------------------------------------------------------------*/
+
+/* Mobile Menu Region */
+#region-mobile-menu {
+	position: fixed;
+	top: 0; 
+	left: -80%;
+	width: 80%;
+	height: 100%;
+	overflow: auto;
+	z-index: 10;
+	background: $bg-mobile-menu;
+	font-family: $font-family-std;
+	font-size: $font-size-small;
+	color: white;
+	overflow: auto;
+	@include transition(all 0.3s ease);
+	h2.block-title {
+		font-size: 18px;
+		padding: 15px;
+		font-weight: normal;
+		border-bottom: 1px solid darken($bg-mobile-menu, 5%);
+		@include box-shadow(0 1px 0 lighten($bg-mobile-menu, 5%));
+	}
+	.icon-close {
+		font-size: 1.6em;
+		right: 0.6em;
+		top: 0.95em;
+		position: absolute;
+		display: inline-block;
+		cursor: pointer;
+	}
+}
+
+#region-mobile-menu.active {
+	left: 0;
+}
+/* Accordion Menu */
+#region-mobile-menu {
+	/* Default state */
+	.accordion-header {
+		position: relative;
+		font-size: 15px;
+		font-weight: normal;
+		padding: 15px;
+		margin: 0;
+		border: 0;
+		border-bottom: 1px solid darken($bg-mobile-menu, 5%);
+		@include box-shadow(0 1px 0 lighten($bg-mobile-menu, 5%));
+		span {
+			margin: 0; 
+			padding: 0;
+			border: 0;
+		}
+	}
+	.accordion-header:after {
+		@include icon-prepare();
+		content: "\e00a";
+		position: absolute;
+		font-size: 0.8em;
+		right: 1em;
+		top: 1.3em;
+	}
+	.ui-accordion-content {
+		margin: 0;
+		padding: 5px 25px;
+		border: 0;
+		top: 0;
+		ul.menu {
+			li {
+				margin-bottom: 15px;
+				line-height: 1.25em;
+				> ul {
+					display: none;
+				}
+				a {
+					color: white;
+					text-decoration: none;
+					span {
+						display: none;
+					}
+				}
+				.active-trail {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	/* Active state */
+	.accordion-header.ui-state-active {
+		background: $bg-mobile-menu-active;
+		border-bottom: 0;
+		@include box-shadow(0);
+	}
+	.accordion-header.ui-state-active:after {
+		@include icon-prepare();
+		content: "\e00c";
+		position: absolute;
+		font-size: 0.8em;
+		right: 1em;
+		top: 1.3em;
+	}
+	.ui-accordion-content {
+		background: $bg-mobile-menu-active;	
+	}
+}
+/* Overlay */
+#mobile-overlay {
+	background: black;
+	position: fixed;
+	top: 0; 
+	left: 0;
+	width: 100%;
+	height: 0;
+	z-index: 9;
+	display: block;
+	@include opacity(0);
+	@include transition(opacity 0.3s ease);
+}
+#mobile-overlay.active {
+	height: 100%;
+	@include opacity(0.75);
+}
+
+/*------------------------------------------------------------------
+	Footer Menus
+-------------------------------------------------------------------*/
+#zone-footer {
+	.block-menu-block {
+		ul {
+			li {
+				margin-bottom: 6px;
+				span {
+					display: none;
+				}
+				a {
+					color: #6b6b6b;
+				}
+			}
+		}
+	}
+}
+
+
+/*------------------------------------------------------------------
+	Breadcrumbs
+-------------------------------------------------------------------*/
+
+#breadcrumb {
+	font-size: $font-size-small;
+	line-height: 1.5;
+	color: $text-color;
+	margin-bottom: $spacing-std;
+	@include text-shadow(rgba(white, 1) 1px 1px 1px);
+	a,strong {
+		color: $link-color;
+		text-decoration: none;
+		position: relative;
+		top: -1px;
+	}
+	span {
+		font-size: 1.25em;
+	}
+}
+
+/*------------------------------------------------------------------
+	Tabs
+-------------------------------------------------------------------*/
+
+ul.tabs {
+	margin-bottom: $spacing-std;
+	li {
+		margin-right: 0.5em;
+		a {
+			color: $link-color;
+			text-decoration: none;
+			padding: 0.5em 0.7em;
+			display: inline-block;
+			@include border-radius($border-radius-std);
+		}	
+		a:hover {
+			text-decoration: underline;
+		}			
+	}
+	li.active {
+		a {
+			background-color: $tab-bg-color;
+			@include box-shadow(rgba(black, 0.15) 0 0 3px);
+		}
+	}
+}

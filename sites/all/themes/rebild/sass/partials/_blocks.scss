@@ -1,0 +1,319 @@
+/*------------------------------------------------------------------
+
+[BLOCKS]
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+	Blocks General
+-------------------------------------------------------------------*/
+
+/* Region: Header First */
+#region-header-first {
+	.block {
+		.content {
+			line-height: $line-height-std;
+			text-align: center;
+			color: $text-color-header;
+		}
+	}
+}
+
+/* Section Content */
+#section-content {
+	.block {
+		margin-bottom: $spacing-std;
+		.block-title {
+			font-size: $font-size-headline;
+			line-height: 1em;
+			font-weight: normal;
+			padding: 0 0 $spacing-std 0;
+			color: $text-color;
+			@include text-shadow(rgba(white, 1) 1px 1px 1px);
+		}
+	}
+}
+
+	/* Region: Content */
+	#region-content {
+		.block {
+			margin-bottom: $spacing-std;
+			.content {
+				color: $text-color;
+				line-height: $line-height-std;
+				padding-bottom: 0;
+			}	
+		}
+		.block-system-main {
+			margin-bottom: 0;
+		}
+	}
+	.not-front {
+		#region-content {
+			.block-system-main {
+				margin-bottom: $spacing-std;
+			}
+		}
+	}
+	
+		/* Region: Content Sidebar */
+		#region-content-sidebar {
+			.block {
+				margin-bottom: $spacing-std/2;
+				.block-title {
+					font-size: $font-size-std;
+					line-height: $font-size-std;
+					background: $color-blue;
+					color: white;
+					margin: 0 0 $spacing-std/2;
+					padding: 0.4em 0.5em;
+					@include text-shadow(none);
+					@include border-radius(3px);
+				}
+				.content {
+					color: $text-color;
+					line-height: $line-height-std;
+					padding-bottom: 0;
+					font-size: $font-size-small;
+				}	
+			}
+		}
+
+	/* Region: Sidebar First */
+	.not-front {
+		#region-sidebar-first {
+			.block {
+				.block-title {
+					font-size: $font-size-large;					
+					@include text-shadow(none);
+				}
+				.content {
+					font-size: $font-size-std;
+					line-height: $line-height-std;
+				}
+			}
+		}
+	}
+	.front {
+		#region-sidebar-first {	
+			.block-block {
+				padding: $spacing-std;
+				color: white;
+				line-height: $line-height-std;
+				@include grid-box($color-purple);			
+			}
+		}
+	}
+	
+	/* Region: Postcripts First */
+	#region-postscript-first {
+		.block {
+			.block-title {
+				
+			}
+			.content {
+				padding: $spacing-std;
+				color: white;
+				line-height: $line-height-std;
+				@include grid-box($color-green);
+			}
+		}
+	}
+	
+	/* Region: Postscripts Second */
+	#region-postscript-second {
+		.block {
+			.block-title {
+				
+			}
+			.content {
+				padding: $spacing-std;
+				line-height: $line-height-std;
+				color: $text-color;
+				@include grid-box(white);
+			}
+		}
+	}
+
+/* Zone: Footer */
+#zone-footer {
+	.block {
+		color: $text-color-footer;
+		.block-title {
+			font-size: 14px;
+			margin: 0 0 $spacing-std 0;
+			font-weight: normal;
+		}
+		.content {
+			font-size: $font-size-small;
+			line-height: $line-height-std;
+			a {
+				color: $text-color-footer;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+/* Region: Bottom */
+#region-bottom {
+	.block {
+		.content {
+			padding: 8px 0;
+			text-align: center;
+			font-size: 10px;
+			line-height: 1.4em;
+			color: white;
+			a { 
+				color: white; 
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+/*------------------------------------------------------------------
+	Blocks Specific
+-------------------------------------------------------------------*/
+
+/* Mobile Header */
+#mob-header {
+	color: $color-green;
+	font-size: 24px;
+	a {
+		color: $color-green;
+		text-decoration: none;
+	}
+	#mob-header-left {
+		float: left;
+		text-align: left;
+		width: 33%;
+		line-height: 1.5em;
+	}
+	#mob-header-center {
+		text-align: center;
+		float: left;
+		width: 34%;
+		font-size: 38px;
+		color: #00703c;
+		line-height: 1em;
+		a {
+			color: #00703c;
+		}
+	}
+	#mob-header-right {
+		float: left;
+		text-align: right;
+		width: 33%;
+		line-height: 1.5em;
+	}
+}
+
+.not-front #region-sidebar-first {
+
+	/* Selvbetjening - Lille */
+	.block.selvbetjening {
+		padding: $spacing-std;
+		color: white;
+		@include grid-box($color-green);
+		.block-title {
+			color: white;
+		}
+		.content {
+			form {
+				margin-bottom: 1em;
+			}
+			p.arrow-link {
+				font-size: $font-size-small;
+				border-bottom: 1px dotted white;
+				margin-bottom: $spacing-std;
+				padding-bottom: $spacing-std;
+				a {
+					text-transform: uppercase;
+					color: $text-color-header;
+					font-weight: bold;
+					text-decoration: none;
+				}
+				a:after {
+					@include icon-prepare();
+					content: "\f061";	
+					color: $bg-color-header;
+					background: $text-color-header;
+					display: inline-block;
+					font-size: 0.75em;
+					line-height: 1em;
+					padding: 0.40em 0.50em;
+					margin: 0 0 0 5px;
+					position: relative;
+					top: -1px;
+					@include border-radius(2px);
+				}
+			}
+			.customSelect {
+				font-style: italic;
+				color: $text-color-header;
+				font-size: $font-size-small;
+				text-align: left;
+				width: 100%;
+			}
+			.customSelect:after {
+				font-style: normal;
+				font-size: 1.3em;
+				float: right;
+				margin-top: 0.65em;
+				margin-right: 0.3em;
+				@include icon-prepare();
+				content: "\e000";
+			}		
+			.customSelectInner {
+				padding: 1em;
+			}			
+		}
+		ul {
+			li {
+					margin-bottom: 0.5em;
+				}
+				li:before {
+					@include icon-prepare();
+					content: "\f101";	
+					margin-right: 0.5em;
+				}
+		}
+	}
+	
+	/* Background Image blocks */
+	.block.image-box {
+		padding: $spacing-std;
+		color: $text-color;
+		@include grid-box($bg-color-alt);		
+		.block-title {
+		}
+		.content {
+			width: 62%;
+			h2 {
+				font-size: $font-size-large;
+				line-height: 1.1em;
+				font-weight: normal;
+			}
+			p {
+				margin-top: 1em;				
+			}
+		}
+	}
+	.block.image-box.plads {
+		background: $bg-color-alt url("../img/image-box-1.png") no-repeat bottom right;
+	}
+	.block.image-box.skole {
+		background: $bg-color-alt url("../img/image-box-2.png") no-repeat bottom right;		
+	}
+}
+
+/* Workbench Moderation */
+div.workbench-info-block {
+	font-size: $font-size-std;
+	padding: $spacing-std/2 $spacing-std;
+	line-height: 1.5em;
+	a {
+		font-weight: bold;
+	}
+}

@@ -1,0 +1,63 @@
+/*------------------------------------------------------------------
+
+[COLORS]
+
+1. Main colors
+2. Text colors
+3. Background colors
+4. Button colors
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+	1. Main colors
+-------------------------------------------------------------------*/
+
+$color-green: #68a386;
+$color-purple: #937ea7;
+$color-yellow: #c9bd7e;
+$color-blue: #7f9dcd;
+
+$color-green-dark: #00473e;
+
+/*------------------------------------------------------------------
+	2. Text colors
+-------------------------------------------------------------------*/
+
+$text-color: #474747;
+$text-color-header: $color-green-dark;
+$text-color-footer: #6b6b6b; 
+
+$link-color: #474747;
+$link-color-hover: #888;
+$link-color-active: $color-green;
+$link-color-node: $color-purple;
+
+$top-menu-color: #6b6b6b;
+$top-menu-bg-color: #f9f9f9;
+
+$input-color: #6b6b6b;
+
+/*------------------------------------------------------------------
+	3. Background colors
+-------------------------------------------------------------------*/
+
+$bg-color-main: #e8e8e8;
+$bg-color-alt: #f6f6f6;
+$bg-color-header: $color-green;
+$bg-color-footer: #ffffff;
+$bg-color-bottom: #6b6b6b;
+
+$bg-mega-menu: $bg-color-alt;
+$bg-news-block: $bg-color-alt;
+$bg-node-box: #e9e6e6;
+
+$bg-mobile-menu: $color-green;
+$bg-mobile-menu-active: #528d6f;
+
+/*------------------------------------------------------------------
+	4. Button colors
+-------------------------------------------------------------------*/
+
+$button-bg-color: $color-yellow;
+$tab-bg-color: #FFFFFF;

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Meddelelser feature.
+ */
+
+include_once 'rebild_announcement.features.inc';

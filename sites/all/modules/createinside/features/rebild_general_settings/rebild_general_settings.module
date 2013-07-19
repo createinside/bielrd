@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Generelle indstillinger feature.
+ */
+
+include_once 'rebild_general_settings.features.inc';

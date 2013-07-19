@@ -1,0 +1,478 @@
+/* This file will hold styles for all layouts using the alpha grid (i.e. not the mobile layout). */
+/*------------------------------------------------------------------
+
+[BASE] 
+
+-------------------------------------------------------------------*/
+/* Compass */
+/* Modules */
+/*------------------------------------------------------------------
+
+[COLORS]
+
+1. Main colors
+2. Text colors
+3. Background colors
+4. Button colors
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	1. Main colors
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	2. Text colors
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	3. Background colors
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	4. Button colors
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+
+[VARIABLES]
+
+1. Typography
+2. Layout
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	1. Typography
+-------------------------------------------------------------------*/
+/* 12px */
+/*------------------------------------------------------------------
+	2. Layout
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+
+[MIXINS]
+
+1. Blocks
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	1. Blocks
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+
+[ALPHA-DEFAULT]
+
+General
+Sections
+Regions
+Zones
+Menus
+Views
+Blocks
+Blocks specific
+Nodes
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	General
+-------------------------------------------------------------------*/
+/* line 24, ../sass/rebild-alpha-default.scss */
+#logo {
+  display: block;
+}
+
+/*------------------------------------------------------------------
+	Sections
+-------------------------------------------------------------------*/
+/* line 33, ../sass/rebild-alpha-default.scss */
+.front #section-content {
+  padding: 40px 0 20px;
+}
+
+/*------------------------------------------------------------------
+	Regions
+-------------------------------------------------------------------*/
+/* Hide mobile regions */
+/* line 44, ../sass/rebild-alpha-default.scss */
+#region-user-second,
+#region-mobile-menu {
+  display: none;
+}
+
+/* Expose hidden regions */
+/* line 53, ../sass/rebild-alpha-default.scss */
+#region-user-first,
+#region-footer-second,
+#region-footer-third,
+#region-footer-fourth,
+#region-footer-fifth {
+  display: block;
+}
+
+/*------------------------------------------------------------------
+	Zones
+-------------------------------------------------------------------*/
+/* line 60, ../sass/rebild-alpha-default.scss */
+#zone-menu-wrapper {
+  padding: 14px 0 0;
+}
+
+/* line 63, ../sass/rebild-alpha-default.scss */
+#zone-header-wrapper {
+  background: #68a386;
+  padding: 40px 0 20px 0;
+}
+
+/* line 67, ../sass/rebild-alpha-default.scss */
+#zone-preface-wrapper {
+  display: block;
+}
+
+/* line 70, ../sass/rebild-alpha-default.scss */
+#zone-footer-wrapper {
+  padding: 10px 0;
+}
+/* line 72, ../sass/rebild-alpha-default.scss */
+#zone-footer-wrapper #zone-footer {
+  padding: 40px 0;
+}
+
+/*------------------------------------------------------------------
+	Menus
+-------------------------------------------------------------------*/
+/* Main Menu - Level 1+2 */
+/* line 83, ../sass/rebild-alpha-default.scss */
+#region-menu ul.ultimenu {
+  margin-top: 28px;
+  width: 100%;
+  display: block;
+}
+/* line 89, ../sass/rebild-alpha-default.scss */
+#region-menu ul.ultimenu > li:hover > a,
+#region-menu ul.ultimenu > li.hover > a {
+  color: #888888;
+}
+/* line 93, ../sass/rebild-alpha-default.scss */
+#region-menu ul.ultimenu > li {
+  float: left;
+  list-style: none;
+  margin: 0 38px 0 0;
+}
+/* line 97, ../sass/rebild-alpha-default.scss */
+#region-menu ul.ultimenu > li > a {
+  color: #474747;
+  text-decoration: none;
+  font-size: 1.33333em;
+  text-transform: uppercase;
+}
+/* line 104, ../sass/rebild-alpha-default.scss */
+#region-menu ul.ultimenu > li a.active,
+#region-menu ul.ultimenu > li a.active-trail {
+  color: #68a386;
+}
+
+/* Sub Menu*/
+/* line 111, ../sass/rebild-alpha-default.scss */
+.ultimenu-flyout {
+  width: 1200px;
+  left: -240px;
+}
+/* line 114, ../sass/rebild-alpha-default.scss */
+.ultimenu-flyout > div {
+  overflow: hidden;
+}
+
+/* line 118, ../sass/rebild-alpha-default.scss */
+.ultimenu-flyout {
+  overflow: hidden;
+  font-size: 1em;
+  background-color: white;
+  color: #474747;
+  font-size: 1em;
+  line-height: 1.15em;
+  /* Search Block*/
+  /* Menu Block */
+}
+/* line 126, ../sass/rebild-alpha-default.scss */
+.ultimenu-flyout .block {
+  width: 33%;
+  float: right;
+  position: relative;
+  z-index: 2;
+  background-color: #f6f6f6;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px;
+  min-height: 180px;
+}
+/* line 134, ../sass/rebild-alpha-default.scss */
+.ultimenu-flyout .block .block-title {
+  font-size: 1.33333em;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+/* line 139, ../sass/rebild-alpha-default.scss */
+.ultimenu-flyout .block .block-inner {
+  padding: 20px;
+}
+/* line 141, ../sass/rebild-alpha-default.scss */
+.ultimenu-flyout .block .block-inner p {
+  margin-bottom: 10px;
+}
+/* line 147, ../sass/rebild-alpha-default.scss */
+.ultimenu-flyout .block-menu-block {
+  width: 67%;
+  float: left;
+  position: relative;
+  z-index: 1;
+  background: white;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 154, ../sass/rebild-alpha-default.scss */
+.ultimenu-flyout .block-menu-block .block-inner {
+  padding-bottom: 10px;
+}
+/* line 157, ../sass/rebild-alpha-default.scss */
+.ultimenu-flyout .block-menu-block li {
+  float: left;
+  width: 30%;
+  padding-right: 3%;
+  font-size: 0.91667em;
+  line-height: 1.2em;
+  height: 2.75em;
+  position: relative;
+}
+/* line 165, ../sass/rebild-alpha-default.scss */
+.ultimenu-flyout .block-menu-block li a {
+  color: #6b6b6b;
+  text-decoration: none;
+  padding-left: 10px;
+  display: block;
+}
+/* line 172, ../sass/rebild-alpha-default.scss */
+.ultimenu-flyout .block-menu-block li a:hover,
+.ultimenu-flyout .block-menu-block li a.active {
+  text-decoration: underline;
+}
+/* line 175, ../sass/rebild-alpha-default.scss */
+.ultimenu-flyout .block-menu-block li span {
+  color: #474747;
+  font-size: 0.91667em;
+  height: 2.75em;
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+
+/* Main Menu - Level 3 */
+/* line 190, ../sass/rebild-alpha-default.scss */
+#region-content .block-menu-block ul li {
+  width: 30%;
+  padding-right: 3%;
+}
+
+/* line 198, ../sass/rebild-alpha-default.scss */
+#breadcrumb {
+  margin-bottom: 40px;
+}
+
+/* Secondary Menu */
+/* line 205, ../sass/rebild-alpha-default.scss */
+#region-user-first .menu-block-wrapper > ul.menu {
+  float: right;
+}
+/* line 207, ../sass/rebild-alpha-default.scss */
+#region-user-first .menu-block-wrapper > ul.menu li {
+  float: left;
+  list-style: none;
+  font-size: 0.91667em;
+  margin: 0 0 0 5px;
+}
+/* line 212, ../sass/rebild-alpha-default.scss */
+#region-user-first .menu-block-wrapper > ul.menu li a {
+  color: #6b6b6b;
+  background: #f9f9f9;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 4px;
+}
+
+/*------------------------------------------------------------------
+	Views
+-------------------------------------------------------------------*/
+/* Frontpage */
+/* line 230, ../sass/rebild-alpha-default.scss */
+.view-id-rebild_frontpage .views-row {
+  float: left;
+  background-color: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+}
+/* line 233, ../sass/rebild-alpha-default.scss */
+.view-id-rebild_frontpage .views-row .views-field-field-image img {
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  -ms-border-radius: 3px 3px 0 0;
+  -o-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+  height: auto;
+}
+/* line 237, ../sass/rebild-alpha-default.scss */
+.view-id-rebild_frontpage .views-row .views-field-title {
+  padding: 20px 20px 0;
+  font-size: 1.33333em;
+  line-height: 1.15em;
+}
+/* line 241, ../sass/rebild-alpha-default.scss */
+.view-id-rebild_frontpage .views-row .views-field-title a {
+  color: #474747;
+  text-decoration: none;
+}
+/* line 246, ../sass/rebild-alpha-default.scss */
+.view-id-rebild_frontpage .views-row .views-field-body {
+  padding: 10px 20px 20px;
+}
+/* line 250, ../sass/rebild-alpha-default.scss */
+.view-id-rebild_frontpage .views-row-odd {
+  margin: 0 10px 20px 0;
+}
+/* line 253, ../sass/rebild-alpha-default.scss */
+.view-id-rebild_frontpage .views-row-even {
+  margin: 0 0 20px 10px;
+}
+
+/* News Articles - Views Block */
+/* line 260, ../sass/rebild-alpha-default.scss */
+#block-views-news-articles-block .view-header {
+  display: block;
+}
+
+/*------------------------------------------------------------------
+	Blocks
+-------------------------------------------------------------------*/
+/* Zone: Footer */
+/* line 271, ../sass/rebild-alpha-default.scss */
+#zone-footer .block {
+  margin-bottom: 0;
+}
+
+/*------------------------------------------------------------------
+	Blocks - Specific
+-------------------------------------------------------------------*/
+/* Selfservice block - frontpage */
+/* line 282, ../sass/rebild-alpha-default.scss */
+#region-header-first .block {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding: 0;
+}
+/* line 286, ../sass/rebild-alpha-default.scss */
+#region-header-first .block form p {
+  display: inline;
+}
+/* line 289, ../sass/rebild-alpha-default.scss */
+#region-header-first .block form p.small-text {
+  font-size: 0.91667em;
+}
+/* line 292, ../sass/rebild-alpha-default.scss */
+#region-header-first .block form .customSelect {
+  width: 30%;
+}
+
+/* Search block - frontpage */
+/* line 301, ../sass/rebild-alpha-default.scss */
+#region-header-second .block {
+  font-size: 13px;
+  margin-bottom: 40px;
+}
+/* line 304, ../sass/rebild-alpha-default.scss */
+#region-header-second .block form {
+  max-width: 680px;
+  margin: 0 auto 1.7em;
+}
+
+/* Search block - Inside mega menu */
+/* line 313, ../sass/rebild-alpha-default.scss */
+.ultimenu p.small-text {
+  font-size: 0.91667em;
+  line-height: 1.4em;
+  color: #6b6b6b;
+  border-top: 1px dotted #6b6b6b;
+  padding-top: 10px;
+  margin-bottom: 0 !important;
+}
+/* line 320, ../sass/rebild-alpha-default.scss */
+.ultimenu p.small-text a {
+  color: #6b6b6b;
+  margin: 0 10px 0 0;
+}
+/* line 325, ../sass/rebild-alpha-default.scss */
+.ultimenu form {
+  background: #e0e0e0;
+  padding: 6px;
+  position: relative;
+  margin-bottom: 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 331, ../sass/rebild-alpha-default.scss */
+.ultimenu form input[type=search] {
+  font-size: 0.91667em;
+}
+/* line 334, ../sass/rebild-alpha-default.scss */
+.ultimenu form input[type=submit] {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  font-size: 0.91667em;
+}
+
+/* Footer - Contact information */
+/* line 345, ../sass/rebild-alpha-default.scss */
+#region-footer-first .block {
+  text-align: left;
+}
+/* line 348, ../sass/rebild-alpha-default.scss */
+#region-footer-first .block .content table {
+  margin: 0 0 10px;
+  text-align: left;
+}
+
+/*------------------------------------------------------------------
+	Nodes
+-------------------------------------------------------------------*/
+/* line 361, ../sass/rebild-alpha-default.scss */
+.node #content-main.has-sidebar {
+  border-right: 1px dotted #474747;
+  width: 71%;
+  padding-right: 3%;
+}
+/* line 366, ../sass/rebild-alpha-default.scss */
+.node #region-content-sidebar {
+  float: right;
+  width: 23%;
+  padding-left: 3%;
+}
+
+/* Page & News Articles */
+/* line 375, ../sass/rebild-alpha-default.scss */
+.node-page,
+.node-news-article {
+  /* Node Image Gallery */
+}
+/* line 379, ../sass/rebild-alpha-default.scss */
+.node-page .field-name-field-main-image-gallery .field-items .field-item,
+.node-news-article .field-name-field-main-image-gallery .field-items .field-item {
+  width: 21%;
+  padding: 0 2%;
+  float: left;
+  margin-bottom: 20px;
+  text-align: center;
+}

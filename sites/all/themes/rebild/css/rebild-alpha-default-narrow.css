@@ -1,0 +1,118 @@
+/* This file will hold styles that are loaded using the same media query as the narrow grid. */
+/* If you are using the default media queries provided by Omega, these styles will also
+ *  apply to the normal and widescreen layouts. You may override these styles in the normal 
+ *  and widescreen CSS files as appropriate. */
+/*------------------------------------------------------------------
+
+[BASE] 
+
+-------------------------------------------------------------------*/
+/* Compass */
+/* Modules */
+/*------------------------------------------------------------------
+
+[COLORS]
+
+1. Main colors
+2. Text colors
+3. Background colors
+4. Button colors
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	1. Main colors
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	2. Text colors
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	3. Background colors
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	4. Button colors
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+
+[VARIABLES]
+
+1. Typography
+2. Layout
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	1. Typography
+-------------------------------------------------------------------*/
+/* 12px */
+/*------------------------------------------------------------------
+	2. Layout
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+
+[MIXINS]
+
+1. Blocks
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	1. Blocks
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+
+[ALPHA-DEFAULT-NARROW]
+
+General
+Menus
+Frontpage
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	General
+-------------------------------------------------------------------*/
+/* line 21, ../sass/rebild-alpha-default-narrow.scss */
+body {
+  font-size: 11px;
+}
+
+/*------------------------------------------------------------------
+	Menus
+-------------------------------------------------------------------*/
+/* Main Menu - (Mega Menu) */
+/* line 32, ../sass/rebild-alpha-default-narrow.scss */
+#region-menu ul.ultimenu > li {
+  margin: 0 0 0 35px;
+}
+
+/* line 38, ../sass/rebild-alpha-default-narrow.scss */
+.ultimenu-flyout {
+  width: 700px;
+  left: -180px;
+}
+
+/*------------------------------------------------------------------
+	Frontpage
+-------------------------------------------------------------------*/
+/* line 49, ../sass/rebild-alpha-default-narrow.scss */
+.front #region-content .view .views-row {
+  height: 338px;
+  margin-bottom: 20px;
+}
+/* line 56, ../sass/rebild-alpha-default-narrow.scss */
+.front #region-sidebar-first .block {
+  margin-bottom: 20px;
+}
+/* line 59, ../sass/rebild-alpha-default-narrow.scss */
+.front #region-sidebar-first .block-views {
+  height: 463px;
+}
+/* line 65, ../sass/rebild-alpha-default-narrow.scss */
+.front #region-sidebar-first .block-block {
+  height: 210px;
+}
+/* line 71, ../sass/rebild-alpha-default-narrow.scss */
+.front #region-postscript-first .block .content {
+  height: 190px;
+}
+/* line 78, ../sass/rebild-alpha-default-narrow.scss */
+.front #region-postscript-second .block .content {
+  height: 190px;
+}
