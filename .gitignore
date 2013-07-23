@@ -1,6 +1,8 @@
 # Ignore configuration files that may contain sensitive information.
 sites/*/settings*.php
+*.sql
 
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
+sites/all/themes/rebild/.sass-cache

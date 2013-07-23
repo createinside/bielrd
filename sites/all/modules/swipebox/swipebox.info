@@ -1,0 +1,5 @@
+name = Swipebox
+description = "Add a formatter to image fields to make use of the Swipebox jQuery plugin"
+package = User interface
+core = 7.x
+files[] = swipebox.module
