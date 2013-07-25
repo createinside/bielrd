@@ -1,0 +1,4 @@
+name = Misc. modifications
+description = Diverse modifikationer af contrib/core moduler.
+core = 7.x
+package = Create Inside

@@ -1,0 +1,10 @@
+<?php 
+/**
+* Inkluder filer hvori vi foretager vores modifikationer.
+**/
+
+// Ændringer til Metatag modulet, er inkluderet her, felter er gjort required og andre helt fjernet.
+include_once 'misc_modifications.metatag_alter.inc';
+// Ændringer til Wysiwyg editor (TinyMCE), skjuler hjælpetekster vha. restriktioner på definerede felter.
+include_once 'misc_modifications.wysiwyg_alter.inc';
+?>
