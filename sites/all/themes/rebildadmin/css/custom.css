@@ -1,0 +1,11 @@
+/* This styling will affect the backend administrative theme
+
+/*------------------------------------------------------------------
+
+[WYSIWYG editor]
+
+-------------------------------------------------------------------*/
+
+.mceEditor .mceLayout .mce_removeformat, .mceEditor .mceLayout .mce_pasteword, .mceEditor .mceLayout .mce_paste {
+	display: none;
+}

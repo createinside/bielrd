@@ -175,7 +175,7 @@ function rebild_layout_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_10_parent';
-  $strongarm->value = 'main-menu:671';
+  $strongarm->value = 'main-menu:707';
   $export['menu_block_10_parent'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -231,7 +231,7 @@ function rebild_layout_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_11_parent';
-  $strongarm->value = 'main-menu:672';
+  $strongarm->value = 'main-menu:708';
   $export['menu_block_11_parent'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -343,7 +343,7 @@ function rebild_layout_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_3_parent';
-  $strongarm->value = 'main-menu:670';
+  $strongarm->value = 'main-menu:237';
   $export['menu_block_3_parent'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -399,7 +399,7 @@ function rebild_layout_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_4_parent';
-  $strongarm->value = 'main-menu:671';
+  $strongarm->value = 'main-menu:707';
   $export['menu_block_4_parent'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -455,7 +455,7 @@ function rebild_layout_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_5_parent';
-  $strongarm->value = 'main-menu:672';
+  $strongarm->value = 'main-menu:708';
   $export['menu_block_5_parent'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -511,7 +511,7 @@ function rebild_layout_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_6_parent';
-  $strongarm->value = 'main-menu:673';
+  $strongarm->value = 'main-menu:709';
   $export['menu_block_6_parent'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -679,7 +679,7 @@ function rebild_layout_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_9_parent';
-  $strongarm->value = 'main-menu:670';
+  $strongarm->value = 'main-menu:237';
   $export['menu_block_9_parent'] = $strongarm;
 
   $strongarm = new stdClass();

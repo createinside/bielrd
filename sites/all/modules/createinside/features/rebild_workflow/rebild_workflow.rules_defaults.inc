@@ -57,6 +57,14 @@ function rebild_workflow_default_rules_configuration() {
       ]
     }
   }');
+  $items['rules_redirect_til_workbench_efter_login'] = entity_import('rules_config', '{ "rules_redirect_til_workbench_efter_login" : {
+      "LABEL" : "Redirect til workbench efter login",
+      "PLUGIN" : "reaction rule",
+      "REQUIRES" : [ "rules" ],
+      "ON" : [ "user_login" ],
+      "DO" : [ { "redirect" : { "url" : "\\/admin\\/workbench" } } ]
+    }
+  }');
   $items['rules_workflow_email_draft_needs_review'] = entity_import('rules_config', '{ "rules_workflow_email_draft_needs_review" : {
       "LABEL" : "Workflow email: Draft =\\u003E Needs review",
       "PLUGIN" : "reaction rule",
@@ -125,6 +133,7 @@ function rebild_workflow_default_rules_configuration() {
   $items['rules_workflow_email_revised_needs_review'] = entity_import('rules_config', '{ "rules_workflow_email_revised_needs_review" : {
       "LABEL" : "Workflow email: Revised =\\u003E Needs review",
       "PLUGIN" : "reaction rule",
+      "ACTIVE" : false,
       "TAGS" : [ "workflow" ],
       "REQUIRES" : [ "workbench_moderation", "rules" ],
       "ON" : [ "workbench_moderation_after_moderation_transition" ],

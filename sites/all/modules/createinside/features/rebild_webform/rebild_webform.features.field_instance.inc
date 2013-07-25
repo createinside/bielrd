@@ -15,7 +15,7 @@ function rebild_webform_field_default_field_instances() {
     'bundle' => 'webform',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Indtast en brødtekst for denne webform.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -36,32 +36,6 @@ function rebild_webform_field_default_field_instances() {
     'label' => 'Brødtekst',
     'required' => 0,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 0,
-          'plain_text' => 0,
-        ),
-        'allowed_formats_toggle' => 1,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'filtered_html' => array(
-              'weight' => 0,
-            ),
-            'full_html' => array(
-              'weight' => 1,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => 10,
-            ),
-          ),
-        ),
-      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -127,7 +101,7 @@ function rebild_webform_field_default_field_instances() {
     'bundle' => 'webform',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Vælg hvilken sektion indholdet hører til.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -165,7 +139,7 @@ function rebild_webform_field_default_field_instances() {
     'bundle' => 'webform',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Vælg et eller flere tags der er med til at beskrive indholdet.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -203,8 +177,11 @@ function rebild_webform_field_default_field_instances() {
   t('Angiv en dato for hvornår dette indhold skal opdateres eller gennemses igen.');
   t('Brødtekst');
   t('Forældelsesdato');
+  t('Indtast en brødtekst for denne webform.');
   t('Sektion');
   t('Tags');
+  t('Vælg et eller flere tags der er med til at beskrive indholdet.');
+  t('Vælg hvilken sektion indholdet hører til.');
 
   return $field_instances;
 }

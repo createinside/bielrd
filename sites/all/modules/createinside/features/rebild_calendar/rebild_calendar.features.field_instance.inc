@@ -13,9 +13,18 @@ function rebild_calendar_field_default_field_instances() {
   // Exported field_instance: 'node-calendar_post-field_calendar_address'
   $field_instances['node-calendar_post-field_calendar_address'] = array(
     'bundle' => 'calendar_post',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'element_key' => 'node|calendar_post|field_calendar_address|und|0',
+        'thoroughfare' => '',
+        'premise' => '',
+        'postal_code' => '',
+        'locality' => '',
+        'country' => 'DK',
+      ),
+    ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Indtast stedet hvor begivenheden finder sted.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -68,7 +77,7 @@ function rebild_calendar_field_default_field_instances() {
     'bundle' => 'calendar_post',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Vælg en kalenderkategori for dette dokument.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -107,7 +116,7 @@ function rebild_calendar_field_default_field_instances() {
   $field_instances['node-calendar_post-field_calendar_date'] = array(
     'bundle' => 'calendar_post',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Vælg en dato for dette kalenderindlæg.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -160,7 +169,7 @@ function rebild_calendar_field_default_field_instances() {
   $field_instances['node-calendar_post-field_calendar_deadline'] = array(
     'bundle' => 'calendar_post',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Vælg en dato for sidste tilmeldingsfrist.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -214,7 +223,7 @@ function rebild_calendar_field_default_field_instances() {
     'bundle' => 'calendar_post',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Indtast et link til hvor brugeren kan læse mere om begivenheden.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -268,7 +277,7 @@ function rebild_calendar_field_default_field_instances() {
     'bundle' => 'calendar_post',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Indtast en arrangør for begivenheden.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -308,7 +317,7 @@ function rebild_calendar_field_default_field_instances() {
     'bundle' => 'calendar_post',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Indtast et link til Billetsalg.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -362,7 +371,7 @@ function rebild_calendar_field_default_field_instances() {
     'bundle' => 'calendar_post',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Indtast en email adresse til henvendelse.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -400,7 +409,7 @@ function rebild_calendar_field_default_field_instances() {
   $field_instances['node-calendar_post-field_calender_phone'] = array(
     'bundle' => 'calendar_post',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Indtast et telefonnummer til henvendelse.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -681,7 +690,7 @@ function rebild_calendar_field_default_field_instances() {
     'bundle' => 'calendar_post',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Indtast en brødtekst for kalenderindlægget.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -702,32 +711,6 @@ function rebild_calendar_field_default_field_instances() {
     'label' => 'Brødtekst',
     'required' => 1,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 0,
-          'plain_text' => 0,
-        ),
-        'allowed_formats_toggle' => 1,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'filtered_html' => array(
-              'weight' => 0,
-            ),
-            'full_html' => array(
-              'weight' => 1,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => 10,
-            ),
-          ),
-        ),
-      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -746,7 +729,7 @@ function rebild_calendar_field_default_field_instances() {
   $field_instances['node-calendar_post-field_main_image'] = array(
     'bundle' => 'calendar_post',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -775,10 +758,6 @@ function rebild_calendar_field_default_field_instances() {
       'default_image' => 0,
       'file_directory' => 'calendar_post',
       'file_extensions' => 'png gif jpg jpeg',
-      'focus' => 0,
-      'focus_lock_ratio' => 0,
-      'focus_min_size' => '',
-      'focus_required' => 0,
       'max_filesize' => '10 MB',
       'max_resolution' => '',
       'min_resolution' => '680x190',
@@ -793,6 +772,7 @@ function rebild_calendar_field_default_field_instances() {
           'public' => 'public',
         ),
         'allowed_types' => array(
+          0 => 0,
           'audio' => 0,
           'document' => 0,
           'image' => 'image',
@@ -879,7 +859,7 @@ function rebild_calendar_field_default_field_instances() {
     'bundle' => 'calendar_post',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Vælg hvilken sektion indholdet hører til.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -917,7 +897,7 @@ function rebild_calendar_field_default_field_instances() {
     'bundle' => 'calendar_post',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Indtast et resumé. Resuméet vises øverst før brødteksten.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -938,32 +918,6 @@ function rebild_calendar_field_default_field_instances() {
     'label' => 'Resumé',
     'required' => 1,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 'php_code',
-          'plain_text' => 'plain_text',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'filtered_html' => array(
-              'weight' => 0,
-            ),
-            'full_html' => array(
-              'weight' => 1,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => 10,
-            ),
-          ),
-        ),
-      ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -983,7 +937,7 @@ function rebild_calendar_field_default_field_instances() {
     'bundle' => 'calendar_post',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Vælg et eller flere tags der er med til at beskrive indholdet.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1025,6 +979,14 @@ function rebild_calendar_field_default_field_instances() {
   t('Dato');
   t('Email');
   t('Forældelsesdato');
+  t('Indtast en arrangør for begivenheden.');
+  t('Indtast en brødtekst for kalenderindlægget.');
+  t('Indtast en email adresse til henvendelse.');
+  t('Indtast et link til Billetsalg.');
+  t('Indtast et link til hvor brugeren kan læse mere om begivenheden.');
+  t('Indtast et resumé. Resuméet vises øverst før brødteksten.');
+  t('Indtast et telefonnummer til henvendelse.');
+  t('Indtast stedet hvor begivenheden finder sted.');
   t('Kategori');
   t('Link til billetsalg');
   t('Læs mere om arrangementet');
@@ -1034,6 +996,12 @@ function rebild_calendar_field_default_field_instances() {
   t('Sted');
   t('Tags');
   t('Telefonnummer');
+  t('Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
+  t('Vælg en dato for dette kalenderindlæg.');
+  t('Vælg en dato for sidste tilmeldingsfrist.');
+  t('Vælg en kalenderkategori for dette dokument.');
+  t('Vælg et eller flere tags der er med til at beskrive indholdet.');
+  t('Vælg hvilken sektion indholdet hører til.');
 
   return $field_instances;
 }

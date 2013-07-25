@@ -238,34 +238,8 @@ function rebild_page_field_default_field_instances() {
     'entity_type' => 'file',
     'field_name' => 'field_file_image_title_text',
     'label' => 'Title tekst',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 'php_code',
-          'plain_text' => 'plain_text',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'filtered_html' => array(
-              'weight' => 0,
-            ),
-            'full_html' => array(
-              'weight' => 1,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => 10,
-            ),
-          ),
-        ),
-      ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -285,7 +259,7 @@ function rebild_page_field_default_field_instances() {
     'bundle' => 'page',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Indtast tekst til en eller flere accordions. En accordion er et sammenklappeligt element, der vises nederst på indholdet.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -308,12 +282,9 @@ function rebild_page_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
+      'active' => 0,
       'module' => 'field_collection',
-      'settings' => array(
-        'collapsed' => 1,
-        'last_item_collapsed' => 0,
-      ),
+      'settings' => array(),
       'type' => 'field_collection_embed',
       'weight' => 4,
     ),
@@ -324,7 +295,7 @@ function rebild_page_field_default_field_instances() {
     'bundle' => 'page',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Indtast en brødtekst for dette dokument.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -345,32 +316,6 @@ function rebild_page_field_default_field_instances() {
     'label' => 'Brødtekst',
     'required' => 1,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 0,
-          'plain_text' => 0,
-        ),
-        'allowed_formats_toggle' => 1,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'filtered_html' => array(
-              'weight' => 0,
-            ),
-            'full_html' => array(
-              'weight' => 1,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => 10,
-            ),
-          ),
-        ),
-      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -390,7 +335,7 @@ function rebild_page_field_default_field_instances() {
     'bundle' => 'page',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Indtast en kort tekst til faktaboksen.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -411,32 +356,6 @@ function rebild_page_field_default_field_instances() {
     'label' => 'Faktaboks',
     'required' => 0,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 0,
-          'plain_text' => 0,
-        ),
-        'allowed_formats_toggle' => 1,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'filtered_html' => array(
-              'weight' => 0,
-            ),
-            'full_html' => array(
-              'weight' => 1,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => 10,
-            ),
-          ),
-        ),
-      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -495,7 +414,7 @@ function rebild_page_field_default_field_instances() {
   $field_instances['node-page-field_main_image'] = array(
     'bundle' => 'page',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -524,10 +443,6 @@ function rebild_page_field_default_field_instances() {
       'default_image' => 0,
       'file_directory' => 'page',
       'file_extensions' => 'png gif jpg jpeg',
-      'focus' => 0,
-      'focus_lock_ratio' => 0,
-      'focus_min_size' => '',
-      'focus_required' => 0,
       'max_filesize' => '10 MB',
       'max_resolution' => '',
       'min_resolution' => '680x190',
@@ -560,14 +475,14 @@ function rebild_page_field_default_field_instances() {
         'manualcrop_instant_crop' => FALSE,
         'manualcrop_instant_preview' => 1,
         'manualcrop_require_cropping' => array(
-          'blok' => 0,
+          'blok' => 'blok',
           'indhold_top' => 'indhold_top',
-          'nyhed_forside' => 0,
+          'nyhed_forside' => 'nyhed_forside',
         ),
         'manualcrop_styles_list' => array(
-          'blok' => 0,
+          'blok' => 'blok',
           'indhold_top' => 'indhold_top',
-          'nyhed_forside' => 0,
+          'nyhed_forside' => 'nyhed_forside',
         ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
@@ -583,7 +498,7 @@ function rebild_page_field_default_field_instances() {
   $field_instances['node-page-field_main_image_gallery'] = array(
     'bundle' => 'page',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Upload et eller flere billeder, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -615,10 +530,6 @@ function rebild_page_field_default_field_instances() {
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
-      'focus' => 0,
-      'focus_lock_ratio' => 0,
-      'focus_min_size' => '',
-      'focus_required' => 0,
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
@@ -633,6 +544,7 @@ function rebild_page_field_default_field_instances() {
           'public' => 'public',
         ),
         'allowed_types' => array(
+          0 => 0,
           'audio' => 0,
           'document' => 0,
           'image' => 'image',
@@ -643,16 +555,24 @@ function rebild_page_field_default_field_instances() {
           'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
           'upload' => 'upload',
         ),
-        'manualcrop_crop_info' => TRUE,
-        'manualcrop_default_crop_area' => TRUE,
-        'manualcrop_enable' => FALSE,
+        'manualcrop_crop_info' => 1,
+        'manualcrop_default_crop_area' => 1,
+        'manualcrop_enable' => 0,
         'manualcrop_inline_crop' => FALSE,
         'manualcrop_instant_crop' => FALSE,
-        'manualcrop_instant_preview' => TRUE,
-        'manualcrop_require_cropping' => array(),
-        'manualcrop_styles_list' => array(),
+        'manualcrop_instant_preview' => 1,
+        'manualcrop_require_cropping' => array(
+          'blok' => 0,
+          'indhold_top' => 0,
+          'nyhed_forside' => 0,
+        ),
+        'manualcrop_styles_list' => array(
+          'blok' => 0,
+          'indhold_top' => 0,
+          'nyhed_forside' => 0,
+        ),
         'manualcrop_styles_mode' => 'exclude',
-        'manualcrop_thumblist' => FALSE,
+        'manualcrop_thumblist' => 0,
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
@@ -802,7 +722,7 @@ function rebild_page_field_default_field_instances() {
     'bundle' => 'page',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Vælg hvilken sektion indholdet hører til.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -840,7 +760,7 @@ function rebild_page_field_default_field_instances() {
     'bundle' => 'page',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Indtast et resumé. Resuméet vises øverst før brødteksten.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -861,32 +781,6 @@ function rebild_page_field_default_field_instances() {
     'label' => 'Resumé',
     'required' => 0,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 'php_code',
-          'plain_text' => 'plain_text',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'filtered_html' => array(
-              'weight' => 0,
-            ),
-            'full_html' => array(
-              'weight' => 1,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => 10,
-            ),
-          ),
-        ),
-      ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -906,7 +800,7 @@ function rebild_page_field_default_field_instances() {
     'bundle' => 'page',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Vælg et eller flere tags der er med til at beskrive indholdet.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -951,6 +845,10 @@ function rebild_page_field_default_field_instances() {
   t('Faktaboks');
   t('Forældelsesdato');
   t('GIS Kort');
+  t('Indtast en brødtekst for dette dokument.');
+  t('Indtast en kort tekst til faktaboksen.');
+  t('Indtast et resumé. Resuméet vises øverst før brødteksten.');
+  t('Indtast tekst til en eller flere accordions. En accordion er et sammenklappeligt element, der vises nederst på indholdet.');
   t('Interne links');
   t('Overskrift');
   t('Resumé');
@@ -959,6 +857,10 @@ function rebild_page_field_default_field_instances() {
   t('Tekst');
   t('Title tekst');
   t('Title text attribute');
+  t('Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
+  t('Upload et eller flere billeder, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
+  t('Vælg et eller flere tags der er med til at beskrive indholdet.');
+  t('Vælg hvilken sektion indholdet hører til.');
 
   return $field_instances;
 }

@@ -70,7 +70,7 @@ function rebild_layout_default_fe_block_boxes() {
   $fe_block_boxes->info = 'Genveje';
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'rebild_shortcuts_front';
-  $fe_block_boxes->body = '<ul><li><span style="line-height: 1.538em;">Brugerinformation og &nbsp;Tilbudsportal&nbsp;</span></li><li><span style="line-height: 1.538em;">Rebild Kommunes EAN numre</span></li><li><span style="line-height: 1.538em;">Aenean nec tortor</span></li><li><span style="line-height: 1.538em;">Velkommen til Rebild Kommune</span></li><li><span style="line-height: 1.538em;">Kontakt og åbningstider</span></li></ul>';
+  $fe_block_boxes->body = '<ul><li><span style="line-height: 1.538em;" data-mce-mark="1">Book en lokalpolitiker&nbsp;</span></li><li><span style="line-height: 1.538em;" data-mce-mark="1">Ledige stillinger</span></li><li><span style="line-height: 1.538em;" data-mce-mark="1">Din kommune informerer</span></li><li><span style="line-height: 1.538em;" data-mce-mark="1">Sådan møder vi borgerne</span></li><li><span style="line-height: 1.538em;">Borgerservicecentret</span></li></ul>';
 
   $export['rebild_shortcuts_front'] = $fe_block_boxes;
 

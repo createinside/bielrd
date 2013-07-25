@@ -273,7 +273,7 @@ function rebild_edagsorden_field_default_field_instances() {
     'bundle' => 'agenda',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Vælg et udvalg.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -534,6 +534,7 @@ function rebild_edagsorden_field_default_field_instances() {
   t('Sted');
   t('Titel');
   t('Udvalg');
+  t('Vælg et udvalg.');
 
   return $field_instances;
 }

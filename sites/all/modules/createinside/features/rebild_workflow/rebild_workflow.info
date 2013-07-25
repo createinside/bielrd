@@ -19,6 +19,7 @@ features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[rules_config][] = rules_outdated_content_checker
 features[rules_config][] = rules_outdated_content_processor
+features[rules_config][] = rules_redirect_til_workbench_efter_login
 features[rules_config][] = rules_workflow_email_draft_needs_review
 features[rules_config][] = rules_workflow_email_needs_review_published
 features[rules_config][] = rules_workflow_email_needs_review_revised
