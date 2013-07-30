@@ -4,10 +4,10 @@ sites/*/settings*.php
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
-sites/all/modules/devel/
+sites/all/modules/devel
 
 # Do not track SASS cache.
 .sass-cache
 
-# Don not track .DS_store files.
+# Do not track .DS_store files.
 .DS_Store
