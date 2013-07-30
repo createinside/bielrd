@@ -7,4 +7,5 @@
 include_once 'misc_modifications.metatag_alter.inc';
 // Ændringer til Wysiwyg editor (TinyMCE), skjuler hjælpetekster vha. restriktioner på definerede felter.
 include_once 'misc_modifications.wysiwyg_alter.inc';
+include_once 'misc_modifications.workbench_alter.inc';
 ?>
