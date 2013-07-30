@@ -1,11 +1,608 @@
-/* This styling will affect the backend administrative theme
+/* This styling will affect the backend administrative theme */
+/* Partials from main theme */
+/*------------------------------------------------------------------
+
+[FONTS]
+
+-------------------------------------------------------------------*/
+@font-face {
+  font-family: 'Rebild';
+  src: url("../fonts/Rebild.eot");
+  src: url("../fonts/Rebild.eot?#iefix") format("embedded-opentype"), url("../fonts/Rebild.woff") format("woff"), url("../fonts/Rebild.ttf") format("truetype"), url("../fonts/Rebild.svg#Rebild") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+/* line 30, ../../rebild/sass/partials/_fonts.scss */
+[data-icon]:before {
+  font-family: 'Rebild';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/**
+ * UDSKIFT KUN LINJERNE HERUNDER, NÅR DER SKAL OPDATERS
+ */
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+/* line 44, ../../rebild/sass/partials/_fonts.scss */
+.icon-reorder, .icon-rss, .icon-envelope, .icon-search, .icon-double-angle-right, .icon-double-angle-left, .icon-double-angle-down, .icon-double-angle-up, .icon-list-ul, .icon-facebook, .icon-align-justify, .icon-phone, .icon-sort, .icon-arrow-right, .icon-arrow-left, .icon-arrow-up, .icon-arrow-down, .icon-menu, .icon-arrow-right-2, .icon-arrow-up-2, .icon-arrow-down-2, .icon-arrow-left-2, .icon-home, .icon-untitled, .icon-mobil_logo, .icon-bottom_logo, .icon-close, .icon-plus, .icon-minus {
+  font-family: 'Rebild';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 54, ../../rebild/sass/partials/_fonts.scss */
+.icon-reorder:before {
+  content: "\f0c9";
+}
+
+/* line 57, ../../rebild/sass/partials/_fonts.scss */
+.icon-rss:before {
+  content: "\f09e";
+}
+
+/* line 60, ../../rebild/sass/partials/_fonts.scss */
+.icon-envelope:before {
+  content: "\f003";
+}
+
+/* line 63, ../../rebild/sass/partials/_fonts.scss */
+.icon-search:before {
+  content: "\f002";
+}
+
+/* line 66, ../../rebild/sass/partials/_fonts.scss */
+.icon-double-angle-right:before {
+  content: "\f101";
+}
+
+/* line 69, ../../rebild/sass/partials/_fonts.scss */
+.icon-double-angle-left:before {
+  content: "\f100";
+}
+
+/* line 72, ../../rebild/sass/partials/_fonts.scss */
+.icon-double-angle-down:before {
+  content: "\f103";
+}
+
+/* line 75, ../../rebild/sass/partials/_fonts.scss */
+.icon-double-angle-up:before {
+  content: "\f102";
+}
+
+/* line 78, ../../rebild/sass/partials/_fonts.scss */
+.icon-list-ul:before {
+  content: "\f0ca";
+}
+
+/* line 81, ../../rebild/sass/partials/_fonts.scss */
+.icon-facebook:before {
+  content: "\f09a";
+}
+
+/* line 84, ../../rebild/sass/partials/_fonts.scss */
+.icon-align-justify:before {
+  content: "\f039";
+}
+
+/* line 87, ../../rebild/sass/partials/_fonts.scss */
+.icon-phone:before {
+  content: "\f095";
+}
+
+/* line 90, ../../rebild/sass/partials/_fonts.scss */
+.icon-sort:before {
+  content: "\f0dc";
+}
+
+/* line 93, ../../rebild/sass/partials/_fonts.scss */
+.icon-arrow-right:before {
+  content: "\f061";
+}
+
+/* line 96, ../../rebild/sass/partials/_fonts.scss */
+.icon-arrow-left:before {
+  content: "\f060";
+}
+
+/* line 99, ../../rebild/sass/partials/_fonts.scss */
+.icon-arrow-up:before {
+  content: "\f062";
+}
+
+/* line 102, ../../rebild/sass/partials/_fonts.scss */
+.icon-arrow-down:before {
+  content: "\f063";
+}
+
+/* line 105, ../../rebild/sass/partials/_fonts.scss */
+.icon-menu:before {
+  content: "\e000";
+}
+
+/* line 108, ../../rebild/sass/partials/_fonts.scss */
+.icon-arrow-right-2:before {
+  content: "\e001";
+}
+
+/* line 111, ../../rebild/sass/partials/_fonts.scss */
+.icon-arrow-up-2:before {
+  content: "\e002";
+}
+
+/* line 114, ../../rebild/sass/partials/_fonts.scss */
+.icon-arrow-down-2:before {
+  content: "\e003";
+}
+
+/* line 117, ../../rebild/sass/partials/_fonts.scss */
+.icon-arrow-left-2:before {
+  content: "\e004";
+}
+
+/* line 120, ../../rebild/sass/partials/_fonts.scss */
+.icon-home:before {
+  content: "\e005";
+}
+
+/* line 123, ../../rebild/sass/partials/_fonts.scss */
+.icon-untitled:before {
+  content: "\e006";
+}
+
+/* line 126, ../../rebild/sass/partials/_fonts.scss */
+.icon-mobil_logo:before {
+  content: "\e007";
+}
+
+/* line 129, ../../rebild/sass/partials/_fonts.scss */
+.icon-bottom_logo:before {
+  content: "\e009";
+}
+
+/* line 132, ../../rebild/sass/partials/_fonts.scss */
+.icon-close:before {
+  content: "\e008";
+}
+
+/* line 135, ../../rebild/sass/partials/_fonts.scss */
+.icon-plus:before {
+  content: "\e00a";
+}
+
+/* line 138, ../../rebild/sass/partials/_fonts.scss */
+.icon-minus:before {
+  content: "\e00c";
+}
+
+/* Variables from main theme */
+/*------------------------------------------------------------------
+
+[COLORS]
+
+Main colors
+Text colors
+Background colors
+Button colors
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	Main colors
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	Text colors
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	Background colors
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	Button colors
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+
+[VARIABLES]
+
+Typography
+Layout
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	Typography
+-------------------------------------------------------------------*/
+/* 12px */
+/*------------------------------------------------------------------
+	Layout
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+
+[MIXINS]
+
+Blocks
+Backend
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	Blocks
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	Backend
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+
+[CUSTOM]
+General backend styling
+Opret indhold
+Workbench
+WYSIWYG editor
+Breadcrumbs
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+
+	General backend styling
+
+-------------------------------------------------------------------*/
+/* line 30, ../sass/custom.scss */
+.page-admin, .page-node-add {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 1200, color-stop(0%, #e8e8e8), color-stop(50%, #e8e8e8), color-stop(75%, #d4d4d4), color-stop(100%, #e8e8e8));
+  background-image: -webkit-linear-gradient(#e8e8e8, #e8e8e8 600px, #d4d4d4 900px, #e8e8e8 1200px);
+  background-image: -moz-linear-gradient(#e8e8e8, #e8e8e8 600px, #d4d4d4 900px, #e8e8e8 1200px);
+  background-image: -o-linear-gradient(#e8e8e8, #e8e8e8 600px, #d4d4d4 900px, #e8e8e8 1200px);
+  background-image: linear-gradient(#e8e8e8, #e8e8e8 600px, #d4d4d4 900px, #e8e8e8 1200px);
+  background-color: #e8e8e8;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12px;
+  -webkit-text-size-adjust: none;
+}
+/* line 36, ../sass/custom.scss */
+.page-admin a, .page-node-add a {
+  color: #7f9dcd;
+}
+/* line 39, ../sass/custom.scss */
+.page-admin #branding, .page-node-add #branding {
+  background: transparent url("../../rebild/img/noise_bg_repeat.png") repeat;
+}
+/* line 42, ../sass/custom.scss */
+.page-admin #branding #side_titel .page-title, .page-node-add #branding #side_titel .page-title {
+  float: none;
+  font-size: 1.5em;
+  font-weight: normal;
+  padding: 0 0 20px 0;
+  color: #474747;
+  margin-left: 5px;
+  text-shadow: white 1px 1px 1px;
+}
+/* line 52, ../sass/custom.scss */
+.page-admin #branding ul.primary, .page-node-add #branding ul.primary {
+  float: none;
+}
+/* line 55, ../sass/custom.scss */
+.page-admin #branding ul.primary .active a, .page-node-add #branding ul.primary .active a {
+  background-color: #fff;
+  font-weight: normal;
+  position: relative;
+  z-index: 100;
+}
+/* line 63, ../sass/custom.scss */
+.page-admin #branding ul.primary li a, .page-node-add #branding ul.primary li a {
+  padding: 0 18px 3px;
+  font-weight: normal;
+}
+/* line 69, ../sass/custom.scss */
+.page-admin #branding .add-or-remove-shortcuts, .page-node-add #branding .add-or-remove-shortcuts {
+  display: none;
+}
+/* line 73, ../sass/custom.scss */
+.page-admin #page, .page-node-add #page {
+  min-width: 960px;
+  padding: 20px 40px 40px 40px;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) -1px -1px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) -1px -1px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) -1px -1px 0px;
+}
+/* line 80, ../sass/custom.scss */
+.page-admin #page .tabs-secondary ul.secondary, .page-node-add #page .tabs-secondary ul.secondary {
+  float: left;
+}
+/* line 84, ../sass/custom.scss */
+.page-admin #page h3, .page-admin #page h2, .page-node-add #page h3, .page-node-add #page h2 {
+  font-weight: normal;
+  font-size: 1.33333em;
+}
+/* line 89, ../sass/custom.scss */
+.page-admin #page table, .page-node-add #page table {
+  background-color: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  border: none;
+  font-size: 1em;
+}
+/* line 93, ../sass/custom.scss */
+.page-admin #page table .odd, .page-node-add #page table .odd {
+  border-bottom: 1px solid #ebebeb;
+}
+/* line 96, ../sass/custom.scss */
+.page-admin #page table .views-row-last, .page-node-add #page table .views-row-last {
+  border-bottom: 0;
+}
+/* line 99, ../sass/custom.scss */
+.page-admin #page table .views-field.views-field-title, .page-admin #page table .views-field.views-field-type, .page-admin #page table .views-field.views-field-status, .page-admin #page table .views-field.views-field-state, .page-admin #page table .views-field.views-field-moderation-actions, .page-admin #page table .views-field.views-field-name, .page-admin #page table .views-field.views-field-changed, .page-node-add #page table .views-field.views-field-title, .page-node-add #page table .views-field.views-field-type, .page-node-add #page table .views-field.views-field-status, .page-node-add #page table .views-field.views-field-state, .page-node-add #page table .views-field.views-field-moderation-actions, .page-node-add #page table .views-field.views-field-name, .page-node-add #page table .views-field.views-field-changed {
+  border-right: 1px solid #ebebeb;
+}
+/* line 103, ../sass/custom.scss */
+.page-admin #page table thead tr, .page-node-add #page table thead tr {
+  height: 40px;
+}
+/* line 107, ../sass/custom.scss */
+.page-admin #page table th, .page-node-add #page table th {
+  border: none;
+  padding: 0 10px 0 10px;
+  background-color: #dddddd;
+}
+/* line 111, ../sass/custom.scss */
+.page-admin #page table th a, .page-node-add #page table th a {
+  color: #000;
+  font-size: 1em;
+}
+/* line 116, ../sass/custom.scss */
+.page-admin #page table tr, .page-node-add #page table tr {
+  border: none;
+}
+/* line 118, ../sass/custom.scss */
+.page-admin #page table tr .last-child, .page-node-add #page table tr .last-child {
+  border: none;
+}
+/* line 122, ../sass/custom.scss */
+.page-admin #page table td, .page-node-add #page table td {
+  border: none;
+}
 
 /*------------------------------------------------------------------
 
-[WYSIWYG editor]
+	Opret indhold
 
 -------------------------------------------------------------------*/
+/* line 135, ../sass/custom.scss */
+.page-node-add #page {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12px;
+  -webkit-text-size-adjust: none;
+}
+/* line 139, ../sass/custom.scss */
+.page-node-add #page a {
+  color: #7f9dcd;
+}
+/* line 143, ../sass/custom.scss */
+.page-node-add #page .node-page-form label {
+  font-size: 1.33333em;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+/* line 148, ../sass/custom.scss */
+.page-node-add #page .node-page-form input {
+  width: 100%;
+  min-height: 30px;
+  border: none;
+  background-color: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+}
+/* line 154, ../sass/custom.scss */
+.page-node-add #page .node-page-form .description {
+  font-size: 1em;
+}
+/* line 157, ../sass/custom.scss */
+.page-node-add #page .node-page-form .button.launcher {
+  background-color: #7f9dcd;
+  color: #fff;
+  background-image: none;
+  border: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
 
-.mceEditor .mceLayout .mce_removeformat, .mceEditor .mceLayout .mce_pasteword, .mceEditor .mceLayout .mce_paste {
-	display: none;
+/*------------------------------------------------------------------
+
+	Workbench
+
+-------------------------------------------------------------------*/
+/* line 181, ../sass/custom.scss */
+#page .tabs-secondary .min-profil {
+  float: right;
+  width: 28%;
+}
+/* line 184, ../sass/custom.scss */
+#page .tabs-secondary .min-profil li {
+  float: left;
+  display: block;
+  margin-right: 10px;
+}
+/* line 188, ../sass/custom.scss */
+#page .tabs-secondary .min-profil li a {
+  background-color: #ddd;
+  color: #000;
+  display: inline-block;
+  border-radius: 7px;
+  padding: 2px 10px;
+}
+/* line 200, ../sass/custom.scss */
+#page #min_profil_side .min_profil_top .left {
+  float: left;
+  min-width: 67%;
+  margin-right: 40px;
+}
+/* line 206, ../sass/custom.scss */
+#page #min_profil_side .min_profil_top .right {
+  float: right;
+  width: 28%;
+}
+/* line 209, ../sass/custom.scss */
+#page #min_profil_side .min_profil_top .right .view-content {
+  background-color: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+}
+/* line 211, ../sass/custom.scss */
+#page #min_profil_side .min_profil_top .right .view-content h4 {
+  padding: 10px;
+  border-bottom: 1px solid #bcbdbd;
+  margin: 0;
+  font-size: 1em;
+  font-weight: normal;
+  height: 19px;
+  background-color: #dddddd;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+/* line 222, ../sass/custom.scss */
+#page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-picture {
+  padding: 10px 10px 0 10px;
+}
+/* line 225, ../sass/custom.scss */
+#page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-field-user-jobtitel {
+  padding: 0 10px 0 10px;
+  font-style: italic;
+  margin: 10px 0;
+}
+/* line 230, ../sass/custom.scss */
+#page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-field-user-tlf, #page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-mail {
+  padding: 0 10px 0 10px;
+}
+/* line 233, ../sass/custom.scss */
+#page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-mail {
+  padding-bottom: 10px;
+}
+/* line 236, ../sass/custom.scss */
+#page #min_profil_side .min_profil_top .right .view-content p {
+  margin: 0;
+}
+/* line 243, ../sass/custom.scss */
+#page #min_profil_side .min_profil_middle .needs_attention {
+  float: left;
+  width: 67%;
+  margin-right: 40px;
+}
+/* line 248, ../sass/custom.scss */
+#page #min_profil_side .min_profil_middle #block-block-16 {
+  float: right;
+  background-color: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  width: 28%;
+  margin-top: 68px;
+}
+/* line 253, ../sass/custom.scss */
+#page #min_profil_side .min_profil_middle #block-block-16 h2 {
+  padding: 10px;
+  border-bottom: 1px solid #bcbdbd;
+  margin: 0;
+  font-size: 1em;
+  font-weight: normal;
+  height: 19px;
+  background-color: #dddddd;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+/* line 264, ../sass/custom.scss */
+#page #min_profil_side .min_profil_middle #block-block-16 .content {
+  padding: 10px;
+}
+/* line 267, ../sass/custom.scss */
+#page #min_profil_side .min_profil_middle #block-block-16 p {
+  margin: 0;
+}
+/* line 273, ../sass/custom.scss */
+#page #min_profil_side .min_profil_bottom .all_recent_content {
+  float: left;
+  width: 100%;
+}
+
+/*------------------------------------------------------------------
+
+	WYSIWYG editor
+
+-------------------------------------------------------------------*/
+/* line 291, ../sass/custom.scss */
+.mceEditor .mceLayout .mce_removeformat {
+  display: none;
+}
+/* line 294, ../sass/custom.scss */
+.mceEditor .mceLayout .mce_pasteword {
+  display: none;
+}
+/* line 297, ../sass/custom.scss */
+.mceEditor .mceLayout .mce_paste {
+  display: none;
+}
+
+/*------------------------------------------------------------------
+	Breadcrumbs
+-------------------------------------------------------------------*/
+/* line 307, ../sass/custom.scss */
+.page-admin #branding .breadcrumb, .page-node-add #branding .breadcrumb {
+  font-size: 0.91667em;
+  line-height: 1.5;
+  color: #474747;
+  margin-bottom: 15px;
+  padding-bottom: 0;
+  margin-left: 5px;
+  text-shadow: white 1px 1px 1px;
+}
+/* line 315, ../sass/custom.scss */
+.page-admin #branding .breadcrumb a, .page-admin #branding .breadcrumb strong, .page-node-add #branding .breadcrumb a, .page-node-add #branding .breadcrumb strong {
+  color: #474747;
+  text-decoration: none;
+  position: relative;
+  top: -1px;
+}
+/* line 321, ../sass/custom.scss */
+.page-admin #branding .breadcrumb span, .page-node-add #branding .breadcrumb span {
+  font-size: 1.25em;
 }

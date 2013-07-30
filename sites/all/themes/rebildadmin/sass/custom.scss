@@ -1,0 +1,328 @@
+/* This styling will affect the backend administrative theme */
+
+@import "compass/css3";
+/* Partials from main theme */
+@import "../../rebild/sass/partials/fonts";
+/* Variables from main theme */
+@import "../../rebild/sass/modules/colors";
+@import "../../rebild/sass/modules/variables";
+@import "../../rebild/sass/modules/mixins";
+
+/*------------------------------------------------------------------
+
+[CUSTOM]
+General backend styling
+Opret indhold
+Workbench
+WYSIWYG editor
+Breadcrumbs
+
+-------------------------------------------------------------------*/
+
+
+
+/*------------------------------------------------------------------
+
+	General backend styling
+
+-------------------------------------------------------------------*/
+
+.page-admin, .page-node-add {
+	@include background-image(linear-gradient($bg-color-main, $bg-color-main 600px, #d4d4d4 900px, $bg-color-main 1200px));
+	background-color: $bg-color-main;
+	font-family: $font-family-std;
+	font-size: 12px;
+	-webkit-text-size-adjust: none;
+	a {
+		color: $color-blue;
+	}
+	#branding {
+		background: transparent url("../../rebild/img/noise_bg_repeat.png") repeat;
+		#side_titel {
+			.page-title {
+				float: none;
+				font-size: $font-size-headline;
+				font-weight: normal;
+				padding: 0 0 $spacing-std 0;
+				color: $text-color;	
+				margin-left: 5px;
+				@include text-shadow(rgba(white, 1) 1px 1px 1px);
+			}
+		}
+		ul.primary {
+			float: none;			
+			.active {
+				a {
+					background-color: #fff;
+					font-weight: normal;
+					position: relative;
+					z-index: 100;
+				}
+			}
+			li {
+				a {
+					padding: 0 18px 3px;
+					font-weight: normal;
+				}							
+			}					
+		}		
+		.add-or-remove-shortcuts {
+			display: none;
+		}		
+	}	
+	#page {		
+		min-width: 960px;
+		padding: 20px 40px 40px 40px;
+		margin-left: 0;
+		margin-right: 0;
+		@include grid-box-page-admin(white);
+		.tabs-secondary {
+			ul.secondary {
+				float: left;
+			}
+		}
+			h3, h2 {
+				font-weight: normal;
+				font-size: $font-size-large;
+			}
+					
+		table  {
+			@include grid-box-workbench(white);
+			border: none;
+			font-size: $font-size-std;
+			.odd {
+				border-bottom: 1px solid #ebebeb;
+			}
+			.views-row-last {
+				border-bottom: 0;
+			}
+			.views-field.views-field-title, .views-field.views-field-type, .views-field.views-field-status, .views-field.views-field-state, .views-field.views-field-moderation-actions, .views-field.views-field-name, .views-field.views-field-changed {
+				border-right: 1px solid #ebebeb;
+			}
+			thead {
+				tr {
+					height: 40px;
+				}
+			}
+			th {
+				border: none;
+				padding: 0 10px 0 10px;
+				background-color: #dddddd;
+				a {
+					color: #000;
+					font-size: $font-size-std;
+				}
+			}
+			tr {
+				border: none;
+				.last-child {
+					border:none;
+				}
+			}		
+			td {
+				border: none;
+			}						
+		}
+			
+	}
+}
+/*------------------------------------------------------------------
+
+	Opret indhold
+
+-------------------------------------------------------------------*/
+.page-node-add {
+	#page {
+		font-family: $font-family-std;
+		font-size: 12px;
+		-webkit-text-size-adjust: none;
+		a {
+			color: $color-blue;
+		}
+		.node-page-form {
+			label {
+				font-size: $font-size-large;
+				font-weight: normal;
+				margin-bottom: 15px;
+			}
+			input {
+				width: 100%;
+				min-height: 30px;
+				border: none;
+				@include grid-box-workbench(white);
+			}
+			.description {
+				font-size: $font-size-std;
+			}
+			.button.launcher {
+				background-color: $color-blue;
+				color: #fff;
+				background-image: none;
+				border:none;
+				-webkit-border-radius: 3px;
+				-moz-border-radius: 3px;
+				-ms-border-radius: 3px;
+				-o-border-radius: 3px;
+				border-radius: 3px;
+			}
+		}
+	} 
+}
+
+/*------------------------------------------------------------------
+
+	Workbench
+
+-------------------------------------------------------------------*/
+
+
+#page {
+	.tabs-secondary {	
+		.min-profil {
+			float: right;
+			width: 28%;
+			li {
+				float: left;
+				display: block;
+				margin-right: 10px;
+				a {
+					background-color: #ddd;
+					color: #000;
+					display: inline-block;
+					border-radius: 7px;
+					padding: 2px 10px;
+				}
+			}
+		}
+	}
+	#min_profil_side {
+		.min_profil_top {
+			.left {
+				float: left;
+				min-width: 67%;
+				margin-right: 40px;
+				
+			}
+			.right {
+				float: right;
+				width: 28%;
+				.view-content {
+					@include grid-box-workbench(white);
+					h4 {
+						padding: 10px;
+						border-bottom: 1px solid #bcbdbd;
+						margin: 0;
+						font-size: $font-size-std;
+						font-weight: normal;
+						height: 19px;
+						background-color: #dddddd;
+						text-transform: uppercase;
+						vertical-align: middle;
+					}
+					.views-field.views-field-picture {
+						padding: 10px 10px 0 10px;
+					}
+					.views-field.views-field-field-user-jobtitel {
+						padding: 0 10px 0 10px;
+						font-style: italic;
+						margin: 10px 0;
+					}
+					.views-field.views-field-field-user-tlf, .views-field.views-field-mail {
+						padding: 0 10px 0 10px;
+					}
+					.views-field.views-field-mail {
+						padding-bottom: 10px;
+					}
+					p {
+						margin: 0;
+					}
+				}			
+			}
+		}
+		.min_profil_middle {
+			.needs_attention {
+				float: left;
+				width: 67%;
+				margin-right: 40px;	
+			}
+			#block-block-16 {
+				float: right;
+				@include grid-box-workbench(white);
+				width: 28%;
+				margin-top: 68px;
+				h2 {
+					padding: 10px;
+					border-bottom: 1px solid #bcbdbd;
+					margin: 0;
+					font-size: $font-size-std;
+					font-weight: normal;
+					height: 19px;
+					background-color: #dddddd;
+					text-transform: uppercase;
+					vertical-align: middle;
+				}
+				.content {
+					padding: 10px;
+				}
+				p {
+					margin: 0;
+				}
+			}				
+		}
+		.min_profil_bottom {
+			.all_recent_content {
+				float: left;
+				width: 100%;
+			}
+		}
+	}
+
+}
+
+
+/*------------------------------------------------------------------
+
+	WYSIWYG editor
+
+-------------------------------------------------------------------*/
+
+.mceEditor {
+	.mceLayout {
+		.mce_removeformat {
+			display: none;
+		}
+		.mce_pasteword {
+			display: none;
+		}	
+		.mce_paste {
+			display: none;
+		}
+	}	
+}
+/*------------------------------------------------------------------
+	Breadcrumbs
+-------------------------------------------------------------------*/
+.page-admin, .page-node-add {
+	#branding {
+		.breadcrumb {
+			font-size: $font-size-small;
+			line-height: 1.5;
+			color: $text-color;
+			margin-bottom: 15px;
+			padding-bottom: 0;
+			margin-left: 5px;
+			@include text-shadow(rgba(white, 1) 1px 1px 1px);
+			a,strong {
+				color: $link-color;
+				text-decoration: none;
+				position: relative;
+				top: -1px;
+			}
+			span {
+				font-size: 1.25em;
+			}
+		}
+	}
+	
+}
+
