@@ -6,3 +6,9 @@ sites/*/settings*.php
 sites/*/files
 sites/*/private
 sites/all/themes/rebild/.sass-cache
+
+# Ignore paths that contain development only content.
+sites/all/modules/devel/
+
+# Ignore single files.
+.DS_Store
