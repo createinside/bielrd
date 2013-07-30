@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * tilføjer en ekstra validation function til page_node_form som 
+ * tjekker om brugeren har cropped det uploadede billede og laver en kopi af 
+ * originalbilledet hvis dette er tilfældet.
+ */
+
+
+
+/**
+ * Implements Manualcrop_modification_form_alter().
+ * tilføjer en ekstra validation function kaldet manualcrop_modification_validate
+ */
+function manualcrop_modification_form_alter(&$form, &$form_state, $form_id){
+	if($form_id == 'page_node_form' || $form_id == 'article_node_form' || $form_id == 'calendar_post_node_form' || $form_id == 'news_article_node_form' ){
+		$form['#validate'][] = 'manualcrop_modification_validate';
+	}
+}
+
+/**
+ * definere manualcrop_modification_validate functionen
+ */
+function manualcrop_modification_validate($form, &$form_state){
+	if(($form['field_main_image']['und'][0]['#file'] != FALSE)){ //tjekker om der er oploaded et billede
+				
+		//tjekker om billedet er blevet cropped
+		$file_fid = $form['field_main_image']['und'][0]['#file']->fid; 
+		$query = db_query("SELECT fid 
+			FROM {manualcrop} mc 
+			WHERE 
+			mc.fid = :file_fid
+		
+			", array( ':file_fid' => $file_fid))->rowcount();
+		if ($query == 0) { 
+			form_set_error('image', t('You have to crop the uploaded image!'));
+		}
+	}
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function manualcrop_modification_views_api() {
+  return array(
+    'api' => 3, 
+    'path' => drupal_get_path('module', 'manualcrop_modification'), 
+    'template path' => drupal_get_path('module', 'manualcrop_modification'),
+  );
+}
