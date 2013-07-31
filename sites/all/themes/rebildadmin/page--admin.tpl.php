@@ -10,7 +10,7 @@ $bruger = user_load($user->uid, $reset = FALSE);
     <?php print $breadcrumb; ?>
     <?php print render($title_prefix); ?>
     <?php if ($title): ?>
-     <div id="side_titel"> <h1 class="page-title"><?php print $title; ?>: <?php if ($sti == 'admin/workbench') { print $bruger->field_user_navn['und'][0]['safe_value']; } ?></h1> </div>
+     <div id="side_titel"> <h1 class="page-title"><?php print $title; ?>: <?php if ($sti == 'admin/workbench') { if (isset($bruger->field_user_navn['und'][0]['safe_value'])) { print $bruger->field_user_navn['und'][0]['safe_value']; }} ?></h1> </div>
     <?php endif; ?>
      <?php print render($primary_local_tasks); ?>
     <?php print render($title_suffix); ?>

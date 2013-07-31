@@ -1,7 +1,10 @@
 <?php 
 
+/**
+* Sætter en class og indstiller rækkefølgen på udtræk (views). 
+**/
 
-
+// hook_workbench_content_alter
 function misc_modifications_workbench_content_alter(&$output) {
 	// definere en class til de forskellige views
 	$output['workbench_current_user']['#attributes']['class'][0] = 'right';
@@ -17,17 +20,14 @@ function misc_modifications_workbench_content_alter(&$output) {
 	$output['workbench_recent_content2']['#view'] = 'workbench_recent_content';
 	$output['workbench_recent_content2']['#view_display'] = 'block_1';
 	$output['workbench_recent_content2']['#theme'] = 'workbench_element';
-
 	
 }
+
+// hook_menu_alter - ændrer titel og tilføjer nyt link til workbench tab menu.
 function misc_modifications_menu_alter(&$items) {
 	
 	$items['admin/workbench']['title'] = 'Min profilside';
 	$items['admin/workbench/create']['title'] = '+ Opret indhold';
 
-
 }
-
-
-
 ?>
