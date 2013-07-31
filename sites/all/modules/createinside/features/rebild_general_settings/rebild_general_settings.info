@@ -6,6 +6,7 @@ php = 5.2.4
 dependencies[] = context
 dependencies[] = delta
 dependencies[] = features
+dependencies[] = manualcrop_modification
 dependencies[] = media
 dependencies[] = metatag
 dependencies[] = misc_modifications

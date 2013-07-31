@@ -28,8 +28,6 @@ function rebild_general_settings_wysiwyg_default_profiles() {
           'numlist' => 1,
           'undo' => 1,
           'redo' => 1,
-          'link' => 1,
-          'unlink' => 1,
           'formatselect' => 1,
           'paste' => 1,
           'removeformat' => 1,
