@@ -58,7 +58,7 @@ function rebild_announcement_field_default_field_instances() {
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
-      'type' => 'date_select',
+      'type' => 'date_popup',
       'weight' => 3,
     ),
   );

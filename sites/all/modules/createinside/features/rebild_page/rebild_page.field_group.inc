@@ -18,13 +18,13 @@ function rebild_page_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'page';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_ho_tabs';
   $field_group->data = array(
     'label' => 'Blokke',
-    'weight' => '8',
+    'weight' => '17',
     'children' => array(
-      0 => 'field_main_links_internal',
-      1 => 'field_main_links_external',
+      0 => 'field_main_links_external',
+      1 => 'field_main_links_internal',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -56,15 +56,44 @@ function rebild_page_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Kategorisering',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => '',
         'required_fields' => 1,
+        'classes' => '',
+        'description' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $export['group_categories|node|page|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_ho_tabs|node|page|form';
+  $field_group->group_name = 'group_ho_tabs';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Ikke obligatoriske felter',
+    'weight' => '14',
+    'children' => array(
+      0 => 'group_blocks',
+      1 => 'group_gis_kort',
+      2 => 'group_accordion',
+      3 => 'group_billedegalleri',
+    ),
+    'format_type' => 'htabs',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'classes' => '',
+      ),
+    ),
+  );
+  $export['group_ho_tabs|node|page|form'] = $field_group;
 
   return $export;
 }
