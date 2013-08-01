@@ -23,12 +23,20 @@ function rebild_page_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Udfør';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Gendan';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Sortér efter';
+  $handler->display->display_options['exposed_form']['options']['sort_asc_label'] = 'Stigende';
+  $handler->display->display_options['exposed_form']['options']['sort_desc_label'] = 'Faldende';
   $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Antal elementer';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Alle -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Forskydning';
   $handler->display->display_options['pager']['options']['tags']['first'] = '« første';
   $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ forrige';
   $handler->display->display_options['pager']['options']['tags']['next'] = 'næste ›';
@@ -39,7 +47,7 @@ function rebild_page_views_default_views() {
   $handler->display->display_options['style_options']['row-start-open'] = 'none';
   $handler->display->display_options['style_options']['autoheight'] = 0;
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Field collection item: Entity with the Accordion (field_main_accordion) */
+  /* Forbindelse: Field collection item: Entity with the Accordion (field_main_accordion) */
   $handler->display->display_options['relationships']['field_main_accordion_node']['id'] = 'field_main_accordion_node';
   $handler->display->display_options['relationships']['field_main_accordion_node']['table'] = 'field_collection_item';
   $handler->display->display_options['relationships']['field_main_accordion_node']['field'] = 'field_main_accordion_node';
@@ -57,7 +65,7 @@ function rebild_page_views_default_views() {
   $handler->display->display_options['fields']['field_accordion_text']['field'] = 'field_accordion_text';
   $handler->display->display_options['fields']['field_accordion_text']['label'] = '';
   $handler->display->display_options['fields']['field_accordion_text']['element_label_colon'] = FALSE;
-  /* Contextual filter: Indhold: Nid */
+  /* Kontekstuelt filter: Indhold: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -77,15 +85,15 @@ function rebild_page_views_default_views() {
   );
   $translatables['content_accordion'] = array(
     t('Master'),
-    t('more'),
-    t('Apply'),
+    t('mere'),
+    t('Udfør'),
     t('Gendan'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
+    t('Sortér efter'),
+    t('Stigende'),
+    t('Faldende'),
+    t('Antal elementer'),
+    t('- Alle -'),
+    t('Forskydning'),
     t('« første'),
     t('‹ forrige'),
     t('næste ›'),
