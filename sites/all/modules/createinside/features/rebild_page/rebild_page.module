@@ -5,3 +5,13 @@
  */
 
 include_once 'rebild_page.features.inc';
+include_once 'rebild_page.default_breakpoint_group.inc';
+include_once 'rebild_page.default_breakpoints.inc';
+include_once 'rebild_page.default_picture_mapping.inc';
+include_once 'rebild_page.features.field_base.inc';
+include_once 'rebild_page.features.field_instance.inc';
+include_once 'rebild_page.features.taxonomy.inc';
+include_once 'rebild_page.features.user_permission.inc';
+include_once 'rebild_page.strongarm.inc';
+include_once 'rebild_page.views_default.inc';
+include_once 'rebild_page.field_group.inc';
