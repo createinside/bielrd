@@ -5,3 +5,11 @@
  */
 
 include_once 'rebild_workflow.features.inc';
+include_once 'rebild_workflow.features.fe_block_boxes.inc';
+include_once 'rebild_workflow.features.fe_block_settings.inc';
+include_once 'rebild_workflow.features.user_permission.inc';
+include_once 'rebild_workflow.features.workbench_moderation_states.inc';
+include_once 'rebild_workflow.features.workbench_moderation_transitions.inc';
+include_once 'rebild_workflow.rules_defaults.inc';
+include_once 'rebild_workflow.strongarm.inc';
+include_once 'rebild_workflow.views_default.inc';
