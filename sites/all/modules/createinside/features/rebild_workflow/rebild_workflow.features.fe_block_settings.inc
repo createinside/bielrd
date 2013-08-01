@@ -33,11 +33,32 @@ function rebild_workflow_default_fe_block_settings() {
     'visibility' => 0,
   );
 
-  $export['views-3226c25c64c163bda08ca74c5c45395b'] = array(
+  $export['views-145b74fe69cf19a82692b5177d007af1'] = array(
     'cache' => -1,
     'css_class' => '',
     'custom' => 0,
-    'delta' => '3226c25c64c163bda08ca74c5c45395b',
+    'delta' => '145b74fe69cf19a82692b5177d007af1',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'rebild',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['views-215f446cf0ce9fd19df35c2434815413'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => '215f446cf0ce9fd19df35c2434815413',
     'module' => 'views',
     'node_types' => array(),
     'pages' => '',
@@ -75,53 +96,11 @@ function rebild_workflow_default_fe_block_settings() {
     'visibility' => 0,
   );
 
-  $export['views-9cf22433e0efbd8b206c8e4c2edb177c'] = array(
+  $export['views-7707e39b25d9412e6373717767a6e8d6'] = array(
     'cache' => -1,
     'css_class' => '',
     'custom' => 0,
-    'delta' => '9cf22433e0efbd8b206c8e4c2edb177c',
-    'module' => 'views',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'rebild' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'rebild',
-        'weight' => 2,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
-  $export['views-workbench_current_user-block_1'] = array(
-    'cache' => -1,
-    'css_class' => '',
-    'custom' => 0,
-    'delta' => 'workbench_current_user-block_1',
-    'module' => 'views',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'rebild' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'rebild',
-        'weight' => -1,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
-  $export['views-workbench_edited-block_1'] = array(
-    'cache' => -1,
-    'css_class' => '',
-    'custom' => 0,
-    'delta' => 'workbench_edited-block_1',
+    'delta' => '7707e39b25d9412e6373717767a6e8d6',
     'module' => 'views',
     'node_types' => array(),
     'pages' => '',
@@ -132,27 +111,6 @@ function rebild_workflow_default_fe_block_settings() {
         'status' => 0,
         'theme' => 'rebild',
         'weight' => 0,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
-  $export['workbench-block'] = array(
-    'cache' => -1,
-    'css_class' => '',
-    'custom' => 0,
-    'delta' => 'block',
-    'module' => 'workbench',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'rebild' => array(
-        'region' => 'content',
-        'status' => 1,
-        'theme' => 'rebild',
-        'weight' => -29,
       ),
     ),
     'title' => '',
