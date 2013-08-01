@@ -12,6 +12,8 @@ function misc_modifications_workbench_content_alter(&$output) {
 	$output['workbench_recent_content']['#attributes']['class'][0] = 'needs_attention';
 	$output['workbench_recent_content2']['#attributes']['class'][0] = 'all_recent_content';
 	
+	$output['workbench_current_user']['#view'] = 'workbench_rebild_current_user';
+	
 	// Vi opretter et array med et block view for "kræver opmærksomhed" 
 	$output['workbench_recent_content']['#view'] = 'workbench_moderation';
 	$output['workbench_recent_content']['#view_display'] = 'needs_review';
@@ -20,7 +22,7 @@ function misc_modifications_workbench_content_alter(&$output) {
 	$output['workbench_recent_content2']['#view'] = 'workbench_recent_content';
 	$output['workbench_recent_content2']['#view_display'] = 'block_1';
 	$output['workbench_recent_content2']['#theme'] = 'workbench_element';
-	
+	dpm($output);
 }
 
 // hook_menu_alter - ændrer titel og tilføjer nyt link til workbench tab menu.

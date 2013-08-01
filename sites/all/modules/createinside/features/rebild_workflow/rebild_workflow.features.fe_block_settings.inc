@@ -54,6 +54,27 @@ function rebild_workflow_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['views-69f0223a916cd32a4145072220e5f81b'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => '69f0223a916cd32a4145072220e5f81b',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'rebild',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   $export['views-9cf22433e0efbd8b206c8e4c2edb177c'] = array(
     'cache' => -1,
     'css_class' => '',
