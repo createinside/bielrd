@@ -40,7 +40,6 @@ features[ctools][] = picture:default_picture_mapping:1
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
-features[field_base][] = body
 features[field_base][] = field_accordion_text
 features[field_base][] = field_accordion_title
 features[field_base][] = field_file_image_alt_text

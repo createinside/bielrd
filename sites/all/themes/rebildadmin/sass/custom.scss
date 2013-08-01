@@ -30,7 +30,7 @@ User profile
 
 -------------------------------------------------------------------*/
 
-.page-admin, .page-node-add, .page-node-edit, .page-node {
+.page-admin, .page-node-add, .page-node-edit, .page-node, .page-file {
 	@include background-image(linear-gradient($bg-color-main, $bg-color-main 600px, #d4d4d4 900px, $bg-color-main 1200px));
 	background-color: $bg-color-main;
 	font-family: $font-family-std;
@@ -138,6 +138,11 @@ User profile
 				padding-left: 15px;
 			}
 		}
+		/* buttons */
+		input#edit-delete {
+			background-color: #ddd;		
+			color: #000;	
+		}
 			
 	}
 }
@@ -146,7 +151,7 @@ User profile
 	Opret indhold 
 
 -------------------------------------------------------------------*/
-.page-node-add, .page-node-edit, .page-node, .page-user {
+.page-node-add, .page-node-edit, .page-node, .page-user, .page-file {
 	#page {
 		font-family: $font-family-std;
 		font-size: 12px;
@@ -156,6 +161,10 @@ User profile
 			font-weight: normal;
 			margin-bottom: 10px;
 		}
+		label.option {
+			font-size: $font-size-std;
+			font-weight: bold;
+		}		
 		.customised-select {
 			background: url('../images/dropdown.png');
 			background-repeat: no-repeat;
@@ -163,7 +172,16 @@ User profile
 			height: 20px;
 			padding: 1px 0 0 6px;
 		}
+		.link-field-column {
+			label {
+				font-size: $font-size-std;
+				font-weight: bold;
+			}
+		}
 		/* Input felter */
+		input[type="radio"] {
+			margin-left: 20px;
+		}
 		.form-text.required {
 			width: 99%;
 			padding:0 0 0 1%;
@@ -198,6 +216,7 @@ User profile
 		.date-padding {
 			padding: 0;
 		}
+		
 		.description {
 			font-size: $font-size-std;
 		}
@@ -614,6 +633,27 @@ User profile
 		border: 0;
 		margin-right: 20px;
 	}	
+}
+.page-node {
+	.media-widget {
+		.button {
+			background-color: $color-blue;
+			color: #fff;
+			background-image: none;
+			border:none;
+			font-size: $font-size-std;
+			padding: 8px 35px 8px 35px;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			-ms-border-radius: 3px;
+			-o-border-radius: 3px;
+			border-radius: 3px;
+		}
+		.button.remove {
+			background-color: #dddddd;
+		}
+	}
+
 }
 /*------------------------------------------------------------------
 
