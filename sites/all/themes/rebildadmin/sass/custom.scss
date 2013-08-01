@@ -30,7 +30,7 @@ User profile
 
 -------------------------------------------------------------------*/
 
-.page-admin, .page-node-add, .page-node-edit {
+.page-admin, .page-node-add, .page-node-edit, .page-node {
 	@include background-image(linear-gradient($bg-color-main, $bg-color-main 600px, #d4d4d4 900px, $bg-color-main 1200px));
 	background-color: $bg-color-main;
 	font-family: $font-family-std;

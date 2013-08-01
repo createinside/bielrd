@@ -263,7 +263,7 @@ User profile
 
 -------------------------------------------------------------------*/
 /* line 33, ../sass/custom.scss */
-.page-admin, .page-node-add, .page-node-edit {
+.page-admin, .page-node-add, .page-node-edit, .page-node {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 1200, color-stop(0%, #e8e8e8), color-stop(50%, #e8e8e8), color-stop(75%, #d4d4d4), color-stop(100%, #e8e8e8));
   background-image: -webkit-linear-gradient(#e8e8e8, #e8e8e8 600px, #d4d4d4 900px, #e8e8e8 1200px);
   background-image: -moz-linear-gradient(#e8e8e8, #e8e8e8 600px, #d4d4d4 900px, #e8e8e8 1200px);
@@ -275,15 +275,15 @@ User profile
   -webkit-text-size-adjust: none;
 }
 /* line 39, ../sass/custom.scss */
-.page-admin a, .page-node-add a, .page-node-edit a {
+.page-admin a, .page-node-add a, .page-node-edit a, .page-node a {
   color: #7f9dcd;
 }
 /* line 42, ../sass/custom.scss */
-.page-admin #branding, .page-node-add #branding, .page-node-edit #branding {
+.page-admin #branding, .page-node-add #branding, .page-node-edit #branding, .page-node #branding {
   background: transparent url("../../rebild/img/noise_bg_repeat.png") repeat;
 }
 /* line 45, ../sass/custom.scss */
-.page-admin #branding #side_titel .page-title, .page-node-add #branding #side_titel .page-title, .page-node-edit #branding #side_titel .page-title {
+.page-admin #branding #side_titel .page-title, .page-node-add #branding #side_titel .page-title, .page-node-edit #branding #side_titel .page-title, .page-node #branding #side_titel .page-title {
   float: none;
   font-size: 1.5em;
   font-weight: normal;
@@ -293,28 +293,28 @@ User profile
   text-shadow: white 1px 1px 1px;
 }
 /* line 55, ../sass/custom.scss */
-.page-admin #branding ul.primary, .page-node-add #branding ul.primary, .page-node-edit #branding ul.primary {
+.page-admin #branding ul.primary, .page-node-add #branding ul.primary, .page-node-edit #branding ul.primary, .page-node #branding ul.primary {
   float: none;
 }
 /* line 58, ../sass/custom.scss */
-.page-admin #branding ul.primary .active a, .page-node-add #branding ul.primary .active a, .page-node-edit #branding ul.primary .active a {
+.page-admin #branding ul.primary .active a, .page-node-add #branding ul.primary .active a, .page-node-edit #branding ul.primary .active a, .page-node #branding ul.primary .active a {
   background-color: #fff;
   font-weight: normal;
   position: relative;
   z-index: 100;
 }
 /* line 66, ../sass/custom.scss */
-.page-admin #branding ul.primary li a, .page-node-add #branding ul.primary li a, .page-node-edit #branding ul.primary li a {
+.page-admin #branding ul.primary li a, .page-node-add #branding ul.primary li a, .page-node-edit #branding ul.primary li a, .page-node #branding ul.primary li a {
   padding: 0 18px 3px;
   font-weight: normal;
   background-color: #dddddd;
 }
 /* line 74, ../sass/custom.scss */
-.page-admin #branding .add-or-remove-shortcuts, .page-node-add #branding .add-or-remove-shortcuts, .page-node-edit #branding .add-or-remove-shortcuts {
+.page-admin #branding .add-or-remove-shortcuts, .page-node-add #branding .add-or-remove-shortcuts, .page-node-edit #branding .add-or-remove-shortcuts, .page-node #branding .add-or-remove-shortcuts {
   display: none;
 }
 /* line 78, ../sass/custom.scss */
-.page-admin input[type="file"], .page-node-add input[type="file"], .page-node-edit input[type="file"] {
+.page-admin input[type="file"], .page-node-add input[type="file"], .page-node-edit input[type="file"], .page-node input[type="file"] {
   background-color: white;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -328,7 +328,7 @@ User profile
   margin-right: 20px;
 }
 /* line 83, ../sass/custom.scss */
-.page-admin #page, .page-node-add #page, .page-node-edit #page {
+.page-admin #page, .page-node-add #page, .page-node-edit #page, .page-node #page {
   padding: 20px 40px 40px 40px;
   margin-left: 0;
   margin-right: 0;
@@ -338,16 +338,16 @@ User profile
   box-shadow: rgba(0, 0, 0, 0.1) -1px -1px 0px;
 }
 /* line 89, ../sass/custom.scss */
-.page-admin #page .tabs-secondary ul.secondary, .page-node-add #page .tabs-secondary ul.secondary, .page-node-edit #page .tabs-secondary ul.secondary {
+.page-admin #page .tabs-secondary ul.secondary, .page-node-add #page .tabs-secondary ul.secondary, .page-node-edit #page .tabs-secondary ul.secondary, .page-node #page .tabs-secondary ul.secondary {
   float: left;
 }
 /* line 93, ../sass/custom.scss */
-.page-admin #page h3, .page-admin #page h2, .page-node-add #page h3, .page-node-add #page h2, .page-node-edit #page h3, .page-node-edit #page h2 {
+.page-admin #page h3, .page-admin #page h2, .page-node-add #page h3, .page-node-add #page h2, .page-node-edit #page h3, .page-node-edit #page h2, .page-node #page h3, .page-node #page h2 {
   font-weight: normal;
   font-size: 1.33333em;
 }
 /* line 98, ../sass/custom.scss */
-.page-admin #page table, .page-node-add #page table, .page-node-edit #page table {
+.page-admin #page table, .page-node-add #page table, .page-node-edit #page table, .page-node #page table {
   background-color: white;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -361,46 +361,46 @@ User profile
   font-size: 1em;
 }
 /* line 102, ../sass/custom.scss */
-.page-admin #page table .odd, .page-node-add #page table .odd, .page-node-edit #page table .odd {
+.page-admin #page table .odd, .page-node-add #page table .odd, .page-node-edit #page table .odd, .page-node #page table .odd {
   border-bottom: 1px solid #ebebeb;
 }
 /* line 105, ../sass/custom.scss */
-.page-admin #page table .views-row-last, .page-node-add #page table .views-row-last, .page-node-edit #page table .views-row-last {
+.page-admin #page table .views-row-last, .page-node-add #page table .views-row-last, .page-node-edit #page table .views-row-last, .page-node #page table .views-row-last {
   border-bottom: 0;
 }
 /* line 108, ../sass/custom.scss */
-.page-admin #page table .views-field.views-field-title, .page-admin #page table .views-field.views-field-type, .page-admin #page table .views-field.views-field-status, .page-admin #page table .views-field.views-field-state, .page-admin #page table .views-field.views-field-moderation-actions, .page-admin #page table .views-field.views-field-name, .page-admin #page table .views-field.views-field-changed, .page-node-add #page table .views-field.views-field-title, .page-node-add #page table .views-field.views-field-type, .page-node-add #page table .views-field.views-field-status, .page-node-add #page table .views-field.views-field-state, .page-node-add #page table .views-field.views-field-moderation-actions, .page-node-add #page table .views-field.views-field-name, .page-node-add #page table .views-field.views-field-changed, .page-node-edit #page table .views-field.views-field-title, .page-node-edit #page table .views-field.views-field-type, .page-node-edit #page table .views-field.views-field-status, .page-node-edit #page table .views-field.views-field-state, .page-node-edit #page table .views-field.views-field-moderation-actions, .page-node-edit #page table .views-field.views-field-name, .page-node-edit #page table .views-field.views-field-changed {
+.page-admin #page table .views-field.views-field-title, .page-admin #page table .views-field.views-field-type, .page-admin #page table .views-field.views-field-status, .page-admin #page table .views-field.views-field-state, .page-admin #page table .views-field.views-field-moderation-actions, .page-admin #page table .views-field.views-field-name, .page-admin #page table .views-field.views-field-changed, .page-node-add #page table .views-field.views-field-title, .page-node-add #page table .views-field.views-field-type, .page-node-add #page table .views-field.views-field-status, .page-node-add #page table .views-field.views-field-state, .page-node-add #page table .views-field.views-field-moderation-actions, .page-node-add #page table .views-field.views-field-name, .page-node-add #page table .views-field.views-field-changed, .page-node-edit #page table .views-field.views-field-title, .page-node-edit #page table .views-field.views-field-type, .page-node-edit #page table .views-field.views-field-status, .page-node-edit #page table .views-field.views-field-state, .page-node-edit #page table .views-field.views-field-moderation-actions, .page-node-edit #page table .views-field.views-field-name, .page-node-edit #page table .views-field.views-field-changed, .page-node #page table .views-field.views-field-title, .page-node #page table .views-field.views-field-type, .page-node #page table .views-field.views-field-status, .page-node #page table .views-field.views-field-state, .page-node #page table .views-field.views-field-moderation-actions, .page-node #page table .views-field.views-field-name, .page-node #page table .views-field.views-field-changed {
   border-right: 1px solid #ebebeb;
 }
 /* line 112, ../sass/custom.scss */
-.page-admin #page table thead tr, .page-node-add #page table thead tr, .page-node-edit #page table thead tr {
+.page-admin #page table thead tr, .page-node-add #page table thead tr, .page-node-edit #page table thead tr, .page-node #page table thead tr {
   height: 40px;
 }
 /* line 116, ../sass/custom.scss */
-.page-admin #page table th, .page-node-add #page table th, .page-node-edit #page table th {
+.page-admin #page table th, .page-node-add #page table th, .page-node-edit #page table th, .page-node #page table th {
   border: none;
   padding: 0 10px 0 10px;
   background-color: #dddddd;
 }
 /* line 120, ../sass/custom.scss */
-.page-admin #page table th a, .page-node-add #page table th a, .page-node-edit #page table th a {
+.page-admin #page table th a, .page-node-add #page table th a, .page-node-edit #page table th a, .page-node #page table th a {
   color: #000;
   font-size: 1em;
 }
 /* line 125, ../sass/custom.scss */
-.page-admin #page table tr, .page-node-add #page table tr, .page-node-edit #page table tr {
+.page-admin #page table tr, .page-node-add #page table tr, .page-node-edit #page table tr, .page-node #page table tr {
   border: none;
 }
 /* line 127, ../sass/custom.scss */
-.page-admin #page table tr .last-child, .page-node-add #page table tr .last-child, .page-node-edit #page table tr .last-child {
+.page-admin #page table tr .last-child, .page-node-add #page table tr .last-child, .page-node-edit #page table tr .last-child, .page-node #page table tr .last-child {
   border: none;
 }
 /* line 131, ../sass/custom.scss */
-.page-admin #page table td, .page-node-add #page table td, .page-node-edit #page table td {
+.page-admin #page table td, .page-node-add #page table td, .page-node-edit #page table td, .page-node #page table td {
   border: none;
 }
 /* line 136, ../sass/custom.scss */
-.page-admin #page fieldset .fieldset-legend, .page-node-add #page fieldset .fieldset-legend, .page-node-edit #page fieldset .fieldset-legend {
+.page-admin #page fieldset .fieldset-legend, .page-node-add #page fieldset .fieldset-legend, .page-node-edit #page fieldset .fieldset-legend, .page-node #page fieldset .fieldset-legend {
   position: relative;
   padding-left: 15px;
 }

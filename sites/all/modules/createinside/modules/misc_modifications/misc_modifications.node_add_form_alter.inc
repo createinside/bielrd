@@ -11,7 +11,7 @@ function misc_modifications_form_alter(&$form, &$form_state, $form_id) {
 			}
 		}
 	}
-	/* Ændring af class på profil siden, samt tvinger fieldset til at være åbent. */
+	/* Ændring af class på profil siden, samt tvinger metatag fieldset til at være åbent. */
 	if ($form_id == 'user_profile_form') {
 		foreach(element_children($form) as $key) {
 				$form[$key]['#attributes']['class'][] = 'general_field_styling';
