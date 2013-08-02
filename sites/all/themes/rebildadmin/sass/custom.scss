@@ -29,8 +29,11 @@ User profile
 	General backend styling
 
 -------------------------------------------------------------------*/
-
-.page-admin, .page-node-add, .page-node-edit, .page-node, .page-file {
+.page-file-edit {
+	background-color: #fff;
+	background-image: none;
+}
+.page-admin, .page-node-add, .page-node-edit, .page-node{
 	@include background-image(linear-gradient($bg-color-main, $bg-color-main 600px, #d4d4d4 900px, $bg-color-main 1200px));
 	background-color: $bg-color-main;
 	font-family: $font-family-std;
@@ -655,6 +658,48 @@ User profile
 	}
 
 }
+#file-entity-edit {
+	input[type="text"] {
+		width: 50%;
+		padding:0 0 0 1%;
+		min-height: 30px;
+		border: none;
+		@include grid-box-workbench(white);
+		font-size: 13px;
+	}
+	input[type="submit"] {
+		background-color: $color-blue;
+		color: #fff;
+		background-image: none;
+		border:none;
+		font-size: $font-size-std;
+		padding: 8px 35px 8px 35px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		-ms-border-radius: 3px;
+		-o-border-radius: 3px;
+		border-radius: 3px;
+	}
+	.button-no {
+		background-color: #dddddd;
+		color: #000;
+		background-image: none;
+		border:none;
+		font-size: $font-size-std;
+		padding: 8px 35px 8px 35px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		-ms-border-radius: 3px;
+		-o-border-radius: 3px;
+		border-radius: 3px;
+	}
+}
+.media-modal-frame {
+	.page-file {
+		background-color: #fff;
+	}
+}
+
 /*------------------------------------------------------------------
 
 	User profile

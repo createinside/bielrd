@@ -21,7 +21,8 @@ function misc_modifications_workbench_content_alter(&$output) {
 	// Vi opretter et nyt array med views som vi outputter efter de ovenstående views.
 	$output['workbench_recent_content2']['#view'] = 'workbench_rebild_recent_content';
 	$output['workbench_recent_content2']['#view_display'] = 'block_1';
-	$output['workbench_recent_content2']['#theme'] = 'workbench_element';	
+	$output['workbench_recent_content2']['#theme'] = 'workbench_element';
+	dpm($output);	
 }
 
 // hook_menu_alter - ændrer titel og tilføjer nyt link til workbench tab menu.
