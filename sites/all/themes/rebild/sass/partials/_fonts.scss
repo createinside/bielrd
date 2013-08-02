@@ -41,7 +41,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-reorder, .icon-rss, .icon-envelope, .icon-search, .icon-double-angle-right, .icon-double-angle-left, .icon-double-angle-down, .icon-double-angle-up, .icon-list-ul, .icon-facebook, .icon-align-justify, .icon-phone, .icon-sort, .icon-arrow-right, .icon-arrow-left, .icon-arrow-up, .icon-arrow-down, .icon-menu, .icon-arrow-right-2, .icon-arrow-up-2, .icon-arrow-down-2, .icon-arrow-left-2, .icon-home, .icon-untitled, .icon-mobil_logo, .icon-bottom_logo, .icon-close, .icon-plus, .icon-minus {
+.icon-reorder, .icon-rss, .icon-envelope, .icon-search, .icon-double-angle-right, .icon-double-angle-left, .icon-double-angle-down, .icon-double-angle-up, .icon-list-ul, .icon-facebook, .icon-align-justify, .icon-phone, .icon-sort, .icon-arrow-right, .icon-arrow-left, .icon-arrow-up, .icon-arrow-down, .icon-menu, .icon-arrow-right-2, .icon-arrow-up-2, .icon-arrow-down-2, .icon-arrow-left-2, .icon-home, .icon-untitled, .icon-mobil_logo, .icon-bottom_logo, .icon-close, .icon-plus, .icon-minus, .icon-images, .icon-compass, .icon-images-2 {
 	font-family: 'Rebild';
 	speak: none;
 	font-style: normal;
@@ -137,4 +137,13 @@ you can use the generic selector below, but it's slower:
 }
 .icon-minus:before {
 	content: "\e00c";
+}
+.icon-images:before {
+	content: "\e00b";
+}
+.icon-compass:before {
+	content: "\e00d";
+}
+.icon-images-2:before {
+	content: "\e00e";
 }

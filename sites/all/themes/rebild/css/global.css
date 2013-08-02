@@ -96,7 +96,7 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
 /* line 44, ../sass/partials/_fonts.scss */
-.icon-reorder, .icon-rss, .icon-envelope, .icon-search, .icon-double-angle-right, .icon-double-angle-left, .icon-double-angle-down, .icon-double-angle-up, .icon-list-ul, .icon-facebook, .icon-align-justify, .icon-phone, .icon-sort, .icon-arrow-right, .icon-arrow-left, .icon-arrow-up, .icon-arrow-down, .icon-menu, .icon-arrow-right-2, .icon-arrow-up-2, .icon-arrow-down-2, .icon-arrow-left-2, .icon-home, .icon-untitled, .icon-mobil_logo, .icon-bottom_logo, .icon-close, .icon-plus, .icon-minus {
+.icon-reorder, .icon-rss, .icon-envelope, .icon-search, .icon-double-angle-right, .icon-double-angle-left, .icon-double-angle-down, .icon-double-angle-up, .icon-list-ul, .icon-facebook, .icon-align-justify, .icon-phone, .icon-sort, .icon-arrow-right, .icon-arrow-left, .icon-arrow-up, .icon-arrow-down, .icon-menu, .icon-arrow-right-2, .icon-arrow-up-2, .icon-arrow-down-2, .icon-arrow-left-2, .icon-home, .icon-untitled, .icon-mobil_logo, .icon-bottom_logo, .icon-close, .icon-plus, .icon-minus, .icon-images, .icon-compass, .icon-images-2 {
   font-family: 'Rebild';
   speak: none;
   font-style: normal;
@@ -250,6 +250,21 @@ you can use the generic selector below, but it's slower:
 /* line 138, ../sass/partials/_fonts.scss */
 .icon-minus:before {
   content: "\e00c";
+}
+
+/* line 141, ../sass/partials/_fonts.scss */
+.icon-images:before {
+  content: "\e00b";
+}
+
+/* line 144, ../sass/partials/_fonts.scss */
+.icon-compass:before {
+  content: "\e00d";
+}
+
+/* line 147, ../sass/partials/_fonts.scss */
+.icon-images-2:before {
+  content: "\e00e";
 }
 
 /*------------------------------------------------------------------
@@ -789,6 +804,10 @@ ul.tabs li.active a {
 #region-content .content a:hover {
   text-decoration: underline;
 }
+/* line 57, ../sass/partials/_general.scss */
+#region-content .content ul li, #region-content .content ol li {
+  margin-left: 0.5em;
+}
 
 /*------------------------------------------------------------------
 
@@ -825,6 +844,7 @@ News Article
   /* Summary */
   /* Fact Box */
   /* Node Image Gallery */
+  /* Accordion */
 }
 /* line 34, ../sass/partials/_nodes.scss */
 .node-page .field-name-field-main-image,
@@ -877,6 +897,51 @@ News Article
   float: left;
   margin-bottom: 20px;
   text-align: center;
+}
+/* line 72, ../sass/partials/_nodes.scss */
+.node-page .field-name-field-main-image-gallery .field-items .field-label:before,
+.node-news-article .field-name-field-main-image-gallery .field-items .field-label:before {
+  font-family: 'Rebild';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\e00e";
+  margin-right: 0.5em;
+}
+/* line 82, ../sass/partials/_nodes.scss */
+.node-page .view-content-accordion .rebild-accordion .ui-accordion-header,
+.node-news-article .view-content-accordion .rebild-accordion .ui-accordion-header {
+  background: #e9e6e6;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+/* line 87, ../sass/partials/_nodes.scss */
+.node-page .view-content-accordion .rebild-accordion .ui-accordion-header .ui-icon-triangle-1-e,
+.node-news-article .view-content-accordion .rebild-accordion .ui-accordion-header .ui-icon-triangle-1-e {
+  width: 15px;
+  height: 15px;
+  background-image: url(../img/accordion_closed.png);
+}
+/* line 94, ../sass/partials/_nodes.scss */
+.node-page .view-content-accordion .rebild-accordion .ui-state-active,
+.node-news-article .view-content-accordion .rebild-accordion .ui-state-active {
+  background-color: #7f9dcd;
+}
+/* line 96, ../sass/partials/_nodes.scss */
+.node-page .view-content-accordion .rebild-accordion .ui-state-active .ui-icon-triangle-1-s,
+.node-news-article .view-content-accordion .rebild-accordion .ui-state-active .ui-icon-triangle-1-s {
+  width: 15px;
+  height: 15px;
+  background-image: url(../img/accordion_open.png);
 }
 
 /*------------------------------------------------------------------
@@ -958,20 +1023,39 @@ News Article
   padding-bottom: 0;
   font-size: 0.91667em;
 }
+/* line 78, ../sass/partials/_blocks.scss */
+#region-content-sidebar .block .content li {
+  margin-bottom: 0.5em;
+}
+/* line 81, ../sass/partials/_blocks.scss */
+#region-content-sidebar .block .content li:before {
+  font-family: 'Rebild';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\f101";
+  margin-right: 0.5em;
+  color: #7f9dcd;
+  font-size: 10px;
+}
 
 /* Region: Sidebar First */
-/* line 86, ../sass/partials/_blocks.scss */
+/* line 97, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block .block-title {
   font-size: 1.33333em;
   text-shadow: none;
 }
-/* line 90, ../sass/partials/_blocks.scss */
+/* line 101, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block .content {
   font-size: 1em;
   line-height: 1.15em;
 }
 
-/* line 99, ../sass/partials/_blocks.scss */
+/* line 110, ../sass/partials/_blocks.scss */
 .front #region-sidebar-first .block-block {
   padding: 20px;
   color: white;
@@ -988,7 +1072,7 @@ News Article
 }
 
 /* Region: Postcripts First */
-/* line 114, ../sass/partials/_blocks.scss */
+/* line 125, ../sass/partials/_blocks.scss */
 #region-postscript-first .block .content {
   padding: 20px;
   color: white;
@@ -1005,7 +1089,7 @@ News Article
 }
 
 /* Region: Postscripts Second */
-/* line 129, ../sass/partials/_blocks.scss */
+/* line 140, ../sass/partials/_blocks.scss */
 #region-postscript-second .block .content {
   padding: 20px;
   line-height: 1.15em;
@@ -1022,29 +1106,29 @@ News Article
 }
 
 /* Zone: Footer */
-/* line 140, ../sass/partials/_blocks.scss */
+/* line 151, ../sass/partials/_blocks.scss */
 #zone-footer .block {
   color: #6b6b6b;
 }
-/* line 142, ../sass/partials/_blocks.scss */
+/* line 153, ../sass/partials/_blocks.scss */
 #zone-footer .block .block-title {
   font-size: 14px;
   margin: 0 0 20px 0;
   font-weight: normal;
 }
-/* line 147, ../sass/partials/_blocks.scss */
+/* line 158, ../sass/partials/_blocks.scss */
 #zone-footer .block .content {
   font-size: 0.91667em;
   line-height: 1.15em;
 }
-/* line 150, ../sass/partials/_blocks.scss */
+/* line 161, ../sass/partials/_blocks.scss */
 #zone-footer .block .content a {
   color: #6b6b6b;
   text-decoration: none;
 }
 
 /* Region: Bottom */
-/* line 161, ../sass/partials/_blocks.scss */
+/* line 172, ../sass/partials/_blocks.scss */
 #region-bottom .block .content {
   padding: 8px 0;
   text-align: center;
@@ -1052,7 +1136,7 @@ News Article
   line-height: 1.4em;
   color: white;
 }
-/* line 167, ../sass/partials/_blocks.scss */
+/* line 178, ../sass/partials/_blocks.scss */
 #region-bottom .block .content a {
   color: white;
   text-decoration: none;
@@ -1062,7 +1146,7 @@ News Article
 	Blocks Specific
 -------------------------------------------------------------------*/
 /* Selfservice block - frontpage */
-/* line 181, ../sass/partials/_blocks.scss */
+/* line 192, ../sass/partials/_blocks.scss */
 #region-header-first .block {
   background-color: #68a386;
   -webkit-border-radius: 3px;
@@ -1075,7 +1159,7 @@ News Article
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   padding: 20px;
 }
-/* line 184, ../sass/partials/_blocks.scss */
+/* line 195, ../sass/partials/_blocks.scss */
 #region-header-first .block h2 {
   color: white;
   font-size: 2.33333em;
@@ -1083,49 +1167,49 @@ News Article
   font-weight: normal;
   margin-bottom: 14px;
 }
-/* line 191, ../sass/partials/_blocks.scss */
+/* line 202, ../sass/partials/_blocks.scss */
 #region-header-first .block p {
   font-size: 1.25em;
   margin-bottom: 15px;
   line-height: 1.15em;
 }
-/* line 196, ../sass/partials/_blocks.scss */
+/* line 207, ../sass/partials/_blocks.scss */
 #region-header-first .block form {
   margin: 25px 0 20px 0;
 }
-/* line 198, ../sass/partials/_blocks.scss */
+/* line 209, ../sass/partials/_blocks.scss */
 #region-header-first .block form p {
   font-style: italic;
   font-size: 0.91667em;
 }
-/* line 201, ../sass/partials/_blocks.scss */
+/* line 212, ../sass/partials/_blocks.scss */
 #region-header-first .block form p span {
   padding: 0 5px;
 }
-/* line 206, ../sass/partials/_blocks.scss */
+/* line 217, ../sass/partials/_blocks.scss */
 #region-header-first .block p.small-text {
   font-size: 1em;
   line-height: 1.4em;
   margin-bottom: 25px;
 }
-/* line 210, ../sass/partials/_blocks.scss */
+/* line 221, ../sass/partials/_blocks.scss */
 #region-header-first .block p.small-text a, #region-header-first .block p.small-text strong {
   color: #00473e;
   margin-right: 0.9em;
 }
-/* line 215, ../sass/partials/_blocks.scss */
+/* line 226, ../sass/partials/_blocks.scss */
 #region-header-first .block p.arrow-link {
   margin-bottom: 0 !important;
   font-size: 0.91667em;
 }
-/* line 218, ../sass/partials/_blocks.scss */
+/* line 229, ../sass/partials/_blocks.scss */
 #region-header-first .block p.arrow-link a {
   text-transform: uppercase;
   color: #00473e;
   font-weight: bold;
   text-decoration: none;
 }
-/* line 224, ../sass/partials/_blocks.scss */
+/* line 235, ../sass/partials/_blocks.scss */
 #region-header-first .block p.arrow-link a:after {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1151,7 +1235,7 @@ News Article
   -o-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 239, ../sass/partials/_blocks.scss */
+/* line 250, ../sass/partials/_blocks.scss */
 #region-header-first .block .customSelect {
   font-style: italic;
   color: #00473e;
@@ -1159,7 +1243,7 @@ News Article
   text-align: left;
   width: 75%;
 }
-/* line 246, ../sass/partials/_blocks.scss */
+/* line 257, ../sass/partials/_blocks.scss */
 #region-header-first .block .customSelect:after {
   font-style: normal;
   font-size: 16px;
@@ -1176,19 +1260,19 @@ News Article
   -webkit-font-smoothing: antialiased;
   content: "\e000";
 }
-/* line 255, ../sass/partials/_blocks.scss */
+/* line 266, ../sass/partials/_blocks.scss */
 #region-header-first .block .customSelectInner {
   padding: 1em;
   display: block;
 }
 
 /* Search block - frontpage */
-/* line 264, ../sass/partials/_blocks.scss */
+/* line 275, ../sass/partials/_blocks.scss */
 #region-header-second .block {
   font-size: 10px;
   text-align: center;
 }
-/* line 267, ../sass/partials/_blocks.scss */
+/* line 278, ../sass/partials/_blocks.scss */
 #region-header-second .block form {
   background: #cfcfcf;
   padding: 10px;
@@ -1201,7 +1285,7 @@ News Article
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 275, ../sass/partials/_blocks.scss */
+/* line 286, ../sass/partials/_blocks.scss */
 #region-header-second .block form input[type=search],
 #region-header-second .block form input[type=text] {
   font-size: 1em;
@@ -1218,7 +1302,7 @@ News Article
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 289, ../sass/partials/_blocks.scss */
+/* line 300, ../sass/partials/_blocks.scss */
 #region-header-second .block form input[type=submit] {
   position: absolute;
   right: 10px;
@@ -1231,13 +1315,13 @@ News Article
   -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-/* line 298, ../sass/partials/_blocks.scss */
+/* line 309, ../sass/partials/_blocks.scss */
 #region-header-second .block p.small-text {
   font-size: 11px;
   line-height: 1.15em;
   color: #474747;
 }
-/* line 302, ../sass/partials/_blocks.scss */
+/* line 313, ../sass/partials/_blocks.scss */
 #region-header-second .block p.small-text a, #region-header-second .block p.small-text strong {
   color: #474747;
   margin-right: 1em;
@@ -1245,28 +1329,28 @@ News Article
 }
 
 /* Contact block - frontpage */
-/* line 315, ../sass/partials/_blocks.scss */
+/* line 326, ../sass/partials/_blocks.scss */
 .front #region-sidebar-first .block-block .block-title {
   color: white;
   font-size: 1.33333em;
   line-height: 1.15em;
   text-shadow: none;
 }
-/* line 321, ../sass/partials/_blocks.scss */
+/* line 332, ../sass/partials/_blocks.scss */
 .front #region-sidebar-first .block-block .content {
   line-height: 1.25em;
 }
-/* line 323, ../sass/partials/_blocks.scss */
+/* line 334, ../sass/partials/_blocks.scss */
 .front #region-sidebar-first .block-block .content a {
   color: white;
 }
 
 /* 5 shortcuts - frontpage */
-/* line 339, ../sass/partials/_blocks.scss */
+/* line 350, ../sass/partials/_blocks.scss */
 #region-postscript-first .block-block .content ul li {
   margin-bottom: 1em;
 }
-/* line 342, ../sass/partials/_blocks.scss */
+/* line 353, ../sass/partials/_blocks.scss */
 #region-postscript-first .block-block .content ul li:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1281,63 +1365,63 @@ News Article
 }
 
 /* Footer - Contact information */
-/* line 354, ../sass/partials/_blocks.scss */
+/* line 365, ../sass/partials/_blocks.scss */
 #region-footer-first .block {
   text-align: center;
 }
-/* line 357, ../sass/partials/_blocks.scss */
+/* line 368, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content p {
   margin-bottom: 10px;
 }
-/* line 360, ../sass/partials/_blocks.scss */
+/* line 371, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content table {
   margin: auto;
   margin-bottom: 10px;
   line-height: 1.15em;
   text-align: center;
 }
-/* line 366, ../sass/partials/_blocks.scss */
+/* line 377, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content p.large-text {
   font-size: 1.66667em;
   line-height: 1.15em;
 }
-/* line 370, ../sass/partials/_blocks.scss */
+/* line 381, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content img {
   margin-bottom: 5px;
 }
-/* line 373, ../sass/partials/_blocks.scss */
+/* line 384, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content a {
   color: #6b6b6b;
   text-decoration: none;
 }
-/* line 377, ../sass/partials/_blocks.scss */
+/* line 388, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content p.bottom-logo {
   margin-bottom: 20px;
 }
-/* line 379, ../sass/partials/_blocks.scss */
+/* line 390, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content p.bottom-logo span.icon-bottom_logo {
   font-size: 50px;
 }
 
 /* Mobile Header */
-/* line 388, ../sass/partials/_blocks.scss */
+/* line 399, ../sass/partials/_blocks.scss */
 #mob-header {
   color: #68a386;
   font-size: 24px;
 }
-/* line 391, ../sass/partials/_blocks.scss */
+/* line 402, ../sass/partials/_blocks.scss */
 #mob-header a {
   color: #68a386;
   text-decoration: none;
 }
-/* line 395, ../sass/partials/_blocks.scss */
+/* line 406, ../sass/partials/_blocks.scss */
 #mob-header #mob-header-left {
   float: left;
   text-align: left;
   width: 33%;
   line-height: 1.5em;
 }
-/* line 401, ../sass/partials/_blocks.scss */
+/* line 412, ../sass/partials/_blocks.scss */
 #mob-header #mob-header-center {
   text-align: center;
   float: left;
@@ -1346,11 +1430,11 @@ News Article
   color: #00703c;
   line-height: 1em;
 }
-/* line 408, ../sass/partials/_blocks.scss */
+/* line 419, ../sass/partials/_blocks.scss */
 #mob-header #mob-header-center a {
   color: #00703c;
 }
-/* line 412, ../sass/partials/_blocks.scss */
+/* line 423, ../sass/partials/_blocks.scss */
 #mob-header #mob-header-right {
   float: left;
   text-align: right;
@@ -1358,12 +1442,12 @@ News Article
   line-height: 1.5em;
 }
 
-/* line 420, ../sass/partials/_blocks.scss */
+/* line 431, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first {
   /* Selvbetjening - Lille */
   /* Background Image blocks */
 }
-/* line 423, ../sass/partials/_blocks.scss */
+/* line 434, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.selvbetjening {
   padding: 20px;
   color: white;
@@ -1377,29 +1461,29 @@ News Article
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 427, ../sass/partials/_blocks.scss */
+/* line 438, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.selvbetjening .block-title {
   color: white;
 }
-/* line 431, ../sass/partials/_blocks.scss */
+/* line 442, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.selvbetjening .content form {
   margin-bottom: 1em;
 }
-/* line 434, ../sass/partials/_blocks.scss */
+/* line 445, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.selvbetjening .content p.arrow-link {
   font-size: 0.91667em;
   border-bottom: 1px dotted white;
   margin-bottom: 20px;
   padding-bottom: 20px;
 }
-/* line 439, ../sass/partials/_blocks.scss */
+/* line 450, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.selvbetjening .content p.arrow-link a {
   text-transform: uppercase;
   color: #00473e;
   font-weight: bold;
   text-decoration: none;
 }
-/* line 445, ../sass/partials/_blocks.scss */
+/* line 456, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.selvbetjening .content p.arrow-link a:after {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1425,7 +1509,7 @@ News Article
   -o-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 460, ../sass/partials/_blocks.scss */
+/* line 471, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.selvbetjening .content .customSelect {
   font-style: italic;
   color: #00473e;
@@ -1433,7 +1517,7 @@ News Article
   text-align: left;
   width: 100%;
 }
-/* line 467, ../sass/partials/_blocks.scss */
+/* line 478, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.selvbetjening .content .customSelect:after {
   font-style: normal;
   font-size: 1.3em;
@@ -1450,15 +1534,15 @@ News Article
   -webkit-font-smoothing: antialiased;
   content: "\e000";
 }
-/* line 476, ../sass/partials/_blocks.scss */
+/* line 487, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.selvbetjening .content .customSelectInner {
   padding: 1em;
 }
-/* line 481, ../sass/partials/_blocks.scss */
+/* line 492, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.selvbetjening ul li {
   margin-bottom: 0.5em;
 }
-/* line 484, ../sass/partials/_blocks.scss */
+/* line 495, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.selvbetjening ul li:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1471,7 +1555,7 @@ News Article
   content: "\f101";
   margin-right: 0.5em;
 }
-/* line 493, ../sass/partials/_blocks.scss */
+/* line 504, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box {
   padding: 20px;
   color: #474747;
@@ -1485,37 +1569,37 @@ News Article
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 499, ../sass/partials/_blocks.scss */
+/* line 510, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box .content {
   width: 62%;
 }
-/* line 501, ../sass/partials/_blocks.scss */
+/* line 512, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box .content h2 {
   font-size: 1.33333em;
   line-height: 1.1em;
   font-weight: normal;
 }
-/* line 506, ../sass/partials/_blocks.scss */
+/* line 517, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box .content p {
   margin-top: 1em;
 }
-/* line 511, ../sass/partials/_blocks.scss */
+/* line 522, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box.plads {
   background: #f6f6f6 url("../img/image-box-1.png") no-repeat bottom right;
 }
-/* line 514, ../sass/partials/_blocks.scss */
+/* line 525, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box.skole {
   background: #f6f6f6 url("../img/image-box-2.png") no-repeat bottom right;
 }
 
 /* Workbench Moderation */
-/* line 520, ../sass/partials/_blocks.scss */
+/* line 531, ../sass/partials/_blocks.scss */
 div.workbench-info-block {
   font-size: 1em;
   padding: 10px 20px;
   line-height: 1.5em;
 }
-/* line 524, ../sass/partials/_blocks.scss */
+/* line 535, ../sass/partials/_blocks.scss */
 div.workbench-info-block a {
   font-weight: bold;
 }

@@ -75,7 +75,18 @@
 			line-height: $line-height-std;
 			padding-bottom: 0;
 			font-size: $font-size-small;
-		}	
+			li {
+					margin-bottom: 0.5em;
+				}
+			li:before {
+				@include icon-prepare();
+				content: "\f101";	
+				margin-right: 0.5em;
+				color: $color-blue;
+				font-size: 10px;
+			}
+		}
+			
 	}
 }
 

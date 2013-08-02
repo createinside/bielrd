@@ -42,6 +42,7 @@ function rebild_page_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['next'] = 'næste ›';
   $handler->display->display_options['pager']['options']['tags']['last'] = 'sidste »';
   $handler->display->display_options['style_plugin'] = 'views_accordion';
+  $handler->display->display_options['style_options']['row_class'] = 'rebild_accordion';
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['style_options']['collapsible'] = 1;
   $handler->display->display_options['style_options']['row-start-open'] = 'none';

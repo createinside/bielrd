@@ -123,6 +123,10 @@ Backend
 #region-content .content a:hover {
   text-decoration: underline;
 }
+/* line 57, ../sass/partials/_general.scss */
+#region-content .content ul li, #region-content .content ol li {
+  margin-left: 0.5em;
+}
 
 /* line 4, ../sass/wysiwyg.scss */
 body {
