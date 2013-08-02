@@ -10,11 +10,27 @@
 
 /**
  * Implements Manualcrop_modification_form_alter().
- * tilføjer en ekstra validation function kaldet manualcrop_modification_validate
+ * tilføjer en ekstra validation function ved de indholdstyper hvor det er påkrævet at croppe billedet.  
  */
 function manualcrop_modification_form_alter(&$form, &$form_state, $form_id){
-	if($form_id == 'page_node_form' || $form_id == 'article_node_form' || $form_id == 'calendar_post_node_form' || $form_id == 'news_article_node_form' ){
-		$form['#validate'][] = 'manualcrop_modification_validate';
+	$indholdstyper = node_type_get_types();
+	$manualcrop_moderation = FALSE;
+	/* Vi kører en løkke der finder frem til alle machine names på indholdstyperne, og herefter laver vi en form alter. */
+	foreach(element_children($indholdstyper) as $key) {
+		if ($form_id == ($indholdstyper[$key]->type . '_node_form' )) {
+			if(isset($form['field_main_image'])){
+				if (isset($form_state['field']['field_main_image']['und']['instance']['widget']['settings']['manualcrop_require_cropping']) && $form_state['field']['field_main_image']['und']['instance']['widget']['settings']['manualcrop_enable'] == 1){
+					foreach ($form_state['field']['field_main_image']['und']['instance']['widget']['settings']['manualcrop_require_cropping'] as $key){
+						if(! $key == 0){
+							$manualcrop_moderation = TRUE;
+						}
+					}
+					if($manualcrop_moderation == TRUE){
+						$form['#validate'][] = 'manualcrop_modification_validate';
+					}
+				}
+			}
+		}
 	}
 }
 
