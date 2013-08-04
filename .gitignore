@@ -6,8 +6,12 @@ sites/*/files
 sites/*/private
 sites/all/modules/devel
 
-# Do not track SASS cache.
+# Ignore SASS cache.
 .sass-cache
 
-# Do not track .DS_store files.
+# Ignore .DS_store files.
 .DS_Store
+
+# Ignore apc.php & phpinfo.php
+apc.php
+phpinfo.php
