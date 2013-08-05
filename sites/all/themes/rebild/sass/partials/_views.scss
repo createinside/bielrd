@@ -44,6 +44,53 @@
 		}
 	}
 }
+/* Calendar - frontpage */
+.view-id-calendar_frontpage {
+	.post1 , .post2 {
+		margin: 0 0 $spacing-std 0;
+	}
+	.rebild-calendar {
+		float: left;
+		width: 50%;		
+		.calendar_left {
+			width: 60px;
+			float: left;
+			margin: 0 $spacing-std 0 0;
+			text-align: center;
+			@include grid-box(white);
+			padding: 0 0 $spacing-std/4 0;
+			.calendar_day {
+				font-size: $font-size-small;
+				line-height: $font-size-std;
+				background: $color-blue;
+				color: white;
+				margin: 0 0 $spacing-std/4;		
+				padding: 0.4em 0.5em;
+				@include text-shadow(none);
+				@include border-radius(3px);				
+			}
+			.calendar_date {
+				font-size: $font-size-large;
+			}
+			.calendar_month {
+				text-transform: uppercase;
+				font-size: $font-size-small;
+			}			
+		}
+		.calendar_right {
+			float: left;
+			.calendar_section {
+				text-transform: uppercase;
+			}
+			.calendar_title {
+				a {
+					color: $text-color;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
 
 /* News Articles */
 #block-views-news-articles-block {

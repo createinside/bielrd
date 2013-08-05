@@ -68,12 +68,12 @@ News Article
 				float: left;
 				margin-bottom: $spacing-std;
 				text-align: center;
-			}
-			.field-label:before {			
-				@include icon-prepare();
-				content: "\e00e";	
-				margin-right: 0.5em;
-			}
+			}			
+		}
+		.field-label:before {			
+			@include icon-prepare();
+			content: "\e00e";	
+			margin-right: 0.5em;
 		}
 	}
 	/* Accordion */

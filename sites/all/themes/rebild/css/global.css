@@ -898,9 +898,9 @@ News Article
   margin-bottom: 20px;
   text-align: center;
 }
-/* line 72, ../sass/partials/_nodes.scss */
-.node-page .field-name-field-main-image-gallery .field-items .field-label:before,
-.node-news-article .field-name-field-main-image-gallery .field-items .field-label:before {
+/* line 73, ../sass/partials/_nodes.scss */
+.node-page .field-name-field-main-image-gallery .field-label:before,
+.node-news-article .field-name-field-main-image-gallery .field-label:before {
   font-family: 'Rebild';
   content: attr(data-icon);
   speak: none;
@@ -1670,14 +1670,79 @@ div.workbench-info-block a {
   left: 20px;
 }
 
+/* Calendar - frontpage */
+/* line 49, ../sass/partials/_views.scss */
+.view-id-calendar_frontpage .post1, .view-id-calendar_frontpage .post2 {
+  margin: 0 0 20px 0;
+}
+/* line 52, ../sass/partials/_views.scss */
+.view-id-calendar_frontpage .rebild-calendar {
+  float: left;
+  width: 50%;
+}
+/* line 55, ../sass/partials/_views.scss */
+.view-id-calendar_frontpage .rebild-calendar .calendar_left {
+  width: 60px;
+  float: left;
+  margin: 0 20px 0 0;
+  text-align: center;
+  background-color: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  padding: 0 0 5px 0;
+}
+/* line 62, ../sass/partials/_views.scss */
+.view-id-calendar_frontpage .rebild-calendar .calendar_left .calendar_day {
+  font-size: 0.91667em;
+  line-height: 1em;
+  background: #7f9dcd;
+  color: white;
+  margin: 0 0 5px;
+  padding: 0.4em 0.5em;
+  text-shadow: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 72, ../sass/partials/_views.scss */
+.view-id-calendar_frontpage .rebild-calendar .calendar_left .calendar_date {
+  font-size: 1.33333em;
+}
+/* line 75, ../sass/partials/_views.scss */
+.view-id-calendar_frontpage .rebild-calendar .calendar_left .calendar_month {
+  text-transform: uppercase;
+  font-size: 0.91667em;
+}
+/* line 80, ../sass/partials/_views.scss */
+.view-id-calendar_frontpage .rebild-calendar .calendar_right {
+  float: left;
+}
+/* line 82, ../sass/partials/_views.scss */
+.view-id-calendar_frontpage .rebild-calendar .calendar_right .calendar_section {
+  text-transform: uppercase;
+}
+/* line 86, ../sass/partials/_views.scss */
+.view-id-calendar_frontpage .rebild-calendar .calendar_right .calendar_title a {
+  color: #474747;
+  text-decoration: none;
+}
+
 /* News Articles */
-/* line 50, ../sass/partials/_views.scss */
+/* line 97, ../sass/partials/_views.scss */
 #block-views-news-articles-block .view {
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 54, ../sass/partials/_views.scss */
+/* line 101, ../sass/partials/_views.scss */
 #block-views-news-articles-block .view-header img {
   width: 100%;
   -webkit-border-radius: 3px 3px 0 0;
@@ -1686,7 +1751,7 @@ div.workbench-info-block a {
   -o-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
 }
-/* line 59, ../sass/partials/_views.scss */
+/* line 106, ../sass/partials/_views.scss */
 #block-views-news-articles-block .view-content {
   padding: 0 10px 10px;
   background-color: #f6f6f6;
@@ -1697,28 +1762,28 @@ div.workbench-info-block a {
   -o-border-radius: 0 0 3px 3px;
   border-radius: 0 0 3px 3px;
 }
-/* line 65, ../sass/partials/_views.scss */
+/* line 112, ../sass/partials/_views.scss */
 #block-views-news-articles-block .views-row {
   position: relative;
   padding: 1em;
 }
-/* line 68, ../sass/partials/_views.scss */
+/* line 115, ../sass/partials/_views.scss */
 #block-views-news-articles-block .views-row .news-date {
   font-style: italic;
   font-size: 0.91667em;
   margin-bottom: 3px;
   height: 1.15em;
 }
-/* line 74, ../sass/partials/_views.scss */
+/* line 121, ../sass/partials/_views.scss */
 #block-views-news-articles-block .views-row .news-title {
   height: 1.15em;
 }
-/* line 76, ../sass/partials/_views.scss */
+/* line 123, ../sass/partials/_views.scss */
 #block-views-news-articles-block .views-row .news-title a {
   color: #474747;
   text-decoration: none;
 }
-/* line 82, ../sass/partials/_views.scss */
+/* line 129, ../sass/partials/_views.scss */
 #block-views-news-articles-block .views-row:after {
   font-style: normal;
   font-size: 1.33em;
@@ -1735,19 +1800,19 @@ div.workbench-info-block a {
   -webkit-font-smoothing: antialiased;
   content: "\e001";
 }
-/* line 91, ../sass/partials/_views.scss */
+/* line 138, ../sass/partials/_views.scss */
 #block-views-news-articles-block .views-row-first {
   padding: 20px 10px;
 }
-/* line 93, ../sass/partials/_views.scss */
+/* line 140, ../sass/partials/_views.scss */
 #block-views-news-articles-block .views-row-first .news-title {
   font-weight: bold;
 }
-/* line 97, ../sass/partials/_views.scss */
+/* line 144, ../sass/partials/_views.scss */
 #block-views-news-articles-block .views-row-first:after {
   top: 40%;
 }
-/* line 100, ../sass/partials/_views.scss */
+/* line 147, ../sass/partials/_views.scss */
 #block-views-news-articles-block .views-row-even {
   background-color: white;
 }
