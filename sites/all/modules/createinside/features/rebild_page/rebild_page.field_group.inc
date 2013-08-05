@@ -21,7 +21,7 @@ function rebild_page_field_group_info() {
   $field_group->parent_name = 'group_ho_tabs';
   $field_group->data = array(
     'label' => 'Accordion',
-    'weight' => '16',
+    'weight' => '17',
     'children' => array(
       0 => 'field_main_accordion',
     ),
@@ -49,7 +49,7 @@ function rebild_page_field_group_info() {
   $field_group->parent_name = 'group_ho_tabs';
   $field_group->data = array(
     'label' => 'Billedegalleri',
-    'weight' => '17',
+    'weight' => '18',
     'children' => array(
       0 => 'field_main_image_gallery',
     ),
@@ -77,7 +77,7 @@ function rebild_page_field_group_info() {
   $field_group->parent_name = 'group_ho_tabs';
   $field_group->data = array(
     'label' => 'Blokke',
-    'weight' => '15',
+    'weight' => '16',
     'children' => array(
       0 => 'field_main_links_external',
       1 => 'field_main_links_internal',
@@ -134,7 +134,7 @@ function rebild_page_field_group_info() {
   $field_group->parent_name = 'group_ho_tabs';
   $field_group->data = array(
     'label' => 'Faktaboks',
-    'weight' => '14',
+    'weight' => '15',
     'children' => array(
       0 => 'field_main_factbox',
     ),
@@ -161,7 +161,7 @@ function rebild_page_field_group_info() {
   $field_group->parent_name = 'group_ho_tabs';
   $field_group->data = array(
     'label' => 'Forældelsesdato',
-    'weight' => '18',
+    'weight' => '19',
     'children' => array(
       0 => 'field_main_outdated',
     ),
@@ -188,7 +188,7 @@ function rebild_page_field_group_info() {
   $field_group->parent_name = 'group_ho_tabs';
   $field_group->data = array(
     'label' => 'GIS-kort',
-    'weight' => '19',
+    'weight' => '20',
     'children' => array(
       0 => 'field_main_gis_map',
     ),
@@ -224,6 +224,7 @@ function rebild_page_field_group_info() {
       3 => 'group_billedegalleri',
       4 => 'group_faktaboks',
       5 => 'group_foraeldelsesdato',
+      6 => 'group_page_billeder_group',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(

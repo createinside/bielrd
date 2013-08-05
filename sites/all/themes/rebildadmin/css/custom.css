@@ -659,38 +659,42 @@ User profile
 /* line 323, ../sass/custom.scss */
 .page-node-add #page .field-group-fieldset .fieldset-wrapper .general_field_styling, .page-node-edit #page .field-group-fieldset .fieldset-wrapper .general_field_styling, .page-node #page .field-group-fieldset .fieldset-wrapper .general_field_styling, .page-user #page .field-group-fieldset .fieldset-wrapper .general_field_styling, .page-file #page .field-group-fieldset .fieldset-wrapper .general_field_styling {
   background: none;
-  padding: 0;
+  padding: 15px 0;
 }
 /* line 327, ../sass/custom.scss */
+.page-node-add #page .field-group-fieldset .fieldset-wrapper .general_field_styling .media-widget .form-item, .page-node-edit #page .field-group-fieldset .fieldset-wrapper .general_field_styling .media-widget .form-item, .page-node #page .field-group-fieldset .fieldset-wrapper .general_field_styling .media-widget .form-item, .page-user #page .field-group-fieldset .fieldset-wrapper .general_field_styling .media-widget .form-item, .page-file #page .field-group-fieldset .fieldset-wrapper .general_field_styling .media-widget .form-item {
+  padding-bottom: 5px;
+}
+/* line 332, ../sass/custom.scss */
 .page-node-add #page .field-group-fieldset .fieldset-wrapper label, .page-node-edit #page .field-group-fieldset .fieldset-wrapper label, .page-node #page .field-group-fieldset .fieldset-wrapper label, .page-user #page .field-group-fieldset .fieldset-wrapper label, .page-file #page .field-group-fieldset .fieldset-wrapper label {
   font-size: 1em;
   font-weight: bold;
 }
-/* line 331, ../sass/custom.scss */
+/* line 336, ../sass/custom.scss */
 .page-node-add #page .field-group-fieldset .fieldset-wrapper .form-item, .page-node-edit #page .field-group-fieldset .fieldset-wrapper .form-item, .page-node #page .field-group-fieldset .fieldset-wrapper .form-item, .page-user #page .field-group-fieldset .fieldset-wrapper .form-item, .page-file #page .field-group-fieldset .fieldset-wrapper .form-item {
   margin: 0;
   padding: 0;
 }
-/* line 338, ../sass/custom.scss */
+/* line 343, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper, .page-node-edit #page .field-group-htabs-wrapper, .page-node #page .field-group-htabs-wrapper, .page-user #page .field-group-htabs-wrapper, .page-file #page .field-group-htabs-wrapper {
   padding: 30px 0;
 }
-/* line 340, ../sass/custom.scss */
+/* line 345, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .general_field_styling, .page-node-edit #page .field-group-htabs-wrapper .general_field_styling, .page-node #page .field-group-htabs-wrapper .general_field_styling, .page-user #page .field-group-htabs-wrapper .general_field_styling, .page-file #page .field-group-htabs-wrapper .general_field_styling {
   background: none;
   padding: 0;
 }
-/* line 344, ../sass/custom.scss */
+/* line 349, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs, .page-node #page .field-group-htabs-wrapper .horizontal-tabs, .page-user #page .field-group-htabs-wrapper .horizontal-tabs, .page-file #page .field-group-htabs-wrapper .horizontal-tabs {
   border: 0;
 }
-/* line 346, ../sass/custom.scss */
+/* line 351, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list {
   border-right: 0;
   border-bottom: 1px solid #d8d8d8;
   background-color: transparent;
 }
-/* line 350, ../sass/custom.scss */
+/* line 355, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li {
   -moz-border-radius: 8px 8px 0 0;
   -webkit-border-top-left-radius: 8px;
@@ -699,24 +703,25 @@ User profile
   background-color: #dddddd;
   padding: 0 18px 3px;
   margin-right: 5px;
+  margin-top: 10px;
   outline: 0;
 }
-/* line 359, ../sass/custom.scss */
+/* line 365, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a {
   color: #000;
   font-weight: normal;
   outline: 0;
 }
-/* line 363, ../sass/custom.scss */
+/* line 369, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a strong, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a strong, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a strong, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a strong, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a strong {
   font-weight: normal;
 }
-/* line 367, ../sass/custom.scss */
+/* line 373, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a:hover, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a:hover, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a:hover, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a:hover, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a:hover {
   background-color: transparent;
   outline: 0;
 }
-/* line 373, ../sass/custom.scss */
+/* line 379, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list .selected, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list .selected, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list .selected, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list .selected, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list .selected {
   background-color: #fff;
   border-top: 1px solid #eeeeee;
@@ -725,20 +730,20 @@ User profile
   border-right: 1px solid #eeeeee;
   padding: 0 18px 2px;
 }
-/* line 382, ../sass/custom.scss */
+/* line 388, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .field-group-fieldset, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .field-group-fieldset, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .field-group-fieldset, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .field-group-fieldset, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .field-group-fieldset {
   background: none;
 }
-/* line 388, ../sass/custom.scss */
+/* line 394, ../sass/custom.scss */
 .page-node-add #page .vertical-tabs, .page-node-edit #page .vertical-tabs, .page-node #page .vertical-tabs, .page-user #page .vertical-tabs, .page-file #page .vertical-tabs {
   margin-top: 30px;
 }
-/* line 390, ../sass/custom.scss */
+/* line 396, ../sass/custom.scss */
 .page-node-add #page .vertical-tabs .general_field_styling, .page-node-edit #page .vertical-tabs .general_field_styling, .page-node #page .vertical-tabs .general_field_styling, .page-user #page .vertical-tabs .general_field_styling, .page-file #page .vertical-tabs .general_field_styling {
   background: none;
   padding: 0;
 }
-/* line 394, ../sass/custom.scss */
+/* line 400, ../sass/custom.scss */
 .page-node-add #page .vertical-tabs .form-text, .page-node-edit #page .vertical-tabs .form-text, .page-node #page .vertical-tabs .form-text, .page-user #page .vertical-tabs .form-text, .page-file #page .vertical-tabs .form-text {
   background-color: white;
   -webkit-border-radius: 3px;
@@ -758,22 +763,22 @@ User profile
 	Workbench
 
 -------------------------------------------------------------------*/
-/* line 410, ../sass/custom.scss */
+/* line 416, ../sass/custom.scss */
 .page-admin-workbench #page {
   min-width: 960px;
 }
-/* line 413, ../sass/custom.scss */
+/* line 419, ../sass/custom.scss */
 .page-admin-workbench #page .tabs-secondary .min-profil {
   float: right;
   width: 28%;
 }
-/* line 416, ../sass/custom.scss */
+/* line 422, ../sass/custom.scss */
 .page-admin-workbench #page .tabs-secondary .min-profil li {
   float: left;
   display: block;
   margin-right: 10px;
 }
-/* line 420, ../sass/custom.scss */
+/* line 426, ../sass/custom.scss */
 .page-admin-workbench #page .tabs-secondary .min-profil li a {
   background-color: #ddd;
   color: #000;
@@ -781,18 +786,18 @@ User profile
   border-radius: 7px;
   padding: 2px 10px;
 }
-/* line 432, ../sass/custom.scss */
+/* line 438, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .left {
   float: left;
   min-width: 67%;
   margin-right: 40px;
 }
-/* line 438, ../sass/custom.scss */
+/* line 444, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right {
   float: right;
   width: 28%;
 }
-/* line 441, ../sass/custom.scss */
+/* line 447, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content {
   background-color: white;
   -webkit-border-radius: 3px;
@@ -804,7 +809,7 @@ User profile
   -moz-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
 }
-/* line 443, ../sass/custom.scss */
+/* line 449, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content h4 {
   padding: 10px;
   border-bottom: 1px solid #bcbdbd;
@@ -816,35 +821,35 @@ User profile
   text-transform: uppercase;
   vertical-align: middle;
 }
-/* line 454, ../sass/custom.scss */
+/* line 460, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-picture {
   padding: 10px 10px 0 10px;
 }
-/* line 457, ../sass/custom.scss */
+/* line 463, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-field-user-jobtitel {
   padding: 0 10px 0 10px;
   font-style: italic;
   margin: 10px 0;
 }
-/* line 462, ../sass/custom.scss */
+/* line 468, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-field-user-tlf, .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-mail {
   padding: 0 10px 0 10px;
 }
-/* line 465, ../sass/custom.scss */
+/* line 471, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-mail {
   padding-bottom: 10px;
 }
-/* line 468, ../sass/custom.scss */
+/* line 474, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content p {
   margin: 0;
 }
-/* line 475, ../sass/custom.scss */
+/* line 481, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle .needs_attention {
   float: left;
   width: 67%;
   margin-right: 40px;
 }
-/* line 480, ../sass/custom.scss */
+/* line 486, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle #block-block-16 {
   float: right;
   background-color: white;
@@ -859,7 +864,7 @@ User profile
   width: 28%;
   margin-top: 68px;
 }
-/* line 485, ../sass/custom.scss */
+/* line 491, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle #block-block-16 h2 {
   padding: 10px;
   border-bottom: 1px solid #bcbdbd;
@@ -871,15 +876,15 @@ User profile
   text-transform: uppercase;
   vertical-align: middle;
 }
-/* line 496, ../sass/custom.scss */
+/* line 502, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle #block-block-16 .content {
   padding: 10px;
 }
-/* line 499, ../sass/custom.scss */
+/* line 505, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle #block-block-16 p {
   margin: 0;
 }
-/* line 505, ../sass/custom.scss */
+/* line 511, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_bottom .all_recent_content {
   float: left;
   width: 100%;
@@ -890,28 +895,28 @@ User profile
 	WYSIWYG editor
 
 -------------------------------------------------------------------*/
-/* line 526, ../sass/custom.scss */
+/* line 532, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mce_removeformat {
   display: none;
 }
-/* line 529, ../sass/custom.scss */
+/* line 535, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mce_pasteword {
   display: none;
 }
-/* line 532, ../sass/custom.scss */
+/* line 538, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mce_paste {
   display: none;
 }
-/* line 535, ../sass/custom.scss */
+/* line 541, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mceFirst {
   background: #f6f6f6;
 }
-/* line 538, ../sass/custom.scss */
+/* line 544, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mceIframeContainer.mceFirst.mceLast {
   border-top: 1px solid #d8d8d8;
   border-bottom: 1px solid #d8d8d8;
 }
-/* line 542, ../sass/custom.scss */
+/* line 548, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mceListBox {
   border-radius: 0;
   -o-border-radius: 0;
@@ -922,7 +927,7 @@ User profile
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
 }
-/* line 556, ../sass/custom.scss */
+/* line 562, ../sass/custom.scss */
 .page-node #page .filter-wrapper label {
   font-size: 12px;
   font-weight: bold;
@@ -933,7 +938,7 @@ User profile
 	Breadcrumbs
 	
 -------------------------------------------------------------------*/
-/* line 572, ../sass/custom.scss */
+/* line 578, ../sass/custom.scss */
 #branding .breadcrumb {
   font-size: 0.91667em;
   line-height: 1.5;
@@ -943,14 +948,14 @@ User profile
   margin-left: 5px;
   text-shadow: white 1px 1px 1px;
 }
-/* line 580, ../sass/custom.scss */
+/* line 586, ../sass/custom.scss */
 #branding .breadcrumb a, #branding .breadcrumb strong {
   color: #474747;
   text-decoration: none;
   position: relative;
   top: -1px;
 }
-/* line 586, ../sass/custom.scss */
+/* line 592, ../sass/custom.scss */
 #branding .breadcrumb span {
   font-size: 1.25em;
 }
@@ -960,7 +965,7 @@ User profile
 	Views 
 	
 -------------------------------------------------------------------*/
-/* line 597, ../sass/custom.scss */
+/* line 603, ../sass/custom.scss */
 .views-exposed-form .form-item {
   padding: 0;
 }
@@ -970,7 +975,7 @@ User profile
 	Media module
 	
 -------------------------------------------------------------------*/
-/* line 608, ../sass/custom.scss */
+/* line 614, ../sass/custom.scss */
 .page-media .form-submit, .page-media a.button {
   background-color: #7f9dcd;
   color: #fff;
@@ -984,7 +989,7 @@ User profile
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 621, ../sass/custom.scss */
+/* line 627, ../sass/custom.scss */
 .page-media input[type="file"] {
   background-color: white;
   -webkit-border-radius: 3px;
@@ -999,7 +1004,7 @@ User profile
   margin-right: 20px;
 }
 
-/* line 629, ../sass/custom.scss */
+/* line 635, ../sass/custom.scss */
 .page-node .media-widget .button {
   background-color: #7f9dcd;
   color: #fff;
@@ -1014,7 +1019,7 @@ User profile
   border-radius: 3px;
 }
 
-/* line 646, ../sass/custom.scss */
+/* line 652, ../sass/custom.scss */
 #file-entity-edit input[type="text"] {
   width: 50%;
   padding: 0 0 0 1%;
@@ -1031,7 +1036,7 @@ User profile
   box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   font-size: 13px;
 }
-/* line 654, ../sass/custom.scss */
+/* line 660, ../sass/custom.scss */
 #file-entity-edit input[type="submit"] {
   background-color: #7f9dcd;
   color: #fff;
@@ -1045,7 +1050,7 @@ User profile
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 667, ../sass/custom.scss */
+/* line 673, ../sass/custom.scss */
 #file-entity-edit .button-no {
   background-color: #7f9dcd;
   color: #fff;
@@ -1060,7 +1065,7 @@ User profile
   border-radius: 3px;
 }
 
-/* line 682, ../sass/custom.scss */
+/* line 688, ../sass/custom.scss */
 .media-modal-frame .page-file {
   background-color: #fff;
 }
@@ -1070,7 +1075,7 @@ User profile
 	User profile
 	
 -------------------------------------------------------------------*/
-/* line 695, ../sass/custom.scss */
+/* line 701, ../sass/custom.scss */
 .page-user #page #user-profile-form .fieldset-wrapper {
   padding-top: 30px;
 }

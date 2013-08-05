@@ -186,6 +186,58 @@ function rebild_page_image_default_styles() {
     ),
   );
 
+  // Exported image style: inline_bottom.
+  $styles['inline_bottom'] = array(
+    'name' => 'inline_bottom',
+    'effects' => array(
+      4 => array(
+        'label' => 'Crop and scale manually',
+        'help' => 'Crop and scale a user-selected area, respecting the ratio of the destination width and height.',
+        'effect callback' => 'manualcrop_crop_and_scale_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'manualcrop_crop_and_scale_form',
+        'summary theme' => 'manualcrop_crop_and_scale_summary',
+        'module' => 'manualcrop',
+        'name' => 'manualcrop_crop_and_scale',
+        'data' => array(
+          'width' => 160,
+          'height' => 75,
+          'upscale' => 0,
+          'respectminimum' => 1,
+          'onlyscaleifcrop' => 0,
+          'style_name' => 'inline_bottom',
+        ),
+        'weight' => 0,
+      ),
+    ),
+  );
+
+  // Exported image style: inline_top.
+  $styles['inline_top'] = array(
+    'name' => 'inline_top',
+    'effects' => array(
+      3 => array(
+        'label' => 'Crop and scale manually',
+        'help' => 'Crop and scale a user-selected area, respecting the ratio of the destination width and height.',
+        'effect callback' => 'manualcrop_crop_and_scale_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'manualcrop_crop_and_scale_form',
+        'summary theme' => 'manualcrop_crop_and_scale_summary',
+        'module' => 'manualcrop',
+        'name' => 'manualcrop_crop_and_scale',
+        'data' => array(
+          'width' => 425,
+          'height' => 150,
+          'upscale' => 0,
+          'respectminimum' => 1,
+          'onlyscaleifcrop' => 0,
+          'style_name' => 'inline_top',
+        ),
+        'weight' => 0,
+      ),
+    ),
+  );
+
   return $styles;
 }
 

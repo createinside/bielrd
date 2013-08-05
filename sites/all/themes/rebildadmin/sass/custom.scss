@@ -322,7 +322,12 @@ User profile
 				padding-left: 20px;
 				.general_field_styling {
 					background: none;
-					padding: 0;
+					padding: 15px 0;
+					.media-widget {
+						.form-item {
+							padding-bottom: 5px;
+						}
+					}
 				}
 				label {
 					font-size:$font-size-std;
@@ -355,6 +360,7 @@ User profile
 						background-color: #dddddd;
 						padding: 0 18px 3px;
 						margin-right: 5px;
+						margin-top: 10px;
 						outline: 0;
 						a {
 							color: #000;

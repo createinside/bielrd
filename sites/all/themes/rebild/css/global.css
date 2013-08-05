@@ -677,12 +677,13 @@ Tabs
 /* line 224, ../sass/partials/_navigation.scss */
 #zone-footer .block-menu-block ul li a {
   color: #6b6b6b;
+  line-height: 1.25em;
 }
 
 /*------------------------------------------------------------------
 	Breadcrumbs		
 -------------------------------------------------------------------*/
-/* line 237, ../sass/partials/_navigation.scss */
+/* line 238, ../sass/partials/_navigation.scss */
 #breadcrumb {
   font-size: 0.91667em;
   line-height: 1.5;
@@ -690,14 +691,14 @@ Tabs
   margin-bottom: 20px;
   text-shadow: white 1px 1px 1px;
 }
-/* line 243, ../sass/partials/_navigation.scss */
+/* line 244, ../sass/partials/_navigation.scss */
 #breadcrumb a, #breadcrumb strong {
   color: #474747;
   text-decoration: none;
   position: relative;
   top: -1px;
 }
-/* line 249, ../sass/partials/_navigation.scss */
+/* line 250, ../sass/partials/_navigation.scss */
 #breadcrumb span {
   font-size: 1.25em;
 }
@@ -705,15 +706,15 @@ Tabs
 /*------------------------------------------------------------------
 	Tabs
 -------------------------------------------------------------------*/
-/* line 258, ../sass/partials/_navigation.scss */
+/* line 259, ../sass/partials/_navigation.scss */
 ul.tabs {
   margin-bottom: 20px;
 }
-/* line 260, ../sass/partials/_navigation.scss */
+/* line 261, ../sass/partials/_navigation.scss */
 ul.tabs li {
   margin-right: 0.5em;
 }
-/* line 262, ../sass/partials/_navigation.scss */
+/* line 263, ../sass/partials/_navigation.scss */
 ul.tabs li a {
   color: #474747;
   text-decoration: none;
@@ -725,11 +726,11 @@ ul.tabs li a {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 269, ../sass/partials/_navigation.scss */
+/* line 270, ../sass/partials/_navigation.scss */
 ul.tabs li a:hover {
   text-decoration: underline;
 }
-/* line 274, ../sass/partials/_navigation.scss */
+/* line 275, ../sass/partials/_navigation.scss */
 ul.tabs li.active a {
   background-color: white;
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
@@ -786,34 +787,35 @@ ul.tabs li.active a {
 /* line 38, ../sass/partials/_general.scss */
 #region-content .content p {
   margin-bottom: 1em;
+  line-height: 1.25em;
 }
-/* line 41, ../sass/partials/_general.scss */
+/* line 42, ../sass/partials/_general.scss */
 #region-content .content strong {
   font-weight: bold;
 }
-/* line 44, ../sass/partials/_general.scss */
+/* line 45, ../sass/partials/_general.scss */
 #region-content .content em {
   font-style: italic;
 }
-/* line 48, ../sass/partials/_general.scss */
+/* line 49, ../sass/partials/_general.scss */
 #region-content .content a {
   color: #474747;
   text-decoration: none;
 }
-/* line 52, ../sass/partials/_general.scss */
+/* line 53, ../sass/partials/_general.scss */
 #region-content .content a:hover {
   text-decoration: underline;
 }
-/* line 57, ../sass/partials/_general.scss */
+/* line 58, ../sass/partials/_general.scss */
 #region-content .content ul li, #region-content .content ol li {
   margin-left: 0.5em;
 }
-/* line 63, ../sass/partials/_general.scss */
+/* line 64, ../sass/partials/_general.scss */
 #region-content .content #content-main ul li {
   list-style: disc;
   margin-left: 20px;
 }
-/* line 69, ../sass/partials/_general.scss */
+/* line 70, ../sass/partials/_general.scss */
 #region-content .content #content-main ol li {
   list-style: decimal;
   margin-left: 20px;
