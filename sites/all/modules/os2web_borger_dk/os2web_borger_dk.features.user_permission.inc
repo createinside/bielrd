@@ -28,6 +28,28 @@ function os2web_borger_dk_user_default_permissions() {
     'module' => 'field_permissions',
   );
 
+  // Exported permission: create field_main_section.
+  $permissions['create field_main_section'] = array(
+    'name' => 'create field_main_section',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'fagredaktør' => 'fagredaktør',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: create field_main_tags.
+  $permissions['create field_main_tags'] = array(
+    'name' => 'create field_main_tags',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'fagredaktør' => 'fagredaktør',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: create field_os2web_borger_dk_formterm.
   $permissions['create field_os2web_borger_dk_formterm'] = array(
     'name' => 'create field_os2web_borger_dk_formterm',
@@ -84,6 +106,28 @@ function os2web_borger_dk_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: edit field_main_section.
+  $permissions['edit field_main_section'] = array(
+    'name' => 'edit field_main_section',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'fagredaktør' => 'fagredaktør',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: edit field_main_tags.
+  $permissions['edit field_main_tags'] = array(
+    'name' => 'edit field_main_tags',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'fagredaktør' => 'fagredaktør',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: edit field_os2web_borger_dk_formterm.
   $permissions['edit field_os2web_borger_dk_formterm'] = array(
     'name' => 'edit field_os2web_borger_dk_formterm',
@@ -98,6 +142,28 @@ function os2web_borger_dk_user_default_permissions() {
     'name' => 'edit field_termref_kle',
     'roles' => array(
       'administrator' => 'administrator',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: edit own field_main_section.
+  $permissions['edit own field_main_section'] = array(
+    'name' => 'edit own field_main_section',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'fagredaktør' => 'fagredaktør',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: edit own field_main_tags.
+  $permissions['edit own field_main_tags'] = array(
+    'name' => 'edit own field_main_tags',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'fagredaktør' => 'fagredaktør',
+      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -130,6 +196,28 @@ function os2web_borger_dk_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: view field_main_section.
+  $permissions['view field_main_section'] = array(
+    'name' => 'view field_main_section',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'fagredaktør' => 'fagredaktør',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: view field_main_tags.
+  $permissions['view field_main_tags'] = array(
+    'name' => 'view field_main_tags',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'fagredaktør' => 'fagredaktør',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: view field_os2web_borger_dk_formterm.
   $permissions['view field_os2web_borger_dk_formterm'] = array(
     'name' => 'view field_os2web_borger_dk_formterm',
@@ -144,6 +232,28 @@ function os2web_borger_dk_user_default_permissions() {
     'name' => 'view field_termref_kle',
     'roles' => array(
       'administrator' => 'administrator',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: view own field_main_section.
+  $permissions['view own field_main_section'] = array(
+    'name' => 'view own field_main_section',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'fagredaktør' => 'fagredaktør',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: view own field_main_tags.
+  $permissions['view own field_main_tags'] = array(
+    'name' => 'view own field_main_tags',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'fagredaktør' => 'fagredaktør',
+      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
