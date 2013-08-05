@@ -45,13 +45,10 @@
 	}
 }
 /* Calendar - frontpage */
-.view-id-calendar_frontpage {
-	.post1 , .post2 {
-		margin: 0 0 $spacing-std 0;
-	}
+.view-id-calendar_frontpage {	
 	.rebild-calendar {
-		float: left;
-		width: 50%;		
+		min-height:60px;
+		margin: 0 0 $spacing-std 0; 			
 		.calendar_left {
 			width: 60px;
 			float: left;

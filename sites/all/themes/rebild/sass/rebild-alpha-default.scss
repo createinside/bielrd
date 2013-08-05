@@ -261,6 +261,18 @@ Nodes
 		display: block;
 	}
 }
+/* Calendar - frontpage */
+.view-id-calendar_frontpage {
+	.rebild-calendar {
+		float: left;
+		width: 50%;	
+		margin: 0;	
+	}
+	.post1 , .post2 {
+		margin: 0 0 $spacing-std 0;
+	}
+}
+
 
 /*------------------------------------------------------------------
 	Blocks
