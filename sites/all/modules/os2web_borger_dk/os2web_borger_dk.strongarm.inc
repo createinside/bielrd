@@ -108,7 +108,7 @@ function os2web_borger_dk_strongarm() {
           'weight' => '13',
         ),
         'metatags' => array(
-          'weight' => '8',
+          'weight' => '15',
         ),
         'redirect' => array(
           'weight' => '16',
@@ -184,8 +184,8 @@ function os2web_borger_dk_strongarm() {
     'field_os2web_borger_dk_recommend' => 'field_os2web_borger_dk_recommend',
     'field_os2web_borger_dk_selfservi' => 'field_os2web_borger_dk_selfservi',
     'field_os2web_borger_dk_shortlist' => 'field_os2web_borger_dk_shortlist',
-    'field_main_section' => 0,
-    'field_main_tags' => 0,
+    'field_main_section' => 'field_main_section',
+    'field_main_tags' => 'field_main_tags',
   );
   $export['os2web_borger_dk_display'] = $strongarm;
 
