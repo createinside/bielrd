@@ -11,6 +11,9 @@
 /* Region: Header First */
 #region-header-first {
 	.block {
+		background-image: url("../img/background_print.png");
+		background-repeat: no-repeat;
+		background-position: top right;	
 		.content {
 			line-height: $line-height-std;
 			text-align: center;

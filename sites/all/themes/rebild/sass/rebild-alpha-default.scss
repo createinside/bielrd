@@ -62,7 +62,6 @@ Nodes
 }
 #zone-header-wrapper {
 	background: $bg-color-header;
-	padding: 40px 0 20px 0;
 }
 #zone-preface-wrapper {
 	display: block;
@@ -293,7 +292,8 @@ Nodes
 #region-header-first {
 	.block {
 		@include box-shadow(none);
-		padding: 0;
+		padding: 25px 0 20px 0;
+		
 		form {
 			p {
 				display: inline;

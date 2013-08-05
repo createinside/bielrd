@@ -41,6 +41,13 @@ body {
 	Frontpage
 -------------------------------------------------------------------*/
 .front {
+	#region-header-first {
+		.block {
+			@include box-shadow(none);
+			padding: 25px 0 20px 0;		
+			background-position: 480px -110px;
+		}
+	}
 	#region-content {
 		.view {
 			.views-row {

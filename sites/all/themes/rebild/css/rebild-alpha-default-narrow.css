@@ -95,28 +95,32 @@ body {
 /*------------------------------------------------------------------
 	Frontpage
 -------------------------------------------------------------------*/
-/* line 49, ../sass/rebild-alpha-default-narrow.scss */
+/* line 48, ../sass/rebild-alpha-default-narrow.scss */
+.front #region-header-first .block {
+  background-position: 250px -110px;
+}
+/* line 54, ../sass/rebild-alpha-default-narrow.scss */
 .front #region-content .view .views-row {
   height: 338px;
   margin-bottom: 20px;
 }
-/* line 56, ../sass/rebild-alpha-default-narrow.scss */
+/* line 61, ../sass/rebild-alpha-default-narrow.scss */
 .front #region-sidebar-first .block {
   margin-bottom: 20px;
 }
-/* line 59, ../sass/rebild-alpha-default-narrow.scss */
+/* line 64, ../sass/rebild-alpha-default-narrow.scss */
 .front #region-sidebar-first .block-views {
   height: 463px;
 }
-/* line 65, ../sass/rebild-alpha-default-narrow.scss */
+/* line 70, ../sass/rebild-alpha-default-narrow.scss */
 .front #region-sidebar-first .block-block {
   height: 210px;
 }
-/* line 71, ../sass/rebild-alpha-default-narrow.scss */
+/* line 76, ../sass/rebild-alpha-default-narrow.scss */
 .front #region-postscript-first .block .content {
   height: 190px;
 }
-/* line 78, ../sass/rebild-alpha-default-narrow.scss */
+/* line 83, ../sass/rebild-alpha-default-narrow.scss */
 .front #region-postscript-second .block .content {
   height: 190px;
 }
