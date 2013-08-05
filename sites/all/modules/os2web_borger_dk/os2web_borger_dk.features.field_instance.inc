@@ -221,7 +221,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 13,
+      'weight' => 6,
     ),
   );
 
@@ -259,7 +259,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 14,
+      'weight' => 7,
     ),
   );
 
@@ -342,7 +342,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -472,7 +472,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 15,
+      'weight' => 10,
     ),
   );
 
@@ -734,7 +734,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -822,7 +822,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 7,
+      'weight' => 5,
     ),
   );
 
@@ -911,7 +911,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
@@ -1224,7 +1224,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 14,
+      'weight' => 9,
     ),
   );
 

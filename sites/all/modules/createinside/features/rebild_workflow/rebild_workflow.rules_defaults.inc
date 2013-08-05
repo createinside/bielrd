@@ -62,7 +62,7 @@ function rebild_workflow_default_rules_configuration() {
       "PLUGIN" : "reaction rule",
       "REQUIRES" : [ "rules" ],
       "ON" : [ "user_login" ],
-      "DO" : [ { "redirect" : { "url" : "\\/admin\\/workbench" } } ]
+      "DO" : [ { "redirect" : { "url" : "admin\\/workbench" } } ]
     }
   }');
   $items['rules_workflow_email_draft_needs_review'] = entity_import('rules_config', '{ "rules_workflow_email_draft_needs_review" : {

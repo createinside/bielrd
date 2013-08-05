@@ -50,7 +50,7 @@ function rebild_news_field_group_info() {
   $field_group->parent_name = 'group_nyhed_iof';
   $field_group->data = array(
     'label' => 'Billedgalleri',
-    'weight' => '15',
+    'weight' => '16',
     'children' => array(
       0 => 'field_main_image_gallery',
     ),
@@ -58,7 +58,7 @@ function rebild_news_field_group_info() {
     'format_settings' => array(
       'label' => 'Billedgalleri',
       'instance_settings' => array(
-        'required_fields' => 1,
+        'required_fields' => 0,
         'classes' => '',
         'description' => '',
       ),
@@ -78,18 +78,19 @@ function rebild_news_field_group_info() {
   $field_group->parent_name = 'group_nyhed_iof';
   $field_group->data = array(
     'label' => 'Faktaboks',
-    'weight' => '13',
+    'weight' => '14',
     'children' => array(
       0 => 'field_main_factbox',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Faktaboks',
       'instance_settings' => array(
-        'description' => '',
+        'required_fields' => 0,
         'classes' => '',
-        'required_fields' => 1,
+        'description' => '',
       ),
+      'formatter' => 'closed',
     ),
   );
   $export['group_nyhed_fakta|node|news_article|form'] = $field_group;
@@ -105,18 +106,19 @@ function rebild_news_field_group_info() {
   $field_group->parent_name = 'group_nyhed_iof';
   $field_group->data = array(
     'label' => 'Forældelsesdato',
-    'weight' => '14',
+    'weight' => '15',
     'children' => array(
       0 => 'field_main_outdated',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Forældelsesdato',
       'instance_settings' => array(
-        'description' => '',
+        'required_fields' => 0,
         'classes' => '',
-        'required_fields' => 1,
+        'description' => '',
       ),
+      'formatter' => 'closed',
     ),
   );
   $export['group_nyhed_fodato|node|news_article|form'] = $field_group;
@@ -137,6 +139,7 @@ function rebild_news_field_group_info() {
       0 => 'group_nyhed_fodato',
       1 => 'group_nyhed_bilgal',
       2 => 'group_nyhed_fakta',
+      3 => 'group_nyhed_inline',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(

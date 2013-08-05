@@ -108,7 +108,7 @@ function os2web_borger_dk_strongarm() {
           'weight' => '13',
         ),
         'metatags' => array(
-          'weight' => '15',
+          'weight' => '8',
         ),
         'redirect' => array(
           'weight' => '16',
