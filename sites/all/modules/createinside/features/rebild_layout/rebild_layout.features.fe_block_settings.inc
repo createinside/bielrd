@@ -201,6 +201,27 @@ function rebild_layout_default_fe_block_settings() {
     'visibility' => 1,
   );
 
+  $export['menu-menu-secondary-menu'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'menu-secondary-menu',
+    'module' => 'menu',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'rebild',
+        'weight' => -12,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   $export['menu_block-10'] = array(
     'cache' => -1,
     'css_class' => '',
@@ -257,7 +278,7 @@ function rebild_layout_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'rebild',
-        'weight' => 0,
+        'weight' => -15,
       ),
     ),
     'title' => '<none>',

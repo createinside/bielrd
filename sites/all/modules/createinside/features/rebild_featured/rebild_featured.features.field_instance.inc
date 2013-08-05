@@ -14,17 +14,18 @@ function rebild_featured_field_default_field_instances() {
   $field_instances['node-featured_article-field_featured_image'] = array(
     'bundle' => 'featured_article',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'image',
+        'label' => 'hidden',
+        'module' => 'picture',
         'settings' => array(
+          'fallback_image_style' => '',
           'image_link' => '',
-          'image_style' => 'node_banner_normal',
+          'picture_group' => 'indhold_top',
         ),
-        'type' => 'image',
-        'weight' => 1,
+        'type' => 'picture',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -42,10 +43,6 @@ function rebild_featured_field_default_field_instances() {
       'default_image' => 0,
       'file_directory' => 'aktuelt',
       'file_extensions' => 'png gif jpg jpeg',
-      'focus' => 0,
-      'focus_lock_ratio' => 0,
-      'focus_min_size' => '',
-      'focus_required' => 0,
       'max_filesize' => '10 MB',
       'max_resolution' => '',
       'min_resolution' => '720x305',
@@ -101,14 +98,14 @@ function rebild_featured_field_default_field_instances() {
     'bundle' => 'featured_article',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Indtast et link.',
     'display' => array(
       'default' => array(
         'label' => 'above',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -155,14 +152,14 @@ function rebild_featured_field_default_field_instances() {
     'bundle' => 'featured_article',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Indtast et resumé. Resuméet vises øverst før brødteksten, samt på forsiden som teasertekst.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -176,32 +173,6 @@ function rebild_featured_field_default_field_instances() {
     'label' => 'Resumé',
     'required' => 1,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 'php_code',
-          'plain_text' => 'plain_text',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'filtered_html' => array(
-              'weight' => 0,
-            ),
-            'full_html' => array(
-              'weight' => 1,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => 10,
-            ),
-          ),
-        ),
-      ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -224,16 +195,9 @@ function rebild_featured_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-        ),
-        'type' => 'date_default',
-        'weight' => 6,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -274,14 +238,13 @@ function rebild_featured_field_default_field_instances() {
     'bundle' => 'featured_article',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Vælg hvilken sektion indholdet hører til.',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 4,
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -313,14 +276,13 @@ function rebild_featured_field_default_field_instances() {
     'bundle' => 'featured_article',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Vælg et eller flere tags der er med til at beskrive indholdet.',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 5,
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -352,10 +314,15 @@ function rebild_featured_field_default_field_instances() {
   t('Angiv en dato for hvornår dette indhold skal opdateres eller gennemses igen.');
   t('Billede');
   t('Forældelsesdato');
+  t('Indtast et link.');
+  t('Indtast et resumé. Resuméet vises øverst før brødteksten, samt på forsiden som teasertekst.');
   t('Link');
   t('Resumé');
   t('Sektion');
   t('Tags');
+  t('Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
+  t('Vælg et eller flere tags der er med til at beskrive indholdet.');
+  t('Vælg hvilken sektion indholdet hører til.');
 
   return $field_instances;
 }

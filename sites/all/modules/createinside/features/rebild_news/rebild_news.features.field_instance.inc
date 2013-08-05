@@ -15,14 +15,14 @@ function rebild_news_field_default_field_instances() {
     'bundle' => 'news_article',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Indtast en brødtekst for nyheden.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -36,32 +36,6 @@ function rebild_news_field_default_field_instances() {
     'label' => 'Brødtekst',
     'required' => 1,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 0,
-          'plain_text' => 0,
-        ),
-        'allowed_formats_toggle' => 1,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'filtered_html' => array(
-              'weight' => 0,
-            ),
-            'full_html' => array(
-              'weight' => 1,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => 10,
-            ),
-          ),
-        ),
-      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -81,14 +55,14 @@ function rebild_news_field_default_field_instances() {
     'bundle' => 'news_article',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Indtast en kort tekst til faktaboksen.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -102,32 +76,6 @@ function rebild_news_field_default_field_instances() {
     'label' => 'Faktaboks',
     'required' => 0,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 0,
-          'plain_text' => 0,
-        ),
-        'allowed_formats_toggle' => 1,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'filtered_html' => array(
-              'weight' => 0,
-            ),
-            'full_html' => array(
-              'weight' => 1,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => 10,
-            ),
-          ),
-        ),
-      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -146,7 +94,7 @@ function rebild_news_field_default_field_instances() {
   $field_instances['node-news_article-field_main_image'] = array(
     'bundle' => 'news_article',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -175,10 +123,6 @@ function rebild_news_field_default_field_instances() {
       'default_image' => 0,
       'file_directory' => 'news_article',
       'file_extensions' => 'png gif jpg jpeg',
-      'focus' => 0,
-      'focus_lock_ratio' => 0,
-      'focus_min_size' => '',
-      'focus_required' => 0,
       'max_filesize' => '10 MB',
       'max_resolution' => '',
       'min_resolution' => '680x190',
@@ -234,7 +178,7 @@ function rebild_news_field_default_field_instances() {
   $field_instances['node-news_article-field_main_image_gallery'] = array(
     'bundle' => 'news_article',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Upload et eller flere billeder, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -248,7 +192,7 @@ function rebild_news_field_default_field_instances() {
           'swipebox_image_style_swipebox' => 'node_gallery_full',
         ),
         'type' => 'swipebox',
-        'weight' => 4,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -266,14 +210,92 @@ function rebild_news_field_default_field_instances() {
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
-      'focus' => 0,
-      'focus_lock_ratio' => 0,
-      'focus_min_size' => '',
-      'focus_required' => 0,
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
       'title_field' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          0 => 0,
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
+          'upload' => 'upload',
+        ),
+        'manualcrop_crop_info' => 1,
+        'manualcrop_default_crop_area' => 1,
+        'manualcrop_enable' => 0,
+        'manualcrop_inline_crop' => FALSE,
+        'manualcrop_instant_crop' => FALSE,
+        'manualcrop_instant_preview' => 1,
+        'manualcrop_require_cropping' => array(
+          'blok' => 0,
+          'indhold_top' => 0,
+          'nyhed_forside' => 0,
+        ),
+        'manualcrop_styles_list' => array(
+          'blok' => 0,
+          'indhold_top' => 0,
+          'nyhed_forside' => 0,
+        ),
+        'manualcrop_styles_mode' => 'exclude',
+        'manualcrop_thumblist' => 0,
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-news_article-field_main_inlineimage'
+  $field_instances['node-news_article-field_main_inlineimage'] = array(
+    'bundle' => 'news_article',
+    'deleted' => 0,
+    'description' => 'Upload et billede der er indlejret nederst til venstre.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_main_inlineimage',
+    'label' => 'Indlejret billede',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -290,24 +312,36 @@ function rebild_news_field_default_field_instances() {
           'video' => 0,
         ),
         'browser_plugins' => array(
-          'media_default--media_browser_1' => 'media_default--media_browser_1',
-          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
-          'upload' => 'upload',
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 0,
         ),
-        'manualcrop_crop_info' => TRUE,
-        'manualcrop_default_crop_area' => TRUE,
-        'manualcrop_enable' => FALSE,
+        'manualcrop_crop_info' => 1,
+        'manualcrop_default_crop_area' => 1,
+        'manualcrop_enable' => 1,
         'manualcrop_inline_crop' => FALSE,
         'manualcrop_instant_crop' => FALSE,
-        'manualcrop_instant_preview' => TRUE,
-        'manualcrop_require_cropping' => array(),
-        'manualcrop_styles_list' => array(),
-        'manualcrop_styles_mode' => 'exclude',
-        'manualcrop_thumblist' => FALSE,
+        'manualcrop_instant_preview' => 1,
+        'manualcrop_require_cropping' => array(
+          'blok' => 0,
+          'indhold_top' => 0,
+          'inline_bottom' => 0,
+          'inline_top' => 0,
+          'nyhed_forside' => 0,
+        ),
+        'manualcrop_styles_list' => array(
+          'blok' => 0,
+          'indhold_top' => 0,
+          'inline_bottom' => 'inline_bottom',
+          'inline_top' => 'inline_top',
+          'nyhed_forside' => 0,
+        ),
+        'manualcrop_styles_mode' => 'include',
+        'manualcrop_thumblist' => 0,
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 5,
+      'weight' => 14,
     ),
   );
 
@@ -321,7 +355,7 @@ function rebild_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -362,13 +396,13 @@ function rebild_news_field_default_field_instances() {
     'bundle' => 'news_article',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Vælg hvilken sektion indholdet hører til.',
     'display' => array(
       'default' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -400,7 +434,7 @@ function rebild_news_field_default_field_instances() {
     'bundle' => 'news_article',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Indtast et resumé. Resuméet vises øverst før brødteksten.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -440,13 +474,13 @@ function rebild_news_field_default_field_instances() {
     'bundle' => 'news_article',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Vælg et eller flere tags der er med til at beskrive indholdet.',
     'display' => array(
       'default' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -466,10 +500,95 @@ function rebild_news_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'apply_chosen' => 0,
+        'apply_chosen' => 1,
       ),
       'type' => 'options_select',
       'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance: 'node-news_article-field_main_topimage'
+  $field_instances['node-news_article-field_main_topimage'] = array(
+    'bundle' => 'news_article',
+    'deleted' => 0,
+    'description' => 'Upload et billede der er placeret øverst i teksten.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_main_topimage',
+    'label' => 'Topbillede',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 0,
+        ),
+        'manualcrop_crop_info' => 1,
+        'manualcrop_default_crop_area' => 1,
+        'manualcrop_enable' => 1,
+        'manualcrop_inline_crop' => FALSE,
+        'manualcrop_instant_crop' => FALSE,
+        'manualcrop_instant_preview' => 1,
+        'manualcrop_require_cropping' => array(
+          'blok' => 0,
+          'indhold_top' => 0,
+          'inline_bottom' => 0,
+          'inline_top' => 0,
+          'nyhed_forside' => 0,
+        ),
+        'manualcrop_styles_list' => array(
+          'blok' => 0,
+          'indhold_top' => 0,
+          'inline_bottom' => 'inline_bottom',
+          'inline_top' => 'inline_top',
+          'nyhed_forside' => 0,
+        ),
+        'manualcrop_styles_mode' => 'include',
+        'manualcrop_thumblist' => 0,
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 13,
     ),
   );
 
@@ -481,9 +600,20 @@ function rebild_news_field_default_field_instances() {
   t('Brødtekst');
   t('Faktaboks');
   t('Forældelsesdato');
+  t('Indlejret billede');
+  t('Indtast en brødtekst for nyheden.');
+  t('Indtast en kort tekst til faktaboksen.');
+  t('Indtast et resumé. Resuméet vises øverst før brødteksten.');
   t('Resumé');
   t('Sektion');
   t('Tags');
+  t('Topbillede');
+  t('Upload et billede der er indlejret nederst til venstre.');
+  t('Upload et billede der er placeret øverst i teksten.');
+  t('Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
+  t('Upload et eller flere billeder, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
+  t('Vælg et eller flere tags der er med til at beskrive indholdet.');
+  t('Vælg hvilken sektion indholdet hører til.');
 
   return $field_instances;
 }

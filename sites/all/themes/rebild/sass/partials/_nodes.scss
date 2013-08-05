@@ -68,7 +68,38 @@ News Article
 				float: left;
 				margin-bottom: $spacing-std;
 				text-align: center;
-			}
+			}			
+		}
+		.field-label:before {			
+			@include icon-prepare();
+			content: "\e00e";	
+			margin-right: 0.5em;
 		}
 	}
+	/* Accordion */
+	.view-content-accordion {
+		.rebild-accordion {
+			.ui-accordion-header {
+				background: $bg-node-box;
+				@include border-radius(3px);
+				overflow: hidden;
+				margin-bottom: 8px;
+				.ui-icon-triangle-1-e {
+					width: 15px;
+					height: 15px;
+					background-image: url(../img/accordion_closed.png);
+				}
+				
+			}
+			.ui-state-active {
+				background-color: $color-blue;
+				.ui-icon-triangle-1-s {
+					width: 15px;
+					height: 15px;
+					background-image: url(../img/accordion_open.png);	
+				}
+			}			
+		}
+	}
+	
 }

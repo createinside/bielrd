@@ -1,0 +1,68 @@
+<?php
+
+/**
+ * tilføjer en ekstra validation function til page_node_form som 
+ * tjekker om brugeren har cropped det uploadede billede og laver en kopi af 
+ * originalbilledet hvis dette er tilfældet.
+ */
+
+
+
+/**
+ * Implements Manualcrop_modification_form_alter().
+ * tilføjer en ekstra validation function ved de indholdstyper hvor det er påkrævet at croppe billedet.  
+ */
+function manualcrop_modification_form_alter(&$form, &$form_state, $form_id){
+	$indholdstyper = node_type_get_types();
+	$manualcrop_moderation = FALSE;
+	$form_state['required_count'] = 0;
+	/* Vi kører en løkke der finder frem til alle machine names på indholdstyperne, og herefter laver vi en form alter. */
+	foreach(element_children($indholdstyper) as $key) {
+		if ($form_id == ($indholdstyper[$key]->type . '_node_form' )) {
+			if(isset($form['field_main_image'])){
+				if (isset($form_state['field']['field_main_image']['und']['instance']['widget']['settings']['manualcrop_require_cropping']) && $form_state['field']['field_main_image']['und']['instance']['widget']['settings']['manualcrop_enable'] == 1){
+					foreach ($form_state['field']['field_main_image']['und']['instance']['widget']['settings']['manualcrop_require_cropping'] as $key){
+						if(! $key == 0){
+							$manualcrop_moderation = TRUE;
+							$form_state['required_count'] = $form_state['required_count'] + 1; 
+						}
+					}
+					if($manualcrop_moderation == TRUE){
+						$form['#validate'][] = 'manualcrop_modification_validate';
+					}
+				}
+			}
+		}
+	}
+}
+
+/**
+ * definere manualcrop_modification_validate functionen
+ */
+function manualcrop_modification_validate($form, &$form_state){
+	if(($form['field_main_image']['und'][0]['#file'] != FALSE)){ //tjekker om der er oploaded et billede
+		
+		//tjekker om billedet er blevet cropped
+		$file_fid = $form['field_main_image']['und'][0]['#file']->fid; 
+		$query = db_query("SELECT fid 
+			FROM {manualcrop} mc 
+			WHERE 
+			mc.fid = :file_fid
+		
+			", array( ':file_fid' => $file_fid))->rowcount();
+		if ($query < $form_state['required_count']) { 
+			form_set_error('image', t('You have to crop the uploaded image!'));
+		}
+	}
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function manualcrop_modification_views_api() {
+  return array(
+    'api' => 3, 
+    'path' => drupal_get_path('module', 'manualcrop_modification'), 
+    'template path' => drupal_get_path('module', 'manualcrop_modification'),
+  );
+}

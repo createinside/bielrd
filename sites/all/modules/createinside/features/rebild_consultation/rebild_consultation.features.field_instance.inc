@@ -14,7 +14,7 @@ function rebild_consultation_field_default_field_instances() {
   $field_instances['node-consultation-field_consultation_date'] = array(
     'bundle' => 'consultation',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Vælg en dato for høring.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -133,7 +133,7 @@ function rebild_consultation_field_default_field_instances() {
   $field_instances['node-consultation-field_consultation_file'] = array(
     'bundle' => 'consultation',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Upload en eller flere filer til dette dokument.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -176,7 +176,7 @@ function rebild_consultation_field_default_field_instances() {
     'bundle' => 'consultation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Indtast en brødtekst. ',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -197,32 +197,6 @@ function rebild_consultation_field_default_field_instances() {
     'label' => 'Brødtekst',
     'required' => 1,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 0,
-          'plain_text' => 0,
-        ),
-        'allowed_formats_toggle' => 1,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'filtered_html' => array(
-              'weight' => 0,
-            ),
-            'full_html' => array(
-              'weight' => 1,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => 10,
-            ),
-          ),
-        ),
-      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -281,7 +255,7 @@ function rebild_consultation_field_default_field_instances() {
   $field_instances['node-consultation-field_main_image'] = array(
     'bundle' => 'consultation',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -310,10 +284,6 @@ function rebild_consultation_field_default_field_instances() {
       'default_image' => 0,
       'file_directory' => 'consultation',
       'file_extensions' => 'png gif jpg jpeg',
-      'focus' => 0,
-      'focus_lock_ratio' => 0,
-      'focus_min_size' => '',
-      'focus_required' => 0,
       'max_filesize' => '10 MB',
       'max_resolution' => '',
       'min_resolution' => '680x190',
@@ -415,7 +385,7 @@ function rebild_consultation_field_default_field_instances() {
     'bundle' => 'consultation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Vælg hvilken sektion indholdet hører til.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -453,7 +423,7 @@ function rebild_consultation_field_default_field_instances() {
     'bundle' => 'consultation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Vælg et eller flere tags der er med til at beskrive indholdet.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -496,8 +466,14 @@ function rebild_consultation_field_default_field_instances() {
   t('Filer');
   t('Forældelsesdato');
   t('GIS Kort');
+  t('Indtast en brødtekst. ');
   t('Sektion');
   t('Tags');
+  t('Upload en eller flere filer til dette dokument.');
+  t('Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
+  t('Vælg en dato for høring.');
+  t('Vælg et eller flere tags der er med til at beskrive indholdet.');
+  t('Vælg hvilken sektion indholdet hører til.');
 
   return $field_instances;
 }

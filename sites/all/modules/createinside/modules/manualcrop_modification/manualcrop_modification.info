@@ -1,0 +1,6 @@
+name = manualcrop modification
+description = tilføjer ændring af Media browser viewet + tilføjer ændring af validation af page_node_form
+core = 7.x
+dependencies[] = media
+dependencies[] = manualcrop
+package = Create Inside

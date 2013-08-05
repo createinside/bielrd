@@ -37,6 +37,7 @@
 		}
 		p {
 			margin-bottom: 1em;
+			line-height: 1.25em;
 		}
 		strong {
 			font-weight: bold;
@@ -55,8 +56,22 @@
 		/* Lists */
 		ul, ol {
 			li {
-				
+				margin-left: 0.5em;	
 			}
 		}
-	}
+		#content-main {
+			ul {
+				li {
+					list-style: disc;
+					margin-left: $spacing-std;
+				}
+			}
+			ol {
+				li {
+					list-style: decimal;
+					margin-left: $spacing-std;
+				}
+			}
+		}
+	}	
 }

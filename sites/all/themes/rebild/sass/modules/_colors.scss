@@ -2,32 +2,35 @@
 
 [COLORS]
 
-1. Main colors
-2. Text colors
-3. Background colors
-4. Button colors
+Main colors
+Text colors
+Background colors
+Button colors
 
 -------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------
-	1. Main colors
+	Main colors
 -------------------------------------------------------------------*/
 
 $color-green: #68a386;
 $color-purple: #937ea7;
 $color-yellow: #c9bd7e;
+// Også anvendt i backend temaet.
 $color-blue: #7f9dcd;
 
 $color-green-dark: #00473e;
 
 /*------------------------------------------------------------------
-	2. Text colors
+	Text colors
 -------------------------------------------------------------------*/
 
+// Også anvendt i backend temaet.
 $text-color: #474747;
 $text-color-header: $color-green-dark;
 $text-color-footer: #6b6b6b; 
 
+// Også anvendt i backend temaet.
 $link-color: #474747;
 $link-color-hover: #888;
 $link-color-active: $color-green;
@@ -39,9 +42,10 @@ $top-menu-bg-color: #f9f9f9;
 $input-color: #6b6b6b;
 
 /*------------------------------------------------------------------
-	3. Background colors
+	Background colors
 -------------------------------------------------------------------*/
 
+// Også anvendt i backend temaet.
 $bg-color-main: #e8e8e8;
 $bg-color-alt: #f6f6f6;
 $bg-color-header: $color-green;
@@ -56,7 +60,7 @@ $bg-mobile-menu: $color-green;
 $bg-mobile-menu-active: #528d6f;
 
 /*------------------------------------------------------------------
-	4. Button colors
+	Button colors
 -------------------------------------------------------------------*/
 
 $button-bg-color: $color-yellow;

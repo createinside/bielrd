@@ -21,6 +21,17 @@ function rebild_workflow_user_default_permissions() {
     'module' => 'workbench',
   );
 
+  // Exported permission: administer menu.
+  $permissions['administer menu'] = array(
+    'name' => 'administer menu',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'fagredaktør' => 'fagredaktør',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'menu',
+  );
+
   // Exported permission: administer scheduler.
   $permissions['administer scheduler'] = array(
     'name' => 'administer scheduler',
@@ -55,6 +66,71 @@ function rebild_workflow_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'workbench_moderation',
+  );
+
+  // Exported permission: create files.
+  $permissions['create files'] = array(
+    'name' => 'create files',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'fagredaktør' => 'fagredaktør',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: delete any files.
+  $permissions['delete any files'] = array(
+    'name' => 'delete any files',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: delete own files.
+  $permissions['delete own files'] = array(
+    'name' => 'delete own files',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'fagredaktør' => 'fagredaktør',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: edit any files.
+  $permissions['edit any files'] = array(
+    'name' => 'edit any files',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'fagredaktør' => 'fagredaktør',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: edit meta tags.
+  $permissions['edit meta tags'] = array(
+    'name' => 'edit meta tags',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'fagredaktør' => 'fagredaktør',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: edit own files.
+  $permissions['edit own files'] = array(
+    'name' => 'edit own files',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'fagredaktør' => 'fagredaktør',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'file_entity',
   );
 
   // Exported permission: moderate content from draft to needs_review.
@@ -161,6 +237,17 @@ function rebild_workflow_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
+  // Exported permission: view files.
+  $permissions['view files'] = array(
+    'name' => 'view files',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'file_entity',
+  );
+
   // Exported permission: view moderation history.
   $permissions['view moderation history'] = array(
     'name' => 'view moderation history',
@@ -181,6 +268,28 @@ function rebild_workflow_user_default_permissions() {
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'workbench_moderation',
+  );
+
+  // Exported permission: view own files.
+  $permissions['view own files'] = array(
+    'name' => 'view own files',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'fagredaktør' => 'fagredaktør',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: view own private files.
+  $permissions['view own private files'] = array(
+    'name' => 'view own private files',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'fagredaktør' => 'fagredaktør',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'file_entity',
   );
 
   return $permissions;

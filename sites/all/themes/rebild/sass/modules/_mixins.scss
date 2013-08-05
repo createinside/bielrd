@@ -2,16 +2,34 @@
 
 [MIXINS]
 
-1. Blocks
+Blocks
+Backend
 
 -------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------
-	1. Blocks
+	Blocks
 -------------------------------------------------------------------*/
-
+// Også anvendt i backend temaet.
 @mixin grid-box($color) {
 	background-color: $color;
 	@include border-radius($border-radius-std);
 	@include box-shadow(rgba(black, 0.15) 0 0 3px);
+}
+
+
+/*------------------------------------------------------------------
+	Backend
+-------------------------------------------------------------------*/
+// Også anvendt i backend temaet.
+@mixin grid-box-page-admin($color) {
+	background-color: $color;
+	@include box-shadow(rgba(black, 0.1) -1px -1px 0px);
+}
+
+// Også anvendt i backend temaet.
+@mixin grid-box-workbench($color) {
+	background-color: $color;
+	@include border-radius($border-radius-std);
+	@include box-shadow(rgba(black, 0.85) 0 0 3px);
 }

@@ -27,6 +27,7 @@ function rebild_edagsorden_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Gendan';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'views_accordion';
@@ -35,7 +36,7 @@ function rebild_edagsorden_views_default_views() {
   $handler->display->display_options['style_options']['row-start-open'] = 'none';
   $handler->display->display_options['style_options']['autoheight'] = 0;
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Field collection item: Nummer */
+  /* Felt: Field collection item: Nummer */
   $handler->display->display_options['fields']['field_agenda_item_number']['id'] = 'field_agenda_item_number';
   $handler->display->display_options['fields']['field_agenda_item_number']['table'] = 'field_data_field_agenda_item_number';
   $handler->display->display_options['fields']['field_agenda_item_number']['field'] = 'field_agenda_item_number';
@@ -46,7 +47,7 @@ function rebild_edagsorden_views_default_views() {
     'thousand_separator' => ' ',
     'prefix_suffix' => 0,
   );
-  /* Field: Field collection item: Titel */
+  /* Felt: Field collection item: Titel */
   $handler->display->display_options['fields']['field_agenda_item_caption']['id'] = 'field_agenda_item_caption';
   $handler->display->display_options['fields']['field_agenda_item_caption']['table'] = 'field_data_field_agenda_item_caption';
   $handler->display->display_options['fields']['field_agenda_item_caption']['field'] = 'field_agenda_item_caption';
@@ -54,13 +55,13 @@ function rebild_edagsorden_views_default_views() {
   $handler->display->display_options['fields']['field_agenda_item_caption']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_agenda_item_caption']['alter']['text'] = '[field_agenda_item_number]. [field_agenda_item_caption] ';
   $handler->display->display_options['fields']['field_agenda_item_caption']['element_label_colon'] = FALSE;
-  /* Field: Field collection item: Brødtekst */
+  /* Felt: Field collection item: Brødtekst */
   $handler->display->display_options['fields']['field_agenda_item_content']['id'] = 'field_agenda_item_content';
   $handler->display->display_options['fields']['field_agenda_item_content']['table'] = 'field_data_field_agenda_item_content';
   $handler->display->display_options['fields']['field_agenda_item_content']['field'] = 'field_agenda_item_content';
   $handler->display->display_options['fields']['field_agenda_item_content']['label'] = '';
   $handler->display->display_options['fields']['field_agenda_item_content']['element_label_colon'] = FALSE;
-  /* Field: Field collection item: Bilag */
+  /* Felt: Field collection item: Bilag */
   $handler->display->display_options['fields']['field_agenda_item_docs']['id'] = 'field_agenda_item_docs';
   $handler->display->display_options['fields']['field_agenda_item_docs']['table'] = 'field_data_field_agenda_item_docs';
   $handler->display->display_options['fields']['field_agenda_item_docs']['field'] = 'field_agenda_item_docs';
@@ -77,7 +78,7 @@ function rebild_edagsorden_views_default_views() {
     t('Master'),
     t('more'),
     t('Apply'),
-    t('Reset'),
+    t('Gendan'),
     t('Sort by'),
     t('Asc'),
     t('Desc'),

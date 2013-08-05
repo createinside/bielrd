@@ -1,7 +1,10 @@
 <?php 
+/**
+* Fjerner de advancerede indstillinger ved metatags, og gør felter obligatoriske.
+**/
 
-//Fjerner de advancerede indstillinger ved node oprettelse/edit.
-function alter_metatag_metatag_info_alter(&$info) {
+// hook_metatag_info_alter
+function misc_modifications_metatag_info_alter(&$info) {
 	
 		unset($info['tags']['abstract']);
 		unset($info['tags']['keywords']);
@@ -20,7 +23,5 @@ function alter_metatag_metatag_info_alter(&$info) {
 		$info['tags']['title']['form']['#required'] = TRUE;
 
 }
-
-
 
 ?>

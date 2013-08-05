@@ -14,7 +14,7 @@ function rebild_announcement_field_default_field_instances() {
   $field_instances['node-announcement-field_announcement_date'] = array(
     'bundle' => 'announcement',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Vælg en dato for meddelelsen.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -58,7 +58,7 @@ function rebild_announcement_field_default_field_instances() {
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
-      'type' => 'date_select',
+      'type' => 'date_popup',
       'weight' => 3,
     ),
   );
@@ -68,7 +68,7 @@ function rebild_announcement_field_default_field_instances() {
     'bundle' => 'announcement',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Indtast en brødtekst for Meddelse.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -89,32 +89,6 @@ function rebild_announcement_field_default_field_instances() {
     'label' => 'Brødtekst',
     'required' => 1,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 0,
-          'plain_text' => 0,
-        ),
-        'allowed_formats_toggle' => 1,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'filtered_html' => array(
-              'weight' => 0,
-            ),
-            'full_html' => array(
-              'weight' => 1,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => 10,
-            ),
-          ),
-        ),
-      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -180,7 +154,7 @@ function rebild_announcement_field_default_field_instances() {
     'bundle' => 'announcement',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Vælg hvilken sektion indholdet hører til.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -218,7 +192,7 @@ function rebild_announcement_field_default_field_instances() {
     'bundle' => 'announcement',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Indtast et resumé. Resuméet vises øverst før brødteksten.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -239,32 +213,6 @@ function rebild_announcement_field_default_field_instances() {
     'label' => 'Resumé',
     'required' => 1,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 'php_code',
-          'plain_text' => 'plain_text',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'filtered_html' => array(
-              'weight' => 0,
-            ),
-            'full_html' => array(
-              'weight' => 1,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => 10,
-            ),
-          ),
-        ),
-      ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -284,7 +232,7 @@ function rebild_announcement_field_default_field_instances() {
     'bundle' => 'announcement',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Vælg et eller flere tags der er med til at beskrive indholdet.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -323,9 +271,14 @@ function rebild_announcement_field_default_field_instances() {
   t('Brødtekst');
   t('Dato');
   t('Forældelsesdato');
+  t('Indtast en brødtekst for Meddelse.');
+  t('Indtast et resumé. Resuméet vises øverst før brødteksten.');
   t('Resumé');
   t('Sektion');
   t('Tags');
+  t('Vælg en dato for meddelelsen.');
+  t('Vælg et eller flere tags der er med til at beskrive indholdet.');
+  t('Vælg hvilken sektion indholdet hører til.');
 
   return $field_instances;
 }

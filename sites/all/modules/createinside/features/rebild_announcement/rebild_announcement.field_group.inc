@@ -28,12 +28,13 @@ function rebild_announcement_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Kategorisering',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => '',
         'required_fields' => 1,
+        'classes' => '',
+        'description' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $export['group_categories|node|announcement|form'] = $field_group;

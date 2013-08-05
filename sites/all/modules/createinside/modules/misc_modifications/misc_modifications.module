@@ -1,0 +1,14 @@
+<?php 
+/**
+* Inkluder filer hvori vi foretager vores modifikationer.
+**/
+
+// Ændringer til Metatag modulet, er inkluderet her, felter er gjort required og andre helt fjernet.
+include_once 'misc_modifications.metatag_alter.inc';
+// Ændringer til Wysiwyg editor (TinyMCE), skjuler hjælpetekster vha. restriktioner på definerede felter.
+include_once 'misc_modifications.wysiwyg_alter.inc';
+// Ændringer til workbench landingpage - My profile. Tilføjer classer, views og menu items.
+include_once 'misc_modifications.workbench_alter.inc';
+// Ændringer til page node form 
+include_once 'misc_modifications.node_add_form_alter.inc';
+?>

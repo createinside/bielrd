@@ -105,7 +105,7 @@ function rebild_page_strongarm() {
       'display' => array(
         'content_accordion_entity_view_1' => array(
           'default' => array(
-            'weight' => '4',
+            'weight' => '6',
             'visible' => TRUE,
           ),
         ),

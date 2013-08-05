@@ -12,12 +12,12 @@ function rebild_calendar_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
-  $export['block-rebild_calendar_front'] = array(
+  $export['views-calendar_frontpage-block'] = array(
     'cache' => -1,
     'css_class' => '',
     'custom' => 0,
-    'machine_name' => 'rebild_calendar_front',
-    'module' => 'block',
+    'delta' => 'calendar_frontpage-block',
+    'module' => 'views',
     'node_types' => array(),
     'pages' => '<front>',
     'roles' => array(),
@@ -29,7 +29,7 @@ function rebild_calendar_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => 'Det sker i kommunen',
+    'title' => '',
     'visibility' => 1,
   );
 

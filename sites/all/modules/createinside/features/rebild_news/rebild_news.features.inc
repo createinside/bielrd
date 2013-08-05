@@ -43,7 +43,7 @@ function rebild_news_image_default_styles() {
   $styles['nyhed_forside'] = array(
     'name' => 'nyhed_forside',
     'effects' => array(
-      24 => array(
+      1 => array(
         'label' => 'Crop and scale manually',
         'help' => 'Crop and scale a user-selected area, respecting the ratio of the destination width and height.',
         'effect callback' => 'manualcrop_crop_and_scale_effect',

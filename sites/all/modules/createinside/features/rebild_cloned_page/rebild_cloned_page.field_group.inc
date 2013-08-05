@@ -28,12 +28,13 @@ function rebild_cloned_page_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Kategorisering',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => '',
         'required_fields' => 1,
+        'classes' => '',
+        'description' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $export['group_categories|node|cloned_page|form'] = $field_group;

@@ -273,7 +273,7 @@ function rebild_edagsorden_field_default_field_instances() {
     'bundle' => 'agenda',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Vælg et udvalg.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -430,12 +430,12 @@ function rebild_edagsorden_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'field_collection_fieldset',
+      'module' => 'field_collection',
       'settings' => array(
         'collapsed' => FALSE,
         'last_item_collapsed' => FALSE,
       ),
-      'type' => 'field_collection_fieldset',
+      'type' => 'field_collection_embed',
       'weight' => 7,
     ),
   );
@@ -534,6 +534,7 @@ function rebild_edagsorden_field_default_field_instances() {
   t('Sted');
   t('Titel');
   t('Udvalg');
+  t('Vælg et udvalg.');
 
   return $field_instances;
 }

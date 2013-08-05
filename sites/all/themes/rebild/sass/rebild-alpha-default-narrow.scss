@@ -44,6 +44,11 @@ body {
 	Frontpage
 -------------------------------------------------------------------*/
 .front {
+	#region-header-first {
+		.block {
+			background-position: 250px -110px;
+		}	
+	} 
 	#region-content {
 		.view {
 			.views-row {

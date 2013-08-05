@@ -1,0 +1,19 @@
+ block_access.db.inc | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/block_access.db.inc b/block_access.db.inc
+index 285bc4b..d760ebc 100644
+--- a/block_access.db.inc
++++ b/block_access.db.inc
+@@ -51,8 +51,9 @@ function block_access_add_role($rid, $module, $perm, $delta=NULL) {
+ function block_access_get_roles($module, $perm, $delta=NULL) {
+   $query = db_select('block_access_roles', 'b')
+     ->fields('b', array('rid'))
+-    ->condition('module', $module, '=')
+-    ->condition('permission', $perm, '=');
++    ->condition('module', $module)
++    ->condition('permission', $perm);
++  if (!empty($delta)) $query->condition('delta', $delta);
+ 
+   $result = $query->execute();
+ 

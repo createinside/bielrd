@@ -9,48 +9,52 @@
 
 [COLORS]
 
-1. Main colors
-2. Text colors
-3. Background colors
-4. Button colors
+Main colors
+Text colors
+Background colors
+Button colors
 
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
-	1. Main colors
+	Main colors
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
-	2. Text colors
+	Text colors
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
-	3. Background colors
+	Background colors
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
-	4. Button colors
+	Button colors
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
 
 [VARIABLES]
 
-1. Typography
-2. Layout
+Typography
+Layout
 
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
-	1. Typography
+	Typography
 -------------------------------------------------------------------*/
 /* 12px */
 /*------------------------------------------------------------------
-	2. Layout
+	Layout
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
 
 [MIXINS]
 
-1. Blocks
+Blocks
+Backend
 
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
-	1. Blocks
+	Blocks
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	Backend
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
 
@@ -101,23 +105,38 @@
 /* line 38, ../sass/partials/_general.scss */
 #region-content .content p {
   margin-bottom: 1em;
+  line-height: 1.25em;
 }
-/* line 41, ../sass/partials/_general.scss */
+/* line 42, ../sass/partials/_general.scss */
 #region-content .content strong {
   font-weight: bold;
 }
-/* line 44, ../sass/partials/_general.scss */
+/* line 45, ../sass/partials/_general.scss */
 #region-content .content em {
   font-style: italic;
 }
-/* line 48, ../sass/partials/_general.scss */
+/* line 49, ../sass/partials/_general.scss */
 #region-content .content a {
   color: #474747;
   text-decoration: none;
 }
-/* line 52, ../sass/partials/_general.scss */
+/* line 53, ../sass/partials/_general.scss */
 #region-content .content a:hover {
   text-decoration: underline;
+}
+/* line 58, ../sass/partials/_general.scss */
+#region-content .content ul li, #region-content .content ol li {
+  margin-left: 0.5em;
+}
+/* line 64, ../sass/partials/_general.scss */
+#region-content .content #content-main ul li {
+  list-style: disc;
+  margin-left: 20px;
+}
+/* line 70, ../sass/partials/_general.scss */
+#region-content .content #content-main ol li {
+  list-style: decimal;
+  margin-left: 20px;
 }
 
 /* line 4, ../sass/wysiwyg.scss */

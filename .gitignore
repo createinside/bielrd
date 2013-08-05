@@ -5,10 +5,19 @@ sites/*/settings*.php
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
-sites/all/themes/rebild/.sass-cache
 
 # Ignore paths that contain development only content.
 sites/all/modules/devel/
 
 # Ignore single files.
 .DS_Store
+
+# Ignore SASS cache.
+.sass-cache
+
+# Ignore .DS_store files.
+.DS_Store
+
+# Ignore apc.php & phpinfo.php
+apc.php
+phpinfo.php
