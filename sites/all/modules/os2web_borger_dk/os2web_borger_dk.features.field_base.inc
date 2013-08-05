@@ -134,6 +134,9 @@ function os2web_borger_dk_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_os2web_borger_dk_formterm',
+    'field_permissions' => array(
+      'type' => 2,
+    ),
     'foreign keys' => array(
       'tid' => array(
         'columns' => array(
@@ -152,7 +155,7 @@ function os2web_borger_dk_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'os2web_borger_dk_form_menu',
+          'vocabulary' => 'edagsorden_committees',
           'parent' => 0,
         ),
       ),
@@ -387,6 +390,9 @@ function os2web_borger_dk_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_termref_kle',
+    'field_permissions' => array(
+      'type' => 2,
+    ),
     'foreign keys' => array(
       'tid' => array(
         'columns' => array(
@@ -405,7 +411,7 @@ function os2web_borger_dk_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'kle',
+          'vocabulary' => 'edagsorden_committees',
           'parent' => 0,
         ),
       ),
