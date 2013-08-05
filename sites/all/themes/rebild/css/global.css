@@ -808,6 +808,16 @@ ul.tabs li.active a {
 #region-content .content ul li, #region-content .content ol li {
   margin-left: 0.5em;
 }
+/* line 63, ../sass/partials/_general.scss */
+#region-content .content #content-main ul li {
+  list-style: disc;
+  margin-left: 20px;
+}
+/* line 69, ../sass/partials/_general.scss */
+#region-content .content #content-main ol li {
+  list-style: decimal;
+  margin-left: 20px;
+}
 
 /*------------------------------------------------------------------
 

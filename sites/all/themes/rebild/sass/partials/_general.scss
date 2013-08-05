@@ -58,5 +58,19 @@
 				margin-left: 0.5em;	
 			}
 		}
-	}
+		#content-main {
+			ul {
+				li {
+					list-style: disc;
+					margin-left: $spacing-std;
+				}
+			}
+			ol {
+				li {
+					list-style: decimal;
+					margin-left: $spacing-std;
+				}
+			}
+		}
+	}	
 }
