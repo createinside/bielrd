@@ -194,20 +194,20 @@ function os2web_borger_dk_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'os2web_borger_dk_editable';
   $strongarm->value = array(
-    'title' => 'title',
-    'body' => 'body',
-    'field_os2web_borger_dk_byline' => 'field_os2web_borger_dk_byline',
-    'field_os2web_borger_dk_header' => 'field_os2web_borger_dk_header',
-    'field_os2web_borger_dk_legislati' => 'field_os2web_borger_dk_legislati',
-    'field_os2web_borger_dk_pagetitle' => 'field_os2web_borger_dk_pagetitle',
-    'field_os2web_borger_dk_recommend' => 'field_os2web_borger_dk_recommend',
-    'field_os2web_borger_dk_selfservi' => 'field_os2web_borger_dk_selfservi',
-    'field_os2web_borger_dk_shortlist' => 'field_os2web_borger_dk_shortlist',
-    'field_billede' => 0,
-    'field_os2web_borger_dk_post_text' => 0,
-    'field_os2web_borger_dk_pre_text' => 0,
-    'field_main_section' => 0,
-    'field_main_tags' => 0,
+    'field_billede' => 'field_billede',
+    'field_os2web_borger_dk_post_text' => 'field_os2web_borger_dk_post_text',
+    'field_os2web_borger_dk_pre_text' => 'field_os2web_borger_dk_pre_text',
+    'field_main_section' => 'field_main_section',
+    'field_main_tags' => 'field_main_tags',
+    'title' => 0,
+    'body' => 0,
+    'field_os2web_borger_dk_byline' => 0,
+    'field_os2web_borger_dk_header' => 0,
+    'field_os2web_borger_dk_legislati' => 0,
+    'field_os2web_borger_dk_pagetitle' => 0,
+    'field_os2web_borger_dk_recommend' => 0,
+    'field_os2web_borger_dk_selfservi' => 0,
+    'field_os2web_borger_dk_shortlist' => 0,
   );
   $export['os2web_borger_dk_editable'] = $strongarm;
 
