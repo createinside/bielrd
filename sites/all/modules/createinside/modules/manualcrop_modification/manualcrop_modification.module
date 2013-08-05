@@ -50,7 +50,7 @@ function manualcrop_modification_validate($form, &$form_state){
 			mc.fid = :file_fid
 		
 			", array( ':file_fid' => $file_fid))->rowcount();
-		if ($query <= $form_state['required_count']) { 
+		if ($query < $form_state['required_count']) { 
 			form_set_error('image', t('You have to crop the uploaded image!'));
 		}
 	}
