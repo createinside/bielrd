@@ -105,6 +105,7 @@ function rebild_workflow_user_default_permissions() {
     'name' => 'edit any files',
     'roles' => array(
       'administrator' => 'administrator',
+      'fagredaktør' => 'fagredaktør',
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'file_entity',
