@@ -1719,31 +1719,31 @@ div.workbench-info-block a {
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
-  padding: 0 0 5px 0;
+  padding: 0 0 3px 0;
 }
 /* line 59, ../sass/partials/_views.scss */
 .view-id-calendar_frontpage .rebild-calendar .calendar_left .calendar_day {
-  font-size: 0.91667em;
-  line-height: 1em;
+  font-size: 0.8em;
+  line-height: 1.15em;
   background: #7f9dcd;
   color: white;
   margin: 0 0 5px;
-  padding: 0.4em 0.5em;
+  padding: 0.2em 0.5em;
   text-shadow: none;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  -ms-border-radius: 3px 3px 0 0;
+  -o-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
 }
 /* line 69, ../sass/partials/_views.scss */
 .view-id-calendar_frontpage .rebild-calendar .calendar_left .calendar_date {
-  font-size: 1.33333em;
+  font-size: 1.25em;
 }
 /* line 72, ../sass/partials/_views.scss */
 .view-id-calendar_frontpage .rebild-calendar .calendar_left .calendar_month {
   text-transform: uppercase;
-  font-size: 0.91667em;
+  font-size: 0.7em;
 }
 /* line 77, ../sass/partials/_views.scss */
 .view-id-calendar_frontpage .rebild-calendar .calendar_right {
