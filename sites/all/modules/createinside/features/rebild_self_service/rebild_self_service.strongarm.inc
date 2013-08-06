@@ -93,7 +93,7 @@ function rebild_self_service_strongarm() {
           'weight' => '0',
         ),
         'metatags' => array(
-          'weight' => '10',
+          'weight' => '8',
         ),
         'redirect' => array(
           'weight' => '11',

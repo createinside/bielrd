@@ -148,7 +148,7 @@ function rebild_news_node_info() {
     'news_article' => array(
       'name' => t('Nyhed'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('Brug nyhed til at oprette nyheder.'),
       'has_title' => '1',
       'title_label' => t('Titel'),
       'help' => '',

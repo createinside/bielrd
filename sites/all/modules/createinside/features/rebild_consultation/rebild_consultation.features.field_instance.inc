@@ -68,7 +68,7 @@ function rebild_consultation_field_default_field_instances() {
     'bundle' => 'consultation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Opret en disclaimer.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -89,32 +89,6 @@ function rebild_consultation_field_default_field_instances() {
     'label' => 'Disclaimer',
     'required' => 0,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 0,
-          'plain_text' => 0,
-        ),
-        'allowed_formats_toggle' => 1,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'filtered_html' => array(
-              'weight' => 0,
-            ),
-            'full_html' => array(
-              'weight' => 1,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => 10,
-            ),
-          ),
-        ),
-      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -176,7 +150,7 @@ function rebild_consultation_field_default_field_instances() {
     'bundle' => 'consultation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Indtast en brødtekst. ',
+    'description' => 'Primær indhold.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -216,7 +190,7 @@ function rebild_consultation_field_default_field_instances() {
     'bundle' => 'consultation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Indsæt den generede iframe kode fra siden her: www.gis-kort.dk - placeres under hovedindholdet.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -255,7 +229,7 @@ function rebild_consultation_field_default_field_instances() {
   $field_instances['node-consultation-field_main_image'] = array(
     'bundle' => 'consultation',
     'deleted' => 0,
-    'description' => 'Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.',
+    'description' => 'Stort bannerbillede - placeres øverst på siden. Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -318,11 +292,15 @@ function rebild_consultation_field_default_field_instances() {
         'manualcrop_require_cropping' => array(
           'blok' => 0,
           'indhold_top' => 'indhold_top',
+          'inline_bottom' => 0,
+          'inline_top' => 0,
           'nyhed_forside' => 0,
         ),
         'manualcrop_styles_list' => array(
           'blok' => 0,
           'indhold_top' => 'indhold_top',
+          'inline_bottom' => 0,
+          'inline_top' => 0,
           'nyhed_forside' => 0,
         ),
         'manualcrop_styles_mode' => 'exclude',
@@ -466,11 +444,13 @@ function rebild_consultation_field_default_field_instances() {
   t('Filer');
   t('Forældelsesdato');
   t('GIS Kort');
-  t('Indtast en brødtekst. ');
+  t('Indsæt den generede iframe kode fra siden her: www.gis-kort.dk - placeres under hovedindholdet.');
+  t('Opret en disclaimer.');
+  t('Primær indhold.');
   t('Sektion');
+  t('Stort bannerbillede - placeres øverst på siden. Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
   t('Tags');
   t('Upload en eller flere filer til dette dokument.');
-  t('Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
   t('Vælg en dato for høring.');
   t('Vælg et eller flere tags der er med til at beskrive indholdet.');
   t('Vælg hvilken sektion indholdet hører til.');

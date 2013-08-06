@@ -295,7 +295,7 @@ function rebild_page_field_default_field_instances() {
     'bundle' => 'page',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Indtast en brødtekst for dette dokument.',
+    'description' => 'Primær indhold.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -335,7 +335,7 @@ function rebild_page_field_default_field_instances() {
     'bundle' => 'page',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Indtast en kort tekst til faktaboksen.',
+    'description' => 'Fakta-indhold - placeres i en boks øverst til højre i hovedindholdet.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -375,7 +375,7 @@ function rebild_page_field_default_field_instances() {
     'bundle' => 'page',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Indsæt den generede iframe kode fra siden her: www.gis-kort.dk - placeres under hovedindholdet.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -414,7 +414,7 @@ function rebild_page_field_default_field_instances() {
   $field_instances['node-page-field_main_image'] = array(
     'bundle' => 'page',
     'deleted' => 0,
-    'description' => 'Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.',
+    'description' => 'Stort bannerbillede - placeres øverst på siden. Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -850,7 +850,7 @@ function rebild_page_field_default_field_instances() {
     'bundle' => 'page',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Indtast et resumé. Resuméet vises øverst før brødteksten.',
+    'description' => 'Resumétekst der kortfattet og præcist beskriver indholdet. ',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1018,18 +1018,20 @@ function rebild_page_field_default_field_instances() {
   t('Billedgalleri');
   t('Brødtekst');
   t('Eksterne links');
+  t('Fakta-indhold - placeres i en boks øverst til højre i hovedindholdet.');
   t('Faktaboks');
   t('Forældelsesdato');
   t('GIS Kort');
   t('Indlejret billede');
-  t('Indtast en brødtekst for dette dokument.');
-  t('Indtast en kort tekst til faktaboksen.');
-  t('Indtast et resumé. Resuméet vises øverst før brødteksten.');
+  t('Indsæt den generede iframe kode fra siden her: www.gis-kort.dk - placeres under hovedindholdet.');
   t('Indtast tekst til en eller flere accordions. En accordion er et sammenklappeligt element, der vises nederst på indholdet.');
   t('Interne links');
   t('Overskrift');
+  t('Primær indhold.');
   t('Resumé');
+  t('Resumétekst der kortfattet og præcist beskriver indholdet. ');
   t('Sektion');
+  t('Stort bannerbillede - placeres øverst på siden. Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
   t('Tags');
   t('Tekst');
   t('Title tekst');
@@ -1037,7 +1039,6 @@ function rebild_page_field_default_field_instances() {
   t('Topbillede');
   t('Upload et billede der er indlejret i teksten øverst til venstre. ');
   t('Upload et billede der er placeret øverst i teksten.');
-  t('Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
   t('Upload et eller flere billeder, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
   t('Vælg et eller flere tags der er med til at beskrive indholdet.');
   t('Vælg hvilken sektion indholdet hører til.');

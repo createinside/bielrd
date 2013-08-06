@@ -15,7 +15,7 @@ function rebild_cloned_page_field_default_field_instances() {
     'bundle' => 'cloned_page',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Vælg den side der skal oprettes en klon af.',
+    'description' => 'Søg og vælg den side der skal oprettes en klon af.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -134,8 +134,8 @@ function rebild_cloned_page_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Sektion');
   t('Side');
+  t('Søg og vælg den side der skal oprettes en klon af.');
   t('Tags');
-  t('Vælg den side der skal oprettes en klon af.');
   t('Vælg et eller flere tags der er med til at beskrive indholdet.');
   t('Vælg hvilken sektion indholdet hører til.');
 

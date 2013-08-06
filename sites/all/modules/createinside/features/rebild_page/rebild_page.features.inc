@@ -249,7 +249,7 @@ function rebild_page_node_info() {
     'page' => array(
       'name' => t('Standardside'),
       'base' => 'node_content',
-      'description' => t('Brug standardsider til statisk indhold, som fx. en "Om Rebild Kommune" side.'),
+      'description' => t('Brug standardsider til  indhold, som fx. en "Om Rebild Kommune" side.'),
       'has_title' => '1',
       'title_label' => t('Titel'),
       'help' => '',

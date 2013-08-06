@@ -148,7 +148,7 @@ function rebild_featured_node_info() {
     'featured_article' => array(
       'name' => t('Aktuelt'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('Brug Aktuelt til at oprette aktualitetsbokse på Forsiden, Borger, Erhverv, Politik og Bo i Rebild.'),
       'has_title' => '1',
       'title_label' => t('Titel'),
       'help' => '',

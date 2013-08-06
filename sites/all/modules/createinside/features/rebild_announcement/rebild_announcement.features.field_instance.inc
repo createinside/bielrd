@@ -68,7 +68,7 @@ function rebild_announcement_field_default_field_instances() {
     'bundle' => 'announcement',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Indtast en brødtekst for Meddelse.',
+    'description' => 'Primær indhold.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -192,7 +192,7 @@ function rebild_announcement_field_default_field_instances() {
     'bundle' => 'announcement',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Indtast et resumé. Resuméet vises øverst før brødteksten.',
+    'description' => 'Resumétekst der kortfattet og præcist beskriver indholdet. ',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -271,9 +271,9 @@ function rebild_announcement_field_default_field_instances() {
   t('Brødtekst');
   t('Dato');
   t('Forældelsesdato');
-  t('Indtast en brødtekst for Meddelse.');
-  t('Indtast et resumé. Resuméet vises øverst før brødteksten.');
+  t('Primær indhold.');
   t('Resumé');
+  t('Resumétekst der kortfattet og præcist beskriver indholdet. ');
   t('Sektion');
   t('Tags');
   t('Vælg en dato for meddelelsen.');

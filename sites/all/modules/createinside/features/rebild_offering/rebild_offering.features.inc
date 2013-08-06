@@ -26,7 +26,7 @@ function rebild_offering_node_info() {
     'offering' => array(
       'name' => t('Udbud'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('Brug Udbud til at oprette et udbud.'),
       'has_title' => '1',
       'title_label' => t('Titel'),
       'help' => '',

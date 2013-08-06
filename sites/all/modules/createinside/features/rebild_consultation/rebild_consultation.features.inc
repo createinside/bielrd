@@ -26,7 +26,7 @@ function rebild_consultation_node_info() {
     'consultation' => array(
       'name' => t('Høring'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('Brug Høring til at oprette en høring.'),
       'has_title' => '1',
       'title_label' => t('Titel'),
       'help' => '',
