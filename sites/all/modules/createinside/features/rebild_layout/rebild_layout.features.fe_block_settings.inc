@@ -537,5 +537,78 @@ function rebild_layout_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['views-786babaac62385638de52f7a93ace3f0'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => '786babaac62385638de52f7a93ace3f0',
+    'module' => 'views',
+    'node_types' => array(
+      0 => 'os2web_borger_dk_article',
+      1 => 'page',
+    ),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => 'content_sidebar',
+        'status' => 1,
+        'theme' => 'rebild',
+        'weight' => -36,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['views-content_sidebar_most_read-block'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'content_sidebar_most_read-block',
+    'module' => 'views',
+    'node_types' => array(
+      0 => 'os2web_borger_dk_article',
+      1 => 'page',
+    ),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => 'content_sidebar',
+        'status' => 1,
+        'theme' => 'rebild',
+        'weight' => -37,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['views-content_sidebar_read_also-block'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'content_sidebar_read_also-block',
+    'module' => 'views',
+    'node_types' => array(
+      0 => 'cloned_page',
+      1 => 'os2web_borger_dk_article',
+      2 => 'page',
+    ),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => 'content_sidebar',
+        'status' => 1,
+        'theme' => 'rebild',
+        'weight' => -38,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   return $export;
 }
