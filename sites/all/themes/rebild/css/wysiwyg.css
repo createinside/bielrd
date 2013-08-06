@@ -138,6 +138,16 @@ Backend
   list-style: decimal;
   margin-left: 20px;
 }
+/* line 77, ../sass/partials/_general.scss */
+#region-content .content #content-main #region-content-sidebar ul li {
+  list-style: none;
+  margin-left: 10px;
+}
+/* line 83, ../sass/partials/_general.scss */
+#region-content .content #content-main #region-content-sidebar ol li {
+  list-style: none;
+  margin-left: 10px;
+}
 
 /* line 4, ../sass/wysiwyg.scss */
 body {
