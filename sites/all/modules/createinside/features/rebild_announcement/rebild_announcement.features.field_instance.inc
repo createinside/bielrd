@@ -96,7 +96,7 @@ function rebild_announcement_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 10,
+        'rows' => 25,
       ),
       'type' => 'text_textarea',
       'weight' => 2,
