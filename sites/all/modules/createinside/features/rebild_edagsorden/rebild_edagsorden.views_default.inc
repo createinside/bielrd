@@ -23,11 +23,16 @@ function rebild_edagsorden_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Udfør';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Gendan';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Sortér efter';
+  $handler->display->display_options['exposed_form']['options']['sort_asc_label'] = 'Stigende';
+  $handler->display->display_options['exposed_form']['options']['sort_desc_label'] = 'Faldende';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'views_accordion';
@@ -76,12 +81,12 @@ function rebild_edagsorden_views_default_views() {
   );
   $translatables['agenda_accordion'] = array(
     t('Master'),
-    t('more'),
-    t('Apply'),
+    t('mere'),
+    t('Udfør'),
     t('Gendan'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
+    t('Sortér efter'),
+    t('Stigende'),
+    t('Faldende'),
     t('[field_agenda_item_number]. [field_agenda_item_caption] '),
     t('Bilag'),
     t('EVA Field'),

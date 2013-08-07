@@ -10,7 +10,7 @@
 function rebild_self_service_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: create self_service content.
+  // Exported permission: 'create self_service content'.
   $permissions['create self_service content'] = array(
     'name' => 'create self_service content',
     'roles' => array(
@@ -20,7 +20,7 @@ function rebild_self_service_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete any self_service content.
+  // Exported permission: 'delete any self_service content'.
   $permissions['delete any self_service content'] = array(
     'name' => 'delete any self_service content',
     'roles' => array(
@@ -29,7 +29,7 @@ function rebild_self_service_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete own self_service content.
+  // Exported permission: 'delete own self_service content'.
   $permissions['delete own self_service content'] = array(
     'name' => 'delete own self_service content',
     'roles' => array(
@@ -39,25 +39,25 @@ function rebild_self_service_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete terms in 2.
-  $permissions['delete terms in 2'] = array(
-    'name' => 'delete terms in 2',
+  // Exported permission: 'delete terms in rebild_sections'.
+  $permissions['delete terms in rebild_sections'] = array(
+    'name' => 'delete terms in rebild_sections',
     'roles' => array(
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'taxonomy',
   );
 
-  // Exported permission: delete terms in 3.
-  $permissions['delete terms in 3'] = array(
-    'name' => 'delete terms in 3',
+  // Exported permission: 'delete terms in rebild_tags'.
+  $permissions['delete terms in rebild_tags'] = array(
+    'name' => 'delete terms in rebild_tags',
     'roles' => array(
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'taxonomy',
   );
 
-  // Exported permission: edit any self_service content.
+  // Exported permission: 'edit any self_service content'.
   $permissions['edit any self_service content'] = array(
     'name' => 'edit any self_service content',
     'roles' => array(
@@ -66,7 +66,7 @@ function rebild_self_service_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit own self_service content.
+  // Exported permission: 'edit own self_service content'.
   $permissions['edit own self_service content'] = array(
     'name' => 'edit own self_service content',
     'roles' => array(
@@ -76,18 +76,18 @@ function rebild_self_service_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit terms in 2.
-  $permissions['edit terms in 2'] = array(
-    'name' => 'edit terms in 2',
+  // Exported permission: 'edit terms in rebild_sections'.
+  $permissions['edit terms in rebild_sections'] = array(
+    'name' => 'edit terms in rebild_sections',
     'roles' => array(
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'taxonomy',
   );
 
-  // Exported permission: edit terms in 3.
-  $permissions['edit terms in 3'] = array(
-    'name' => 'edit terms in 3',
+  // Exported permission: 'edit terms in rebild_tags'.
+  $permissions['edit terms in rebild_tags'] = array(
+    'name' => 'edit terms in rebild_tags',
     'roles' => array(
       'kommunikation' => 'kommunikation',
     ),
