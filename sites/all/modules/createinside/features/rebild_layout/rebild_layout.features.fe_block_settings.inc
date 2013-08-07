@@ -22,10 +22,10 @@ function rebild_layout_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'rebild' => array(
-        'region' => 'mobile_menu',
-        'status' => 1,
-        'theme' => 'rebild',
+      'alpha' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'alpha',
         'weight' => 0,
       ),
     ),
@@ -43,10 +43,10 @@ function rebild_layout_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'rebild' => array(
-        'region' => 'user_second',
-        'status' => 1,
-        'theme' => 'rebild',
+      'alpha' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'alpha',
         'weight' => 0,
       ),
     ),
@@ -64,10 +64,10 @@ function rebild_layout_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'rebild' => array(
-        'region' => 'ultimenu_main_politik',
-        'status' => 1,
-        'theme' => 'rebild',
+      'alpha' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'alpha',
         'weight' => 0,
       ),
     ),
@@ -85,10 +85,10 @@ function rebild_layout_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'rebild' => array(
-        'region' => 'bottom',
-        'status' => 1,
-        'theme' => 'rebild',
+      'alpha' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'alpha',
         'weight' => 0,
       ),
     ),
@@ -106,11 +106,11 @@ function rebild_layout_default_fe_block_settings() {
     'pages' => '<front>',
     'roles' => array(),
     'themes' => array(
-      'rebild' => array(
-        'region' => 'sidebar_first',
-        'status' => 1,
-        'theme' => 'rebild',
-        'weight' => -25,
+      'alpha' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'alpha',
+        'weight' => 0,
       ),
     ),
     'title' => 'Kontakt Rebild Kommune',
@@ -127,11 +127,11 @@ function rebild_layout_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'rebild' => array(
-        'region' => 'footer_first',
-        'status' => 1,
-        'theme' => 'rebild',
-        'weight' => -26,
+      'alpha' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'alpha',
+        'weight' => 0,
       ),
     ),
     'title' => '',
@@ -148,11 +148,11 @@ function rebild_layout_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'rebild' => array(
-        'region' => 'footer_first',
-        'status' => 1,
-        'theme' => 'rebild',
-        'weight' => -25,
+      'alpha' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'alpha',
+        'weight' => 0,
       ),
     ),
     'title' => '',
@@ -169,11 +169,11 @@ function rebild_layout_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'rebild' => array(
-        'region' => 'footer_first',
-        'status' => 1,
-        'theme' => 'rebild',
-        'weight' => -27,
+      'alpha' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'alpha',
+        'weight' => 0,
       ),
     ),
     'title' => '',
@@ -190,10 +190,10 @@ function rebild_layout_default_fe_block_settings() {
     'pages' => '<front>',
     'roles' => array(),
     'themes' => array(
-      'rebild' => array(
-        'region' => 'header_second',
-        'status' => 1,
-        'theme' => 'rebild',
+      'alpha' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'alpha',
         'weight' => 0,
       ),
     ),
@@ -211,10 +211,10 @@ function rebild_layout_default_fe_block_settings() {
     'pages' => '<front>',
     'roles' => array(),
     'themes' => array(
-      'rebild' => array(
-        'region' => 'postscript_first',
-        'status' => 1,
-        'theme' => 'rebild',
+      'alpha' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'alpha',
         'weight' => 0,
       ),
     ),
@@ -232,56 +232,14 @@ function rebild_layout_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'rebild' => array(
+      'alpha' => array(
         'region' => '',
         'status' => 0,
-        'theme' => 'rebild',
-        'weight' => -12,
+        'theme' => 'alpha',
+        'weight' => 0,
       ),
     ),
     'title' => '',
-    'visibility' => 0,
-  );
-
-  $export['menu_block-10'] = array(
-    'cache' => -1,
-    'css_class' => '',
-    'custom' => 0,
-    'delta' => 10,
-    'module' => 'menu_block',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'rebild' => array(
-        'region' => 'footer_third',
-        'status' => 1,
-        'theme' => 'rebild',
-        'weight' => 0,
-      ),
-    ),
-    'title' => 'Erhverv',
-    'visibility' => 0,
-  );
-
-  $export['menu_block-11'] = array(
-    'cache' => -1,
-    'css_class' => '',
-    'custom' => 0,
-    'delta' => 11,
-    'module' => 'menu_block',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'rebild' => array(
-        'region' => 'footer_fourth',
-        'status' => 1,
-        'theme' => 'rebild',
-        'weight' => 0,
-      ),
-    ),
-    'title' => 'Politik',
     'visibility' => 0,
   );
 
@@ -295,95 +253,11 @@ function rebild_layout_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'rebild' => array(
+      'alpha' => array(
         'region' => '',
         'status' => 0,
-        'theme' => 'rebild',
-        'weight' => -15,
-      ),
-    ),
-    'title' => '<none>',
-    'visibility' => 0,
-  );
-
-  $export['menu_block-3'] = array(
-    'cache' => -1,
-    'css_class' => 'rebild_menu_container',
-    'custom' => 0,
-    'delta' => 3,
-    'module' => 'menu_block',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'rebild' => array(
-        'region' => 'ultimenu_main_borger',
-        'status' => 1,
-        'theme' => 'rebild',
-        'weight' => -22,
-      ),
-    ),
-    'title' => '<none>',
-    'visibility' => 0,
-  );
-
-  $export['menu_block-4'] = array(
-    'cache' => -1,
-    'css_class' => 'rebild_menu_container',
-    'custom' => 0,
-    'delta' => 4,
-    'module' => 'menu_block',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'rebild' => array(
-        'region' => 'ultimenu_main_erhverv',
-        'status' => 1,
-        'theme' => 'rebild',
-        'weight' => -20,
-      ),
-    ),
-    'title' => '<none>',
-    'visibility' => 0,
-  );
-
-  $export['menu_block-5'] = array(
-    'cache' => -1,
-    'css_class' => 'rebild_menu_container',
-    'custom' => 0,
-    'delta' => 5,
-    'module' => 'menu_block',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'rebild' => array(
-        'region' => 'ultimenu_main_politik',
-        'status' => 1,
-        'theme' => 'rebild',
-        'weight' => -18,
-      ),
-    ),
-    'title' => '<none>',
-    'visibility' => 0,
-  );
-
-  $export['menu_block-6'] = array(
-    'cache' => -1,
-    'css_class' => 'rebild_menu_container',
-    'custom' => 0,
-    'delta' => 6,
-    'module' => 'menu_block',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'rebild' => array(
-        'region' => 'ultimenu_main_bo_i_rebild',
-        'status' => 1,
-        'theme' => 'rebild',
-        'weight' => -27,
+        'theme' => 'alpha',
+        'weight' => 0,
       ),
     ),
     'title' => '<none>',
@@ -400,11 +274,11 @@ function rebild_layout_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'rebild' => array(
-        'region' => 'user_first',
-        'status' => 1,
-        'theme' => 'rebild',
-        'weight' => -22,
+      'alpha' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'alpha',
+        'weight' => 0,
       ),
     ),
     'title' => '<none>',
@@ -421,35 +295,14 @@ function rebild_layout_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'rebild' => array(
-        'region' => 'content',
-        'status' => 1,
-        'theme' => 'rebild',
+      'alpha' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'alpha',
         'weight' => 0,
       ),
     ),
     'title' => '<none>',
-    'visibility' => 0,
-  );
-
-  $export['menu_block-9'] = array(
-    'cache' => -1,
-    'css_class' => '',
-    'custom' => 0,
-    'delta' => 9,
-    'module' => 'menu_block',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'rebild' => array(
-        'region' => 'footer_second',
-        'status' => 1,
-        'theme' => 'rebild',
-        'weight' => 0,
-      ),
-    ),
-    'title' => 'Borger',
     'visibility' => 0,
   );
 
@@ -463,10 +316,10 @@ function rebild_layout_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'rebild' => array(
-        'region' => 'menu',
-        'status' => 1,
-        'theme' => 'rebild',
+      'alpha' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'alpha',
         'weight' => 0,
       ),
     ),
@@ -487,11 +340,11 @@ function rebild_layout_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'rebild' => array(
-        'region' => 'content_sidebar',
-        'status' => 1,
-        'theme' => 'rebild',
-        'weight' => -36,
+      'alpha' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'alpha',
+        'weight' => 0,
       ),
     ),
     'title' => '',
@@ -511,11 +364,11 @@ function rebild_layout_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'rebild' => array(
-        'region' => 'content_sidebar',
-        'status' => 1,
-        'theme' => 'rebild',
-        'weight' => -37,
+      'alpha' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'alpha',
+        'weight' => 0,
       ),
     ),
     'title' => '',
@@ -536,11 +389,11 @@ function rebild_layout_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'rebild' => array(
-        'region' => 'content_sidebar',
-        'status' => 1,
-        'theme' => 'rebild',
-        'weight' => -38,
+      'alpha' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'alpha',
+        'weight' => 0,
       ),
     ),
     'title' => '',
