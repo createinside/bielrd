@@ -32,7 +32,8 @@ function rebild_self_service_field_group_info() {
       'instance_settings' => array(
         'required_fields' => 1,
         'classes' => '',
-        'description' => '',
+        'description' => 'Her kategoriseres dette indhold. OBS - ved tvivlsspørgsmål kontakt 
+kommunikationsafdelingen.',
       ),
       'formatter' => 'open',
     ),

@@ -100,7 +100,8 @@ User profile
 					
 		table  {
 			@include grid-box-workbench(white);
-			border: none;
+			border:hidden;
+			border-collapse: separate;
 			font-size: $font-size-std;
 			.odd {
 				border-bottom: 1px solid #ebebeb;

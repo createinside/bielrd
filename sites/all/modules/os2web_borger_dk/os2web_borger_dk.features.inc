@@ -22,7 +22,7 @@ function os2web_borger_dk_node_info() {
     'os2web_borger_dk_article' => array(
       'name' => t('Borger.dk article'),
       'base' => 'node_content',
-      'description' => t('Handles articles from Borger.dk. Including integration with the Borger.dk-webservice'),
+      'description' => t('Brug Borger.dk article til at oprette sider med indhold fra Borger.dk via deres webservice.'),
       'has_title' => '1',
       'title_label' => t('Titel'),
       'help' => '',

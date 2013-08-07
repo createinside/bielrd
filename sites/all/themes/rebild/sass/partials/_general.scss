@@ -72,6 +72,20 @@
 					margin-left: $spacing-std;
 				}
 			}
+			#region-content-sidebar {
+				ul {
+					li {
+						list-style: none;
+						margin-left: 10px;
+					}
+				}
+				ol {
+					li {
+						list-style: none;
+						margin-left: 10px;
+					}
+				}
+			}
 		}
 	}	
 }

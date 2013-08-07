@@ -22,6 +22,13 @@ News Article
 	a {
 		color: $link-color-node;
 	}
+	.field-name-field-main-gis-map {
+		.field-label:before {
+			@include icon-prepare();
+			content: "\e00d";	
+			margin-right: 0.5em;
+		}
+	}
 }
 
 /*------------------------------------------------------------------
@@ -89,6 +96,9 @@ News Article
 					height: 15px;
 					background-image: url(../img/accordion_closed.png);
 				}
+				a:hover {
+					text-decoration: none;
+				}
 				
 			}
 			.ui-state-active {
@@ -98,6 +108,10 @@ News Article
 					height: 15px;
 					background-image: url(../img/accordion_open.png);	
 				}
+				.field-content {					
+					color: #fff;
+				}
+				
 			}			
 		}
 	}

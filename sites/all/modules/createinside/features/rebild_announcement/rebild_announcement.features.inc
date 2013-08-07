@@ -26,7 +26,7 @@ function rebild_announcement_node_info() {
     'announcement' => array(
       'name' => t('Meddelelse'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('Brug Meddelelse til at oprette en meddelelse.'),
       'has_title' => '1',
       'title_label' => t('Titel'),
       'help' => '',

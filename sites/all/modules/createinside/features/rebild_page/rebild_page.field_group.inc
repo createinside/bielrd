@@ -84,12 +84,13 @@ function rebild_page_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Blokke',
       'instance_settings' => array(
-        'description' => '',
+        'required_fields' => 0,
         'classes' => '',
-        'required_fields' => 1,
+        'description' => '',
       ),
+      'formatter' => 'collapsible',
     ),
   );
   $export['group_blocks|node|page|form'] = $field_group;
@@ -140,12 +141,13 @@ function rebild_page_field_group_info() {
     ),
     'format_type' => 'htab',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Faktaboks',
       'instance_settings' => array(
-        'description' => '',
+        'required_fields' => 0,
         'classes' => '',
-        'required_fields' => 1,
+        'description' => '',
       ),
+      'formatter' => 'closed',
     ),
   );
   $export['group_faktaboks|node|page|form'] = $field_group;
@@ -167,12 +169,13 @@ function rebild_page_field_group_info() {
     ),
     'format_type' => 'htab',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Forældelsesdato',
       'instance_settings' => array(
-        'description' => '',
+        'required_fields' => 0,
         'classes' => '',
-        'required_fields' => 1,
+        'description' => '',
       ),
+      'formatter' => 'closed',
     ),
   );
   $export['group_foraeldelsesdato|node|page|form'] = $field_group;
@@ -224,7 +227,6 @@ function rebild_page_field_group_info() {
       3 => 'group_billedegalleri',
       4 => 'group_faktaboks',
       5 => 'group_foraeldelsesdato',
-      6 => 'group_page_billeder_group',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(

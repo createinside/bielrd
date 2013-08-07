@@ -33,6 +33,69 @@ function rebild_layout_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['block-boirebild_menublok'] = array(
+    'cache' => -1,
+    'css_class' => 'rebild_menu_block_container',
+    'custom' => 0,
+    'machine_name' => 'boirebild_menublok',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => 'ultimenu_main_bo_i_rebild',
+        'status' => 1,
+        'theme' => 'rebild',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'Hvad søger du efter?',
+    'visibility' => 0,
+  );
+
+  $export['block-borger_menublock'] = array(
+    'cache' => -1,
+    'css_class' => 'rebild_menu_block_container',
+    'custom' => 0,
+    'machine_name' => 'borger_menublock',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => 'ultimenu_main_borger',
+        'status' => 1,
+        'theme' => 'rebild',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'Hvad søger du efter?',
+    'visibility' => 0,
+  );
+
+  $export['block-erhverv_menublock'] = array(
+    'cache' => -1,
+    'css_class' => 'rebild_menu_block_container',
+    'custom' => 0,
+    'machine_name' => 'erhverv_menublock',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => 'ultimenu_main_erhverv',
+        'status' => 1,
+        'theme' => 'rebild',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'Hvad søger du efter?',
+    'visibility' => 0,
+  );
+
   $export['block-mobile_header'] = array(
     'cache' => -1,
     'css_class' => '',
@@ -51,6 +114,27 @@ function rebild_layout_default_fe_block_settings() {
       ),
     ),
     'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['block-politik_menublock'] = array(
+    'cache' => -1,
+    'css_class' => 'rebild_menu_block_container',
+    'custom' => 0,
+    'machine_name' => 'politik_menublock',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => 'ultimenu_main_politik',
+        'status' => 1,
+        'theme' => 'rebild',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'Hvad søger du efter?',
     'visibility' => 0,
   );
 
@@ -287,7 +371,7 @@ function rebild_layout_default_fe_block_settings() {
 
   $export['menu_block-3'] = array(
     'cache' => -1,
-    'css_class' => '',
+    'css_class' => 'rebild_menu_container',
     'custom' => 0,
     'delta' => 3,
     'module' => 'menu_block',
@@ -308,7 +392,7 @@ function rebild_layout_default_fe_block_settings() {
 
   $export['menu_block-4'] = array(
     'cache' => -1,
-    'css_class' => '',
+    'css_class' => 'rebild_menu_container',
     'custom' => 0,
     'delta' => 4,
     'module' => 'menu_block',
@@ -329,7 +413,7 @@ function rebild_layout_default_fe_block_settings() {
 
   $export['menu_block-5'] = array(
     'cache' => -1,
-    'css_class' => '',
+    'css_class' => 'rebild_menu_container',
     'custom' => 0,
     'delta' => 5,
     'module' => 'menu_block',
@@ -350,7 +434,7 @@ function rebild_layout_default_fe_block_settings() {
 
   $export['menu_block-6'] = array(
     'cache' => -1,
-    'css_class' => '',
+    'css_class' => 'rebild_menu_container',
     'custom' => 0,
     'delta' => 6,
     'module' => 'menu_block',
@@ -447,6 +531,79 @@ function rebild_layout_default_fe_block_settings() {
         'status' => 1,
         'theme' => 'rebild',
         'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['views-786babaac62385638de52f7a93ace3f0'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => '786babaac62385638de52f7a93ace3f0',
+    'module' => 'views',
+    'node_types' => array(
+      0 => 'os2web_borger_dk_article',
+      1 => 'page',
+    ),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => 'content_sidebar',
+        'status' => 1,
+        'theme' => 'rebild',
+        'weight' => -36,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['views-content_sidebar_most_read-block'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'content_sidebar_most_read-block',
+    'module' => 'views',
+    'node_types' => array(
+      0 => 'os2web_borger_dk_article',
+      1 => 'page',
+    ),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => 'content_sidebar',
+        'status' => 1,
+        'theme' => 'rebild',
+        'weight' => -37,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['views-content_sidebar_read_also-block'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'content_sidebar_read_also-block',
+    'module' => 'views',
+    'node_types' => array(
+      0 => 'cloned_page',
+      1 => 'os2web_borger_dk_article',
+      2 => 'page',
+    ),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => 'content_sidebar',
+        'status' => 1,
+        'theme' => 'rebild',
+        'weight' => -38,
       ),
     ),
     'title' => '',

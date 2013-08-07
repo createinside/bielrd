@@ -17,7 +17,7 @@ function rebild_general_settings_wysiwyg_default_profiles() {
     'settings' => array(
       'default' => 1,
       'user_choose' => 0,
-      'show_toggle' => 0,
+      'show_toggle' => 1,
       'theme' => 'advanced',
       'language' => 'da',
       'buttons' => array(
@@ -38,7 +38,7 @@ function rebild_general_settings_wysiwyg_default_profiles() {
       ),
       'toolbar_loc' => 'top',
       'toolbar_align' => 'left',
-      'path_loc' => 'none',
+      'path_loc' => 'bottom',
       'resizing' => 1,
       'verify_html' => 1,
       'preformatted' => 0,

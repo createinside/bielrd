@@ -55,23 +55,23 @@
 			margin: 0 $spacing-std 0 0;
 			text-align: center;
 			@include grid-box(white);
-			padding: 0 0 $spacing-std/4 0;
+			padding: 0 0 3px 0;
 			.calendar_day {
-				font-size: $font-size-small;
-				line-height: $font-size-std;
+				font-size: 0.8em;
+				line-height: $line-height-std;
 				background: $color-blue;
 				color: white;
 				margin: 0 0 $spacing-std/4;		
-				padding: 0.4em 0.5em;
+				padding: 0.2em 0.5em;
 				@include text-shadow(none);
-				@include border-radius(3px);				
+				@include border-radius(3px 3px 0 0);				
 			}
 			.calendar_date {
-				font-size: $font-size-large;
+				font-size: 1.25em;
 			}
 			.calendar_month {
 				text-transform: uppercase;
-				font-size: $font-size-small;
+				font-size: 0.7em;
 			}			
 		}
 		.calendar_right {

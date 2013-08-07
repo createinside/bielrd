@@ -14,7 +14,7 @@ function rebild_featured_field_default_field_instances() {
   $field_instances['node-featured_article-field_featured_image'] = array(
     'bundle' => 'featured_article',
     'deleted' => 0,
-    'description' => 'Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.',
+    'description' => 'Stort bannerbillede - placeres øverst i boksen. Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -77,11 +77,15 @@ function rebild_featured_field_default_field_instances() {
         'manualcrop_require_cropping' => array(
           'blok' => 'blok',
           'indhold_top' => 0,
+          'inline_bottom' => 0,
+          'inline_top' => 0,
           'nyhed_forside' => 0,
         ),
         'manualcrop_styles_list' => array(
           'blok' => 'blok',
           'indhold_top' => 0,
+          'inline_bottom' => 0,
+          'inline_top' => 0,
           'nyhed_forside' => 0,
         ),
         'manualcrop_styles_mode' => 'include',
@@ -98,7 +102,7 @@ function rebild_featured_field_default_field_instances() {
     'bundle' => 'featured_article',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Indtast et link.',
+    'description' => 'Link til tilhørende underside.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -152,7 +156,7 @@ function rebild_featured_field_default_field_instances() {
     'bundle' => 'featured_article',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Indtast et resumé. Resuméet vises øverst før brødteksten, samt på forsiden som teasertekst.',
+    'description' => 'Resumétekst der kortfattet og præcist beskriver indholdet. ',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -314,13 +318,13 @@ function rebild_featured_field_default_field_instances() {
   t('Angiv en dato for hvornår dette indhold skal opdateres eller gennemses igen.');
   t('Billede');
   t('Forældelsesdato');
-  t('Indtast et link.');
-  t('Indtast et resumé. Resuméet vises øverst før brødteksten, samt på forsiden som teasertekst.');
   t('Link');
+  t('Link til tilhørende underside.');
   t('Resumé');
+  t('Resumétekst der kortfattet og præcist beskriver indholdet. ');
   t('Sektion');
+  t('Stort bannerbillede - placeres øverst i boksen. Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet.');
   t('Tags');
-  t('Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
   t('Vælg et eller flere tags der er med til at beskrive indholdet.');
   t('Vælg hvilken sektion indholdet hører til.');
 

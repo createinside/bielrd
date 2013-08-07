@@ -15,7 +15,7 @@
 function manualcrop_modification_form_alter(&$form, &$form_state, $form_id){
 	$indholdstyper = node_type_get_types();
 	$manualcrop_moderation = FALSE;
-	$form_state['required_count'] = 0;
+	$form_state['required_count'] = 0;	
 	/* Vi kører en løkke der finder frem til alle machine names på indholdstyperne, og herefter laver vi en form alter. */
 	foreach(element_children($indholdstyper) as $key) {
 		if ($form_id == ($indholdstyper[$key]->type . '_node_form' )) {
@@ -51,7 +51,7 @@ function manualcrop_modification_validate($form, &$form_state){
 		
 			", array( ':file_fid' => $file_fid))->rowcount();
 		if ($query < $form_state['required_count']) { 
-			form_set_error('image', t('You have to crop the uploaded image!'));
+			form_set_error('image', t('Du skal beskære dit billede. Vælg redigér media og klik på "beskær".'));
 		}
 	}
 }
