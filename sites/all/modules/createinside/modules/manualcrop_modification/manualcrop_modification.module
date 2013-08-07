@@ -18,7 +18,7 @@ function manualcrop_modification_form_alter(&$form, &$form_state, $form_id){
 	$form_state['required_count'] = 0;	
 	/* Vi kører en løkke der finder frem til alle machine names på indholdstyperne, og herefter laver vi en form alter. */
 	foreach(element_children($indholdstyper) as $key) {
-		if ($form_id == ($indholdstyper[$key]->type . '_node_form' )) {
+		if ($form_id == ($indholdstyper[$key]->type . '_node_form' )) {	
 			if(isset($form['field_main_image'])){
 				if (isset($form_state['field']['field_main_image']['und']['instance']['widget']['settings']['manualcrop_require_cropping']) && $form_state['field']['field_main_image']['und']['instance']['widget']['settings']['manualcrop_enable'] == 1){
 					foreach ($form_state['field']['field_main_image']['und']['instance']['widget']['settings']['manualcrop_require_cropping'] as $key){
@@ -66,3 +66,4 @@ function manualcrop_modification_views_api() {
     'template path' => drupal_get_path('module', 'manualcrop_modification'),
   );
 }
+

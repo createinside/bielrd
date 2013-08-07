@@ -106,7 +106,7 @@ function rebild_page_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Kategorisering',
-    'weight' => '9',
+    'weight' => '5',
     'children' => array(
       0 => 'field_main_section',
       1 => 'field_main_tags',
@@ -219,7 +219,7 @@ function rebild_page_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Ikke obligatoriske felter',
-    'weight' => '14',
+    'weight' => '7',
     'children' => array(
       0 => 'group_blocks',
       1 => 'group_gis_kort',

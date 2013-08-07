@@ -96,10 +96,13 @@ function rebild_page_strongarm() {
           'weight' => '0',
         ),
         'metatags' => array(
-          'weight' => '11',
+          'weight' => '6',
         ),
         'workbench_access' => array(
           'weight' => '11',
+        ),
+        'redirect' => array(
+          'weight' => '2',
         ),
       ),
       'display' => array(
