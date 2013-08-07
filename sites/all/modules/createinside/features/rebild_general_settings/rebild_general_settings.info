@@ -2,7 +2,6 @@ name = Generelle indstillinger
 description = Indeholder alle generelle indstillinger, som ikke har direkte indflydelse på de enkelte features
 core = 7.x
 package = Rebild Indstillinger
-php = 5.2.4
 dependencies[] = admin_menu
 dependencies[] = context
 dependencies[] = delta
