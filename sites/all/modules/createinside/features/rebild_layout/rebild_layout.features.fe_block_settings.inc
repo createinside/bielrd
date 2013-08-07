@@ -33,69 +33,6 @@ function rebild_layout_default_fe_block_settings() {
     'visibility' => 0,
   );
 
-  $export['block-boirebild_menublok'] = array(
-    'cache' => -1,
-    'css_class' => 'rebild_menu_block_container',
-    'custom' => 0,
-    'machine_name' => 'boirebild_menublok',
-    'module' => 'block',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'rebild' => array(
-        'region' => 'ultimenu_main_bo_i_rebild',
-        'status' => 1,
-        'theme' => 'rebild',
-        'weight' => 0,
-      ),
-    ),
-    'title' => 'Hvad søger du efter?',
-    'visibility' => 0,
-  );
-
-  $export['block-borger_menublock'] = array(
-    'cache' => -1,
-    'css_class' => 'rebild_menu_block_container',
-    'custom' => 0,
-    'machine_name' => 'borger_menublock',
-    'module' => 'block',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'rebild' => array(
-        'region' => 'ultimenu_main_borger',
-        'status' => 1,
-        'theme' => 'rebild',
-        'weight' => 0,
-      ),
-    ),
-    'title' => 'Hvad søger du efter?',
-    'visibility' => 0,
-  );
-
-  $export['block-erhverv_menublock'] = array(
-    'cache' => -1,
-    'css_class' => 'rebild_menu_block_container',
-    'custom' => 0,
-    'machine_name' => 'erhverv_menublock',
-    'module' => 'block',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'rebild' => array(
-        'region' => 'ultimenu_main_erhverv',
-        'status' => 1,
-        'theme' => 'rebild',
-        'weight' => 0,
-      ),
-    ),
-    'title' => 'Hvad søger du efter?',
-    'visibility' => 0,
-  );
-
   $export['block-mobile_header'] = array(
     'cache' => -1,
     'css_class' => '',
