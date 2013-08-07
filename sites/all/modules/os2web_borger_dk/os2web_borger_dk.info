@@ -2,7 +2,6 @@ name = OS2web - Borger.dk
 description = Handles Borger.dk Articles
 core = 7.x
 package = Features
-php = 5.2.4
 project = os2web_borger_dk
 dependencies[] = ctools
 dependencies[] = features
