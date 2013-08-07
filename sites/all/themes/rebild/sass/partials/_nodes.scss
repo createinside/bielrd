@@ -96,6 +96,9 @@ News Article
 					height: 15px;
 					background-image: url(../img/accordion_closed.png);
 				}
+				a:hover {
+					text-decoration: none;
+				}
 				
 			}
 			.ui-state-active {
@@ -105,6 +108,10 @@ News Article
 					height: 15px;
 					background-image: url(../img/accordion_open.png);	
 				}
+				.field-content {					
+					color: #fff;
+				}
+				
 			}			
 		}
 	}

@@ -227,7 +227,6 @@ function rebild_page_field_group_info() {
       3 => 'group_billedegalleri',
       4 => 'group_faktaboks',
       5 => 'group_foraeldelsesdato',
-      6 => 'group_page_billeder_group',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(

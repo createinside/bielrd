@@ -966,17 +966,27 @@ News Article
   height: 15px;
   background-image: url(../img/accordion_closed.png);
 }
-/* line 101, ../sass/partials/_nodes.scss */
+/* line 99, ../sass/partials/_nodes.scss */
+.node-page .view-content-accordion .rebild-accordion .ui-accordion-header a:hover,
+.node-news-article .view-content-accordion .rebild-accordion .ui-accordion-header a:hover {
+  text-decoration: none;
+}
+/* line 104, ../sass/partials/_nodes.scss */
 .node-page .view-content-accordion .rebild-accordion .ui-state-active,
 .node-news-article .view-content-accordion .rebild-accordion .ui-state-active {
   background-color: #7f9dcd;
 }
-/* line 103, ../sass/partials/_nodes.scss */
+/* line 106, ../sass/partials/_nodes.scss */
 .node-page .view-content-accordion .rebild-accordion .ui-state-active .ui-icon-triangle-1-s,
 .node-news-article .view-content-accordion .rebild-accordion .ui-state-active .ui-icon-triangle-1-s {
   width: 15px;
   height: 15px;
   background-image: url(../img/accordion_open.png);
+}
+/* line 111, ../sass/partials/_nodes.scss */
+.node-page .view-content-accordion .rebild-accordion .ui-state-active .field-content,
+.node-news-article .view-content-accordion .rebild-accordion .ui-state-active .field-content {
+  color: #fff;
 }
 
 /*------------------------------------------------------------------
