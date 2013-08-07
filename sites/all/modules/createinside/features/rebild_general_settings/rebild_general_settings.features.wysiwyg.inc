@@ -36,6 +36,9 @@ function rebild_general_settings_wysiwyg_default_profiles() {
         'paste' => array(
           'pasteword' => 1,
         ),
+        'drupal' => array(
+          'media' => 1,
+        ),
       ),
       'toolbar_loc' => 'top',
       'toolbar_align' => 'left',
