@@ -843,20 +843,24 @@ News Article
 /*------------------------------------------------------------------
 	Nodes
 -------------------------------------------------------------------*/
-/* line 16, ../sass/partials/_nodes.scss */
-.node .field {
+/* line 17, ../sass/partials/_nodes.scss */
+#region-content .node .field {
   margin-bottom: 1em;
 }
-/* line 19, ../sass/partials/_nodes.scss */
-.node .field-label {
+/* line 20, ../sass/partials/_nodes.scss */
+#region-content .node .field-label {
   margin: 20px 0 10px;
 }
-/* line 22, ../sass/partials/_nodes.scss */
-.node a {
+/* line 24, ../sass/partials/_nodes.scss */
+#region-content .node p a {
   color: #937ea7;
 }
-/* line 26, ../sass/partials/_nodes.scss */
-.node .field-name-field-main-gis-map .field-label:before {
+/* line 28, ../sass/partials/_nodes.scss */
+#region-content .node a {
+  color: #937ea7;
+}
+/* line 32, ../sass/partials/_nodes.scss */
+#region-content .node .field-name-field-main-gis-map .field-label:before {
   font-family: 'Rebild';
   content: attr(data-icon);
   speak: none;
@@ -872,7 +876,7 @@ News Article
 /*------------------------------------------------------------------
 	Basic Page + News Article
 -------------------------------------------------------------------*/
-/* line 39, ../sass/partials/_nodes.scss */
+/* line 47, ../sass/partials/_nodes.scss */
 .node-page,
 .node-news-article {
   /* Main Image*/
@@ -881,24 +885,24 @@ News Article
   /* Node Image Gallery */
   /* Accordion */
 }
-/* line 41, ../sass/partials/_nodes.scss */
+/* line 49, ../sass/partials/_nodes.scss */
 .node-page .field-name-field-main-image,
 .node-news-article .field-name-field-main-image {
   margin-bottom: 20px;
 }
-/* line 43, ../sass/partials/_nodes.scss */
+/* line 51, ../sass/partials/_nodes.scss */
 .node-page .field-name-field-main-image img,
 .node-news-article .field-name-field-main-image img {
   width: 100%;
 }
-/* line 48, ../sass/partials/_nodes.scss */
+/* line 56, ../sass/partials/_nodes.scss */
 .node-page .field-name-field-main-summary,
 .node-news-article .field-name-field-main-summary {
   margin-bottom: 20px;
   font-size: 1.33333em;
   line-height: 1.15em;
 }
-/* line 54, ../sass/partials/_nodes.scss */
+/* line 62, ../sass/partials/_nodes.scss */
 .node-page .field-name-field-main-factbox,
 .node-news-article .field-name-field-main-factbox {
   float: right;
@@ -912,7 +916,7 @@ News Article
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 67, ../sass/partials/_nodes.scss */
+/* line 75, ../sass/partials/_nodes.scss */
 .node-page .field-name-field-main-image-gallery .field-items,
 .node-news-article .field-name-field-main-image-gallery .field-items {
   background: #e9e6e6;
@@ -924,7 +928,7 @@ News Article
   padding: 20px 20px 0;
   overflow: hidden;
 }
-/* line 72, ../sass/partials/_nodes.scss */
+/* line 80, ../sass/partials/_nodes.scss */
 .node-page .field-name-field-main-image-gallery .field-items .field-item,
 .node-news-article .field-name-field-main-image-gallery .field-items .field-item {
   width: 29%;
@@ -933,7 +937,7 @@ News Article
   margin-bottom: 20px;
   text-align: center;
 }
-/* line 80, ../sass/partials/_nodes.scss */
+/* line 88, ../sass/partials/_nodes.scss */
 .node-page .field-name-field-main-image-gallery .field-label:before,
 .node-news-article .field-name-field-main-image-gallery .field-label:before {
   font-family: 'Rebild';
@@ -947,7 +951,7 @@ News Article
   content: "\e00e";
   margin-right: 0.5em;
 }
-/* line 89, ../sass/partials/_nodes.scss */
+/* line 97, ../sass/partials/_nodes.scss */
 .node-page .view-content-accordion .rebild-accordion .ui-accordion-header,
 .node-news-article .view-content-accordion .rebild-accordion .ui-accordion-header {
   background: #e9e6e6;
@@ -959,31 +963,31 @@ News Article
   overflow: hidden;
   margin-bottom: 8px;
 }
-/* line 94, ../sass/partials/_nodes.scss */
+/* line 102, ../sass/partials/_nodes.scss */
 .node-page .view-content-accordion .rebild-accordion .ui-accordion-header .ui-icon-triangle-1-e,
 .node-news-article .view-content-accordion .rebild-accordion .ui-accordion-header .ui-icon-triangle-1-e {
   width: 15px;
   height: 15px;
   background-image: url(../img/accordion_closed.png);
 }
-/* line 99, ../sass/partials/_nodes.scss */
+/* line 107, ../sass/partials/_nodes.scss */
 .node-page .view-content-accordion .rebild-accordion .ui-accordion-header a:hover,
 .node-news-article .view-content-accordion .rebild-accordion .ui-accordion-header a:hover {
   text-decoration: none;
 }
-/* line 104, ../sass/partials/_nodes.scss */
+/* line 112, ../sass/partials/_nodes.scss */
 .node-page .view-content-accordion .rebild-accordion .ui-state-active,
 .node-news-article .view-content-accordion .rebild-accordion .ui-state-active {
   background-color: #7f9dcd;
 }
-/* line 106, ../sass/partials/_nodes.scss */
+/* line 114, ../sass/partials/_nodes.scss */
 .node-page .view-content-accordion .rebild-accordion .ui-state-active .ui-icon-triangle-1-s,
 .node-news-article .view-content-accordion .rebild-accordion .ui-state-active .ui-icon-triangle-1-s {
   width: 15px;
   height: 15px;
   background-image: url(../img/accordion_open.png);
 }
-/* line 111, ../sass/partials/_nodes.scss */
+/* line 119, ../sass/partials/_nodes.scss */
 .node-page .view-content-accordion .rebild-accordion .ui-state-active .field-content,
 .node-news-article .view-content-accordion .rebild-accordion .ui-state-active .field-content {
   color: #fff;

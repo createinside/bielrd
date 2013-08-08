@@ -12,24 +12,32 @@ News Article
 	Nodes
 -------------------------------------------------------------------*/
 
-.node {
-	.field {
-		margin-bottom: 1em;
-	}
-	.field-label {
-		margin: $spacing-std 0 $spacing-std/2;
-	}
-	a {
-		color: $link-color-node;
-	}
-	.field-name-field-main-gis-map {
-		.field-label:before {
-			@include icon-prepare();
-			content: "\e00d";	
-			margin-right: 0.5em;
+#region-content {
+	.node {
+		.field {
+			margin-bottom: 1em;
+		}
+		.field-label {
+			margin: $spacing-std 0 $spacing-std/2;
+		}
+		p {
+			a {
+				color: $link-color-node;
+			}
+		}
+		a {
+			color: $link-color-node;
+		}
+		.field-name-field-main-gis-map {
+			.field-label:before {
+				@include icon-prepare();
+				content: "\e00d";	
+				margin-right: 0.5em;
+			}
 		}
 	}
 }
+
 
 /*------------------------------------------------------------------
 	Basic Page + News Article
