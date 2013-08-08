@@ -24,6 +24,7 @@ features[filter][] = filtered_html
 features[filter][] = full_html
 features[metatag][] = global
 features[metatag][] = global:frontpage
+features[metatag][] = node
 features[user_permission][] = access administration menu
 features[user_role][] = administrator
 features[user_role][] = fagredaktør
