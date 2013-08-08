@@ -7,7 +7,7 @@ $(document).ready(function(){
     events: [], // Array of events to be triggerd   
     maxCharacters: 150, // Karakter limit  
     status: true, // True to show status indicator bewlow the element   
-    statusClass: "status", // The class on the status div 
+    statusClass: "statustegn", // The class on the status div 
     statusText: "Tegn tilbage", // The status text 
     notificationClass: "notification",  // Will be added when maxlength is reached 
     showAlert: false, // True to show a regular alert message   
