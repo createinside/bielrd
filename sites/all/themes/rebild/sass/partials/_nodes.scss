@@ -25,11 +25,11 @@ News Article
 		}
 		p {
 			a {
-				color: $link-color-node;
+				color: $color-blue;
 			}
 		}
 		a {
-			color: $link-color-node;
+			color: $color-blue;
 		}
 		.field-name-field-main-gis-map {
 			.field-label:before {
@@ -45,86 +45,90 @@ News Article
 /*------------------------------------------------------------------
 	Basic Page + News Article
 -------------------------------------------------------------------*/
-
-.node-page,
-.node-news-article {
-	/* Main Image*/
-	.field-name-field-main-image {
-		margin-bottom: $spacing-std;
-		img {
-			width: 100%;
+#region-content {
+	.node-page,
+	.node-news-article {
+		/* Main Image*/
+		.field-name-field-main-image {
+			margin-bottom: $spacing-std;
+			img {
+				width: 100%;
+			}
 		}
-	}
-	/* Summary */
-	.field-name-field-main-summary {
-		margin-bottom: $spacing-std;
-		font-size: $font-size-large;
-		line-height: $line-height-std;
-	}
-	/* Fact Box */
-	.field-name-field-main-factbox {
-		float: right;
-		width: 33%;
-		background: $bg-node-box;
-		padding: $spacing-std/2;
-		margin: 0 0 $spacing-std/2 $spacing-std/2;
-		@include border-radius(3px);
-	}
-	.field-body {
-		
-	}
-	/* Node Image Gallery */
-	.field-name-field-main-image-gallery {
-		.field-items {
+		/* Summary */
+		.field-name-field-main-summary {
+			margin-bottom: $spacing-std;
+			font-size: $font-size-large;
+			line-height: $line-height-std;
+		}
+		/* Fact Box */
+		.field-name-field-main-factbox {
+			float: right;
+			width: 33%;
 			background: $bg-node-box;
+			padding: $spacing-std/2;
+			margin: 0 0 $spacing-std/2 $spacing-std/2;
 			@include border-radius(3px);
-			padding: $spacing-std $spacing-std 0;
-			overflow: hidden;
-			.field-item {
-				width: 29%;
-				padding: 0 2%;
-				float: left;
-				margin-bottom: $spacing-std;
-				text-align: center;
-			}			
 		}
-		.field-label:before {			
-			@include icon-prepare();
-			content: "\e00e";	
-			margin-right: 0.5em;
+		.field-body {
+			
 		}
-	}
-	/* Accordion */
-	.view-content-accordion {
-		.rebild-accordion {
-			.ui-accordion-header {
+		/* Node Image Gallery */
+		.field-name-field-main-image-gallery {
+			.field-items {
 				background: $bg-node-box;
 				@include border-radius(3px);
+				padding: $spacing-std $spacing-std 0;
 				overflow: hidden;
-				margin-bottom: 8px;
-				.ui-icon-triangle-1-e {
-					width: 15px;
-					height: 15px;
-					background-image: url(../img/accordion_closed.png);
-				}
-				a:hover {
-					text-decoration: none;
-				}
-				
+				.field-item {
+					width: 29%;
+					padding: 0 2%;
+					float: left;
+					margin-bottom: $spacing-std;
+					text-align: center;
+				}			
 			}
-			.ui-state-active {
-				background-color: $color-blue;
-				.ui-icon-triangle-1-s {
-					width: 15px;
-					height: 15px;
-					background-image: url(../img/accordion_open.png);	
-				}
-				.field-content {					
-					color: #fff;
-				}
-				
-			}			
+			.field-label:before {			
+				@include icon-prepare();
+				content: "\e00e";	
+				margin-right: 0.5em;
+			}
 		}
+		/* Accordion */
+		.view-content-accordion {
+			.rebild-accordion {
+				.ui-accordion-header {
+					background: $bg-node-box;
+					@include border-radius(3px);
+					overflow: hidden;
+					margin-bottom: 8px;
+					a {
+						color: $text-color;
+					}				
+					.ui-icon-triangle-1-e {
+						width: 15px;
+						height: 15px;
+						background-image: url(../img/accordion_closed.png);
+					}
+					a:hover {
+						text-decoration: none;
+					}
+					
+				}
+				.ui-state-active {
+					background-color: $color-blue;
+					.ui-icon-triangle-1-s {
+						width: 15px;
+						height: 15px;
+						background-image: url(../img/accordion_open.png);	
+					}
+					.field-content {					
+						color: #fff;
+					}
+					
+				}			
+			}
+		}
+		
 	}
-	
 }

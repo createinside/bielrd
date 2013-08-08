@@ -807,26 +807,20 @@ ul.tabs li.active a {
 #region-content .content a:hover {
   text-decoration: underline;
 }
-/* line 60, ../sass/partials/_general.scss */
-#region-content .content ul li, #region-content .content ol li {
-  margin-left: 0.5em;
-}
 /* line 66, ../sass/partials/_general.scss */
 #region-content .content #content-main ul li {
   list-style: disc;
-  margin-left: 20px;
 }
-/* line 72, ../sass/partials/_general.scss */
+/* line 71, ../sass/partials/_general.scss */
 #region-content .content #content-main ol li {
   list-style: decimal;
-  margin-left: 20px;
 }
-/* line 79, ../sass/partials/_general.scss */
+/* line 77, ../sass/partials/_general.scss */
 #region-content .content #content-main #region-content-sidebar ul li {
   list-style: none;
   margin-left: 10px;
 }
-/* line 85, ../sass/partials/_general.scss */
+/* line 83, ../sass/partials/_general.scss */
 #region-content .content #content-main #region-content-sidebar ol li {
   list-style: none;
   margin-left: 10px;
@@ -858,11 +852,11 @@ News Article
 }
 /* line 27, ../sass/partials/_nodes.scss */
 #region-content .node p a {
-  color: #937ea7;
+  color: #7f9dcd;
 }
 /* line 31, ../sass/partials/_nodes.scss */
 #region-content .node a {
-  color: #937ea7;
+  color: #7f9dcd;
 }
 /* line 35, ../sass/partials/_nodes.scss */
 #region-content .node .field-name-field-main-gis-map .field-label:before {
@@ -882,8 +876,8 @@ News Article
 	Basic Page + News Article
 -------------------------------------------------------------------*/
 /* line 50, ../sass/partials/_nodes.scss */
-.node-page,
-.node-news-article {
+#region-content .node-page,
+#region-content .node-news-article {
   /* Main Image*/
   /* Summary */
   /* Fact Box */
@@ -891,25 +885,25 @@ News Article
   /* Accordion */
 }
 /* line 52, ../sass/partials/_nodes.scss */
-.node-page .field-name-field-main-image,
-.node-news-article .field-name-field-main-image {
+#region-content .node-page .field-name-field-main-image,
+#region-content .node-news-article .field-name-field-main-image {
   margin-bottom: 20px;
 }
 /* line 54, ../sass/partials/_nodes.scss */
-.node-page .field-name-field-main-image img,
-.node-news-article .field-name-field-main-image img {
+#region-content .node-page .field-name-field-main-image img,
+#region-content .node-news-article .field-name-field-main-image img {
   width: 100%;
 }
 /* line 59, ../sass/partials/_nodes.scss */
-.node-page .field-name-field-main-summary,
-.node-news-article .field-name-field-main-summary {
+#region-content .node-page .field-name-field-main-summary,
+#region-content .node-news-article .field-name-field-main-summary {
   margin-bottom: 20px;
   font-size: 1.33333em;
   line-height: 1.15em;
 }
 /* line 65, ../sass/partials/_nodes.scss */
-.node-page .field-name-field-main-factbox,
-.node-news-article .field-name-field-main-factbox {
+#region-content .node-page .field-name-field-main-factbox,
+#region-content .node-news-article .field-name-field-main-factbox {
   float: right;
   width: 33%;
   background: #e9e6e6;
@@ -922,8 +916,8 @@ News Article
   border-radius: 3px;
 }
 /* line 78, ../sass/partials/_nodes.scss */
-.node-page .field-name-field-main-image-gallery .field-items,
-.node-news-article .field-name-field-main-image-gallery .field-items {
+#region-content .node-page .field-name-field-main-image-gallery .field-items,
+#region-content .node-news-article .field-name-field-main-image-gallery .field-items {
   background: #e9e6e6;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -934,8 +928,8 @@ News Article
   overflow: hidden;
 }
 /* line 83, ../sass/partials/_nodes.scss */
-.node-page .field-name-field-main-image-gallery .field-items .field-item,
-.node-news-article .field-name-field-main-image-gallery .field-items .field-item {
+#region-content .node-page .field-name-field-main-image-gallery .field-items .field-item,
+#region-content .node-news-article .field-name-field-main-image-gallery .field-items .field-item {
   width: 29%;
   padding: 0 2%;
   float: left;
@@ -943,8 +937,8 @@ News Article
   text-align: center;
 }
 /* line 91, ../sass/partials/_nodes.scss */
-.node-page .field-name-field-main-image-gallery .field-label:before,
-.node-news-article .field-name-field-main-image-gallery .field-label:before {
+#region-content .node-page .field-name-field-main-image-gallery .field-label:before,
+#region-content .node-news-article .field-name-field-main-image-gallery .field-label:before {
   font-family: 'Rebild';
   content: attr(data-icon);
   speak: none;
@@ -957,8 +951,8 @@ News Article
   margin-right: 0.5em;
 }
 /* line 100, ../sass/partials/_nodes.scss */
-.node-page .view-content-accordion .rebild-accordion .ui-accordion-header,
-.node-news-article .view-content-accordion .rebild-accordion .ui-accordion-header {
+#region-content .node-page .view-content-accordion .rebild-accordion .ui-accordion-header,
+#region-content .node-news-article .view-content-accordion .rebild-accordion .ui-accordion-header {
   background: #e9e6e6;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -969,32 +963,37 @@ News Article
   margin-bottom: 8px;
 }
 /* line 105, ../sass/partials/_nodes.scss */
-.node-page .view-content-accordion .rebild-accordion .ui-accordion-header .ui-icon-triangle-1-e,
-.node-news-article .view-content-accordion .rebild-accordion .ui-accordion-header .ui-icon-triangle-1-e {
+#region-content .node-page .view-content-accordion .rebild-accordion .ui-accordion-header a,
+#region-content .node-news-article .view-content-accordion .rebild-accordion .ui-accordion-header a {
+  color: #474747;
+}
+/* line 108, ../sass/partials/_nodes.scss */
+#region-content .node-page .view-content-accordion .rebild-accordion .ui-accordion-header .ui-icon-triangle-1-e,
+#region-content .node-news-article .view-content-accordion .rebild-accordion .ui-accordion-header .ui-icon-triangle-1-e {
   width: 15px;
   height: 15px;
   background-image: url(../img/accordion_closed.png);
 }
-/* line 110, ../sass/partials/_nodes.scss */
-.node-page .view-content-accordion .rebild-accordion .ui-accordion-header a:hover,
-.node-news-article .view-content-accordion .rebild-accordion .ui-accordion-header a:hover {
+/* line 113, ../sass/partials/_nodes.scss */
+#region-content .node-page .view-content-accordion .rebild-accordion .ui-accordion-header a:hover,
+#region-content .node-news-article .view-content-accordion .rebild-accordion .ui-accordion-header a:hover {
   text-decoration: none;
 }
-/* line 115, ../sass/partials/_nodes.scss */
-.node-page .view-content-accordion .rebild-accordion .ui-state-active,
-.node-news-article .view-content-accordion .rebild-accordion .ui-state-active {
+/* line 118, ../sass/partials/_nodes.scss */
+#region-content .node-page .view-content-accordion .rebild-accordion .ui-state-active,
+#region-content .node-news-article .view-content-accordion .rebild-accordion .ui-state-active {
   background-color: #7f9dcd;
 }
-/* line 117, ../sass/partials/_nodes.scss */
-.node-page .view-content-accordion .rebild-accordion .ui-state-active .ui-icon-triangle-1-s,
-.node-news-article .view-content-accordion .rebild-accordion .ui-state-active .ui-icon-triangle-1-s {
+/* line 120, ../sass/partials/_nodes.scss */
+#region-content .node-page .view-content-accordion .rebild-accordion .ui-state-active .ui-icon-triangle-1-s,
+#region-content .node-news-article .view-content-accordion .rebild-accordion .ui-state-active .ui-icon-triangle-1-s {
   width: 15px;
   height: 15px;
   background-image: url(../img/accordion_open.png);
 }
-/* line 122, ../sass/partials/_nodes.scss */
-.node-page .view-content-accordion .rebild-accordion .ui-state-active .field-content,
-.node-news-article .view-content-accordion .rebild-accordion .ui-state-active .field-content {
+/* line 125, ../sass/partials/_nodes.scss */
+#region-content .node-page .view-content-accordion .rebild-accordion .ui-state-active .field-content,
+#region-content .node-news-article .view-content-accordion .rebild-accordion .ui-state-active .field-content {
   color: #fff;
 }
 

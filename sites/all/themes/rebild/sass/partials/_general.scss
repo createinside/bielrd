@@ -58,20 +58,18 @@
 		/* Lists */
 		ul, ol {
 			li {
-				margin-left: 0.5em;	
+				
 			}
 		}
 		#content-main {
 			ul {
 				li {
-					list-style: disc;
-					margin-left: $spacing-std;
+					list-style: disc;					
 				}
 			}
 			ol {
 				li {
-					list-style: decimal;
-					margin-left: $spacing-std;
+					list-style: decimal;					
 				}
 			}
 			#region-content-sidebar {

@@ -125,26 +125,20 @@ Backend
 #region-content .content a:hover {
   text-decoration: underline;
 }
-/* line 60, ../sass/partials/_general.scss */
-#region-content .content ul li, #region-content .content ol li {
-  margin-left: 0.5em;
-}
 /* line 66, ../sass/partials/_general.scss */
 #region-content .content #content-main ul li {
   list-style: disc;
-  margin-left: 20px;
 }
-/* line 72, ../sass/partials/_general.scss */
+/* line 71, ../sass/partials/_general.scss */
 #region-content .content #content-main ol li {
   list-style: decimal;
-  margin-left: 20px;
 }
-/* line 79, ../sass/partials/_general.scss */
+/* line 77, ../sass/partials/_general.scss */
 #region-content .content #content-main #region-content-sidebar ul li {
   list-style: none;
   margin-left: 10px;
 }
-/* line 85, ../sass/partials/_general.scss */
+/* line 83, ../sass/partials/_general.scss */
 #region-content .content #content-main #region-content-sidebar ol li {
   list-style: none;
   margin-left: 10px;
