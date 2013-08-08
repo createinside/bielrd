@@ -7,7 +7,7 @@ base theme = seven
 
 stylesheets[all][] = css/custom.css
 
-scripts[] = '../rebild/js/jquery.customSelect.min.js'
+scripts[] = '/js/jquery.maxlength-min.js'
 scripts[] = '/js/backend_settings.js'
 
 regions[content] = Content

@@ -1020,8 +1020,20 @@ User profile
   border-radius: 3px;
 }
 
-/* line 653, ../sass/custom.scss */
-#file-entity-edit input[type="text"] {
+/* line 654, ../sass/custom.scss */
+#file-entity-edit .chzn-choices input[type="text"], #file-entity-edit .chzn-drop input[type="text"], #file-entity-edit--2 .chzn-choices input[type="text"], #file-entity-edit--2 .chzn-drop input[type="text"] {
+  border-radius: 0;
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  -ms-border-radius: none;
+  -o-border-radius: none;
+  border-radius: none;
+  -webkit-box-shadow: rgba(0, 0, 0, 0) 0 0 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0) 0 0 0;
+  box-shadow: rgba(0, 0, 0, 0) 0 0 0;
+}
+/* line 666, ../sass/custom.scss */
+#file-entity-edit input[type="text"], #file-entity-edit--2 input[type="text"] {
   width: 50%;
   padding: 0 0 0 1%;
   min-height: 30px;
@@ -1037,8 +1049,8 @@ User profile
   box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   font-size: 13px;
 }
-/* line 661, ../sass/custom.scss */
-#file-entity-edit input[type="submit"] {
+/* line 674, ../sass/custom.scss */
+#file-entity-edit input[type="submit"], #file-entity-edit--2 input[type="submit"] {
   background-color: #7f9dcd;
   color: #fff;
   background-image: none;
@@ -1051,8 +1063,8 @@ User profile
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 674, ../sass/custom.scss */
-#file-entity-edit .button-no {
+/* line 687, ../sass/custom.scss */
+#file-entity-edit .button-no, #file-entity-edit--2 .button-no {
   background-color: #7f9dcd;
   color: #fff;
   background-image: none;
@@ -1066,9 +1078,14 @@ User profile
   border-radius: 3px;
 }
 
-/* line 689, ../sass/custom.scss */
+/* line 702, ../sass/custom.scss */
 .media-modal-frame .page-file {
   background-color: #fff;
+}
+
+/* line 707, ../sass/custom.scss */
+#media-browser-page #branding {
+  background: #fff;
 }
 
 /*------------------------------------------------------------------
@@ -1076,7 +1093,7 @@ User profile
 	User profile
 	
 -------------------------------------------------------------------*/
-/* line 702, ../sass/custom.scss */
+/* line 720, ../sass/custom.scss */
 .page-user #page #user-profile-form .fieldset-wrapper {
   padding-top: 30px;
 }
