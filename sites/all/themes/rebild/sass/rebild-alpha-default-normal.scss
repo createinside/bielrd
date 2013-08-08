@@ -78,6 +78,11 @@ body {
 		.block {
 			.content {
 				height: 150px;
+				.view-calendar-frontpage {
+					.calendar_right {
+						width: 200px;
+					}
+				}
 			}
 		}
 	}

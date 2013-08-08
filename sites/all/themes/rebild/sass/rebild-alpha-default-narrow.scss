@@ -82,6 +82,11 @@ body {
 		.block {
 			.content {
 				height: 190px;
+				.view-calendar-frontpage {
+					.calendar_right {
+						width: 120px;
+					}
+				}
 			}
 		}
 	}

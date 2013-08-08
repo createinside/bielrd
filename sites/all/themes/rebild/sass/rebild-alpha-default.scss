@@ -265,7 +265,10 @@ Nodes
 	.rebild-calendar {
 		float: left;
 		width: 50%;	
-		margin: 0;	
+		margin: 0;
+		.calendar_right {
+			width: 200px;
+		}	
 	}
 	.post1 , .post2 {
 		margin: 0 0 $spacing-std 0;

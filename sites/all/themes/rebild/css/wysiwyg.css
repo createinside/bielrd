@@ -61,89 +61,90 @@ Backend
 [GENERAL]
 
 -------------------------------------------------------------------*/
-/* line 8, ../sass/partials/_general.scss */
+/* line 9, ../sass/partials/_general.scss */
 #region-content .content {
   /* Text */
   /* Links */
   /* Lists */
 }
-/* line 10, ../sass/partials/_general.scss */
+/* line 11, ../sass/partials/_general.scss */
 #region-content .content h1, #region-content .content h2, #region-content .content h3, #region-content .content h4, #region-content .content h5, #region-content .content h6 {
   font-weight: bold;
   margin-bottom: 0.3em;
 }
-/* line 14, ../sass/partials/_general.scss */
+/* line 15, ../sass/partials/_general.scss */
 #region-content .content h1 {
   font-size: 1.5em;
   line-height: 1.5em;
 }
-/* line 18, ../sass/partials/_general.scss */
+/* line 19, ../sass/partials/_general.scss */
 #region-content .content h2 {
   font-size: 1.4em;
   line-height: 1.4em;
 }
-/* line 22, ../sass/partials/_general.scss */
+/* line 23, ../sass/partials/_general.scss */
 #region-content .content h3 {
   font-size: 1.3em;
   line-height: 1.3em;
 }
-/* line 26, ../sass/partials/_general.scss */
+/* line 27, ../sass/partials/_general.scss */
 #region-content .content h4 {
   font-size: 1.2em;
   line-height: 1.2em;
 }
-/* line 30, ../sass/partials/_general.scss */
+/* line 31, ../sass/partials/_general.scss */
 #region-content .content h5 {
   font-size: 1.1em;
   line-height: 1.1em;
 }
-/* line 34, ../sass/partials/_general.scss */
+/* line 35, ../sass/partials/_general.scss */
 #region-content .content h6 {
   font-size: 1.0em;
   line-height: 1.0em;
 }
-/* line 38, ../sass/partials/_general.scss */
+/* line 39, ../sass/partials/_general.scss */
 #region-content .content p {
   margin-bottom: 1em;
   line-height: 1.25em;
 }
-/* line 42, ../sass/partials/_general.scss */
+/* line 43, ../sass/partials/_general.scss */
 #region-content .content strong {
   font-weight: bold;
 }
-/* line 45, ../sass/partials/_general.scss */
+/* line 46, ../sass/partials/_general.scss */
 #region-content .content em {
   font-style: italic;
 }
-/* line 49, ../sass/partials/_general.scss */
+/* line 50, ../sass/partials/_general.scss */
 #region-content .content a {
   color: #474747;
   text-decoration: none;
+  word-wrap: break-word;
 }
-/* line 53, ../sass/partials/_general.scss */
+/* line 55, ../sass/partials/_general.scss */
 #region-content .content a:hover {
   text-decoration: underline;
 }
-/* line 58, ../sass/partials/_general.scss */
+/* line 60, ../sass/partials/_general.scss */
 #region-content .content ul li, #region-content .content ol li {
   margin-left: 0.5em;
 }
-/* line 64, ../sass/partials/_general.scss */
+/* line 66, ../sass/partials/_general.scss */
 #region-content .content #content-main ul li {
   list-style: disc;
   margin-left: 20px;
 }
-/* line 70, ../sass/partials/_general.scss */
+/* line 72, ../sass/partials/_general.scss */
 #region-content .content #content-main ol li {
   list-style: decimal;
   margin-left: 20px;
 }
-/* line 77, ../sass/partials/_general.scss */
+/* line 79, ../sass/partials/_general.scss */
 #region-content .content #content-main #region-content-sidebar ul li {
   list-style: none;
   margin-left: 10px;
 }
-/* line 83, ../sass/partials/_general.scss */
+/* line 85, ../sass/partials/_general.scss */
 #region-content .content #content-main #region-content-sidebar ol li {
   list-style: none;
   margin-left: 10px;

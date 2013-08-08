@@ -4,6 +4,7 @@
 
 -------------------------------------------------------------------*/
 
+
 #region-content {
 	.content {
 		/* Text */
@@ -49,6 +50,7 @@
 		a {
 			color: $link-color;
 			text-decoration: none;
+			word-wrap: break-word;
 		}	
 		a:hover {
 			text-decoration: underline;
