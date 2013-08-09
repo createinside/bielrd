@@ -182,8 +182,13 @@ Drupal.verticalTab.prototype = {
  *   - summary: The jQuery element that contains the tab summary
  */
 Drupal.theme.prototype.verticalTab = function (settings) {
+  var class_name = 'vertical-tab-button';
+  if ($('.error', settings.fieldset).length>0) {
+   class_name += ' vertical-tab-button-error';
+  }
+
   var tab = {};
-  tab.item = $('<li class="vertical-tab-button" tabindex="-1"></li>')
+  tab.item = $('<li class="'+class_name+'" tabindex="-1"></li>')
     .append(tab.link = $('<a href="#"></a>')
       .append(tab.title = $('<strong></strong>').text(settings.title))
       .append(tab.summary = $('<span class="summary"></span>')

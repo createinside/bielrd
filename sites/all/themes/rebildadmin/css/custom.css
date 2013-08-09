@@ -767,28 +767,32 @@ User profile
   height: 30px;
   border: none;
 }
+/* line 415, ../sass/custom.scss */
+.page-node-add #page .vertical-tabs .vertical-tab-button-error, .page-node-edit #page .vertical-tabs .vertical-tab-button-error, .page-node #page .vertical-tabs .vertical-tab-button-error, .page-user #page .vertical-tabs .vertical-tab-button-error, .page-file #page .vertical-tabs .vertical-tab-button-error {
+  border: 2px solid red;
+}
 
 /*------------------------------------------------------------------
 
 	Workbench
 
 -------------------------------------------------------------------*/
-/* line 426, ../sass/custom.scss */
+/* line 429, ../sass/custom.scss */
 .page-admin-workbench #page {
   min-width: 960px;
 }
-/* line 429, ../sass/custom.scss */
+/* line 432, ../sass/custom.scss */
 .page-admin-workbench #page .tabs-secondary .min-profil {
   float: right;
   width: 28%;
 }
-/* line 432, ../sass/custom.scss */
+/* line 435, ../sass/custom.scss */
 .page-admin-workbench #page .tabs-secondary .min-profil li {
   float: left;
   display: block;
   margin-right: 10px;
 }
-/* line 436, ../sass/custom.scss */
+/* line 439, ../sass/custom.scss */
 .page-admin-workbench #page .tabs-secondary .min-profil li a {
   background-color: #ddd;
   color: #000;
@@ -796,18 +800,18 @@ User profile
   border-radius: 7px;
   padding: 2px 10px;
 }
-/* line 448, ../sass/custom.scss */
+/* line 451, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .left {
   float: left;
   min-width: 67%;
   margin-right: 40px;
 }
-/* line 454, ../sass/custom.scss */
+/* line 457, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right {
   float: right;
   width: 28%;
 }
-/* line 457, ../sass/custom.scss */
+/* line 460, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content {
   background-color: white;
   -webkit-border-radius: 3px;
@@ -819,7 +823,7 @@ User profile
   -moz-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
 }
-/* line 459, ../sass/custom.scss */
+/* line 462, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content h4 {
   padding: 10px;
   border-bottom: 1px solid #bcbdbd;
@@ -831,35 +835,35 @@ User profile
   text-transform: uppercase;
   vertical-align: middle;
 }
-/* line 470, ../sass/custom.scss */
+/* line 473, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-picture {
   padding: 10px 10px 0 10px;
 }
-/* line 473, ../sass/custom.scss */
+/* line 476, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-field-user-jobtitel {
   padding: 0 10px 0 10px;
   font-style: italic;
   margin: 10px 0;
 }
-/* line 478, ../sass/custom.scss */
+/* line 481, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-field-user-tlf, .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-mail {
   padding: 0 10px 0 10px;
 }
-/* line 481, ../sass/custom.scss */
+/* line 484, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-mail {
   padding-bottom: 10px;
 }
-/* line 484, ../sass/custom.scss */
+/* line 487, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content p {
   margin: 0;
 }
-/* line 491, ../sass/custom.scss */
+/* line 494, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle .needs_attention {
   float: left;
   width: 67%;
   margin-right: 40px;
 }
-/* line 496, ../sass/custom.scss */
+/* line 499, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle #block-block-16 {
   float: right;
   background-color: white;
@@ -874,7 +878,7 @@ User profile
   width: 28%;
   margin-top: 68px;
 }
-/* line 501, ../sass/custom.scss */
+/* line 504, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle #block-block-16 h2 {
   padding: 10px;
   border-bottom: 1px solid #bcbdbd;
@@ -886,15 +890,15 @@ User profile
   text-transform: uppercase;
   vertical-align: middle;
 }
-/* line 512, ../sass/custom.scss */
+/* line 515, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle #block-block-16 .content {
   padding: 10px;
 }
-/* line 515, ../sass/custom.scss */
+/* line 518, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle #block-block-16 p {
   margin: 0;
 }
-/* line 521, ../sass/custom.scss */
+/* line 524, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_bottom .all_recent_content {
   float: left;
   width: 100%;
@@ -905,28 +909,28 @@ User profile
 	WYSIWYG editor
 
 -------------------------------------------------------------------*/
-/* line 542, ../sass/custom.scss */
+/* line 545, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mce_removeformat {
   display: none;
 }
-/* line 545, ../sass/custom.scss */
+/* line 548, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mce_pasteword {
   display: none;
 }
-/* line 548, ../sass/custom.scss */
+/* line 551, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mce_paste {
   display: none;
 }
-/* line 551, ../sass/custom.scss */
+/* line 554, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mceFirst {
   background: #f6f6f6;
 }
-/* line 554, ../sass/custom.scss */
+/* line 557, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mceIframeContainer.mceFirst.mceLast {
   border-top: 1px solid #d8d8d8;
   border-bottom: 1px solid #d8d8d8;
 }
-/* line 558, ../sass/custom.scss */
+/* line 561, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mceListBox {
   border-radius: 0;
   -o-border-radius: 0;
@@ -937,7 +941,7 @@ User profile
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
 }
-/* line 572, ../sass/custom.scss */
+/* line 575, ../sass/custom.scss */
 .page-node #page .filter-wrapper label {
   font-size: 12px;
   font-weight: bold;
@@ -948,7 +952,7 @@ User profile
 	Breadcrumbs
 	
 -------------------------------------------------------------------*/
-/* line 588, ../sass/custom.scss */
+/* line 591, ../sass/custom.scss */
 #branding .breadcrumb {
   font-size: 0.91667em;
   line-height: 1.5;
@@ -958,14 +962,14 @@ User profile
   margin-left: 5px;
   text-shadow: white 1px 1px 1px;
 }
-/* line 596, ../sass/custom.scss */
+/* line 599, ../sass/custom.scss */
 #branding .breadcrumb a, #branding .breadcrumb strong {
   color: #474747;
   text-decoration: none;
   position: relative;
   top: -1px;
 }
-/* line 602, ../sass/custom.scss */
+/* line 605, ../sass/custom.scss */
 #branding .breadcrumb span {
   font-size: 1.25em;
 }
@@ -975,7 +979,7 @@ User profile
 	Views 
 	
 -------------------------------------------------------------------*/
-/* line 613, ../sass/custom.scss */
+/* line 616, ../sass/custom.scss */
 .views-exposed-form .form-item {
   padding: 0;
 }
@@ -985,7 +989,7 @@ User profile
 	Media module
 	
 -------------------------------------------------------------------*/
-/* line 624, ../sass/custom.scss */
+/* line 627, ../sass/custom.scss */
 .page-media .form-submit, .page-media a.button {
   background-color: #7f9dcd;
   color: #fff;
@@ -999,7 +1003,7 @@ User profile
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 637, ../sass/custom.scss */
+/* line 640, ../sass/custom.scss */
 .page-media input[type="file"] {
   background-color: white;
   -webkit-border-radius: 3px;
@@ -1014,7 +1018,7 @@ User profile
   margin-right: 20px;
 }
 
-/* line 645, ../sass/custom.scss */
+/* line 648, ../sass/custom.scss */
 .page-node .media-widget .button {
   background-color: #7f9dcd;
   color: #fff;
@@ -1029,7 +1033,7 @@ User profile
   border-radius: 3px;
 }
 
-/* line 663, ../sass/custom.scss */
+/* line 666, ../sass/custom.scss */
 #file-entity-edit .chzn-choices input[type="text"], #file-entity-edit .chzn-drop input[type="text"], #file-entity-edit--2 .chzn-choices input[type="text"], #file-entity-edit--2 .chzn-drop input[type="text"] {
   border-radius: 0;
   -webkit-border-radius: none;
@@ -1041,7 +1045,7 @@ User profile
   -moz-box-shadow: rgba(0, 0, 0, 0) 0 0 0;
   box-shadow: rgba(0, 0, 0, 0) 0 0 0;
 }
-/* line 675, ../sass/custom.scss */
+/* line 678, ../sass/custom.scss */
 #file-entity-edit input[type="text"], #file-entity-edit--2 input[type="text"] {
   width: 50%;
   padding: 0 0 0 1%;
@@ -1058,7 +1062,7 @@ User profile
   box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   font-size: 13px;
 }
-/* line 683, ../sass/custom.scss */
+/* line 686, ../sass/custom.scss */
 #file-entity-edit input[type="submit"], #file-entity-edit--2 input[type="submit"] {
   background-color: #7f9dcd;
   color: #fff;
@@ -1072,7 +1076,7 @@ User profile
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 696, ../sass/custom.scss */
+/* line 699, ../sass/custom.scss */
 #file-entity-edit .button-no, #file-entity-edit--2 .button-no {
   background-color: #7f9dcd;
   color: #fff;
@@ -1087,12 +1091,12 @@ User profile
   border-radius: 3px;
 }
 
-/* line 711, ../sass/custom.scss */
+/* line 714, ../sass/custom.scss */
 .media-modal-frame .page-file {
   background-color: #fff;
 }
 
-/* line 716, ../sass/custom.scss */
+/* line 719, ../sass/custom.scss */
 #media-browser-page #branding {
   background: #fff;
 }
@@ -1102,7 +1106,7 @@ User profile
 	User profile
 	
 -------------------------------------------------------------------*/
-/* line 729, ../sass/custom.scss */
+/* line 732, ../sass/custom.scss */
 .page-user #page #user-profile-form .fieldset-wrapper {
   padding-top: 30px;
 }
