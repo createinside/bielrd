@@ -145,6 +145,9 @@
 			line-height: $line-height-std;
 			color: $text-color;
 			@include grid-box(white);
+			a {
+				word-break: break-word;
+			}
 		}
 	}
 }

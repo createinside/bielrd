@@ -144,6 +144,15 @@ User profile
 		}		
 			
 	}
+	/* Metatag */
+	.form-item-metatags-description-value {
+		.statustegn {
+			color: #666;
+		}
+		.grippie {
+			display: none;
+		}
+	}
 }
 /*------------------------------------------------------------------
 
@@ -403,6 +412,9 @@ User profile
 				height: 30px;
 				border: none;
 			}
+			.vertical-tab-button-error {
+				border: 2px solid red;
+			}
 		}			
 	} 
 }
@@ -649,7 +661,20 @@ User profile
 	}
 
 }
-#file-entity-edit {
+#file-entity-edit, #file-entity-edit--2  {
+	.chzn-choices, .chzn-drop {
+		input[type="text"] {
+			border-radius: 0;
+			-webkit-border-radius: none;
+			-moz-border-radius: none;
+			-ms-border-radius: none;
+			-o-border-radius: none;
+			border-radius: none;
+			-webkit-box-shadow: rgba(0, 0, 0, 0) 0 0 0;
+			-moz-box-shadow: rgba(0, 0, 0, 0) 0 0 0;
+			box-shadow: rgba(0, 0, 0, 0) 0 0 0;
+		}
+	}
 	input[type="text"] {
 		width: 50%;
 		padding:0 0 0 1%;
@@ -688,6 +713,11 @@ User profile
 .media-modal-frame {
 	.page-file {
 		background-color: #fff;
+	}	
+}
+#media-browser-page {
+	#branding {
+		background: #fff;
 	}
 }
 

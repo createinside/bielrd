@@ -126,3 +126,7 @@ body {
 .front #region-postscript-second .block .content {
   height: 150px;
 }
+/* line 82, ../sass/rebild-alpha-default-normal.scss */
+.front #region-postscript-second .block .content .view-calendar-frontpage .calendar_right {
+  width: 200px;
+}

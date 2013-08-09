@@ -76,6 +76,7 @@
 		}
 		.calendar_right {
 			float: left;
+			max-width: 260px;
 			.calendar_section {
 				text-transform: uppercase;
 			}
@@ -83,6 +84,7 @@
 				a {
 					color: $text-color;
 					text-decoration: none;
+					
 				}
 			}
 		}

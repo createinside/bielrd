@@ -360,7 +360,7 @@ function rebild_news_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_main_summary',
     'label' => 'Resumé',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,

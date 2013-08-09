@@ -45,5 +45,15 @@ function rebild_general_settings_metatag_export_default() {
     ),
   );
 
+  // Exported Metatag config instance: node.
+  $config['node'] = array(
+    'instance' => 'node',
+    'config' => array(
+      'title' => array(
+        'value' => '[node:title] | [site:name]',
+      ),
+    ),
+  );
+
   return $config;
 }
