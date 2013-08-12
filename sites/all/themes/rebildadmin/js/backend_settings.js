@@ -5,7 +5,7 @@ $(document).ready(function(){
 
   $('#edit-metatags-description-value').maxlength({  
     events: [], // Array of events to be triggerd   
-    maxCharacters: 150, // Karakter limit  
+    maxCharacters: 160, // Karakter limit  
     status: true, // True to show status indicator bewlow the element   
     statusClass: "statustegn", // The class on the status div 
     statusText: "Tegn tilbage", // The status text 
