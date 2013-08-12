@@ -358,7 +358,7 @@ function media_token_to_markup($match, $wysiwyg = FALSE) {
     // The link text will have characters such as "&" encoded for HTML, but the
     // filename itself needs the raw value when it is used to build the link,
     // in order to avoid double encoding.
-    $file->filename = htmlspecialchars_decode($tag_info['link_text'], ENT_NOQUOTES);
+    $file->filename = decode_entities($tag_info['link_text']);
   }
 
   if ($wysiwyg) {
