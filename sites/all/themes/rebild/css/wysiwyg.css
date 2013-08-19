@@ -106,39 +106,40 @@ Backend
 #region-content .content p {
   margin-bottom: 1em;
   line-height: 1.25em;
+  word-wrap: break-word;
 }
-/* line 43, ../sass/partials/_general.scss */
+/* line 44, ../sass/partials/_general.scss */
 #region-content .content strong {
   font-weight: bold;
 }
-/* line 46, ../sass/partials/_general.scss */
+/* line 47, ../sass/partials/_general.scss */
 #region-content .content em {
   font-style: italic;
 }
-/* line 50, ../sass/partials/_general.scss */
+/* line 51, ../sass/partials/_general.scss */
 #region-content .content a {
   color: #474747;
   text-decoration: none;
   word-wrap: break-word;
 }
-/* line 55, ../sass/partials/_general.scss */
+/* line 56, ../sass/partials/_general.scss */
 #region-content .content a:hover {
   text-decoration: underline;
 }
-/* line 66, ../sass/partials/_general.scss */
+/* line 67, ../sass/partials/_general.scss */
 #region-content .content #content-main ul li {
   list-style: disc;
 }
-/* line 71, ../sass/partials/_general.scss */
+/* line 72, ../sass/partials/_general.scss */
 #region-content .content #content-main ol li {
   list-style: decimal;
 }
-/* line 77, ../sass/partials/_general.scss */
+/* line 78, ../sass/partials/_general.scss */
 #region-content .content #content-main #region-content-sidebar ul li {
   list-style: none;
   margin-left: 10px;
 }
-/* line 83, ../sass/partials/_general.scss */
+/* line 84, ../sass/partials/_general.scss */
 #region-content .content #content-main #region-content-sidebar ol li {
   list-style: none;
   margin-left: 10px;

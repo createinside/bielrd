@@ -21,6 +21,7 @@
       if(isset($content['field_main_summary'])) hide($content['field_main_summary']);
       if(isset($content['field_main_image'])) print render($content['field_main_image']);
       if(isset($content['field_main_summary'])) print render($content['field_main_summary']);
+      if(isset($content['field_os2web_borger_dk_header'])) print render($content['field_os2web_borger_dk_header']);
 		?>
     <?php if(isset($region['content_sidebar'])) { ?>
 			<div id="region-content-sidebar">
