@@ -43,6 +43,7 @@ function os2web_borger_dk_user_default_permissions() {
   $permissions['edit any os2web_borger_dk_article content'] = array(
     'name' => 'edit any os2web_borger_dk_article content',
     'roles' => array(
+      'fagredaktør' => 'fagredaktør',
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'node',

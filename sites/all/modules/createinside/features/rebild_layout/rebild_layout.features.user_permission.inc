@@ -10,7 +10,7 @@
 function rebild_layout_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: administer accordion menu.
+  // Exported permission: 'administer accordion menu'.
   $permissions['administer accordion menu'] = array(
     'name' => 'administer accordion menu',
     'roles' => array(
@@ -19,7 +19,7 @@ function rebild_layout_user_default_permissions() {
     'module' => 'accordion_menu',
   );
 
-  // Exported permission: administer delta.
+  // Exported permission: 'administer delta'.
   $permissions['administer delta'] = array(
     'name' => 'administer delta',
     'roles' => array(
@@ -28,7 +28,7 @@ function rebild_layout_user_default_permissions() {
     'module' => 'delta_ui',
   );
 
-  // Exported permission: administer delta blocks.
+  // Exported permission: 'administer delta blocks'.
   $permissions['administer delta blocks'] = array(
     'name' => 'administer delta blocks',
     'roles' => array(
@@ -37,7 +37,7 @@ function rebild_layout_user_default_permissions() {
     'module' => 'delta_blocks',
   );
 
-  // Exported permission: administer ultimenu.
+  // Exported permission: 'administer ultimenu'.
   $permissions['administer ultimenu'] = array(
     'name' => 'administer ultimenu',
     'roles' => array(

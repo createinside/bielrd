@@ -68,7 +68,7 @@ function rebild_consultation_field_default_field_instances() {
     'bundle' => 'consultation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Opret en disclaimer.',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -89,6 +89,32 @@ function rebild_consultation_field_default_field_instances() {
     'label' => 'Disclaimer',
     'required' => 0,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'php_code' => 0,
+          'plain_text' => 0,
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'php_code' => array(
+              'weight' => 11,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -131,16 +157,52 @@ function rebild_consultation_field_default_field_instances() {
       'description_field' => 0,
       'file_directory' => '',
       'file_extensions' => 'txt doc docx pdf',
-      'max_filesize' => '',
+      'max_filesize' => '5 MB',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'file',
+      'module' => 'media',
       'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 0,
+        ),
+        'manualcrop_crop_info' => 1,
+        'manualcrop_default_crop_area' => 1,
+        'manualcrop_enable' => 0,
+        'manualcrop_inline_crop' => FALSE,
+        'manualcrop_instant_crop' => FALSE,
+        'manualcrop_instant_preview' => 1,
+        'manualcrop_require_cropping' => array(
+          'blok' => 0,
+          'indhold_top' => 0,
+          'inline_bottom' => 0,
+          'inline_top' => 0,
+          'nyhed_forside' => 0,
+        ),
+        'manualcrop_styles_list' => array(
+          'blok' => 0,
+          'indhold_top' => 0,
+          'inline_bottom' => 0,
+          'inline_top' => 0,
+          'nyhed_forside' => 0,
+        ),
+        'manualcrop_styles_mode' => 'exclude',
+        'manualcrop_thumblist' => 0,
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'file_generic',
+      'type' => 'media_generic',
       'weight' => 3,
     ),
   );
@@ -150,7 +212,7 @@ function rebild_consultation_field_default_field_instances() {
     'bundle' => 'consultation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Primær indhold.',
+    'description' => 'Indtast en brødtekst. ',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -178,7 +240,7 @@ function rebild_consultation_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 25,
+        'rows' => 10,
       ),
       'type' => 'text_textarea',
       'weight' => 2,
@@ -190,7 +252,7 @@ function rebild_consultation_field_default_field_instances() {
     'bundle' => 'consultation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Indsæt den generede iframe kode fra siden her: www.gis-kort.dk - placeres under hovedindholdet.',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -229,7 +291,7 @@ function rebild_consultation_field_default_field_instances() {
   $field_instances['node-consultation-field_main_image'] = array(
     'bundle' => 'consultation',
     'deleted' => 0,
-    'description' => 'Stort bannerbillede - placeres øverst på siden. Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.',
+    'description' => 'Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -258,7 +320,7 @@ function rebild_consultation_field_default_field_instances() {
       'default_image' => 0,
       'file_directory' => 'consultation',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '10 MB',
+      'max_filesize' => '5 MB',
       'max_resolution' => '',
       'min_resolution' => '680x190',
       'title_field' => 1,
@@ -444,13 +506,11 @@ function rebild_consultation_field_default_field_instances() {
   t('Filer');
   t('Forældelsesdato');
   t('GIS Kort');
-  t('Indsæt den generede iframe kode fra siden her: www.gis-kort.dk - placeres under hovedindholdet.');
-  t('Opret en disclaimer.');
-  t('Primær indhold.');
+  t('Indtast en brødtekst. ');
   t('Sektion');
-  t('Stort bannerbillede - placeres øverst på siden. Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
   t('Tags');
   t('Upload en eller flere filer til dette dokument.');
+  t('Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
   t('Vælg en dato for høring.');
   t('Vælg et eller flere tags der er med til at beskrive indholdet.');
   t('Vælg hvilken sektion indholdet hører til.');

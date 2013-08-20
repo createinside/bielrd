@@ -43,7 +43,7 @@ function rebild_featured_field_default_field_instances() {
       'default_image' => 0,
       'file_directory' => 'aktuelt',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '10 MB',
+      'max_filesize' => '5 MB',
       'max_resolution' => '',
       'min_resolution' => '720x305',
       'title_field' => 1,
@@ -127,7 +127,7 @@ function rebild_featured_field_default_field_instances() {
         'class' => '',
         'configurable_title' => 0,
         'rel' => '',
-        'target' => 'default',
+        'target' => 'user',
         'title' => '',
       ),
       'display' => array(

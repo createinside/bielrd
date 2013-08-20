@@ -10,7 +10,7 @@
 function rebild_consultation_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: create consultation content.
+  // Exported permission: 'create consultation content'.
   $permissions['create consultation content'] = array(
     'name' => 'create consultation content',
     'roles' => array(
@@ -20,7 +20,7 @@ function rebild_consultation_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete any consultation content.
+  // Exported permission: 'delete any consultation content'.
   $permissions['delete any consultation content'] = array(
     'name' => 'delete any consultation content',
     'roles' => array(
@@ -29,7 +29,7 @@ function rebild_consultation_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete own consultation content.
+  // Exported permission: 'delete own consultation content'.
   $permissions['delete own consultation content'] = array(
     'name' => 'delete own consultation content',
     'roles' => array(
@@ -39,16 +39,17 @@ function rebild_consultation_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit any consultation content.
+  // Exported permission: 'edit any consultation content'.
   $permissions['edit any consultation content'] = array(
     'name' => 'edit any consultation content',
     'roles' => array(
+      'fagredaktør' => 'fagredaktør',
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'node',
   );
 
-  // Exported permission: edit own consultation content.
+  // Exported permission: 'edit own consultation content'.
   $permissions['edit own consultation content'] = array(
     'name' => 'edit own consultation content',
     'roles' => array(

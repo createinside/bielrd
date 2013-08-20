@@ -15,7 +15,7 @@ function rebild_offering_field_default_field_instances() {
     'bundle' => 'offering',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Primær indhold.',
+    'description' => 'Indtast en brødtekst for udbuddet.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -43,7 +43,7 @@ function rebild_offering_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 25,
+        'rows' => 10,
       ),
       'type' => 'text_textarea',
       'weight' => 3,
@@ -55,7 +55,7 @@ function rebild_offering_field_default_field_instances() {
     'bundle' => 'offering',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Fakta-indhold - placeres i en boks øverst til højre i hovedindholdet.',
+    'description' => 'Indtast en kort tekst til faktaboksen.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -95,7 +95,7 @@ function rebild_offering_field_default_field_instances() {
     'bundle' => 'offering',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Indsæt den generede iframe kode fra siden her: www.gis-kort.dk - placeres under hovedindholdet.',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -134,7 +134,7 @@ function rebild_offering_field_default_field_instances() {
   $field_instances['node-offering-field_main_image'] = array(
     'bundle' => 'offering',
     'deleted' => 0,
-    'description' => 'Stort bannerbillede - placeres øverst på siden. Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.',
+    'description' => 'Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -163,7 +163,7 @@ function rebild_offering_field_default_field_instances() {
       'default_image' => 0,
       'file_directory' => 'offering',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '10 MB',
+      'max_filesize' => '5 MB',
       'max_resolution' => '',
       'min_resolution' => '680x190',
       'title_field' => 1,
@@ -194,12 +194,19 @@ function rebild_offering_field_default_field_instances() {
         'manualcrop_inline_crop' => FALSE,
         'manualcrop_instant_crop' => FALSE,
         'manualcrop_instant_preview' => 1,
-        'manualcrop_maximize_default_crop_area' => FALSE,
         'manualcrop_require_cropping' => array(
+          'blok' => 0,
           'indhold_top' => 'indhold_top',
+          'inline_bottom' => 0,
+          'inline_top' => 0,
+          'nyhed_forside' => 0,
         ),
         'manualcrop_styles_list' => array(
+          'blok' => 0,
           'indhold_top' => 'indhold_top',
+          'inline_bottom' => 0,
+          'inline_top' => 0,
+          'nyhed_forside' => 0,
         ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
@@ -214,7 +221,7 @@ function rebild_offering_field_default_field_instances() {
   $field_instances['node-offering-field_main_image_gallery'] = array(
     'bundle' => 'offering',
     'deleted' => 0,
-    'description' => 'Billedgalleri - placeres under hovedindholdet.',
+    'description' => 'Upload et eller flere billeder, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -242,7 +249,7 @@ function rebild_offering_field_default_field_instances() {
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
+      'max_filesize' => '5 MB',
       'max_resolution' => '',
       'min_resolution' => '',
       'title_field' => 1,
@@ -273,9 +280,20 @@ function rebild_offering_field_default_field_instances() {
         'manualcrop_inline_crop' => FALSE,
         'manualcrop_instant_crop' => FALSE,
         'manualcrop_instant_preview' => 1,
-        'manualcrop_maximize_default_crop_area' => FALSE,
-        'manualcrop_require_cropping' => array(),
-        'manualcrop_styles_list' => array(),
+        'manualcrop_require_cropping' => array(
+          'blok' => 0,
+          'indhold_top' => 0,
+          'inline_bottom' => 0,
+          'inline_top' => 0,
+          'nyhed_forside' => 0,
+        ),
+        'manualcrop_styles_list' => array(
+          'blok' => 0,
+          'indhold_top' => 0,
+          'inline_bottom' => 0,
+          'inline_top' => 0,
+          'nyhed_forside' => 0,
+        ),
         'manualcrop_styles_mode' => 'exclude',
         'manualcrop_thumblist' => 0,
         'progress_indicator' => 'throbber',
@@ -374,7 +392,7 @@ function rebild_offering_field_default_field_instances() {
     'bundle' => 'offering',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Resumétekst der kortfattet og præcist beskriver indholdet. ',
+    'description' => 'Indtast et resumé. Resuméet vises øverst før brødteksten.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -475,16 +493,52 @@ function rebild_offering_field_default_field_instances() {
       'description_field' => 0,
       'file_directory' => '',
       'file_extensions' => 'pdf',
-      'max_filesize' => '',
+      'max_filesize' => '5 MB',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'file',
+      'module' => 'media',
       'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 0,
+        ),
+        'manualcrop_crop_info' => 1,
+        'manualcrop_default_crop_area' => 1,
+        'manualcrop_enable' => 0,
+        'manualcrop_inline_crop' => FALSE,
+        'manualcrop_instant_crop' => FALSE,
+        'manualcrop_instant_preview' => 1,
+        'manualcrop_require_cropping' => array(
+          'blok' => 0,
+          'indhold_top' => 0,
+          'inline_bottom' => 0,
+          'inline_top' => 0,
+          'nyhed_forside' => 0,
+        ),
+        'manualcrop_styles_list' => array(
+          'blok' => 0,
+          'indhold_top' => 0,
+          'inline_bottom' => 0,
+          'inline_top' => 0,
+          'nyhed_forside' => 0,
+        ),
+        'manualcrop_styles_mode' => 'exclude',
+        'manualcrop_thumblist' => 0,
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'file_generic',
+      'type' => 'media_generic',
       'weight' => 5,
     ),
   );
@@ -494,21 +548,20 @@ function rebild_offering_field_default_field_instances() {
   t('Angiv en dato for hvornår dette indhold skal opdateres eller gennemses igen.');
   t('Billede');
   t('Billedgalleri');
-  t('Billedgalleri - placeres under hovedindholdet.');
   t('Brødtekst');
-  t('Fakta-indhold - placeres i en boks øverst til højre i hovedindholdet.');
   t('Faktaboks');
   t('Forældelsesdato');
   t('GIS Kort');
-  t('Indsæt den generede iframe kode fra siden her: www.gis-kort.dk - placeres under hovedindholdet.');
+  t('Indtast en brødtekst for udbuddet.');
+  t('Indtast en kort tekst til faktaboksen.');
+  t('Indtast et resumé. Resuméet vises øverst før brødteksten.');
   t('PDF filer');
-  t('Primær indhold.');
   t('Resumé');
-  t('Resumétekst der kortfattet og præcist beskriver indholdet. ');
   t('Sektion');
-  t('Stort bannerbillede - placeres øverst på siden. Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
   t('Tags');
   t('Upload en eller flere PDF filer.');
+  t('Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
+  t('Upload et eller flere billeder, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
   t('Vælg et eller flere tags der er med til at beskrive indholdet.');
   t('Vælg hvilken sektion indholdet hører til.');
 

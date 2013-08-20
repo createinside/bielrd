@@ -32,8 +32,7 @@ function rebild_calendar_field_group_info() {
       'instance_settings' => array(
         'required_fields' => 1,
         'classes' => '',
-        'description' => 'Her kategoriseres dette indhold. OBS - ved tvivlsspørgsmål kontakt 
-kommunikationsafdelingen.',
+        'description' => '',
       ),
       'formatter' => 'open',
     ),

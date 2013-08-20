@@ -83,7 +83,7 @@ function rebild_page_field_default_field_instances() {
     'bundle' => 'image',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Alternative text is used by screen readers, search engines, and when the image cannot be loaded. By adding alt text you improve accessibility and search engine optimization.',
     'display' => array(
       'block' => array(
         'label' => 'above',
@@ -184,7 +184,7 @@ function rebild_page_field_default_field_instances() {
     'bundle' => 'image',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Title text attribute',
+    'description' => 'Title text is used in the tool tip when a user hovers their mouse over the image. Adding title text makes it easier to understand the context of an image and improves usability.',
     'display' => array(
       'block' => array(
         'label' => 'above',
@@ -443,7 +443,7 @@ function rebild_page_field_default_field_instances() {
       'default_image' => 0,
       'file_directory' => 'page',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '10 MB',
+      'max_filesize' => '5 MB',
       'max_resolution' => '',
       'min_resolution' => '680x190',
       'title_field' => 1,
@@ -532,9 +532,9 @@ function rebild_page_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
-      'file_directory' => '',
+      'file_directory' => 'page_image_gallery',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
+      'max_filesize' => '5 MB',
       'max_resolution' => '',
       'min_resolution' => '',
       'title_field' => 1,
@@ -565,9 +565,20 @@ function rebild_page_field_default_field_instances() {
         'manualcrop_inline_crop' => FALSE,
         'manualcrop_instant_crop' => FALSE,
         'manualcrop_instant_preview' => 1,
-        'manualcrop_maximize_default_crop_area' => FALSE,
-        'manualcrop_require_cropping' => array(),
-        'manualcrop_styles_list' => array(),
+        'manualcrop_require_cropping' => array(
+          'blok' => 0,
+          'indhold_top' => 0,
+          'inline_bottom' => 0,
+          'inline_top' => 0,
+          'nyhed_forside' => 0,
+        ),
+        'manualcrop_styles_list' => array(
+          'blok' => 0,
+          'indhold_top' => 0,
+          'inline_bottom' => 0,
+          'inline_top' => 0,
+          'nyhed_forside' => 0,
+        ),
         'manualcrop_styles_mode' => 'exclude',
         'manualcrop_thumblist' => 0,
         'progress_indicator' => 'throbber',
@@ -606,7 +617,7 @@ function rebild_page_field_default_field_instances() {
         'class' => '',
         'configurable_title' => 0,
         'rel' => '',
-        'target' => 'default',
+        'target' => 'user',
         'title' => '',
       ),
       'display' => array(
@@ -694,7 +705,7 @@ function rebild_page_field_default_field_instances() {
     'settings' => array(
       'default_value' => 'strtotime',
       'default_value2' => 'same',
-      'default_value_code' => '+6 months',
+      'default_value_code' => '+3 months',
       'default_value_code2' => '',
       'user_register_form' => FALSE,
     ),
@@ -757,7 +768,7 @@ function rebild_page_field_default_field_instances() {
     'bundle' => 'page',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Resumétekst der kortfattet og præcist beskriver indholdet. ',
+    'description' => 'Indtast et resumé. Resuméet vises øverst før brødteksten.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -788,7 +799,7 @@ function rebild_page_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -834,6 +845,7 @@ function rebild_page_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Accordion');
   t('Alt tekst');
+  t('Alternative text is used by screen readers, search engines, and when the image cannot be loaded. By adding alt text you improve accessibility and search engine optimization.');
   t('Angiv en dato for hvornår dette indhold skal opdateres eller gennemses igen.');
   t('Billede');
   t('Billedgalleri');
@@ -844,18 +856,18 @@ function rebild_page_field_default_field_instances() {
   t('Forældelsesdato');
   t('GIS Kort');
   t('Indsæt den generede iframe kode fra siden her: www.gis-kort.dk - placeres under hovedindholdet.');
+  t('Indtast et resumé. Resuméet vises øverst før brødteksten.');
   t('Indtast tekst til en eller flere accordions. En accordion er et sammenklappeligt element, der vises nederst på indholdet.');
   t('Interne links');
   t('Overskrift');
   t('Primær indhold.');
   t('Resumé');
-  t('Resumétekst der kortfattet og præcist beskriver indholdet. ');
   t('Sektion');
   t('Stort bannerbillede - placeres øverst på siden. Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
   t('Tags');
   t('Tekst');
   t('Title tekst');
-  t('Title text attribute');
+  t('Title text is used in the tool tip when a user hovers their mouse over the image. Adding title text makes it easier to understand the context of an image and improves usability.');
   t('Upload et eller flere billeder, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
   t('Vælg et eller flere tags der er med til at beskrive indholdet.');
   t('Vælg hvilken sektion indholdet hører til.');

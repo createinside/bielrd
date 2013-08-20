@@ -57,7 +57,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -68,13 +68,14 @@ function os2web_borger_dk_field_default_field_instances() {
     'description' => 'Stort bannerbillede - placeres øverst på siden. Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'image',
+        'label' => 'hidden',
+        'module' => 'picture',
         'settings' => array(
+          'fallback_image_style' => '',
           'image_link' => '',
-          'image_style' => '',
+          'picture_group' => 'indhold_top',
         ),
-        'type' => 'image',
+        'type' => 'picture',
         'weight' => 1,
       ),
       'teaser' => array(
@@ -93,7 +94,7 @@ function os2web_borger_dk_field_default_field_instances() {
       'default_image' => 0,
       'file_directory' => 'borger_dk_article',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '10 MB',
+      'max_filesize' => '5 MB',
       'max_resolution' => '',
       'min_resolution' => '680x190',
       'title_field' => 0,
@@ -181,7 +182,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -219,7 +220,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -310,7 +311,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 8,
+      'weight' => 10,
     ),
   );
 
@@ -355,7 +356,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 11,
+      'weight' => 15,
     ),
   );
 
@@ -447,91 +448,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 10,
-    ),
-  );
-
-  // Exported field_instance: 'node-os2web_borger_dk_article-field_os2web_borger_dk_pagetitle'
-  $field_instances['node-os2web_borger_dk_article-field_os2web_borger_dk_pagetitle'] = array(
-    'bundle' => 'os2web_borger_dk_article',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'related_block' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_os2web_borger_dk_pagetitle',
-    'label' => 'Page title',
-    'required' => 0,
-    'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'blokindhold' => 'blokindhold',
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 'php_code',
-          'plain_text' => 'plain_text',
-          'raw' => 'raw',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'blokindhold' => array(
-              'weight' => -7,
-            ),
-            'filtered_html' => array(
-              'weight' => -10,
-            ),
-            'full_html' => array(
-              'weight' => -9,
-            ),
-            'php_code' => array(
-              'weight' => -6,
-            ),
-            'plain_text' => array(
-              'weight' => -8,
-            ),
-            'raw' => array(
-              'weight' => 0,
-            ),
-          ),
-        ),
-      ),
-      'linkit' => array(
-        'enable' => 0,
-        'insert_plugin' => '',
-      ),
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 14,
     ),
   );
 
@@ -564,7 +481,7 @@ function os2web_borger_dk_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_os2web_borger_dk_post_text',
-    'label' => 'Post-text',
+    'label' => 'Efter indhold',
     'required' => 0,
     'settings' => array(
       'text_processing' => 1,
@@ -577,7 +494,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -610,7 +527,7 @@ function os2web_borger_dk_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_os2web_borger_dk_pre_text',
-    'label' => 'Pre-text',
+    'label' => 'Før indhold',
     'required' => 0,
     'settings' => array(
       'text_processing' => 1,
@@ -623,7 +540,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -669,7 +586,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 11,
+      'weight' => 16,
     ),
   );
 
@@ -715,7 +632,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 9,
+      'weight' => 12,
     ),
   );
 
@@ -761,7 +678,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 12,
+      'weight' => 17,
     ),
   );
 
@@ -806,7 +723,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 10,
+      'weight' => 13,
     ),
   );
 
@@ -818,14 +735,13 @@ function os2web_borger_dk_field_default_field_instances() {
   t('Billede');
   t('Borger.dk-URL');
   t('Byline');
+  t('Efter indhold');
   t('FORM Emneord');
+  t('Før indhold');
   t('Header');
   t('KL Emneord');
   t('Legislation');
-  t('Page title');
   t('Portalservice/self-service');
-  t('Post-text');
-  t('Pre-text');
   t('Recommended');
   t('Sektion');
   t('Shortlist');

@@ -108,10 +108,10 @@ function os2web_borger_dk_strongarm() {
           'weight' => '13',
         ),
         'metatags' => array(
-          'weight' => '9',
+          'weight' => '11',
         ),
         'redirect' => array(
-          'weight' => '16',
+          'weight' => '19',
         ),
       ),
       'display' => array(),
@@ -156,7 +156,7 @@ function os2web_borger_dk_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_os2web_borger_dk_article';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['node_preview_os2web_borger_dk_article'] = $strongarm;
 
   $strongarm = new stdClass();

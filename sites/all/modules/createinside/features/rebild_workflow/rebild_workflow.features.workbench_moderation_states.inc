@@ -25,7 +25,7 @@ function rebild_workflow_workbench_moderation_export_states() {
       'name' => 'published',
       'label' => 'Udgivet',
       'description' => 'Udgiv dette indhold',
-      'weight' => -7,
+      'weight' => -6,
     ),
     'revised' => array(
       'name' => 'revised',

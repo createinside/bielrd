@@ -74,7 +74,7 @@ function rebild_featured_views_default_views() {
     'fallback_image_style' => 'blok',
     'image_link' => '',
   );
-  /* Felt: Indhold: Titel */
+  /* Felt: Indhold: Overskrift */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';

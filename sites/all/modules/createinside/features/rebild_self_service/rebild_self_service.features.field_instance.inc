@@ -241,7 +241,7 @@ function rebild_self_service_field_default_field_instances() {
         'class' => '',
         'configurable_title' => 0,
         'rel' => '',
-        'target' => 'default',
+        'target' => 'user',
         'title' => '',
       ),
       'display' => array(
@@ -293,7 +293,7 @@ function rebild_self_service_field_default_field_instances() {
       'description_field' => 0,
       'file_directory' => '',
       'file_extensions' => 'pdf',
-      'max_filesize' => '',
+      'max_filesize' => '5 MB',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -324,11 +324,15 @@ function rebild_self_service_field_default_field_instances() {
         'manualcrop_require_cropping' => array(
           'blok' => 0,
           'indhold_top' => 0,
+          'inline_bottom' => 0,
+          'inline_top' => 0,
           'nyhed_forside' => 0,
         ),
         'manualcrop_styles_list' => array(
           'blok' => 0,
           'indhold_top' => 0,
+          'inline_bottom' => 0,
+          'inline_top' => 0,
           'nyhed_forside' => 0,
         ),
         'manualcrop_styles_mode' => 'exclude',
