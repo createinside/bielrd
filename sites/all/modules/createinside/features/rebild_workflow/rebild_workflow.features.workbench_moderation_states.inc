@@ -27,6 +27,12 @@ function rebild_workflow_workbench_moderation_export_states() {
       'description' => 'Udgiv dette indhold',
       'weight' => -6,
     ),
+    'published_needs_review' => array(
+      'name' => 'published_needs_review',
+      'label' => 'Udgivet med mangler',
+      'description' => 'Udgivet med mangler',
+      'weight' => -7,
+    ),
     'revised' => array(
       'name' => 'revised',
       'label' => 'Revideret',

@@ -22,7 +22,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -76,7 +76,7 @@ function os2web_borger_dk_field_default_field_instances() {
           'picture_group' => 'indhold_top',
         ),
         'type' => 'picture',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -159,7 +159,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -197,7 +197,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -235,7 +235,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 14,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -281,7 +281,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -372,7 +372,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -415,10 +415,9 @@ function os2web_borger_dk_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 10,
+        'type' => 'hidden',
+        'weight' => 9,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -464,7 +463,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 4,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -510,7 +509,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -553,10 +552,9 @@ function os2web_borger_dk_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 7,
+        'type' => 'hidden',
+        'weight' => 8,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -602,7 +600,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 9,
+        'weight' => 7,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -648,7 +646,7 @@ function os2web_borger_dk_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 6,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -682,51 +680,6 @@ function os2web_borger_dk_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-os2web_borger_dk_article-field_termref_kle'
-  $field_instances['node-os2web_borger_dk_article-field_termref_kle'] = array(
-    'bundle' => 'os2web_borger_dk_article',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 12,
-      ),
-      'related_block' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_termref_kle',
-    'label' => 'KL Emneord',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
-      'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
-      ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 13,
-    ),
-  );
-
   // Translatables
   // Included for use with string extractors like potx.
   t('Article text');
@@ -739,7 +692,6 @@ function os2web_borger_dk_field_default_field_instances() {
   t('FORM Emneord');
   t('Før indhold');
   t('Header');
-  t('KL Emneord');
   t('Legislation');
   t('Portalservice/self-service');
   t('Recommended');

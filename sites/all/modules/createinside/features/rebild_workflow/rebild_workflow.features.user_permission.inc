@@ -21,6 +21,17 @@ function rebild_workflow_user_default_permissions() {
     'module' => 'workbench',
   );
 
+  // Exported permission: 'administer main-menu menu items'.
+  $permissions['administer main-menu menu items'] = array(
+    'name' => 'administer main-menu menu items',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'fagredaktør' => 'fagredaktør',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'menu_admin_per_menu',
+  );
+
   // Exported permission: 'administer menu'.
   $permissions['administer menu'] = array(
     'name' => 'administer menu',
@@ -28,6 +39,15 @@ function rebild_workflow_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'menu',
+  );
+
+  // Exported permission: 'administer menu-secondary-menu menu items'.
+  $permissions['administer menu-secondary-menu menu items'] = array(
+    'name' => 'administer menu-secondary-menu menu items',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'menu_admin_per_menu',
   );
 
   // Exported permission: 'administer scheduler'.
@@ -88,6 +108,17 @@ function rebild_workflow_user_default_permissions() {
     'module' => 'metatag',
   );
 
+  // Exported permission: 'menu view unpublished'.
+  $permissions['menu view unpublished'] = array(
+    'name' => 'menu view unpublished',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'fagredaktør' => 'fagredaktør',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'menu_view_unpublished',
+  );
+
   // Exported permission: 'moderate content from draft to needs_review'.
   $permissions['moderate content from draft to needs_review'] = array(
     'name' => 'moderate content from draft to needs_review',
@@ -120,11 +151,32 @@ function rebild_workflow_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
+  // Exported permission: 'moderate content from needs_review to published_needs_review'.
+  $permissions['moderate content from needs_review to published_needs_review'] = array(
+    'name' => 'moderate content from needs_review to published_needs_review',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'workbench_moderation',
+  );
+
   // Exported permission: 'moderate content from needs_review to revised'.
   $permissions['moderate content from needs_review to revised'] = array(
     'name' => 'moderate content from needs_review to revised',
     'roles' => array(
       'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'workbench_moderation',
+  );
+
+  // Exported permission: 'moderate content from published_needs_review to needs_review'.
+  $permissions['moderate content from published_needs_review to needs_review'] = array(
+    'name' => 'moderate content from published_needs_review to needs_review',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'fagredaktør' => 'fagredaktør',
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'workbench_moderation',

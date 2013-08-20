@@ -10,6 +10,27 @@
 function rebild_page_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'administer redirects'.
+  $permissions['administer redirects'] = array(
+    'name' => 'administer redirects',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'fagredaktør' => 'fagredaktør',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'redirect',
+  );
+
+  // Exported permission: 'bypass file access'.
+  $permissions['bypass file access'] = array(
+    'name' => 'bypass file access',
+    'roles' => array(
+      'fagredaktør' => 'fagredaktør',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'file_entity',
+  );
+
   // Exported permission: 'create page content'.
   $permissions['create page content'] = array(
     'name' => 'create page content',
@@ -62,6 +83,15 @@ function rebild_page_user_default_permissions() {
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'import media'.
+  $permissions['import media'] = array(
+    'name' => 'import media',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'media',
   );
 
   return $permissions;
