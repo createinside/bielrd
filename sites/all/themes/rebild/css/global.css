@@ -874,7 +874,7 @@ Borger dk
   margin-right: 0.5em;
 }
 /* line 43, ../sass/partials/_nodes.scss */
-#region-content .node #content-main ul {
+#region-content .node #content-main ul, #region-content .node #content-main ol {
   margin-left: 20px;
 }
 
