@@ -79,23 +79,23 @@ Backend
 }
 /* line 19, ../sass/partials/_general.scss */
 #region-content .content h2 {
-  font-size: 1.4em;
-  line-height: 1.4em;
+  font-size: 1.25em;
+  line-height: 1.25em;
 }
 /* line 23, ../sass/partials/_general.scss */
 #region-content .content h3 {
-  font-size: 1.3em;
-  line-height: 1.3em;
+  font-size: 1.08em;
+  line-height: 1.08em;
 }
 /* line 27, ../sass/partials/_general.scss */
 #region-content .content h4 {
-  font-size: 1.2em;
-  line-height: 1.2em;
+  font-size: 1.05em;
+  line-height: 1.05em;
 }
 /* line 31, ../sass/partials/_general.scss */
 #region-content .content h5 {
-  font-size: 1.1em;
-  line-height: 1.1em;
+  font-size: 1em;
+  line-height: 1em;
 }
 /* line 35, ../sass/partials/_general.scss */
 #region-content .content h6 {

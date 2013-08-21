@@ -62,61 +62,64 @@
 /* Region: Content Sidebar */
 #region-content-sidebar {
 	.block {
-		margin-bottom: $spacing-std/2;
-		.block-title {
-			font-size: $font-size-std;
+		margin-bottom: $spacing-std;
+		.block-title, h3 {
+			font-size: 12px;
 			line-height: $font-size-std;
 			background: $color-blue;
 			color: white;
-			margin: 0 0 $spacing-std/2;
-			padding: 0.4em 0.5em;
+			margin: 0 0 $spacing-std*0.75;
+			padding: 0.4em 0.7em;
+			font-weight: normal;
 			@include text-shadow(none);
 			@include border-radius(3px);
+		}
+		h3 {
+			margin-top: $spacing-std;
 		}
 		.content {
 			color: $text-color;
 			line-height: $line-height-std;
 			padding-bottom: 0;
 			font-size: $font-size-small;
-			li {
-					margin: 0 0 0.5em 0;
+			ul {	
+				margin: 0 0.75em;
+				overflow: hidden;
+				li {
+					margin: 0 0 .75em 0;
 					line-height: 1.15em;
 				}
-			li:before {
-				@include icon-prepare();
-				content: "\f101";	
-				margin-right: 0.5em;
-				color: $color-blue;
-				font-size: 10px;
+				li:before {
+					@include icon-prepare();
+					content: "\f101";	
+					color: $color-blue;
+					margin: 0.1em 0.5em 0 0;
+					font-size: 0.9em;
+					display: block;
+					float: left;
+				}
 			}
 		}
 		/* Content sidebar borger.dk - Læs også */
 		.view-content-sidebar-borger-dk-read-also {
-			h3 {
-				font-size: 1.1em;
-				line-height: $font-size-std;
-				background: $color-blue;
-				color: white;
-				margin: 0 0 $spacing-std/2;
-				padding: 0.4em 0.5em;
-				@include text-shadow(none);
-				@include border-radius(3px);
-				font-weight: normal;				
-			}
 			h4 {
-				margin: 0 5px 5px 5px;
+				margin: 1em .75em .5em;
 			}
-			ul {
-				margin: 0 5px 20px 5px;
-				li {
-					p {
-						display: inline;
-					}
-				}
-			}		
-			
+			h3 {
+				
+			}
 		}
-			
+	}
+	/**
+	 * RELATED CONTENT - Content sidebar
+	 */
+	section.related-content-links {
+		border: 1px solid $color-blue;
+		padding-bottom: $spacing-std/2;
+		@include border-radius($border-radius-std);
+		.block-title {
+			@include border-radius(0);
+		}
 	}
 }
 
