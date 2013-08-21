@@ -7,7 +7,7 @@ sites/*/private
 sites/all/modules/devel
 
 # Ignore SASS cache.
-sites/all/themes/rebild/.sass-cache
+sites/all/themes/rebild/.sass-cache/
 sites/all/themes/rebild/.sass-cache/*
 sites/all/themes/rebild/.sass-cache/*/*
 .sass-cache/
