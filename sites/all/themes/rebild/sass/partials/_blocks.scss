@@ -79,7 +79,8 @@
 			padding-bottom: 0;
 			font-size: $font-size-small;
 			li {
-					margin-bottom: 0.5em;
+					margin: 0 0 0.5em 0;
+					line-height: 1.15em;
 				}
 			li:before {
 				@include icon-prepare();
@@ -103,10 +104,10 @@
 				font-weight: normal;				
 			}
 			h4 {
-				margin: 0 5px 0 5px;
+				margin: 0 5px 5px 5px;
 			}
 			ul {
-				margin: 0 5px 0 5px;
+				margin: 0 5px 20px 5px;
 				li {
 					p {
 						display: inline;
