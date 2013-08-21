@@ -50,7 +50,7 @@ function rebild_general_settings_wysiwyg_default_profiles() {
       'remove_linebreaks' => 1,
       'apply_source_formatting' => 1,
       'paste_auto_cleanup_on_paste' => 1,
-      'block_formats' => 'p,h2,h3,h4',
+      'block_formats' => 'p,h2,h3',
       'css_setting' => 'self',
       'css_path' => 'sites/all/themes/rebild/css/wysiwyg.css',
       'css_classes' => '',
