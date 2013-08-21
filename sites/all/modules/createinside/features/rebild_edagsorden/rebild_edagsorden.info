@@ -89,6 +89,7 @@ features[variable][] = edagsorden_importer_interval
 features[variable][] = edagsorden_root_url
 features[variable][] = edagsorden_xml_url
 features[variable][] = field_bundle_settings_node__agenda
+features[variable][] = language_content_type_agenda
 features[variable][] = menu_options_agenda
 features[variable][] = menu_parent_agenda
 features[variable][] = node_options_agenda

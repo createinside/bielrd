@@ -2,7 +2,6 @@ name = Layout indstillinger
 description = Diverse layout relaterede komponenter såsom context og delta
 core = 7.x
 package = Rebild Indstillinger
-php = 5.2.4
 dependencies[] = accordion_menu
 dependencies[] = context
 dependencies[] = context_ui

@@ -96,13 +96,10 @@ function rebild_page_strongarm() {
           'weight' => '0',
         ),
         'metatags' => array(
-          'weight' => '6',
+          'weight' => '11',
         ),
         'workbench_access' => array(
           'weight' => '11',
-        ),
-        'redirect' => array(
-          'weight' => '2',
         ),
       ),
       'display' => array(
@@ -123,6 +120,20 @@ function rebild_page_strongarm() {
   $strongarm->name = 'language_content_type_page';
   $strongarm->value = '0';
   $export['language_content_type_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'media__file_extensions';
+  $strongarm->value = 'jpg jpeg png gif txt doc docx xls xlsx pdf ppt pptx pps ppsx odt ods odp';
+  $export['media__file_extensions'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'media__wysiwyg_upload_directory';
+  $strongarm->value = 'wysiwyg_media_files';
+  $export['media__wysiwyg_upload_directory'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -154,7 +165,7 @@ function rebild_page_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_page';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['node_preview_page'] = $strongarm;
 
   $strongarm = new stdClass();

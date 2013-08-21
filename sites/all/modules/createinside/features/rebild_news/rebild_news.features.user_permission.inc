@@ -10,17 +10,16 @@
 function rebild_news_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: create news_article content.
+  // Exported permission: 'create news_article content'.
   $permissions['create news_article content'] = array(
     'name' => 'create news_article content',
     'roles' => array(
-      'fagredaktør' => 'fagredaktør',
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'node',
   );
 
-  // Exported permission: delete any news_article content.
+  // Exported permission: 'delete any news_article content'.
   $permissions['delete any news_article content'] = array(
     'name' => 'delete any news_article content',
     'roles' => array(
@@ -29,17 +28,16 @@ function rebild_news_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete own news_article content.
+  // Exported permission: 'delete own news_article content'.
   $permissions['delete own news_article content'] = array(
     'name' => 'delete own news_article content',
     'roles' => array(
-      'fagredaktør' => 'fagredaktør',
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'node',
   );
 
-  // Exported permission: edit any news_article content.
+  // Exported permission: 'edit any news_article content'.
   $permissions['edit any news_article content'] = array(
     'name' => 'edit any news_article content',
     'roles' => array(
@@ -48,11 +46,10 @@ function rebild_news_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit own news_article content.
+  // Exported permission: 'edit own news_article content'.
   $permissions['edit own news_article content'] = array(
     'name' => 'edit own news_article content',
     'roles' => array(
-      'fagredaktør' => 'fagredaktør',
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'node',

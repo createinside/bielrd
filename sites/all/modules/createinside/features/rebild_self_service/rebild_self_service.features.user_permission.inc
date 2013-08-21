@@ -14,7 +14,6 @@ function rebild_self_service_user_default_permissions() {
   $permissions['create self_service content'] = array(
     'name' => 'create self_service content',
     'roles' => array(
-      'fagredaktør' => 'fagredaktør',
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'node',
@@ -33,7 +32,6 @@ function rebild_self_service_user_default_permissions() {
   $permissions['delete own self_service content'] = array(
     'name' => 'delete own self_service content',
     'roles' => array(
-      'fagredaktør' => 'fagredaktør',
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'node',
@@ -70,7 +68,6 @@ function rebild_self_service_user_default_permissions() {
   $permissions['edit own self_service content'] = array(
     'name' => 'edit own self_service content',
     'roles' => array(
-      'fagredaktør' => 'fagredaktør',
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'node',

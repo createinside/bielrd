@@ -21,9 +21,17 @@ function rebild_workflow_workbench_moderation_export_transitions() {
       'from_name' => 'needs_review',
       'to_name' => 'published',
     ),
+    'needs_review:published_needs_review' => array(
+      'from_name' => 'needs_review',
+      'to_name' => 'published_needs_review',
+    ),
     'needs_review:revised' => array(
       'from_name' => 'needs_review',
       'to_name' => 'revised',
+    ),
+    'published_needs_review:needs_review' => array(
+      'from_name' => 'published_needs_review',
+      'to_name' => 'needs_review',
     ),
     'revised:needs_review' => array(
       'from_name' => 'revised',

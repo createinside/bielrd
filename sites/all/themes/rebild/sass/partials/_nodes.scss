@@ -5,6 +5,7 @@
 General
 Basic Page
 News Article
+Borger dk
 
 -------------------------------------------------------------------*/
 
@@ -36,6 +37,11 @@ News Article
 				@include icon-prepare();
 				content: "\e00d";	
 				margin-right: 0.5em;
+			}
+		}
+		#content-main {
+			ul,ol {
+				margin-left: 20px;
 			}
 		}
 	}
@@ -132,3 +138,56 @@ News Article
 		
 	}
 }
+/*------------------------------------------------------------------
+	Borger dk
+-------------------------------------------------------------------*/
+
+/* Accordion */
+#region-content {
+	.node-os2web-borger-dk-article {
+		.field.field-name-body {
+			margin: 2em 0 2em 0;
+		}
+		.field-name-field-os2web-borger-dk-header {
+			margin-bottom: $spacing-std;
+			font-size: $font-size-large;
+			line-height: $line-height-std;
+		}
+		.microArticle {
+			div.mArticle {
+				padding: 1em 2.2em;
+			}
+			.accordion_ikon {
+				width: 15px;
+				height: 15px;
+				background-image: url(../img/accordion_closed.png);
+				position: absolute;
+				margin-top: 4px;
+				margin-left: 0.5em;
+			}
+			
+			h2 {
+				background: $bg-node-box;
+				@include border-radius(3px);
+				overflow: hidden;
+				margin-bottom: 8px;
+				font-size: $font-size-std;
+				font-weight: normal;
+				padding: .5em .5em .5em 2.2em;
+				height: 13px;
+				cursor: pointer;
+			}	
+		}
+		.microArticle.aktiv {
+			h2 {
+				background-color: $color-blue;
+				color: #fff;			
+			}
+			.accordion_ikon {
+				background-image: url(../img/accordion_open.png);
+			}
+		}	
+	}	
+}
+
+

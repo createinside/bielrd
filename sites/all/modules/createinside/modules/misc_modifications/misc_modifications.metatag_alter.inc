@@ -24,4 +24,19 @@ function misc_modifications_metatag_info_alter(&$info) {
 
 }
 
+/**
+ * Removes meta tag configurations from the listed entities
+ *
+ * implements hook_entity_info_alter.
+ */
+function misc_modifications_entity_info_alter(&$info) {
+
+	// This array holds all the entitiy machince names where meta tags should be disabled
+	$entities = array("user", "file", "taxonomy_term");
+
+	foreach($entities as $entity) {
+	  $info[$entity]['metatags'] = FALSE;
+	}
+}
+
 ?>

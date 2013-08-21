@@ -37,7 +37,7 @@ function rebild_workflow_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Felt: Indhold: Titel */
+  /* Felt: Indhold: Overskrift */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -440,7 +440,7 @@ function rebild_workflow_views_default_views() {
   $handler->display->display_options['fields']['nid']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['nid']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Felt: Indholdsversion: Titel */
+  /* Felt: Indholdsversion: Overskrift */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node_revision';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -480,7 +480,7 @@ function rebild_workflow_views_default_views() {
   $handler->display->display_options['filters']['uid_current']['relationship'] = 'uid';
   $handler->display->display_options['filters']['uid_current']['value'] = '1';
   $handler->display->display_options['filters']['uid_current']['group'] = 1;
-  /* Filterkriterie: Indholdsversion: Titel */
+  /* Filterkriterie: Indholdsversion: Overskrift */
   $handler->display->display_options['filters']['title']['id'] = 'title';
   $handler->display->display_options['filters']['title']['table'] = 'node_revision';
   $handler->display->display_options['filters']['title']['field'] = 'title';
@@ -581,10 +581,11 @@ function rebild_workflow_views_default_views() {
     t('Du har ikke redigeret noget indhold.'),
     t('revision bruger'),
     t('Hent indholdet fra en indholdsversion.'),
-    t('Titel'),
+    t('Overskrift'),
     t('Type'),
     t('Udgivet'),
     t('Senest opdateret'),
+    t('Titel'),
     t('Page'),
     t('mere'),
     t('Block'),
@@ -758,8 +759,8 @@ function rebild_workflow_views_default_views() {
   $handler->display->display_options['fields']['moderation_actions']['id'] = 'moderation_actions';
   $handler->display->display_options['fields']['moderation_actions']['table'] = 'workbench_moderation_node_history';
   $handler->display->display_options['fields']['moderation_actions']['field'] = 'moderation_actions';
-  $handler->display->display_options['fields']['moderation_actions']['label'] = 'Set moderation state';
-  /* Felt: Indhold: Titel */
+  $handler->display->display_options['fields']['moderation_actions']['label'] = 'Angiv moderationsstatus';
+  /* Felt: Indhold: Overskrift */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -800,7 +801,7 @@ function rebild_workflow_views_default_views() {
   $handler->display->display_options['filters']['uid_current']['field'] = 'uid_current';
   $handler->display->display_options['filters']['uid_current']['relationship'] = 'uid';
   $handler->display->display_options['filters']['uid_current']['value'] = '1';
-  /* Filterkriterie: Indhold: Titel */
+  /* Filterkriterie: Indhold: Overskrift */
   $handler->display->display_options['filters']['title']['id'] = 'title';
   $handler->display->display_options['filters']['title']['table'] = 'node';
   $handler->display->display_options['filters']['title']['field'] = 'title';
@@ -860,6 +861,16 @@ function rebild_workflow_views_default_views() {
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['content'] = 'This list displays content in the "Needs review" state that you can moderate. Currently there is no such content.';
   $handler->display->display_options['empty']['area']['format'] = 'plain_text';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Forbindelse: Workbench Moderation: Indholdselement */
+  $handler->display->display_options['relationships']['nid']['id'] = 'nid';
+  $handler->display->display_options['relationships']['nid']['table'] = 'workbench_moderation_node_history';
+  $handler->display->display_options['relationships']['nid']['field'] = 'nid';
+  $handler->display->display_options['relationships']['nid']['required'] = TRUE;
+  /* Forbindelse: Indholdsversion: Bruger */
+  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
+  $handler->display->display_options['relationships']['uid']['table'] = 'node_revision';
+  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filterkriterie: Workbench Moderation: Aktuelle */
@@ -867,22 +878,26 @@ function rebild_workflow_views_default_views() {
   $handler->display->display_options['filters']['current']['table'] = 'workbench_moderation_node_history';
   $handler->display->display_options['filters']['current']['field'] = 'current';
   $handler->display->display_options['filters']['current']['value'] = '1';
+  $handler->display->display_options['filters']['current']['group'] = 1;
   /* Filterkriterie: Workbench Moderation: Status */
   $handler->display->display_options['filters']['state']['id'] = 'state';
   $handler->display->display_options['filters']['state']['table'] = 'workbench_moderation_node_history';
   $handler->display->display_options['filters']['state']['field'] = 'state';
   $handler->display->display_options['filters']['state']['value'] = array(
     'needs_review' => 'needs_review',
+    'published_needs_review' => 'published_needs_review',
   );
+  $handler->display->display_options['filters']['state']['group'] = 1;
   $handler->display->display_options['filters']['state']['expose']['label'] = 'Workbench Moderation: State';
   $handler->display->display_options['filters']['state']['expose']['operator'] = 'state_op';
   $handler->display->display_options['filters']['state']['expose']['identifier'] = 'state';
-  /* Filterkriterie: Indhold: Titel */
+  /* Filterkriterie: Indhold: Overskrift */
   $handler->display->display_options['filters']['title']['id'] = 'title';
   $handler->display->display_options['filters']['title']['table'] = 'node';
   $handler->display->display_options['filters']['title']['field'] = 'title';
   $handler->display->display_options['filters']['title']['relationship'] = 'nid';
   $handler->display->display_options['filters']['title']['operator'] = 'contains';
+  $handler->display->display_options['filters']['title']['group'] = 1;
   $handler->display->display_options['filters']['title']['exposed'] = TRUE;
   $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
   $handler->display->display_options['filters']['title']['expose']['label'] = 'Titel';
@@ -894,12 +909,73 @@ function rebild_workflow_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['relationship'] = 'nid';
+  $handler->display->display_options['filters']['type']['group'] = 1;
   $handler->display->display_options['filters']['type']['exposed'] = TRUE;
   $handler->display->display_options['filters']['type']['expose']['operator_id'] = 'type_op';
   $handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
   $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
   $handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
   $handler->display->display_options['filters']['type']['expose']['remember'] = TRUE;
+  /* Filterkriterie: Workbench Moderation: Status */
+  $handler->display->display_options['filters']['state_1']['id'] = 'state_1';
+  $handler->display->display_options['filters']['state_1']['table'] = 'workbench_moderation_node_history';
+  $handler->display->display_options['filters']['state_1']['field'] = 'state';
+  $handler->display->display_options['filters']['state_1']['value'] = array(
+    'needs_review' => 'needs_review',
+    'published_needs_review' => 'published_needs_review',
+  );
+  $handler->display->display_options['filters']['state_1']['group'] = 1;
+  $handler->display->display_options['filters']['state_1']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['state_1']['expose']['operator_id'] = 'state_1_op';
+  $handler->display->display_options['filters']['state_1']['expose']['label'] = 'Status';
+  $handler->display->display_options['filters']['state_1']['expose']['operator'] = 'state_1_op';
+  $handler->display->display_options['filters']['state_1']['expose']['identifier'] = 'state_1';
+  $handler->display->display_options['filters']['state_1']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    4 => 0,
+    5 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['state_1']['expose']['reduce'] = TRUE;
+  /* Filterkriterie: Bruger: Center (field_user_center) */
+  $handler->display->display_options['filters']['field_user_center_tid']['id'] = 'field_user_center_tid';
+  $handler->display->display_options['filters']['field_user_center_tid']['table'] = 'field_data_field_user_center';
+  $handler->display->display_options['filters']['field_user_center_tid']['field'] = 'field_user_center_tid';
+  $handler->display->display_options['filters']['field_user_center_tid']['relationship'] = 'uid';
+  $handler->display->display_options['filters']['field_user_center_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_user_center_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_user_center_tid']['expose']['operator_id'] = 'field_user_center_tid_op';
+  $handler->display->display_options['filters']['field_user_center_tid']['expose']['label'] = 'Centrer';
+  $handler->display->display_options['filters']['field_user_center_tid']['expose']['operator'] = 'field_user_center_tid_op';
+  $handler->display->display_options['filters']['field_user_center_tid']['expose']['identifier'] = 'field_user_center_tid';
+  $handler->display->display_options['filters']['field_user_center_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    4 => 0,
+    5 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_user_center_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_user_center_tid']['vocabulary'] = 'centrer';
+  /* Filterkriterie: Indhold: Forfatter uid */
+  $handler->display->display_options['filters']['uid']['id'] = 'uid';
+  $handler->display->display_options['filters']['uid']['table'] = 'node';
+  $handler->display->display_options['filters']['uid']['field'] = 'uid';
+  $handler->display->display_options['filters']['uid']['relationship'] = 'nid';
+  $handler->display->display_options['filters']['uid']['value'] = '';
+  $handler->display->display_options['filters']['uid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['uid']['expose']['operator_id'] = 'uid_op';
+  $handler->display->display_options['filters']['uid']['expose']['label'] = 'Forfatter';
+  $handler->display->display_options['filters']['uid']['expose']['operator'] = 'uid_op';
+  $handler->display->display_options['filters']['uid']['expose']['identifier'] = 'uid';
+  $handler->display->display_options['filters']['uid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    4 => 0,
+    5 => 0,
+    3 => 0,
+  );
   $handler->display->display_options['path'] = 'admin/workbench/content/needs-review';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Kræver opmærksomhed';
@@ -943,7 +1019,7 @@ function rebild_workflow_views_default_views() {
     'published' => 'published',
   );
   $handler->display->display_options['filters']['state_1']['group'] = 1;
-  /* Filterkriterie: Indhold: Titel */
+  /* Filterkriterie: Indhold: Overskrift */
   $handler->display->display_options['filters']['title']['id'] = 'title';
   $handler->display->display_options['filters']['title']['table'] = 'node';
   $handler->display->display_options['filters']['title']['field'] = 'title';
@@ -1102,8 +1178,8 @@ function rebild_workflow_views_default_views() {
   $handler->display->display_options['fields']['moderation_actions']['id'] = 'moderation_actions';
   $handler->display->display_options['fields']['moderation_actions']['table'] = 'workbench_moderation_node_history';
   $handler->display->display_options['fields']['moderation_actions']['field'] = 'moderation_actions';
-  $handler->display->display_options['fields']['moderation_actions']['label'] = 'Set moderation state';
-  /* Felt: Indhold: Titel */
+  $handler->display->display_options['fields']['moderation_actions']['label'] = 'Angiv moderationsstatus';
+  /* Felt: Indhold: Overskrift */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -1152,6 +1228,7 @@ function rebild_workflow_views_default_views() {
   $handler->display->display_options['filters']['state']['field'] = 'state';
   $handler->display->display_options['filters']['state']['value'] = array(
     'needs_review' => 'needs_review',
+    'published_needs_review' => 'published_needs_review',
   );
   $translatables['workbench_rebild_moderation_require_attention'] = array(
     t('Defaults'),
@@ -1178,17 +1255,20 @@ function rebild_workflow_views_default_views() {
     t('Moderation history link'),
     t('Moderation state'),
     t('<div>[state]</div><div>[workbench_moderation_history_link]</div>'),
-    t('Set moderation state'),
-    t('Titel'),
+    t('Angiv moderationsstatus'),
+    t('Overskrift'),
     t('Type'),
     t('Redigeret af'),
     t('Senest opdateret'),
+    t('Titel'),
     t('Status'),
     t('Needs review page'),
     t('Needs review'),
     t('mere'),
     t('This list displays content in the "Needs review" state that you can moderate. Currently there is no such content.'),
     t('Workbench Moderation: State'),
+    t('Centrer'),
+    t('Forfatter'),
     t('Drafts page'),
     t('My drafts'),
     t('This list displays content you have created that is not published. Currently there is no such content.'),
@@ -1304,7 +1384,7 @@ function rebild_workflow_views_default_views() {
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
   $handler->display->display_options['relationships']['uid']['table'] = 'node';
   $handler->display->display_options['relationships']['uid']['field'] = 'uid';
-  /* Felt: Indhold: Titel */
+  /* Felt: Indhold: Overskrift */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -1345,7 +1425,7 @@ function rebild_workflow_views_default_views() {
   $handler->display->display_options['sorts']['changed']['table'] = 'node';
   $handler->display->display_options['sorts']['changed']['field'] = 'changed';
   $handler->display->display_options['sorts']['changed']['order'] = 'DESC';
-  /* Filterkriterie: Indhold: Titel */
+  /* Filterkriterie: Indhold: Overskrift */
   $handler->display->display_options['filters']['title']['id'] = 'title';
   $handler->display->display_options['filters']['title']['table'] = 'node';
   $handler->display->display_options['filters']['title']['field'] = 'title';
@@ -1371,16 +1451,31 @@ function rebild_workflow_views_default_views() {
   $handler->display->display_options['filters']['status']['expose']['operator_id'] = '';
   $handler->display->display_options['filters']['status']['expose']['label'] = 'Udgivet';
   $handler->display->display_options['filters']['status']['expose']['identifier'] = 'published';
-  /* Filterkriterie: Indhold: Udgivet eller administrator */
-  $handler->display->display_options['filters']['status_extra']['id'] = 'status_extra';
-  $handler->display->display_options['filters']['status_extra']['table'] = 'node';
-  $handler->display->display_options['filters']['status_extra']['field'] = 'status_extra';
+  /* Filterkriterie: Bruger: Center (field_user_center) */
+  $handler->display->display_options['filters']['field_user_center_tid']['id'] = 'field_user_center_tid';
+  $handler->display->display_options['filters']['field_user_center_tid']['table'] = 'field_data_field_user_center';
+  $handler->display->display_options['filters']['field_user_center_tid']['field'] = 'field_user_center_tid';
+  $handler->display->display_options['filters']['field_user_center_tid']['relationship'] = 'uid';
+  $handler->display->display_options['filters']['field_user_center_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_user_center_tid']['expose']['operator_id'] = 'field_user_center_tid_op';
+  $handler->display->display_options['filters']['field_user_center_tid']['expose']['label'] = 'Centrer';
+  $handler->display->display_options['filters']['field_user_center_tid']['expose']['operator'] = 'field_user_center_tid_op';
+  $handler->display->display_options['filters']['field_user_center_tid']['expose']['identifier'] = 'field_user_center_tid';
+  $handler->display->display_options['filters']['field_user_center_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    4 => 0,
+    5 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_user_center_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_user_center_tid']['vocabulary'] = 'centrer';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Indhold: Titel */
+  /* Felt: Indhold: Overskrift */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -1438,11 +1533,6 @@ function rebild_workflow_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filterkriterie: Indhold: Udgivet */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = '1';
   $translatables['workbench_rebild_recent_content'] = array(
     t('Defaults'),
     t('Seneste indhold'),
@@ -1462,13 +1552,15 @@ function rebild_workflow_views_default_views() {
     t('Oversigt over alt det nyeste indhold.'),
     t('Der er ikke noget indhold, som du kan redigere.'),
     t('forfatter'),
-    t('Titel'),
+    t('Overskrift'),
     t('Type'),
     t('Forfatter'),
     t('Senest opdateret'),
     t('Handlinger'),
     t('redigér'),
+    t('Titel'),
     t('Udgivet'),
+    t('Centrer'),
     t('Page'),
     t('mere'),
     t('Block'),

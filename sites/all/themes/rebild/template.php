@@ -49,7 +49,6 @@ function rebild_css_alter(&$css) {
  * Implements hook_preprocess_html
  */
 function rebild_preprocess_html(&$variables) {
-
   // Adds Swipebox CSS + JS
   drupal_add_css('sites/all/libraries/swipebox/source/swipebox.css');
   drupal_add_js('sites/all/libraries/swipebox/source/jquery.swipebox.min.js');

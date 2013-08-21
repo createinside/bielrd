@@ -36,7 +36,7 @@ function rebild_edagsorden_node_info() {
       'base' => 'node_content',
       'description' => t('Dagsordener er direkte integrereret med eDagsorden og er ikke beregnet til manuelle oprettelser på websitet.'),
       'has_title' => '1',
-      'title_label' => t('Titel'),
+      'title_label' => t('Overskrift'),
       'help' => '',
     ),
   );

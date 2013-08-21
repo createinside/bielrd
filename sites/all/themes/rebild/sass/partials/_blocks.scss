@@ -79,7 +79,8 @@
 			padding-bottom: 0;
 			font-size: $font-size-small;
 			li {
-					margin-bottom: 0.5em;
+					margin: 0 0 0.5em 0;
+					line-height: 1.15em;
 				}
 			li:before {
 				@include icon-prepare();
@@ -88,6 +89,32 @@
 				color: $color-blue;
 				font-size: 10px;
 			}
+		}
+		/* Content sidebar borger.dk - Læs også */
+		.view-content-sidebar-borger-dk-read-also {
+			h3 {
+				font-size: 1.1em;
+				line-height: $font-size-std;
+				background: $color-blue;
+				color: white;
+				margin: 0 0 $spacing-std/2;
+				padding: 0.4em 0.5em;
+				@include text-shadow(none);
+				@include border-radius(3px);
+				font-weight: normal;				
+			}
+			h4 {
+				margin: 0 5px 5px 5px;
+			}
+			ul {
+				margin: 0 5px 20px 5px;
+				li {
+					p {
+						display: inline;
+					}
+				}
+			}		
+			
 		}
 			
 	}

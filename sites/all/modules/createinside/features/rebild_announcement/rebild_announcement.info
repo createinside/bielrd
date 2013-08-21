@@ -2,7 +2,6 @@ name = Meddelelser
 description = Indholder indholdstypen meddelelser, tilladelser mm.
 core = 7.x
 package = Rebild
-php = 5.2.4
 dependencies[] = ctools
 dependencies[] = date
 dependencies[] = features

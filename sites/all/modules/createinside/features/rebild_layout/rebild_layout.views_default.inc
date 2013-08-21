@@ -280,18 +280,27 @@ function rebild_layout_views_default_views() {
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
   $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['nid']['exception']['title'] = 'Alle';
+  $handler->display->display_options['arguments']['nid']['title_enable'] = TRUE;
   $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
   $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['nid']['specify_validation'] = TRUE;
-  /* Filterkriterie: Indhold: Udgivet */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = '1';
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'OR',
+  );
+  /* Filterkriterie: Indhold: Eksterne links (field_main_links_external:url) */
+  $handler->display->display_options['filters']['field_main_links_external_url']['id'] = 'field_main_links_external_url';
+  $handler->display->display_options['filters']['field_main_links_external_url']['table'] = 'field_data_field_main_links_external';
+  $handler->display->display_options['filters']['field_main_links_external_url']['field'] = 'field_main_links_external_url';
+  $handler->display->display_options['filters']['field_main_links_external_url']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_main_links_external_url']['group'] = 1;
+  /* Filterkriterie: Indhold: Interne links (field_main_links_internal) */
+  $handler->display->display_options['filters']['field_main_links_internal_target_id']['id'] = 'field_main_links_internal_target_id';
+  $handler->display->display_options['filters']['field_main_links_internal_target_id']['table'] = 'field_data_field_main_links_internal';
+  $handler->display->display_options['filters']['field_main_links_internal_target_id']['field'] = 'field_main_links_internal_target_id';
+  $handler->display->display_options['filters']['field_main_links_internal_target_id']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_main_links_internal_target_id']['group'] = 1;
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');

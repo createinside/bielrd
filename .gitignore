@@ -13,7 +13,10 @@ sites/all/modules/devel/
 .DS_Store
 
 # Ignore SASS cache.
-.sass-cache
+sites/all/themes/rebild/.sass-cache/
+sites/all/themes/rebild/.sass-cache/*
+sites/all/themes/rebild/.sass-cache/*/*
+.sass-cache/
 
 # Ignore .DS_store files.
 .DS_Store

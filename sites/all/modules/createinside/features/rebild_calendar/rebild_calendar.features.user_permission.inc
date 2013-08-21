@@ -52,6 +52,7 @@ function rebild_calendar_user_default_permissions() {
   $permissions['edit any calendar_post content'] = array(
     'name' => 'edit any calendar_post content',
     'roles' => array(
+      'fagredaktør' => 'fagredaktør',
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'node',

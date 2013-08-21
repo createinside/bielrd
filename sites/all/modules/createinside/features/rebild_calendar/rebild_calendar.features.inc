@@ -33,7 +33,7 @@ function rebild_calendar_node_info() {
       'base' => 'node_content',
       'description' => t('Bruges til at oprette begivenheder eller andet relevant indhold, som skal vises i en kalenderoversigt.'),
       'has_title' => '1',
-      'title_label' => t('Titel'),
+      'title_label' => t('Overskrift'),
       'help' => '',
     ),
   );

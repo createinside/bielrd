@@ -9,6 +9,19 @@
  */
 function rebild_workflow_default_rules_configuration() {
   $items = array();
+  $items['rules_new_revision_on_published_needs_review_state'] = entity_import('rules_config', '{ "rules_new_revision_on_published_needs_review_state" : {
+      "LABEL" : "New revision on published needs review state",
+      "PLUGIN" : "rule",
+      "TAGS" : [ "workflow" ],
+      "REQUIRES" : [ "rules", "workbench_moderation" ],
+      "USES VARIABLES" : { "node" : { "label" : "Node", "type" : "node" } },
+      "DO" : [
+        { "data_set" : { "data" : [ "node:revision" ], "value" : 1 } },
+        { "workbench_moderation_set_state_during_save" : { "node" : [ "node" ], "moderation_state" : "published_needs_review" } },
+        { "entity_save" : { "data" : [ "node" ] } }
+      ]
+    }
+  }');
   $items['rules_outdated_content_checker'] = entity_import('rules_config', '{ "rules_outdated_content_checker" : {
       "LABEL" : "Outdated content checker",
       "PLUGIN" : "rule",
@@ -63,6 +76,28 @@ function rebild_workflow_default_rules_configuration() {
       "REQUIRES" : [ "rules" ],
       "ON" : [ "user_login" ],
       "DO" : [ { "redirect" : { "url" : "admin\\/workbench" } } ]
+    }
+  }');
+  $items['rules_workbench_moderation_published_needs_review'] = entity_import('rules_config', '{ "rules_workbench_moderation_published_needs_review" : {
+      "LABEL" : "Workbench moderation: Published needs review",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "workflow" ],
+      "REQUIRES" : [ "workbench_moderation", "rules" ],
+      "ON" : [ "workbench_moderation_after_moderation_transition" ],
+      "IF" : [
+        { "NOT contents_previous_state" : { "node" : [ "node" ], "moderation_state" : "published_needs_review" } },
+        { "NOT contents_previous_state" : { "node" : [ "node" ], "moderation_state" : "published" } },
+        { "contents_current_state" : { "node" : [ "node" ], "moderation_state" : "published_needs_review" } }
+      ],
+      "DO" : [
+        { "workbench_moderation_set_state" : {
+            "node" : [ "node" ],
+            "moderation_state" : "published",
+            "force_transition" : 0
+          }
+        },
+        { "component_rules_new_revision_on_published_needs_review_state" : { "node" : [ "node" ] } }
+      ]
     }
   }');
   $items['rules_workflow_email_draft_needs_review'] = entity_import('rules_config', '{ "rules_workflow_email_draft_needs_review" : {
