@@ -9,6 +9,7 @@ dependencies[] = delta
 dependencies[] = features
 dependencies[] = filter
 dependencies[] = imce
+dependencies[] = imce_mkdir
 dependencies[] = imce_wysiwyg
 dependencies[] = manualcrop_modification
 dependencies[] = media
