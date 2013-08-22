@@ -41,7 +41,10 @@ Borger dk
 		}
 		#content-main {
 			ul,ol {
-				margin-left: 20px;
+				margin-left: 40px;
+				li {
+					margin-bottom: 0.5em;
+				}
 			}
 		}
 	}
@@ -81,6 +84,7 @@ Borger dk
 		}
 		/* Node Image Gallery */
 		.field-name-field-main-image-gallery {
+			margin: $spacing-std*1.5 0;
 			.field-items {
 				background: $bg-node-box;
 				@include border-radius(3px);
@@ -94,14 +98,22 @@ Borger dk
 					text-align: center;
 				}			
 			}
+			.field-label {
+				margin-bottom: 1.25em;
+				font-size: 1.08em;
+			}
 			.field-label:before {			
 				@include icon-prepare();
 				content: "\e00e";	
 				margin-right: 0.5em;
+				font-size: 1.5em;
+				position: relative;
+				top: 0.1em;
 			}
 		}
 		/* Accordion */
 		.view-content-accordion {
+			margin: $spacing-std 0;
 			.rebild-accordion {
 				.ui-accordion-header {
 					background: $bg-node-box;
@@ -110,6 +122,8 @@ Borger dk
 					margin-bottom: 8px;
 					a {
 						color: $text-color;
+						font-weight: bold;
+						padding-left: 2.4em;
 					}				
 					.ui-icon-triangle-1-e {
 						width: 15px;
@@ -131,11 +145,12 @@ Borger dk
 					.field-content {					
 						color: #fff;
 					}
-					
+				}
+				.ui-accordion-content {
+					padding: 0.5em 1em;
 				}			
 			}
-		}
-		
+		}		
 	}
 }
 /*------------------------------------------------------------------

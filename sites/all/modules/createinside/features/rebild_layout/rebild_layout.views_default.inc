@@ -37,8 +37,6 @@ function rebild_layout_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['style_plugin'] = 'list';
-  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
-  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   /* Felt: Indhold: Overskrift */
@@ -57,6 +55,7 @@ function rebild_layout_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '[title]';
+  $handler->display->display_options['fields']['nothing']['alter']['trim_whitespace'] = TRUE;
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Sorteringskriterie: Indholdsstatistik: Totale visninger */
   $handler->display->display_options['sorts']['totalcount']['id'] = 'totalcount';
@@ -224,11 +223,13 @@ function rebild_layout_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Relevant indhold';
+  $handler->display->display_options['css_class'] = 'related-content-links';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['distinct'] = TRUE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Udfør';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Gendan';
@@ -236,7 +237,7 @@ function rebild_layout_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['sort_asc_label'] = 'Stigende';
   $handler->display->display_options['exposed_form']['options']['sort_desc_label'] = 'Faldende';
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '0';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
@@ -252,7 +253,7 @@ function rebild_layout_views_default_views() {
   $handler->display->display_options['fields']['field_main_links_external']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_main_links_external']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_main_links_external']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_main_links_external']['multi_type'] = 'ol';
+  $handler->display->display_options['fields']['field_main_links_external']['multi_type'] = 'ul';
   $handler->display->display_options['fields']['field_main_links_external']['separator'] = '';
   /* Felt: Indhold: Interne links */
   $handler->display->display_options['fields']['field_main_links_internal']['id'] = 'field_main_links_internal';
@@ -267,7 +268,7 @@ function rebild_layout_views_default_views() {
     'link' => 1,
   );
   $handler->display->display_options['fields']['field_main_links_internal']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_main_links_internal']['multi_type'] = 'ol';
+  $handler->display->display_options['fields']['field_main_links_internal']['multi_type'] = 'ul';
   $handler->display->display_options['fields']['field_main_links_internal']['separator'] = '';
   /* Sorteringskriterie: Indhold: Oprettelsesdato */
   $handler->display->display_options['sorts']['created']['id'] = 'created';

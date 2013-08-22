@@ -93,9 +93,12 @@ function rebild_self_service_strongarm() {
           'weight' => '0',
         ),
         'metatags' => array(
-          'weight' => '10',
+          'weight' => '9',
         ),
         'redirect' => array(
+          'weight' => '10',
+        ),
+        'path' => array(
           'weight' => '11',
         ),
       ),

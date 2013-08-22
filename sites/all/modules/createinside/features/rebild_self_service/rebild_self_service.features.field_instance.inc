@@ -76,7 +76,7 @@ function rebild_self_service_field_default_field_instances() {
     'settings' => array(
       'default_value' => 'strtotime',
       'default_value2' => 'same',
-      'default_value_code' => '+6 months',
+      'default_value_code' => '+3 months',
       'default_value_code2' => '',
       'user_register_form' => FALSE,
     ),
@@ -92,7 +92,7 @@ function rebild_self_service_field_default_field_instances() {
         'year_range' => '-0:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -207,7 +207,7 @@ function rebild_self_service_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -216,7 +216,7 @@ function rebild_self_service_field_default_field_instances() {
     'bundle' => 'self_service',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Indtast et link.',
+    'description' => 'Indtast et link til en ekstern selvbetjeningsløsning.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -235,13 +235,13 @@ function rebild_self_service_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_self_service_link',
     'label' => 'Link',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
         'rel' => '',
-        'target' => 'user',
+        'target' => '_blank',
         'title' => '',
       ),
       'display' => array(
@@ -269,7 +269,7 @@ function rebild_self_service_field_default_field_instances() {
   $field_instances['node-self_service-field_self_service_pdf'] = array(
     'bundle' => 'self_service',
     'deleted' => 0,
-    'description' => 'Upload en PDF.',
+    'description' => 'Upload en PDF fil til denne selvbetjeningsløsning.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -288,10 +288,10 @@ function rebild_self_service_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_self_service_pdf',
     'label' => 'PDF',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'description_field' => 0,
-      'file_directory' => '',
+      'file_directory' => 'selfservice',
       'file_extensions' => 'pdf',
       'max_filesize' => '5 MB',
       'user_register_form' => FALSE,
@@ -305,12 +305,15 @@ function rebild_self_service_field_default_field_instances() {
         ),
         'allowed_types' => array(
           0 => 0,
+          'application' => 0,
           'audio' => 0,
           'document' => 0,
           'image' => 'image',
           'video' => 0,
         ),
         'browser_plugins' => array(
+          'media_browser_clone--media_browser_1' => 0,
+          'media_browser_clone--media_browser_my_files' => 0,
           'media_default--media_browser_1' => 'media_default--media_browser_1',
           'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
           'upload' => 'upload',
@@ -377,7 +380,7 @@ function rebild_self_service_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -387,14 +390,14 @@ function rebild_self_service_field_default_field_instances() {
   t('Brødtekst');
   t('Forældelsesdato');
   t('Indtast en brødtekst for selvbetjeningsløsningen.');
-  t('Indtast et link.');
+  t('Indtast et link til en ekstern selvbetjeningsløsning.');
   t('Kategori');
   t('Link');
   t('PDF');
   t('Sektion');
   t('Tags');
   t('Type');
-  t('Upload en PDF.');
+  t('Upload en PDF fil til denne selvbetjeningsløsning.');
   t('Vælg en kategori til selvbetjeningsløsningen.');
   t('Vælg en type af selvbetjeningsløsning.');
   t('Vælg et eller flere tags der er med til at beskrive indholdet.');
