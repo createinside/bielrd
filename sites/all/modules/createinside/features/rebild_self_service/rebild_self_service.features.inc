@@ -24,7 +24,7 @@ function rebild_self_service_node_info() {
     'self_service' => array(
       'name' => t('Selvbetjeningsløsning'),
       'base' => 'node_content',
-      'description' => t('Brug Selvbetjeningsløsning til at oprette en selvbetjeningsløsning.'),
+      'description' => t('Brug denne indholdstype til at oprette en selvbetjeningsløsning.'),
       'has_title' => '1',
       'title_label' => t('Overskrift'),
       'help' => '',
