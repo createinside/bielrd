@@ -146,3 +146,128 @@
 	.views-row-even { background-color: white; }
 }
 
+/**
+ * SELF SERVICE ACCORDION
+ */
+ 
+/* Display navigation */
+#selfservice-nav {
+	font-size: $font-size-small;
+	margin-bottom: $spacing-std;
+	a {
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	a.active {
+		color: $bg-color-selfservice;
+	}
+}
+/* Level 1 */
+.view-selfservice-items.view-display-id-emner {
+	.view-grouping {
+		margin-bottom: 6px;
+		.view-grouping-header {
+			background: $bg-color-selfservice;
+			color: white;
+			font-size: 1.25em;
+			padding: 8px 6px;
+			font-weight: bold;
+			@include border-radius($border-radius-std);
+		}
+			.view-grouping-header:before {
+				@include icon-prepare();
+				content: "\e00f";	
+				margin-right: 0.5em;
+			}
+		.view-grouping-header.ui-state-active {
+			background: #a3a3a3;
+			color: $text-color;
+		}
+		.view-grouping-header.ui-state-active:before {
+			@include icon-prepare();
+			content: "\e010";	
+			margin-right: 0.5em;			
+		}
+	}
+}
+/* Level 2 */
+.view-selfservice-items.view-display-id-alfabetisk,
+.view-selfservice-items.view-display-id-emner {
+	.view-grouping-content,
+	.view-content {
+		padding: 0;
+		margin: 6px 0 0 0;
+		> h3 {
+			background: #e6e6e6;
+			color: $text-color;
+			font-size: 1.08em;
+			padding: 8px 18px;
+			margin: 0 0 3px 0;
+			font-weight: bold;
+			@include border-radius($border-radius-std);			
+		}
+			>h3:before {
+				@include icon-prepare();
+				content: "\e00f";	
+				margin-right: 0.5em;
+			}
+		> h3.ui-state-active {
+			background: white;
+		}
+			>h3.ui-state-active:before {
+				@include icon-prepare();
+				content: "\e010";	
+				margin-right: 0.5em;
+			}
+		.accordion-content-level-2 {
+			padding: 0 50px $spacing-std;
+			margin: 0;
+			top: 0;
+			border: none;
+			.views-field-field-self-service-link a,
+			.views-field-link a {
+				display: inline-block;
+				color: white !important;
+				text-transform: uppercase;
+				font-size: $font-size-std;
+				background-color: $color-purple;
+				padding: 14px 20px;
+				@include background-image(linear-gradient($color-purple, #79648c));
+				@include border-radius($border-radius-std);			
+			}
+			.views-field-field-self-service-link a:after,
+			.views-field-link a:after {
+				@include icon-prepare();
+				content: "\f061";	
+				color: $color-purple;
+				background: white;
+				display: inline-block;
+				padding: 0.30em 0.40em 0.4em;
+				margin: 0 0 0 10px;
+				position: relative;
+				font-size: 0.75em;
+				top: -1px;
+				@include border-radius(2px);
+			}
+			.views-field-field-main-body {
+				a {
+					color: $color-green;
+				}	
+				ul {
+					margin-left: 40px;
+					li {
+						margin-bottom: 0.5em;
+					}
+				}
+			}
+			.views-field-field-self-service-link a:hover {
+				text-decoration: none !important;
+			}
+			.views-field-description {
+				border-top: 1px dotted $text-color;
+				padding-top: 1em;
+				font-size: $font-size-small;
+			}
+		}
+	}
+}

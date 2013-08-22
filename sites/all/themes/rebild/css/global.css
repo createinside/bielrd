@@ -96,7 +96,7 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
 /* line 44, ../sass/partials/_fonts.scss */
-.icon-reorder, .icon-rss, .icon-envelope, .icon-search, .icon-double-angle-right, .icon-double-angle-left, .icon-double-angle-down, .icon-double-angle-up, .icon-list-ul, .icon-facebook, .icon-align-justify, .icon-phone, .icon-sort, .icon-arrow-right, .icon-arrow-left, .icon-arrow-up, .icon-arrow-down, .icon-menu, .icon-arrow-right-2, .icon-arrow-up-2, .icon-arrow-down-2, .icon-arrow-left-2, .icon-home, .icon-untitled, .icon-mobil_logo, .icon-bottom_logo, .icon-close, .icon-plus, .icon-minus, .icon-images, .icon-compass, .icon-images-2 {
+.icon-reorder, .icon-rss, .icon-envelope, .icon-search, .icon-double-angle-right, .icon-double-angle-left, .icon-double-angle-down, .icon-double-angle-up, .icon-list-ul, .icon-facebook, .icon-align-justify, .icon-phone, .icon-sort, .icon-arrow-right, .icon-arrow-left, .icon-arrow-up, .icon-arrow-down, .icon-menu, .icon-arrow-right-2, .icon-arrow-up-2, .icon-arrow-down-2, .icon-arrow-left-2, .icon-home, .icon-untitled, .icon-mobil_logo, .icon-bottom_logo, .icon-close, .icon-plus, .icon-minus, .icon-images, .icon-compass, .icon-images-2, .icon-plus-2, .icon-minus-2 {
   font-family: 'Rebild';
   speak: none;
   font-style: normal;
@@ -265,6 +265,16 @@ you can use the generic selector below, but it's slower:
 /* line 147, ../sass/partials/_fonts.scss */
 .icon-images-2:before {
   content: "\e00e";
+}
+
+/* line 150, ../sass/partials/_fonts.scss */
+.icon-plus-2:before {
+  content: "\e00f";
+}
+
+/* line 153, ../sass/partials/_fonts.scss */
+.icon-minus-2:before {
+  content: "\e010";
 }
 
 /*------------------------------------------------------------------
@@ -2006,6 +2016,246 @@ div.workbench-info-block a {
 /* line 146, ../sass/partials/_views.scss */
 #block-views-news-articles-block .views-row-even {
   background-color: white;
+}
+
+/**
+ * SELF SERVICE ACCORDION
+ */
+/* Display navigation */
+/* line 154, ../sass/partials/_views.scss */
+#selfservice-nav {
+  font-size: 0.91667em;
+  margin-bottom: 20px;
+}
+/* line 157, ../sass/partials/_views.scss */
+#selfservice-nav a {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/* line 161, ../sass/partials/_views.scss */
+#selfservice-nav a.active {
+  color: #68a386;
+}
+
+/* Level 1 */
+/* line 167, ../sass/partials/_views.scss */
+.view-selfservice-items.view-display-id-emner .view-grouping {
+  margin-bottom: 6px;
+}
+/* line 169, ../sass/partials/_views.scss */
+.view-selfservice-items.view-display-id-emner .view-grouping .view-grouping-header {
+  background: #68a386;
+  color: white;
+  font-size: 1.25em;
+  padding: 8px 6px;
+  font-weight: bold;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 177, ../sass/partials/_views.scss */
+.view-selfservice-items.view-display-id-emner .view-grouping .view-grouping-header:before {
+  font-family: 'Rebild';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\e00f";
+  margin-right: 0.5em;
+}
+/* line 182, ../sass/partials/_views.scss */
+.view-selfservice-items.view-display-id-emner .view-grouping .view-grouping-header.ui-state-active {
+  background: #a3a3a3;
+  color: #474747;
+}
+/* line 186, ../sass/partials/_views.scss */
+.view-selfservice-items.view-display-id-emner .view-grouping .view-grouping-header.ui-state-active:before {
+  font-family: 'Rebild';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\e010";
+  margin-right: 0.5em;
+}
+
+/* Level 2 */
+/* line 197, ../sass/partials/_views.scss */
+.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content,
+.view-selfservice-items.view-display-id-alfabetisk .view-content,
+.view-selfservice-items.view-display-id-emner .view-grouping-content,
+.view-selfservice-items.view-display-id-emner .view-content {
+  padding: 0;
+  margin: 6px 0 0 0;
+}
+/* line 200, ../sass/partials/_views.scss */
+.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content > h3,
+.view-selfservice-items.view-display-id-alfabetisk .view-content > h3,
+.view-selfservice-items.view-display-id-emner .view-grouping-content > h3,
+.view-selfservice-items.view-display-id-emner .view-content > h3 {
+  background: #e6e6e6;
+  color: #474747;
+  font-size: 1.08em;
+  padding: 8px 18px;
+  margin: 0 0 3px 0;
+  font-weight: bold;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 209, ../sass/partials/_views.scss */
+.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content > h3:before,
+.view-selfservice-items.view-display-id-alfabetisk .view-content > h3:before,
+.view-selfservice-items.view-display-id-emner .view-grouping-content > h3:before,
+.view-selfservice-items.view-display-id-emner .view-content > h3:before {
+  font-family: 'Rebild';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\e00f";
+  margin-right: 0.5em;
+}
+/* line 214, ../sass/partials/_views.scss */
+.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content > h3.ui-state-active,
+.view-selfservice-items.view-display-id-alfabetisk .view-content > h3.ui-state-active,
+.view-selfservice-items.view-display-id-emner .view-grouping-content > h3.ui-state-active,
+.view-selfservice-items.view-display-id-emner .view-content > h3.ui-state-active {
+  background: white;
+}
+/* line 217, ../sass/partials/_views.scss */
+.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content > h3.ui-state-active:before,
+.view-selfservice-items.view-display-id-alfabetisk .view-content > h3.ui-state-active:before,
+.view-selfservice-items.view-display-id-emner .view-grouping-content > h3.ui-state-active:before,
+.view-selfservice-items.view-display-id-emner .view-content > h3.ui-state-active:before {
+  font-family: 'Rebild';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\e010";
+  margin-right: 0.5em;
+}
+/* line 222, ../sass/partials/_views.scss */
+.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2,
+.view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2,
+.view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2,
+.view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 {
+  padding: 0 50px 20px;
+  margin: 0;
+  top: 0;
+  border: none;
+}
+/* line 228, ../sass/partials/_views.scss */
+.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a,
+.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-link a,
+.view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-self-service-link a,
+.view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-link a,
+.view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a,
+.view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-link a,
+.view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-field-self-service-link a,
+.view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-link a {
+  display: inline-block;
+  color: white !important;
+  text-transform: uppercase;
+  font-size: 1em;
+  background-color: #937ea7;
+  padding: 14px 20px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #937ea7), color-stop(100%, #79648c));
+  background-image: -webkit-linear-gradient(#937ea7, #79648c);
+  background-image: -moz-linear-gradient(#937ea7, #79648c);
+  background-image: -o-linear-gradient(#937ea7, #79648c);
+  background-image: linear-gradient(#937ea7, #79648c);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 239, ../sass/partials/_views.scss */
+.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
+.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-link a:after,
+.view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
+.view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-link a:after,
+.view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
+.view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-link a:after,
+.view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
+.view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-link a:after {
+  font-family: 'Rebild';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\f061";
+  color: #937ea7;
+  background: white;
+  display: inline-block;
+  padding: 0.30em 0.40em 0.4em;
+  margin: 0 0 0 10px;
+  position: relative;
+  font-size: 0.75em;
+  top: -1px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+}
+/* line 253, ../sass/partials/_views.scss */
+.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-main-body a,
+.view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-main-body a,
+.view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-main-body a,
+.view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-field-main-body a {
+  color: #68a386;
+}
+/* line 256, ../sass/partials/_views.scss */
+.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-main-body ul,
+.view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-main-body ul,
+.view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-main-body ul,
+.view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-field-main-body ul {
+  margin-left: 40px;
+}
+/* line 258, ../sass/partials/_views.scss */
+.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-main-body ul li,
+.view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-main-body ul li,
+.view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-main-body ul li,
+.view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-field-main-body ul li {
+  margin-bottom: 0.5em;
+}
+/* line 263, ../sass/partials/_views.scss */
+.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:hover,
+.view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-self-service-link a:hover,
+.view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:hover,
+.view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-field-self-service-link a:hover {
+  text-decoration: none !important;
+}
+/* line 266, ../sass/partials/_views.scss */
+.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-description,
+.view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-description,
+.view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-description,
+.view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-description {
+  border-top: 1px dotted #474747;
+  padding-top: 1em;
+  font-size: 0.91667em;
 }
 
 /*------------------------------------------------------------------
