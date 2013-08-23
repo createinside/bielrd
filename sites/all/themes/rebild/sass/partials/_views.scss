@@ -151,123 +151,171 @@
  */
  
 /* Display navigation */
-#selfservice-nav {
+#quicktabs-self_service_views ul.quicktabs-tabs {
 	font-size: $font-size-small;
-	margin-bottom: $spacing-std;
-	a {
-		text-transform: uppercase;
-		font-weight: bold;
+	margin: $spacing-std 0 $spacing-std 0 !important;
+	padding: 0;
+	li {
+		margin: 0;
+		a {
+			text-transform: uppercase;
+			font-weight: bold;
+			color: $text-color;
+		}
 	}
-	a.active {
-		color: $bg-color-selfservice;
+	li.active {
+		a {
+			color: $bg-color-selfservice;
+		}
+	}
+	li.first {
+		border-right: 1px solid $text-color;
+		margin: 0 5px 0 0;
+		padding: 0 5px 0 0;
 	}
 }
 /* Level 1 */
-.view-selfservice-items.view-display-id-emner {
-	.view-grouping {
-		margin-bottom: 6px;
-		.view-grouping-header {
-			background: $bg-color-selfservice;
-			color: white;
-			font-size: 1.25em;
-			padding: 8px 6px;
-			font-weight: bold;
-			@include border-radius($border-radius-std);
-		}
-			.view-grouping-header:before {
-				@include icon-prepare();
-				content: "\e00f";	
-				margin-right: 0.5em;
+#region-content {
+	.view-selfservice-items.view-display-id-emner {
+		.view-grouping {
+			margin-bottom: 6px;
+			> .ui-accordion-header {
+				background: $bg-color-selfservice;
+				color: white;
+				font-size: 1.25em;
+				padding: 8px 6px;
+				font-weight: bold;
+				@include border-radius($border-radius-std);
 			}
-		.view-grouping-header.ui-state-active {
-			background: #a3a3a3;
-			color: $text-color;
-		}
-		.view-grouping-header.ui-state-active:before {
-			@include icon-prepare();
-			content: "\e010";	
-			margin-right: 0.5em;			
+				> .ui-accordion-header:before {
+					@include icon-prepare();
+					content: "\e00f";	
+					margin-right: 0.5em;
+				}
+			> .ui-accordion-header.ui-state-active {
+				background: #a3a3a3;
+				color: $text-color;
+			}
+			> .ui-accordion-header.ui-state-active:before {
+				@include icon-prepare();
+				content: "\e010";	
+				margin-right: 0.5em;			
+			}
 		}
 	}
 }
 /* Level 2 */
-.view-selfservice-items.view-display-id-alfabetisk,
-.view-selfservice-items.view-display-id-emner {
-	.view-grouping-content,
-	.view-content {
-		padding: 0;
-		margin: 6px 0 0 0;
-		> h3 {
-			background: #e6e6e6;
-			color: $text-color;
-			font-size: 1.08em;
-			padding: 8px 18px;
-			margin: 0 0 3px 0;
-			font-weight: bold;
-			@include border-radius($border-radius-std);			
-		}
-			>h3:before {
-				@include icon-prepare();
-				content: "\e00f";	
-				margin-right: 0.5em;
+#region-content {
+	.view-selfservice-items.view-display-id-alfabetisk,
+	.view-selfservice-items.view-display-id-emner,
+	.view-selfservice-items.view-display-id-embedded {
+		.view-grouping-content,
+		.view-content {
+			padding: 0;
+			margin: 6px 0 0 0;
+			> h3 {
+				color: $text-color;
+				padding: 8px 18px;
+				margin: 0 0 5px 0;		
 			}
-		> h3.ui-state-active {
-			background: white;
-		}
-			>h3.ui-state-active:before {
-				@include icon-prepare();
-				content: "\e010";	
-				margin-right: 0.5em;
-			}
-		.accordion-content-level-2 {
-			padding: 0 50px $spacing-std;
-			margin: 0;
-			top: 0;
-			border: none;
-			.views-field-field-self-service-link a,
-			.views-field-link a {
-				display: inline-block;
-				color: white !important;
-				text-transform: uppercase;
-				font-size: $font-size-std;
-				background-color: $color-purple;
-				padding: 14px 20px;
-				@include background-image(linear-gradient($color-purple, #79648c));
-				@include border-radius($border-radius-std);			
-			}
-			.views-field-field-self-service-link a:after,
-			.views-field-link a:after {
-				@include icon-prepare();
-				content: "\f061";	
-				color: $color-purple;
+				>h3:before {
+					@include icon-prepare();
+					content: "\e00f";	
+					margin-right: 0.5em;
+				}
+			> h3.ui-state-active {
 				background: white;
-				display: inline-block;
-				padding: 0.30em 0.40em 0.4em;
-				margin: 0 0 0 10px;
-				position: relative;
-				font-size: 0.75em;
-				top: -1px;
-				@include border-radius(2px);
 			}
-			.views-field-field-main-body {
-				a {
-					color: $color-green;
-				}	
-				ul {
-					margin-left: 40px;
-					li {
-						margin-bottom: 0.5em;
+				>h3.ui-state-active:before {
+					@include icon-prepare();
+					content: "\e010";	
+					margin-right: 0.5em;
+				}
+			.accordion-content-level-2 {
+				padding: 0 50px $spacing-std;
+				margin: 0;
+				top: 0;
+				border: none;
+				.views-field-field-self-service-link a,
+				.views-field-link a {
+					display: inline-block;
+					color: white;
+					text-transform: uppercase;
+					font-size: $font-size-std;
+					background-color: $color-purple;
+					padding: 14px 20px;
+					@include background-image(linear-gradient($color-purple, #79648c));
+					@include border-radius($border-radius-std);			
+				}
+				.views-field-field-self-service-link a:after,
+				.views-field-link a:after {
+					@include icon-prepare();
+					content: "\f061";	
+					color: $color-purple;
+					background: white;
+					display: inline-block;
+					padding: 0.30em 0.40em 0.4em;
+					margin: 0 0 0 10px;
+					position: relative;
+					font-size: 0.75em;
+					top: -1px;
+					@include border-radius(2px);
+				}
+				.views-field-field-main-body {
+					a {
+						color: $color-green;
+					}	
+					ul {
+						margin-left: 40px;
+						margin-bottom: 1em;
+						li {
+							margin-bottom: 0.5em;
+						}
 					}
 				}
-			}
-			.views-field-field-self-service-link a:hover {
-				text-decoration: none !important;
-			}
-			.views-field-description {
-				border-top: 1px dotted $text-color;
-				padding-top: 1em;
-				font-size: $font-size-small;
+				.views-field-field-self-service-link a:hover {
+					text-decoration: none;
+				}
+				.views-field-description {
+					border-top: 1px dotted $text-color;
+					padding-top: 1em;
+					font-size: $font-size-small;
+				}
 			}
 		}
 	}
+}
+/* Alphabetical list */
+#region-content {
+	.view-selfservice-items.view-display-id-alfabetisk {
+		.view-content {
+			> h3 {
+				padding: 8px;
+			}	
+		}
+	}
+}
+/* Embedded accordion */
+#region-content {
+	.view-selfservice-items.view-display-id-embedded {
+		margin: 30px 0 0 0;
+		h2.title {
+			font-size: 1.08em;
+			margin: 20px 0 10px;
+		}
+		.view-content {
+			> h3 {
+				background: $color-green;
+				color: white;
+				padding: 6px 8px;
+			}
+			> h3.ui-state-active {
+				background: #a3a3a3;
+				color: $text-color;
+			}
+			.accordion-content-level-2 {
+				padding: $spacing-std/2 $spacing-std $spacing-std;
+			}
+		}
+	}	
 }

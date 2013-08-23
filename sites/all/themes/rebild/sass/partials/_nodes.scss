@@ -5,6 +5,7 @@
 General
 Basic Page
 News Article
+Accordions
 Borger dk
 
 -------------------------------------------------------------------*/
@@ -111,51 +112,58 @@ Borger dk
 				top: 0.1em;
 			}
 		}
-		/* Accordion */
-		.view-content-accordion {
-			margin: $spacing-std 0;
-			.rebild-accordion {
-				.ui-accordion-header {
-					background: $bg-node-box;
-					@include border-radius(3px);
-					overflow: hidden;
-					margin-bottom: 8px;
-					a {
-						color: $text-color;
-						font-weight: bold;
-						padding-left: 2.4em;
-					}				
-					.ui-icon-triangle-1-e {
-						width: 15px;
-						height: 15px;
-						background-image: url(../img/accordion_closed.png);
-					}
-					a:hover {
-						text-decoration: none;
-					}
-					
-				}
-				.ui-state-active {
-					background-color: $color-blue;
-					.ui-icon-triangle-1-s {
-						width: 15px;
-						height: 15px;
-						background-image: url(../img/accordion_open.png);	
-					}
-					.field-content {					
-						color: #fff;
-					}
-				}
-				.ui-accordion-content {
-					padding: 0.5em 1em;
-				}			
-			}
-		}		
 	}
 }
+
+/*------------------------------------------------------------------
+	Accordions
+-------------------------------------------------------------------*/	
+
+#region-content {
+	.node-page,
+	.node-news-article {
+		.ui-accordion {
+			margin: $spacing-std 0;
+			.ui-accordion-header {
+				background: #e6e6e6;
+				color: $text-color;
+				font-size: 1.08em;
+				line-height: 1.5em;
+				padding: 6px 8px;
+				margin: 0 0 5px 0;
+				font-weight: bold;
+				@include border-radius($border-radius-std);
+				> a {
+					color: $text-color;
+					padding: 0;
+					margin: 0;
+				}
+				> a:hover {
+					text-decoration: none;
+				}
+				> a .field-content:before {
+					@include icon-prepare();
+					content: "\e00f";	
+					margin-right: 0.5em;
+				}	
+			}
+				.ui-accordion-header.ui-state-active {
+					background-color: $color-blue;
+					a {
+						color: white;
+					}
+				}
+			.ui-accordion-content {
+				padding: $spacing-std/2 $spacing-std;
+				margin: 0;
+			}			
+		}	
+	}
+}
+
 /*------------------------------------------------------------------
 	Borger dk
--------------------------------------------------------------------*/
+-------------------------------------------------------------------*/	
 
 /* Accordion */
 #region-content {
@@ -169,38 +177,33 @@ Borger dk
 			line-height: $line-height-std;
 		}
 		.microArticle {
-			div.mArticle {
-				padding: 1em 2.2em;
-			}
-			.accordion_ikon {
-				width: 15px;
-				height: 15px;
-				background-image: url(../img/accordion_closed.png);
-				position: absolute;
-				margin-top: 4px;
-				margin-left: 0.5em;
-			}
-			
-			h2 {
-				background: $bg-node-box;
-				@include border-radius(3px);
-				overflow: hidden;
-				margin-bottom: 8px;
-				font-size: $font-size-std;
-				font-weight: normal;
-				padding: .5em .5em .5em 2.2em;
-				height: 13px;
+			position: relative;
+			h2.mArticle {
+				background: #e6e6e6;
+				color: $text-color;
+				font-size: 1.08em;
+				line-height: 1.5em;
+				padding: 6px 8px;
+				margin: 0 0 5px 0;
+				font-weight: bold;
 				cursor: pointer;
+				@include border-radius($border-radius-std);
 			}	
+			h2.mArticle:before {
+				@include icon-prepare();
+				content: "\e00f";	
+				margin-right: 0.5em;				
+			}
+			div.mArticle {
+				padding: $spacing-std/2 $spacing-std;
+				margin: 0;		
+			}
 		}
 		.microArticle.aktiv {
-			h2 {
+			h2.mArticle {
 				background-color: $color-blue;
 				color: #fff;			
-			}
-			.accordion_ikon {
-				background-image: url(../img/accordion_open.png);
-			}
+			}	
 		}	
 	}	
 }

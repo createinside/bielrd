@@ -22,8 +22,8 @@ $(function() {
     collapsible: true,
     active: false
 	});
-	// Selfservice accordion - Alphabetical list level 1
-	$(".view-selfservice-items.view-display-id-alfabetisk").accordion({
+	// Selfservice accordion - Alphabetical list level 1 + Embedded list level 1
+	$(".view-selfservice-items.view-display-id-alfabetisk, .view-selfservice-items.view-display-id-embedded").accordion({
     header: "h3",
     autoHeight: false,
     collapsible: true,

@@ -844,33 +844,34 @@ ul.tabs li.active a {
 General
 Basic Page
 News Article
+Accordions
 Borger dk
 
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
 	Nodes
 -------------------------------------------------------------------*/
-/* line 17, ../sass/partials/_nodes.scss */
+/* line 18, ../sass/partials/_nodes.scss */
 #region-content .node-unpublished {
   background: none;
 }
-/* line 21, ../sass/partials/_nodes.scss */
+/* line 22, ../sass/partials/_nodes.scss */
 #region-content .node .field {
   margin-bottom: 1em;
 }
-/* line 24, ../sass/partials/_nodes.scss */
+/* line 25, ../sass/partials/_nodes.scss */
 #region-content .node .field-label {
   margin: 20px 0 10px;
 }
-/* line 28, ../sass/partials/_nodes.scss */
+/* line 29, ../sass/partials/_nodes.scss */
 #region-content .node p a {
   color: #7f9dcd;
 }
-/* line 32, ../sass/partials/_nodes.scss */
+/* line 33, ../sass/partials/_nodes.scss */
 #region-content .node a {
   color: #7f9dcd;
 }
-/* line 36, ../sass/partials/_nodes.scss */
+/* line 37, ../sass/partials/_nodes.scss */
 #region-content .node .field-name-field-main-gis-map .field-label:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -883,11 +884,11 @@ Borger dk
   content: "\e00d";
   margin-right: 0.5em;
 }
-/* line 43, ../sass/partials/_nodes.scss */
+/* line 44, ../sass/partials/_nodes.scss */
 #region-content .node #content-main ul, #region-content .node #content-main ol {
   margin-left: 40px;
 }
-/* line 45, ../sass/partials/_nodes.scss */
+/* line 46, ../sass/partials/_nodes.scss */
 #region-content .node #content-main ul li, #region-content .node #content-main ol li {
   margin-bottom: 0.5em;
 }
@@ -895,33 +896,32 @@ Borger dk
 /*------------------------------------------------------------------
 	Basic Page + News Article
 -------------------------------------------------------------------*/
-/* line 59, ../sass/partials/_nodes.scss */
+/* line 60, ../sass/partials/_nodes.scss */
 #region-content .node-page,
 #region-content .node-news-article {
   /* Main Image*/
   /* Summary */
   /* Fact Box */
   /* Node Image Gallery */
-  /* Accordion */
 }
-/* line 61, ../sass/partials/_nodes.scss */
+/* line 62, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image,
 #region-content .node-news-article .field-name-field-main-image {
   margin-bottom: 20px;
 }
-/* line 63, ../sass/partials/_nodes.scss */
+/* line 64, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image img,
 #region-content .node-news-article .field-name-field-main-image img {
   width: 100%;
 }
-/* line 68, ../sass/partials/_nodes.scss */
+/* line 69, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-summary,
 #region-content .node-news-article .field-name-field-main-summary {
   margin-bottom: 20px;
   font-size: 1.33333em;
   line-height: 1.15em;
 }
-/* line 74, ../sass/partials/_nodes.scss */
+/* line 75, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-factbox,
 #region-content .node-news-article .field-name-field-main-factbox {
   float: right;
@@ -935,12 +935,12 @@ Borger dk
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 86, ../sass/partials/_nodes.scss */
+/* line 87, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image-gallery,
 #region-content .node-news-article .field-name-field-main-image-gallery {
   margin: 30px 0;
 }
-/* line 88, ../sass/partials/_nodes.scss */
+/* line 89, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image-gallery .field-items,
 #region-content .node-news-article .field-name-field-main-image-gallery .field-items {
   background: #e9e6e6;
@@ -952,7 +952,7 @@ Borger dk
   padding: 20px 20px 0;
   overflow: hidden;
 }
-/* line 93, ../sass/partials/_nodes.scss */
+/* line 94, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image-gallery .field-items .field-item,
 #region-content .node-news-article .field-name-field-main-image-gallery .field-items .field-item {
   width: 29%;
@@ -961,13 +961,13 @@ Borger dk
   margin-bottom: 20px;
   text-align: center;
 }
-/* line 101, ../sass/partials/_nodes.scss */
+/* line 102, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image-gallery .field-label,
 #region-content .node-news-article .field-name-field-main-image-gallery .field-label {
   margin-bottom: 1.25em;
   font-size: 1.08em;
 }
-/* line 105, ../sass/partials/_nodes.scss */
+/* line 106, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image-gallery .field-label:before,
 #region-content .node-news-article .field-name-field-main-image-gallery .field-label:before {
   font-family: 'Rebild';
@@ -984,116 +984,130 @@ Borger dk
   position: relative;
   top: 0.1em;
 }
-/* line 115, ../sass/partials/_nodes.scss */
-#region-content .node-page .view-content-accordion,
-#region-content .node-news-article .view-content-accordion {
+
+/*------------------------------------------------------------------
+	Accordions
+-------------------------------------------------------------------*/
+/* line 125, ../sass/partials/_nodes.scss */
+#region-content .node-page .ui-accordion,
+#region-content .node-news-article .ui-accordion {
   margin: 20px 0;
 }
-/* line 118, ../sass/partials/_nodes.scss */
-#region-content .node-page .view-content-accordion .rebild-accordion .ui-accordion-header,
-#region-content .node-news-article .view-content-accordion .rebild-accordion .ui-accordion-header {
-  background: #e9e6e6;
+/* line 127, ../sass/partials/_nodes.scss */
+#region-content .node-page .ui-accordion .ui-accordion-header,
+#region-content .node-news-article .ui-accordion .ui-accordion-header {
+  background: #e6e6e6;
+  color: #474747;
+  font-size: 1.08em;
+  line-height: 1.5em;
+  padding: 6px 8px;
+  margin: 0 0 5px 0;
+  font-weight: bold;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  overflow: hidden;
-  margin-bottom: 8px;
 }
-/* line 123, ../sass/partials/_nodes.scss */
-#region-content .node-page .view-content-accordion .rebild-accordion .ui-accordion-header a,
-#region-content .node-news-article .view-content-accordion .rebild-accordion .ui-accordion-header a {
+/* line 136, ../sass/partials/_nodes.scss */
+#region-content .node-page .ui-accordion .ui-accordion-header > a,
+#region-content .node-news-article .ui-accordion .ui-accordion-header > a {
   color: #474747;
-  font-weight: bold;
-  padding-left: 2.4em;
+  padding: 0;
+  margin: 0;
 }
-/* line 128, ../sass/partials/_nodes.scss */
-#region-content .node-page .view-content-accordion .rebild-accordion .ui-accordion-header .ui-icon-triangle-1-e,
-#region-content .node-news-article .view-content-accordion .rebild-accordion .ui-accordion-header .ui-icon-triangle-1-e {
-  width: 15px;
-  height: 15px;
-  background-image: url(../img/accordion_closed.png);
-}
-/* line 133, ../sass/partials/_nodes.scss */
-#region-content .node-page .view-content-accordion .rebild-accordion .ui-accordion-header a:hover,
-#region-content .node-news-article .view-content-accordion .rebild-accordion .ui-accordion-header a:hover {
+/* line 141, ../sass/partials/_nodes.scss */
+#region-content .node-page .ui-accordion .ui-accordion-header > a:hover,
+#region-content .node-news-article .ui-accordion .ui-accordion-header > a:hover {
   text-decoration: none;
 }
-/* line 138, ../sass/partials/_nodes.scss */
-#region-content .node-page .view-content-accordion .rebild-accordion .ui-state-active,
-#region-content .node-news-article .view-content-accordion .rebild-accordion .ui-state-active {
+/* line 144, ../sass/partials/_nodes.scss */
+#region-content .node-page .ui-accordion .ui-accordion-header > a .field-content:before,
+#region-content .node-news-article .ui-accordion .ui-accordion-header > a .field-content:before {
+  font-family: 'Rebild';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\e00f";
+  margin-right: 0.5em;
+}
+/* line 150, ../sass/partials/_nodes.scss */
+#region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active,
+#region-content .node-news-article .ui-accordion .ui-accordion-header.ui-state-active {
   background-color: #7f9dcd;
 }
-/* line 140, ../sass/partials/_nodes.scss */
-#region-content .node-page .view-content-accordion .rebild-accordion .ui-state-active .ui-icon-triangle-1-s,
-#region-content .node-news-article .view-content-accordion .rebild-accordion .ui-state-active .ui-icon-triangle-1-s {
-  width: 15px;
-  height: 15px;
-  background-image: url(../img/accordion_open.png);
+/* line 152, ../sass/partials/_nodes.scss */
+#region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active a,
+#region-content .node-news-article .ui-accordion .ui-accordion-header.ui-state-active a {
+  color: white;
 }
-/* line 145, ../sass/partials/_nodes.scss */
-#region-content .node-page .view-content-accordion .rebild-accordion .ui-state-active .field-content,
-#region-content .node-news-article .view-content-accordion .rebild-accordion .ui-state-active .field-content {
-  color: #fff;
-}
-/* line 149, ../sass/partials/_nodes.scss */
-#region-content .node-page .view-content-accordion .rebild-accordion .ui-accordion-content,
-#region-content .node-news-article .view-content-accordion .rebild-accordion .ui-accordion-content {
-  padding: 0.5em 1em;
+/* line 156, ../sass/partials/_nodes.scss */
+#region-content .node-page .ui-accordion .ui-accordion-content,
+#region-content .node-news-article .ui-accordion .ui-accordion-content {
+  padding: 10px 20px;
+  margin: 0;
 }
 
 /*------------------------------------------------------------------
 	Borger dk
 -------------------------------------------------------------------*/
 /* Accordion */
-/* line 163, ../sass/partials/_nodes.scss */
+/* line 171, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .field.field-name-body {
   margin: 2em 0 2em 0;
 }
-/* line 166, ../sass/partials/_nodes.scss */
+/* line 174, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .field-name-field-os2web-borger-dk-header {
   margin-bottom: 20px;
   font-size: 1.33333em;
   line-height: 1.15em;
 }
-/* line 172, ../sass/partials/_nodes.scss */
-#region-content .node-os2web-borger-dk-article .microArticle div.mArticle {
-  padding: 1em 2.2em;
+/* line 179, ../sass/partials/_nodes.scss */
+#region-content .node-os2web-borger-dk-article .microArticle {
+  position: relative;
 }
-/* line 175, ../sass/partials/_nodes.scss */
-#region-content .node-os2web-borger-dk-article .microArticle .accordion_ikon {
-  width: 15px;
-  height: 15px;
-  background-image: url(../img/accordion_closed.png);
-  position: absolute;
-  margin-top: 4px;
-  margin-left: 0.5em;
-}
-/* line 184, ../sass/partials/_nodes.scss */
-#region-content .node-os2web-borger-dk-article .microArticle h2 {
-  background: #e9e6e6;
+/* line 181, ../sass/partials/_nodes.scss */
+#region-content .node-os2web-borger-dk-article .microArticle h2.mArticle {
+  background: #e6e6e6;
+  color: #474747;
+  font-size: 1.08em;
+  line-height: 1.5em;
+  padding: 6px 8px;
+  margin: 0 0 5px 0;
+  font-weight: bold;
+  cursor: pointer;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  overflow: hidden;
-  margin-bottom: 8px;
-  font-size: 1em;
+}
+/* line 192, ../sass/partials/_nodes.scss */
+#region-content .node-os2web-borger-dk-article .microArticle h2.mArticle:before {
+  font-family: 'Rebild';
+  content: attr(data-icon);
+  speak: none;
   font-weight: normal;
-  padding: .5em .5em .5em 2.2em;
-  height: 13px;
-  cursor: pointer;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\e00f";
+  margin-right: 0.5em;
 }
 /* line 197, ../sass/partials/_nodes.scss */
-#region-content .node-os2web-borger-dk-article .microArticle.aktiv h2 {
+#region-content .node-os2web-borger-dk-article .microArticle div.mArticle {
+  padding: 10px 20px;
+  margin: 0;
+}
+/* line 203, ../sass/partials/_nodes.scss */
+#region-content .node-os2web-borger-dk-article .microArticle.aktiv h2.mArticle {
   background-color: #7f9dcd;
   color: #fff;
-}
-/* line 201, ../sass/partials/_nodes.scss */
-#region-content .node-os2web-borger-dk-article .microArticle.aktiv .accordion_ikon {
-  background-image: url(../img/accordion_open.png);
 }
 
 /*------------------------------------------------------------------
@@ -2023,27 +2037,39 @@ div.workbench-info-block a {
  */
 /* Display navigation */
 /* line 154, ../sass/partials/_views.scss */
-#selfservice-nav {
+#quicktabs-self_service_views ul.quicktabs-tabs {
   font-size: 0.91667em;
-  margin-bottom: 20px;
+  margin: 20px 0 20px 0 !important;
+  padding: 0;
 }
-/* line 157, ../sass/partials/_views.scss */
-#selfservice-nav a {
+/* line 158, ../sass/partials/_views.scss */
+#quicktabs-self_service_views ul.quicktabs-tabs li {
+  margin: 0;
+}
+/* line 160, ../sass/partials/_views.scss */
+#quicktabs-self_service_views ul.quicktabs-tabs li a {
   text-transform: uppercase;
   font-weight: bold;
+  color: #474747;
 }
-/* line 161, ../sass/partials/_views.scss */
-#selfservice-nav a.active {
+/* line 167, ../sass/partials/_views.scss */
+#quicktabs-self_service_views ul.quicktabs-tabs li.active a {
   color: #68a386;
+}
+/* line 171, ../sass/partials/_views.scss */
+#quicktabs-self_service_views ul.quicktabs-tabs li.first {
+  border-right: 1px solid #474747;
+  margin: 0 5px 0 0;
+  padding: 0 5px 0 0;
 }
 
 /* Level 1 */
-/* line 167, ../sass/partials/_views.scss */
-.view-selfservice-items.view-display-id-emner .view-grouping {
+/* line 180, ../sass/partials/_views.scss */
+#region-content .view-selfservice-items.view-display-id-emner .view-grouping {
   margin-bottom: 6px;
 }
-/* line 169, ../sass/partials/_views.scss */
-.view-selfservice-items.view-display-id-emner .view-grouping .view-grouping-header {
+/* line 182, ../sass/partials/_views.scss */
+#region-content .view-selfservice-items.view-display-id-emner .view-grouping > .ui-accordion-header {
   background: #68a386;
   color: white;
   font-size: 1.25em;
@@ -2055,8 +2081,8 @@ div.workbench-info-block a {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 177, ../sass/partials/_views.scss */
-.view-selfservice-items.view-display-id-emner .view-grouping .view-grouping-header:before {
+/* line 190, ../sass/partials/_views.scss */
+#region-content .view-selfservice-items.view-display-id-emner .view-grouping > .ui-accordion-header:before {
   font-family: 'Rebild';
   content: attr(data-icon);
   speak: none;
@@ -2068,13 +2094,13 @@ div.workbench-info-block a {
   content: "\e00f";
   margin-right: 0.5em;
 }
-/* line 182, ../sass/partials/_views.scss */
-.view-selfservice-items.view-display-id-emner .view-grouping .view-grouping-header.ui-state-active {
+/* line 195, ../sass/partials/_views.scss */
+#region-content .view-selfservice-items.view-display-id-emner .view-grouping > .ui-accordion-header.ui-state-active {
   background: #a3a3a3;
   color: #474747;
 }
-/* line 186, ../sass/partials/_views.scss */
-.view-selfservice-items.view-display-id-emner .view-grouping .view-grouping-header.ui-state-active:before {
+/* line 199, ../sass/partials/_views.scss */
+#region-content .view-selfservice-items.view-display-id-emner .view-grouping > .ui-accordion-header.ui-state-active:before {
   font-family: 'Rebild';
   content: attr(data-icon);
   speak: none;
@@ -2088,36 +2114,34 @@ div.workbench-info-block a {
 }
 
 /* Level 2 */
-/* line 197, ../sass/partials/_views.scss */
-.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content,
-.view-selfservice-items.view-display-id-alfabetisk .view-content,
-.view-selfservice-items.view-display-id-emner .view-grouping-content,
-.view-selfservice-items.view-display-id-emner .view-content {
+/* line 213, ../sass/partials/_views.scss */
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content,
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-content,
+#region-content .view-selfservice-items.view-display-id-emner .view-grouping-content,
+#region-content .view-selfservice-items.view-display-id-emner .view-content,
+#region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content,
+#region-content .view-selfservice-items.view-display-id-embedded .view-content {
   padding: 0;
   margin: 6px 0 0 0;
 }
-/* line 200, ../sass/partials/_views.scss */
-.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content > h3,
-.view-selfservice-items.view-display-id-alfabetisk .view-content > h3,
-.view-selfservice-items.view-display-id-emner .view-grouping-content > h3,
-.view-selfservice-items.view-display-id-emner .view-content > h3 {
-  background: #e6e6e6;
+/* line 216, ../sass/partials/_views.scss */
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content > h3,
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-content > h3,
+#region-content .view-selfservice-items.view-display-id-emner .view-grouping-content > h3,
+#region-content .view-selfservice-items.view-display-id-emner .view-content > h3,
+#region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content > h3,
+#region-content .view-selfservice-items.view-display-id-embedded .view-content > h3 {
   color: #474747;
-  font-size: 1.08em;
   padding: 8px 18px;
-  margin: 0 0 3px 0;
-  font-weight: bold;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
+  margin: 0 0 5px 0;
 }
-/* line 209, ../sass/partials/_views.scss */
-.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content > h3:before,
-.view-selfservice-items.view-display-id-alfabetisk .view-content > h3:before,
-.view-selfservice-items.view-display-id-emner .view-grouping-content > h3:before,
-.view-selfservice-items.view-display-id-emner .view-content > h3:before {
+/* line 221, ../sass/partials/_views.scss */
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content > h3:before,
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-content > h3:before,
+#region-content .view-selfservice-items.view-display-id-emner .view-grouping-content > h3:before,
+#region-content .view-selfservice-items.view-display-id-emner .view-content > h3:before,
+#region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content > h3:before,
+#region-content .view-selfservice-items.view-display-id-embedded .view-content > h3:before {
   font-family: 'Rebild';
   content: attr(data-icon);
   speak: none;
@@ -2129,18 +2153,22 @@ div.workbench-info-block a {
   content: "\e00f";
   margin-right: 0.5em;
 }
-/* line 214, ../sass/partials/_views.scss */
-.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content > h3.ui-state-active,
-.view-selfservice-items.view-display-id-alfabetisk .view-content > h3.ui-state-active,
-.view-selfservice-items.view-display-id-emner .view-grouping-content > h3.ui-state-active,
-.view-selfservice-items.view-display-id-emner .view-content > h3.ui-state-active {
+/* line 226, ../sass/partials/_views.scss */
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content > h3.ui-state-active,
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-content > h3.ui-state-active,
+#region-content .view-selfservice-items.view-display-id-emner .view-grouping-content > h3.ui-state-active,
+#region-content .view-selfservice-items.view-display-id-emner .view-content > h3.ui-state-active,
+#region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content > h3.ui-state-active,
+#region-content .view-selfservice-items.view-display-id-embedded .view-content > h3.ui-state-active {
   background: white;
 }
-/* line 217, ../sass/partials/_views.scss */
-.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content > h3.ui-state-active:before,
-.view-selfservice-items.view-display-id-alfabetisk .view-content > h3.ui-state-active:before,
-.view-selfservice-items.view-display-id-emner .view-grouping-content > h3.ui-state-active:before,
-.view-selfservice-items.view-display-id-emner .view-content > h3.ui-state-active:before {
+/* line 229, ../sass/partials/_views.scss */
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content > h3.ui-state-active:before,
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-content > h3.ui-state-active:before,
+#region-content .view-selfservice-items.view-display-id-emner .view-grouping-content > h3.ui-state-active:before,
+#region-content .view-selfservice-items.view-display-id-emner .view-content > h3.ui-state-active:before,
+#region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content > h3.ui-state-active:before,
+#region-content .view-selfservice-items.view-display-id-embedded .view-content > h3.ui-state-active:before {
   font-family: 'Rebild';
   content: attr(data-icon);
   speak: none;
@@ -2152,27 +2180,33 @@ div.workbench-info-block a {
   content: "\e010";
   margin-right: 0.5em;
 }
-/* line 222, ../sass/partials/_views.scss */
-.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2,
-.view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2,
-.view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2,
-.view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 {
+/* line 234, ../sass/partials/_views.scss */
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2,
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2,
+#region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2,
+#region-content .view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2,
+#region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content .accordion-content-level-2,
+#region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 {
   padding: 0 50px 20px;
   margin: 0;
   top: 0;
   border: none;
 }
-/* line 228, ../sass/partials/_views.scss */
-.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a,
-.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-link a,
-.view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-self-service-link a,
-.view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-link a,
-.view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a,
-.view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-link a,
-.view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-field-self-service-link a,
-.view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-link a {
+/* line 240, ../sass/partials/_views.scss */
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a,
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-link a,
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-self-service-link a,
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-link a,
+#region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a,
+#region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-link a,
+#region-content .view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-field-self-service-link a,
+#region-content .view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-link a,
+#region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a,
+#region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content .accordion-content-level-2 .views-field-link a,
+#region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-field-self-service-link a,
+#region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-link a {
   display: inline-block;
-  color: white !important;
+  color: white;
   text-transform: uppercase;
   font-size: 1em;
   background-color: #937ea7;
@@ -2188,15 +2222,19 @@ div.workbench-info-block a {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 239, ../sass/partials/_views.scss */
-.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
-.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-link a:after,
-.view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
-.view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-link a:after,
-.view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
-.view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-link a:after,
-.view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
-.view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-link a:after {
+/* line 251, ../sass/partials/_views.scss */
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-link a:after,
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-link a:after,
+#region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
+#region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-link a:after,
+#region-content .view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
+#region-content .view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-link a:after,
+#region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
+#region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content .accordion-content-level-2 .views-field-link a:after,
+#region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
+#region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-link a:after {
   font-family: 'Rebild';
   content: attr(data-icon);
   speak: none;
@@ -2220,42 +2258,85 @@ div.workbench-info-block a {
   -o-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 253, ../sass/partials/_views.scss */
-.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-main-body a,
-.view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-main-body a,
-.view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-main-body a,
-.view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-field-main-body a {
+/* line 265, ../sass/partials/_views.scss */
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-main-body a,
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-main-body a,
+#region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-main-body a,
+#region-content .view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-field-main-body a,
+#region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content .accordion-content-level-2 .views-field-field-main-body a,
+#region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-field-main-body a {
   color: #68a386;
 }
-/* line 256, ../sass/partials/_views.scss */
-.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-main-body ul,
-.view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-main-body ul,
-.view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-main-body ul,
-.view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-field-main-body ul {
+/* line 268, ../sass/partials/_views.scss */
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-main-body ul,
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-main-body ul,
+#region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-main-body ul,
+#region-content .view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-field-main-body ul,
+#region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content .accordion-content-level-2 .views-field-field-main-body ul,
+#region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-field-main-body ul {
   margin-left: 40px;
+  margin-bottom: 1em;
 }
-/* line 258, ../sass/partials/_views.scss */
-.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-main-body ul li,
-.view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-main-body ul li,
-.view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-main-body ul li,
-.view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-field-main-body ul li {
+/* line 271, ../sass/partials/_views.scss */
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-main-body ul li,
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-main-body ul li,
+#region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-main-body ul li,
+#region-content .view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-field-main-body ul li,
+#region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content .accordion-content-level-2 .views-field-field-main-body ul li,
+#region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-field-main-body ul li {
   margin-bottom: 0.5em;
 }
-/* line 263, ../sass/partials/_views.scss */
-.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:hover,
-.view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-self-service-link a:hover,
-.view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:hover,
-.view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-field-self-service-link a:hover {
-  text-decoration: none !important;
+/* line 276, ../sass/partials/_views.scss */
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:hover,
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-self-service-link a:hover,
+#region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:hover,
+#region-content .view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-field-self-service-link a:hover,
+#region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:hover,
+#region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-field-self-service-link a:hover {
+  text-decoration: none;
 }
-/* line 266, ../sass/partials/_views.scss */
-.view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-description,
-.view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-description,
-.view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-description,
-.view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-description {
+/* line 279, ../sass/partials/_views.scss */
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-description,
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-description,
+#region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-description,
+#region-content .view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-description,
+#region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content .accordion-content-level-2 .views-field-description,
+#region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-description {
   border-top: 1px dotted #474747;
   padding-top: 1em;
   font-size: 0.91667em;
+}
+
+/* Alphabetical list */
+/* line 292, ../sass/partials/_views.scss */
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-content > h3 {
+  padding: 8px;
+}
+
+/* Embedded accordion */
+/* line 300, ../sass/partials/_views.scss */
+#region-content .view-selfservice-items.view-display-id-embedded {
+  margin: 30px 0 0 0;
+}
+/* line 302, ../sass/partials/_views.scss */
+#region-content .view-selfservice-items.view-display-id-embedded h2.title {
+  font-size: 1.08em;
+  margin: 20px 0 10px;
+}
+/* line 307, ../sass/partials/_views.scss */
+#region-content .view-selfservice-items.view-display-id-embedded .view-content > h3 {
+  background: #68a386;
+  color: white;
+  padding: 6px 8px;
+}
+/* line 312, ../sass/partials/_views.scss */
+#region-content .view-selfservice-items.view-display-id-embedded .view-content > h3.ui-state-active {
+  background: #a3a3a3;
+  color: #474747;
+}
+/* line 316, ../sass/partials/_views.scss */
+#region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 {
+  padding: 10px 20px 20px;
 }
 
 /*------------------------------------------------------------------
