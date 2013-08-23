@@ -28,7 +28,7 @@ function rebild_general_settings_strongarm() {
       'filesize' => '5',
       'quota' => '0',
       'tuquota' => '0',
-      'extensions' => 'txt doc docx xls xlsx pdf ppt pptx pps ppsx odt ods odp',
+      'extensions' => 'png jpg jpeg gif txt doc docx xls xlsx pdf ppt pptx pps ppsx odt ods odp',
       'dimensions' => '1200x1200',
       'filenum' => '0',
       'directories' => array(
