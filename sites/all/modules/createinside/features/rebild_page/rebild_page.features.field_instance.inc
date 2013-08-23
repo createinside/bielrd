@@ -518,6 +518,45 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-page-field_main_block'
+  $field_instances['node-page-field_main_block'] = array(
+    'bundle' => 'page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Tilknyt en forudindstillet blok.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'blockreference',
+        'settings' => array(),
+        'type' => 'blockreference_without_title',
+        'weight' => 16,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_main_block',
+    'label' => 'Blok',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => 1,
+      ),
+      'type' => 'options_select',
+      'weight' => 13,
+    ),
+  );
+
   // Exported field_instance: 'node-page-field_main_body'
   $field_instances['node-page-field_main_body'] = array(
     'bundle' => 'page',
@@ -554,7 +593,7 @@ function rebild_page_field_default_field_instances() {
         'rows' => 25,
       ),
       'type' => 'text_textarea',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -1069,6 +1108,43 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-page-field_main_view'
+  $field_instances['node-page-field_main_view'] = array(
+    'bundle' => 'page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Tilknyt en dynamisk oversigt til denne side.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'viewreference',
+        'settings' => array(),
+        'type' => 'viewreference_default',
+        'weight' => 15,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_main_view',
+    'label' => 'Oversigt',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'viewreference',
+      'settings' => array(),
+      'type' => 'viewreference_select',
+      'weight' => 12,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Accordion');
@@ -1077,6 +1153,7 @@ function rebild_page_field_default_field_instances() {
   t('Angiv en dato for hvornår dette indhold skal opdateres eller gennemses igen.');
   t('Billede');
   t('Billedgalleri');
+  t('Blok');
   t('Brødtekst');
   t('Eksterne links');
   t('Fakta-indhold - placeres i en boks øverst til højre i hovedindholdet.');
@@ -1087,6 +1164,7 @@ function rebild_page_field_default_field_instances() {
   t('Indtast et resumé. Resuméet vises øverst før brødteksten.');
   t('Indtast tekst til en eller flere accordions. En accordion er et sammenklappeligt element, der vises nederst på indholdet.');
   t('Interne links');
+  t('Oversigt');
   t('Overskrift');
   t('Primær indhold.');
   t('Resumé');
@@ -1094,6 +1172,8 @@ function rebild_page_field_default_field_instances() {
   t('Stort bannerbillede - placeres øverst på siden. Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
   t('Tags');
   t('Tekst');
+  t('Tilknyt en dynamisk oversigt til denne side.');
+  t('Tilknyt en forudindstillet blok.');
   t('Title tekst');
   t('Title text is used in the tool tip when a user hovers their mouse over the image. Adding title text makes it easier to understand the context of an image and improves usability.');
   t('Upload et eller flere billeder, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
