@@ -163,7 +163,7 @@ function rebild_page_field_group_info() {
   $field_group->parent_name = 'group_ho_tabs';
   $field_group->data = array(
     'label' => 'Forældelsesdato',
-    'weight' => '19',
+    'weight' => '20',
     'children' => array(
       0 => 'field_main_outdated',
     ),
@@ -191,7 +191,7 @@ function rebild_page_field_group_info() {
   $field_group->parent_name = 'group_ho_tabs';
   $field_group->data = array(
     'label' => 'GIS-kort',
-    'weight' => '20',
+    'weight' => '21',
     'children' => array(
       0 => 'field_main_gis_map',
     ),
@@ -228,6 +228,7 @@ function rebild_page_field_group_info() {
       4 => 'group_foraeldelsesdato',
       5 => 'group_gis_kort',
       6 => 'group_oversigt',
+      7 => 'group_selfservices',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
