@@ -54,5 +54,27 @@ function rebild_self_service_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['quicktabs-self_service_views'] = array(
+    'cache' => 1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'self_service_views',
+    'module' => 'quicktabs',
+    'node_types' => array(),
+    'pages' => 'selvbetjening
+content/selvbetjening',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'rebild',
+        'weight' => -36,
+      ),
+    ),
+    'title' => '<none>',
+    'visibility' => 1,
+  );
+
   return $export;
 }
