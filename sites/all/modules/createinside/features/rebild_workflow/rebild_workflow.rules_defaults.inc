@@ -93,7 +93,7 @@ function rebild_workflow_default_rules_configuration() {
         { "workbench_moderation_set_state" : {
             "node" : [ "node" ],
             "moderation_state" : "published",
-            "force_transition" : 0
+            "force_transition" : 1
           }
         },
         { "component_rules_new_revision_on_published_needs_review_state" : { "node" : [ "node" ] } }
@@ -125,6 +125,7 @@ function rebild_workflow_default_rules_configuration() {
   $items['rules_workflow_email_needs_review_published'] = entity_import('rules_config', '{ "rules_workflow_email_needs_review_published" : {
       "LABEL" : "Workflow email: Needs review =\\u003E Published",
       "PLUGIN" : "reaction rule",
+      "ACTIVE" : false,
       "TAGS" : [ "workflow" ],
       "REQUIRES" : [ "workbench_moderation", "rules" ],
       "ON" : [ "workbench_moderation_after_moderation_transition" ],
@@ -147,6 +148,7 @@ function rebild_workflow_default_rules_configuration() {
   $items['rules_workflow_email_needs_review_revised'] = entity_import('rules_config', '{ "rules_workflow_email_needs_review_revised" : {
       "LABEL" : "Workflow email: Needs review =\\u003E Revised",
       "PLUGIN" : "reaction rule",
+      "ACTIVE" : false,
       "TAGS" : [ "workflow" ],
       "REQUIRES" : [ "workbench_moderation", "rules" ],
       "ON" : [ "workbench_moderation_after_moderation_transition" ],
