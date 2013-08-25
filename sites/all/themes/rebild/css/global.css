@@ -97,7 +97,7 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
 /* line 44, ../sass/partials/_fonts.scss */
-.icon-reorder, .icon-rss, .icon-envelope, .icon-search, .icon-double-angle-right, .icon-double-angle-left, .icon-double-angle-down, .icon-double-angle-up, .icon-list-ul, .icon-facebook, .icon-align-justify, .icon-phone, .icon-sort, .icon-arrow-right, .icon-arrow-left, .icon-arrow-up, .icon-arrow-down, .icon-menu, .icon-arrow-right-2, .icon-arrow-up-2, .icon-arrow-down-2, .icon-arrow-left-2, .icon-home, .icon-untitled, .icon-mobil_logo, .icon-bottom_logo, .icon-close, .icon-plus, .icon-minus, .icon-images, .icon-compass, .icon-images-2, .icon-plus-2, .icon-minus-2 {
+.icon-reorder, .icon-rss, .icon-envelope, .icon-search, .icon-double-angle-right, .icon-double-angle-left, .icon-double-angle-down, .icon-double-angle-up, .icon-list-ul, .icon-facebook, .icon-align-justify, .icon-phone, .icon-sort, .icon-arrow-right, .icon-arrow-left, .icon-arrow-up, .icon-arrow-down, .icon-menu, .icon-arrow-right-2, .icon-arrow-up-2, .icon-arrow-down-2, .icon-arrow-left-2, .icon-home, .icon-untitled, .icon-mobil_logo, .icon-bottom_logo, .icon-close, .icon-plus, .icon-minus, .icon-images, .icon-compass, .icon-images-2, .icon-plus-2, .icon-minus-2, .icon-printer, .icon-volume {
   font-family: 'Rebild';
   speak: none;
   font-style: normal;
@@ -276,6 +276,16 @@ you can use the generic selector below, but it's slower:
 /* line 153, ../sass/partials/_fonts.scss */
 .icon-minus-2:before {
   content: "\e010";
+}
+
+/* line 156, ../sass/partials/_fonts.scss */
+.icon-printer:before {
+  content: "\e011";
+}
+
+/* line 159, ../sass/partials/_fonts.scss */
+.icon-volume:before {
+  content: "\e012";
 }
 
 /*------------------------------------------------------------------
@@ -1835,6 +1845,90 @@ div.workbench-info-block {
 /* line 585, ../sass/partials/_blocks.scss */
 div.workbench-info-block a {
   font-weight: bold;
+}
+
+/* WCAG BLOCKS */
+/* line 591, ../sass/partials/_blocks.scss */
+.wcag-block {
+  display: inline-block;
+  margin: 0 20px 0 0;
+}
+/* line 594, ../sass/partials/_blocks.scss */
+.wcag-block a {
+  color: #474747;
+  text-decoration: none;
+  font-style: italic;
+}
+
+/* line 601, ../sass/partials/_blocks.scss */
+.wcag-block.textsize #text_resize_increase {
+  background: none;
+  margin: 0 7px 0 0;
+  padding: 0;
+  text-indent: 0;
+  height: auto;
+  width: auto;
+  font-weight: bold;
+}
+/* line 608, ../sass/partials/_blocks.scss */
+.wcag-block.textsize #text_resize_increase sup {
+  vertical-align: super;
+  float: right;
+  margin: 0 0 0 1px;
+}
+/* line 614, ../sass/partials/_blocks.scss */
+.wcag-block.textsize #text_resize_decrease {
+  background: none;
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  height: auto;
+  width: auto;
+  font-weight: bold;
+  font-size: 0.95em;
+}
+/* line 622, ../sass/partials/_blocks.scss */
+.wcag-block.textsize #text_resize_decrease sup {
+  vertical-align: sub;
+  margin: 0 0 0 1px;
+  float: right;
+}
+
+/* line 630, ../sass/partials/_blocks.scss */
+.wcag-block.read-aloud a:before {
+  font-family: 'Rebild';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\e012";
+  margin-right: 7px;
+  margin-top: 1px;
+  position: relative;
+  top: 1px;
+}
+
+/* line 640, ../sass/partials/_blocks.scss */
+.wcag-block.print span {
+  margin: 0;
+}
+/* line 643, ../sass/partials/_blocks.scss */
+.wcag-block.print a:before {
+  font-family: 'Rebild';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\e011";
+  margin-right: 7px;
+  position: relative;
+  top: 1px;
 }
 
 /*------------------------------------------------------------------

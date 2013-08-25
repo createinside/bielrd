@@ -586,3 +586,65 @@ div.workbench-info-block {
 		font-weight: bold;
 	}
 }
+
+/* WCAG BLOCKS */
+.wcag-block {
+  display: inline-block;
+  margin: 0 $spacing-std 0 0;
+  a {
+    color: $text-color;
+    text-decoration: none;
+    font-style: italic;
+  }
+}
+.wcag-block.textsize {
+  #text_resize_increase {
+    background: none;
+    margin: 0 7px 0 0; padding: 0;
+    text-indent: 0;
+    height: auto;
+    width: auto;
+    font-weight: bold;
+    sup {
+      vertical-align: super;
+      float: right;
+      margin: 0 0 0 1px;
+    }
+  }
+  #text_resize_decrease {
+    background: none;
+    margin: 0; padding: 0;
+    text-indent: 0;
+    height: auto;
+    width: auto;
+    font-weight: bold;
+    font-size: 0.95em;
+    sup {
+      vertical-align: sub;
+      margin: 0 0 0 1px;   
+      float: right;   
+    }
+  }
+}
+.wcag-block.read-aloud {
+  a:before {
+    @include icon-prepare();
+    content: "\e012"; 
+    margin-right: 7px;
+    margin-top: 1px;
+    position: relative;
+    top: 1px;
+  }  
+}
+.wcag-block.print {
+  span {
+    margin: 0;
+  }
+  a:before {
+    @include icon-prepare();
+    content: "\e011"; 
+    margin-right: 7px;
+    position: relative;
+    top: 1px;
+  }
+}
