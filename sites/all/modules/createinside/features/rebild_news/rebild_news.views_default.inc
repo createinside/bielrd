@@ -22,7 +22,7 @@ function rebild_news_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'News Articles';
+  $handler->display->display_options['title'] = 'Nyheder';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -108,12 +108,12 @@ function rebild_news_views_default_views() {
     'news_article' => 'news_article',
   );
 
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
-  $handler->display->display_options['block_description'] = 'News Articles';
+  /* Display: Forside */
+  $handler = $view->new_display('block', 'Forside', 'block');
+  $handler->display->display_options['block_description'] = 'Nyheder - forside';
 
-  /* Display: Side */
-  $handler = $view->new_display('page', 'Side', 'page_1');
+  /* Display: Nyhedsside */
+  $handler = $view->new_display('page', 'Nyhedsside', 'page_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'full';
@@ -178,9 +178,125 @@ function rebild_news_views_default_views() {
   $handler->display->display_options['fields']['field_main_summary']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_main_summary']['element_wrapper_class'] = 'news-summary';
   $handler->display->display_options['path'] = 'view/nyheder';
+
+  /* Display: Borger landing */
+  $handler = $view->new_display('block', 'Borger landing', 'block_1');
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filterkriterie: Indhold: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'news_article' => 'news_article',
+  );
+  /* Filterkriterie: Felt: Sektion (field_main_section) */
+  $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
+  $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
+  $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';
+  $handler->display->display_options['filters']['field_main_section_tid']['value'] = array(
+    1 => '1',
+  );
+  $handler->display->display_options['filters']['field_main_section_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_main_section_tid']['vocabulary'] = 'rebild_sections';
+  $handler->display->display_options['block_description'] = 'Nyheder - borger';
+
+  /* Display: Erhverv landing */
+  $handler = $view->new_display('block', 'Erhverv landing', 'block_2');
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filterkriterie: Indhold: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'news_article' => 'news_article',
+  );
+  /* Filterkriterie: Felt: Sektion (field_main_section) */
+  $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
+  $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
+  $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';
+  $handler->display->display_options['filters']['field_main_section_tid']['value'] = array(
+    3 => '3',
+  );
+  $handler->display->display_options['filters']['field_main_section_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_main_section_tid']['vocabulary'] = 'rebild_sections';
+  $handler->display->display_options['block_description'] = 'Nyheder - erhverv';
+
+  /* Display: Politik landing */
+  $handler = $view->new_display('block', 'Politik landing', 'block_3');
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filterkriterie: Indhold: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'news_article' => 'news_article',
+  );
+  /* Filterkriterie: Felt: Sektion (field_main_section) */
+  $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
+  $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
+  $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';
+  $handler->display->display_options['filters']['field_main_section_tid']['value'] = array(
+    2 => '2',
+  );
+  $handler->display->display_options['filters']['field_main_section_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_main_section_tid']['vocabulary'] = 'rebild_sections';
+  $handler->display->display_options['block_description'] = 'Nyheder - politik';
+
+  /* Display: Bo i rebild landing */
+  $handler = $view->new_display('block', 'Bo i rebild landing', 'block_4');
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filterkriterie: Indhold: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'news_article' => 'news_article',
+  );
+  /* Filterkriterie: Felt: Sektion (field_main_section) */
+  $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
+  $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
+  $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';
+  $handler->display->display_options['filters']['field_main_section_tid']['value'] = array(
+    4 => '4',
+  );
+  $handler->display->display_options['filters']['field_main_section_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_main_section_tid']['vocabulary'] = 'rebild_sections';
+  $handler->display->display_options['block_description'] = 'Nyheder - bo i rebild';
   $translatables['news_articles'] = array(
     t('Master'),
-    t('News Articles'),
+    t('Nyheder'),
     t('mere'),
     t('Udfør'),
     t('Gendan'),
@@ -189,8 +305,9 @@ function rebild_news_views_default_views() {
     t('Faldende'),
     t('[field_main_image]'),
     t('Ingen resultater.'),
-    t('Block'),
-    t('Side'),
+    t('Forside'),
+    t('Nyheder - forside'),
+    t('Nyhedsside'),
     t('Antal elementer'),
     t('- Alle -'),
     t('Forskydning'),
@@ -199,6 +316,14 @@ function rebild_news_views_default_views() {
     t('næste ›'),
     t('sidste »'),
     t('Dato'),
+    t('Borger landing'),
+    t('Nyheder - borger'),
+    t('Erhverv landing'),
+    t('Nyheder - erhverv'),
+    t('Politik landing'),
+    t('Nyheder - politik'),
+    t('Bo i rebild landing'),
+    t('Nyheder - bo i rebild'),
   );
   $export['news_articles'] = $view;
 
