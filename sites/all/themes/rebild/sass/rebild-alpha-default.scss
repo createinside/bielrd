@@ -296,17 +296,18 @@ Nodes
 	.block {
 		@include box-shadow(none);
 		padding: 25px 0 20px 0;
-		
-		form {
-			p {
-				display: inline;
-			}
-			p.small-text {
-				font-size: $font-size-small;
-			}
-			.customSelect {
-				width: 30%;
-			}
+		.jump-left, .jump-right {
+			width: 40%;
+			display: inline-block;
+		}
+		.jump-left {
+		  text-align: right;
+		}
+		.jump-right {
+		  text-align: left;
+		}
+		p.separator {
+		  display: inline-block;
 		}
 	}
 }

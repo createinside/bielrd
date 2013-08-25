@@ -240,24 +240,10 @@
 			margin-bottom: 15px;	
 			line-height: $line-height-std;
 		}
-		form {
-			margin: 25px 0 20px 0;
-			p {
-				font-style: italic;
-				font-size: $font-size-small;
-				span {
-					padding: 0 5px;
-				}
-			}
-		}
-		p.small-text {
-			font-size: $font-size-std;
-			line-height: 1.4em;
-			margin-bottom: 25px;
-			a, strong {
-				color: $text-color-header;
-				margin-right: 0.9em;
-			}
+		.separator {
+		  margin: 10px 20px;
+		  font-size: $font-size-small;
+		  font-style: italic;
 		}
 		p.arrow-link {
 			margin-bottom: 0 !important;
@@ -283,12 +269,16 @@
 				@include border-radius(2px);
 			}
 		}
+		select {
+		  cursor: pointer;
+		}
 		.customSelect {
 			font-style: italic;
 			color: $text-color-header;
 			font-size: 13px;
 			text-align: left;
 			width: 75%;
+			cursor: pointer;
 		}
 		.customSelect:after {
 			font-style: normal;
@@ -302,8 +292,27 @@
 		.customSelectInner {
 			padding: 1em;
 			display: block;
+			cursor: pointer;
 		}
 	}
+}
+.view-id-selfservice_frontpage.view-display-id-block {
+  > .view-content {
+    font-size: $font-size-std;
+    line-height: 1.4em;
+    margin-bottom: 25px;
+    overflow: hidden;
+    margin: 20px auto 25px; 
+    display: inline-block;
+    > .views-row {
+      color: $text-color-header;
+      margin-right: 0.9em;
+      float: left;
+      a {
+        color: $text-color-header;
+      }
+    }
+  } 
 }
 
 /* Search block - frontpage */
@@ -467,7 +476,7 @@
 .not-front #region-sidebar-first {
 
 	/* Selvbetjening - Lille */
-	.block.selvbetjening {
+	.block-selfservice-blocks-block-1 {
 		padding: $spacing-std;
 		color: white;
 		@include grid-box($color-green);
@@ -526,12 +535,17 @@
 		}
 		ul {
 			li {
-					margin-bottom: 0.5em;
-				}
-				li:before {
-					@include icon-prepare();
-					content: "\f101";	
-					margin-right: 0.5em;
+					margin: 0 0 0.5em 0;
+					padding: 0;
+          a {
+            color: white;
+            text-decoration: none;
+          }
+  				a:before {
+            @include icon-prepare();
+            content: "\f101"; 
+            margin-right: 0.5em;
+          }
 				}
 		}
 	}

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
 /* Base */
@@ -87,7 +88,7 @@ Backend
 }
 
 /**
- * UDSKIFT KUN LINJERNE HERUNDER, NR DER SKAL OPDATERS
+ * UDSKIFT KUN LINJERNE HERUNDER, NÃ¥R DER SKAL OPDATERS
  */
 /* Use the following CSS code if you want to have a class per icon */
 /*
@@ -1392,42 +1393,24 @@ Borger dk
   line-height: 1.15em;
 }
 /* line 243, ../sass/partials/_blocks.scss */
-#region-header-first .block form {
-  margin: 25px 0 20px 0;
-}
-/* line 245, ../sass/partials/_blocks.scss */
-#region-header-first .block form p {
-  font-style: italic;
+#region-header-first .block .separator {
+  margin: 10px 20px;
   font-size: 0.91667em;
+  font-style: italic;
 }
 /* line 248, ../sass/partials/_blocks.scss */
-#region-header-first .block form p span {
-  padding: 0 5px;
-}
-/* line 253, ../sass/partials/_blocks.scss */
-#region-header-first .block p.small-text {
-  font-size: 1em;
-  line-height: 1.4em;
-  margin-bottom: 25px;
-}
-/* line 257, ../sass/partials/_blocks.scss */
-#region-header-first .block p.small-text a, #region-header-first .block p.small-text strong {
-  color: #00473e;
-  margin-right: 0.9em;
-}
-/* line 262, ../sass/partials/_blocks.scss */
 #region-header-first .block p.arrow-link {
   margin-bottom: 0 !important;
   font-size: 0.91667em;
 }
-/* line 265, ../sass/partials/_blocks.scss */
+/* line 251, ../sass/partials/_blocks.scss */
 #region-header-first .block p.arrow-link a {
   text-transform: uppercase;
   color: #00473e;
   font-weight: bold;
   text-decoration: none;
 }
-/* line 271, ../sass/partials/_blocks.scss */
+/* line 257, ../sass/partials/_blocks.scss */
 #region-header-first .block p.arrow-link a:after {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1453,15 +1436,20 @@ Borger dk
   -o-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 286, ../sass/partials/_blocks.scss */
+/* line 272, ../sass/partials/_blocks.scss */
+#region-header-first .block select {
+  cursor: pointer;
+}
+/* line 275, ../sass/partials/_blocks.scss */
 #region-header-first .block .customSelect {
   font-style: italic;
   color: #00473e;
   font-size: 13px;
   text-align: left;
   width: 75%;
+  cursor: pointer;
 }
-/* line 293, ../sass/partials/_blocks.scss */
+/* line 283, ../sass/partials/_blocks.scss */
 #region-header-first .block .customSelect:after {
   font-style: normal;
   font-size: 16px;
@@ -1478,19 +1466,40 @@ Borger dk
   -webkit-font-smoothing: antialiased;
   content: "\e000";
 }
-/* line 302, ../sass/partials/_blocks.scss */
+/* line 292, ../sass/partials/_blocks.scss */
 #region-header-first .block .customSelectInner {
   padding: 1em;
   display: block;
+  cursor: pointer;
+}
+
+/* line 300, ../sass/partials/_blocks.scss */
+.view-id-selfservice_frontpage.view-display-id-block > .view-content {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin-bottom: 25px;
+  overflow: hidden;
+  margin: 20px auto 25px;
+  display: inline-block;
+}
+/* line 307, ../sass/partials/_blocks.scss */
+.view-id-selfservice_frontpage.view-display-id-block > .view-content > .views-row {
+  color: #00473e;
+  margin-right: 0.9em;
+  float: left;
+}
+/* line 311, ../sass/partials/_blocks.scss */
+.view-id-selfservice_frontpage.view-display-id-block > .view-content > .views-row a {
+  color: #00473e;
 }
 
 /* Search block - frontpage */
-/* line 311, ../sass/partials/_blocks.scss */
+/* line 320, ../sass/partials/_blocks.scss */
 #region-header-second .block {
   font-size: 10px;
   text-align: center;
 }
-/* line 314, ../sass/partials/_blocks.scss */
+/* line 323, ../sass/partials/_blocks.scss */
 #region-header-second .block form {
   background: #cfcfcf;
   padding: 10px;
@@ -1503,7 +1512,7 @@ Borger dk
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 322, ../sass/partials/_blocks.scss */
+/* line 331, ../sass/partials/_blocks.scss */
 #region-header-second .block form input[type=search],
 #region-header-second .block form input[type=text] {
   font-size: 1em;
@@ -1520,7 +1529,7 @@ Borger dk
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 336, ../sass/partials/_blocks.scss */
+/* line 345, ../sass/partials/_blocks.scss */
 #region-header-second .block form input[type=submit] {
   position: absolute;
   right: 10px;
@@ -1533,13 +1542,13 @@ Borger dk
   -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-/* line 345, ../sass/partials/_blocks.scss */
+/* line 354, ../sass/partials/_blocks.scss */
 #region-header-second .block p.small-text {
   font-size: 11px;
   line-height: 1.15em;
   color: #474747;
 }
-/* line 349, ../sass/partials/_blocks.scss */
+/* line 358, ../sass/partials/_blocks.scss */
 #region-header-second .block p.small-text a, #region-header-second .block p.small-text strong {
   color: #474747;
   margin-right: 1em;
@@ -1547,28 +1556,28 @@ Borger dk
 }
 
 /* Contact block - frontpage */
-/* line 362, ../sass/partials/_blocks.scss */
+/* line 371, ../sass/partials/_blocks.scss */
 .front #region-sidebar-first .block-block .block-title {
   color: white;
   font-size: 1.33333em;
   line-height: 1.15em;
   text-shadow: none;
 }
-/* line 368, ../sass/partials/_blocks.scss */
+/* line 377, ../sass/partials/_blocks.scss */
 .front #region-sidebar-first .block-block .content {
   line-height: 1.25em;
 }
-/* line 370, ../sass/partials/_blocks.scss */
+/* line 379, ../sass/partials/_blocks.scss */
 .front #region-sidebar-first .block-block .content a {
   color: white;
 }
 
 /* 5 shortcuts - frontpage */
-/* line 386, ../sass/partials/_blocks.scss */
+/* line 395, ../sass/partials/_blocks.scss */
 #region-postscript-first .block-block .content ul li {
   margin-bottom: 1em;
 }
-/* line 389, ../sass/partials/_blocks.scss */
+/* line 398, ../sass/partials/_blocks.scss */
 #region-postscript-first .block-block .content ul li:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1583,63 +1592,63 @@ Borger dk
 }
 
 /* Footer - Contact information */
-/* line 401, ../sass/partials/_blocks.scss */
+/* line 410, ../sass/partials/_blocks.scss */
 #region-footer-first .block {
   text-align: center;
 }
-/* line 404, ../sass/partials/_blocks.scss */
+/* line 413, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content p {
   margin-bottom: 10px;
 }
-/* line 407, ../sass/partials/_blocks.scss */
+/* line 416, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content table {
   margin: auto;
   margin-bottom: 10px;
   line-height: 1.15em;
   text-align: center;
 }
-/* line 413, ../sass/partials/_blocks.scss */
+/* line 422, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content p.large-text {
   font-size: 1.66667em;
   line-height: 1.15em;
 }
-/* line 417, ../sass/partials/_blocks.scss */
+/* line 426, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content img {
   margin-bottom: 5px;
 }
-/* line 420, ../sass/partials/_blocks.scss */
+/* line 429, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content a {
   color: #6b6b6b;
   text-decoration: none;
 }
-/* line 424, ../sass/partials/_blocks.scss */
+/* line 433, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content p.bottom-logo {
   margin-bottom: 20px;
 }
-/* line 426, ../sass/partials/_blocks.scss */
+/* line 435, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content p.bottom-logo span.icon-bottom_logo {
   font-size: 50px;
 }
 
 /* Mobile Header */
-/* line 435, ../sass/partials/_blocks.scss */
+/* line 444, ../sass/partials/_blocks.scss */
 #mob-header {
   color: #68a386;
   font-size: 24px;
 }
-/* line 438, ../sass/partials/_blocks.scss */
+/* line 447, ../sass/partials/_blocks.scss */
 #mob-header a {
   color: #68a386;
   text-decoration: none;
 }
-/* line 442, ../sass/partials/_blocks.scss */
+/* line 451, ../sass/partials/_blocks.scss */
 #mob-header #mob-header-left {
   float: left;
   text-align: left;
   width: 33%;
   line-height: 1.5em;
 }
-/* line 448, ../sass/partials/_blocks.scss */
+/* line 457, ../sass/partials/_blocks.scss */
 #mob-header #mob-header-center {
   text-align: center;
   float: left;
@@ -1648,11 +1657,11 @@ Borger dk
   color: #00703c;
   line-height: 1em;
 }
-/* line 455, ../sass/partials/_blocks.scss */
+/* line 464, ../sass/partials/_blocks.scss */
 #mob-header #mob-header-center a {
   color: #00703c;
 }
-/* line 459, ../sass/partials/_blocks.scss */
+/* line 468, ../sass/partials/_blocks.scss */
 #mob-header #mob-header-right {
   float: left;
   text-align: right;
@@ -1660,13 +1669,13 @@ Borger dk
   line-height: 1.5em;
 }
 
-/* line 467, ../sass/partials/_blocks.scss */
+/* line 476, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first {
   /* Selvbetjening - Lille */
   /* Background Image blocks */
 }
-/* line 470, ../sass/partials/_blocks.scss */
-.not-front #region-sidebar-first .block.selvbetjening {
+/* line 479, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 {
   padding: 20px;
   color: white;
   background-color: #68a386;
@@ -1679,30 +1688,30 @@ Borger dk
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 474, ../sass/partials/_blocks.scss */
-.not-front #region-sidebar-first .block.selvbetjening .block-title {
+/* line 483, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .block-title {
   color: white;
 }
-/* line 478, ../sass/partials/_blocks.scss */
-.not-front #region-sidebar-first .block.selvbetjening .content form {
+/* line 487, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content form {
   margin-bottom: 1em;
 }
-/* line 481, ../sass/partials/_blocks.scss */
-.not-front #region-sidebar-first .block.selvbetjening .content p.arrow-link {
+/* line 490, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content p.arrow-link {
   font-size: 0.91667em;
   border-bottom: 1px dotted white;
   margin-bottom: 20px;
   padding-bottom: 20px;
 }
-/* line 486, ../sass/partials/_blocks.scss */
-.not-front #region-sidebar-first .block.selvbetjening .content p.arrow-link a {
+/* line 495, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content p.arrow-link a {
   text-transform: uppercase;
   color: #00473e;
   font-weight: bold;
   text-decoration: none;
 }
-/* line 492, ../sass/partials/_blocks.scss */
-.not-front #region-sidebar-first .block.selvbetjening .content p.arrow-link a:after {
+/* line 501, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content p.arrow-link a:after {
   font-family: 'Rebild';
   content: attr(data-icon);
   speak: none;
@@ -1727,16 +1736,16 @@ Borger dk
   -o-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 507, ../sass/partials/_blocks.scss */
-.not-front #region-sidebar-first .block.selvbetjening .content .customSelect {
+/* line 516, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content .customSelect {
   font-style: italic;
   color: #00473e;
   font-size: 0.91667em;
   text-align: left;
   width: 100%;
 }
-/* line 514, ../sass/partials/_blocks.scss */
-.not-front #region-sidebar-first .block.selvbetjening .content .customSelect:after {
+/* line 523, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content .customSelect:after {
   font-style: normal;
   font-size: 1.3em;
   float: right;
@@ -1752,16 +1761,22 @@ Borger dk
   -webkit-font-smoothing: antialiased;
   content: "\e000";
 }
-/* line 523, ../sass/partials/_blocks.scss */
-.not-front #region-sidebar-first .block.selvbetjening .content .customSelectInner {
+/* line 532, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content .customSelectInner {
   padding: 1em;
 }
-/* line 528, ../sass/partials/_blocks.scss */
-.not-front #region-sidebar-first .block.selvbetjening ul li {
-  margin-bottom: 0.5em;
+/* line 537, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 ul li {
+  margin: 0 0 0.5em 0;
+  padding: 0;
 }
-/* line 531, ../sass/partials/_blocks.scss */
-.not-front #region-sidebar-first .block.selvbetjening ul li:before {
+/* line 540, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 ul li a {
+  color: white;
+  text-decoration: none;
+}
+/* line 544, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 ul li a:before {
   font-family: 'Rebild';
   content: attr(data-icon);
   speak: none;
@@ -1773,7 +1788,7 @@ Borger dk
   content: "\f101";
   margin-right: 0.5em;
 }
-/* line 540, ../sass/partials/_blocks.scss */
+/* line 554, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box {
   padding: 20px;
   color: #474747;
@@ -1787,37 +1802,37 @@ Borger dk
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 546, ../sass/partials/_blocks.scss */
+/* line 560, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box .content {
   width: 62%;
 }
-/* line 548, ../sass/partials/_blocks.scss */
+/* line 562, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box .content h2 {
   font-size: 1.33333em;
   line-height: 1.1em;
   font-weight: normal;
 }
-/* line 553, ../sass/partials/_blocks.scss */
+/* line 567, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box .content p {
   margin-top: 1em;
 }
-/* line 558, ../sass/partials/_blocks.scss */
+/* line 572, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box.plads {
   background: #f6f6f6 url("../img/image-box-1.png") no-repeat bottom right;
 }
-/* line 561, ../sass/partials/_blocks.scss */
+/* line 575, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box.skole {
   background: #f6f6f6 url("../img/image-box-2.png") no-repeat bottom right;
 }
 
 /* Workbench Moderation */
-/* line 567, ../sass/partials/_blocks.scss */
+/* line 581, ../sass/partials/_blocks.scss */
 div.workbench-info-block {
   font-size: 1em;
   padding: 10px 20px;
   line-height: 1.5em;
 }
-/* line 571, ../sass/partials/_blocks.scss */
+/* line 585, ../sass/partials/_blocks.scss */
 div.workbench-info-block a {
   font-weight: bold;
 }

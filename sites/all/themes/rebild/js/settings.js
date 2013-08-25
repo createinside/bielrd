@@ -29,7 +29,14 @@ $(function() {
     collapsible: true,
     active: false
 	});
-
+	// Selfservice jump menu {
+	$(".ctools-jump-menu-button").hide();
+	$(".ctools-jump-menu-select").change(function() {
+		if($(this).val()!="") {
+  		$(this).parent().siblings('.ctools-jump-menu-button').click();
+		}
+	});
+	
 });
 
 $(function() {

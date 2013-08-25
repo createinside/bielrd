@@ -55,6 +55,13 @@ function rebild_self_service_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'delete terms in self_service_types'.
+  $permissions['delete terms in self_service_types'] = array(
+    'name' => 'delete terms in self_service_types',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'edit any self_service content'.
   $permissions['edit any self_service content'] = array(
     'name' => 'edit any self_service content',
@@ -88,6 +95,13 @@ function rebild_self_service_user_default_permissions() {
     'roles' => array(
       'kommunikation' => 'kommunikation',
     ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in self_service_types'.
+  $permissions['edit terms in self_service_types'] = array(
+    'name' => 'edit terms in self_service_types',
+    'roles' => array(),
     'module' => 'taxonomy',
   );
 
