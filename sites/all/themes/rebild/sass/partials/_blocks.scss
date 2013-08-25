@@ -648,3 +648,34 @@ div.workbench-info-block {
     top: 1px;
   }
 }
+
+/* Cookie Popup */
+#sliding-popup {
+  background: $bg-color-bottom;
+  .popup-content {
+    width: auto;
+    #popup-text {
+      font-family: $font-family-std;
+      font-size: $font-size-small;
+      margin: $spacing-std/2 $spacing-std/2;
+      width: auto;
+      text-align: center;
+      h3 {
+        font-size: 1.25em;
+        margin-bottom: 5px;
+        font-weight: bold;
+      } 
+      p {
+        font-size: $font-size-small;
+      }
+    }
+    #popup-buttons {
+      margin: $spacing-std/2 $spacing-std/2;       
+      text-align: center;
+      float: none;
+      button {
+        
+      }
+    }
+  }
+}

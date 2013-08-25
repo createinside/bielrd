@@ -8,6 +8,7 @@ Mobile Menu
 Footer Menu
 Breadcrumbs
 Tabs
+Pager
 
 -------------------------------------------------------------------*/
 
@@ -277,4 +278,24 @@ ul.tabs {
 			@include box-shadow(rgba(black, 0.15) 0 0 3px);
 		}
 	}
+}
+
+/*------------------------------------------------------------------
+  Pager
+-------------------------------------------------------------------*/
+.item-list {
+  ul.pager {
+    li {
+      margin: 0 5px;
+      padding: 0;
+      a {
+        
+      }
+    }
+    li.pager-current {
+      a {
+        font-weight: bold;
+      }
+    }
+  }
 }

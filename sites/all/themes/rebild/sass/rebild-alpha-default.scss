@@ -369,6 +369,21 @@ Nodes
 	}	
 }
 
+/* Cookie Popup*/
+#sliding-popup {
+  .popup-content {
+    #popup-text {
+      width: 670px;
+      max-width: 50%;
+      text-align: left;
+    }
+    #popup-buttons {
+      max-width: 50%;
+      float: right;
+    }
+  }
+}
+
 /*------------------------------------------------------------------
 	Nodes
 -------------------------------------------------------------------*/

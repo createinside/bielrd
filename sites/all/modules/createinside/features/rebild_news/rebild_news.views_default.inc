@@ -111,6 +111,73 @@ function rebild_news_views_default_views() {
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['block_description'] = 'News Articles';
+
+  /* Display: Side */
+  $handler = $view->new_display('page', 'Side', 'page_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Antal elementer';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Alle -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Forskydning';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« første';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ forrige';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'næste ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'sidste »';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Indhold: Overskrift */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['max_length'] = '30';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'news-title';
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  /* Felt: Indhold: Billede */
+  $handler->display->display_options['fields']['field_main_image']['id'] = 'field_main_image';
+  $handler->display->display_options['fields']['field_main_image']['table'] = 'field_data_field_main_image';
+  $handler->display->display_options['fields']['field_main_image']['field'] = 'field_main_image';
+  $handler->display->display_options['fields']['field_main_image']['label'] = '';
+  $handler->display->display_options['fields']['field_main_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_main_image']['element_wrapper_class'] = 'news-image';
+  $handler->display->display_options['fields']['field_main_image']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_main_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_main_image']['type'] = 'picture';
+  $handler->display->display_options['fields']['field_main_image']['settings'] = array(
+    'picture_group' => 'nyhed_oversigt',
+    'fallback_image_style' => '',
+    'image_link' => 'content',
+  );
+  /* Felt: Indhold: Oprettelsesdato */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = 'Dato';
+  $handler->display->display_options['fields']['created']['element_label_type'] = 'strong';
+  $handler->display->display_options['fields']['created']['element_wrapper_class'] = 'news-date';
+  $handler->display->display_options['fields']['created']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['created']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['created']['custom_date_format'] = 'd. F Y';
+  /* Felt: Indhold: Resumé */
+  $handler->display->display_options['fields']['field_main_summary']['id'] = 'field_main_summary';
+  $handler->display->display_options['fields']['field_main_summary']['table'] = 'field_data_field_main_summary';
+  $handler->display->display_options['fields']['field_main_summary']['field'] = 'field_main_summary';
+  $handler->display->display_options['fields']['field_main_summary']['label'] = '';
+  $handler->display->display_options['fields']['field_main_summary']['alter']['max_length'] = '400';
+  $handler->display->display_options['fields']['field_main_summary']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['field_main_summary']['alter']['html'] = TRUE;
+  $handler->display->display_options['fields']['field_main_summary']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_main_summary']['element_wrapper_class'] = 'news-summary';
+  $handler->display->display_options['path'] = 'view/nyheder';
   $translatables['news_articles'] = array(
     t('Master'),
     t('News Articles'),
@@ -123,6 +190,15 @@ function rebild_news_views_default_views() {
     t('[field_main_image]'),
     t('Ingen resultater.'),
     t('Block'),
+    t('Side'),
+    t('Antal elementer'),
+    t('- Alle -'),
+    t('Forskydning'),
+    t('« første'),
+    t('‹ forrige'),
+    t('næste ›'),
+    t('sidste »'),
+    t('Dato'),
   );
   $export['news_articles'] = $view;
 

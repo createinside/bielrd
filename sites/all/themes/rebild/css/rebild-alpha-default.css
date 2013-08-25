@@ -469,16 +469,29 @@ Nodes
   text-align: left;
 }
 
+/* Cookie Popup*/
+/* line 375, ../sass/rebild-alpha-default.scss */
+#sliding-popup .popup-content #popup-text {
+  width: 670px;
+  max-width: 50%;
+  text-align: left;
+}
+/* line 380, ../sass/rebild-alpha-default.scss */
+#sliding-popup .popup-content #popup-buttons {
+  max-width: 50%;
+  float: right;
+}
+
 /*------------------------------------------------------------------
 	Nodes
 -------------------------------------------------------------------*/
-/* line 377, ../sass/rebild-alpha-default.scss */
+/* line 392, ../sass/rebild-alpha-default.scss */
 .node #content-main.has-sidebar {
   border-right: 1px dotted #474747;
   width: 71%;
   padding-right: 3%;
 }
-/* line 382, ../sass/rebild-alpha-default.scss */
+/* line 397, ../sass/rebild-alpha-default.scss */
 .node #region-content-sidebar {
   float: right;
   width: 23%;
@@ -486,12 +499,12 @@ Nodes
 }
 
 /* Page & News Articles */
-/* line 391, ../sass/rebild-alpha-default.scss */
+/* line 406, ../sass/rebild-alpha-default.scss */
 .node-page,
 .node-news-article {
   /* Node Image Gallery */
 }
-/* line 395, ../sass/rebild-alpha-default.scss */
+/* line 410, ../sass/rebild-alpha-default.scss */
 .node-page .field-name-field-main-image-gallery .field-items .field-item,
 .node-news-article .field-name-field-main-image-gallery .field-items .field-item {
   width: 21%;

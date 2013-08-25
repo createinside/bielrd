@@ -91,7 +91,11 @@
 	}
 }
 
-/* News Articles */
+/**
+ * NEWS ARTICLES
+ */
+
+/* News Articles - Frontpage */
 #block-views-news-articles-block {
 	.view {
 	@include box-shadow(rgba(black, 0.15) 0 0 3px);		
@@ -144,6 +148,35 @@
 		top: 40%;
 	}
 	.views-row-even { background-color: white; }
+}
+
+/* News Overview */
+.view-id-news_articles.view-display-id-page_1 {
+  .views-row {
+    padding-bottom: $spacing-std;
+    margin-bottom: $spacing-std;
+    border-bottom: 1px dotted $text-color;
+    overflow: hidden;
+    .news-title {
+      font-weight: bold;
+      margin-bottom: $spacing-std/1.5;
+      font-size: 1.08em;
+      a {
+        color: $text-color;
+      }
+    }
+    .news-image {
+      margin: 0 $spacing-std/2 $spacing-std/1.5 0;
+      float: left;
+      max-width: 40%;
+    }
+    .news-date {
+      margin-bottom: $spacing-std/2;
+    }
+    .news-summary {
+      
+    }
+  }
 }
 
 /**

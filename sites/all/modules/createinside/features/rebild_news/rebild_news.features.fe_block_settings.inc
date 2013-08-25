@@ -26,7 +26,7 @@ function rebild_news_default_fe_block_settings() {
         'region' => 'sidebar_first',
         'status' => 1,
         'theme' => 'rebild',
-        'weight' => -26,
+        'weight' => -39,
       ),
     ),
     'title' => 'Nyheder',
