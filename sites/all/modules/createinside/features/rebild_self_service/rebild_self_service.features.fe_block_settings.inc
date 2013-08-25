@@ -48,7 +48,7 @@ content/selvbetjening',
         'region' => 'sidebar_first',
         'status' => 1,
         'theme' => 'rebild',
-        'weight' => 0,
+        'weight' => -37,
       ),
     ),
     'title' => '',
@@ -83,7 +83,7 @@ content/selvbetjening',
     'delta' => 'selfservice_frontpage-block',
     'module' => 'views',
     'node_types' => array(),
-    'pages' => '',
+    'pages' => '<front>',
     'roles' => array(),
     'themes' => array(
       'rebild' => array(
@@ -94,7 +94,7 @@ content/selvbetjening',
       ),
     ),
     'title' => '',
-    'visibility' => 0,
+    'visibility' => 1,
   );
 
   $export['views-selfservice_frontpage-block_1'] = array(
