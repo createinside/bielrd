@@ -13,6 +13,33 @@ function rebild_wcag_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'eu_cookie_compliance_da';
+  $strongarm->value = array(
+    'popup_enabled' => 1,
+    'popup_clicking_confirmation' => 0,
+    'popup_position' => 1,
+    'popup_info' => array(
+      'value' => '<h3>Der anvendes cookies på dette website</h3><p>Ved at benytte websitet accepterer du samtidig at der gemmes cookies på din computer.</p>',
+      'format' => 'full_html',
+    ),
+    'popup_agreed_enabled' => 1,
+    'popup_hide_agreed' => 1,
+    'popup_agreed' => array(
+      'value' => '<h3>Tak fordi du accepterede brugen af cookies</h3><p>Du kan nu fortsætte med at bruge websitet eller læse mere om hvordan der anvendes cookies.</p>',
+      'format' => 'full_html',
+    ),
+    'popup_link' => 'cookies',
+    'popup_height' => '',
+    'popup_width' => '100%',
+    'popup_delay' => '1',
+    'popup_bg_hex' => '7f9dcd',
+    'popup_text_hex' => 'ffffff',
+  );
+  $export['eu_cookie_compliance_da'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'print_comments';
   $strongarm->value = 0;
   $export['print_comments'] = $strongarm;

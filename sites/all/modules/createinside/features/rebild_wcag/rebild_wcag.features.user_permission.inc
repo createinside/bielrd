@@ -23,5 +23,15 @@ function rebild_wcag_user_default_permissions() {
     'module' => 'print',
   );
 
+  // Exported permission: 'display EU Cookie Compliance popup'.
+  $permissions['display EU Cookie Compliance popup'] = array(
+    'name' => 'display EU Cookie Compliance popup',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+    ),
+    'module' => 'eu_cookie_compliance',
+  );
+
   return $permissions;
 }
