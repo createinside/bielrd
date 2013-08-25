@@ -161,7 +161,7 @@ function rebild_self_service_views_default_views() {
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Selfservice - frontpage';
+  $view->human_name = 'Selvbetjeningsblok - forside';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -625,6 +625,142 @@ function rebild_self_service_views_default_views() {
     t('Alle'),
   );
   $export['selfservice_items'] = $view;
+
+  $view = new view();
+  $view->name = 'selfservice_landing';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Selvbetjeningsblok - landinsside';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Selvbetjening';
+  $handler->display->display_options['css_class'] = 'selvbetjening-sidebar';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'mere';
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Udfør';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Gendan';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Sortér efter';
+  $handler->display->display_options['exposed_form']['options']['sort_asc_label'] = 'Stigende';
+  $handler->display->display_options['exposed_form']['options']['sort_desc_label'] = 'Faldende';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'jump_menu';
+  $handler->display->display_options['style_options']['path'] = 'path';
+  $handler->display->display_options['style_options']['text'] = 'Skift';
+  $handler->display->display_options['style_options']['choose'] = '- Vælg -';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Sidefod: Global: Tekstområde */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<a href="/selvbetjening">Mere selvbetjening</a>';
+  $handler->display->display_options['footer']['area']['format'] = 'full_html';
+  /* Felt: Indhold: Overskrift */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Felt: Indhold: Sti */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  /* Sorteringskriterie: Indholdsstatistik: Totale visninger */
+  $handler->display->display_options['sorts']['totalcount']['id'] = 'totalcount';
+  $handler->display->display_options['sorts']['totalcount']['table'] = 'node_counter';
+  $handler->display->display_options['sorts']['totalcount']['field'] = 'totalcount';
+  $handler->display->display_options['sorts']['totalcount']['order'] = 'DESC';
+  /* Sorteringskriterie: Indhold: Overskrift */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
+  /* Kontekstuelt filter: Felt: Sektion (field_main_section) */
+  $handler->display->display_options['arguments']['field_main_section_tid']['id'] = 'field_main_section_tid';
+  $handler->display->display_options['arguments']['field_main_section_tid']['table'] = 'field_data_field_main_section';
+  $handler->display->display_options['arguments']['field_main_section_tid']['field'] = 'field_main_section_tid';
+  $handler->display->display_options['arguments']['field_main_section_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_main_section_tid']['exception']['title'] = 'Alle';
+  $handler->display->display_options['arguments']['field_main_section_tid']['default_argument_type'] = 'php';
+  $handler->display->display_options['arguments']['field_main_section_tid']['default_argument_options']['code'] = 'return current_path();';
+  $handler->display->display_options['arguments']['field_main_section_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_main_section_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_main_section_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_main_section_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_main_section_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_main_section_tid']['validate_options']['vocabularies'] = array(
+    'rebild_sections' => 'rebild_sections',
+  );
+  $handler->display->display_options['arguments']['field_main_section_tid']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['field_main_section_tid']['validate_options']['transform'] = TRUE;
+  /* Filterkriterie: Indhold: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'self_service' => 'self_service',
+  );
+
+  /* Display: Sidebar */
+  $handler = $view->new_display('block', 'Sidebar', 'block_1');
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Sidefod: Global: Tekstområde */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<p class="arrow-link"><a href="/selvbetjening">Mere selvbetjening</a></p>';
+  $handler->display->display_options['footer']['area']['format'] = 'full_html';
+  /* Sidefod: Global: View-område */
+  $handler->display->display_options['footer']['view']['id'] = 'view';
+  $handler->display->display_options['footer']['view']['table'] = 'views';
+  $handler->display->display_options['footer']['view']['field'] = 'view';
+  $handler->display->display_options['footer']['view']['view_to_insert'] = 'selfservice_landing:block_2';
+  $handler->display->display_options['block_description'] = 'Selvbetjening - landing';
+
+  /* Display: Sidebar bottom */
+  $handler = $view->new_display('block', 'Sidebar bottom', 'block_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  $translatables['selfservice_landing'] = array(
+    t('Master'),
+    t('Selvbetjening'),
+    t('mere'),
+    t('Udfør'),
+    t('Gendan'),
+    t('Sortér efter'),
+    t('Stigende'),
+    t('Faldende'),
+    t('<a href="/selvbetjening">Mere selvbetjening</a>'),
+    t('Alle'),
+    t('Sidebar'),
+    t('<p class="arrow-link"><a href="/selvbetjening">Mere selvbetjening</a></p>'),
+    t('Selvbetjening - landing'),
+    t('Sidebar bottom'),
+  );
+  $export['selfservice_landing'] = $view;
 
   return $export;
 }

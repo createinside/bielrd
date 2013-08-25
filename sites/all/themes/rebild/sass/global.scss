@@ -61,15 +61,9 @@ img {
 /*------------------------------------------------------------------
 	Sections
 -------------------------------------------------------------------*/
-#section-header {
-	
-}
 #section-content {
 	padding: $spacing-std 0 0;
 	background: transparent url("../img/noise_bg_repeat.png") repeat;	
-}
-#section-footer {
-	
 }
 
 /*------------------------------------------------------------------
@@ -133,4 +127,16 @@ img {
 		padding: $spacing-std;
 		@include grid-box(white);	
 	}
+}
+.page-borger,
+.page-erhverv,
+.page-politik,
+.page-bo-i-rebild 
+{
+  .block-system-main {
+    padding: 0;
+    background: transparent;
+    @include box-shadow(none);
+    @include border-radius(none);
+  }
 }

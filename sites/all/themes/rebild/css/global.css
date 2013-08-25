@@ -1294,24 +1294,8 @@ Borger dk
   line-height: 1.15em;
 }
 
-/* line 143, ../sass/partials/_blocks.scss */
-.front #region-sidebar-first .block-block {
-  padding: 20px;
-  color: white;
-  line-height: 1.15em;
-  background-color: #937ea7;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
-}
-
 /* Region: Postcripts First */
-/* line 158, ../sass/partials/_blocks.scss */
+/* line 148, ../sass/partials/_blocks.scss */
 #region-postscript-first .block .content {
   padding: 20px;
   color: white;
@@ -1328,7 +1312,7 @@ Borger dk
 }
 
 /* Region: Postscripts Second */
-/* line 173, ../sass/partials/_blocks.scss */
+/* line 163, ../sass/partials/_blocks.scss */
 #region-postscript-second .block .content {
   padding: 20px;
   line-height: 1.15em;
@@ -1343,35 +1327,35 @@ Borger dk
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 178, ../sass/partials/_blocks.scss */
+/* line 168, ../sass/partials/_blocks.scss */
 #region-postscript-second .block .content a {
   word-break: break-word;
 }
 
 /* Zone: Footer */
-/* line 187, ../sass/partials/_blocks.scss */
+/* line 177, ../sass/partials/_blocks.scss */
 #zone-footer .block {
   color: #6b6b6b;
 }
-/* line 189, ../sass/partials/_blocks.scss */
+/* line 179, ../sass/partials/_blocks.scss */
 #zone-footer .block .block-title {
   font-size: 14px;
   margin: 0 0 20px 0;
   font-weight: normal;
 }
-/* line 194, ../sass/partials/_blocks.scss */
+/* line 184, ../sass/partials/_blocks.scss */
 #zone-footer .block .content {
   font-size: 0.91667em;
   line-height: 1.15em;
 }
-/* line 197, ../sass/partials/_blocks.scss */
+/* line 187, ../sass/partials/_blocks.scss */
 #zone-footer .block .content a {
   color: #6b6b6b;
   text-decoration: none;
 }
 
 /* Region: Bottom */
-/* line 208, ../sass/partials/_blocks.scss */
+/* line 198, ../sass/partials/_blocks.scss */
 #region-bottom .block .content {
   padding: 8px 0;
   text-align: center;
@@ -1379,7 +1363,7 @@ Borger dk
   line-height: 1.4em;
   color: white;
 }
-/* line 214, ../sass/partials/_blocks.scss */
+/* line 204, ../sass/partials/_blocks.scss */
 #region-bottom .block .content a {
   color: white;
   text-decoration: none;
@@ -1389,7 +1373,7 @@ Borger dk
 	Blocks Specific
 -------------------------------------------------------------------*/
 /* Selfservice block - frontpage */
-/* line 228, ../sass/partials/_blocks.scss */
+/* line 218, ../sass/partials/_blocks.scss */
 #region-header-first .block {
   background-color: #68a386;
   -webkit-border-radius: 3px;
@@ -1402,7 +1386,7 @@ Borger dk
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   padding: 20px;
 }
-/* line 231, ../sass/partials/_blocks.scss */
+/* line 221, ../sass/partials/_blocks.scss */
 #region-header-first .block h2 {
   color: white;
   font-size: 2.33333em;
@@ -1410,31 +1394,31 @@ Borger dk
   font-weight: normal;
   margin-bottom: 14px;
 }
-/* line 238, ../sass/partials/_blocks.scss */
+/* line 228, ../sass/partials/_blocks.scss */
 #region-header-first .block p {
   font-size: 1.25em;
   margin-bottom: 15px;
   line-height: 1.15em;
 }
-/* line 243, ../sass/partials/_blocks.scss */
+/* line 233, ../sass/partials/_blocks.scss */
 #region-header-first .block .separator {
   margin: 10px 20px;
   font-size: 0.91667em;
   font-style: italic;
 }
-/* line 248, ../sass/partials/_blocks.scss */
+/* line 238, ../sass/partials/_blocks.scss */
 #region-header-first .block p.arrow-link {
   margin-bottom: 0 !important;
   font-size: 0.91667em;
 }
-/* line 251, ../sass/partials/_blocks.scss */
+/* line 241, ../sass/partials/_blocks.scss */
 #region-header-first .block p.arrow-link a {
   text-transform: uppercase;
   color: #00473e;
   font-weight: bold;
   text-decoration: none;
 }
-/* line 257, ../sass/partials/_blocks.scss */
+/* line 247, ../sass/partials/_blocks.scss */
 #region-header-first .block p.arrow-link a:after {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1460,11 +1444,11 @@ Borger dk
   -o-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 272, ../sass/partials/_blocks.scss */
+/* line 262, ../sass/partials/_blocks.scss */
 #region-header-first .block select {
   cursor: pointer;
 }
-/* line 275, ../sass/partials/_blocks.scss */
+/* line 265, ../sass/partials/_blocks.scss */
 #region-header-first .block .customSelect {
   font-style: italic;
   color: #00473e;
@@ -1473,7 +1457,7 @@ Borger dk
   width: 75%;
   cursor: pointer;
 }
-/* line 283, ../sass/partials/_blocks.scss */
+/* line 273, ../sass/partials/_blocks.scss */
 #region-header-first .block .customSelect:after {
   font-style: normal;
   font-size: 16px;
@@ -1490,14 +1474,14 @@ Borger dk
   -webkit-font-smoothing: antialiased;
   content: "\e000";
 }
-/* line 292, ../sass/partials/_blocks.scss */
+/* line 282, ../sass/partials/_blocks.scss */
 #region-header-first .block .customSelectInner {
   padding: 1em;
   display: block;
   cursor: pointer;
 }
 
-/* line 300, ../sass/partials/_blocks.scss */
+/* line 290, ../sass/partials/_blocks.scss */
 .view-id-selfservice_frontpage.view-display-id-block > .view-content {
   font-size: 1em;
   line-height: 1.4em;
@@ -1506,24 +1490,24 @@ Borger dk
   margin: 20px auto 25px;
   display: inline-block;
 }
-/* line 307, ../sass/partials/_blocks.scss */
+/* line 297, ../sass/partials/_blocks.scss */
 .view-id-selfservice_frontpage.view-display-id-block > .view-content > .views-row {
   color: #00473e;
   margin-right: 0.9em;
   float: left;
 }
-/* line 311, ../sass/partials/_blocks.scss */
+/* line 301, ../sass/partials/_blocks.scss */
 .view-id-selfservice_frontpage.view-display-id-block > .view-content > .views-row a {
   color: #00473e;
 }
 
 /* Search block - frontpage */
-/* line 320, ../sass/partials/_blocks.scss */
+/* line 310, ../sass/partials/_blocks.scss */
 #region-header-second .block {
   font-size: 10px;
   text-align: center;
 }
-/* line 323, ../sass/partials/_blocks.scss */
+/* line 313, ../sass/partials/_blocks.scss */
 #region-header-second .block form {
   background: #cfcfcf;
   padding: 10px;
@@ -1536,7 +1520,7 @@ Borger dk
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 331, ../sass/partials/_blocks.scss */
+/* line 321, ../sass/partials/_blocks.scss */
 #region-header-second .block form input[type=search],
 #region-header-second .block form input[type=text] {
   font-size: 1em;
@@ -1553,7 +1537,7 @@ Borger dk
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 345, ../sass/partials/_blocks.scss */
+/* line 335, ../sass/partials/_blocks.scss */
 #region-header-second .block form input[type=submit] {
   position: absolute;
   right: 10px;
@@ -1566,42 +1550,57 @@ Borger dk
   -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-/* line 354, ../sass/partials/_blocks.scss */
+/* line 344, ../sass/partials/_blocks.scss */
 #region-header-second .block p.small-text {
   font-size: 11px;
   line-height: 1.15em;
   color: #474747;
 }
-/* line 358, ../sass/partials/_blocks.scss */
+/* line 348, ../sass/partials/_blocks.scss */
 #region-header-second .block p.small-text a, #region-header-second .block p.small-text strong {
   color: #474747;
   margin-right: 1em;
   text-shadow: white 1px 1px 1px;
 }
 
-/* Contact block - frontpage */
-/* line 371, ../sass/partials/_blocks.scss */
-.front #region-sidebar-first .block-block .block-title {
+/* Contact block - front page/landing pages */
+/* line 359, ../sass/partials/_blocks.scss */
+#region-sidebar-first .block.contact-sidebar {
+  padding: 20px;
+  color: white;
+  line-height: 1.15em;
+  background-color: #937ea7;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+}
+/* line 364, ../sass/partials/_blocks.scss */
+#region-sidebar-first .block.contact-sidebar .block-title {
   color: white;
   font-size: 1.33333em;
   line-height: 1.15em;
   text-shadow: none;
 }
-/* line 377, ../sass/partials/_blocks.scss */
-.front #region-sidebar-first .block-block .content {
+/* line 370, ../sass/partials/_blocks.scss */
+#region-sidebar-first .block.contact-sidebar .content {
   line-height: 1.25em;
 }
-/* line 379, ../sass/partials/_blocks.scss */
-.front #region-sidebar-first .block-block .content a {
+/* line 372, ../sass/partials/_blocks.scss */
+#region-sidebar-first .block.contact-sidebar .content a {
   color: white;
 }
 
 /* 5 shortcuts - frontpage */
-/* line 395, ../sass/partials/_blocks.scss */
+/* line 388, ../sass/partials/_blocks.scss */
 #region-postscript-first .block-block .content ul li {
   margin-bottom: 1em;
 }
-/* line 398, ../sass/partials/_blocks.scss */
+/* line 391, ../sass/partials/_blocks.scss */
 #region-postscript-first .block-block .content ul li:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1616,63 +1615,63 @@ Borger dk
 }
 
 /* Footer - Contact information */
-/* line 410, ../sass/partials/_blocks.scss */
+/* line 403, ../sass/partials/_blocks.scss */
 #region-footer-first .block {
   text-align: center;
 }
-/* line 413, ../sass/partials/_blocks.scss */
+/* line 406, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content p {
   margin-bottom: 10px;
 }
-/* line 416, ../sass/partials/_blocks.scss */
+/* line 409, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content table {
   margin: auto;
   margin-bottom: 10px;
   line-height: 1.15em;
   text-align: center;
 }
-/* line 422, ../sass/partials/_blocks.scss */
+/* line 415, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content p.large-text {
   font-size: 1.66667em;
   line-height: 1.15em;
 }
-/* line 426, ../sass/partials/_blocks.scss */
+/* line 419, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content img {
   margin-bottom: 5px;
 }
-/* line 429, ../sass/partials/_blocks.scss */
+/* line 422, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content a {
   color: #6b6b6b;
   text-decoration: none;
 }
-/* line 433, ../sass/partials/_blocks.scss */
+/* line 426, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content p.bottom-logo {
   margin-bottom: 20px;
 }
-/* line 435, ../sass/partials/_blocks.scss */
+/* line 428, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content p.bottom-logo span.icon-bottom_logo {
   font-size: 50px;
 }
 
 /* Mobile Header */
-/* line 444, ../sass/partials/_blocks.scss */
+/* line 437, ../sass/partials/_blocks.scss */
 #mob-header {
   color: #68a386;
   font-size: 24px;
 }
-/* line 447, ../sass/partials/_blocks.scss */
+/* line 440, ../sass/partials/_blocks.scss */
 #mob-header a {
   color: #68a386;
   text-decoration: none;
 }
-/* line 451, ../sass/partials/_blocks.scss */
+/* line 444, ../sass/partials/_blocks.scss */
 #mob-header #mob-header-left {
   float: left;
   text-align: left;
   width: 33%;
   line-height: 1.5em;
 }
-/* line 457, ../sass/partials/_blocks.scss */
+/* line 450, ../sass/partials/_blocks.scss */
 #mob-header #mob-header-center {
   text-align: center;
   float: left;
@@ -1681,11 +1680,11 @@ Borger dk
   color: #00703c;
   line-height: 1em;
 }
-/* line 464, ../sass/partials/_blocks.scss */
+/* line 457, ../sass/partials/_blocks.scss */
 #mob-header #mob-header-center a {
   color: #00703c;
 }
-/* line 468, ../sass/partials/_blocks.scss */
+/* line 461, ../sass/partials/_blocks.scss */
 #mob-header #mob-header-right {
   float: left;
   text-align: right;
@@ -1693,13 +1692,14 @@ Borger dk
   line-height: 1.5em;
 }
 
-/* line 476, ../sass/partials/_blocks.scss */
+/* line 469, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first {
-  /* Selvbetjening - Lille */
+  /* Selvbetjening - sidebar */
   /* Background Image blocks */
 }
-/* line 479, ../sass/partials/_blocks.scss */
-.not-front #region-sidebar-first .block-selfservice-blocks-block-1 {
+/* line 473, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1,
+.not-front #region-sidebar-first .block-selfservice-landing-block-1 {
   padding: 20px;
   color: white;
   background-color: #68a386;
@@ -1712,30 +1712,35 @@ Borger dk
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 483, ../sass/partials/_blocks.scss */
-.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .block-title {
+/* line 477, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .block-title,
+.not-front #region-sidebar-first .block-selfservice-landing-block-1 .block-title {
   color: white;
 }
-/* line 487, ../sass/partials/_blocks.scss */
-.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content form {
+/* line 481, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content form,
+.not-front #region-sidebar-first .block-selfservice-landing-block-1 .content form {
   margin-bottom: 1em;
 }
-/* line 490, ../sass/partials/_blocks.scss */
-.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content p.arrow-link {
+/* line 484, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content p.arrow-link,
+.not-front #region-sidebar-first .block-selfservice-landing-block-1 .content p.arrow-link {
   font-size: 0.91667em;
   border-bottom: 1px dotted white;
   margin-bottom: 20px;
   padding-bottom: 20px;
 }
-/* line 495, ../sass/partials/_blocks.scss */
-.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content p.arrow-link a {
+/* line 489, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content p.arrow-link a,
+.not-front #region-sidebar-first .block-selfservice-landing-block-1 .content p.arrow-link a {
   text-transform: uppercase;
   color: #00473e;
   font-weight: bold;
   text-decoration: none;
 }
-/* line 501, ../sass/partials/_blocks.scss */
-.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content p.arrow-link a:after {
+/* line 495, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content p.arrow-link a:after,
+.not-front #region-sidebar-first .block-selfservice-landing-block-1 .content p.arrow-link a:after {
   font-family: 'Rebild';
   content: attr(data-icon);
   speak: none;
@@ -1760,16 +1765,18 @@ Borger dk
   -o-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 516, ../sass/partials/_blocks.scss */
-.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content .customSelect {
+/* line 510, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content .customSelect,
+.not-front #region-sidebar-first .block-selfservice-landing-block-1 .content .customSelect {
   font-style: italic;
   color: #00473e;
   font-size: 0.91667em;
   text-align: left;
   width: 100%;
 }
-/* line 523, ../sass/partials/_blocks.scss */
-.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content .customSelect:after {
+/* line 517, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content .customSelect:after,
+.not-front #region-sidebar-first .block-selfservice-landing-block-1 .content .customSelect:after {
   font-style: normal;
   font-size: 1.3em;
   float: right;
@@ -1785,22 +1792,26 @@ Borger dk
   -webkit-font-smoothing: antialiased;
   content: "\e000";
 }
-/* line 532, ../sass/partials/_blocks.scss */
-.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content .customSelectInner {
+/* line 526, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content .customSelectInner,
+.not-front #region-sidebar-first .block-selfservice-landing-block-1 .content .customSelectInner {
   padding: 1em;
 }
-/* line 537, ../sass/partials/_blocks.scss */
-.not-front #region-sidebar-first .block-selfservice-blocks-block-1 ul li {
+/* line 531, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 ul li,
+.not-front #region-sidebar-first .block-selfservice-landing-block-1 ul li {
   margin: 0 0 0.5em 0;
   padding: 0;
 }
-/* line 540, ../sass/partials/_blocks.scss */
-.not-front #region-sidebar-first .block-selfservice-blocks-block-1 ul li a {
+/* line 534, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 ul li a,
+.not-front #region-sidebar-first .block-selfservice-landing-block-1 ul li a {
   color: white;
   text-decoration: none;
 }
-/* line 544, ../sass/partials/_blocks.scss */
-.not-front #region-sidebar-first .block-selfservice-blocks-block-1 ul li a:before {
+/* line 538, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 ul li a:before,
+.not-front #region-sidebar-first .block-selfservice-landing-block-1 ul li a:before {
   font-family: 'Rebild';
   content: attr(data-icon);
   speak: none;
@@ -1812,7 +1823,7 @@ Borger dk
   content: "\f101";
   margin-right: 0.5em;
 }
-/* line 554, ../sass/partials/_blocks.scss */
+/* line 548, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box {
   padding: 20px;
   color: #474747;
@@ -1826,55 +1837,55 @@ Borger dk
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 560, ../sass/partials/_blocks.scss */
+/* line 554, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box .content {
   width: 62%;
 }
-/* line 562, ../sass/partials/_blocks.scss */
+/* line 556, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box .content h2 {
   font-size: 1.33333em;
   line-height: 1.1em;
   font-weight: normal;
 }
-/* line 567, ../sass/partials/_blocks.scss */
+/* line 561, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box .content p {
   margin-top: 1em;
 }
-/* line 572, ../sass/partials/_blocks.scss */
+/* line 566, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box.plads {
   background: #f6f6f6 url("../img/image-box-1.png") no-repeat bottom right;
 }
-/* line 575, ../sass/partials/_blocks.scss */
+/* line 569, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box.skole {
   background: #f6f6f6 url("../img/image-box-2.png") no-repeat bottom right;
 }
 
 /* Workbench Moderation */
-/* line 581, ../sass/partials/_blocks.scss */
+/* line 575, ../sass/partials/_blocks.scss */
 div.workbench-info-block {
   font-size: 1em;
   padding: 10px 20px;
   line-height: 1.5em;
 }
-/* line 585, ../sass/partials/_blocks.scss */
+/* line 579, ../sass/partials/_blocks.scss */
 div.workbench-info-block a {
   font-weight: bold;
 }
 
 /* WCAG BLOCKS */
-/* line 591, ../sass/partials/_blocks.scss */
+/* line 585, ../sass/partials/_blocks.scss */
 .wcag-block {
   display: inline-block;
   margin: 0 20px 0 0;
 }
-/* line 594, ../sass/partials/_blocks.scss */
+/* line 588, ../sass/partials/_blocks.scss */
 .wcag-block a {
   color: #474747;
   text-decoration: none;
   font-style: italic;
 }
 
-/* line 601, ../sass/partials/_blocks.scss */
+/* line 595, ../sass/partials/_blocks.scss */
 .wcag-block.textsize #text_resize_increase {
   background: none;
   margin: 0 7px 0 0;
@@ -1884,13 +1895,13 @@ div.workbench-info-block a {
   width: auto;
   font-weight: bold;
 }
-/* line 608, ../sass/partials/_blocks.scss */
+/* line 602, ../sass/partials/_blocks.scss */
 .wcag-block.textsize #text_resize_increase sup {
   vertical-align: super;
   float: right;
   margin: 0 0 0 1px;
 }
-/* line 614, ../sass/partials/_blocks.scss */
+/* line 608, ../sass/partials/_blocks.scss */
 .wcag-block.textsize #text_resize_decrease {
   background: none;
   margin: 0;
@@ -1901,14 +1912,14 @@ div.workbench-info-block a {
   font-weight: bold;
   font-size: 0.95em;
 }
-/* line 622, ../sass/partials/_blocks.scss */
+/* line 616, ../sass/partials/_blocks.scss */
 .wcag-block.textsize #text_resize_decrease sup {
   vertical-align: sub;
   margin: 0 0 0 1px;
   float: right;
 }
 
-/* line 630, ../sass/partials/_blocks.scss */
+/* line 624, ../sass/partials/_blocks.scss */
 .wcag-block.read-aloud a:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1925,11 +1936,11 @@ div.workbench-info-block a {
   top: 1px;
 }
 
-/* line 640, ../sass/partials/_blocks.scss */
+/* line 634, ../sass/partials/_blocks.scss */
 .wcag-block.print span {
   margin: 0;
 }
-/* line 643, ../sass/partials/_blocks.scss */
+/* line 637, ../sass/partials/_blocks.scss */
 .wcag-block.print a:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1946,15 +1957,15 @@ div.workbench-info-block a {
 }
 
 /* Cookie Popup */
-/* line 653, ../sass/partials/_blocks.scss */
+/* line 647, ../sass/partials/_blocks.scss */
 #sliding-popup {
   background: #6b6b6b;
 }
-/* line 655, ../sass/partials/_blocks.scss */
+/* line 649, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content {
   width: auto;
 }
-/* line 657, ../sass/partials/_blocks.scss */
+/* line 651, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-text {
   font-family: Verdana, Arial, sans-serif;
   font-size: 0.91667em;
@@ -1962,17 +1973,17 @@ div.workbench-info-block a {
   width: auto;
   text-align: center;
 }
-/* line 663, ../sass/partials/_blocks.scss */
+/* line 657, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-text h3 {
   font-size: 1.25em;
   margin-bottom: 5px;
   font-weight: bold;
 }
-/* line 668, ../sass/partials/_blocks.scss */
+/* line 662, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-text p {
   font-size: 0.91667em;
 }
-/* line 672, ../sass/partials/_blocks.scss */
+/* line 666, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-buttons {
   margin: 10px 10px;
   text-align: center;
@@ -1984,7 +1995,7 @@ div.workbench-info-block a {
 [VIEWS]
 
 -------------------------------------------------------------------*/
-/* Frontpage - Aktuelt i Rebild kommune */
+/* Aktuelt i Rebild kommune */
 /* line 9, ../sass/partials/_views.scss */
 .view-id-rebild_frontpage .views-row {
   margin: 0 0 20px 0;
@@ -2110,15 +2121,23 @@ div.workbench-info-block a {
 /**
  * NEWS ARTICLES
  */
-/* News Articles - Frontpage */
-/* line 100, ../sass/partials/_views.scss */
-#block-views-news-articles-block .view {
+/* News Articles - Frontpage/Landing pages */
+/* line 104, ../sass/partials/_views.scss */
+#block-views-news-articles-block .view,
+#block-views-news-articles-block-1 .view,
+#block-views-news-articles-block-2 .view,
+#block-views-news-articles-block-3 .view,
+#block-views-news-articles-block-4 .view {
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 104, ../sass/partials/_views.scss */
-#block-views-news-articles-block .view-header img {
+/* line 108, ../sass/partials/_views.scss */
+#block-views-news-articles-block .view-header img,
+#block-views-news-articles-block-1 .view-header img,
+#block-views-news-articles-block-2 .view-header img,
+#block-views-news-articles-block-3 .view-header img,
+#block-views-news-articles-block-4 .view-header img {
   width: 100%;
   -webkit-border-radius: 3px 3px 0 0;
   -moz-border-radius: 3px 3px 0 0;
@@ -2126,8 +2145,12 @@ div.workbench-info-block a {
   -o-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
 }
-/* line 109, ../sass/partials/_views.scss */
-#block-views-news-articles-block .view-content {
+/* line 113, ../sass/partials/_views.scss */
+#block-views-news-articles-block .view-content,
+#block-views-news-articles-block-1 .view-content,
+#block-views-news-articles-block-2 .view-content,
+#block-views-news-articles-block-3 .view-content,
+#block-views-news-articles-block-4 .view-content {
   padding: 0 10px 10px;
   background-color: #f6f6f6;
   line-height: 1.15em;
@@ -2137,29 +2160,49 @@ div.workbench-info-block a {
   -o-border-radius: 0 0 3px 3px;
   border-radius: 0 0 3px 3px;
 }
-/* line 115, ../sass/partials/_views.scss */
-#block-views-news-articles-block .views-row {
+/* line 119, ../sass/partials/_views.scss */
+#block-views-news-articles-block .views-row,
+#block-views-news-articles-block-1 .views-row,
+#block-views-news-articles-block-2 .views-row,
+#block-views-news-articles-block-3 .views-row,
+#block-views-news-articles-block-4 .views-row {
   position: relative;
   padding: 1em;
 }
-/* line 118, ../sass/partials/_views.scss */
-#block-views-news-articles-block .views-row .news-date {
+/* line 122, ../sass/partials/_views.scss */
+#block-views-news-articles-block .views-row .news-date,
+#block-views-news-articles-block-1 .views-row .news-date,
+#block-views-news-articles-block-2 .views-row .news-date,
+#block-views-news-articles-block-3 .views-row .news-date,
+#block-views-news-articles-block-4 .views-row .news-date {
   font-style: italic;
   font-size: 0.91667em;
   margin-bottom: 3px;
   height: 1.15em;
 }
-/* line 124, ../sass/partials/_views.scss */
-#block-views-news-articles-block .views-row .news-title {
+/* line 128, ../sass/partials/_views.scss */
+#block-views-news-articles-block .views-row .news-title,
+#block-views-news-articles-block-1 .views-row .news-title,
+#block-views-news-articles-block-2 .views-row .news-title,
+#block-views-news-articles-block-3 .views-row .news-title,
+#block-views-news-articles-block-4 .views-row .news-title {
   height: 1.15em;
 }
-/* line 126, ../sass/partials/_views.scss */
-#block-views-news-articles-block .views-row .news-title a {
+/* line 130, ../sass/partials/_views.scss */
+#block-views-news-articles-block .views-row .news-title a,
+#block-views-news-articles-block-1 .views-row .news-title a,
+#block-views-news-articles-block-2 .views-row .news-title a,
+#block-views-news-articles-block-3 .views-row .news-title a,
+#block-views-news-articles-block-4 .views-row .news-title a {
   color: #474747;
   text-decoration: none;
 }
-/* line 132, ../sass/partials/_views.scss */
-#block-views-news-articles-block .views-row:after {
+/* line 136, ../sass/partials/_views.scss */
+#block-views-news-articles-block .views-row:after,
+#block-views-news-articles-block-1 .views-row:after,
+#block-views-news-articles-block-2 .views-row:after,
+#block-views-news-articles-block-3 .views-row:after,
+#block-views-news-articles-block-4 .views-row:after {
   font-style: normal;
   font-size: 1.33em;
   position: absolute;
@@ -2175,48 +2218,64 @@ div.workbench-info-block a {
   -webkit-font-smoothing: antialiased;
   content: "\e001";
 }
-/* line 141, ../sass/partials/_views.scss */
-#block-views-news-articles-block .views-row-first {
+/* line 145, ../sass/partials/_views.scss */
+#block-views-news-articles-block .views-row-first,
+#block-views-news-articles-block-1 .views-row-first,
+#block-views-news-articles-block-2 .views-row-first,
+#block-views-news-articles-block-3 .views-row-first,
+#block-views-news-articles-block-4 .views-row-first {
   padding: 20px 10px;
 }
-/* line 143, ../sass/partials/_views.scss */
-#block-views-news-articles-block .views-row-first .news-title {
+/* line 147, ../sass/partials/_views.scss */
+#block-views-news-articles-block .views-row-first .news-title,
+#block-views-news-articles-block-1 .views-row-first .news-title,
+#block-views-news-articles-block-2 .views-row-first .news-title,
+#block-views-news-articles-block-3 .views-row-first .news-title,
+#block-views-news-articles-block-4 .views-row-first .news-title {
   font-weight: bold;
 }
-/* line 147, ../sass/partials/_views.scss */
-#block-views-news-articles-block .views-row-first:after {
+/* line 151, ../sass/partials/_views.scss */
+#block-views-news-articles-block .views-row-first:after,
+#block-views-news-articles-block-1 .views-row-first:after,
+#block-views-news-articles-block-2 .views-row-first:after,
+#block-views-news-articles-block-3 .views-row-first:after,
+#block-views-news-articles-block-4 .views-row-first:after {
   top: 40%;
 }
-/* line 150, ../sass/partials/_views.scss */
-#block-views-news-articles-block .views-row-even {
+/* line 154, ../sass/partials/_views.scss */
+#block-views-news-articles-block .views-row-even,
+#block-views-news-articles-block-1 .views-row-even,
+#block-views-news-articles-block-2 .views-row-even,
+#block-views-news-articles-block-3 .views-row-even,
+#block-views-news-articles-block-4 .views-row-even {
   background-color: white;
 }
 
 /* News Overview */
-/* line 155, ../sass/partials/_views.scss */
+/* line 159, ../sass/partials/_views.scss */
 .view-id-news_articles.view-display-id-page_1 .views-row {
   padding-bottom: 20px;
   margin-bottom: 20px;
   border-bottom: 1px dotted #474747;
   overflow: hidden;
 }
-/* line 160, ../sass/partials/_views.scss */
+/* line 164, ../sass/partials/_views.scss */
 .view-id-news_articles.view-display-id-page_1 .views-row .news-title {
   font-weight: bold;
   margin-bottom: 13.33333px;
   font-size: 1.08em;
 }
-/* line 164, ../sass/partials/_views.scss */
+/* line 168, ../sass/partials/_views.scss */
 .view-id-news_articles.view-display-id-page_1 .views-row .news-title a {
   color: #474747;
 }
-/* line 168, ../sass/partials/_views.scss */
+/* line 172, ../sass/partials/_views.scss */
 .view-id-news_articles.view-display-id-page_1 .views-row .news-image {
   margin: 0 10px 13.33333px 0;
   float: left;
   max-width: 40%;
 }
-/* line 173, ../sass/partials/_views.scss */
+/* line 177, ../sass/partials/_views.scss */
 .view-id-news_articles.view-display-id-page_1 .views-row .news-date {
   margin-bottom: 10px;
 }
@@ -2225,27 +2284,27 @@ div.workbench-info-block a {
  * SELF SERVICE ACCORDION
  */
 /* Display navigation */
-/* line 187, ../sass/partials/_views.scss */
+/* line 191, ../sass/partials/_views.scss */
 #quicktabs-self_service_views ul.quicktabs-tabs {
   font-size: 0.91667em;
   margin: 20px 0 20px 0 !important;
   padding: 0;
 }
-/* line 191, ../sass/partials/_views.scss */
+/* line 195, ../sass/partials/_views.scss */
 #quicktabs-self_service_views ul.quicktabs-tabs li {
   margin: 0;
 }
-/* line 193, ../sass/partials/_views.scss */
+/* line 197, ../sass/partials/_views.scss */
 #quicktabs-self_service_views ul.quicktabs-tabs li a {
   text-transform: uppercase;
   font-weight: bold;
   color: #474747;
 }
-/* line 200, ../sass/partials/_views.scss */
+/* line 204, ../sass/partials/_views.scss */
 #quicktabs-self_service_views ul.quicktabs-tabs li.active a {
   color: #68a386;
 }
-/* line 204, ../sass/partials/_views.scss */
+/* line 208, ../sass/partials/_views.scss */
 #quicktabs-self_service_views ul.quicktabs-tabs li.first {
   border-right: 1px solid #474747;
   margin: 0 5px 0 0;
@@ -2253,11 +2312,11 @@ div.workbench-info-block a {
 }
 
 /* Level 1 */
-/* line 213, ../sass/partials/_views.scss */
+/* line 217, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping {
   margin-bottom: 6px;
 }
-/* line 215, ../sass/partials/_views.scss */
+/* line 219, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping > .ui-accordion-header {
   background: #68a386;
   color: white;
@@ -2270,7 +2329,7 @@ div.workbench-info-block a {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 223, ../sass/partials/_views.scss */
+/* line 227, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping > .ui-accordion-header:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -2283,12 +2342,12 @@ div.workbench-info-block a {
   content: "\e00f";
   margin-right: 0.5em;
 }
-/* line 228, ../sass/partials/_views.scss */
+/* line 232, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping > .ui-accordion-header.ui-state-active {
   background: #a3a3a3;
   color: #474747;
 }
-/* line 232, ../sass/partials/_views.scss */
+/* line 236, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping > .ui-accordion-header.ui-state-active:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -2303,7 +2362,7 @@ div.workbench-info-block a {
 }
 
 /* Level 2 */
-/* line 246, ../sass/partials/_views.scss */
+/* line 250, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content,
@@ -2313,7 +2372,7 @@ div.workbench-info-block a {
   padding: 0;
   margin: 6px 0 0 0;
 }
-/* line 249, ../sass/partials/_views.scss */
+/* line 253, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content > h3,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content > h3,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content > h3,
@@ -2324,7 +2383,7 @@ div.workbench-info-block a {
   padding: 8px 18px;
   margin: 0 0 5px 0;
 }
-/* line 254, ../sass/partials/_views.scss */
+/* line 258, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content > h3:before,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content > h3:before,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content > h3:before,
@@ -2342,7 +2401,7 @@ div.workbench-info-block a {
   content: "\e00f";
   margin-right: 0.5em;
 }
-/* line 259, ../sass/partials/_views.scss */
+/* line 263, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content > h3.ui-state-active,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content > h3.ui-state-active,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content > h3.ui-state-active,
@@ -2351,7 +2410,7 @@ div.workbench-info-block a {
 #region-content .view-selfservice-items.view-display-id-embedded .view-content > h3.ui-state-active {
   background: white;
 }
-/* line 262, ../sass/partials/_views.scss */
+/* line 266, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content > h3.ui-state-active:before,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content > h3.ui-state-active:before,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content > h3.ui-state-active:before,
@@ -2369,7 +2428,7 @@ div.workbench-info-block a {
   content: "\e010";
   margin-right: 0.5em;
 }
-/* line 267, ../sass/partials/_views.scss */
+/* line 271, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2,
@@ -2381,7 +2440,7 @@ div.workbench-info-block a {
   top: 0;
   border: none;
 }
-/* line 273, ../sass/partials/_views.scss */
+/* line 277, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-link a,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-self-service-link a,
@@ -2411,7 +2470,7 @@ div.workbench-info-block a {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 284, ../sass/partials/_views.scss */
+/* line 288, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-link a:after,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
@@ -2447,7 +2506,7 @@ div.workbench-info-block a {
   -o-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 298, ../sass/partials/_views.scss */
+/* line 302, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-main-body a,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-main-body a,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-main-body a,
@@ -2456,7 +2515,7 @@ div.workbench-info-block a {
 #region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-field-main-body a {
   color: #68a386;
 }
-/* line 301, ../sass/partials/_views.scss */
+/* line 305, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-main-body ul,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-main-body ul,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-main-body ul,
@@ -2466,7 +2525,7 @@ div.workbench-info-block a {
   margin-left: 40px;
   margin-bottom: 1em;
 }
-/* line 304, ../sass/partials/_views.scss */
+/* line 308, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-main-body ul li,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-main-body ul li,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-main-body ul li,
@@ -2475,7 +2534,7 @@ div.workbench-info-block a {
 #region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-field-main-body ul li {
   margin-bottom: 0.5em;
 }
-/* line 309, ../sass/partials/_views.scss */
+/* line 313, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:hover,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-self-service-link a:hover,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:hover,
@@ -2484,7 +2543,7 @@ div.workbench-info-block a {
 #region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-field-self-service-link a:hover {
   text-decoration: none;
 }
-/* line 312, ../sass/partials/_views.scss */
+/* line 316, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-description,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-description,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-description,
@@ -2497,33 +2556,33 @@ div.workbench-info-block a {
 }
 
 /* Alphabetical list */
-/* line 325, ../sass/partials/_views.scss */
+/* line 329, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content > h3 {
   padding: 8px;
 }
 
 /* Embedded accordion */
-/* line 333, ../sass/partials/_views.scss */
+/* line 337, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-embedded {
   margin: 30px 0 0 0;
 }
-/* line 335, ../sass/partials/_views.scss */
+/* line 339, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-embedded h2.title {
   font-size: 1.08em;
   margin: 20px 0 10px;
 }
-/* line 340, ../sass/partials/_views.scss */
+/* line 344, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-embedded .view-content > h3 {
   background: #68a386;
   color: white;
   padding: 6px 8px;
 }
-/* line 345, ../sass/partials/_views.scss */
+/* line 349, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-embedded .view-content > h3.ui-state-active {
   background: #a3a3a3;
   color: #474747;
 }
-/* line 349, ../sass/partials/_views.scss */
+/* line 353, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 {
   padding: 10px 20px 20px;
 }
@@ -2588,7 +2647,7 @@ img {
 /*------------------------------------------------------------------
 	Sections
 -------------------------------------------------------------------*/
-/* line 67, ../sass/global.scss */
+/* line 64, ../sass/global.scss */
 #section-content {
   padding: 20px 0 0;
   background: transparent url("../img/noise_bg_repeat.png") repeat;
@@ -2597,7 +2656,7 @@ img {
 /*------------------------------------------------------------------
 	Zones
 -------------------------------------------------------------------*/
-/* line 78, ../sass/global.scss */
+/* line 72, ../sass/global.scss */
 #zone-user-wrapper {
   background-color: white;
   position: relative;
@@ -2607,7 +2666,7 @@ img {
   box-shadow: rgba(0, 0, 0, 0.075) 0 10px 10px;
 }
 
-/* line 84, ../sass/global.scss */
+/* line 78, ../sass/global.scss */
 #zone-menu-wrapper {
   background-color: white;
   position: relative;
@@ -2617,24 +2676,24 @@ img {
   box-shadow: rgba(0, 0, 0, 0.075) 0 10px 10px;
 }
 
-/* line 90, ../sass/global.scss */
+/* line 84, ../sass/global.scss */
 #zone-header-wrapper {
   color: white;
   background: transparent url("../img/noise_bg_repeat.png") repeat;
 }
 
-/* line 94, ../sass/global.scss */
+/* line 88, ../sass/global.scss */
 #zone-preface-wrapper {
   display: none;
 }
 
-/* line 97, ../sass/global.scss */
+/* line 91, ../sass/global.scss */
 #zone-footer-wrapper {
   background-color: white;
   padding: 20px 0 20px;
 }
 
-/* line 101, ../sass/global.scss */
+/* line 95, ../sass/global.scss */
 #zone-bottom-wrapper {
   background-color: #6b6b6b;
 }
@@ -2642,12 +2701,12 @@ img {
 /*------------------------------------------------------------------
 	Regions
 -------------------------------------------------------------------*/
-/* line 108, ../sass/global.scss */
+/* line 102, ../sass/global.scss */
 #region-user-second {
   padding: 10px;
 }
 
-/* line 115, ../sass/global.scss */
+/* line 109, ../sass/global.scss */
 #region-footer-second,
 #region-footer-third,
 #region-footer-fourth,
@@ -2658,7 +2717,7 @@ img {
 /*------------------------------------------------------------------
 	Menus
 -------------------------------------------------------------------*/
-/* line 124, ../sass/global.scss */
+/* line 118, ../sass/global.scss */
 .ultimenu,
 #region-user-first {
   display: none;
@@ -2667,7 +2726,7 @@ img {
 /*------------------------------------------------------------------
 	Nodes
 -------------------------------------------------------------------*/
-/* line 132, ../sass/global.scss */
+/* line 126, ../sass/global.scss */
 .not-front .block-system-main {
   padding: 20px;
   background-color: white;
@@ -2679,4 +2738,21 @@ img {
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+}
+
+/* line 136, ../sass/global.scss */
+.page-borger .block-system-main,
+.page-erhverv .block-system-main,
+.page-politik .block-system-main,
+.page-bo-i-rebild .block-system-main {
+  padding: 0;
+  background: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  -ms-border-radius: none;
+  -o-border-radius: none;
+  border-radius: none;
 }

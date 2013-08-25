@@ -4,7 +4,7 @@
 
 -------------------------------------------------------------------*/
 
-/* Frontpage - Aktuelt i Rebild kommune */
+/* Aktuelt i Rebild kommune */
 .view-id-rebild_frontpage {
 	.views-row {
 		margin: 0 0 $spacing-std 0;
@@ -95,8 +95,12 @@
  * NEWS ARTICLES
  */
 
-/* News Articles - Frontpage */
-#block-views-news-articles-block {
+/* News Articles - Frontpage/Landing pages */
+#block-views-news-articles-block,
+#block-views-news-articles-block-1,
+#block-views-news-articles-block-2,
+#block-views-news-articles-block-3,
+#block-views-news-articles-block-4 {
 	.view {
 	@include box-shadow(rgba(black, 0.15) 0 0 3px);		
 	}

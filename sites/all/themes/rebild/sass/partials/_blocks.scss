@@ -138,16 +138,6 @@
 		}
 	}
 }
-.front {
-	#region-sidebar-first {	
-		.block-block {
-			padding: $spacing-std;
-			color: white;
-			line-height: $line-height-std;
-			@include grid-box($color-purple);			
-		}
-	}
-}
 
 /* Region: Postcripts First */
 #region-postscript-first {
@@ -364,25 +354,28 @@
 	}
 }
 
-/* Contact block - frontpage */
-.front {
-	#region-sidebar-first {
-		.block-block {
-			.block-title {
+/* Contact block - front page/landing pages */
+#region-sidebar-first {
+	.block.contact-sidebar {
+    padding: $spacing-std;
+    color: white;
+    line-height: $line-height-std;
+    @include grid-box($color-purple); 
+		.block-title {
+			color: white;
+			font-size: $font-size-large;
+			line-height: $line-height-std;
+			@include text-shadow(none);
+		}
+		.content {
+			line-height: 1.25em;
+			a {
 				color: white;
-				font-size: $font-size-large;
-				line-height: $line-height-std;
-				@include text-shadow(none);
-			}
-			.content {
-				line-height: 1.25em;
-				a {
-					color: white;
-				}
 			}
 		}
 	}
 }
+
 
 /* 5 shortcuts - frontpage */
 #region-postscript-first {
@@ -475,8 +468,9 @@
 
 .not-front #region-sidebar-first {
 
-	/* Selvbetjening - Lille */
-	.block-selfservice-blocks-block-1 {
+	/* Selvbetjening - sidebar */
+	.block-selfservice-blocks-block-1,
+	.block-selfservice-landing-block-1 {
 		padding: $spacing-std;
 		color: white;
 		@include grid-box($color-green);
