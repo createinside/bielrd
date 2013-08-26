@@ -36,6 +36,22 @@ $(function() {
   		$(this).parent().siblings('.ctools-jump-menu-button').click();
 		}
 	});
+	// Selfservice accordion - Hash Link
+	var hash = window.location.hash;
+	if(hash!="") {
+		hash = hash.replace("#","");
+		if(hash.indexOf("kategori") != -1) {
+			$header_1 = $("."+hash).closest(".ui-accordion-header");
+			$header_1.click();		
+		}
+		else {
+			$header_2 = $("."+hash).closest("h3");
+			$header_2.click();
+			$header_1 = $("."+hash).closest("h3").parent().siblings();
+			$header_1.click();
+			console.log($header_1);
+		}
+	}
 	
 });
 
