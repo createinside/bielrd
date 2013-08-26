@@ -76,7 +76,7 @@ function rebild_page_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_ho_tabs';
   $field_group->data = array(
-    'label' => 'Blokke',
+    'label' => 'Links',
     'weight' => '16',
     'children' => array(
       0 => 'field_main_links_external',
@@ -84,7 +84,7 @@ function rebild_page_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'label' => 'Blokke',
+      'label' => 'Links',
       'instance_settings' => array(
         'required_fields' => 0,
         'classes' => '',
@@ -106,7 +106,7 @@ function rebild_page_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Kategorisering',
-    'weight' => '5',
+    'weight' => '4',
     'children' => array(
       0 => 'field_main_section',
       1 => 'field_main_tags',
@@ -163,7 +163,7 @@ function rebild_page_field_group_info() {
   $field_group->parent_name = 'group_ho_tabs';
   $field_group->data = array(
     'label' => 'Forældelsesdato',
-    'weight' => '19',
+    'weight' => '20',
     'children' => array(
       0 => 'field_main_outdated',
     ),
@@ -191,7 +191,7 @@ function rebild_page_field_group_info() {
   $field_group->parent_name = 'group_ho_tabs';
   $field_group->data = array(
     'label' => 'GIS-kort',
-    'weight' => '20',
+    'weight' => '21',
     'children' => array(
       0 => 'field_main_gis_map',
     ),
@@ -219,14 +219,16 @@ function rebild_page_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Ikke obligatoriske felter',
-    'weight' => '7',
+    'weight' => '5',
     'children' => array(
-      0 => 'group_blocks',
-      1 => 'group_gis_kort',
-      2 => 'group_accordion',
-      3 => 'group_billedegalleri',
-      4 => 'group_faktaboks',
-      5 => 'group_foraeldelsesdato',
+      0 => 'group_accordion',
+      1 => 'group_billedegalleri',
+      2 => 'group_blocks',
+      3 => 'group_faktaboks',
+      4 => 'group_foraeldelsesdato',
+      5 => 'group_gis_kort',
+      6 => 'group_oversigt',
+      7 => 'group_selfservices',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(

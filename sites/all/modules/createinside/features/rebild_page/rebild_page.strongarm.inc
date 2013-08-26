@@ -96,16 +96,34 @@ function rebild_page_strongarm() {
           'weight' => '0',
         ),
         'metatags' => array(
-          'weight' => '11',
+          'weight' => '7',
         ),
         'workbench_access' => array(
           'weight' => '11',
+        ),
+        'path' => array(
+          'weight' => '9',
+        ),
+        'redirect' => array(
+          'weight' => '8',
         ),
       ),
       'display' => array(
         'content_accordion_entity_view_1' => array(
           'default' => array(
-            'weight' => '6',
+            'weight' => '4',
+            'visible' => TRUE,
+          ),
+        ),
+        'selfservice_items_entity_view_1' => array(
+          'default' => array(
+            'weight' => '5',
+            'visible' => TRUE,
+          ),
+        ),
+        'selfservice_items_embedded' => array(
+          'default' => array(
+            'weight' => '5',
             'visible' => TRUE,
           ),
         ),

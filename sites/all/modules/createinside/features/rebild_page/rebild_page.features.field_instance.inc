@@ -493,7 +493,7 @@ function rebild_page_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -514,7 +514,46 @@ function rebild_page_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 4,
+      'weight' => 17,
+    ),
+  );
+
+  // Exported field_instance: 'node-page-field_main_block'
+  $field_instances['node-page-field_main_block'] = array(
+    'bundle' => 'page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Tilknyt en forudindstillet blok.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'blockreference',
+        'settings' => array(),
+        'type' => 'blockreference_without_title',
+        'weight' => 9,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_main_block',
+    'label' => 'Blok',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => 1,
+      ),
+      'type' => 'options_select',
+      'weight' => 13,
     ),
   );
 
@@ -530,7 +569,7 @@ function rebild_page_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -554,7 +593,7 @@ function rebild_page_field_default_field_instances() {
         'rows' => 25,
       ),
       'type' => 'text_textarea',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -570,7 +609,7 @@ function rebild_page_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -610,7 +649,7 @@ function rebild_page_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -744,7 +783,7 @@ function rebild_page_field_default_field_instances() {
           'swipebox_image_style_swipebox' => 'galleri_stor',
         ),
         'type' => 'swipebox',
-        'weight' => 7,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -827,7 +866,7 @@ function rebild_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -880,7 +919,7 @@ function rebild_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -917,7 +956,7 @@ function rebild_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -964,7 +1003,7 @@ function rebild_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -988,6 +1027,46 @@ function rebild_page_field_default_field_instances() {
       ),
       'type' => 'options_select',
       'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance: 'node-page-field_main_selfservice'
+  $field_instances['node-page-field_main_selfservice'] = array(
+    'bundle' => 'page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Vælg en eller flere selvbetjeningsløsninger, du ønsker at tilknytte til denne side. Løsningerne vil blive vist i en accordion nederst på siden.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_main_selfservice',
+    'label' => 'Selvbetjeningløsninger',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 14,
     ),
   );
 
@@ -1042,7 +1121,7 @@ function rebild_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1069,6 +1148,43 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-page-field_main_view'
+  $field_instances['node-page-field_main_view'] = array(
+    'bundle' => 'page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Tilknyt en dynamisk oversigt til denne side.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'viewreference',
+        'settings' => array(),
+        'type' => 'viewreference_default',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_main_view',
+    'label' => 'Oversigt',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'viewreference',
+      'settings' => array(),
+      'type' => 'viewreference_select',
+      'weight' => 12,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Accordion');
@@ -1077,6 +1193,7 @@ function rebild_page_field_default_field_instances() {
   t('Angiv en dato for hvornår dette indhold skal opdateres eller gennemses igen.');
   t('Billede');
   t('Billedgalleri');
+  t('Blok');
   t('Brødtekst');
   t('Eksterne links');
   t('Fakta-indhold - placeres i en boks øverst til højre i hovedindholdet.');
@@ -1087,16 +1204,21 @@ function rebild_page_field_default_field_instances() {
   t('Indtast et resumé. Resuméet vises øverst før brødteksten.');
   t('Indtast tekst til en eller flere accordions. En accordion er et sammenklappeligt element, der vises nederst på indholdet.');
   t('Interne links');
+  t('Oversigt');
   t('Overskrift');
   t('Primær indhold.');
   t('Resumé');
   t('Sektion');
+  t('Selvbetjeningløsninger');
   t('Stort bannerbillede - placeres øverst på siden. Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
   t('Tags');
   t('Tekst');
+  t('Tilknyt en dynamisk oversigt til denne side.');
+  t('Tilknyt en forudindstillet blok.');
   t('Title tekst');
   t('Title text is used in the tool tip when a user hovers their mouse over the image. Adding title text makes it easier to understand the context of an image and improves usability.');
   t('Upload et eller flere billeder, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
+  t('Vælg en eller flere selvbetjeningsløsninger, du ønsker at tilknytte til denne side. Løsningerne vil blive vist i en accordion nederst på siden.');
   t('Vælg et eller flere tags der er med til at beskrive indholdet.');
   t('Vælg hvilken sektion indholdet hører til.');
 

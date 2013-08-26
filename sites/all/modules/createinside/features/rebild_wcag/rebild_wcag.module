@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the WCAG feature.
+ */
+
+include_once 'rebild_wcag.features.inc';

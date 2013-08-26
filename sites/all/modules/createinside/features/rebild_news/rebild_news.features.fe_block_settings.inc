@@ -26,10 +26,94 @@ function rebild_news_default_fe_block_settings() {
         'region' => 'sidebar_first',
         'status' => 1,
         'theme' => 'rebild',
-        'weight' => -26,
+        'weight' => -43,
       ),
     ),
     'title' => 'Nyheder',
+    'visibility' => 1,
+  );
+
+  $export['views-news_articles-block_1'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'news_articles-block_1',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => 'borger',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => 'sidebar_first',
+        'status' => 1,
+        'theme' => 'rebild',
+        'weight' => -38,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 1,
+  );
+
+  $export['views-news_articles-block_2'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'news_articles-block_2',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => 'erhverv',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => 'sidebar_first',
+        'status' => 1,
+        'theme' => 'rebild',
+        'weight' => -37,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 1,
+  );
+
+  $export['views-news_articles-block_3'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'news_articles-block_3',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => 'politik',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => 'sidebar_first',
+        'status' => 1,
+        'theme' => 'rebild',
+        'weight' => -36,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 1,
+  );
+
+  $export['views-news_articles-block_4'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'news_articles-block_4',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => 'bo-i-rebild',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => 'sidebar_first',
+        'status' => 1,
+        'theme' => 'rebild',
+        'weight' => -39,
+      ),
+    ),
+    'title' => '',
     'visibility' => 1,
   );
 

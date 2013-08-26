@@ -43,6 +43,14 @@ function rebild_layout_default_fe_block_boxes() {
   $export['rebild_contact_front'] = $fe_block_boxes;
 
   $fe_block_boxes = new stdClass();
+  $fe_block_boxes->info = 'Kontakt landing pages';
+  $fe_block_boxes->format = 'full_html';
+  $fe_block_boxes->machine_name = 'rebild_contact_landing';
+  $fe_block_boxes->body = '<p><strong>Rebild Kommune</strong><br />Rådhuset - Hobrovej 88 - 9530 Støvring&nbsp;</p><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><span class="icon-phone"></span></td><td style="width: 85%;">99 88 99 88</td></tr><tr><td><span class="icon-envelope"></span></td><td><p>raadhus@rebild.dk</p></td></tr></tbody></table><p>&nbsp;</p><table style="width: 100%;" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><div>Telefonisk henvendelse:</div><div>Man-ons kl. 8.00-15.00</div><div>Tors kl. 8.00-17.00</div><div>Fre kl. 8.00-14.00</div></td><td><div>Personlig henvendelse:</div><div>Man-ons kl. 9.00-14.30</div><div>Tors kl. 9.00-17.00</div><div>Fre kl. 9.00-13.30</div></td></tr></tbody></table>';
+
+  $export['rebild_contact_landing'] = $fe_block_boxes;
+
+  $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'Kontakt ikoner';
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'rebild_footer_contact';
@@ -51,7 +59,7 @@ function rebild_layout_default_fe_block_boxes() {
   $export['rebild_footer_contact'] = $fe_block_boxes;
 
   $fe_block_boxes = new stdClass();
-  $fe_block_boxes->info = 'Footer 1';
+  $fe_block_boxes->info = 'Kontakt tabel';
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'rebild_footer_contact_2';
   $fe_block_boxes->body = '<table style="width: 90%;" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td colspan="2"><p>Telefonisk henvendelse:</p></td><td><div></div></td></tr><tr><td style="width: 40%;"><div>Mandag-onsdag:</div><div>Torsdag:</div><div>Fredag:</div></td><td><div>kl. 8.00-15.00</div><div>kl. 8.00-17.00</div><div>kl. 8.00-14.00</div></td></tr></tbody></table><table border="0" cellspacing="0" cellpadding="0" style="width: 90%;"><tbody><tr><td colspan="2"><p>Personlig henvendelse:</p></td><td><div></div></td></tr><tr><td style="width: 40%;"><div>Mandag-onsdag:</div><div>Torsdag:</div><div>Fredag:</div></td><td><div>kl. 9.00-14.30</div><div>kl. 9.00-17.00</div><div>kl. 9.00-13.30</div></td></tr></tbody></table>';

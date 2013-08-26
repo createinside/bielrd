@@ -58,12 +58,15 @@ function rebild_featured_field_default_field_instances() {
         ),
         'allowed_types' => array(
           0 => 0,
+          'application' => 0,
           'audio' => 0,
           'document' => 0,
           'image' => 'image',
           'video' => 0,
         ),
         'browser_plugins' => array(
+          'media_browser_clone--media_browser_1' => 0,
+          'media_browser_clone--media_browser_my_files' => 0,
           'media_default--media_browser_1' => 'media_default--media_browser_1',
           'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
           'upload' => 'upload',
@@ -80,6 +83,7 @@ function rebild_featured_field_default_field_instances() {
           'inline_bottom' => 0,
           'inline_top' => 0,
           'nyhed_forside' => 0,
+          'nyhed_oversigt' => 0,
         ),
         'manualcrop_styles_list' => array(
           'blok' => 'blok',
@@ -87,6 +91,7 @@ function rebild_featured_field_default_field_instances() {
           'inline_bottom' => 0,
           'inline_top' => 0,
           'nyhed_forside' => 0,
+          'nyhed_oversigt' => 0,
         ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,

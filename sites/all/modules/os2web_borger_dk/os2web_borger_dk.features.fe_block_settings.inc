@@ -28,7 +28,7 @@ function os2web_borger_dk_default_fe_block_settings() {
         'region' => 'content_sidebar',
         'status' => 1,
         'theme' => 'rebild',
-        'weight' => 0,
+        'weight' => -35,
       ),
     ),
     'title' => '',
