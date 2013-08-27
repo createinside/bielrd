@@ -170,7 +170,7 @@ function rebild_edagsorden_field_default_field_instances() {
         'class' => '',
         'configurable_title' => 0,
         'rel' => '',
-        'target' => 'default',
+        'target' => '_blank',
         'title' => '',
       ),
       'display' => array(
