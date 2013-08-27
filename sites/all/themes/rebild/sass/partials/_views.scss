@@ -356,3 +356,40 @@
 		}
 	}	
 }
+
+/**
+ * AGENDAS
+ */
+#region-content {
+	.view-agenda-overview {
+		.view-filters {
+			margin: $spacing-std 0;
+			label {
+				margin: 0 0 10px 0;
+			}
+			.views-exposed-widget {
+				select {
+					margin: 0;
+					padding: 0;
+				}
+				.customSelect {
+					border: 1px solid #dbdbdb;
+				}
+				.form-submit {
+					background: $color-blue;
+					border: none;
+					margin: 24px 0 0 0;
+				}
+			}
+		}
+		h3 {
+			text-transform: capitalize;
+			margin-top: $spacing-std;
+			margin-bottom: 0.5em;
+		}
+		.views-row {
+			margin-bottom: 0.5em;
+			a { color: $color-blue; }
+		}
+	}
+}

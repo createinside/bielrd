@@ -259,9 +259,6 @@
 				@include border-radius(2px);
 			}
 		}
-		select {
-		  cursor: pointer;
-		}
 		.customSelect {
 			font-style: italic;
 			color: $text-color-header;

@@ -68,6 +68,13 @@ function rebild_edagsorden_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'delete terms in edagsorden_committees'.
+  $permissions['delete terms in edagsorden_committees'] = array(
+    'name' => 'delete terms in edagsorden_committees',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'edit any agenda content'.
   $permissions['edit any agenda content'] = array(
     'name' => 'edit any agenda content',
@@ -85,6 +92,13 @@ function rebild_edagsorden_user_default_permissions() {
   // Exported permission: 'edit terms in calendar_categories'.
   $permissions['edit terms in calendar_categories'] = array(
     'name' => 'edit terms in calendar_categories',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in edagsorden_committees'.
+  $permissions['edit terms in edagsorden_committees'] = array(
+    'name' => 'edit terms in edagsorden_committees',
     'roles' => array(),
     'module' => 'taxonomy',
   );
