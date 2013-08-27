@@ -16,13 +16,13 @@ function rebild_wcag_strongarm() {
   $strongarm->name = 'eu_cookie_compliance_da';
   $strongarm->value = array(
     'popup_enabled' => 1,
-    'popup_clicking_confirmation' => 0,
+    'popup_clicking_confirmation' => 1,
     'popup_position' => 1,
     'popup_info' => array(
       'value' => '<h3>Der anvendes cookies på dette website</h3><p>Ved at benytte websitet accepterer du samtidig at der gemmes cookies på din computer.</p>',
       'format' => 'full_html',
     ),
-    'popup_agreed_enabled' => 1,
+    'popup_agreed_enabled' => 0,
     'popup_hide_agreed' => 1,
     'popup_agreed' => array(
       'value' => '<h3>Tak fordi du accepterede brugen af cookies</h3><p>Du kan nu fortsætte med at bruge websitet eller læse mere om hvordan der anvendes cookies.</p>',
