@@ -25,7 +25,7 @@ function rebild_general_settings_strongarm() {
     1 => array(
       'name' => 'User-1',
       'usertab' => 1,
-      'filesize' => '5',
+      'filesize' => '512',
       'quota' => '0',
       'tuquota' => '0',
       'extensions' => 'png jpg jpeg gif txt doc docx xls xlsx pdf ppt pptx pps ppsx odt ods odp',
