@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
 /* Base */
@@ -2062,6 +2063,85 @@ div.workbench-info-block a {
   float: none;
 }
 
+/* Search block - search page */
+/* line 693, ../sass/partials/_blocks.scss */
+#custom-search-blocks-form-1 {
+  padding: 20px;
+  margin: 0;
+  background-color: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+}
+/* line 696, ../sass/partials/_blocks.scss */
+#custom-search-blocks-form-1 > div {
+  position: relative;
+}
+/* line 700, ../sass/partials/_blocks.scss */
+#custom-search-blocks-form-1 .form-item, #custom-search-blocks-form-1 .form-actions {
+  margin: 0;
+}
+/* line 703, ../sass/partials/_blocks.scss */
+#custom-search-blocks-form-1 .form-type-textfield {
+  background: #f6f6f6;
+  padding: 10px;
+  overflow: hidden;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 710, ../sass/partials/_blocks.scss */
+#custom-search-blocks-form-1 input[type=search],
+#custom-search-blocks-form-1 input[type=text] {
+  font-size: 1em;
+  border-top: 1px solid white;
+  font-style: italic;
+  height: 2.46154em;
+  line-height: 2.46154em;
+  float: left;
+  position: relative;
+  padding: 1.05em 1em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 721, ../sass/partials/_blocks.scss */
+#custom-search-blocks-form-1 input[type=submit] {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 1.53846em;
+  padding: 0 1.5em;
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+/* line 729, ../sass/partials/_blocks.scss */
+#custom-search-blocks-form-1 .form-type-checkboxes {
+  overflow: hidden;
+}
+/* line 731, ../sass/partials/_blocks.scss */
+#custom-search-blocks-form-1 .form-type-checkboxes > label {
+  font-size: 1.2em;
+  margin: 1em 0 0.75em 0;
+}
+/* line 735, ../sass/partials/_blocks.scss */
+#custom-search-blocks-form-1 .form-type-checkboxes .form-type-checkbox {
+  float: left;
+  margin-right: 10px;
+}
+
 /*------------------------------------------------------------------
 
 [VIEWS]
@@ -2698,6 +2778,44 @@ div.workbench-info-block a {
 /* line 392, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .views-row a {
   color: #7f9dcd;
+}
+
+/**
+ * SEARCH RESULTS
+ */
+/* line 401, ../sass/partials/_views.scss */
+#search-results-page h2 {
+  padding-bottom: 1em;
+}
+/* line 404, ../sass/partials/_views.scss */
+#search-results-page .search-result {
+  padding: 15px 10px;
+  margin: 0;
+}
+/* line 410, ../sass/partials/_views.scss */
+#search-results-page .search-result h3 {
+  margin: 0 0 10px 0;
+}
+/* line 412, ../sass/partials/_views.scss */
+#search-results-page .search-result h3 a {
+  color: #7f9dcd;
+}
+/* line 416, ../sass/partials/_views.scss */
+#search-results-page .search-result .search-date {
+  font-size: 0.91667em;
+  margin: 0 0 10px;
+}
+/* line 420, ../sass/partials/_views.scss */
+#search-results-page .search-result .search-text {
+  line-height: 1.25em;
+}
+/* line 424, ../sass/partials/_views.scss */
+#search-results-page .odd {
+  background: #f6f6f6;
+}
+/* line 427, ../sass/partials/_views.scss */
+#search-results-page ul.pager {
+  margin: 20px 0;
 }
 
 /*------------------------------------------------------------------

@@ -688,3 +688,53 @@ div.workbench-info-block {
     }
   }
 }
+
+/* Search block - search page */
+#custom-search-blocks-form-1 {
+  padding: $spacing-std;
+  margin: 0;
+  > div {
+    position: relative;
+  }
+  @include grid-box(white); 
+  .form-item, .form-actions {
+    margin: 0;
+  }      
+  .form-type-textfield {
+    background: $bg-color-alt;
+    padding: 10px;
+    overflow: hidden;
+    @include border-radius($border-radius-std);
+  }
+  input[type=search],
+  input[type=text] {
+    font-size: 1em;
+    border-top: 1px solid white;
+    font-style: italic;
+    height: (32/13)*1em;
+    line-height: (32/13)*1em;
+    float: left;
+    position: relative;
+    padding: 1.05em 1em;
+    @include border-radius($border-radius-std);
+  }
+  input[type=submit] {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: (20/13)*1em;
+    padding: 0 1.5em;
+    @include border-radius(0 3px 3px 0);
+  }
+  .form-type-checkboxes {
+    overflow: hidden;
+    > label {
+      font-size: 1.2em;
+      margin: 1em 0 0.75em 0;
+    }
+    .form-type-checkbox {
+      float: left;
+      margin-right: 10px;
+    }
+  }
+}
