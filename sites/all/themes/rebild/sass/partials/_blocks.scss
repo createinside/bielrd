@@ -264,15 +264,15 @@
 			color: $text-color-header;
 			font-size: 13px;
 			text-align: left;
-			width: 75%;
+			width: 100%;
 			cursor: pointer;
 		}
 		.customSelect:after {
+			position: absolute;
 			font-style: normal;
 			font-size: 16px;
-			float: right;
-			margin-top: 0.65em;
-			margin-right: 0.2em;
+			top: 0;
+			right: 0;
 			@include icon-prepare();
 			content: "\e000";
 		}		
@@ -280,8 +280,12 @@
 			padding: 1em;
 			display: block;
 			cursor: pointer;
+			max-width: 80%;
 		}
 	}
+}
+.view-selfservice-frontpage {
+	position: relative;
 }
 .view-id-selfservice_frontpage.view-display-id-block {
   > .view-content {
@@ -290,14 +294,18 @@
     margin-bottom: 25px;
     overflow: hidden;
     margin: 20px auto 25px; 
-    display: inline-block;
+    text-align: center;
     > .views-row {
       color: $text-color-header;
       margin-right: 0.9em;
-      float: left;
+      margin-bottom: 0.5em;
+      display: inline-block;
       a {
         color: $text-color-header;
       }
+    }
+    .ctools-jump-menu-button {
+	  	display: none;
     }
   } 
 }
@@ -517,27 +525,34 @@
 				float: right;
 				margin-top: 0.65em;
 				margin-right: 0.3em;
+				position: absolute;
+				top: 0;
+				right: 0;
 				@include icon-prepare();
 				content: "\e000";
 			}		
 			.customSelectInner {
 				padding: 1em;
-			}			
+				max-width: 80%;
+			}		
+			.ctools-jump-menu-button {
+	  		display: none;
+			}	
 		}
 		ul {
 			li {
-					margin: 0 0 0.5em 0;
-					padding: 0;
-          a {
-            color: white;
-            text-decoration: none;
-          }
-  				a:before {
-            @include icon-prepare();
-            content: "\f101"; 
-            margin-right: 0.5em;
-          }
-				}
+				margin: 0 0 0.5em 0;
+				padding: 0;
+        a {
+          color: white;
+          text-decoration: none;
+        }
+				a:before {
+          @include icon-prepare();
+          content: "\f101"; 
+          margin-right: 0.5em;
+        }
+			}
 		}
 	}
 	
@@ -566,6 +581,9 @@
 	.block.image-box.skole {
 		background: $bg-color-alt url("../img/image-box-2.png") no-repeat bottom right;		
 	}
+}
+.view-selfservice-blocks {
+	position: relative;
 }
 
 /* Workbench Moderation */
