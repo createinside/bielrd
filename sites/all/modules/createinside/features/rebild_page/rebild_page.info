@@ -155,6 +155,5 @@ features[variable][] = node_options_page
 features[variable][] = node_preview_page
 features[variable][] = node_submitted_page
 features[views_view][] = content_accordion
-features[views_view][] = entity_reference_cloned_pages
 features[views_view][] = entity_reference_main_links_internal
 features[views_view][] = media_browser_clone
