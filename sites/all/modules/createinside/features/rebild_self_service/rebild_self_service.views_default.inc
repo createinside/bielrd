@@ -140,6 +140,26 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Indhold: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['alter']['text'] = 'selvbetjening#loesning-[nid]';
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Felt: Indhold: Overskrift */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['path'] = 'selvbetjening#loesning-[nid]';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   $translatables['selfservice_blocks'] = array(
     t('Master'),
     t('Selvbetjening'),
@@ -262,12 +282,22 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['header']['view_1']['field'] = 'view';
   $handler->display->display_options['header']['view_1']['view_to_insert'] = 'selfservice_frontpage:block_2';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Indhold: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   /* Felt: Indhold: Overskrift */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['path'] = 'selvbetjening#loesning-[nid]';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   $handler->display->display_options['block_description'] = 'Selfbetjening - forside';
 
   /* Display: Selvbetjeningsløsninger */
