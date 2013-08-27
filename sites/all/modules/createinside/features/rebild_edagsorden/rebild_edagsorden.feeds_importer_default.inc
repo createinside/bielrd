@@ -233,7 +233,7 @@ function rebild_edagsorden_feeds_importer_default() {
           'xpathparser:3' => 'Caption',
           'xpathparser:4' => 'Number',
           'xpathparser:5' => 'AgendaId',
-          'xpathparser:6' => 'Presentations/Presentation/LegacyCompositeContent',
+          'xpathparser:6' => 'Presentations/Presentation/PreparedContent',
           'xpathparser:7' => 'Documents/Document/Title',
           'xpathparser:8' => 'Documents/Document/SourceFileName',
           'xpathparser:9' => 'CommitteeId',
