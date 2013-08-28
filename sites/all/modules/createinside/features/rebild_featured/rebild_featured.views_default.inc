@@ -22,7 +22,7 @@ function rebild_featured_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Aktuelt i Rebild Kommune';
+  $handler->display->display_options['title'] = 'Fokus';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['access']['type'] = 'none';
@@ -277,7 +277,7 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['path'] = 'bo-i-rebild';
   $translatables['rebild_frontpage'] = array(
     t('Master'),
-    t('Aktuelt i Rebild Kommune'),
+    t('Fokus'),
     t('mere'),
     t('Udfør'),
     t('Gendan'),

@@ -110,6 +110,9 @@ function rebild_calendar_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'print' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -121,6 +124,9 @@ function rebild_calendar_strongarm() {
         ),
         'redirect' => array(
           'weight' => '16',
+        ),
+        'path' => array(
+          'weight' => '17',
         ),
       ),
       'display' => array(),

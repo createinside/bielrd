@@ -339,19 +339,25 @@ Nodes
 		}
 	}
 	form {
-		background: #e0e0e0;
-		padding: 6px;
-		position: relative;
-		margin-bottom: 10px;
-		@include border-radius($border-radius-std);
-		input[type=search] {
-			font-size: $font-size-small;
+		.form-item, .form-actions {
+			margin: 0;
 		}
-		input[type=submit] {
-			position: absolute;
-			top: 6px;
-			right: 6px;
-			font-size: $font-size-small;
+		.form-wrap {
+			background: #e0e0e0;
+			padding: 6px;
+			margin-bottom: 10px;
+			position: relative;
+			@include border-radius($border-radius-std);
+			input[type=search],
+			input[type=text] {
+				font-size: $font-size-small;
+			}
+			input[type=submit] {
+				position: absolute;
+				top: 6px;
+				right: 6px;
+				font-size: $font-size-small;
+			}
 		}
 	}
 }
