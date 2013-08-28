@@ -2145,6 +2145,44 @@ div.workbench-info-block a {
   text-shadow: white 1px 1px 1px;
 }
 
+/* Search autocomplete widget */
+/* line 740, ../sass/partials/_blocks.scss */
+.ac_results {
+  width: 660px !important;
+  border: none;
+  padding: 10px 8px;
+  margin-top: 11px;
+  background-color: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+}
+/* line 747, ../sass/partials/_blocks.scss */
+.ac_results ul li {
+  padding: 20px;
+  font-size: 1em;
+  cursor: pointer;
+  color: #474747;
+}
+/* line 759, ../sass/partials/_blocks.scss */
+.ac_results ul .ac_even {
+  background: white;
+}
+/* line 762, ../sass/partials/_blocks.scss */
+.ac_results ul .ac_odd {
+  background: #f6f6f6;
+}
+/* line 765, ../sass/partials/_blocks.scss */
+.ac_results ul .ac_over {
+  background-color: inherit;
+  color: #474747;
+}
+
 /*------------------------------------------------------------------
 
 [VIEWS]
