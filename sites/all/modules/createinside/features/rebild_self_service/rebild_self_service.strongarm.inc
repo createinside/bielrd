@@ -152,5 +152,12 @@ function rebild_self_service_strongarm() {
   $strongarm->value = 0;
   $export['node_submitted_self_service'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_self_service_pattern';
+  $strongarm->value = 'selvbetjening/[node:title]';
+  $export['pathauto_node_self_service_pattern'] = $strongarm;
+
   return $export;
 }

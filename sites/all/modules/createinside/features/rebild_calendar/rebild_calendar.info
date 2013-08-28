@@ -65,6 +65,7 @@ features[variable][] = menu_parent_calendar_post
 features[variable][] = node_options_calendar_post
 features[variable][] = node_preview_calendar_post
 features[variable][] = node_submitted_calendar_post
+features[variable][] = pathauto_node_calendar_post_pattern
 features[views_view][] = calendar_frontpage
 features[views_view][] = calendar_overview
 features[views_view][] = calendar_sidebar
