@@ -42,7 +42,7 @@ function rebild_calendar_views_default_views() {
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-  /* Felt: Indhold: Overskrift */
+  /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -121,7 +121,7 @@ function rebild_calendar_views_default_views() {
 <div class="calendar_title">[title]</div>
 </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Felt: Global: View resultattæller */
+  /* Felt: Global: View result counter */
   $handler->display->display_options['fields']['counter']['id'] = 'counter';
   $handler->display->display_options['fields']['counter']['table'] = 'views';
   $handler->display->display_options['fields']['counter']['field'] = 'counter';
@@ -129,30 +129,29 @@ function rebild_calendar_views_default_views() {
   $handler->display->display_options['fields']['counter']['exclude'] = TRUE;
   $handler->display->display_options['fields']['counter']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['counter']['counter_start'] = '1';
-  /* Sorteringskriterie: Indhold: Dato -  startdato (field_calendar_date) */
+  /* Sort criterion: Indhold: Dato (field_calendar_date) */
   $handler->display->display_options['sorts']['field_calendar_date_value']['id'] = 'field_calendar_date_value';
   $handler->display->display_options['sorts']['field_calendar_date_value']['table'] = 'field_data_field_calendar_date';
   $handler->display->display_options['sorts']['field_calendar_date_value']['field'] = 'field_calendar_date_value';
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Indhold: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'calendar_post' => 'calendar_post',
   );
-  /* Filterkriterie: Indhold: Dato -  startdato (field_calendar_date) */
+  /* Filter criterion: Indhold: Dato (field_calendar_date) */
   $handler->display->display_options['filters']['field_calendar_date_value']['id'] = 'field_calendar_date_value';
   $handler->display->display_options['filters']['field_calendar_date_value']['table'] = 'field_data_field_calendar_date';
   $handler->display->display_options['filters']['field_calendar_date_value']['field'] = 'field_calendar_date_value';
   $handler->display->display_options['filters']['field_calendar_date_value']['operator'] = '>';
-  $handler->display->display_options['filters']['field_calendar_date_value']['default_date'] = 'now';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
@@ -175,6 +174,7 @@ function rebild_calendar_views_default_views() {
 <div class="calendar_title">[title]</div>
 </div>'),
     t('Block'),
+    t('more'),
   );
   $export['calendar_frontpage'] = $view;
 

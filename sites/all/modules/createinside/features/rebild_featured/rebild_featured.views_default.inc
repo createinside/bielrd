@@ -41,7 +41,7 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['row_class'] = 'grid-5';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Opførsel ved ingen resultater: Global: Tekstområde */
+  /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
@@ -74,7 +74,7 @@ function rebild_featured_views_default_views() {
     'fallback_image_style' => 'blok',
     'image_link' => '',
   );
-  /* Felt: Indhold: Overskrift */
+  /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -99,7 +99,7 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['fields']['field_featured_summary']['settings'] = array(
     'trim_length' => '100',
   );
-  /* Felt: Indhold: Oprettelsesdato */
+  /* Felt: Indhold: Post date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
   $handler->display->display_options['fields']['created']['table'] = 'node';
   $handler->display->display_options['fields']['created']['field'] = 'created';
@@ -107,31 +107,31 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['fields']['created']['element_wrapper_class'] = 'featured-date';
   $handler->display->display_options['fields']['created']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['created']['date_format'] = 'short';
-  /* Sorteringskriterie: Indhold: Klæbrig */
+  /* Sort criterion: Indhold: Sticky */
   $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
   $handler->display->display_options['sorts']['sticky']['table'] = 'node';
   $handler->display->display_options['sorts']['sticky']['field'] = 'sticky';
   $handler->display->display_options['sorts']['sticky']['order'] = 'DESC';
-  /* Sorteringskriterie: Indhold: Oprettelsesdato */
+  /* Sort criterion: Indhold: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 0;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Indhold: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'featured_article' => 'featured_article',
   );
-  /* Filterkriterie: Felt: Sektion (field_main_section) */
+  /* Filter criterion: Felt: Sektion (field_main_section) */
   $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
   $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
   $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';
@@ -154,21 +154,21 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['title'] = 'Borger';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 0;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Indhold: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'featured_article' => 'featured_article',
   );
-  /* Filterkriterie: Felt: Sektion (field_main_section) */
+  /* Filter criterion: Felt: Sektion (field_main_section) */
   $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
   $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
   $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';
@@ -185,21 +185,21 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['title'] = 'Erhverv';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 0;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Indhold: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'featured_article' => 'featured_article',
   );
-  /* Filterkriterie: Felt: Sektion (field_main_section) */
+  /* Filter criterion: Felt: Sektion (field_main_section) */
   $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
   $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
   $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';
@@ -220,21 +220,21 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['title'] = 'Politik';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 0;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Indhold: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'featured_article' => 'featured_article',
   );
-  /* Filterkriterie: Felt: Sektion (field_main_section) */
+  /* Filter criterion: Felt: Sektion (field_main_section) */
   $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
   $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
   $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';
@@ -251,21 +251,21 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['title'] = 'Bo i Rebild';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 0;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Indhold: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'featured_article' => 'featured_article',
   );
-  /* Filterkriterie: Felt: Sektion (field_main_section) */
+  /* Filter criterion: Felt: Sektion (field_main_section) */
   $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
   $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
   $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';
@@ -287,6 +287,7 @@ function rebild_featured_views_default_views() {
     t('Ingen resultater.'),
     t('Oprettet'),
     t('Forside'),
+    t('more'),
     t('Borger'),
     t('Erhverv'),
     t('Sektion (field_main_section)'),
