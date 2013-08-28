@@ -78,7 +78,7 @@ function rebild_layout_default_fe_block_boxes() {
   $fe_block_boxes->info = 'Forside søgeblok';
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'rebild_search_front';
-  $fe_block_boxes->body = '<form><input type="search" value="Søg på Rebild.dk her - og find lige hvad du leder efter!" /><input type="submit" value="Søg" /></form><p class="small-text"><strong>Mest søgte emner:</strong> <a href="#">Integer accumsan</a><a href="#">sodales euismod</a><a href="#">cum sociis</a><a href="#">penatibus et</a><a href="#">magnis dis</a><a href="#">parturient</a></p>';
+  $fe_block_boxes->body = '<form><input value="Søg på Rebild.dk her - og find lige hvad du leder efter!" type="search" /><input value="Søg" type="submit" /></form><p class="small-text"><strong>Mest søgte emner:</strong> <a href="#">Integer accumsan</a><a href="#">sodales euismod</a><a href="#">cum sociis</a><a href="#">penatibus et</a><a href="#">magnis dis</a><a href="#">parturient</a></p>';
 
   $export['rebild_search_front'] = $fe_block_boxes;
 

@@ -310,55 +310,6 @@
   } 
 }
 
-/* Search block - frontpage */
-#region-header-second {
-	.block {
-		font-size: 10px;
-		text-align: center;
-		form {
-			background: #cfcfcf;
-			padding: 10px;
-			position: relative;
-			overflow: hidden;
-			margin-bottom: (17/10)*1em;
-			@include border-radius($border-radius-std);
-			input[type=search],
-			input[type=text] {
-				font-size: 1em;
-				border-top: 1px solid white;
-				font-style: italic;
-				height: (32/13)*1em;
-				line-height: (32/13)*1em;
-				float: left;
-				position: relative;
-				padding: 1.05em 1em;
-				@include border-radius($border-radius-std);
-			}
-			input[type=search]:after {
-				
-			}
-			input[type=submit] {
-				position: absolute;
-				right: 10px;
-				top: 10px;
-				font-size: (20/13)*1em;
-				padding: 0 1.5em;
-				@include border-radius(0 3px 3px 0);
-			}
-		}
-		p.small-text {
-			font-size: 11px;
-			line-height: $line-height-std;
-			color: $link-color;
-			a, strong { 
-				color: $link-color;
-				margin-right: 1em;
-				@include text-shadow(rgba(white, 1) 1px 1px 1px);
-			}
-		}
-	}
-}
-
 /* Contact block - front page/landing pages */
 #region-sidebar-first {
 	.block.contact-sidebar {
@@ -688,3 +639,101 @@ div.workbench-info-block {
     }
   }
 }
+
+/* Search block - search page */
+#block-ci-search-ci-search-results {
+  padding: $spacing-std;
+  margin: 0;
+  > div {
+    position: relative;
+  }
+  @include grid-box(white); 
+  .form-item, .form-actions {
+    margin: 0;
+  }      
+  .form-type-textfield {
+    background: #e9e9e9;
+    padding: 10px;
+    overflow: hidden;
+    @include border-radius($border-radius-std);
+  }
+  input[type=search],
+  input[type=text] {
+    font-size: 1em;
+    font-style: italic;
+    height: (32/13)*1em;
+    line-height: (32/13)*1em;
+    float: left;
+    position: relative;
+    padding: 1.05em 1em;
+    background: white;
+    @include border-radius($border-radius-std);
+  }
+  input[type=submit] {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: (20/13)*1em;
+    padding: 0 1.5em;
+    @include border-radius(0 3px 3px 0);
+  }
+  .form-type-checkboxes {
+    overflow: hidden;
+    > label {
+      font-size: 1.2em;
+      margin: 1em 0 0.75em 0;
+    }
+    .form-type-checkbox {
+      float: left;
+      margin-right: 10px;
+    }
+  }
+}
+
+/* Search block - frontpage */
+#block-ci-search-ci-search-front {
+	font-size: 10px;
+	text-align: center;
+	form {
+		background: #cfcfcf;
+		padding: 10px;
+		position: relative;
+		overflow: hidden;
+		margin-bottom: (17/10)*1em;
+		@include border-radius($border-radius-std);
+		input[type=search],
+		input[type=text] {
+			font-size: 1em;
+			border-top: 1px solid white;
+			font-style: italic;
+			height: (32/13)*1em;
+			line-height: (32/13)*1em;
+			float: left;
+			position: relative;
+			padding: 1.05em 1em;
+			@include border-radius($border-radius-std);
+		}
+		input[type=submit] {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			font-size: (20/13)*1em;
+			padding: 0 1.5em;
+			@include border-radius(0 3px 3px 0);
+		}
+		.form-item, .form-actions {
+			margin: 0;
+		}
+	}
+	p.small-text {
+		font-size: 11px;
+		line-height: $line-height-std;
+		color: $link-color;
+		a, strong { 
+			color: $link-color;
+			margin-right: 1em;
+			@include text-shadow(rgba(white, 1) 1px 1px 1px);
+		}
+	}
+}
+

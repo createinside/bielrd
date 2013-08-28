@@ -36,7 +36,7 @@ function rebild_calendar_field_default_field_instances() {
           'use_widget_handlers' => 1,
         ),
         'type' => 'addressfield_default',
-        'weight' => 10,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -68,7 +68,7 @@ function rebild_calendar_field_default_field_instances() {
         ),
       ),
       'type' => 'addressfield_standard',
-      'weight' => 3,
+      'weight' => 6,
     ),
   );
 
@@ -81,10 +81,9 @@ function rebild_calendar_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 7,
+        'type' => 'hidden',
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -108,7 +107,7 @@ function rebild_calendar_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 4,
+      'weight' => 7,
     ),
   );
 
@@ -129,7 +128,7 @@ function rebild_calendar_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -161,7 +160,7 @@ function rebild_calendar_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 1,
+      'weight' => 4,
     ),
   );
 
@@ -182,7 +181,7 @@ function rebild_calendar_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 2,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -214,7 +213,7 @@ function rebild_calendar_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 2,
+      'weight' => 5,
     ),
   );
 
@@ -226,11 +225,11 @@ function rebild_calendar_field_default_field_instances() {
     'description' => 'Indtast et link til hvor brugeren kan læse mere om begivenheden.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 6,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -268,7 +267,7 @@ function rebild_calendar_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 9,
+      'weight' => 12,
     ),
   );
 
@@ -284,7 +283,7 @@ function rebild_calendar_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 11,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -308,7 +307,7 @@ function rebild_calendar_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 7,
+      'weight' => 10,
     ),
   );
 
@@ -320,11 +319,11 @@ function rebild_calendar_field_default_field_instances() {
     'description' => 'Indtast et link til Billetsalg.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 3,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -362,7 +361,7 @@ function rebild_calendar_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 8,
+      'weight' => 11,
     ),
   );
 
@@ -378,7 +377,7 @@ function rebild_calendar_field_default_field_instances() {
         'module' => 'email',
         'settings' => array(),
         'type' => 'email_default',
-        'weight' => 8,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -401,7 +400,7 @@ function rebild_calendar_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 6,
+      'weight' => 9,
     ),
   );
 
@@ -416,7 +415,7 @@ function rebild_calendar_field_default_field_instances() {
         'module' => 'cck_phone',
         'settings' => array(),
         'type' => 'global_phone_number',
-        'weight' => 9,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -681,7 +680,7 @@ function rebild_calendar_field_default_field_instances() {
         'size' => 15,
       ),
       'type' => 'phone_number',
-      'weight' => 5,
+      'weight' => 8,
     ),
   );
 
@@ -693,11 +692,11 @@ function rebild_calendar_field_default_field_instances() {
     'description' => 'Indtast en brødtekst for kalenderindlægget.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -721,7 +720,7 @@ function rebild_calendar_field_default_field_instances() {
         'rows' => 10,
       ),
       'type' => 'text_textarea',
-      'weight' => 12,
+      'weight' => 3,
     ),
   );
 
@@ -808,7 +807,7 @@ function rebild_calendar_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 10,
+      'weight' => 1,
     ),
   );
 
@@ -904,11 +903,11 @@ function rebild_calendar_field_default_field_instances() {
     'description' => 'Indtast et resumé. Resuméet vises øverst før brødteksten.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -932,7 +931,7 @@ function rebild_calendar_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 11,
+      'weight' => 2,
     ),
   );
 

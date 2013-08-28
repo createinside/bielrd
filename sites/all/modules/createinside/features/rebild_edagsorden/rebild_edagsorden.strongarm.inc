@@ -70,7 +70,7 @@ function rebild_edagsorden_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'edagsorden_root_url';
-  $strongarm->value = 'http://edagsorden.createinside.com';
+  $strongarm->value = 'http://dagsorden.rebild.dk';
   $export['edagsorden_root_url'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -175,6 +175,13 @@ function rebild_edagsorden_strongarm() {
   $strongarm->name = 'node_submitted_agenda';
   $strongarm->value = 0;
   $export['node_submitted_agenda'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_agenda_pattern';
+  $strongarm->value = '[node:menu-link:parents:join-path]/[node:title]';
+  $export['pathauto_node_agenda_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

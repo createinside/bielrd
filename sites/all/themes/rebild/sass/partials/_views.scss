@@ -393,3 +393,38 @@
 		}
 	}
 }
+
+/**
+ * SEARCH RESULTS
+ */
+#search-results-page {
+  h2 {
+    padding-bottom: 1em;
+  }
+  .search-result {
+    padding: 15px 10px;
+    margin: 0;
+    h2 {
+      
+    }
+    h3 {
+      margin: 0 0 10px 0;
+      a {
+        color: $color-blue;
+      }
+    }
+    .search-date {
+      font-size: $font-size-small;
+      margin: 0 0 10px;
+    }
+    .search-text {
+     line-height: 1.25em; 
+    }
+  }
+  .odd {
+    background: $bg-color-alt;
+  }
+  ul.pager {
+    margin: $spacing-std 0;
+  }
+}
