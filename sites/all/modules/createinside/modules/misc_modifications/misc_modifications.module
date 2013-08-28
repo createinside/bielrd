@@ -11,5 +11,6 @@ include_once 'misc_modifications.wysiwyg_alter.inc';
 include_once 'misc_modifications.workbench_alter.inc';
 // Ændringer til page node form 
 include_once 'misc_modifications.node_add_form_alter.inc';
-
+//Ændringer til visning af nodes.
+include_once 'misc_modifications.node_view_alter.inc';
 ?>

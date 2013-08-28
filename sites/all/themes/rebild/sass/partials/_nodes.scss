@@ -8,6 +8,7 @@ News Article
 Accordions
 Borger dk
 Agendas
+Calendar
 
 -------------------------------------------------------------------*/
 
@@ -269,6 +270,59 @@ Agendas
 			font-size: 0.75em;
 			top: -1px;
 			@include border-radius(2px);
+		}
+	}
+}
+
+/*------------------------------------------------------------------
+	Calendar
+-------------------------------------------------------------------*/
+#region-content {
+	.node-calendar-post {
+		.group-calendar-info {		
+			padding: 10px;
+			margin-bottom: $spacing-std;
+			@include grid-box-no-shadow(#e6e6e6);	
+			.fieldset-legend {
+				position: absolute;
+				text-transform: uppercase;
+				font-weight: bold;
+				margin-top: 15px;
+			}
+			.fieldset-wrapper {
+				margin-top: $spacing-std*2;
+			}
+			.group-calendar-contact {
+				margin-bottom: $spacing-std;
+				.fieldset-legend {
+					position: relative;
+					margin-top: 0;
+					text-transform: none;
+				}
+				.fieldset-wrapper {
+					margin-top: 0;
+				}
+				.field {
+					margin-bottom: 0;
+				}
+				.field-name-field-calender-email {
+					a {
+						color: #474747;
+					}
+				}
+				
+			}
+		}
+		.field-name-field-calendar-ticket-link {
+			a {
+				background-image: url('../img/bestil_billet.png');
+				background-repeat: no-repeat;
+				height: 43px;
+				width: 213px;
+				text-indent: -999em;
+				display: block;
+				
+			}
 		}
 	}
 }

@@ -52,16 +52,16 @@ function os2web_borger_dk_views_default_views() {
   $handler->display->display_options['fields']['field_os2web_borger_dk_legislati']['field'] = 'field_os2web_borger_dk_legislati';
   $handler->display->display_options['fields']['field_os2web_borger_dk_legislati']['label'] = '';
   $handler->display->display_options['fields']['field_os2web_borger_dk_legislati']['element_label_colon'] = FALSE;
-  /* Sorteringskriterie: Global: Tilfældig */
+  /* Sort criterion: Global: Random */
   $handler->display->display_options['sorts']['random']['id'] = 'random';
   $handler->display->display_options['sorts']['random']['table'] = 'views';
   $handler->display->display_options['sorts']['random']['field'] = 'random';
-  /* Sorteringskriterie: Indhold: Oprettelsesdato */
+  /* Sort criterion: Indhold: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Kontekstuelt filter: Indhold: Nid */
+  /* Contextual filter: Indhold: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -72,7 +72,7 @@ function os2web_borger_dk_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['nid']['specify_validation'] = TRUE;
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Indhold: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -92,6 +92,7 @@ function os2web_borger_dk_views_default_views() {
     t('Faldende'),
     t('Alle'),
     t('Block'),
+    t('more'),
   );
   $export['content_sidebar_borger_dk_read_also'] = $view;
 
