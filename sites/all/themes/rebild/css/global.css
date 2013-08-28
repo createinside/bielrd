@@ -3056,16 +3056,11 @@ Nodes
 /*------------------------------------------------------------------
 	General
 -------------------------------------------------------------------*/
-/* line 30, ../sass/global.scss */
+/*
 :focus {
-  outline: #68a386 1px solid;
+	outline: $color-green 1px solid;
 }
-
-/* line 33, ../sass/global.scss */
-:active {
-  outline: none;
-}
-
+*/
 /* line 36, ../sass/global.scss */
 body {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 1200, color-stop(0%, #e8e8e8), color-stop(50%, #e8e8e8), color-stop(75%, #d4d4d4), color-stop(100%, #e8e8e8));
