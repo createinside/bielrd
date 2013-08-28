@@ -736,4 +736,35 @@ div.workbench-info-block {
 		}
 	}
 }
-
+/* Search autocomplete widget */
+.ac_results {
+	width: 660px !important;
+	border: none;
+	padding: 10px 8px;
+	margin-top: 11px;
+	@include grid-box(white);
+	ul {
+		li {
+			padding: $spacing-std;
+			font-size: $font_size_std;
+			cursor: pointer;
+			color: $text-color;
+			.apachesolr_autocomplete.suggestion {
+				
+			}
+			.apachesolr_autocomplete.message {
+				
+			}
+		}
+		.ac_even {
+			background: white;
+		}
+		.ac_odd {
+			background: $bg-color-alt;
+		}
+		.ac_over {
+			background: #cfcfcf;
+			color: $text-color;
+		}
+	}
+}

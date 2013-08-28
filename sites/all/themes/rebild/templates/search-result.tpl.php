@@ -64,10 +64,18 @@
  * @ingroup themeable
  */
 ?>
+
 <li class="<?php print $classes; ?><?php print $extra_classes; ?>"<?php print $attributes; ?>>
   <?php print render($title_prefix); ?>
   <h3 class="title"<?php print $title_attributes; ?>>
-    <a href="<?php print $url; ?>"><?php print $title; ?></a>
+		<?php
+		if($result["node"]->bundle == "self_service") {
+		?><a href="/selvbetjening#loesning-<?php print $result["node"]->entity_id; ?>"><?php print $title; ?></a><?php	
+		}
+		else { 
+		?><a href="<?php print $url; ?>"><?php print $title; ?></a><?php
+		}
+		?>
   </h3>
   <?php print render($title_suffix); ?>
   <div class="search-date"><?php print format_date($result["node"]->created, "custom", "d. F Y"); ?></div>

@@ -8,6 +8,7 @@ News Article
 Accordions
 Borger dk
 Agendas
+Calendar
 
 -------------------------------------------------------------------*/
 
@@ -59,7 +60,8 @@ Agendas
 #region-content {
 	.node-page,
 	.node-news-article,
-	.node-calendar-post {
+	.node-calendar-post,
+	.node-offering {
 		/* Main Image*/
 		.field-name-field-main-image {
 			margin-bottom: $spacing-std;
@@ -239,6 +241,88 @@ Agendas
 		}
 		img {
 			display: none;
+		}
+	}
+}
+
+#region-content {
+	.node-offering {
+		.field-name-field-offering-link a {
+			display: inline-block;
+			color: white;
+			text-transform: uppercase;
+			font-size: $font-size-std;
+			background-color: $color-purple;
+			padding: 14px 20px;
+			margin-top: $spacing-std;
+			@include background-image(linear-gradient($color-purple, #79648c));
+			@include border-radius($border-radius-std);			
+		}
+		.field-name-field-offering-link a:after {
+			@include icon-prepare();
+			content: "\f061";	
+			color: $color-purple;
+			background: white;
+			display: inline-block;
+			padding: 0.30em 0.40em 0.4em;
+			margin: 0 0 0 10px;
+			position: relative;
+			font-size: 0.75em;
+			top: -1px;
+			@include border-radius(2px);
+		}
+	}
+}
+
+/*------------------------------------------------------------------
+	Calendar
+-------------------------------------------------------------------*/
+#region-content {
+	.node-calendar-post {
+		.group-calendar-info {		
+			padding: 10px;
+			margin-bottom: $spacing-std;
+			@include grid-box-no-shadow(#e6e6e6);	
+			.fieldset-legend {
+				position: absolute;
+				text-transform: uppercase;
+				font-weight: bold;
+				margin-top: 15px;
+			}
+			.fieldset-wrapper {
+				margin-top: $spacing-std*2;
+			}
+			.group-calendar-contact {
+				margin-bottom: $spacing-std;
+				.fieldset-legend {
+					position: relative;
+					margin-top: 0;
+					text-transform: none;
+				}
+				.fieldset-wrapper {
+					margin-top: 0;
+				}
+				.field {
+					margin-bottom: 0;
+				}
+				.field-name-field-calender-email {
+					a {
+						color: #474747;
+					}
+				}
+				
+			}
+		}
+		.field-name-field-calendar-ticket-link {
+			a {
+				background-image: url('../img/bestil_billet.png');
+				background-repeat: no-repeat;
+				height: 43px;
+				width: 213px;
+				text-indent: -999em;
+				display: block;
+				
+			}
 		}
 	}
 }
