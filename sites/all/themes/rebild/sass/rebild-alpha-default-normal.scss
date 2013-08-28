@@ -9,7 +9,9 @@
 [ALPHA-DEFAULT-NARROW]
 
 General
+Menus
 Frontpage
+Landingpage
 
 -------------------------------------------------------------------*/
 
@@ -86,4 +88,18 @@ body {
 			}
 		}
 	}
+}
+
+/*------------------------------------------------------------------
+  Landingpage
+-------------------------------------------------------------------*/
+
+/* Aktuelt */
+.not-front {
+  .view-id-rebild_frontpage {
+    .views-row {
+      height: 361px;
+      width: 310px;
+    }
+  } 
 }

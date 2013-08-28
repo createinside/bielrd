@@ -126,6 +126,7 @@
 /* Region: Sidebar First */
 .not-front {
 	#region-sidebar-first {
+	  text-align: center;
 		.block {
 			.block-title {
 				font-size: $font-size-large;					
@@ -216,8 +217,9 @@
 /* Selfservice block - frontpage */
 #region-header-first {
 	.block {
+	  margin-top: $spacing-std;
+    padding: $spacing-std;
 		@include grid-box($bg-color-header);
-		padding: $spacing-std;
 		h2 {
 			color: white;
 			font-size: (28/12)*1em;
@@ -469,6 +471,7 @@
 				font-size: $font-size-small;
 				text-align: left;
 				width: 100%;
+				position: relative;
 			}
 			.customSelect:after {
 				font-style: normal;
