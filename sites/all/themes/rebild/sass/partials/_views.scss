@@ -428,3 +428,17 @@
     margin: $spacing-std 0;
   }
 }
+
+/**
+ * OFFERINGS
+ */
+#region-content {
+	.view-offerings {
+		h2 {
+			margin: $spacing-std 0;
+		}
+		.views-row {
+			margin-bottom: $spacing-std;
+		}
+	}
+}

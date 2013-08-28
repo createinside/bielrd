@@ -292,7 +292,11 @@ you can use the generic selector below, but it's slower:
 [FORMS]
 
 -------------------------------------------------------------------*/
-/* line 11, ../sass/partials/_forms.scss */
+/* line 8, ../sass/partials/_forms.scss */
+form :focus {
+  outline: 0;
+}
+/* line 14, ../sass/partials/_forms.scss */
 form input[type=text],
 form input[type=search],
 form input[type=password],
@@ -318,7 +322,7 @@ form textarea {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
-/* line 27, ../sass/partials/_forms.scss */
+/* line 30, ../sass/partials/_forms.scss */
 form input[type=submit] {
   background: #c9bd7e;
   color: white;
@@ -338,17 +342,17 @@ form input[type=submit] {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
-/* line 44, ../sass/partials/_forms.scss */
+/* line 47, ../sass/partials/_forms.scss */
 form input[type=submit]::-moz-focus-inner {
   margin: 0;
   padding: 0;
   border: 0;
 }
-/* line 47, ../sass/partials/_forms.scss */
+/* line 50, ../sass/partials/_forms.scss */
 form label {
   margin-bottom: 0.3em;
 }
-/* line 50, ../sass/partials/_forms.scss */
+/* line 53, ../sass/partials/_forms.scss */
 form .description {
   margin-top: 0.3em;
 }
@@ -356,12 +360,12 @@ form .description {
 /**
  * Custom Selects
  */
-/* line 58, ../sass/partials/_forms.scss */
+/* line 61, ../sass/partials/_forms.scss */
 select {
   cursor: pointer;
 }
 
-/* line 61, ../sass/partials/_forms.scss */
+/* line 64, ../sass/partials/_forms.scss */
 .customSelect {
   background: white;
   border: 0;
@@ -383,7 +387,7 @@ select {
   box-shadow: rgba(0, 0, 0, 0.1) 0 0 5px;
 }
 
-/* line 71, ../sass/partials/_forms.scss */
+/* line 74, ../sass/partials/_forms.scss */
 .customSelect:after {
   font-style: normal;
   font-size: 1.1em;
@@ -401,7 +405,7 @@ select {
   content: "\e000";
 }
 
-/* line 80, ../sass/partials/_forms.scss */
+/* line 83, ../sass/partials/_forms.scss */
 .customSelectInner {
   cursor: pointer;
   line-height: 1em;
@@ -921,39 +925,44 @@ Agendas
 /*------------------------------------------------------------------
 	Basic Page + News Article
 -------------------------------------------------------------------*/
-/* line 62, ../sass/partials/_nodes.scss */
+/* line 63, ../sass/partials/_nodes.scss */
 #region-content .node-page,
 #region-content .node-news-article,
-#region-content .node-calendar-post {
+#region-content .node-calendar-post,
+#region-content .node-offering {
   /* Main Image*/
   /* Summary */
   /* Fact Box */
   /* Node Image Gallery */
 }
-/* line 64, ../sass/partials/_nodes.scss */
+/* line 65, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image,
 #region-content .node-news-article .field-name-field-main-image,
-#region-content .node-calendar-post .field-name-field-main-image {
+#region-content .node-calendar-post .field-name-field-main-image,
+#region-content .node-offering .field-name-field-main-image {
   margin-bottom: 20px;
 }
-/* line 66, ../sass/partials/_nodes.scss */
+/* line 67, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image img,
 #region-content .node-news-article .field-name-field-main-image img,
-#region-content .node-calendar-post .field-name-field-main-image img {
+#region-content .node-calendar-post .field-name-field-main-image img,
+#region-content .node-offering .field-name-field-main-image img {
   width: 100%;
 }
-/* line 71, ../sass/partials/_nodes.scss */
+/* line 72, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-summary,
 #region-content .node-news-article .field-name-field-main-summary,
-#region-content .node-calendar-post .field-name-field-main-summary {
+#region-content .node-calendar-post .field-name-field-main-summary,
+#region-content .node-offering .field-name-field-main-summary {
   margin-bottom: 20px;
   font-size: 1.33333em;
   line-height: 1.15em;
 }
-/* line 77, ../sass/partials/_nodes.scss */
+/* line 78, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-factbox,
 #region-content .node-news-article .field-name-field-main-factbox,
-#region-content .node-calendar-post .field-name-field-main-factbox {
+#region-content .node-calendar-post .field-name-field-main-factbox,
+#region-content .node-offering .field-name-field-main-factbox {
   float: right;
   width: 33%;
   background: #e9e6e6;
@@ -965,16 +974,18 @@ Agendas
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 89, ../sass/partials/_nodes.scss */
+/* line 90, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image-gallery,
 #region-content .node-news-article .field-name-field-main-image-gallery,
-#region-content .node-calendar-post .field-name-field-main-image-gallery {
+#region-content .node-calendar-post .field-name-field-main-image-gallery,
+#region-content .node-offering .field-name-field-main-image-gallery {
   margin: 30px 0;
 }
-/* line 91, ../sass/partials/_nodes.scss */
+/* line 92, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image-gallery .field-items,
 #region-content .node-news-article .field-name-field-main-image-gallery .field-items,
-#region-content .node-calendar-post .field-name-field-main-image-gallery .field-items {
+#region-content .node-calendar-post .field-name-field-main-image-gallery .field-items,
+#region-content .node-offering .field-name-field-main-image-gallery .field-items {
   background: #e9e6e6;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -984,27 +995,30 @@ Agendas
   padding: 20px 20px 0;
   overflow: hidden;
 }
-/* line 96, ../sass/partials/_nodes.scss */
+/* line 97, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image-gallery .field-items .field-item,
 #region-content .node-news-article .field-name-field-main-image-gallery .field-items .field-item,
-#region-content .node-calendar-post .field-name-field-main-image-gallery .field-items .field-item {
+#region-content .node-calendar-post .field-name-field-main-image-gallery .field-items .field-item,
+#region-content .node-offering .field-name-field-main-image-gallery .field-items .field-item {
   width: 29%;
   padding: 0 2%;
   float: left;
   margin-bottom: 20px;
   text-align: center;
 }
-/* line 104, ../sass/partials/_nodes.scss */
+/* line 105, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image-gallery .field-label,
 #region-content .node-news-article .field-name-field-main-image-gallery .field-label,
-#region-content .node-calendar-post .field-name-field-main-image-gallery .field-label {
+#region-content .node-calendar-post .field-name-field-main-image-gallery .field-label,
+#region-content .node-offering .field-name-field-main-image-gallery .field-label {
   margin-bottom: 1.25em;
   font-size: 1.08em;
 }
-/* line 108, ../sass/partials/_nodes.scss */
+/* line 109, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image-gallery .field-label:before,
 #region-content .node-news-article .field-name-field-main-image-gallery .field-label:before,
-#region-content .node-calendar-post .field-name-field-main-image-gallery .field-label:before {
+#region-content .node-calendar-post .field-name-field-main-image-gallery .field-label:before,
+#region-content .node-offering .field-name-field-main-image-gallery .field-label:before {
   font-family: 'Rebild';
   content: attr(data-icon);
   speak: none;
@@ -1023,13 +1037,13 @@ Agendas
 /*------------------------------------------------------------------
 	Accordions
 -------------------------------------------------------------------*/
-/* line 128, ../sass/partials/_nodes.scss */
+/* line 129, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion,
 #region-content .node-news-article .ui-accordion,
 #region-content .node-agenda .ui-accordion {
   margin: 20px 0;
 }
-/* line 130, ../sass/partials/_nodes.scss */
+/* line 131, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header,
 #region-content .node-news-article .ui-accordion .ui-accordion-header,
 #region-content .node-agenda .ui-accordion .ui-accordion-header {
@@ -1046,7 +1060,7 @@ Agendas
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 139, ../sass/partials/_nodes.scss */
+/* line 140, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header > a,
 #region-content .node-news-article .ui-accordion .ui-accordion-header > a,
 #region-content .node-agenda .ui-accordion .ui-accordion-header > a {
@@ -1054,13 +1068,13 @@ Agendas
   padding: 0;
   margin: 0;
 }
-/* line 144, ../sass/partials/_nodes.scss */
+/* line 145, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header > a:hover,
 #region-content .node-news-article .ui-accordion .ui-accordion-header > a:hover,
 #region-content .node-agenda .ui-accordion .ui-accordion-header > a:hover {
   text-decoration: none;
 }
-/* line 147, ../sass/partials/_nodes.scss */
+/* line 148, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header > a .field-content:before,
 #region-content .node-news-article .ui-accordion .ui-accordion-header > a .field-content:before,
 #region-content .node-agenda .ui-accordion .ui-accordion-header > a .field-content:before {
@@ -1075,19 +1089,19 @@ Agendas
   content: "\e00f";
   margin-right: 0.5em;
 }
-/* line 153, ../sass/partials/_nodes.scss */
+/* line 154, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active,
 #region-content .node-news-article .ui-accordion .ui-accordion-header.ui-state-active,
 #region-content .node-agenda .ui-accordion .ui-accordion-header.ui-state-active {
   background-color: #7f9dcd;
 }
-/* line 155, ../sass/partials/_nodes.scss */
+/* line 156, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active a,
 #region-content .node-news-article .ui-accordion .ui-accordion-header.ui-state-active a,
 #region-content .node-agenda .ui-accordion .ui-accordion-header.ui-state-active a {
   color: white;
 }
-/* line 159, ../sass/partials/_nodes.scss */
+/* line 160, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-content,
 #region-content .node-news-article .ui-accordion .ui-accordion-content,
 #region-content .node-agenda .ui-accordion .ui-accordion-content {
@@ -1099,21 +1113,21 @@ Agendas
 	Borger dk
 -------------------------------------------------------------------*/
 /* Accordion */
-/* line 174, ../sass/partials/_nodes.scss */
+/* line 175, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .field.field-name-body {
   margin: 2em 0 2em 0;
 }
-/* line 177, ../sass/partials/_nodes.scss */
+/* line 178, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .field-name-field-os2web-borger-dk-header {
   margin-bottom: 20px;
   font-size: 1.33333em;
   line-height: 1.15em;
 }
-/* line 182, ../sass/partials/_nodes.scss */
+/* line 183, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle {
   position: relative;
 }
-/* line 184, ../sass/partials/_nodes.scss */
+/* line 185, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle h2.mArticle {
   background: #e6e6e6;
   color: #474747;
@@ -1129,7 +1143,7 @@ Agendas
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 195, ../sass/partials/_nodes.scss */
+/* line 196, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle h2.mArticle:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1142,12 +1156,12 @@ Agendas
   content: "\e00f";
   margin-right: 0.5em;
 }
-/* line 200, ../sass/partials/_nodes.scss */
+/* line 201, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle div.mArticle {
   padding: 10px 20px;
   margin: 0;
 }
-/* line 206, ../sass/partials/_nodes.scss */
+/* line 207, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle.aktiv h2.mArticle {
   background-color: #7f9dcd;
   color: #fff;
@@ -1156,34 +1170,80 @@ Agendas
 /*------------------------------------------------------------------
 	Agendas
 -------------------------------------------------------------------*/
-/* line 220, ../sass/partials/_nodes.scss */
+/* line 221, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content {
   padding: 10px 20px 20px;
 }
-/* line 222, ../sass/partials/_nodes.scss */
+/* line 223, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content .views-label {
   font-weight: bold;
 }
-/* line 225, ../sass/partials/_nodes.scss */
+/* line 226, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content ul {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-/* line 228, ../sass/partials/_nodes.scss */
+/* line 229, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content ul li {
   margin: 0;
 }
-/* line 234, ../sass/partials/_nodes.scss */
+/* line 235, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .field-label {
   margin: 0;
 }
-/* line 237, ../sass/partials/_nodes.scss */
+/* line 238, ../sass/partials/_nodes.scss */
 #region-content .node-agenda table tr td {
   border: 1px solid #474747;
 }
-/* line 240, ../sass/partials/_nodes.scss */
+/* line 241, ../sass/partials/_nodes.scss */
 #region-content .node-agenda img {
   display: none;
+}
+
+/* line 249, ../sass/partials/_nodes.scss */
+#region-content .node-offering .field-name-field-offering-link a {
+  display: inline-block;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1em;
+  background-color: #937ea7;
+  padding: 14px 20px;
+  margin-top: 20px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #937ea7), color-stop(100%, #79648c));
+  background-image: -webkit-linear-gradient(#937ea7, #79648c);
+  background-image: -moz-linear-gradient(#937ea7, #79648c);
+  background-image: -o-linear-gradient(#937ea7, #79648c);
+  background-image: linear-gradient(#937ea7, #79648c);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 260, ../sass/partials/_nodes.scss */
+#region-content .node-offering .field-name-field-offering-link a:after {
+  font-family: 'Rebild';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\f061";
+  color: #937ea7;
+  background: white;
+  display: inline-block;
+  padding: 0.30em 0.40em 0.4em;
+  margin: 0 0 0 10px;
+  position: relative;
+  font-size: 0.75em;
+  top: -1px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
 }
 
 /*------------------------------------------------------------------
@@ -2179,7 +2239,7 @@ div.workbench-info-block a {
 }
 /* line 765, ../sass/partials/_blocks.scss */
 .ac_results ul .ac_over {
-  background-color: inherit;
+  background: #cfcfcf;
   color: #474747;
 }
 
@@ -2859,6 +2919,18 @@ div.workbench-info-block a {
   margin: 20px 0;
 }
 
+/**
+ * OFFERINGS
+ */
+/* line 437, ../sass/partials/_views.scss */
+#region-content .view-offerings h2 {
+  margin: 20px 0;
+}
+/* line 440, ../sass/partials/_views.scss */
+#region-content .view-offerings .views-row {
+  margin-bottom: 20px;
+}
+
 /*------------------------------------------------------------------
 
 [GLOBAL]
@@ -2874,6 +2946,16 @@ Nodes
 	General
 -------------------------------------------------------------------*/
 /* line 30, ../sass/global.scss */
+:focus {
+  outline: #68a386 1px solid;
+}
+
+/* line 33, ../sass/global.scss */
+:active {
+  outline: none;
+}
+
+/* line 36, ../sass/global.scss */
 body {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 1200, color-stop(0%, #e8e8e8), color-stop(50%, #e8e8e8), color-stop(75%, #d4d4d4), color-stop(100%, #e8e8e8));
   background-image: -webkit-linear-gradient(#e8e8e8, #e8e8e8 600px, #d4d4d4 900px, #e8e8e8 1200px);
@@ -2886,14 +2968,14 @@ body {
   -webkit-text-size-adjust: none;
 }
 
-/* line 37, ../sass/global.scss */
+/* line 43, ../sass/global.scss */
 img {
   max-width: 100%;
   height: auto;
 }
 
 /* Page titles */
-/* line 43, ../sass/global.scss */
+/* line 49, ../sass/global.scss */
 .front #page-title {
   font-size: 1.5em;
   font-weight: normal;
@@ -2902,7 +2984,7 @@ img {
   text-shadow: white 1px 1px 1px;
 }
 
-/* line 50, ../sass/global.scss */
+/* line 56, ../sass/global.scss */
 .not-front #page-title {
   font-size: 2.16667em;
   line-height: 1.15em;
@@ -2911,7 +2993,7 @@ img {
   text-shadow: white 1px 1px 1px;
 }
 
-/* line 57, ../sass/global.scss */
+/* line 63, ../sass/global.scss */
 #logo {
   display: none;
 }
@@ -2919,7 +3001,7 @@ img {
 /*------------------------------------------------------------------
 	Sections
 -------------------------------------------------------------------*/
-/* line 64, ../sass/global.scss */
+/* line 70, ../sass/global.scss */
 #section-content {
   padding: 20px 0 0;
   background: transparent url("../img/noise_bg_repeat.png") repeat;
@@ -2928,7 +3010,7 @@ img {
 /*------------------------------------------------------------------
 	Zones
 -------------------------------------------------------------------*/
-/* line 72, ../sass/global.scss */
+/* line 78, ../sass/global.scss */
 #zone-user-wrapper {
   background-color: white;
   position: relative;
@@ -2938,7 +3020,7 @@ img {
   box-shadow: rgba(0, 0, 0, 0.075) 0 10px 10px;
 }
 
-/* line 78, ../sass/global.scss */
+/* line 84, ../sass/global.scss */
 #zone-menu-wrapper {
   background-color: white;
   position: relative;
@@ -2948,24 +3030,24 @@ img {
   box-shadow: rgba(0, 0, 0, 0.075) 0 10px 10px;
 }
 
-/* line 84, ../sass/global.scss */
+/* line 90, ../sass/global.scss */
 #zone-header-wrapper {
   color: white;
   background: transparent url("../img/noise_bg_repeat.png") repeat;
 }
 
-/* line 88, ../sass/global.scss */
+/* line 94, ../sass/global.scss */
 #zone-preface-wrapper {
   display: none;
 }
 
-/* line 91, ../sass/global.scss */
+/* line 97, ../sass/global.scss */
 #zone-footer-wrapper {
   background-color: white;
   padding: 20px 0 20px;
 }
 
-/* line 95, ../sass/global.scss */
+/* line 101, ../sass/global.scss */
 #zone-bottom-wrapper {
   background-color: #6b6b6b;
 }
@@ -2973,12 +3055,12 @@ img {
 /*------------------------------------------------------------------
 	Regions
 -------------------------------------------------------------------*/
-/* line 102, ../sass/global.scss */
+/* line 108, ../sass/global.scss */
 #region-user-second {
   padding: 10px;
 }
 
-/* line 109, ../sass/global.scss */
+/* line 115, ../sass/global.scss */
 #region-footer-second,
 #region-footer-third,
 #region-footer-fourth,
@@ -2989,7 +3071,7 @@ img {
 /*------------------------------------------------------------------
 	Menus
 -------------------------------------------------------------------*/
-/* line 118, ../sass/global.scss */
+/* line 124, ../sass/global.scss */
 .ultimenu,
 #region-user-first {
   display: none;
@@ -2998,7 +3080,7 @@ img {
 /*------------------------------------------------------------------
 	Nodes
 -------------------------------------------------------------------*/
-/* line 126, ../sass/global.scss */
+/* line 132, ../sass/global.scss */
 .not-front .block-system-main {
   padding: 20px;
   background-color: white;
@@ -3012,7 +3094,7 @@ img {
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
 
-/* line 136, ../sass/global.scss */
+/* line 142, ../sass/global.scss */
 .page-borger .block-system-main,
 .page-erhverv .block-system-main,
 .page-politik .block-system-main,
