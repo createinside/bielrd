@@ -27,8 +27,8 @@ function rebild_search_apachesolr_environments() {
         'last_entity_id' => 0,
       ),
       'node' => array(
-        'last_changed' => '1377688931',
-        'last_entity_id' => '682',
+        'last_changed' => '1377699175',
+        'last_entity_id' => '686',
       ),
       'redirect' => array(
         'last_changed' => 0,
@@ -59,8 +59,8 @@ function rebild_search_apachesolr_environments() {
         'last_entity_id' => 0,
       ),
     ),
-    'apachesolr_index_updated' => 1377688935,
-    'apachesolr_last_optimize' => 1377605593,
+    'apachesolr_index_updated' => 1377701404,
+    'apachesolr_last_optimize' => 1377699818,
     'apachesolr_read_only' => '0',
     'apachesolr_search_facet_pages' => '',
   );
