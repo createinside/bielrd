@@ -149,6 +149,23 @@ function rebild_layout_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Kontekstuelt filter: Felt: Tags (field_main_tags) */
+  $handler->display->display_options['arguments']['field_main_tags_tid']['id'] = 'field_main_tags_tid';
+  $handler->display->display_options['arguments']['field_main_tags_tid']['table'] = 'field_data_field_main_tags';
+  $handler->display->display_options['arguments']['field_main_tags_tid']['field'] = 'field_main_tags_tid';
+  $handler->display->display_options['arguments']['field_main_tags_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_main_tags_tid']['exception']['title'] = 'Alle';
+  $handler->display->display_options['arguments']['field_main_tags_tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['field_main_tags_tid']['default_argument_options']['term_page'] = FALSE;
+  $handler->display->display_options['arguments']['field_main_tags_tid']['default_argument_options']['node'] = TRUE;
+  $handler->display->display_options['arguments']['field_main_tags_tid']['default_argument_options']['anyall'] = '+';
+  $handler->display->display_options['arguments']['field_main_tags_tid']['default_argument_options']['limit'] = TRUE;
+  $handler->display->display_options['arguments']['field_main_tags_tid']['default_argument_options']['vocabularies'] = array(
+    'rebild_tags' => 'rebild_tags',
+  );
+  $handler->display->display_options['arguments']['field_main_tags_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_main_tags_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_main_tags_tid']['summary_options']['items_per_page'] = '25';
   /* Kontekstuelt filter: Indhold: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
@@ -160,35 +177,11 @@ function rebild_layout_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['nid']['not'] = TRUE;
-  /* Kontekstuelt filter: Indhold: Har taksonomiterm ID (med dybde) */
-  $handler->display->display_options['arguments']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['table'] = 'node';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['exception']['title'] = 'Alle';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_type'] = 'taxonomy_tid';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_options']['term_page'] = FALSE;
-  $handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_options']['node'] = TRUE;
-  $handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_options']['anyall'] = '+';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_options']['vocabularies'] = array(
-    'rebild_tags' => 'rebild_tags',
-  );
-  $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['depth'] = '0';
-  /* Kontekstuelt filter: Indhold: Har taksonomiterm ID dybdemodifikator */
-  $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['id'] = 'term_node_tid_depth_modifier';
-  $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['table'] = 'node';
-  $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['field'] = 'term_node_tid_depth_modifier';
-  $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['exception']['title'] = 'Alle';
-  $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['summary']['format'] = 'default_summary';
   /* Filterkriterie: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
   /* Filterkriterie: Indhold: Type */
@@ -197,6 +190,7 @@ function rebild_layout_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'os2web_borger_dk_article' => 'os2web_borger_dk_article',
+    'cloned_page' => 'cloned_page',
     'page' => 'page',
   );
   /* Filterkriterie: Indhold: Overskrift */
