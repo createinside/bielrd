@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
 /* Base */
@@ -1660,8 +1659,12 @@ Calendar
 .view-selfservice-frontpage {
   position: relative;
 }
+/* line 291, ../sass/partials/_blocks.scss */
+.view-selfservice-frontpage .ctools-jump-menu-button {
+  display: none;
+}
 
-/* line 293, ../sass/partials/_blocks.scss */
+/* line 296, ../sass/partials/_blocks.scss */
 .view-id-selfservice_frontpage.view-display-id-block > .view-content {
   font-size: 1em;
   line-height: 1.4em;
@@ -1670,20 +1673,16 @@ Calendar
   margin: 20px auto 25px;
   text-align: center;
 }
-/* line 300, ../sass/partials/_blocks.scss */
+/* line 303, ../sass/partials/_blocks.scss */
 .view-id-selfservice_frontpage.view-display-id-block > .view-content > .views-row {
   color: #00473e;
   margin-right: 0.9em;
   margin-bottom: 0.5em;
   display: inline-block;
 }
-/* line 305, ../sass/partials/_blocks.scss */
+/* line 308, ../sass/partials/_blocks.scss */
 .view-id-selfservice_frontpage.view-display-id-block > .view-content > .views-row a {
   color: #00473e;
-}
-/* line 309, ../sass/partials/_blocks.scss */
-.view-id-selfservice_frontpage.view-display-id-block > .view-content .ctools-jump-menu-button {
-  display: none;
 }
 
 /* Contact block - front page/landing pages */
