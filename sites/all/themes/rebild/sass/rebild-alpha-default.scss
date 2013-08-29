@@ -38,7 +38,11 @@ Nodes
 /*------------------------------------------------------------------
 	Regions
 -------------------------------------------------------------------*/
-
+.not-front {
+  #region-sidebar-first {
+    text-align: left;
+  }
+}
 /* Hide mobile regions */
 #region-user-second,
 #region-mobile-menu {

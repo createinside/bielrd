@@ -39,7 +39,7 @@ function rebild_layout_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-  /* Felt: Indhold: Titel */
+  /* Felt: Indhold: Overskrift */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -76,6 +76,12 @@ function rebild_layout_views_default_views() {
     'os2web_borger_dk_article' => 'os2web_borger_dk_article',
     'page' => 'page',
   );
+  /* Filterkriterie: Indhold: Overskrift */
+  $handler->display->display_options['filters']['title']['id'] = 'title';
+  $handler->display->display_options['filters']['title']['table'] = 'node';
+  $handler->display->display_options['filters']['title']['field'] = 'title';
+  $handler->display->display_options['filters']['title']['operator'] = 'not';
+  $handler->display->display_options['filters']['title']['value'] = '404 - siden findes ikke';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
@@ -127,7 +133,7 @@ function rebild_layout_views_default_views() {
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-  /* Felt: Indhold: Titel */
+  /* Felt: Indhold: Overskrift */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -193,6 +199,12 @@ function rebild_layout_views_default_views() {
     'os2web_borger_dk_article' => 'os2web_borger_dk_article',
     'page' => 'page',
   );
+  /* Filterkriterie: Indhold: Overskrift */
+  $handler->display->display_options['filters']['title']['id'] = 'title';
+  $handler->display->display_options['filters']['title']['table'] = 'node';
+  $handler->display->display_options['filters']['title']['field'] = 'title';
+  $handler->display->display_options['filters']['title']['operator'] = 'not';
+  $handler->display->display_options['filters']['title']['value'] = '404 - siden findes ikke';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
