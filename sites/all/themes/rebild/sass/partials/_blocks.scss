@@ -355,6 +355,113 @@
 		}
 	}	
 }
+/* Custom blocks */
+.custom_block {
+    padding: $spacing-std;
+    color: white;
+    line-height: $line-height-std;
+    a {
+	    text-decoration: none;
+    }  
+}
+
+/* Custom blocks - book en politiker */
+.html {
+	#page {
+		.custom_block.politics {
+			@include grid-box($color-green); 
+			height: 40px;
+			background-image: url('../img/block_watermark.png');
+			background-position: right bottom;
+			background-repeat: no-repeat;
+			font-size: 1.25em;
+			p {
+				margin-bottom: 5px;
+			}
+			a {
+				color: #fff;
+			}
+		}
+	}
+}
+/* Custom blocks - Kort og godt */
+.html {
+	#page {
+		.custom_block.map {
+			@include grid-box(#fff);
+			color: $text-color;
+			height: 50px;
+			font-size: 1.25em;
+			background-image: url('../img/map_digital.png');
+			background-repeat: no-repeat;
+			background-position: right bottom;
+			h3 {
+				font-weight: normal;
+				color: $color-green;
+			}
+			p {
+				margin-bottom: 5px;
+			}
+			a {
+				color: $text-color;
+			}
+		}
+	}
+} 
+/* Custom blocks - Rebildporten */
+.html {
+	#page {
+		.custom_block.rebildporten {
+			@include grid-box(#f04f0f);
+			height: 105px;		
+			h2 {
+				margin-bottom: 10px;
+			}
+			.rold {
+				margin-bottom: 10px;
+			}	
+		}
+	}
+}
+/* Custom blocks - Frivillig */
+.html {
+	#page {
+		.custom_block.frivillig {
+			@include grid-box(#fff);
+			height: 280px;
+			color: $text-color;
+			background-image: url('../img/frivillig_high.jpg');
+			background-repeat: no-repeat;
+			background-position: center top;
+			h2 {
+				margin-top: 210px;
+				font-size: $font-size-large;
+				font-weight: normal;
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+/* Custom blocks - Socialt ansvarlig */
+.html {
+	#page {
+		.custom_block.social {
+			@include grid-box(#fff);
+			height: 280px;
+			color: $text-color;
+			background-image: url('../img/social_high.jpg');
+			background-repeat: no-repeat;
+			background-position: center top;
+			h2 {
+				margin-top: 210px;
+				font-size: $font-size-large;
+				font-weight: normal;
+				margin-bottom: 10px;
+			}
+		}
+			
+	}
+}
 
 /* Footer - Contact information */
 #region-footer-first {

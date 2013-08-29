@@ -103,3 +103,24 @@ body {
     }
   } 
 }
+/*------------------------------------------------------------------
+  Blocks
+-------------------------------------------------------------------*/
+.html {
+	#page {
+		.custom_block.social, .custom_block.frivillig  {
+			h2 {				
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+.html {
+	#page {
+		.custom_block.politics {
+			p {
+				margin-bottom: 10px;
+			}
+		}
+	}	
+}

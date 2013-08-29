@@ -1736,64 +1736,211 @@ Calendar
   margin-right: 5px;
 }
 
+/* Custom blocks */
+/* line 359, ../sass/partials/_blocks.scss */
+.custom_block {
+  padding: 20px;
+  color: white;
+  line-height: 1.15em;
+}
+/* line 363, ../sass/partials/_blocks.scss */
+.custom_block a {
+  text-decoration: none;
+}
+
+/* Custom blocks - book en politiker */
+/* line 371, ../sass/partials/_blocks.scss */
+.html #page .custom_block.politics {
+  background-color: #68a386;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  height: 40px;
+  background-image: url("../img/block_watermark.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  font-size: 1.25em;
+}
+/* line 378, ../sass/partials/_blocks.scss */
+.html #page .custom_block.politics p {
+  margin-bottom: 5px;
+}
+/* line 381, ../sass/partials/_blocks.scss */
+.html #page .custom_block.politics a {
+  color: #fff;
+}
+
+/* Custom blocks - Kort og godt */
+/* line 390, ../sass/partials/_blocks.scss */
+.html #page .custom_block.map {
+  background-color: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  color: #474747;
+  height: 50px;
+  font-size: 1.25em;
+  background-image: url("../img/map_digital.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+/* line 398, ../sass/partials/_blocks.scss */
+.html #page .custom_block.map h3 {
+  font-weight: normal;
+  color: #68a386;
+}
+/* line 402, ../sass/partials/_blocks.scss */
+.html #page .custom_block.map p {
+  margin-bottom: 5px;
+}
+/* line 405, ../sass/partials/_blocks.scss */
+.html #page .custom_block.map a {
+  color: #474747;
+}
+
+/* Custom blocks - Rebildporten */
+/* line 414, ../sass/partials/_blocks.scss */
+.html #page .custom_block.rebildporten {
+  background-color: #f04f0f;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  height: 105px;
+}
+/* line 417, ../sass/partials/_blocks.scss */
+.html #page .custom_block.rebildporten h2 {
+  margin-bottom: 10px;
+}
+/* line 420, ../sass/partials/_blocks.scss */
+.html #page .custom_block.rebildporten .rold {
+  margin-bottom: 10px;
+}
+
+/* Custom blocks - Frivillig */
+/* line 429, ../sass/partials/_blocks.scss */
+.html #page .custom_block.frivillig {
+  background-color: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  height: 280px;
+  color: #474747;
+  background-image: url("../img/frivillig_high.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+/* line 436, ../sass/partials/_blocks.scss */
+.html #page .custom_block.frivillig h2 {
+  margin-top: 210px;
+  font-size: 1.33333em;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+/* Custom blocks - Socialt ansvarlig */
+/* line 448, ../sass/partials/_blocks.scss */
+.html #page .custom_block.social {
+  background-color: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  height: 280px;
+  color: #474747;
+  background-image: url("../img/social_high.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+/* line 455, ../sass/partials/_blocks.scss */
+.html #page .custom_block.social h2 {
+  margin-top: 210px;
+  font-size: 1.33333em;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
 /* Footer - Contact information */
-/* line 361, ../sass/partials/_blocks.scss */
+/* line 468, ../sass/partials/_blocks.scss */
 #region-footer-first .block {
   text-align: center;
 }
-/* line 364, ../sass/partials/_blocks.scss */
+/* line 471, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content p {
   margin-bottom: 10px;
 }
-/* line 367, ../sass/partials/_blocks.scss */
+/* line 474, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content table {
   margin: auto;
   margin-bottom: 10px;
   line-height: 1.15em;
   text-align: center;
 }
-/* line 373, ../sass/partials/_blocks.scss */
+/* line 480, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content p.large-text {
   font-size: 1.66667em;
   line-height: 1.15em;
 }
-/* line 377, ../sass/partials/_blocks.scss */
+/* line 484, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content img {
   margin-bottom: 5px;
 }
-/* line 380, ../sass/partials/_blocks.scss */
+/* line 487, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content a {
   color: #6b6b6b;
   text-decoration: none;
 }
-/* line 384, ../sass/partials/_blocks.scss */
+/* line 491, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content p.bottom-logo {
   margin-bottom: 20px;
 }
-/* line 386, ../sass/partials/_blocks.scss */
+/* line 493, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content p.bottom-logo span.icon-bottom_logo {
   font-size: 50px;
 }
 
 /* Mobile Header */
-/* line 395, ../sass/partials/_blocks.scss */
+/* line 502, ../sass/partials/_blocks.scss */
 #mob-header {
   color: #68a386;
   font-size: 24px;
 }
-/* line 398, ../sass/partials/_blocks.scss */
+/* line 505, ../sass/partials/_blocks.scss */
 #mob-header a {
   color: #68a386;
   text-decoration: none;
 }
-/* line 402, ../sass/partials/_blocks.scss */
+/* line 509, ../sass/partials/_blocks.scss */
 #mob-header #mob-header-left {
   float: left;
   text-align: left;
   width: 33%;
   line-height: 1.5em;
 }
-/* line 408, ../sass/partials/_blocks.scss */
+/* line 515, ../sass/partials/_blocks.scss */
 #mob-header #mob-header-center {
   text-align: center;
   float: left;
@@ -1802,11 +1949,11 @@ Calendar
   color: #00703c;
   line-height: 1em;
 }
-/* line 415, ../sass/partials/_blocks.scss */
+/* line 522, ../sass/partials/_blocks.scss */
 #mob-header #mob-header-center a {
   color: #00703c;
 }
-/* line 419, ../sass/partials/_blocks.scss */
+/* line 526, ../sass/partials/_blocks.scss */
 #mob-header #mob-header-right {
   float: left;
   text-align: right;
@@ -1814,12 +1961,12 @@ Calendar
   line-height: 1.5em;
 }
 
-/* line 427, ../sass/partials/_blocks.scss */
+/* line 534, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first {
   /* Selvbetjening - sidebar */
   /* Background Image blocks */
 }
-/* line 431, ../sass/partials/_blocks.scss */
+/* line 538, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 {
   padding: 20px;
@@ -1834,17 +1981,17 @@ Calendar
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 435, ../sass/partials/_blocks.scss */
+/* line 542, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .block-title,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .block-title {
   color: white;
 }
-/* line 439, ../sass/partials/_blocks.scss */
+/* line 546, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content form,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content form {
   margin-bottom: 1em;
 }
-/* line 442, ../sass/partials/_blocks.scss */
+/* line 549, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content p.arrow-link,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content p.arrow-link {
   font-size: 0.91667em;
@@ -1852,7 +1999,7 @@ Calendar
   margin-bottom: 20px;
   padding-bottom: 20px;
 }
-/* line 447, ../sass/partials/_blocks.scss */
+/* line 554, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content p.arrow-link a,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content p.arrow-link a {
   text-transform: uppercase;
@@ -1860,7 +2007,7 @@ Calendar
   font-weight: bold;
   text-decoration: none;
 }
-/* line 453, ../sass/partials/_blocks.scss */
+/* line 560, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content p.arrow-link a:after,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content p.arrow-link a:after {
   font-family: 'Rebild';
@@ -1887,7 +2034,7 @@ Calendar
   -o-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 468, ../sass/partials/_blocks.scss */
+/* line 575, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content .customSelect,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content .customSelect {
   font-style: italic;
@@ -1897,7 +2044,7 @@ Calendar
   width: 100%;
   position: relative;
 }
-/* line 476, ../sass/partials/_blocks.scss */
+/* line 583, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content .customSelect:after,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content .customSelect:after {
   font-style: normal;
@@ -1918,30 +2065,30 @@ Calendar
   -webkit-font-smoothing: antialiased;
   content: "\e000";
 }
-/* line 488, ../sass/partials/_blocks.scss */
+/* line 595, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content .customSelectInner,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content .customSelectInner {
   padding: 1em;
   max-width: 80%;
 }
-/* line 492, ../sass/partials/_blocks.scss */
+/* line 599, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content .ctools-jump-menu-button,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content .ctools-jump-menu-button {
   display: none;
 }
-/* line 497, ../sass/partials/_blocks.scss */
+/* line 604, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 ul li,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 ul li {
   margin: 0 0 0.5em 0;
   padding: 0;
 }
-/* line 500, ../sass/partials/_blocks.scss */
+/* line 607, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 ul li a,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 ul li a {
   color: white;
   text-decoration: none;
 }
-/* line 504, ../sass/partials/_blocks.scss */
+/* line 611, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 ul li a:before,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 ul li a:before {
   font-family: 'Rebild';
@@ -1955,7 +2102,7 @@ Calendar
   content: "\f101";
   margin-right: 0.5em;
 }
-/* line 514, ../sass/partials/_blocks.scss */
+/* line 621, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box {
   padding: 20px;
   color: #474747;
@@ -1969,60 +2116,60 @@ Calendar
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 520, ../sass/partials/_blocks.scss */
+/* line 627, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box .content {
   width: 62%;
 }
-/* line 522, ../sass/partials/_blocks.scss */
+/* line 629, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box .content h2 {
   font-size: 1.33333em;
   line-height: 1.1em;
   font-weight: normal;
 }
-/* line 527, ../sass/partials/_blocks.scss */
+/* line 634, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box .content p {
   margin-top: 1em;
 }
-/* line 532, ../sass/partials/_blocks.scss */
+/* line 639, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box.plads {
   background: #f6f6f6 url("../img/image-box-1.png") no-repeat bottom right;
 }
-/* line 535, ../sass/partials/_blocks.scss */
+/* line 642, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box.skole {
   background: #f6f6f6 url("../img/image-box-2.png") no-repeat bottom right;
 }
 
-/* line 539, ../sass/partials/_blocks.scss */
+/* line 646, ../sass/partials/_blocks.scss */
 .view-selfservice-blocks {
   position: relative;
 }
 
 /* Workbench Moderation */
-/* line 544, ../sass/partials/_blocks.scss */
+/* line 651, ../sass/partials/_blocks.scss */
 div.workbench-info-block {
   font-size: 1em;
   padding: 10px 20px;
   line-height: 1.5em;
 }
-/* line 548, ../sass/partials/_blocks.scss */
+/* line 655, ../sass/partials/_blocks.scss */
 div.workbench-info-block a {
   font-weight: bold;
 }
 
 /* WCAG BLOCKS */
-/* line 554, ../sass/partials/_blocks.scss */
+/* line 661, ../sass/partials/_blocks.scss */
 .wcag-block {
   display: inline-block;
   margin: 0 20px 0 0;
 }
-/* line 557, ../sass/partials/_blocks.scss */
+/* line 664, ../sass/partials/_blocks.scss */
 .wcag-block a {
   color: #474747;
   text-decoration: none;
   font-style: italic;
 }
 
-/* line 564, ../sass/partials/_blocks.scss */
+/* line 671, ../sass/partials/_blocks.scss */
 .wcag-block.textsize #text_resize_increase {
   background: none;
   margin: 0 7px 0 0;
@@ -2032,13 +2179,13 @@ div.workbench-info-block a {
   width: auto;
   font-weight: bold;
 }
-/* line 571, ../sass/partials/_blocks.scss */
+/* line 678, ../sass/partials/_blocks.scss */
 .wcag-block.textsize #text_resize_increase sup {
   vertical-align: super;
   float: right;
   margin: 0 0 0 1px;
 }
-/* line 577, ../sass/partials/_blocks.scss */
+/* line 684, ../sass/partials/_blocks.scss */
 .wcag-block.textsize #text_resize_decrease {
   background: none;
   margin: 0;
@@ -2049,14 +2196,14 @@ div.workbench-info-block a {
   font-weight: bold;
   font-size: 0.95em;
 }
-/* line 585, ../sass/partials/_blocks.scss */
+/* line 692, ../sass/partials/_blocks.scss */
 .wcag-block.textsize #text_resize_decrease sup {
   vertical-align: sub;
   margin: 0 0 0 1px;
   float: right;
 }
 
-/* line 593, ../sass/partials/_blocks.scss */
+/* line 700, ../sass/partials/_blocks.scss */
 .wcag-block.read-aloud a:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -2073,11 +2220,11 @@ div.workbench-info-block a {
   top: 1px;
 }
 
-/* line 603, ../sass/partials/_blocks.scss */
+/* line 710, ../sass/partials/_blocks.scss */
 .wcag-block.print span {
   margin: 0;
 }
-/* line 606, ../sass/partials/_blocks.scss */
+/* line 713, ../sass/partials/_blocks.scss */
 .wcag-block.print a:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -2094,15 +2241,15 @@ div.workbench-info-block a {
 }
 
 /* Cookie Popup */
-/* line 616, ../sass/partials/_blocks.scss */
+/* line 723, ../sass/partials/_blocks.scss */
 #sliding-popup {
   background: #6b6b6b;
 }
-/* line 618, ../sass/partials/_blocks.scss */
+/* line 725, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content {
   width: auto;
 }
-/* line 620, ../sass/partials/_blocks.scss */
+/* line 727, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-text {
   font-family: Verdana, Arial, sans-serif;
   font-size: 0.91667em;
@@ -2110,17 +2257,17 @@ div.workbench-info-block a {
   width: auto;
   text-align: center;
 }
-/* line 626, ../sass/partials/_blocks.scss */
+/* line 733, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-text h3 {
   font-size: 1.25em;
   margin-bottom: 5px;
   font-weight: bold;
 }
-/* line 631, ../sass/partials/_blocks.scss */
+/* line 738, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-text p {
   font-size: 0.91667em;
 }
-/* line 635, ../sass/partials/_blocks.scss */
+/* line 742, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-buttons {
   margin: 10px 10px;
   text-align: center;
@@ -2128,7 +2275,7 @@ div.workbench-info-block a {
 }
 
 /* Search block - search page */
-/* line 647, ../sass/partials/_blocks.scss */
+/* line 754, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results {
   padding: 20px;
   margin: 0;
@@ -2142,15 +2289,15 @@ div.workbench-info-block a {
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 650, ../sass/partials/_blocks.scss */
+/* line 757, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results > div {
   position: relative;
 }
-/* line 654, ../sass/partials/_blocks.scss */
+/* line 761, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-item, #block-ci-search-ci-search-results .form-actions {
   margin: 0;
 }
-/* line 657, ../sass/partials/_blocks.scss */
+/* line 764, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-textfield {
   background: #e9e9e9;
   padding: 10px;
@@ -2161,7 +2308,7 @@ div.workbench-info-block a {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 664, ../sass/partials/_blocks.scss */
+/* line 771, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results input[type=search],
 #block-ci-search-ci-search-results input[type=text] {
   font-size: 1em;
@@ -2178,7 +2325,7 @@ div.workbench-info-block a {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 675, ../sass/partials/_blocks.scss */
+/* line 782, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results input[type=submit] {
   position: absolute;
   right: 10px;
@@ -2191,28 +2338,28 @@ div.workbench-info-block a {
   -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-/* line 683, ../sass/partials/_blocks.scss */
+/* line 790, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-checkboxes {
   overflow: hidden;
 }
-/* line 685, ../sass/partials/_blocks.scss */
+/* line 792, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-checkboxes > label {
   font-size: 1.2em;
   margin: 1em 0 0.75em 0;
 }
-/* line 689, ../sass/partials/_blocks.scss */
+/* line 796, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-checkboxes .form-type-checkbox {
   float: left;
   margin-right: 10px;
 }
 
 /* Search block - frontpage */
-/* line 697, ../sass/partials/_blocks.scss */
+/* line 804, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front {
   font-size: 10px;
   text-align: center;
 }
-/* line 700, ../sass/partials/_blocks.scss */
+/* line 807, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form {
   background: #cfcfcf;
   padding: 10px;
@@ -2225,7 +2372,7 @@ div.workbench-info-block a {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 708, ../sass/partials/_blocks.scss */
+/* line 815, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form input[type=search],
 #block-ci-search-ci-search-front form input[type=text] {
   font-size: 1em;
@@ -2242,7 +2389,7 @@ div.workbench-info-block a {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 719, ../sass/partials/_blocks.scss */
+/* line 826, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form input[type=submit] {
   position: absolute;
   right: 10px;
@@ -2255,17 +2402,17 @@ div.workbench-info-block a {
   -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-/* line 727, ../sass/partials/_blocks.scss */
+/* line 834, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .form-item, #block-ci-search-ci-search-front form .form-actions {
   margin: 0;
 }
-/* line 731, ../sass/partials/_blocks.scss */
+/* line 838, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front p.small-text {
   font-size: 11px;
   line-height: 1.15em;
   color: #474747;
 }
-/* line 735, ../sass/partials/_blocks.scss */
+/* line 842, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front p.small-text a, #block-ci-search-ci-search-front p.small-text strong {
   color: #474747;
   margin-right: 1em;
@@ -2273,7 +2420,7 @@ div.workbench-info-block a {
 }
 
 /* Search autocomplete widget */
-/* line 743, ../sass/partials/_blocks.scss */
+/* line 850, ../sass/partials/_blocks.scss */
 .ac_results {
   width: 660px !important;
   border: none;
@@ -2289,22 +2436,22 @@ div.workbench-info-block a {
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 750, ../sass/partials/_blocks.scss */
+/* line 857, ../sass/partials/_blocks.scss */
 .ac_results ul li {
   padding: 20px;
   font-size: 1em;
   cursor: pointer;
   color: #474747;
 }
-/* line 762, ../sass/partials/_blocks.scss */
+/* line 869, ../sass/partials/_blocks.scss */
 .ac_results ul .ac_even {
   background: white;
 }
-/* line 765, ../sass/partials/_blocks.scss */
+/* line 872, ../sass/partials/_blocks.scss */
 .ac_results ul .ac_odd {
   background: #f6f6f6;
 }
-/* line 768, ../sass/partials/_blocks.scss */
+/* line 875, ../sass/partials/_blocks.scss */
 .ac_results ul .ac_over {
   background: #cfcfcf;
   color: #474747;

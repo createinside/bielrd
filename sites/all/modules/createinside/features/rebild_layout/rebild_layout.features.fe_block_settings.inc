@@ -12,6 +12,111 @@ function rebild_layout_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
+  $export['block-custom_block_book_politician'] = array(
+    'cache' => -1,
+    'css_class' => 'custom_block politics',
+    'custom' => 0,
+    'machine_name' => 'custom_block_book_politician',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => 'sidebar_first',
+        'status' => 1,
+        'theme' => 'rebild',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['block-custom_block_digital_map'] = array(
+    'cache' => -1,
+    'css_class' => 'custom_block map',
+    'custom' => 0,
+    'machine_name' => 'custom_block_digital_map',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => 'sidebar_first',
+        'status' => 1,
+        'theme' => 'rebild',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['block-custom_block_frivillig'] = array(
+    'cache' => -1,
+    'css_class' => 'custom_block frivillig',
+    'custom' => 0,
+    'machine_name' => 'custom_block_frivillig',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => 'sidebar_first',
+        'status' => 1,
+        'theme' => 'rebild',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['block-custom_block_rebildporten'] = array(
+    'cache' => -1,
+    'css_class' => 'custom_block rebildporten',
+    'custom' => 0,
+    'machine_name' => 'custom_block_rebildporten',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => 'sidebar_first',
+        'status' => 1,
+        'theme' => 'rebild',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['block-custom_block_social_ansvarlig'] = array(
+    'cache' => -1,
+    'css_class' => 'custom_block social',
+    'custom' => 0,
+    'machine_name' => 'custom_block_social_ansvarlig',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => 'sidebar_first',
+        'status' => 1,
+        'theme' => 'rebild',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   $export['block-rebild_contact_front'] = array(
     'cache' => -1,
     'css_class' => 'contact-sidebar',
