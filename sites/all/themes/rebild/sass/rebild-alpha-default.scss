@@ -300,6 +300,7 @@ Nodes
 	.block {
 		@include box-shadow(none);
 		padding: 25px 0 20px 0;
+		margin-top: 0;
 		.jump-left, .jump-right {
 			width: 33%;
 			display: inline-block;
