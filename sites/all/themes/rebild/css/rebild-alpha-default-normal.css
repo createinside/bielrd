@@ -145,3 +145,16 @@ body {
   height: 361px;
   width: 310px;
 }
+
+/*------------------------------------------------------------------
+  Blocks
+-------------------------------------------------------------------*/
+/* line 112, ../sass/rebild-alpha-default-normal.scss */
+.html #page .custom_block.social h2, .html #page .custom_block.frivillig h2 {
+  margin-bottom: 10px;
+}
+
+/* line 121, ../sass/rebild-alpha-default-normal.scss */
+.html #page .custom_block.politics p {
+  margin-bottom: 10px;
+}

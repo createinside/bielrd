@@ -87,6 +87,7 @@ function rebild_general_settings_wysiwyg_default_profiles() {
           'styleselect' => 1,
           'visualaid' => 1,
           'removeformat' => 1,
+          'charmap' => 1,
         ),
         'table' => array(
           'tablecontrols' => 1,
