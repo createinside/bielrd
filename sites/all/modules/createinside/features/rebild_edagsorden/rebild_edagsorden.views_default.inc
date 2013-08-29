@@ -41,7 +41,7 @@ function rebild_edagsorden_views_default_views() {
   $handler->display->display_options['style_options']['row-start-open'] = 'none';
   $handler->display->display_options['style_options']['autoheight'] = 0;
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Field collection item: Entity with the Mødepunkter (field_agenda_items) */
+  /* Forbindelse: Field collection item: Entity with the Mødepunkter (field_agenda_items) */
   $handler->display->display_options['relationships']['field_agenda_items_node']['id'] = 'field_agenda_items_node';
   $handler->display->display_options['relationships']['field_agenda_items_node']['table'] = 'field_collection_item';
   $handler->display->display_options['relationships']['field_agenda_items_node']['field'] = 'field_agenda_items_node';
@@ -81,7 +81,7 @@ function rebild_edagsorden_views_default_views() {
   $handler->display->display_options['fields']['field_agenda_item_docs']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_agenda_item_docs']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_agenda_item_docs']['multi_type'] = 'ul';
-  /* Contextual filter: Indhold: Nid */
+  /* Kontekstuelt filter: Indhold: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -117,7 +117,6 @@ function rebild_edagsorden_views_default_views() {
     t('Bilag'),
     t('Alle'),
     t('EVA Field'),
-    t('more'),
   );
   $export['agenda_accordion'] = $view;
 
@@ -156,21 +155,21 @@ function rebild_edagsorden_views_default_views() {
     ),
   );
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Overskrift: Global: Text area */
+  /* Overskrift: Global: Tekstområde */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['content'] = '<h2>Mødedatoer, dagsordener og referater fra %1</h2>';
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
   $handler->display->display_options['header']['area']['tokenize'] = TRUE;
-  /* No results behavior: Global: Text area */
+  /* Opførsel ved ingen resultater: Global: Tekstområde */
   $handler->display->display_options['empty']['area']['id'] = 'area';
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = '<p>Ingen dagsordener.</p>';
   $handler->display->display_options['empty']['area']['format'] = 'full_html';
-  /* Felt: Indhold: Titel */
+  /* Felt: Indhold: Overskrift */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -210,12 +209,12 @@ function rebild_edagsorden_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Sort criterion: Indhold: Dato (field_agenda_date) */
+  /* Sorteringskriterie: Indhold: Dato -  startdato (field_agenda_date) */
   $handler->display->display_options['sorts']['field_agenda_date_value']['id'] = 'field_agenda_date_value';
   $handler->display->display_options['sorts']['field_agenda_date_value']['table'] = 'field_data_field_agenda_date';
   $handler->display->display_options['sorts']['field_agenda_date_value']['field'] = 'field_agenda_date_value';
   $handler->display->display_options['sorts']['field_agenda_date_value']['order'] = 'DESC';
-  /* Contextual filter: Indhold: Udvalg (field_agenda_committee) */
+  /* Kontekstuelt filter: Indhold: Udvalg (field_agenda_committee) */
   $handler->display->display_options['arguments']['field_agenda_committee_tid']['id'] = 'field_agenda_committee_tid';
   $handler->display->display_options['arguments']['field_agenda_committee_tid']['table'] = 'field_data_field_agenda_committee';
   $handler->display->display_options['arguments']['field_agenda_committee_tid']['field'] = 'field_agenda_committee_tid';
@@ -235,21 +234,21 @@ function rebild_edagsorden_views_default_views() {
   );
   $handler->display->display_options['arguments']['field_agenda_committee_tid']['validate_options']['transform'] = TRUE;
   $handler->display->display_options['arguments']['field_agenda_committee_tid']['validate']['fail'] = 'empty';
-  /* Filter criterion: Indhold: Udgivet */
+  /* Filterkriterie: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Indhold: Type */
+  /* Filterkriterie: Indhold: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'agenda' => 'agenda',
   );
-  /* Filter criterion: Indhold: Dato (field_agenda_date) */
+  /* Filterkriterie: Indhold: Dato -  startdato (field_agenda_date) */
   $handler->display->display_options['filters']['field_agenda_date_value']['id'] = 'field_agenda_date_value';
   $handler->display->display_options['filters']['field_agenda_date_value']['table'] = 'field_data_field_agenda_date';
   $handler->display->display_options['filters']['field_agenda_date_value']['field'] = 'field_agenda_date_value';
@@ -266,6 +265,9 @@ function rebild_edagsorden_views_default_views() {
     5 => 0,
     3 => 0,
   );
+  $handler->display->display_options['filters']['field_agenda_date_value']['granularity'] = 'year';
+  $handler->display->display_options['filters']['field_agenda_date_value']['default_date'] = 'now';
+  $handler->display->display_options['filters']['field_agenda_date_value']['year_range'] = '-1:+0';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
@@ -295,7 +297,6 @@ function rebild_edagsorden_views_default_views() {
     t('%1'),
     t('Vælg år:'),
     t('Page'),
-    t('more'),
     t('Side'),
   );
   $export['agenda_overview'] = $view;
