@@ -465,13 +465,16 @@
 					@include border-radius(2px);
 				}
 			}
+			.form-item-jump {
+				position: relative;
+				margin: 0;
+			}
 			.customSelect {
 				font-style: italic;
 				color: $text-color-header;
 				font-size: $font-size-small;
 				text-align: left;
 				width: 100%;
-				position: relative;
 			}
 			.customSelect:after {
 				font-style: normal;
