@@ -109,6 +109,11 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'self_service' => 'self_service',
   );
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
 
   /* Display: Sidebar */
   $handler = $view->new_display('block', 'Sidebar', 'block_1');
@@ -311,7 +316,7 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'jump_menu';
   $handler->display->display_options['style_options']['path'] = 'nid';
   $handler->display->display_options['style_options']['text'] = 'Skift';
-  $handler->display->display_options['style_options']['choose'] = 'Find hjælp til at...';
+  $handler->display->display_options['style_options']['choose'] = 'Find hjælp';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
