@@ -460,6 +460,18 @@
 			
 	}
 }
+/* Calendar sidebar */
+#section-content {
+	.block-calendar-sidebar-block {
+		overflow: hidden;
+		line-height: $line-height-std;
+		color: $text-color;
+		@include grid-box(white);
+		.block-title {
+			padding: 20px 20px 0 20px;
+		}
+	}
+}
 
 /* Footer - Contact information */
 #region-footer-first {

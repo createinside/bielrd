@@ -33,5 +33,28 @@ function rebild_calendar_default_fe_block_settings() {
     'visibility' => 1,
   );
 
+  $export['views-calendar_sidebar-block'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'calendar_sidebar-block',
+    'module' => 'views',
+    'node_types' => array(
+      0 => 'calendar_post',
+    ),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => 'sidebar_first',
+        'status' => 1,
+        'theme' => 'rebild',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   return $export;
 }
