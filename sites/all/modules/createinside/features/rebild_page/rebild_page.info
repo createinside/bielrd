@@ -122,6 +122,7 @@ features[node][] = page
 features[picture_mapping][] = indhold_top
 features[taxonomy][] = rebild_sections
 features[taxonomy][] = rebild_tags
+features[user_permission][] = administer nodes
 features[user_permission][] = administer redirects
 features[user_permission][] = bypass file access
 features[user_permission][] = create field_main_block

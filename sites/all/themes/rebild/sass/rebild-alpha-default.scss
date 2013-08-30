@@ -76,7 +76,6 @@ Nodes
 		padding: $spacing-std*2 0;
 	}
 }
-
 /*------------------------------------------------------------------
 	Menus
 -------------------------------------------------------------------*/
@@ -277,6 +276,14 @@ Nodes
 	.post1 , .post2 {
 		margin: 0 0 $spacing-std 0;
 	}
+	.calendar_view_all {
+		position: absolute;
+		top: 0;
+		text-transform: uppercase;
+		right: 0;
+		left:auto;
+		padding-top: 2px;
+	}
 }
 
 
@@ -300,6 +307,7 @@ Nodes
 	.block {
 		@include box-shadow(none);
 		padding: 25px 0 20px 0;
+		margin-top: 0;
 		.jump-left, .jump-right {
 			width: 33%;
 			display: inline-block;

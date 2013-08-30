@@ -48,7 +48,7 @@ function rebild_calendar_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_calendar_address',
     'label' => 'Sted',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -83,7 +83,7 @@ function rebild_calendar_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -95,7 +95,7 @@ function rebild_calendar_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_calendar_category',
     'label' => 'Kategori',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -140,10 +140,10 @@ function rebild_calendar_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_calendar_date',
     'label' => 'Dato',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
-      'default_value' => 'now',
-      'default_value2' => 'same',
+      'default_value' => 'blank',
+      'default_value2' => 'blank',
       'default_value_code' => '',
       'default_value_code2' => '',
       'user_register_form' => FALSE,
@@ -193,9 +193,9 @@ function rebild_calendar_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_calendar_deadline',
     'label' => 'Sidste tilmeldingsfrist',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
-      'default_value' => 'now',
+      'default_value' => 'blank',
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
@@ -229,7 +229,7 @@ function rebild_calendar_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 5,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -295,7 +295,7 @@ function rebild_calendar_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_calendar_organizer',
     'label' => 'Arrangør',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -377,7 +377,7 @@ function rebild_calendar_field_default_field_instances() {
         'module' => 'email',
         'settings' => array(),
         'type' => 'email_default',
-        'weight' => 7,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -415,7 +415,7 @@ function rebild_calendar_field_default_field_instances() {
         'module' => 'cck_phone',
         'settings' => array(),
         'type' => 'global_phone_number',
-        'weight' => 6,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -696,7 +696,7 @@ function rebild_calendar_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -708,7 +708,7 @@ function rebild_calendar_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_main_body',
     'label' => 'Brødtekst',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 1,
       'user_register_form' => FALSE,
@@ -821,7 +821,7 @@ function rebild_calendar_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -835,7 +835,7 @@ function rebild_calendar_field_default_field_instances() {
     'label' => 'Forældelsesdato',
     'required' => 0,
     'settings' => array(
-      'default_value' => 'strtotime',
+      'default_value' => 'blank',
       'default_value2' => 'same',
       'default_value_code' => '+6 months',
       'default_value_code2' => '',
@@ -868,7 +868,7 @@ function rebild_calendar_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -919,7 +919,7 @@ function rebild_calendar_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_main_summary',
     'label' => 'Resumé',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -946,7 +946,7 @@ function rebild_calendar_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',

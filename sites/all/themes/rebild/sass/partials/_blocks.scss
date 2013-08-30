@@ -370,7 +370,6 @@
 	#page {
 		.custom_block.politics {
 			@include grid-box($color-green); 
-			height: 40px;
 			background-image: url('../img/block_watermark.png');
 			background-position: right bottom;
 			background-repeat: no-repeat;
@@ -390,7 +389,6 @@
 		.custom_block.map {
 			@include grid-box(#fff);
 			color: $text-color;
-			height: 50px;
 			font-size: 1.25em;
 			background-image: url('../img/map_digital.png');
 			background-repeat: no-repeat;
@@ -460,6 +458,18 @@
 			}
 		}
 			
+	}
+}
+/* Calendar sidebar */
+#section-content {
+	.block-calendar-sidebar-block {
+		overflow: hidden;
+		line-height: $line-height-std;
+		color: $text-color;
+		@include grid-box(white);
+		.block-title {
+			padding: 20px 20px 0 20px;
+		}
 	}
 }
 

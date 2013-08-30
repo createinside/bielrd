@@ -10,6 +10,16 @@
 function rebild_page_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'administer nodes'.
+  $permissions['administer nodes'] = array(
+    'name' => 'administer nodes',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'administer redirects'.
   $permissions['administer redirects'] = array(
     'name' => 'administer redirects',

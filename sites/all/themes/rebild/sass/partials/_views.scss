@@ -58,6 +58,79 @@
 	}
 	
 }
+/* Calendar - sidebar */
+.view-id-calendar_sidebar {
+	.view-content {
+		padding: $spacing-std;
+		.rebild-calendar {
+			min-height:60px;
+			margin: 0 0 $spacing-std 0; 			
+			.calendar_left {
+				width: 60px;
+				float: left;
+				margin: 0 $spacing-std 0 0;
+				text-align: center;
+				@include grid-box(white);
+				padding: 0 0 3px 0;
+				.calendar_day {
+					font-size: 0.8em;
+					line-height: $line-height-std;
+					background: $color-blue;
+					color: white;
+					margin: 0 0 $spacing-std/4;		
+					padding: 0.2em 0.5em;
+					@include text-shadow(none);
+					@include border-radius(3px 3px 0 0);				
+				}
+				.calendar_date {
+					font-size: 1.25em;
+				}
+				.calendar_month {
+					text-transform: uppercase;
+					font-size: 0.7em;
+				}			
+			}
+			.calendar_right {
+				float: left;
+				max-width: 100%;
+				text-align: left;
+				.calendar_section {
+					text-transform: uppercase;
+				}
+				.calendar_title {
+					a {
+						color: $text-color;
+						text-decoration: none;												
+					}
+				}
+			}
+		}
+	}
+	.view-footer {
+		background-color: #f6f6f6;
+		height: 30px;
+		.calendar_view_all {
+			padding: 7px 0 0 15px;
+			display: block;
+			a {
+				text-decoration: none;
+				color: $text-color; 
+				text-transform: uppercase;
+				font-size: 0.8em;
+
+			}
+			a:after {
+				@include icon-prepare();
+				content: "\f061";
+				margin-left: 5px;
+				background-color: #474747;
+				color: #fff;
+				padding: 2px;
+				border-radius: 3px; 
+			}
+		}
+	}		
+}
 
 /* Calendar - frontpage */
 .view-id-calendar_frontpage {	
@@ -106,15 +179,25 @@
 	}
 	.calendar_view_all {
 			position: absolute;
-			top: 0;
+			top: 20px;
 			text-transform: uppercase;
-			right: 0;
+			left: 0;
 			padding-top: 2px;
 			a {
 				text-shadow: white 1px 1px 1px;
 				font-size: 0.8em;
 				color: #474747;
 				text-decoration: none;
+			}
+			a:after {
+				@include icon-prepare();
+				content: "\f061";
+				margin-left: 5px;
+				background-color: #474747;
+				color: #fff;
+				padding: 2px;
+				border-radius: 3px; 
+				text-shadow: none;
 			}		
 		}
 }
