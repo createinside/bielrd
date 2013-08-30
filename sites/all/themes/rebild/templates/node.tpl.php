@@ -16,7 +16,12 @@
       if(isset($content['field_main_summary'])) print render($content['field_main_summary']);
       if(isset($content['field_os2web_borger_dk_header'])) print render($content['field_os2web_borger_dk_header']);
 		?>
-    <?php if(isset($region['content_sidebar'])) { ?>
+   	<div id='content-main'<?php if(!empty($region['content_sidebar'])) print " class='has-sidebar'"; ?>>
+		<?php
+      print render($content);
+    ?>
+		</div>
+		<?php if(isset($region['content_sidebar'])) { ?>
 			<div id="region-content-sidebar">
 			  <?php 
 					/* Region: Content Sidebar */
@@ -24,11 +29,6 @@
 				?>
 			</div>
 		<?php } ?>  
-			<div id='content-main'<?php if(!empty($region['content_sidebar']['#children'])) print " class='has-sidebar'"; ?>>
-		<?php
-      print render($content);
-    ?>
-			</div>
 	</div>
   
   <div class="clearfix">
