@@ -143,5 +143,13 @@ body {
 		}
 	}	
 }   
-
-
+/* Calendar - sidebar */
+.view-id-calendar_sidebar {
+	.view-content {
+		.rebild-calendar {
+			.calendar_right {
+				max-width: 80px;
+			}
+		}
+	}
+}
