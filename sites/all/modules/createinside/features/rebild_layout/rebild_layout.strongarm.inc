@@ -308,7 +308,7 @@ function rebild_layout_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_16_admin_title';
-  $strongarm->value = 'Hovedmenu - Niveau 2';
+  $strongarm->value = 'Hovedmenu - Niveau 2,3 og 4';
   $export['menu_block_16_admin_title'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -329,7 +329,7 @@ function rebild_layout_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_16_follow';
-  $strongarm->value = 'active';
+  $strongarm->value = 'child';
   $export['menu_block_16_follow'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -644,7 +644,7 @@ function rebild_layout_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_8_admin_title';
-  $strongarm->value = 'Hovedmenu - Niveau 3';
+  $strongarm->value = 'Hovedmenu - Niveau 4';
   $export['menu_block_8_admin_title'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -672,7 +672,7 @@ function rebild_layout_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_8_level';
-  $strongarm->value = '3';
+  $strongarm->value = '4';
   $export['menu_block_8_level'] = $strongarm;
 
   $strongarm = new stdClass();
