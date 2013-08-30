@@ -415,6 +415,14 @@ select {
   padding: 1em;
 }
 
+/** 
+ * Newsletter subscriptions 
+ */
+/* line 93, ../sass/partials/_forms.scss */
+#simplenews-subscriptions-page-form .form-submit {
+  margin-right: 10px;
+}
+
 /*------------------------------------------------------------------
 
 [NAVIGATION]
