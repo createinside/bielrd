@@ -1057,16 +1057,18 @@ Calendar
 /*------------------------------------------------------------------
 	Accordions
 -------------------------------------------------------------------*/
-/* line 129, ../sass/partials/_nodes.scss */
+/* line 130, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion,
 #region-content .node-news-article .ui-accordion,
-#region-content .node-agenda .ui-accordion {
+#region-content .node-agenda .ui-accordion,
+#region-content .node-os2web-borger-dk-article .ui-accordion {
   margin: 20px 0;
 }
-/* line 131, ../sass/partials/_nodes.scss */
+/* line 132, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header,
 #region-content .node-news-article .ui-accordion .ui-accordion-header,
-#region-content .node-agenda .ui-accordion .ui-accordion-header {
+#region-content .node-agenda .ui-accordion .ui-accordion-header,
+#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header {
   background: #e6e6e6;
   color: #474747;
   font-size: 1.08em;
@@ -1080,24 +1082,27 @@ Calendar
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 140, ../sass/partials/_nodes.scss */
+/* line 141, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header > a,
 #region-content .node-news-article .ui-accordion .ui-accordion-header > a,
-#region-content .node-agenda .ui-accordion .ui-accordion-header > a {
+#region-content .node-agenda .ui-accordion .ui-accordion-header > a,
+#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header > a {
   color: #474747;
   padding: 0;
   margin: 0;
 }
-/* line 145, ../sass/partials/_nodes.scss */
+/* line 146, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header > a:hover,
 #region-content .node-news-article .ui-accordion .ui-accordion-header > a:hover,
-#region-content .node-agenda .ui-accordion .ui-accordion-header > a:hover {
+#region-content .node-agenda .ui-accordion .ui-accordion-header > a:hover,
+#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header > a:hover {
   text-decoration: none;
 }
-/* line 148, ../sass/partials/_nodes.scss */
+/* line 149, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header > a .field-content:before,
 #region-content .node-news-article .ui-accordion .ui-accordion-header > a .field-content:before,
-#region-content .node-agenda .ui-accordion .ui-accordion-header > a .field-content:before {
+#region-content .node-agenda .ui-accordion .ui-accordion-header > a .field-content:before,
+#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header > a .field-content:before {
   font-family: 'Rebild';
   content: attr(data-icon);
   speak: none;
@@ -1109,22 +1114,25 @@ Calendar
   content: "\e00f";
   margin-right: 0.5em;
 }
-/* line 154, ../sass/partials/_nodes.scss */
+/* line 155, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active,
 #region-content .node-news-article .ui-accordion .ui-accordion-header.ui-state-active,
-#region-content .node-agenda .ui-accordion .ui-accordion-header.ui-state-active {
+#region-content .node-agenda .ui-accordion .ui-accordion-header.ui-state-active,
+#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header.ui-state-active {
   background-color: #7f9dcd;
 }
-/* line 156, ../sass/partials/_nodes.scss */
+/* line 157, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active a,
 #region-content .node-news-article .ui-accordion .ui-accordion-header.ui-state-active a,
-#region-content .node-agenda .ui-accordion .ui-accordion-header.ui-state-active a {
+#region-content .node-agenda .ui-accordion .ui-accordion-header.ui-state-active a,
+#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header.ui-state-active a {
   color: white;
 }
-/* line 160, ../sass/partials/_nodes.scss */
+/* line 161, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-content,
 #region-content .node-news-article .ui-accordion .ui-accordion-content,
-#region-content .node-agenda .ui-accordion .ui-accordion-content {
+#region-content .node-agenda .ui-accordion .ui-accordion-content,
+#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-content {
   padding: 10px 20px;
   margin: 0;
 }
@@ -1133,21 +1141,21 @@ Calendar
 	Borger dk
 -------------------------------------------------------------------*/
 /* Accordion */
-/* line 175, ../sass/partials/_nodes.scss */
+/* line 176, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .field.field-name-body {
   margin: 2em 0 2em 0;
 }
-/* line 178, ../sass/partials/_nodes.scss */
+/* line 179, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .field-name-field-os2web-borger-dk-header {
   margin-bottom: 20px;
   font-size: 1.33333em;
   line-height: 1.15em;
 }
-/* line 183, ../sass/partials/_nodes.scss */
+/* line 184, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle {
   position: relative;
 }
-/* line 185, ../sass/partials/_nodes.scss */
+/* line 186, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle h2.mArticle {
   background: #e6e6e6;
   color: #474747;
@@ -1163,7 +1171,7 @@ Calendar
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 196, ../sass/partials/_nodes.scss */
+/* line 197, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle h2.mArticle:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1176,13 +1184,13 @@ Calendar
   content: "\e00f";
   margin-right: 0.5em;
 }
-/* line 201, ../sass/partials/_nodes.scss */
+/* line 202, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle div.mArticle {
   padding: 10px 20px;
   margin: 0;
 }
 /* line 207, ../sass/partials/_nodes.scss */
-#region-content .node-os2web-borger-dk-article .microArticle.aktiv h2.mArticle {
+#region-content .node-os2web-borger-dk-article h2.mArticle.ui-state-active {
   background-color: #7f9dcd;
   color: #fff;
 }

@@ -8,6 +8,13 @@ $(function() {
 	// Swipebox init
 	$(".swipebox").swipebox();
 	
+	// Borger DK accordions
+	$(".field-name-body").accordion({
+    header: "h2.mArticle",
+    autoHeight: false,
+    collapsible: true,
+    active: false
+	});
 	// Selfservice accordion - Topic list level 1
 	$(".view-selfservice-items.view-display-id-emner").accordion({
     header: ".view-grouping-header",
