@@ -524,15 +524,16 @@ Nodes
   float: right;
   width: 23%;
   padding-left: 3%;
+  margin-top: 0;
 }
 
 /* Page & News Articles */
-/* line 429, ../sass/rebild-alpha-default.scss */
+/* line 430, ../sass/rebild-alpha-default.scss */
 .node-page,
 .node-news-article {
   /* Node Image Gallery */
 }
-/* line 433, ../sass/rebild-alpha-default.scss */
+/* line 434, ../sass/rebild-alpha-default.scss */
 .node-page .field-name-field-main-image-gallery .field-items .field-item,
 .node-news-article .field-name-field-main-image-gallery .field-items .field-item {
   width: 21%;

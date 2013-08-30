@@ -109,6 +109,7 @@ body {
 /*------------------------------------------------------------------
   Blocks
 -------------------------------------------------------------------*/
+
 /* Custom blocks - Frivillig */
 .html {
 	#page {
@@ -143,6 +144,7 @@ body {
 		}
 	}	
 }   
+
 /* Calendar - sidebar */
 .view-id-calendar_sidebar {
 	.view-content {
@@ -152,4 +154,9 @@ body {
 			}
 		}
 	}
+}
+
+/* WCAG */
+.wcag-block {
+	margin: 0 17px 0 0;
 }
