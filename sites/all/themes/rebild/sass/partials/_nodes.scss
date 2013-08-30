@@ -125,7 +125,8 @@ Calendar
 #region-content {
 	.node-page,
 	.node-news-article,
-	.node-agenda {
+	.node-agenda,
+	.node-os2web-borger-dk-article {
 		.ui-accordion {
 			margin: $spacing-std 0;
 			.ui-accordion-header {
@@ -203,12 +204,11 @@ Calendar
 				margin: 0;		
 			}
 		}
-		.microArticle.aktiv {
-			h2.mArticle {
-				background-color: $color-blue;
-				color: #fff;			
-			}	
+		h2.mArticle.ui-state-active {
+			background-color: $color-blue;
+			color: #fff;			
 		}	
+	
 	}	
 }
 
