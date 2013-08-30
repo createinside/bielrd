@@ -3116,19 +3116,25 @@ div.workbench-info-block a {
   top: 0;
   border: none;
 }
-/* line 404, ../sass/partials/_views.scss */
+/* line 405, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-link a,
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-pdf a,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-self-service-link a,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-link a,
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-self-service-pdf a,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-link a,
+#region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-pdf a,
 #region-content .view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-field-self-service-link a,
 #region-content .view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-link a,
+#region-content .view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-field-self-service-pdf a,
 #region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a,
 #region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content .accordion-content-level-2 .views-field-link a,
+#region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-pdf a,
 #region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-field-self-service-link a,
-#region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-link a {
+#region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-link a,
+#region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-field-self-service-pdf a {
   display: inline-block;
   color: white;
   text-transform: uppercase;
@@ -3146,19 +3152,25 @@ div.workbench-info-block a {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 415, ../sass/partials/_views.scss */
+/* line 417, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-link a:after,
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-pdf a:after,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-link a:after,
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-self-service-pdf a:after,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-link a:after,
+#region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-pdf a:after,
 #region-content .view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
 #region-content .view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-link a:after,
+#region-content .view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-field-self-service-pdf a:after,
 #region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
 #region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content .accordion-content-level-2 .views-field-link a:after,
+#region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-pdf a:after,
 #region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
-#region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-link a:after {
+#region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-link a:after,
+#region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-field-self-service-pdf a:after {
   font-family: 'Rebild';
   content: attr(data-icon);
   speak: none;
@@ -3182,7 +3194,7 @@ div.workbench-info-block a {
   -o-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 429, ../sass/partials/_views.scss */
+/* line 431, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-main-body a,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-main-body a,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-main-body a,
@@ -3191,7 +3203,7 @@ div.workbench-info-block a {
 #region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-field-main-body a {
   color: #68a386;
 }
-/* line 432, ../sass/partials/_views.scss */
+/* line 434, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-main-body ul,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-main-body ul,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-main-body ul,
@@ -3201,7 +3213,7 @@ div.workbench-info-block a {
   margin-left: 40px;
   margin-bottom: 1em;
 }
-/* line 435, ../sass/partials/_views.scss */
+/* line 437, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-main-body ul li,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-main-body ul li,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-main-body ul li,
@@ -3210,7 +3222,7 @@ div.workbench-info-block a {
 #region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-field-main-body ul li {
   margin-bottom: 0.5em;
 }
-/* line 440, ../sass/partials/_views.scss */
+/* line 442, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:hover,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-self-service-link a:hover,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:hover,
@@ -3219,7 +3231,7 @@ div.workbench-info-block a {
 #region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-field-self-service-link a:hover {
   text-decoration: none;
 }
-/* line 443, ../sass/partials/_views.scss */
+/* line 445, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-description,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-description,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-description,
@@ -3232,33 +3244,33 @@ div.workbench-info-block a {
 }
 
 /* Alphabetical list */
-/* line 456, ../sass/partials/_views.scss */
+/* line 458, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content > h3 {
   padding: 8px;
 }
 
 /* Embedded accordion */
-/* line 464, ../sass/partials/_views.scss */
+/* line 466, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-embedded {
   margin: 30px 0 0 0;
 }
-/* line 466, ../sass/partials/_views.scss */
+/* line 468, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-embedded h2.title {
   font-size: 1.08em;
   margin: 20px 0 10px;
 }
-/* line 471, ../sass/partials/_views.scss */
+/* line 473, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-embedded .view-content > h3 {
   background: #68a386;
   color: white;
   padding: 6px 8px;
 }
-/* line 476, ../sass/partials/_views.scss */
+/* line 478, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-embedded .view-content > h3.ui-state-active {
   background: #a3a3a3;
   color: #474747;
 }
-/* line 480, ../sass/partials/_views.scss */
+/* line 482, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 {
   padding: 10px 20px 20px;
 }
@@ -3266,40 +3278,40 @@ div.workbench-info-block a {
 /**
  * AGENDAS
  */
-/* line 492, ../sass/partials/_views.scss */
+/* line 494, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .view-filters {
   margin: 20px 0;
 }
-/* line 494, ../sass/partials/_views.scss */
+/* line 496, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .view-filters label {
   margin: 0 0 10px 0;
 }
-/* line 498, ../sass/partials/_views.scss */
+/* line 500, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .view-filters .views-exposed-widget select {
   margin: 0;
   padding: 0;
 }
-/* line 502, ../sass/partials/_views.scss */
+/* line 504, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .view-filters .views-exposed-widget .customSelect {
   border: 1px solid #dbdbdb;
 }
-/* line 505, ../sass/partials/_views.scss */
+/* line 507, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .view-filters .views-exposed-widget .form-submit {
   background: #7f9dcd;
   border: none;
   margin: 24px 0 0 0;
 }
-/* line 512, ../sass/partials/_views.scss */
+/* line 514, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview h3 {
   text-transform: capitalize;
   margin-top: 20px;
   margin-bottom: 0.5em;
 }
-/* line 517, ../sass/partials/_views.scss */
+/* line 519, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .views-row {
   margin-bottom: 0.5em;
 }
-/* line 519, ../sass/partials/_views.scss */
+/* line 521, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .views-row a {
   color: #7f9dcd;
 }
@@ -3307,37 +3319,37 @@ div.workbench-info-block a {
 /**
  * SEARCH RESULTS
  */
-/* line 528, ../sass/partials/_views.scss */
+/* line 530, ../sass/partials/_views.scss */
 #search-results-page h2 {
   padding-bottom: 1em;
 }
-/* line 531, ../sass/partials/_views.scss */
+/* line 533, ../sass/partials/_views.scss */
 #search-results-page .search-result {
   padding: 15px 10px;
   margin: 0;
 }
-/* line 537, ../sass/partials/_views.scss */
+/* line 539, ../sass/partials/_views.scss */
 #search-results-page .search-result h3 {
   margin: 0 0 10px 0;
 }
-/* line 539, ../sass/partials/_views.scss */
+/* line 541, ../sass/partials/_views.scss */
 #search-results-page .search-result h3 a {
   color: #7f9dcd;
 }
-/* line 543, ../sass/partials/_views.scss */
+/* line 545, ../sass/partials/_views.scss */
 #search-results-page .search-result .search-date {
   font-size: 0.91667em;
   margin: 0 0 10px;
 }
-/* line 547, ../sass/partials/_views.scss */
+/* line 549, ../sass/partials/_views.scss */
 #search-results-page .search-result .search-text {
   line-height: 1.25em;
 }
-/* line 551, ../sass/partials/_views.scss */
+/* line 553, ../sass/partials/_views.scss */
 #search-results-page .odd {
   background: #f6f6f6;
 }
-/* line 554, ../sass/partials/_views.scss */
+/* line 556, ../sass/partials/_views.scss */
 #search-results-page ul.pager {
   margin: 20px 0;
 }
@@ -3345,11 +3357,11 @@ div.workbench-info-block a {
 /**
  * OFFERINGS
  */
-/* line 564, ../sass/partials/_views.scss */
+/* line 566, ../sass/partials/_views.scss */
 #region-content .view-offerings h2 {
   margin: 20px 0;
 }
-/* line 567, ../sass/partials/_views.scss */
+/* line 569, ../sass/partials/_views.scss */
 #region-content .view-offerings .views-row {
   margin-bottom: 20px;
 }

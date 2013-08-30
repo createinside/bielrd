@@ -401,7 +401,8 @@
 				top: 0;
 				border: none;
 				.views-field-field-self-service-link a,
-				.views-field-link a {
+				.views-field-link a,
+				.views-field-field-self-service-pdf a {
 					display: inline-block;
 					color: white;
 					text-transform: uppercase;
@@ -412,7 +413,8 @@
 					@include border-radius($border-radius-std);			
 				}
 				.views-field-field-self-service-link a:after,
-				.views-field-link a:after {
+				.views-field-link a:after,
+				.views-field-field-self-service-pdf a:after {
 					@include icon-prepare();
 					content: "\f061";	
 					color: $color-purple;
