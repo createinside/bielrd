@@ -61,6 +61,7 @@
 
 /* Region: Content Sidebar */
 #region-content-sidebar {
+	margin-top: $spacing-std;
 	.block {
 		margin-bottom: $spacing-std;
 		.block-title, h3 {
@@ -128,6 +129,7 @@
 	#region-sidebar-first {
 	  text-align: center;
 		.block {
+			text-align: left;
 			.block-title {
 				font-size: $font-size-large;					
 				@include text-shadow(none);
@@ -189,6 +191,9 @@
 				color: $text-color-footer;
 				text-decoration: none;
 			}
+			a:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 }
@@ -205,6 +210,9 @@
 			a { 
 				color: white; 
 				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: underline;
 			}
 		}
 	}
@@ -245,6 +253,9 @@
 				color: $text-color-header;
 				font-weight: bold;
 				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: underline;
 			}
 			a:after {
 				@include icon-prepare();
@@ -308,6 +319,9 @@
       a {
         color: $text-color-header;
       }
+      a:hover {
+	      text-decoration: none;
+      }
     }
   } 
 }
@@ -363,6 +377,9 @@
     a {
 	    text-decoration: none;
     }  
+    a:hover {
+	    text-decoration: underline;
+    }
 }
 
 /* Custom blocks - book en politiker */
@@ -490,6 +507,11 @@
 			p.large-text {
 				font-size: (20/12)*1em;
 				line-height: $line-height-std;
+				span {
+					position: relative; top: 2px;
+					display: inline-block;
+					width: 20px;
+				}
 			}
 			img {
 				margin-bottom: 5px;
@@ -498,11 +520,19 @@
 				color: $text-color-footer;
 				text-decoration: none;
 			}
+	    a:hover {
+		    text-decoration: underline;
+	    }
 			p.bottom-logo {
-				margin-bottom: $spacing-std;				
+				margin-bottom: $spacing-std/1.5;				
 				span.icon-bottom_logo {
 					font-size: 50px;
 				}
+			}
+			p.bottom-text {
+				font-size: 1.15em;
+				line-height: 1.20em;
+				margin-bottom: $spacing-std/1.5;
 			}
 		}
 	}	
@@ -567,6 +597,9 @@
 					font-weight: bold;
 					text-decoration: none;
 				}
+		    a:hover {
+			    text-decoration: underline;
+		    }
 				a:after {
 					@include icon-prepare();
 					content: "\f061";	
@@ -579,12 +612,14 @@
 					margin: 0 0 0 5px;
 					position: relative;
 					top: -1px;
+					text-decoration: none;
 					@include border-radius(2px);
 				}
 			}
-			.form-item-jump {
+			.container-inline {
 				position: relative;
 				margin: 0;
+				overflow: hidden;
 			}
 			.customSelect {
 				font-style: italic;
@@ -621,7 +656,10 @@
           color: white;
           text-decoration: none;
         }
-				a:before {
+        a:hover {
+					text-decoration: underline;
+				}
+				span:before {
           @include icon-prepare();
           content: "\f101"; 
           margin-right: 0.5em;

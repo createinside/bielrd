@@ -14,7 +14,7 @@ function rebild_layout_default_fe_block_settings() {
 
   $export['block-custom_block_book_politician'] = array(
     'cache' => -1,
-    'css_class' => 'custom_block politics',
+    'css_class' => '',
     'custom' => 0,
     'machine_name' => 'custom_block_book_politician',
     'module' => 'block',
@@ -23,8 +23,8 @@ function rebild_layout_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'rebild' => array(
-        'region' => 'sidebar_first',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'rebild',
         'weight' => 0,
       ),
@@ -35,7 +35,7 @@ function rebild_layout_default_fe_block_settings() {
 
   $export['block-custom_block_digital_map'] = array(
     'cache' => -1,
-    'css_class' => 'custom_block map',
+    'css_class' => '',
     'custom' => 0,
     'machine_name' => 'custom_block_digital_map',
     'module' => 'block',
@@ -44,8 +44,8 @@ function rebild_layout_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'rebild' => array(
-        'region' => 'sidebar_first',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'rebild',
         'weight' => 0,
       ),
@@ -56,7 +56,7 @@ function rebild_layout_default_fe_block_settings() {
 
   $export['block-custom_block_frivillig'] = array(
     'cache' => -1,
-    'css_class' => 'custom_block frivillig',
+    'css_class' => '',
     'custom' => 0,
     'machine_name' => 'custom_block_frivillig',
     'module' => 'block',
@@ -65,8 +65,8 @@ function rebild_layout_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'rebild' => array(
-        'region' => 'sidebar_first',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'rebild',
         'weight' => 0,
       ),
@@ -77,7 +77,7 @@ function rebild_layout_default_fe_block_settings() {
 
   $export['block-custom_block_rebildporten'] = array(
     'cache' => -1,
-    'css_class' => 'custom_block rebildporten',
+    'css_class' => '',
     'custom' => 0,
     'machine_name' => 'custom_block_rebildporten',
     'module' => 'block',
@@ -86,8 +86,8 @@ function rebild_layout_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'rebild' => array(
-        'region' => 'sidebar_first',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'rebild',
         'weight' => 0,
       ),
@@ -98,7 +98,7 @@ function rebild_layout_default_fe_block_settings() {
 
   $export['block-custom_block_social_ansvarlig'] = array(
     'cache' => -1,
-    'css_class' => 'custom_block social',
+    'css_class' => '',
     'custom' => 0,
     'machine_name' => 'custom_block_social_ansvarlig',
     'module' => 'block',
@@ -107,8 +107,8 @@ function rebild_layout_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'rebild' => array(
-        'region' => 'sidebar_first',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'rebild',
         'weight' => 0,
       ),
@@ -232,38 +232,14 @@ bo-i-rebild',
     'delta' => 16,
     'module' => 'menu_block',
     'node_types' => array(),
-    'pages' => 'borger
-erhverv
-politik
-bo-i-rebild',
+    'pages' => '',
     'roles' => array(),
     'themes' => array(
       'rebild' => array(
         'region' => 'content',
         'status' => 1,
         'theme' => 'rebild',
-        'weight' => -48,
-      ),
-    ),
-    'title' => '<none>',
-    'visibility' => 1,
-  );
-
-  $export['menu_block-8'] = array(
-    'cache' => -1,
-    'css_class' => '',
-    'custom' => 0,
-    'delta' => 8,
-    'module' => 'menu_block',
-    'node_types' => array(),
-    'pages' => '<front>',
-    'roles' => array(),
-    'themes' => array(
-      'rebild' => array(
-        'region' => 'content',
-        'status' => 1,
-        'theme' => 'rebild',
-        'weight' => -48,
+        'weight' => -54,
       ),
     ),
     'title' => '<none>',

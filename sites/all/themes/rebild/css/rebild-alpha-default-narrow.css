@@ -147,38 +147,44 @@ body {
   Blocks
 -------------------------------------------------------------------*/
 /* Custom blocks - Frivillig */
-/* line 115, ../sass/rebild-alpha-default-narrow.scss */
+/* line 116, ../sass/rebild-alpha-default-narrow.scss */
 .html #page .custom_block.social {
   background-image: url("../img/social_ansvar.png");
   background-repeat: no-repeat;
   background-position: center top;
   height: 255px;
 }
-/* line 120, ../sass/rebild-alpha-default-narrow.scss */
+/* line 121, ../sass/rebild-alpha-default-narrow.scss */
 .html #page .custom_block.social h2 {
   margin-bottom: 0;
   margin-top: 190px;
 }
-/* line 125, ../sass/rebild-alpha-default-narrow.scss */
+/* line 126, ../sass/rebild-alpha-default-narrow.scss */
 .html #page .custom_block.frivillig {
   background-image: url("../img/frivillig.png");
   background-repeat: no-repeat;
   background-position: center top;
   height: 255px;
 }
-/* line 130, ../sass/rebild-alpha-default-narrow.scss */
+/* line 131, ../sass/rebild-alpha-default-narrow.scss */
 .html #page .custom_block.frivillig h2 {
   margin-bottom: 0;
   margin-top: 190px;
 }
 
-/* line 140, ../sass/rebild-alpha-default-narrow.scss */
+/* line 141, ../sass/rebild-alpha-default-narrow.scss */
 .html #page .custom_block.politics p {
   margin-bottom: 0px;
 }
 
 /* Calendar - sidebar */
-/* line 150, ../sass/rebild-alpha-default-narrow.scss */
+/* line 152, ../sass/rebild-alpha-default-narrow.scss */
 .view-id-calendar_sidebar .view-content .rebild-calendar .calendar_right {
   max-width: 80px;
+}
+
+/* WCAG */
+/* line 160, ../sass/rebild-alpha-default-narrow.scss */
+.wcag-block {
+  margin: 0 17px 0 0;
 }

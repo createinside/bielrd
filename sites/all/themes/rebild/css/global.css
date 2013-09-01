@@ -99,7 +99,7 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
 /* line 44, ../sass/partials/_fonts.scss */
-.icon-reorder, .icon-rss, .icon-envelope, .icon-search, .icon-double-angle-right, .icon-double-angle-left, .icon-double-angle-down, .icon-double-angle-up, .icon-list-ul, .icon-facebook, .icon-align-justify, .icon-phone, .icon-sort, .icon-arrow-right, .icon-arrow-left, .icon-arrow-up, .icon-arrow-down, .icon-menu, .icon-arrow-right-2, .icon-arrow-up-2, .icon-arrow-down-2, .icon-arrow-left-2, .icon-home, .icon-untitled, .icon-mobil_logo, .icon-bottom_logo, .icon-close, .icon-plus, .icon-minus, .icon-images, .icon-compass, .icon-images-2, .icon-plus-2, .icon-minus-2, .icon-printer, .icon-volume {
+.icon-reorder, .icon-rss, .icon-envelope, .icon-search, .icon-double-angle-right, .icon-double-angle-left, .icon-double-angle-down, .icon-double-angle-up, .icon-list-ul, .icon-facebook, .icon-align-justify, .icon-phone, .icon-sort, .icon-arrow-right, .icon-arrow-left, .icon-arrow-up, .icon-arrow-down, .icon-menu, .icon-arrow-right-2, .icon-arrow-up-2, .icon-arrow-down-2, .icon-arrow-left-2, .icon-home, .icon-untitled, .icon-mobil_logo, .icon-bottom_logo, .icon-close, .icon-plus, .icon-minus, .icon-images, .icon-compass, .icon-images-2, .icon-plus-2, .icon-minus-2, .icon-printer, .icon-volume, .icon-money {
   font-family: 'Rebild';
   speak: none;
   font-style: normal;
@@ -290,6 +290,11 @@ you can use the generic selector below, but it's slower:
   content: "\e012";
 }
 
+/* line 162, ../sass/partials/_fonts.scss */
+.icon-money:before {
+  content: "\f0d6";
+}
+
 /*------------------------------------------------------------------
 
 [FORMS]
@@ -415,6 +420,14 @@ select {
   padding: 1em;
 }
 
+/** 
+ * Newsletter subscriptions 
+ */
+/* line 93, ../sass/partials/_forms.scss */
+#simplenews-subscriptions-page-form .form-submit {
+  margin-right: 10px;
+}
+
 /*------------------------------------------------------------------
 
 [NAVIGATION]
@@ -463,8 +476,7 @@ Pager
   transition: visibility 0s linear 0s, opacity 0.1s linear, margin 0.1s ease;
 }
 
-/* line 44, ../sass/partials/_navigation.scss */
-.ultimenu > li:hover > .ultimenu-flyout,
+/* line 43, ../sass/partials/_navigation.scss */
 .ultimenu > li.hover > .ultimenu-flyout {
   margin-top: 0;
 }
@@ -472,7 +484,7 @@ Pager
 /*------------------------------------------------------------------
 	Main Menu - Level 3
 -------------------------------------------------------------------*/
-/* line 53, ../sass/partials/_navigation.scss */
+/* line 52, ../sass/partials/_navigation.scss */
 #region-content .block-menu-block {
   background-color: #f6f6f6;
   -webkit-border-radius: 3px;
@@ -486,7 +498,7 @@ Pager
   padding: 20px;
   overflow: hidden;
 }
-/* line 58, ../sass/partials/_navigation.scss */
+/* line 57, ../sass/partials/_navigation.scss */
 #region-content .block-menu-block ul li {
   float: left;
   width: 44%;
@@ -496,19 +508,19 @@ Pager
   height: 2.75em;
   position: relative;
 }
-/* line 66, ../sass/partials/_navigation.scss */
+/* line 65, ../sass/partials/_navigation.scss */
 #region-content .block-menu-block ul li a {
   color: #474747;
   text-decoration: none;
   padding-left: 10px;
   display: block;
 }
-/* line 73, ../sass/partials/_navigation.scss */
+/* line 72, ../sass/partials/_navigation.scss */
 #region-content .block-menu-block ul li a:hover,
 #region-content .block-menu-block ul li a.active {
   text-decoration: underline;
 }
-/* line 76, ../sass/partials/_navigation.scss */
+/* line 75, ../sass/partials/_navigation.scss */
 #region-content .block-menu-block ul li span {
   color: #474747;
   font-size: 0.91667em;
@@ -522,7 +534,7 @@ Pager
 	Mobile Menu
 -------------------------------------------------------------------*/
 /* Mobile Menu Region */
-/* line 93, ../sass/partials/_navigation.scss */
+/* line 92, ../sass/partials/_navigation.scss */
 #region-mobile-menu {
   position: fixed;
   top: 0;
@@ -541,7 +553,7 @@ Pager
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-/* line 107, ../sass/partials/_navigation.scss */
+/* line 106, ../sass/partials/_navigation.scss */
 #region-mobile-menu h2.block-title {
   font-size: 18px;
   padding: 15px;
@@ -551,7 +563,7 @@ Pager
   -moz-box-shadow: 0 1px 0 #78ad93;
   box-shadow: 0 1px 0 #78ad93;
 }
-/* line 114, ../sass/partials/_navigation.scss */
+/* line 113, ../sass/partials/_navigation.scss */
 #region-mobile-menu .icon-close {
   font-size: 1.6em;
   right: 0.6em;
@@ -561,18 +573,18 @@ Pager
   cursor: pointer;
 }
 
-/* line 124, ../sass/partials/_navigation.scss */
+/* line 123, ../sass/partials/_navigation.scss */
 #region-mobile-menu.active {
   left: 0;
 }
 
 /* Accordion Menu */
-/* line 128, ../sass/partials/_navigation.scss */
+/* line 127, ../sass/partials/_navigation.scss */
 #region-mobile-menu {
   /* Default state */
   /* Active state */
 }
-/* line 130, ../sass/partials/_navigation.scss */
+/* line 129, ../sass/partials/_navigation.scss */
 #region-mobile-menu .accordion-header {
   position: relative;
   font-size: 15px;
@@ -585,13 +597,13 @@ Pager
   -moz-box-shadow: 0 1px 0 #78ad93;
   box-shadow: 0 1px 0 #78ad93;
 }
-/* line 139, ../sass/partials/_navigation.scss */
+/* line 138, ../sass/partials/_navigation.scss */
 #region-mobile-menu .accordion-header span {
   margin: 0;
   padding: 0;
   border: 0;
 }
-/* line 145, ../sass/partials/_navigation.scss */
+/* line 144, ../sass/partials/_navigation.scss */
 #region-mobile-menu .accordion-header:after {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -607,36 +619,36 @@ Pager
   right: 1em;
   top: 1.3em;
 }
-/* line 153, ../sass/partials/_navigation.scss */
+/* line 152, ../sass/partials/_navigation.scss */
 #region-mobile-menu .ui-accordion-content {
   margin: 0;
   padding: 5px 25px;
   border: 0;
   top: 0;
 }
-/* line 159, ../sass/partials/_navigation.scss */
+/* line 158, ../sass/partials/_navigation.scss */
 #region-mobile-menu .ui-accordion-content ul.menu li {
   margin-bottom: 15px;
   line-height: 1.25em;
 }
-/* line 162, ../sass/partials/_navigation.scss */
+/* line 161, ../sass/partials/_navigation.scss */
 #region-mobile-menu .ui-accordion-content ul.menu li > ul {
   display: none;
 }
-/* line 165, ../sass/partials/_navigation.scss */
+/* line 164, ../sass/partials/_navigation.scss */
 #region-mobile-menu .ui-accordion-content ul.menu li a {
   color: white;
   text-decoration: none;
 }
-/* line 168, ../sass/partials/_navigation.scss */
+/* line 167, ../sass/partials/_navigation.scss */
 #region-mobile-menu .ui-accordion-content ul.menu li a span {
   display: none;
 }
-/* line 172, ../sass/partials/_navigation.scss */
+/* line 171, ../sass/partials/_navigation.scss */
 #region-mobile-menu .ui-accordion-content ul.menu li .active-trail {
   font-weight: bold;
 }
-/* line 179, ../sass/partials/_navigation.scss */
+/* line 178, ../sass/partials/_navigation.scss */
 #region-mobile-menu .accordion-header.ui-state-active {
   background: #528d6f;
   border-bottom: 0;
@@ -644,7 +656,7 @@ Pager
   -moz-box-shadow: 0;
   box-shadow: 0;
 }
-/* line 184, ../sass/partials/_navigation.scss */
+/* line 183, ../sass/partials/_navigation.scss */
 #region-mobile-menu .accordion-header.ui-state-active:after {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -660,13 +672,13 @@ Pager
   right: 1em;
   top: 1.3em;
 }
-/* line 192, ../sass/partials/_navigation.scss */
+/* line 191, ../sass/partials/_navigation.scss */
 #region-mobile-menu .ui-accordion-content {
   background: #528d6f;
 }
 
 /* Overlay */
-/* line 197, ../sass/partials/_navigation.scss */
+/* line 196, ../sass/partials/_navigation.scss */
 #mobile-overlay {
   background: black;
   position: fixed;
@@ -684,7 +696,7 @@ Pager
   transition: opacity 0.3s ease;
 }
 
-/* line 209, ../sass/partials/_navigation.scss */
+/* line 208, ../sass/partials/_navigation.scss */
 #mobile-overlay.active {
   height: 100%;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
@@ -694,24 +706,28 @@ Pager
 /*------------------------------------------------------------------
 	Footer Menus
 -------------------------------------------------------------------*/
-/* line 220, ../sass/partials/_navigation.scss */
+/* line 219, ../sass/partials/_navigation.scss */
 #zone-footer .block-menu-block ul li {
   margin-bottom: 6px;
 }
-/* line 222, ../sass/partials/_navigation.scss */
+/* line 221, ../sass/partials/_navigation.scss */
 #zone-footer .block-menu-block ul li span {
   display: none;
 }
-/* line 225, ../sass/partials/_navigation.scss */
+/* line 224, ../sass/partials/_navigation.scss */
 #zone-footer .block-menu-block ul li a {
   color: #6b6b6b;
   line-height: 1.25em;
+}
+/* line 228, ../sass/partials/_navigation.scss */
+#zone-footer .block-menu-block ul li a:hover {
+  text-decoration: underline;
 }
 
 /*------------------------------------------------------------------
 	Breadcrumbs		
 -------------------------------------------------------------------*/
-/* line 239, ../sass/partials/_navigation.scss */
+/* line 241, ../sass/partials/_navigation.scss */
 #breadcrumb {
   font-size: 0.91667em;
   line-height: 1.5;
@@ -719,14 +735,14 @@ Pager
   margin-bottom: 20px;
   text-shadow: white 1px 1px 1px;
 }
-/* line 245, ../sass/partials/_navigation.scss */
+/* line 247, ../sass/partials/_navigation.scss */
 #breadcrumb a, #breadcrumb strong {
   color: #474747;
   text-decoration: none;
   position: relative;
   top: -1px;
 }
-/* line 251, ../sass/partials/_navigation.scss */
+/* line 253, ../sass/partials/_navigation.scss */
 #breadcrumb span {
   font-size: 1.25em;
 }
@@ -734,15 +750,15 @@ Pager
 /*------------------------------------------------------------------
 	Tabs
 -------------------------------------------------------------------*/
-/* line 260, ../sass/partials/_navigation.scss */
+/* line 262, ../sass/partials/_navigation.scss */
 ul.tabs {
   margin-bottom: 20px;
 }
-/* line 262, ../sass/partials/_navigation.scss */
+/* line 264, ../sass/partials/_navigation.scss */
 ul.tabs li {
   margin-right: 0.5em;
 }
-/* line 264, ../sass/partials/_navigation.scss */
+/* line 266, ../sass/partials/_navigation.scss */
 ul.tabs li a {
   color: #474747;
   text-decoration: none;
@@ -754,11 +770,11 @@ ul.tabs li a {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 271, ../sass/partials/_navigation.scss */
+/* line 273, ../sass/partials/_navigation.scss */
 ul.tabs li a:hover {
   text-decoration: underline;
 }
-/* line 276, ../sass/partials/_navigation.scss */
+/* line 278, ../sass/partials/_navigation.scss */
 ul.tabs li.active a {
   background-color: white;
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
@@ -769,12 +785,12 @@ ul.tabs li.active a {
 /*------------------------------------------------------------------
   Pager
 -------------------------------------------------------------------*/
-/* line 288, ../sass/partials/_navigation.scss */
+/* line 290, ../sass/partials/_navigation.scss */
 .item-list ul.pager li {
   margin: 0 5px;
   padding: 0;
 }
-/* line 296, ../sass/partials/_navigation.scss */
+/* line 298, ../sass/partials/_navigation.scss */
 .item-list ul.pager li.pager-current a {
   font-weight: bold;
 }
@@ -1041,16 +1057,18 @@ Calendar
 /*------------------------------------------------------------------
 	Accordions
 -------------------------------------------------------------------*/
-/* line 129, ../sass/partials/_nodes.scss */
+/* line 130, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion,
 #region-content .node-news-article .ui-accordion,
-#region-content .node-agenda .ui-accordion {
+#region-content .node-agenda .ui-accordion,
+#region-content .node-os2web-borger-dk-article .ui-accordion {
   margin: 20px 0;
 }
-/* line 131, ../sass/partials/_nodes.scss */
+/* line 132, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header,
 #region-content .node-news-article .ui-accordion .ui-accordion-header,
-#region-content .node-agenda .ui-accordion .ui-accordion-header {
+#region-content .node-agenda .ui-accordion .ui-accordion-header,
+#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header {
   background: #e6e6e6;
   color: #474747;
   font-size: 1.08em;
@@ -1064,24 +1082,27 @@ Calendar
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 140, ../sass/partials/_nodes.scss */
+/* line 141, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header > a,
 #region-content .node-news-article .ui-accordion .ui-accordion-header > a,
-#region-content .node-agenda .ui-accordion .ui-accordion-header > a {
+#region-content .node-agenda .ui-accordion .ui-accordion-header > a,
+#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header > a {
   color: #474747;
   padding: 0;
   margin: 0;
 }
-/* line 145, ../sass/partials/_nodes.scss */
+/* line 146, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header > a:hover,
 #region-content .node-news-article .ui-accordion .ui-accordion-header > a:hover,
-#region-content .node-agenda .ui-accordion .ui-accordion-header > a:hover {
+#region-content .node-agenda .ui-accordion .ui-accordion-header > a:hover,
+#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header > a:hover {
   text-decoration: none;
 }
-/* line 148, ../sass/partials/_nodes.scss */
+/* line 149, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header > a .field-content:before,
 #region-content .node-news-article .ui-accordion .ui-accordion-header > a .field-content:before,
-#region-content .node-agenda .ui-accordion .ui-accordion-header > a .field-content:before {
+#region-content .node-agenda .ui-accordion .ui-accordion-header > a .field-content:before,
+#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header > a .field-content:before {
   font-family: 'Rebild';
   content: attr(data-icon);
   speak: none;
@@ -1093,22 +1114,25 @@ Calendar
   content: "\e00f";
   margin-right: 0.5em;
 }
-/* line 154, ../sass/partials/_nodes.scss */
+/* line 155, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active,
 #region-content .node-news-article .ui-accordion .ui-accordion-header.ui-state-active,
-#region-content .node-agenda .ui-accordion .ui-accordion-header.ui-state-active {
+#region-content .node-agenda .ui-accordion .ui-accordion-header.ui-state-active,
+#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header.ui-state-active {
   background-color: #7f9dcd;
 }
-/* line 156, ../sass/partials/_nodes.scss */
+/* line 157, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active a,
 #region-content .node-news-article .ui-accordion .ui-accordion-header.ui-state-active a,
-#region-content .node-agenda .ui-accordion .ui-accordion-header.ui-state-active a {
+#region-content .node-agenda .ui-accordion .ui-accordion-header.ui-state-active a,
+#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header.ui-state-active a {
   color: white;
 }
-/* line 160, ../sass/partials/_nodes.scss */
+/* line 161, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-content,
 #region-content .node-news-article .ui-accordion .ui-accordion-content,
-#region-content .node-agenda .ui-accordion .ui-accordion-content {
+#region-content .node-agenda .ui-accordion .ui-accordion-content,
+#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-content {
   padding: 10px 20px;
   margin: 0;
 }
@@ -1117,21 +1141,21 @@ Calendar
 	Borger dk
 -------------------------------------------------------------------*/
 /* Accordion */
-/* line 175, ../sass/partials/_nodes.scss */
+/* line 176, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .field.field-name-body {
   margin: 2em 0 2em 0;
 }
-/* line 178, ../sass/partials/_nodes.scss */
+/* line 179, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .field-name-field-os2web-borger-dk-header {
   margin-bottom: 20px;
   font-size: 1.33333em;
   line-height: 1.15em;
 }
-/* line 183, ../sass/partials/_nodes.scss */
+/* line 184, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle {
   position: relative;
 }
-/* line 185, ../sass/partials/_nodes.scss */
+/* line 186, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle h2.mArticle {
   background: #e6e6e6;
   color: #474747;
@@ -1147,7 +1171,7 @@ Calendar
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 196, ../sass/partials/_nodes.scss */
+/* line 197, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle h2.mArticle:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1160,13 +1184,13 @@ Calendar
   content: "\e00f";
   margin-right: 0.5em;
 }
-/* line 201, ../sass/partials/_nodes.scss */
+/* line 202, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle div.mArticle {
   padding: 10px 20px;
   margin: 0;
 }
 /* line 207, ../sass/partials/_nodes.scss */
-#region-content .node-os2web-borger-dk-article .microArticle.aktiv h2.mArticle {
+#region-content .node-os2web-borger-dk-article h2.mArticle.ui-state-active {
   background-color: #7f9dcd;
   color: #fff;
 }
@@ -1376,16 +1400,17 @@ Calendar
 /* Region: Content Sidebar */
 /* line 63, ../sass/partials/_blocks.scss */
 #region-content-sidebar {
+  margin-top: 20px;
   /**
    * RELATED CONTENT - Content sidebar
    */
 }
-/* line 64, ../sass/partials/_blocks.scss */
+/* line 65, ../sass/partials/_blocks.scss */
 #region-content-sidebar .block {
   margin-bottom: 20px;
   /* Content sidebar borger.dk - Læs også */
 }
-/* line 66, ../sass/partials/_blocks.scss */
+/* line 67, ../sass/partials/_blocks.scss */
 #region-content-sidebar .block .block-title, #region-content-sidebar .block h3 {
   font-size: 12px;
   line-height: 1em;
@@ -1401,28 +1426,28 @@ Calendar
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 77, ../sass/partials/_blocks.scss */
+/* line 78, ../sass/partials/_blocks.scss */
 #region-content-sidebar .block h3 {
   margin-top: 20px;
 }
-/* line 80, ../sass/partials/_blocks.scss */
+/* line 81, ../sass/partials/_blocks.scss */
 #region-content-sidebar .block .content {
   color: #474747;
   line-height: 1.15em;
   padding-bottom: 0;
   font-size: 0.91667em;
 }
-/* line 85, ../sass/partials/_blocks.scss */
+/* line 86, ../sass/partials/_blocks.scss */
 #region-content-sidebar .block .content ul {
   margin: 0 0.75em;
   overflow: hidden;
 }
-/* line 88, ../sass/partials/_blocks.scss */
+/* line 89, ../sass/partials/_blocks.scss */
 #region-content-sidebar .block .content ul li {
   margin: 0 0 .75em 0;
   line-height: 1.15em;
 }
-/* line 92, ../sass/partials/_blocks.scss */
+/* line 93, ../sass/partials/_blocks.scss */
 #region-content-sidebar .block .content ul li:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1439,11 +1464,11 @@ Calendar
   display: block;
   float: left;
 }
-/* line 105, ../sass/partials/_blocks.scss */
+/* line 106, ../sass/partials/_blocks.scss */
 #region-content-sidebar .block .view-content-sidebar-borger-dk-read-also h4 {
   margin: 1em .75em .5em;
 }
-/* line 116, ../sass/partials/_blocks.scss */
+/* line 117, ../sass/partials/_blocks.scss */
 #region-content-sidebar section.related-content-links {
   border: 1px solid #7f9dcd;
   padding-bottom: 10px;
@@ -1453,7 +1478,7 @@ Calendar
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 120, ../sass/partials/_blocks.scss */
+/* line 121, ../sass/partials/_blocks.scss */
 #region-content-sidebar section.related-content-links .block-title {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -1463,23 +1488,27 @@ Calendar
 }
 
 /* Region: Sidebar First */
-/* line 128, ../sass/partials/_blocks.scss */
+/* line 129, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first {
   text-align: center;
 }
 /* line 131, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block {
+  text-align: left;
+}
+/* line 133, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block .block-title {
   font-size: 1.33333em;
   text-shadow: none;
 }
-/* line 135, ../sass/partials/_blocks.scss */
+/* line 137, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block .content {
   font-size: 1em;
   line-height: 1.15em;
 }
 
 /* Region: Postcripts First */
-/* line 149, ../sass/partials/_blocks.scss */
+/* line 151, ../sass/partials/_blocks.scss */
 #region-postscript-first .block .content {
   padding: 20px;
   color: white;
@@ -1496,7 +1525,7 @@ Calendar
 }
 
 /* Region: Postscripts Second */
-/* line 164, ../sass/partials/_blocks.scss */
+/* line 166, ../sass/partials/_blocks.scss */
 #region-postscript-second .block .content {
   padding: 20px;
   line-height: 1.15em;
@@ -1511,35 +1540,39 @@ Calendar
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 169, ../sass/partials/_blocks.scss */
+/* line 171, ../sass/partials/_blocks.scss */
 #region-postscript-second .block .content a {
   word-break: break-word;
 }
 
 /* Zone: Footer */
-/* line 178, ../sass/partials/_blocks.scss */
+/* line 180, ../sass/partials/_blocks.scss */
 #zone-footer .block {
   color: #6b6b6b;
 }
-/* line 180, ../sass/partials/_blocks.scss */
+/* line 182, ../sass/partials/_blocks.scss */
 #zone-footer .block .block-title {
   font-size: 14px;
   margin: 0 0 20px 0;
   font-weight: normal;
 }
-/* line 185, ../sass/partials/_blocks.scss */
+/* line 187, ../sass/partials/_blocks.scss */
 #zone-footer .block .content {
   font-size: 0.91667em;
   line-height: 1.15em;
 }
-/* line 188, ../sass/partials/_blocks.scss */
+/* line 190, ../sass/partials/_blocks.scss */
 #zone-footer .block .content a {
   color: #6b6b6b;
   text-decoration: none;
 }
+/* line 194, ../sass/partials/_blocks.scss */
+#zone-footer .block .content a:hover {
+  text-decoration: underline;
+}
 
 /* Region: Bottom */
-/* line 199, ../sass/partials/_blocks.scss */
+/* line 204, ../sass/partials/_blocks.scss */
 #region-bottom .block .content {
   padding: 8px 0;
   text-align: center;
@@ -1547,17 +1580,21 @@ Calendar
   line-height: 1.4em;
   color: white;
 }
-/* line 205, ../sass/partials/_blocks.scss */
+/* line 210, ../sass/partials/_blocks.scss */
 #region-bottom .block .content a {
   color: white;
   text-decoration: none;
+}
+/* line 214, ../sass/partials/_blocks.scss */
+#region-bottom .block .content a:hover {
+  text-decoration: underline;
 }
 
 /*------------------------------------------------------------------
 	Blocks Specific
 -------------------------------------------------------------------*/
 /* Selfservice block - frontpage */
-/* line 219, ../sass/partials/_blocks.scss */
+/* line 227, ../sass/partials/_blocks.scss */
 #region-header-first .block {
   margin-top: 20px;
   padding: 20px;
@@ -1571,7 +1608,7 @@ Calendar
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 223, ../sass/partials/_blocks.scss */
+/* line 231, ../sass/partials/_blocks.scss */
 #region-header-first .block h2 {
   color: white;
   font-size: 2.33333em;
@@ -1579,31 +1616,35 @@ Calendar
   font-weight: normal;
   margin-bottom: 14px;
 }
-/* line 230, ../sass/partials/_blocks.scss */
+/* line 238, ../sass/partials/_blocks.scss */
 #region-header-first .block p {
   font-size: 1.25em;
   margin-bottom: 15px;
   line-height: 1.15em;
 }
-/* line 235, ../sass/partials/_blocks.scss */
+/* line 243, ../sass/partials/_blocks.scss */
 #region-header-first .block .separator {
   margin: 10px 20px;
   font-size: 0.91667em;
   font-style: italic;
 }
-/* line 240, ../sass/partials/_blocks.scss */
+/* line 248, ../sass/partials/_blocks.scss */
 #region-header-first .block p.arrow-link {
   margin-bottom: 0 !important;
   font-size: 0.91667em;
 }
-/* line 243, ../sass/partials/_blocks.scss */
+/* line 251, ../sass/partials/_blocks.scss */
 #region-header-first .block p.arrow-link a {
   text-transform: uppercase;
   color: #00473e;
   font-weight: bold;
   text-decoration: none;
 }
-/* line 249, ../sass/partials/_blocks.scss */
+/* line 257, ../sass/partials/_blocks.scss */
+#region-header-first .block p.arrow-link a:hover {
+  text-decoration: underline;
+}
+/* line 260, ../sass/partials/_blocks.scss */
 #region-header-first .block p.arrow-link a:after {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1629,7 +1670,7 @@ Calendar
   -o-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 264, ../sass/partials/_blocks.scss */
+/* line 275, ../sass/partials/_blocks.scss */
 #region-header-first .block .customSelect {
   font-style: italic;
   color: #00473e;
@@ -1638,7 +1679,7 @@ Calendar
   width: 100%;
   cursor: pointer;
 }
-/* line 272, ../sass/partials/_blocks.scss */
+/* line 283, ../sass/partials/_blocks.scss */
 #region-header-first .block .customSelect:after {
   position: absolute;
   font-style: normal;
@@ -1655,7 +1696,7 @@ Calendar
   -webkit-font-smoothing: antialiased;
   content: "\e000";
 }
-/* line 281, ../sass/partials/_blocks.scss */
+/* line 292, ../sass/partials/_blocks.scss */
 #region-header-first .block .customSelectInner {
   padding: 1em;
   display: block;
@@ -1663,16 +1704,16 @@ Calendar
   max-width: 80%;
 }
 
-/* line 289, ../sass/partials/_blocks.scss */
+/* line 300, ../sass/partials/_blocks.scss */
 .view-selfservice-frontpage {
   position: relative;
 }
-/* line 291, ../sass/partials/_blocks.scss */
+/* line 302, ../sass/partials/_blocks.scss */
 .view-selfservice-frontpage .ctools-jump-menu-button {
   display: none;
 }
 
-/* line 296, ../sass/partials/_blocks.scss */
+/* line 307, ../sass/partials/_blocks.scss */
 .view-id-selfservice_frontpage.view-display-id-block > .view-content {
   font-size: 1em;
   line-height: 1.4em;
@@ -1681,20 +1722,24 @@ Calendar
   margin: 20px auto 25px;
   text-align: center;
 }
-/* line 303, ../sass/partials/_blocks.scss */
+/* line 314, ../sass/partials/_blocks.scss */
 .view-id-selfservice_frontpage.view-display-id-block > .view-content > .views-row {
   color: #00473e;
   margin-right: 0.9em;
   margin-bottom: 0.5em;
   display: inline-block;
 }
-/* line 308, ../sass/partials/_blocks.scss */
+/* line 319, ../sass/partials/_blocks.scss */
 .view-id-selfservice_frontpage.view-display-id-block > .view-content > .views-row a {
   color: #00473e;
 }
+/* line 322, ../sass/partials/_blocks.scss */
+.view-id-selfservice_frontpage.view-display-id-block > .view-content > .views-row a:hover {
+  text-decoration: none;
+}
 
 /* Contact block - front page/landing pages */
-/* line 317, ../sass/partials/_blocks.scss */
+/* line 331, ../sass/partials/_blocks.scss */
 #region-sidebar-first .block.contact-sidebar {
   padding: 20px;
   color: white;
@@ -1709,28 +1754,28 @@ Calendar
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 322, ../sass/partials/_blocks.scss */
+/* line 336, ../sass/partials/_blocks.scss */
 #region-sidebar-first .block.contact-sidebar .block-title {
   color: white;
   font-size: 1.33333em;
   line-height: 1.15em;
   text-shadow: none;
 }
-/* line 328, ../sass/partials/_blocks.scss */
+/* line 342, ../sass/partials/_blocks.scss */
 #region-sidebar-first .block.contact-sidebar .content {
   line-height: 1.25em;
 }
-/* line 330, ../sass/partials/_blocks.scss */
+/* line 344, ../sass/partials/_blocks.scss */
 #region-sidebar-first .block.contact-sidebar .content a {
   color: white;
 }
 
 /* 5 shortcuts - frontpage */
-/* line 346, ../sass/partials/_blocks.scss */
+/* line 360, ../sass/partials/_blocks.scss */
 #region-postscript-first .block-block .content ul li {
   margin-bottom: 1em;
 }
-/* line 349, ../sass/partials/_blocks.scss */
+/* line 363, ../sass/partials/_blocks.scss */
 #region-postscript-first .block-block .content ul li:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1745,19 +1790,23 @@ Calendar
 }
 
 /* Custom blocks */
-/* line 359, ../sass/partials/_blocks.scss */
+/* line 373, ../sass/partials/_blocks.scss */
 .custom_block {
   padding: 20px;
   color: white;
   line-height: 1.15em;
 }
-/* line 363, ../sass/partials/_blocks.scss */
+/* line 377, ../sass/partials/_blocks.scss */
 .custom_block a {
   text-decoration: none;
 }
+/* line 380, ../sass/partials/_blocks.scss */
+.custom_block a:hover {
+  text-decoration: underline;
+}
 
 /* Custom blocks - book en politiker */
-/* line 371, ../sass/partials/_blocks.scss */
+/* line 388, ../sass/partials/_blocks.scss */
 .html #page .custom_block.politics {
   background-color: #68a386;
   -webkit-border-radius: 3px;
@@ -1773,17 +1822,17 @@ Calendar
   background-repeat: no-repeat;
   font-size: 1.25em;
 }
-/* line 377, ../sass/partials/_blocks.scss */
+/* line 394, ../sass/partials/_blocks.scss */
 .html #page .custom_block.politics p {
   margin-bottom: 5px;
 }
-/* line 380, ../sass/partials/_blocks.scss */
+/* line 397, ../sass/partials/_blocks.scss */
 .html #page .custom_block.politics a {
   color: #fff;
 }
 
 /* Custom blocks - Kort og godt */
-/* line 389, ../sass/partials/_blocks.scss */
+/* line 406, ../sass/partials/_blocks.scss */
 .html #page .custom_block.map {
   background-color: white;
   -webkit-border-radius: 3px;
@@ -1800,22 +1849,22 @@ Calendar
   background-repeat: no-repeat;
   background-position: right bottom;
 }
-/* line 396, ../sass/partials/_blocks.scss */
+/* line 413, ../sass/partials/_blocks.scss */
 .html #page .custom_block.map h3 {
   font-weight: normal;
   color: #68a386;
 }
-/* line 400, ../sass/partials/_blocks.scss */
+/* line 417, ../sass/partials/_blocks.scss */
 .html #page .custom_block.map p {
   margin-bottom: 5px;
 }
-/* line 403, ../sass/partials/_blocks.scss */
+/* line 420, ../sass/partials/_blocks.scss */
 .html #page .custom_block.map a {
   color: #474747;
 }
 
 /* Custom blocks - Rebildporten */
-/* line 412, ../sass/partials/_blocks.scss */
+/* line 429, ../sass/partials/_blocks.scss */
 .html #page .custom_block.rebildporten {
   background-color: #f04f0f;
   -webkit-border-radius: 3px;
@@ -1828,17 +1877,17 @@ Calendar
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   height: 105px;
 }
-/* line 415, ../sass/partials/_blocks.scss */
+/* line 432, ../sass/partials/_blocks.scss */
 .html #page .custom_block.rebildporten h2 {
   margin-bottom: 10px;
 }
-/* line 418, ../sass/partials/_blocks.scss */
+/* line 435, ../sass/partials/_blocks.scss */
 .html #page .custom_block.rebildporten .rold {
   margin-bottom: 10px;
 }
 
 /* Custom blocks - Frivillig */
-/* line 427, ../sass/partials/_blocks.scss */
+/* line 444, ../sass/partials/_blocks.scss */
 .html #page .custom_block.frivillig {
   background-color: white;
   -webkit-border-radius: 3px;
@@ -1855,7 +1904,7 @@ Calendar
   background-repeat: no-repeat;
   background-position: center top;
 }
-/* line 434, ../sass/partials/_blocks.scss */
+/* line 451, ../sass/partials/_blocks.scss */
 .html #page .custom_block.frivillig h2 {
   margin-top: 210px;
   font-size: 1.33333em;
@@ -1864,7 +1913,7 @@ Calendar
 }
 
 /* Custom blocks - Socialt ansvarlig */
-/* line 446, ../sass/partials/_blocks.scss */
+/* line 463, ../sass/partials/_blocks.scss */
 .html #page .custom_block.social {
   background-color: white;
   -webkit-border-radius: 3px;
@@ -1881,7 +1930,7 @@ Calendar
   background-repeat: no-repeat;
   background-position: center top;
 }
-/* line 453, ../sass/partials/_blocks.scss */
+/* line 470, ../sass/partials/_blocks.scss */
 .html #page .custom_block.social h2 {
   margin-top: 210px;
   font-size: 1.33333em;
@@ -1890,7 +1939,7 @@ Calendar
 }
 
 /* Calendar sidebar */
-/* line 465, ../sass/partials/_blocks.scss */
+/* line 482, ../sass/partials/_blocks.scss */
 #section-content .block-calendar-sidebar-block {
   overflow: hidden;
   line-height: 1.15em;
@@ -1905,69 +1954,86 @@ Calendar
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 470, ../sass/partials/_blocks.scss */
+/* line 487, ../sass/partials/_blocks.scss */
 #section-content .block-calendar-sidebar-block .block-title {
   padding: 20px 20px 0 20px;
 }
 
 /* Footer - Contact information */
-/* line 478, ../sass/partials/_blocks.scss */
+/* line 495, ../sass/partials/_blocks.scss */
 #region-footer-first .block {
   text-align: center;
 }
-/* line 481, ../sass/partials/_blocks.scss */
+/* line 498, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content p {
   margin-bottom: 10px;
 }
-/* line 484, ../sass/partials/_blocks.scss */
+/* line 501, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content table {
   margin: auto;
   margin-bottom: 10px;
   line-height: 1.15em;
   text-align: center;
 }
-/* line 490, ../sass/partials/_blocks.scss */
+/* line 507, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content p.large-text {
   font-size: 1.66667em;
   line-height: 1.15em;
 }
-/* line 494, ../sass/partials/_blocks.scss */
+/* line 510, ../sass/partials/_blocks.scss */
+#region-footer-first .block .content p.large-text span {
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  width: 20px;
+}
+/* line 516, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content img {
   margin-bottom: 5px;
 }
-/* line 497, ../sass/partials/_blocks.scss */
+/* line 519, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content a {
   color: #6b6b6b;
   text-decoration: none;
 }
-/* line 501, ../sass/partials/_blocks.scss */
-#region-footer-first .block .content p.bottom-logo {
-  margin-bottom: 20px;
+/* line 523, ../sass/partials/_blocks.scss */
+#region-footer-first .block .content a:hover {
+  text-decoration: underline;
 }
-/* line 503, ../sass/partials/_blocks.scss */
+/* line 526, ../sass/partials/_blocks.scss */
+#region-footer-first .block .content p.bottom-logo {
+  margin-bottom: 13.33333px;
+}
+/* line 528, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content p.bottom-logo span.icon-bottom_logo {
   font-size: 50px;
 }
+/* line 532, ../sass/partials/_blocks.scss */
+#region-footer-first .block .content p.bottom-text {
+  font-size: 1.15em;
+  line-height: 1.20em;
+  margin-bottom: 13.33333px;
+}
 
 /* Mobile Header */
-/* line 512, ../sass/partials/_blocks.scss */
+/* line 542, ../sass/partials/_blocks.scss */
 #mob-header {
   color: #68a386;
   font-size: 24px;
 }
-/* line 515, ../sass/partials/_blocks.scss */
+/* line 545, ../sass/partials/_blocks.scss */
 #mob-header a {
   color: #68a386;
   text-decoration: none;
 }
-/* line 519, ../sass/partials/_blocks.scss */
+/* line 549, ../sass/partials/_blocks.scss */
 #mob-header #mob-header-left {
   float: left;
   text-align: left;
   width: 33%;
   line-height: 1.5em;
 }
-/* line 525, ../sass/partials/_blocks.scss */
+/* line 555, ../sass/partials/_blocks.scss */
 #mob-header #mob-header-center {
   text-align: center;
   float: left;
@@ -1976,11 +2042,11 @@ Calendar
   color: #00703c;
   line-height: 1em;
 }
-/* line 532, ../sass/partials/_blocks.scss */
+/* line 562, ../sass/partials/_blocks.scss */
 #mob-header #mob-header-center a {
   color: #00703c;
 }
-/* line 536, ../sass/partials/_blocks.scss */
+/* line 566, ../sass/partials/_blocks.scss */
 #mob-header #mob-header-right {
   float: left;
   text-align: right;
@@ -1988,12 +2054,12 @@ Calendar
   line-height: 1.5em;
 }
 
-/* line 544, ../sass/partials/_blocks.scss */
+/* line 574, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first {
   /* Selvbetjening - sidebar */
   /* Background Image blocks */
 }
-/* line 548, ../sass/partials/_blocks.scss */
+/* line 578, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 {
   padding: 20px;
@@ -2008,17 +2074,17 @@ Calendar
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 552, ../sass/partials/_blocks.scss */
+/* line 582, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .block-title,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .block-title {
   color: white;
 }
-/* line 556, ../sass/partials/_blocks.scss */
+/* line 586, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content form,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content form {
   margin-bottom: 1em;
 }
-/* line 559, ../sass/partials/_blocks.scss */
+/* line 589, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content p.arrow-link,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content p.arrow-link {
   font-size: 0.91667em;
@@ -2026,7 +2092,7 @@ Calendar
   margin-bottom: 20px;
   padding-bottom: 20px;
 }
-/* line 564, ../sass/partials/_blocks.scss */
+/* line 594, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content p.arrow-link a,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content p.arrow-link a {
   text-transform: uppercase;
@@ -2034,7 +2100,12 @@ Calendar
   font-weight: bold;
   text-decoration: none;
 }
-/* line 570, ../sass/partials/_blocks.scss */
+/* line 600, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content p.arrow-link a:hover,
+.not-front #region-sidebar-first .block-selfservice-landing-block-1 .content p.arrow-link a:hover {
+  text-decoration: underline;
+}
+/* line 603, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content p.arrow-link a:after,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content p.arrow-link a:after {
   font-family: 'Rebild';
@@ -2055,19 +2126,21 @@ Calendar
   margin: 0 0 0 5px;
   position: relative;
   top: -1px;
+  text-decoration: none;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 585, ../sass/partials/_blocks.scss */
-.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content .form-item-jump,
-.not-front #region-sidebar-first .block-selfservice-landing-block-1 .content .form-item-jump {
+/* line 619, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content .container-inline,
+.not-front #region-sidebar-first .block-selfservice-landing-block-1 .content .container-inline {
   position: relative;
   margin: 0;
+  overflow: hidden;
 }
-/* line 589, ../sass/partials/_blocks.scss */
+/* line 624, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content .customSelect,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content .customSelect {
   font-style: italic;
@@ -2076,7 +2149,7 @@ Calendar
   text-align: left;
   width: 100%;
 }
-/* line 596, ../sass/partials/_blocks.scss */
+/* line 631, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content .customSelect:after,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content .customSelect:after {
   font-style: normal;
@@ -2097,32 +2170,37 @@ Calendar
   -webkit-font-smoothing: antialiased;
   content: "\e000";
 }
-/* line 608, ../sass/partials/_blocks.scss */
+/* line 643, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content .customSelectInner,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content .customSelectInner {
   padding: 1em;
   max-width: 80%;
 }
-/* line 612, ../sass/partials/_blocks.scss */
+/* line 647, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content .ctools-jump-menu-button,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content .ctools-jump-menu-button {
   display: none;
 }
-/* line 617, ../sass/partials/_blocks.scss */
+/* line 652, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 ul li,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 ul li {
   margin: 0 0 0.5em 0;
   padding: 0;
 }
-/* line 620, ../sass/partials/_blocks.scss */
+/* line 655, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 ul li a,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 ul li a {
   color: white;
   text-decoration: none;
 }
-/* line 624, ../sass/partials/_blocks.scss */
-.not-front #region-sidebar-first .block-selfservice-blocks-block-1 ul li a:before,
-.not-front #region-sidebar-first .block-selfservice-landing-block-1 ul li a:before {
+/* line 659, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 ul li a:hover,
+.not-front #region-sidebar-first .block-selfservice-landing-block-1 ul li a:hover {
+  text-decoration: underline;
+}
+/* line 662, ../sass/partials/_blocks.scss */
+.not-front #region-sidebar-first .block-selfservice-blocks-block-1 ul li span:before,
+.not-front #region-sidebar-first .block-selfservice-landing-block-1 ul li span:before {
   font-family: 'Rebild';
   content: attr(data-icon);
   speak: none;
@@ -2134,7 +2212,7 @@ Calendar
   content: "\f101";
   margin-right: 0.5em;
 }
-/* line 634, ../sass/partials/_blocks.scss */
+/* line 672, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box {
   padding: 20px;
   color: #474747;
@@ -2148,60 +2226,60 @@ Calendar
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 640, ../sass/partials/_blocks.scss */
+/* line 678, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box .content {
   width: 62%;
 }
-/* line 642, ../sass/partials/_blocks.scss */
+/* line 680, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box .content h2 {
   font-size: 1.33333em;
   line-height: 1.1em;
   font-weight: normal;
 }
-/* line 647, ../sass/partials/_blocks.scss */
+/* line 685, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box .content p {
   margin-top: 1em;
 }
-/* line 652, ../sass/partials/_blocks.scss */
+/* line 690, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box.plads {
   background: #f6f6f6 url("../img/image-box-1.png") no-repeat bottom right;
 }
-/* line 655, ../sass/partials/_blocks.scss */
+/* line 693, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box.skole {
   background: #f6f6f6 url("../img/image-box-2.png") no-repeat bottom right;
 }
 
-/* line 659, ../sass/partials/_blocks.scss */
+/* line 697, ../sass/partials/_blocks.scss */
 .view-selfservice-blocks {
   position: relative;
 }
 
 /* Workbench Moderation */
-/* line 664, ../sass/partials/_blocks.scss */
+/* line 702, ../sass/partials/_blocks.scss */
 div.workbench-info-block {
   font-size: 1em;
   padding: 10px 20px;
   line-height: 1.5em;
 }
-/* line 668, ../sass/partials/_blocks.scss */
+/* line 706, ../sass/partials/_blocks.scss */
 div.workbench-info-block a {
   font-weight: bold;
 }
 
 /* WCAG BLOCKS */
-/* line 674, ../sass/partials/_blocks.scss */
+/* line 712, ../sass/partials/_blocks.scss */
 .wcag-block {
   display: inline-block;
   margin: 0 20px 0 0;
 }
-/* line 677, ../sass/partials/_blocks.scss */
+/* line 715, ../sass/partials/_blocks.scss */
 .wcag-block a {
   color: #474747;
   text-decoration: none;
   font-style: italic;
 }
 
-/* line 684, ../sass/partials/_blocks.scss */
+/* line 722, ../sass/partials/_blocks.scss */
 .wcag-block.textsize #text_resize_increase {
   background: none;
   margin: 0 7px 0 0;
@@ -2211,13 +2289,13 @@ div.workbench-info-block a {
   width: auto;
   font-weight: bold;
 }
-/* line 691, ../sass/partials/_blocks.scss */
+/* line 729, ../sass/partials/_blocks.scss */
 .wcag-block.textsize #text_resize_increase sup {
   vertical-align: super;
   float: right;
   margin: 0 0 0 1px;
 }
-/* line 697, ../sass/partials/_blocks.scss */
+/* line 735, ../sass/partials/_blocks.scss */
 .wcag-block.textsize #text_resize_decrease {
   background: none;
   margin: 0;
@@ -2228,14 +2306,14 @@ div.workbench-info-block a {
   font-weight: bold;
   font-size: 0.95em;
 }
-/* line 705, ../sass/partials/_blocks.scss */
+/* line 743, ../sass/partials/_blocks.scss */
 .wcag-block.textsize #text_resize_decrease sup {
   vertical-align: sub;
   margin: 0 0 0 1px;
   float: right;
 }
 
-/* line 713, ../sass/partials/_blocks.scss */
+/* line 751, ../sass/partials/_blocks.scss */
 .wcag-block.read-aloud a:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -2252,11 +2330,11 @@ div.workbench-info-block a {
   top: 1px;
 }
 
-/* line 723, ../sass/partials/_blocks.scss */
+/* line 761, ../sass/partials/_blocks.scss */
 .wcag-block.print span {
   margin: 0;
 }
-/* line 726, ../sass/partials/_blocks.scss */
+/* line 764, ../sass/partials/_blocks.scss */
 .wcag-block.print a:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -2273,15 +2351,15 @@ div.workbench-info-block a {
 }
 
 /* Cookie Popup */
-/* line 736, ../sass/partials/_blocks.scss */
+/* line 774, ../sass/partials/_blocks.scss */
 #sliding-popup {
   background: #6b6b6b;
 }
-/* line 738, ../sass/partials/_blocks.scss */
+/* line 776, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content {
   width: auto;
 }
-/* line 740, ../sass/partials/_blocks.scss */
+/* line 778, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-text {
   font-family: Verdana, Arial, sans-serif;
   font-size: 0.91667em;
@@ -2289,17 +2367,17 @@ div.workbench-info-block a {
   width: auto;
   text-align: center;
 }
-/* line 746, ../sass/partials/_blocks.scss */
+/* line 784, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-text h3 {
   font-size: 1.25em;
   margin-bottom: 5px;
   font-weight: bold;
 }
-/* line 751, ../sass/partials/_blocks.scss */
+/* line 789, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-text p {
   font-size: 0.91667em;
 }
-/* line 755, ../sass/partials/_blocks.scss */
+/* line 793, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-buttons {
   margin: 10px 10px;
   text-align: center;
@@ -2307,7 +2385,7 @@ div.workbench-info-block a {
 }
 
 /* Search block - search page */
-/* line 767, ../sass/partials/_blocks.scss */
+/* line 805, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results {
   padding: 20px;
   margin: 0;
@@ -2321,15 +2399,15 @@ div.workbench-info-block a {
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 770, ../sass/partials/_blocks.scss */
+/* line 808, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results > div {
   position: relative;
 }
-/* line 774, ../sass/partials/_blocks.scss */
+/* line 812, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-item, #block-ci-search-ci-search-results .form-actions {
   margin: 0;
 }
-/* line 777, ../sass/partials/_blocks.scss */
+/* line 815, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-textfield {
   background: #e9e9e9;
   padding: 10px;
@@ -2340,7 +2418,7 @@ div.workbench-info-block a {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 784, ../sass/partials/_blocks.scss */
+/* line 822, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results input[type=search],
 #block-ci-search-ci-search-results input[type=text] {
   font-size: 1em;
@@ -2357,7 +2435,7 @@ div.workbench-info-block a {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 795, ../sass/partials/_blocks.scss */
+/* line 833, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results input[type=submit] {
   position: absolute;
   right: 10px;
@@ -2370,28 +2448,28 @@ div.workbench-info-block a {
   -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-/* line 803, ../sass/partials/_blocks.scss */
+/* line 841, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-checkboxes {
   overflow: hidden;
 }
-/* line 805, ../sass/partials/_blocks.scss */
+/* line 843, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-checkboxes > label {
   font-size: 1.2em;
   margin: 1em 0 0.75em 0;
 }
-/* line 809, ../sass/partials/_blocks.scss */
+/* line 847, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-checkboxes .form-type-checkbox {
   float: left;
   margin-right: 10px;
 }
 
 /* Search block - frontpage */
-/* line 817, ../sass/partials/_blocks.scss */
+/* line 855, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front {
   font-size: 10px;
   text-align: center;
 }
-/* line 820, ../sass/partials/_blocks.scss */
+/* line 858, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form {
   background: #cfcfcf;
   padding: 10px;
@@ -2404,7 +2482,7 @@ div.workbench-info-block a {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 828, ../sass/partials/_blocks.scss */
+/* line 866, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form input[type=search],
 #block-ci-search-ci-search-front form input[type=text] {
   font-size: 1em;
@@ -2421,7 +2499,7 @@ div.workbench-info-block a {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 839, ../sass/partials/_blocks.scss */
+/* line 877, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form input[type=submit] {
   position: absolute;
   right: 10px;
@@ -2434,17 +2512,17 @@ div.workbench-info-block a {
   -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-/* line 847, ../sass/partials/_blocks.scss */
+/* line 885, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .form-item, #block-ci-search-ci-search-front form .form-actions {
   margin: 0;
 }
-/* line 851, ../sass/partials/_blocks.scss */
+/* line 889, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front p.small-text {
   font-size: 11px;
   line-height: 1.15em;
   color: #474747;
 }
-/* line 855, ../sass/partials/_blocks.scss */
+/* line 893, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front p.small-text a, #block-ci-search-ci-search-front p.small-text strong {
   color: #474747;
   margin-right: 1em;
@@ -2452,7 +2530,7 @@ div.workbench-info-block a {
 }
 
 /* Search autocomplete widget */
-/* line 863, ../sass/partials/_blocks.scss */
+/* line 901, ../sass/partials/_blocks.scss */
 .ac_results {
   width: 660px !important;
   border: none;
@@ -2468,22 +2546,22 @@ div.workbench-info-block a {
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 870, ../sass/partials/_blocks.scss */
+/* line 908, ../sass/partials/_blocks.scss */
 .ac_results ul li {
   padding: 20px;
   font-size: 1em;
   cursor: pointer;
   color: #474747;
 }
-/* line 882, ../sass/partials/_blocks.scss */
+/* line 920, ../sass/partials/_blocks.scss */
 .ac_results ul .ac_even {
   background: white;
 }
-/* line 885, ../sass/partials/_blocks.scss */
+/* line 923, ../sass/partials/_blocks.scss */
 .ac_results ul .ac_odd {
   background: #f6f6f6;
 }
-/* line 888, ../sass/partials/_blocks.scss */
+/* line 926, ../sass/partials/_blocks.scss */
 .ac_results ul .ac_over {
   background: #cfcfcf;
   color: #474747;
@@ -3108,19 +3186,25 @@ div.workbench-info-block a {
   top: 0;
   border: none;
 }
-/* line 404, ../sass/partials/_views.scss */
+/* line 405, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-link a,
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-pdf a,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-self-service-link a,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-link a,
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-self-service-pdf a,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-link a,
+#region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-pdf a,
 #region-content .view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-field-self-service-link a,
 #region-content .view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-link a,
+#region-content .view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-field-self-service-pdf a,
 #region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a,
 #region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content .accordion-content-level-2 .views-field-link a,
+#region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-pdf a,
 #region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-field-self-service-link a,
-#region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-link a {
+#region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-link a,
+#region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-field-self-service-pdf a {
   display: inline-block;
   color: white;
   text-transform: uppercase;
@@ -3138,19 +3222,25 @@ div.workbench-info-block a {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 415, ../sass/partials/_views.scss */
+/* line 417, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-link a:after,
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-pdf a:after,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-link a:after,
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-self-service-pdf a:after,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-link a:after,
+#region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-pdf a:after,
 #region-content .view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
 #region-content .view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-link a:after,
+#region-content .view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .views-field-field-self-service-pdf a:after,
 #region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
 #region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content .accordion-content-level-2 .views-field-link a:after,
+#region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-pdf a:after,
 #region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
-#region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-link a:after {
+#region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-link a:after,
+#region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-field-self-service-pdf a:after {
   font-family: 'Rebild';
   content: attr(data-icon);
   speak: none;
@@ -3174,7 +3264,7 @@ div.workbench-info-block a {
   -o-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 429, ../sass/partials/_views.scss */
+/* line 431, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-main-body a,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-main-body a,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-main-body a,
@@ -3183,7 +3273,7 @@ div.workbench-info-block a {
 #region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-field-main-body a {
   color: #68a386;
 }
-/* line 432, ../sass/partials/_views.scss */
+/* line 434, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-main-body ul,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-main-body ul,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-main-body ul,
@@ -3193,7 +3283,7 @@ div.workbench-info-block a {
   margin-left: 40px;
   margin-bottom: 1em;
 }
-/* line 435, ../sass/partials/_views.scss */
+/* line 437, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-main-body ul li,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-main-body ul li,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-main-body ul li,
@@ -3202,7 +3292,7 @@ div.workbench-info-block a {
 #region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-field-main-body ul li {
   margin-bottom: 0.5em;
 }
-/* line 440, ../sass/partials/_views.scss */
+/* line 442, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:hover,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-field-self-service-link a:hover,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:hover,
@@ -3211,7 +3301,7 @@ div.workbench-info-block a {
 #region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-field-self-service-link a:hover {
   text-decoration: none;
 }
-/* line 443, ../sass/partials/_views.scss */
+/* line 445, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-description,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .views-field-description,
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .views-field-description,
@@ -3224,33 +3314,33 @@ div.workbench-info-block a {
 }
 
 /* Alphabetical list */
-/* line 456, ../sass/partials/_views.scss */
+/* line 458, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content > h3 {
   padding: 8px;
 }
 
 /* Embedded accordion */
-/* line 464, ../sass/partials/_views.scss */
+/* line 466, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-embedded {
   margin: 30px 0 0 0;
 }
-/* line 466, ../sass/partials/_views.scss */
+/* line 468, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-embedded h2.title {
   font-size: 1.08em;
   margin: 20px 0 10px;
 }
-/* line 471, ../sass/partials/_views.scss */
+/* line 473, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-embedded .view-content > h3 {
   background: #68a386;
   color: white;
   padding: 6px 8px;
 }
-/* line 476, ../sass/partials/_views.scss */
+/* line 478, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-embedded .view-content > h3.ui-state-active {
   background: #a3a3a3;
   color: #474747;
 }
-/* line 480, ../sass/partials/_views.scss */
+/* line 482, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 {
   padding: 10px 20px 20px;
 }
@@ -3258,40 +3348,40 @@ div.workbench-info-block a {
 /**
  * AGENDAS
  */
-/* line 492, ../sass/partials/_views.scss */
+/* line 494, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .view-filters {
   margin: 20px 0;
 }
-/* line 494, ../sass/partials/_views.scss */
+/* line 496, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .view-filters label {
   margin: 0 0 10px 0;
 }
-/* line 498, ../sass/partials/_views.scss */
+/* line 500, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .view-filters .views-exposed-widget select {
   margin: 0;
   padding: 0;
 }
-/* line 502, ../sass/partials/_views.scss */
+/* line 504, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .view-filters .views-exposed-widget .customSelect {
   border: 1px solid #dbdbdb;
 }
-/* line 505, ../sass/partials/_views.scss */
+/* line 507, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .view-filters .views-exposed-widget .form-submit {
   background: #7f9dcd;
   border: none;
   margin: 24px 0 0 0;
 }
-/* line 512, ../sass/partials/_views.scss */
+/* line 514, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview h3 {
   text-transform: capitalize;
   margin-top: 20px;
   margin-bottom: 0.5em;
 }
-/* line 517, ../sass/partials/_views.scss */
+/* line 519, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .views-row {
   margin-bottom: 0.5em;
 }
-/* line 519, ../sass/partials/_views.scss */
+/* line 521, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .views-row a {
   color: #7f9dcd;
 }
@@ -3299,37 +3389,37 @@ div.workbench-info-block a {
 /**
  * SEARCH RESULTS
  */
-/* line 528, ../sass/partials/_views.scss */
+/* line 530, ../sass/partials/_views.scss */
 #search-results-page h2 {
   padding-bottom: 1em;
 }
-/* line 531, ../sass/partials/_views.scss */
+/* line 533, ../sass/partials/_views.scss */
 #search-results-page .search-result {
   padding: 15px 10px;
   margin: 0;
 }
-/* line 537, ../sass/partials/_views.scss */
+/* line 539, ../sass/partials/_views.scss */
 #search-results-page .search-result h3 {
   margin: 0 0 10px 0;
 }
-/* line 539, ../sass/partials/_views.scss */
+/* line 541, ../sass/partials/_views.scss */
 #search-results-page .search-result h3 a {
   color: #7f9dcd;
 }
-/* line 543, ../sass/partials/_views.scss */
+/* line 545, ../sass/partials/_views.scss */
 #search-results-page .search-result .search-date {
   font-size: 0.91667em;
   margin: 0 0 10px;
 }
-/* line 547, ../sass/partials/_views.scss */
+/* line 549, ../sass/partials/_views.scss */
 #search-results-page .search-result .search-text {
   line-height: 1.25em;
 }
-/* line 551, ../sass/partials/_views.scss */
+/* line 553, ../sass/partials/_views.scss */
 #search-results-page .odd {
   background: #f6f6f6;
 }
-/* line 554, ../sass/partials/_views.scss */
+/* line 556, ../sass/partials/_views.scss */
 #search-results-page ul.pager {
   margin: 20px 0;
 }
@@ -3337,11 +3427,11 @@ div.workbench-info-block a {
 /**
  * OFFERINGS
  */
-/* line 564, ../sass/partials/_views.scss */
+/* line 566, ../sass/partials/_views.scss */
 #region-content .view-offerings h2 {
   margin: 20px 0;
 }
-/* line 567, ../sass/partials/_views.scss */
+/* line 569, ../sass/partials/_views.scss */
 #region-content .view-offerings .views-row {
   margin-bottom: 20px;
 }

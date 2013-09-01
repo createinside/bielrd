@@ -76,6 +76,7 @@ Nodes
 		padding: $spacing-std*2 0;
 	}
 }
+
 /*------------------------------------------------------------------
 	Menus
 -------------------------------------------------------------------*/
@@ -412,13 +413,15 @@ Nodes
 .node {
 	#content-main.has-sidebar {
 		border-right: 1px dotted $text-color;
-		width: 71%;
+		width: 70%;
 		padding-right: 3%;
+		float: left;
 	}
 	#region-content-sidebar {
 		float: right;
 		width: 23%;
 		padding-left: 3%;
+		margin-top: 0;
 	}
 }
 
