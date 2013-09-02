@@ -229,18 +229,20 @@ function rebild_edagsorden_feeds_importer_default() {
         'sources' => array(
           'xpathparser:0' => 'AgendaId',
           'xpathparser:1' => 'Id',
+          'xpathparser:10' => 'Documents/Document[DocumentType="Billede"]/SourceFileName',
           'xpathparser:2' => 'Id',
           'xpathparser:3' => 'Caption',
           'xpathparser:4' => 'Number',
           'xpathparser:5' => 'AgendaId',
           'xpathparser:6' => 'Presentations/Presentation/PreparedContent',
-          'xpathparser:7' => 'Documents/Document/Title',
-          'xpathparser:8' => 'Documents/Document/SourceFileName',
+          'xpathparser:7' => 'Documents/Document[DocumentType="Bilag"]/Title',
+          'xpathparser:8' => 'Documents/Document[DocumentType="Bilag"]/SourceFileName',
           'xpathparser:9' => 'CommitteeId',
         ),
         'rawXML' => array(
           'xpathparser:0' => 0,
           'xpathparser:1' => 0,
+          'xpathparser:10' => 0,
           'xpathparser:2' => 0,
           'xpathparser:3' => 0,
           'xpathparser:4' => 0,
@@ -257,6 +259,7 @@ function rebild_edagsorden_feeds_importer_default() {
             'context' => 0,
             'xpathparser:0' => 0,
             'xpathparser:1' => 0,
+            'xpathparser:10' => 0,
             'xpathparser:2' => 0,
             'xpathparser:3' => 0,
             'xpathparser:4' => 0,
@@ -290,41 +293,46 @@ function rebild_edagsorden_feeds_importer_default() {
             'unique' => 1,
           ),
           2 => array(
+            'source' => 'xpathparser:10',
+            'target' => 'Temporary target 1',
+            'unique' => FALSE,
+          ),
+          3 => array(
             'source' => 'xpathparser:2',
             'target' => 'field_agenda_item_id',
             'unique' => FALSE,
           ),
-          3 => array(
+          4 => array(
             'source' => 'xpathparser:3',
             'target' => 'field_agenda_item_caption',
             'unique' => FALSE,
           ),
-          4 => array(
+          5 => array(
             'source' => 'xpathparser:4',
             'target' => 'field_agenda_item_number',
             'unique' => FALSE,
           ),
-          5 => array(
+          6 => array(
             'source' => 'xpathparser:5',
             'target' => 'field_agenda_id',
             'unique' => FALSE,
           ),
-          6 => array(
+          7 => array(
             'source' => 'xpathparser:6',
             'target' => 'field_agenda_item_content',
             'unique' => FALSE,
           ),
-          7 => array(
+          8 => array(
             'source' => 'xpathparser:7',
             'target' => 'field_agenda_item_docs:title',
             'unique' => FALSE,
           ),
-          8 => array(
+          9 => array(
             'source' => 'xpathparser:8',
             'target' => 'field_agenda_item_docs:url',
             'unique' => FALSE,
           ),
-          9 => array(
+          10 => array(
             'source' => 'xpathparser:9',
             'target' => 'field_agenda_com_id',
             'unique' => FALSE,
