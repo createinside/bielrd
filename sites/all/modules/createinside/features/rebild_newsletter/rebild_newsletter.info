@@ -8,7 +8,6 @@ dependencies[] = mimemail_compress
 dependencies[] = node
 dependencies[] = simplenews
 dependencies[] = simplenews_scheduler
-dependencies[] = smtp
 dependencies[] = text
 dependencies[] = viewreference
 dependencies[] = views

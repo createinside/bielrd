@@ -34,6 +34,7 @@ features[feeds_importer][] = edagsorden_committee_importer
 features[feeds_importer][] = edagsorden_item_importer
 features[feeds_tamper][] = edagsorden_agenda_importer-xpathparser_3-string_to_unix_timestamp
 features[feeds_tamper][] = edagsorden_agenda_importer-xpathparser_4-string_to_unix_timestamp
+features[feeds_tamper][] = edagsorden_item_importer-xpathparser_6-img_parser
 features[feeds_tamper][] = edagsorden_item_importer-xpathparser_8-item_url
 features[field_base][] = field_agenda_com_id
 features[field_base][] = field_agenda_committee

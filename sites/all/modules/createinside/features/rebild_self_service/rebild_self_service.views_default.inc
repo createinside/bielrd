@@ -258,6 +258,11 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'self_service' => 'self_service',
   );
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
 
   /* Display: Forsideblok */
   $handler = $view->new_display('block', 'Forsideblok', 'block');
@@ -792,6 +797,11 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'self_service' => 'self_service',
   );
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
 
   /* Display: Sidebar */
   $handler = $view->new_display('block', 'Sidebar', 'block_1');
