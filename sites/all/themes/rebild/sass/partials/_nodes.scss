@@ -157,6 +157,11 @@ Calendar
 					a {
 						color: white;
 					}
+					a .field-content:before {			
+						@include icon-prepare();
+						content: "\e010";	
+						margin-right: 0.5em;
+					}
 				}
 			.ui-accordion-content {
 				padding: $spacing-std/2 $spacing-std;
@@ -235,12 +240,17 @@ Calendar
 		.field-label {
 			margin: 0;
 		}
+		table {
+			max-width: 100%;
+		}
 		table tr td {
 			border: 1px solid $text-color;
 		}
+		/*
 		img {
 			display: none;
 		}
+		*/
 	}
 }
 

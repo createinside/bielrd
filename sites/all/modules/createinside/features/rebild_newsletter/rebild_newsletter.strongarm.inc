@@ -138,7 +138,7 @@ function rebild_newsletter_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'mail_system';
   $strongarm->value = array(
-    'default-system' => 'MimeMailSystem',
+    'default-system' => 'DefaultMailSystem',
     'mimemail' => 'MimeMailSystem',
   );
   $export['mail_system'] = $strongarm;

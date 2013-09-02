@@ -41,7 +41,7 @@ content/selvbetjening',
     'delta' => 'selfservice_blocks-block_1',
     'module' => 'views',
     'node_types' => array(),
-    'pages' => '',
+    'pages' => 'selvbetjening',
     'roles' => array(),
     'themes' => array(
       'rebild' => array(
