@@ -101,8 +101,8 @@ function edagsorden_importer_committees_import() {
 	/**
 	 * Initiate feeds committee importer
 	 */
-	$committee_source = variable_get('edagsorden_root_url', '')."/committees.xml"; // http://localhost/drupal/sites/default/files/edagsorden/committees.xml"
-							
+	$committee_source = variable_get('edagsorden_root_url', '')."/committees.xml"; 
+								
 	$importer_id = 'edagsorden_committee_importer';
 	$feedSource = feeds_source($importer_id);
 	$config = $feedSource->getConfig();
@@ -154,118 +154,4 @@ function edagsorden_importer_committees_import() {
 			$feedSource->import();
 		}
 	}
-}
-
-/**
- * Get Committee
- *
- * Returns committee term based on id
- *
- * @param int $com_id
- *		The committee id
- * 
- * @return object 
- *		The committee term
- */
-function edagsorden_importer_get_committee($com_id) {
-   
-	// Get Vocabulary Id (Committees)
-	$vid = db_select('taxonomy_vocabulary', 'tv')
-				->fields('tv', array('vid'))
-				->condition('machine_name', 'edagsorden_committees')
-				->execute()
-				->fetchField();
-	
-	// Get Term with Committee Id
-	$query = new EntityFieldQuery();
-	$query->entityCondition('entity_type', 'taxonomy_term')
-				->propertyCondition('vid', $vid)
-				->fieldCondition('field_edagsorden_com_id', 'value', intval($com_id), '=');
-	$result = $query->execute();
-	
-	if (isset($result['taxonomy_term'])) {
-		$tids = array_keys($result['taxonomy_term']);
-		$tid = reset($tids);
-		$term = taxonomy_term_load($tid);
-		return $term;
-	}
-}
-
-/**
- * Create Committee
- *
- * @param int $com_name
- *		The committee name
- *
- * @param int $com_id
- *		The committee id
- *
- * @return int tid 
- *		The term id of the created committee
- */
-function edagsorden_importer_create_committee($com_name, $com_id) {
-
-	// Get Vocabulary Id (Committees)
-	$vid = db_select('taxonomy_vocabulary', 'tv')
-				->fields('tv', array('vid'))
-				->condition('machine_name', 'edagsorden_committees')
-				->execute()
-				->fetchField();
-	
-	$term = new stdClass();
-	$term->name = $com_name;
-	$term->vid = $vid;
-	$term->field_edagsorden_com_id[LANGUAGE_NONE][0]["value"] = $com_id;
-	taxonomy_term_save($term);
-	return $term->tid;
-}
-
-/**
- * Update Committee
- */
-function edagsorden_importer_update_committee($term, $com_name) {
-	$term->name = $com_name;
-	taxonomy_term_save($term);
-}
-
-/**
- * Get Agenda
- *
- * Returns agenda node based on id
- *
- * @param int $agenda_id
- *		The agenda id
- * 
- * @return object 
- *		The agenda node
- */
-function edagsorden_importer_get_agenda($agenda_id){
-	
-	// Get Agenda by Agenda id
-	$query = new EntityFieldQuery();
-	$query->entityCondition('entity_type', 'node')
-				->propertyCondition('type', 'agenda')
-				->fieldCondition('field_agenda_id', 'value', intval($agenda_id), '=');
-	$result = $query->execute();
-	
-	if (isset($result['node'])) {
-		$nids = array_keys($result['node']);
-		$nid = reset($nids);
-		$node = node_load($nid);
-		return $node;
-	}
-}
-
-/**
- * Create Agenda
- */
-function edagsorden_importer_create_agenda() {
-
-}
-
-/**
- * Update Agenda
- */
-function edagsorden_importer_update_agenda() {
-
 }

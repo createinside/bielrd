@@ -235,12 +235,17 @@ Calendar
 		.field-label {
 			margin: 0;
 		}
+		table {
+			max-width: 100%;
+		}
 		table tr td {
 			border: 1px solid $text-color;
 		}
+		/*
 		img {
 			display: none;
 		}
+		*/
 	}
 }
 
