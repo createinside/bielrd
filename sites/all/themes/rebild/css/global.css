@@ -1128,7 +1128,23 @@ Calendar
 #region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header.ui-state-active a {
   color: white;
 }
-/* line 161, ../sass/partials/_nodes.scss */
+/* line 160, ../sass/partials/_nodes.scss */
+#region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active a .field-content:before,
+#region-content .node-news-article .ui-accordion .ui-accordion-header.ui-state-active a .field-content:before,
+#region-content .node-agenda .ui-accordion .ui-accordion-header.ui-state-active a .field-content:before,
+#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header.ui-state-active a .field-content:before {
+  font-family: 'Rebild';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\e010";
+  margin-right: 0.5em;
+}
+/* line 166, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-content,
 #region-content .node-news-article .ui-accordion .ui-accordion-content,
 #region-content .node-agenda .ui-accordion .ui-accordion-content,
@@ -1141,21 +1157,21 @@ Calendar
 	Borger dk
 -------------------------------------------------------------------*/
 /* Accordion */
-/* line 176, ../sass/partials/_nodes.scss */
+/* line 181, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .field.field-name-body {
   margin: 2em 0 2em 0;
 }
-/* line 179, ../sass/partials/_nodes.scss */
+/* line 184, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .field-name-field-os2web-borger-dk-header {
   margin-bottom: 20px;
   font-size: 1.33333em;
   line-height: 1.15em;
 }
-/* line 184, ../sass/partials/_nodes.scss */
+/* line 189, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle {
   position: relative;
 }
-/* line 186, ../sass/partials/_nodes.scss */
+/* line 191, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle h2.mArticle {
   background: #e6e6e6;
   color: #474747;
@@ -1171,7 +1187,7 @@ Calendar
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 197, ../sass/partials/_nodes.scss */
+/* line 202, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle h2.mArticle:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1184,12 +1200,12 @@ Calendar
   content: "\e00f";
   margin-right: 0.5em;
 }
-/* line 202, ../sass/partials/_nodes.scss */
+/* line 207, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle div.mArticle {
   padding: 10px 20px;
   margin: 0;
 }
-/* line 207, ../sass/partials/_nodes.scss */
+/* line 212, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article h2.mArticle.ui-state-active {
   background-color: #7f9dcd;
   color: #fff;
@@ -1198,7 +1214,7 @@ Calendar
 /*------------------------------------------------------------------
 	Agendas
 -------------------------------------------------------------------*/
-/* line 219, ../sass/partials/_nodes.scss */
+/* line 224, ../sass/partials/_nodes.scss */
 #region-content .node-agenda {
   /*
   img {
@@ -1206,37 +1222,37 @@ Calendar
   }
   */
 }
-/* line 221, ../sass/partials/_nodes.scss */
+/* line 226, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content {
   padding: 10px 20px 20px;
 }
-/* line 223, ../sass/partials/_nodes.scss */
+/* line 228, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content .views-label {
   font-weight: bold;
 }
-/* line 226, ../sass/partials/_nodes.scss */
+/* line 231, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content ul {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-/* line 229, ../sass/partials/_nodes.scss */
+/* line 234, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content ul li {
   margin: 0;
 }
-/* line 235, ../sass/partials/_nodes.scss */
+/* line 240, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .field-label {
   margin: 0;
 }
-/* line 238, ../sass/partials/_nodes.scss */
+/* line 243, ../sass/partials/_nodes.scss */
 #region-content .node-agenda table {
   max-width: 100%;
 }
-/* line 241, ../sass/partials/_nodes.scss */
+/* line 246, ../sass/partials/_nodes.scss */
 #region-content .node-agenda table tr td {
   border: 1px solid #474747;
 }
 
-/* line 254, ../sass/partials/_nodes.scss */
+/* line 259, ../sass/partials/_nodes.scss */
 #region-content .node-offering .field-name-field-offering-link a {
   display: inline-block;
   color: white;
@@ -1256,7 +1272,7 @@ Calendar
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 265, ../sass/partials/_nodes.scss */
+/* line 270, ../sass/partials/_nodes.scss */
 #region-content .node-offering .field-name-field-offering-link a:after {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1285,7 +1301,7 @@ Calendar
 /*------------------------------------------------------------------
 	Calendar
 -------------------------------------------------------------------*/
-/* line 286, ../sass/partials/_nodes.scss */
+/* line 291, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info {
   padding: 10px;
   margin-bottom: 20px;
@@ -1296,40 +1312,40 @@ Calendar
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 290, ../sass/partials/_nodes.scss */
+/* line 295, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .fieldset-legend {
   position: absolute;
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 15px;
 }
-/* line 296, ../sass/partials/_nodes.scss */
+/* line 301, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .fieldset-wrapper {
   margin-top: 40px;
 }
-/* line 299, ../sass/partials/_nodes.scss */
+/* line 304, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact {
   margin-bottom: 20px;
 }
-/* line 301, ../sass/partials/_nodes.scss */
+/* line 306, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact .fieldset-legend {
   position: relative;
   margin-top: 0;
   text-transform: none;
 }
-/* line 306, ../sass/partials/_nodes.scss */
+/* line 311, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact .fieldset-wrapper {
   margin-top: 0;
 }
-/* line 309, ../sass/partials/_nodes.scss */
+/* line 314, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact .field {
   margin-bottom: 0;
 }
-/* line 313, ../sass/partials/_nodes.scss */
+/* line 318, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact .field-name-field-calender-email a {
   color: #474747;
 }
-/* line 321, ../sass/partials/_nodes.scss */
+/* line 326, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .field-name-field-calendar-ticket-link a {
   background-image: url("../img/bestil_billet.png");
   background-repeat: no-repeat;
@@ -1342,7 +1358,7 @@ Calendar
 /*------------------------------------------------------------------
 	Cloned page
 -------------------------------------------------------------------*/
-/* line 340, ../sass/partials/_nodes.scss */
+/* line 345, ../sass/partials/_nodes.scss */
 #region-content .field-name-field-cloned-page #region-content-sidebar ul {
   margin-left: 0;
 }

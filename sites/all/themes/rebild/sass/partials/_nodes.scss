@@ -157,6 +157,11 @@ Calendar
 					a {
 						color: white;
 					}
+					a .field-content:before {			
+						@include icon-prepare();
+						content: "\e010";	
+						margin-right: 0.5em;
+					}
 				}
 			.ui-accordion-content {
 				padding: $spacing-std/2 $spacing-std;
