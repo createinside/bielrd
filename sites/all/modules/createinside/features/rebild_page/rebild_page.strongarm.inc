@@ -89,6 +89,18 @@ function rebild_page_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'print' => array(
+        'custom_settings' => FALSE,
+      ),
+      'email_plain' => array(
+        'custom_settings' => FALSE,
+      ),
+      'email_html' => array(
+        'custom_settings' => FALSE,
+      ),
+      'email_textalt' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -122,6 +134,12 @@ function rebild_page_strongarm() {
           ),
         ),
         'selfservice_items_embedded' => array(
+          'default' => array(
+            'weight' => '6',
+            'visible' => TRUE,
+          ),
+        ),
+        'content_accordion_revisions__entity_view_1' => array(
           'default' => array(
             'weight' => '5',
             'visible' => TRUE,
