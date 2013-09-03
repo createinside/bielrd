@@ -138,7 +138,7 @@ function rebild_newsletter_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'mail_system';
   $strongarm->value = array(
-    'default-system' => 'DefaultMailSystem',
+    'default-system' => 'MimeMailSystem',
     'mimemail' => 'MimeMailSystem',
   );
   $export['mail_system'] = $strongarm;
@@ -196,7 +196,7 @@ function rebild_newsletter_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'mimemail_mail';
-  $strongarm->value = 'dev@createinside.com';
+  $strongarm->value = 'no-reply@rebild.dk';
   $export['mimemail_mail'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -217,7 +217,7 @@ function rebild_newsletter_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'mimemail_sitestyle';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['mimemail_sitestyle'] = $strongarm;
 
   $strongarm = new stdClass();

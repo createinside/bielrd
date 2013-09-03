@@ -242,15 +242,11 @@ Calendar
 		}
 		table {
 			max-width: 100%;
-		}
-		table tr td {
 			border: 1px solid $text-color;
 		}
-		/*
-		img {
-			display: none;
+		table tr td {
+			padding: 5px;
 		}
-		*/
 	}
 }
 

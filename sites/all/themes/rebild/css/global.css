@@ -424,6 +424,23 @@ select {
  * Newsletter subscriptions 
  */
 /* line 93, ../sass/partials/_forms.scss */
+#simplenews-subscriptions-page-form legend {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+/* line 97, ../sass/partials/_forms.scss */
+#simplenews-subscriptions-page-form .fieldset-description {
+  margin-bottom: 20px;
+}
+/* line 100, ../sass/partials/_forms.scss */
+#simplenews-subscriptions-page-form #edit-newsletters {
+  margin-bottom: 20px;
+}
+/* line 103, ../sass/partials/_forms.scss */
+#simplenews-subscriptions-page-form .form-type-textfield {
+  margin: 20px 0;
+}
+/* line 106, ../sass/partials/_forms.scss */
 #simplenews-subscriptions-page-form .form-submit {
   margin-right: 10px;
 }
@@ -1214,14 +1231,6 @@ Calendar
 /*------------------------------------------------------------------
 	Agendas
 -------------------------------------------------------------------*/
-/* line 224, ../sass/partials/_nodes.scss */
-#region-content .node-agenda {
-  /*
-  img {
-  	display: none;
-  }
-  */
-}
 /* line 226, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content {
   padding: 10px 20px 20px;
@@ -1246,13 +1255,14 @@ Calendar
 /* line 243, ../sass/partials/_nodes.scss */
 #region-content .node-agenda table {
   max-width: 100%;
-}
-/* line 246, ../sass/partials/_nodes.scss */
-#region-content .node-agenda table tr td {
   border: 1px solid #474747;
 }
+/* line 247, ../sass/partials/_nodes.scss */
+#region-content .node-agenda table tr td {
+  padding: 5px;
+}
 
-/* line 259, ../sass/partials/_nodes.scss */
+/* line 255, ../sass/partials/_nodes.scss */
 #region-content .node-offering .field-name-field-offering-link a {
   display: inline-block;
   color: white;
@@ -1272,7 +1282,7 @@ Calendar
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 270, ../sass/partials/_nodes.scss */
+/* line 266, ../sass/partials/_nodes.scss */
 #region-content .node-offering .field-name-field-offering-link a:after {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1301,7 +1311,7 @@ Calendar
 /*------------------------------------------------------------------
 	Calendar
 -------------------------------------------------------------------*/
-/* line 291, ../sass/partials/_nodes.scss */
+/* line 287, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info {
   padding: 10px;
   margin-bottom: 20px;
@@ -1312,40 +1322,40 @@ Calendar
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 295, ../sass/partials/_nodes.scss */
+/* line 291, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .fieldset-legend {
   position: absolute;
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 15px;
 }
-/* line 301, ../sass/partials/_nodes.scss */
+/* line 297, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .fieldset-wrapper {
   margin-top: 40px;
 }
-/* line 304, ../sass/partials/_nodes.scss */
+/* line 300, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact {
   margin-bottom: 20px;
 }
-/* line 306, ../sass/partials/_nodes.scss */
+/* line 302, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact .fieldset-legend {
   position: relative;
   margin-top: 0;
   text-transform: none;
 }
-/* line 311, ../sass/partials/_nodes.scss */
+/* line 307, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact .fieldset-wrapper {
   margin-top: 0;
 }
-/* line 314, ../sass/partials/_nodes.scss */
+/* line 310, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact .field {
   margin-bottom: 0;
 }
-/* line 318, ../sass/partials/_nodes.scss */
+/* line 314, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact .field-name-field-calender-email a {
   color: #474747;
 }
-/* line 326, ../sass/partials/_nodes.scss */
+/* line 322, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .field-name-field-calendar-ticket-link a {
   background-image: url("../img/bestil_billet.png");
   background-repeat: no-repeat;
@@ -1358,7 +1368,7 @@ Calendar
 /*------------------------------------------------------------------
 	Cloned page
 -------------------------------------------------------------------*/
-/* line 345, ../sass/partials/_nodes.scss */
+/* line 341, ../sass/partials/_nodes.scss */
 #region-content .field-name-field-cloned-page #region-content-sidebar ul {
   margin-left: 0;
 }
