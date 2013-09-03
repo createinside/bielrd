@@ -13,7 +13,6 @@ dependencies[] = eva
 dependencies[] = features
 dependencies[] = field_collection
 dependencies[] = field_collection_fieldset
-dependencies[] = field_collection_wbm
 dependencies[] = field_group
 dependencies[] = field_permissions
 dependencies[] = file_entity

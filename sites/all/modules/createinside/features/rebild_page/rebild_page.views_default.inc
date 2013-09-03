@@ -46,6 +46,7 @@ function rebild_page_views_default_views() {
   $handler->display->display_options['relationships']['field_main_accordion_value']['table'] = 'field_revision_field_main_accordion';
   $handler->display->display_options['relationships']['field_main_accordion_value']['field'] = 'field_main_accordion_value';
   $handler->display->display_options['relationships']['field_main_accordion_value']['label'] = 'accordion';
+  $handler->display->display_options['relationships']['field_main_accordion_value']['required'] = TRUE;
   $handler->display->display_options['relationships']['field_main_accordion_value']['delta'] = '-1';
   /* Felt: Field collection item: Overskrift */
   $handler->display->display_options['fields']['field_accordion_title']['id'] = 'field_accordion_title';
