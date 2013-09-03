@@ -28,12 +28,12 @@
  * @see template_preprocess_simplenews_newsletter_footer()
  */
 ?>
-<table>
+<table width="100%">
 	<tr>
-		<td style="text-align: center;">	
+		<td style="text-align: center; font-size: 11px; margin-top: 20px;">	
 		<?php if (!$opt_out_hidden): ?>
 		  <?php if ($format == 'html'): ?>
-		    <p class="newsletter-footer"><a href="[simplenews-subscriber:unsubscribe-url]"><?php print $unsubscribe_text ?></a></p>
+		    <p style="font-size: 11px; margin-top: 20px;"><a href="[simplenews-subscriber:unsubscribe-url]"><?php print $unsubscribe_text ?></a></p>
 		  <?php else: ?>
 		  -- <?php print $unsubscribe_text ?>: [simplenews-subscriber:unsubscribe-url]
 		  <?php endif ?>

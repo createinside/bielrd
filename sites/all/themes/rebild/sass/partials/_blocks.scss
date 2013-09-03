@@ -357,8 +357,16 @@
 		}
 		.content {
 			ul {
+				margin-bottom: 0;
 				li {
-					margin-bottom: 1em;
+					margin-bottom: 1.6em;
+					a {
+						color: white;
+						text-decoration: none;
+					}
+					a:hover {
+						text-decoration: underline;
+					}
 				}
 				li:before {
 					@include icon-prepare();

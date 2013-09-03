@@ -30,17 +30,20 @@ function rebild_layout_default_fe_block_boxes() {
 
   $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'Tilpasset block - Vil du være frivillig';
-  $fe_block_boxes->format = 'full_html';
+  $fe_block_boxes->format = 'filtered_html';
   $fe_block_boxes->machine_name = 'custom_block_frivillig';
-  $fe_block_boxes->body = '<h2>Vil du være frivillig</h2><p>Har du lyst til at gøre en forskel for<br />andre gennem frivilligt socialt arbejde?</p>';
+  $fe_block_boxes->body = '<h2>Vil du være frivillig</h2>
+<p>Har du lyst til at gøre en forskel for<br />andre gennem frivilligt socialt arbejde?</p>';
 
   $export['custom_block_frivillig'] = $fe_block_boxes;
 
   $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'Tilpasset block - Rebildporten';
-  $fe_block_boxes->format = 'full_html';
+  $fe_block_boxes->format = 'filtered_html';
   $fe_block_boxes->machine_name = 'custom_block_rebildporten';
-  $fe_block_boxes->body = '<h2><a href="http://rebildporten.dk"><img src="sites/all/themes/rebild/img/rebild_port.png" width="181" height="34" /></a></h2><p class="rold"><strong>Rold Skov •&nbsp;Rebild Bakker</strong></p><p>Din indgang til oplevelser, events og spisesteder i Rold Skov og <br />Rebild Bakker</p>';
+  $fe_block_boxes->body = '<h2><a href="http://rebildporten.dk"><img src="/sites/all/themes/rebild/img/rebild_port.png" alt="" width="181" height="34" /></a></h2>
+<p class="rold"><strong>Rold Skov •&nbsp;Rebild Bakker</strong></p>
+<p>Din indgang til oplevelser, events og spisesteder i Rold Skov og <br />Rebild Bakker</p>';
 
   $export['custom_block_rebildporten'] = $fe_block_boxes;
 
@@ -127,9 +130,15 @@ function rebild_layout_default_fe_block_boxes() {
 
   $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'Genveje';
-  $fe_block_boxes->format = 'full_html';
+  $fe_block_boxes->format = 'filtered_html';
   $fe_block_boxes->machine_name = 'rebild_shortcuts_front';
-  $fe_block_boxes->body = '<ul><li><span style="line-height: 1.538em;" data-mce-mark="1">Book en lokalpolitiker&nbsp;</span></li><li><span style="line-height: 1.538em;" data-mce-mark="1">Ledige stillinger</span></li><li><span style="line-height: 1.538em;" data-mce-mark="1">Din kommune informerer</span></li><li><span style="line-height: 1.538em;" data-mce-mark="1">Sådan møder vi borgerne</span></li><li><span style="line-height: 1.538em;">Borgerservicecentret</span></li></ul>';
+  $fe_block_boxes->body = '<ul>
+<li>Book en lokalpolitiker</li>
+<li>Ledige stillinger</li>
+<li>Din kommune informerer</li>
+<li>Sådan møder vi borgerne</li>
+<li><a href="#">Borgerservicecentret</a></li>
+</ul>';
 
   $export['rebild_shortcuts_front'] = $fe_block_boxes;
 

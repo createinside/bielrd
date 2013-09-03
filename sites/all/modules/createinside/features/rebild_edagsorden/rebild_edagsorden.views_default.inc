@@ -71,6 +71,8 @@ function rebild_edagsorden_views_default_views() {
   $handler->display->display_options['fields']['field_agenda_item_content']['field'] = 'field_agenda_item_content';
   $handler->display->display_options['fields']['field_agenda_item_content']['label'] = '';
   $handler->display->display_options['fields']['field_agenda_item_content']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_agenda_item_content']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_agenda_item_content']['separator'] = '';
   /* Felt: Field collection item: Bilag */
   $handler->display->display_options['fields']['field_agenda_item_docs']['id'] = 'field_agenda_item_docs';
   $handler->display->display_options['fields']['field_agenda_item_docs']['table'] = 'field_data_field_agenda_item_docs';
