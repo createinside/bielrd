@@ -396,7 +396,7 @@
 					margin-right: 0.5em;
 				}
 			.accordion-content-level-2 {
-				padding: 0 50px $spacing-std;
+				padding: 0 18px $spacing-std;
 				margin: 0;
 				top: 0;
 				border: none;
@@ -407,6 +407,7 @@
 					color: white;
 					text-transform: uppercase;
 					font-size: $font-size-std;
+					line-height: 1.35em;
 					background-color: $color-purple;
 					padding: 14px 20px;
 					@include background-image(linear-gradient($color-purple, #79648c));
@@ -420,11 +421,10 @@
 					color: $color-purple;
 					background: white;
 					display: inline-block;
-					padding: 0.30em 0.40em 0.4em;
+					padding: 0.25em 0.40em 0.25em;
 					margin: 0 0 0 10px;
 					position: relative;
 					font-size: 0.75em;
-					top: -1px;
 					@include border-radius(2px);
 				}
 				.views-field-field-main-body {

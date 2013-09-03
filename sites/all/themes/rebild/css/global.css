@@ -3215,7 +3215,7 @@ div.workbench-info-block a {
 #region-content .view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2,
 #region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content .accordion-content-level-2,
 #region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 {
-  padding: 0 50px 20px;
+  padding: 0 18px 20px;
   margin: 0;
   top: 0;
   border: none;
@@ -3243,6 +3243,7 @@ div.workbench-info-block a {
   color: white;
   text-transform: uppercase;
   font-size: 1em;
+  line-height: 1.35em;
   background-color: #937ea7;
   padding: 14px 20px;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #937ea7), color-stop(100%, #79648c));
@@ -3256,7 +3257,7 @@ div.workbench-info-block a {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 417, ../sass/partials/_views.scss */
+/* line 418, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-link a:after,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-link a:after,
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .views-field-field-self-service-pdf a:after,
@@ -3287,11 +3288,10 @@ div.workbench-info-block a {
   color: #937ea7;
   background: white;
   display: inline-block;
-  padding: 0.30em 0.40em 0.4em;
+  padding: 0.25em 0.40em 0.25em;
   margin: 0 0 0 10px;
   position: relative;
   font-size: 0.75em;
-  top: -1px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
