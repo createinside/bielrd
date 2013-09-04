@@ -87,12 +87,6 @@ Nodes
 		margin-top: 28px;
 		width: 100%;
 		display: block;
-		> li:hover,
-		> li.hover {
-			> a {
-				color: $link-color-hover;
-			}	
-		}
 		> li {
 			float: left;
 			list-style: none;
@@ -108,8 +102,15 @@ Nodes
 				color: $link-color-active;
 			}	
 		}
+		> li:hover,
+		> li.hover {
+			> a {
+				color: $link-color-hover;
+			}	
+		}
 	}
 }
+
 	/* Sub Menu*/
 	.ultimenu-flyout {
 		width: 1200px;
