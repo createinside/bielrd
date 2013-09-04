@@ -68,6 +68,8 @@ function ci_search_results_form($form, &$form_state) {
 	
 	$form["search_phrase"] = array(
 		"#type" => "textfield",
+		"#prefix" => "<div class='sf-wrapper'>",
+		"#suffix" => "</div>",
 		"#default_value" => (arg(1)!="" ? arg(1) : ""),
 		"#attributes" => array("placeholder" => "Skriv hvad du søger efter her")
 	); 
@@ -91,6 +93,8 @@ function ci_search_front_form($form, &$form_state) {
 
 	$form["search_phrase"] = array(
 		"#type" => "textfield",
+		"#prefix" => "<div class='sf-wrapper'>",
+		"#suffix" => "</div>",
 		"#attributes" => array("placeholder" => "Søg på rebild.dk her og find lige hvad du leder efter!")
 	); 
 	$form["submit"] = array(
@@ -119,7 +123,8 @@ function ci_search_sub_form($form, &$form_state, $tid) {
 	); 
 	$form["search_phrase"] = array(
 		"#type" => "textfield",
-		"#attributes" => array("placeholder" => "Søg under ".$term->name)
+
+ 		"#attributes" => array("placeholder" => "Søg under ".$term->name)
 	); 
 	$form['section'] = array (
 		"#type" => "hidden",

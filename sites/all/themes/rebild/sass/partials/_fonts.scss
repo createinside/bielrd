@@ -26,6 +26,13 @@
 	font-style: normal;
 }
 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+		font-family: 'Rebild';
+    src: url('../fonts/Rebild.svg#Rebild') format('svg');
+  }
+}
+
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
 	@include icon-prepare();
@@ -41,7 +48,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-reorder, .icon-rss, .icon-envelope, .icon-search, .icon-double-angle-right, .icon-double-angle-left, .icon-double-angle-down, .icon-double-angle-up, .icon-list-ul, .icon-facebook, .icon-align-justify, .icon-phone, .icon-sort, .icon-arrow-right, .icon-arrow-left, .icon-arrow-up, .icon-arrow-down, .icon-menu, .icon-arrow-right-2, .icon-arrow-up-2, .icon-arrow-down-2, .icon-arrow-left-2, .icon-home, .icon-untitled, .icon-mobil_logo, .icon-bottom_logo, .icon-close, .icon-plus, .icon-minus, .icon-images, .icon-compass, .icon-images-2, .icon-plus-2, .icon-minus-2, .icon-printer, .icon-volume, .icon-money {
+.icon-reorder, .icon-rss, .icon-envelope, .icon-double-angle-right, .icon-double-angle-left, .icon-double-angle-down, .icon-double-angle-up, .icon-list-ul, .icon-facebook, .icon-align-justify, .icon-phone, .icon-sort, .icon-arrow-right, .icon-arrow-left, .icon-arrow-up, .icon-arrow-down, .icon-menu, .icon-arrow-right-2, .icon-arrow-up-2, .icon-arrow-down-2, .icon-arrow-left-2, .icon-home, .icon-untitled, .icon-mobil_logo, .icon-bottom_logo, .icon-close, .icon-plus, .icon-minus, .icon-images, .icon-compass, .icon-images-2, .icon-plus-2, .icon-minus-2, .icon-printer, .icon-volume, .icon-money, .icon-search {
 	font-family: 'Rebild';
 	speak: none;
 	font-style: normal;
@@ -59,9 +66,6 @@ you can use the generic selector below, but it's slower:
 }
 .icon-envelope:before {
 	content: "\f003";
-}
-.icon-search:before {
-	content: "\f002";
 }
 .icon-double-angle-right:before {
 	content: "\f101";
@@ -161,4 +165,7 @@ you can use the generic selector below, but it's slower:
 }
 .icon-money:before {
 	content: "\f0d6";
+}
+.icon-search:before {
+	content: "\e013";
 }

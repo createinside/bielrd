@@ -76,8 +76,14 @@ Backend
   font-style: normal;
 }
 
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: 'Rebild';
+    src: url("../fonts/Rebild.svg#Rebild") format("svg");
+}
+}
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
-/* line 30, ../sass/partials/_fonts.scss */
+/* line 37, ../sass/partials/_fonts.scss */
 [data-icon]:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -98,8 +104,8 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-/* line 44, ../sass/partials/_fonts.scss */
-.icon-reorder, .icon-rss, .icon-envelope, .icon-search, .icon-double-angle-right, .icon-double-angle-left, .icon-double-angle-down, .icon-double-angle-up, .icon-list-ul, .icon-facebook, .icon-align-justify, .icon-phone, .icon-sort, .icon-arrow-right, .icon-arrow-left, .icon-arrow-up, .icon-arrow-down, .icon-menu, .icon-arrow-right-2, .icon-arrow-up-2, .icon-arrow-down-2, .icon-arrow-left-2, .icon-home, .icon-untitled, .icon-mobil_logo, .icon-bottom_logo, .icon-close, .icon-plus, .icon-minus, .icon-images, .icon-compass, .icon-images-2, .icon-plus-2, .icon-minus-2, .icon-printer, .icon-volume, .icon-money {
+/* line 51, ../sass/partials/_fonts.scss */
+.icon-reorder, .icon-rss, .icon-envelope, .icon-double-angle-right, .icon-double-angle-left, .icon-double-angle-down, .icon-double-angle-up, .icon-list-ul, .icon-facebook, .icon-align-justify, .icon-phone, .icon-sort, .icon-arrow-right, .icon-arrow-left, .icon-arrow-up, .icon-arrow-down, .icon-menu, .icon-arrow-right-2, .icon-arrow-up-2, .icon-arrow-down-2, .icon-arrow-left-2, .icon-home, .icon-untitled, .icon-mobil_logo, .icon-bottom_logo, .icon-close, .icon-plus, .icon-minus, .icon-images, .icon-compass, .icon-images-2, .icon-plus-2, .icon-minus-2, .icon-printer, .icon-volume, .icon-money, .icon-search {
   font-family: 'Rebild';
   speak: none;
   font-style: normal;
@@ -110,189 +116,189 @@ you can use the generic selector below, but it's slower:
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 54, ../sass/partials/_fonts.scss */
+/* line 61, ../sass/partials/_fonts.scss */
 .icon-reorder:before {
   content: "\f0c9";
 }
 
-/* line 57, ../sass/partials/_fonts.scss */
+/* line 64, ../sass/partials/_fonts.scss */
 .icon-rss:before {
   content: "\f09e";
 }
 
-/* line 60, ../sass/partials/_fonts.scss */
+/* line 67, ../sass/partials/_fonts.scss */
 .icon-envelope:before {
   content: "\f003";
 }
 
-/* line 63, ../sass/partials/_fonts.scss */
-.icon-search:before {
-  content: "\f002";
-}
-
-/* line 66, ../sass/partials/_fonts.scss */
+/* line 70, ../sass/partials/_fonts.scss */
 .icon-double-angle-right:before {
   content: "\f101";
 }
 
-/* line 69, ../sass/partials/_fonts.scss */
+/* line 73, ../sass/partials/_fonts.scss */
 .icon-double-angle-left:before {
   content: "\f100";
 }
 
-/* line 72, ../sass/partials/_fonts.scss */
+/* line 76, ../sass/partials/_fonts.scss */
 .icon-double-angle-down:before {
   content: "\f103";
 }
 
-/* line 75, ../sass/partials/_fonts.scss */
+/* line 79, ../sass/partials/_fonts.scss */
 .icon-double-angle-up:before {
   content: "\f102";
 }
 
-/* line 78, ../sass/partials/_fonts.scss */
+/* line 82, ../sass/partials/_fonts.scss */
 .icon-list-ul:before {
   content: "\f0ca";
 }
 
-/* line 81, ../sass/partials/_fonts.scss */
+/* line 85, ../sass/partials/_fonts.scss */
 .icon-facebook:before {
   content: "\f09a";
 }
 
-/* line 84, ../sass/partials/_fonts.scss */
+/* line 88, ../sass/partials/_fonts.scss */
 .icon-align-justify:before {
   content: "\f039";
 }
 
-/* line 87, ../sass/partials/_fonts.scss */
+/* line 91, ../sass/partials/_fonts.scss */
 .icon-phone:before {
   content: "\f095";
 }
 
-/* line 90, ../sass/partials/_fonts.scss */
+/* line 94, ../sass/partials/_fonts.scss */
 .icon-sort:before {
   content: "\f0dc";
 }
 
-/* line 93, ../sass/partials/_fonts.scss */
+/* line 97, ../sass/partials/_fonts.scss */
 .icon-arrow-right:before {
   content: "\f061";
 }
 
-/* line 96, ../sass/partials/_fonts.scss */
+/* line 100, ../sass/partials/_fonts.scss */
 .icon-arrow-left:before {
   content: "\f060";
 }
 
-/* line 99, ../sass/partials/_fonts.scss */
+/* line 103, ../sass/partials/_fonts.scss */
 .icon-arrow-up:before {
   content: "\f062";
 }
 
-/* line 102, ../sass/partials/_fonts.scss */
+/* line 106, ../sass/partials/_fonts.scss */
 .icon-arrow-down:before {
   content: "\f063";
 }
 
-/* line 105, ../sass/partials/_fonts.scss */
+/* line 109, ../sass/partials/_fonts.scss */
 .icon-menu:before {
   content: "\e000";
 }
 
-/* line 108, ../sass/partials/_fonts.scss */
+/* line 112, ../sass/partials/_fonts.scss */
 .icon-arrow-right-2:before {
   content: "\e001";
 }
 
-/* line 111, ../sass/partials/_fonts.scss */
+/* line 115, ../sass/partials/_fonts.scss */
 .icon-arrow-up-2:before {
   content: "\e002";
 }
 
-/* line 114, ../sass/partials/_fonts.scss */
+/* line 118, ../sass/partials/_fonts.scss */
 .icon-arrow-down-2:before {
   content: "\e003";
 }
 
-/* line 117, ../sass/partials/_fonts.scss */
+/* line 121, ../sass/partials/_fonts.scss */
 .icon-arrow-left-2:before {
   content: "\e004";
 }
 
-/* line 120, ../sass/partials/_fonts.scss */
+/* line 124, ../sass/partials/_fonts.scss */
 .icon-home:before {
   content: "\e005";
 }
 
-/* line 123, ../sass/partials/_fonts.scss */
+/* line 127, ../sass/partials/_fonts.scss */
 .icon-untitled:before {
   content: "\e006";
 }
 
-/* line 126, ../sass/partials/_fonts.scss */
+/* line 130, ../sass/partials/_fonts.scss */
 .icon-mobil_logo:before {
   content: "\e007";
 }
 
-/* line 129, ../sass/partials/_fonts.scss */
+/* line 133, ../sass/partials/_fonts.scss */
 .icon-bottom_logo:before {
   content: "\e009";
 }
 
-/* line 132, ../sass/partials/_fonts.scss */
+/* line 136, ../sass/partials/_fonts.scss */
 .icon-close:before {
   content: "\e008";
 }
 
-/* line 135, ../sass/partials/_fonts.scss */
+/* line 139, ../sass/partials/_fonts.scss */
 .icon-plus:before {
   content: "\e00a";
 }
 
-/* line 138, ../sass/partials/_fonts.scss */
+/* line 142, ../sass/partials/_fonts.scss */
 .icon-minus:before {
   content: "\e00c";
 }
 
-/* line 141, ../sass/partials/_fonts.scss */
+/* line 145, ../sass/partials/_fonts.scss */
 .icon-images:before {
   content: "\e00b";
 }
 
-/* line 144, ../sass/partials/_fonts.scss */
+/* line 148, ../sass/partials/_fonts.scss */
 .icon-compass:before {
   content: "\e00d";
 }
 
-/* line 147, ../sass/partials/_fonts.scss */
+/* line 151, ../sass/partials/_fonts.scss */
 .icon-images-2:before {
   content: "\e00e";
 }
 
-/* line 150, ../sass/partials/_fonts.scss */
+/* line 154, ../sass/partials/_fonts.scss */
 .icon-plus-2:before {
   content: "\e00f";
 }
 
-/* line 153, ../sass/partials/_fonts.scss */
+/* line 157, ../sass/partials/_fonts.scss */
 .icon-minus-2:before {
   content: "\e010";
 }
 
-/* line 156, ../sass/partials/_fonts.scss */
+/* line 160, ../sass/partials/_fonts.scss */
 .icon-printer:before {
   content: "\e011";
 }
 
-/* line 159, ../sass/partials/_fonts.scss */
+/* line 163, ../sass/partials/_fonts.scss */
 .icon-volume:before {
   content: "\e012";
 }
 
-/* line 162, ../sass/partials/_fonts.scss */
+/* line 166, ../sass/partials/_fonts.scss */
 .icon-money:before {
   content: "\f0d6";
+}
+
+/* line 169, ../sass/partials/_fonts.scss */
+.icon-search:before {
+  content: "\e013";
 }
 
 /*------------------------------------------------------------------
@@ -326,9 +332,9 @@ form textarea {
   background-image: -moz-linear-gradient(#ececec, #ffffff 33%);
   background-image: -o-linear-gradient(#ececec, #ffffff 33%);
   background-image: linear-gradient(#ececec, #ffffff 33%);
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 /* line 30, ../sass/partials/_forms.scss */
 form input[type=submit] {
@@ -2456,6 +2462,10 @@ div.workbench-info-block a {
 }
 /* line 823, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-textfield {
+  position: relative;
+}
+/* line 826, ../sass/partials/_blocks.scss */
+#block-ci-search-ci-search-results .sf-wrapper {
   background: #e9e9e9;
   padding: 10px;
   overflow: hidden;
@@ -2465,24 +2475,53 @@ div.workbench-info-block a {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 830, ../sass/partials/_blocks.scss */
+/* line 832, ../sass/partials/_blocks.scss */
+#block-ci-search-ci-search-results .form-type-textfield:before {
+  font-family: 'Rebild';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\e013";
+  z-index: 10;
+  position: absolute;
+  left: 1em;
+  top: 1em;
+  font-size: 1.6em;
+  color: #6b6b6b;
+}
+/* line 843, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results input[type=search],
 #block-ci-search-ci-search-results input[type=text] {
   font-size: 1em;
   font-style: italic;
-  height: 2.46154em;
-  line-height: 2.46154em;
+  height: 4.8em;
+  width: 100%;
+  line-height: 2em;
   float: left;
   position: relative;
-  padding: 1.05em 1em;
+  padding: 1.05em 1em 1.05em 4em;
+  border-top: 1px solid white;
   background: white;
+  background-position: center top;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeeeee), color-stop(33%, #ffffff));
+  background-image: -webkit-linear-gradient(#eeeeee, #ffffff 33%);
+  background-image: -moz-linear-gradient(#eeeeee, #ffffff 33%);
+  background-image: -o-linear-gradient(#eeeeee, #ffffff 33%);
+  background-image: linear-gradient(#eeeeee, #ffffff 33%);
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-/* line 841, ../sass/partials/_blocks.scss */
+/* line 859, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results input[type=submit] {
   position: absolute;
   right: 10px;
@@ -2495,28 +2534,28 @@ div.workbench-info-block a {
   -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-/* line 849, ../sass/partials/_blocks.scss */
+/* line 867, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-checkboxes {
   overflow: hidden;
 }
-/* line 851, ../sass/partials/_blocks.scss */
+/* line 869, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-checkboxes > label {
   font-size: 1.2em;
   margin: 1em 0 0.75em 0;
 }
-/* line 855, ../sass/partials/_blocks.scss */
+/* line 873, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-checkboxes .form-type-checkbox {
   float: left;
   margin-right: 10px;
 }
 
 /* Search block - frontpage */
-/* line 863, ../sass/partials/_blocks.scss */
+/* line 881, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front {
   font-size: 10px;
   text-align: center;
 }
-/* line 866, ../sass/partials/_blocks.scss */
+/* line 884, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form {
   background: #cfcfcf;
   padding: 10px;
@@ -2529,24 +2568,63 @@ div.workbench-info-block a {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 874, ../sass/partials/_blocks.scss */
-#block-ci-search-ci-search-front form input[type=search],
-#block-ci-search-ci-search-front form input[type=text] {
-  font-size: 1em;
-  border-top: 1px solid white;
-  font-style: italic;
-  height: 2.46154em;
-  line-height: 2.46154em;
-  float: left;
+/* line 891, ../sass/partials/_blocks.scss */
+#block-ci-search-ci-search-front form .sf-wrapper {
+  overflow: hidden;
   position: relative;
-  padding: 1.05em 1em;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 885, ../sass/partials/_blocks.scss */
+/* line 896, ../sass/partials/_blocks.scss */
+#block-ci-search-ci-search-front form .sf-wrapper:before {
+  font-family: 'Rebild';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\e013";
+  z-index: 10;
+  position: absolute;
+  left: 1em;
+  top: 1em;
+  font-size: 1.6em;
+  color: #6b6b6b;
+}
+/* line 907, ../sass/partials/_blocks.scss */
+#block-ci-search-ci-search-front form input[type=search],
+#block-ci-search-ci-search-front form input[type=text] {
+  font-size: 1em;
+  font-style: italic;
+  height: 4.8em;
+  width: 100%;
+  line-height: 2em;
+  float: left;
+  position: relative;
+  padding: 1.05em 1em 1.05em 4em;
+  border-top: 1px solid white;
+  background: white;
+  background-position: center top;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeeeee), color-stop(33%, #ffffff));
+  background-image: -webkit-linear-gradient(#eeeeee, #ffffff 33%);
+  background-image: -moz-linear-gradient(#eeeeee, #ffffff 33%);
+  background-image: -o-linear-gradient(#eeeeee, #ffffff 33%);
+  background-image: linear-gradient(#eeeeee, #ffffff 33%);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 923, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form input[type=submit] {
   position: absolute;
   right: 10px;
@@ -2559,17 +2637,17 @@ div.workbench-info-block a {
   -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-/* line 893, ../sass/partials/_blocks.scss */
+/* line 931, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .form-item, #block-ci-search-ci-search-front form .form-actions {
   margin: 0;
 }
-/* line 897, ../sass/partials/_blocks.scss */
+/* line 935, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front p.small-text {
   font-size: 11px;
   line-height: 1.15em;
   color: #474747;
 }
-/* line 901, ../sass/partials/_blocks.scss */
+/* line 939, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front p.small-text a, #block-ci-search-ci-search-front p.small-text strong {
   color: #474747;
   margin-right: 1em;
@@ -2577,7 +2655,7 @@ div.workbench-info-block a {
 }
 
 /* Search autocomplete widget */
-/* line 909, ../sass/partials/_blocks.scss */
+/* line 947, ../sass/partials/_blocks.scss */
 .ac_results {
   width: 660px !important;
   border: none;
@@ -2593,22 +2671,22 @@ div.workbench-info-block a {
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 916, ../sass/partials/_blocks.scss */
+/* line 954, ../sass/partials/_blocks.scss */
 .ac_results ul li {
   padding: 20px;
   font-size: 1em;
   cursor: pointer;
   color: #474747;
 }
-/* line 928, ../sass/partials/_blocks.scss */
+/* line 966, ../sass/partials/_blocks.scss */
 .ac_results ul .ac_even {
   background: white;
 }
-/* line 931, ../sass/partials/_blocks.scss */
+/* line 969, ../sass/partials/_blocks.scss */
 .ac_results ul .ac_odd {
   background: #f6f6f6;
 }
-/* line 934, ../sass/partials/_blocks.scss */
+/* line 972, ../sass/partials/_blocks.scss */
 .ac_results ul .ac_over {
   background: #cfcfcf;
   color: #474747;

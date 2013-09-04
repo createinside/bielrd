@@ -821,22 +821,40 @@ div.workbench-info-block {
     margin: 0;
   }      
   .form-type-textfield {
-    background: #e9e9e9;
+  	position: relative;
+  }
+	.sf-wrapper {
+		background: #e9e9e9;
     padding: 10px;
     overflow: hidden;
-    @include border-radius($border-radius-std);
-  }
+    @include border-radius($border-radius-std);		
+	}
+	.form-type-textfield:before {
+		@include icon-prepare();
+		content: "\e013";
+		z-index: 10;
+		position: absolute;
+		left: 1em;
+		top: 1em;
+		font-size: 1.6em;
+		color: $input-color;
+	}
   input[type=search],
   input[type=text] {
-    font-size: 1em;
-    font-style: italic;
-    height: (32/13)*1em;
-    line-height: (32/13)*1em;
-    float: left;
-    position: relative;
-    padding: 1.05em 1em;
-    background: white;
-    @include border-radius($border-radius-std);
+			font-size: 1em;
+			font-style: italic;
+			height: 4.8em;
+			width: 100%;
+			line-height: 2em;
+			float: left;
+			position: relative;
+			padding: 1.05em 1em 1.05em 4em;
+	    border-top: 1px solid white;
+	    background: white;
+	    background-position: center top;
+			@include background-image(linear-gradient(#eeeeee, #ffffff 33%));
+			@include border-radius($border-radius-std);
+			@include box-sizing(border-box);
   }
   input[type=submit] {
     position: absolute;
@@ -870,17 +888,37 @@ div.workbench-info-block {
 		overflow: hidden;
 		margin-bottom: (17/10)*1em;
 		@include border-radius($border-radius-std);
+		.sf-wrapper {
+			overflow: hidden;
+			position: relative;
+			@include border-radius($border-radius-std);
+		}
+		.sf-wrapper:before {
+			@include icon-prepare();
+			content: "\e013";
+			z-index: 10;
+			position: absolute;
+			left: 1em;
+			top: 1em;
+			font-size: 1.6em;
+			color: $input-color;
+		}
 		input[type=search],
 		input[type=text] {
 			font-size: 1em;
-			border-top: 1px solid white;
 			font-style: italic;
-			height: (32/13)*1em;
-			line-height: (32/13)*1em;
+			height: 4.8em;
+			width: 100%;
+			line-height: 2em;
 			float: left;
 			position: relative;
-			padding: 1.05em 1em;
+			padding: 1.05em 1em 1.05em 4em;
+	    border-top: 1px solid white;
+	    background: white;
+	    background-position: center top;
+			@include background-image(linear-gradient(#eeeeee, #ffffff 33%));
 			@include border-radius($border-radius-std);
+			@include box-sizing(border-box);
 		}
 		input[type=submit] {
 			position: absolute;
