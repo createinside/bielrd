@@ -19,18 +19,11 @@
 	font-family: 'Rebild';
 	src:url('../fonts/Rebild.eot');
 	src:url('../fonts/Rebild.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Rebild.svg#Rebild') format('svg'),
 		url('../fonts/Rebild.woff') format('woff'),
-		url('../fonts/Rebild.ttf') format('truetype'),
-		url('../fonts/Rebild.svg#Rebild') format('svg');
+		url('../fonts/Rebild.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
-}
-
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-		font-family: 'Rebild';
-    src: url('../fonts/Rebild.svg#Rebild') format('svg');
-  }
 }
 
 /* Use the following CSS code if you want to use data attributes for inserting your icons */

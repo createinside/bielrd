@@ -71,19 +71,13 @@ Backend
 @font-face {
   font-family: 'Rebild';
   src: url("../fonts/Rebild.eot");
-  src: url("../fonts/Rebild.eot?#iefix") format("embedded-opentype"), url("../fonts/Rebild.woff") format("woff"), url("../fonts/Rebild.ttf") format("truetype"), url("../fonts/Rebild.svg#Rebild") format("svg");
+  src: url("../fonts/Rebild.eot?#iefix") format("embedded-opentype"), url("../fonts/Rebild.svg#Rebild") format("svg"), url("../fonts/Rebild.woff") format("woff"), url("../fonts/Rebild.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: 'Rebild';
-    src: url("../fonts/Rebild.svg#Rebild") format("svg");
-}
-}
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
-/* line 37, ../sass/partials/_fonts.scss */
+/* line 30, ../sass/partials/_fonts.scss */
 [data-icon]:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -104,7 +98,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-/* line 51, ../sass/partials/_fonts.scss */
+/* line 44, ../sass/partials/_fonts.scss */
 .icon-reorder, .icon-rss, .icon-envelope, .icon-double-angle-right, .icon-double-angle-left, .icon-double-angle-down, .icon-double-angle-up, .icon-list-ul, .icon-facebook, .icon-align-justify, .icon-phone, .icon-sort, .icon-arrow-right, .icon-arrow-left, .icon-arrow-up, .icon-arrow-down, .icon-menu, .icon-arrow-right-2, .icon-arrow-up-2, .icon-arrow-down-2, .icon-arrow-left-2, .icon-home, .icon-untitled, .icon-mobil_logo, .icon-bottom_logo, .icon-close, .icon-plus, .icon-minus, .icon-images, .icon-compass, .icon-images-2, .icon-plus-2, .icon-minus-2, .icon-printer, .icon-volume, .icon-money, .icon-search {
   font-family: 'Rebild';
   speak: none;
@@ -116,187 +110,187 @@ you can use the generic selector below, but it's slower:
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 61, ../sass/partials/_fonts.scss */
+/* line 54, ../sass/partials/_fonts.scss */
 .icon-reorder:before {
   content: "\f0c9";
 }
 
-/* line 64, ../sass/partials/_fonts.scss */
+/* line 57, ../sass/partials/_fonts.scss */
 .icon-rss:before {
   content: "\f09e";
 }
 
-/* line 67, ../sass/partials/_fonts.scss */
+/* line 60, ../sass/partials/_fonts.scss */
 .icon-envelope:before {
   content: "\f003";
 }
 
-/* line 70, ../sass/partials/_fonts.scss */
+/* line 63, ../sass/partials/_fonts.scss */
 .icon-double-angle-right:before {
   content: "\f101";
 }
 
-/* line 73, ../sass/partials/_fonts.scss */
+/* line 66, ../sass/partials/_fonts.scss */
 .icon-double-angle-left:before {
   content: "\f100";
 }
 
-/* line 76, ../sass/partials/_fonts.scss */
+/* line 69, ../sass/partials/_fonts.scss */
 .icon-double-angle-down:before {
   content: "\f103";
 }
 
-/* line 79, ../sass/partials/_fonts.scss */
+/* line 72, ../sass/partials/_fonts.scss */
 .icon-double-angle-up:before {
   content: "\f102";
 }
 
-/* line 82, ../sass/partials/_fonts.scss */
+/* line 75, ../sass/partials/_fonts.scss */
 .icon-list-ul:before {
   content: "\f0ca";
 }
 
-/* line 85, ../sass/partials/_fonts.scss */
+/* line 78, ../sass/partials/_fonts.scss */
 .icon-facebook:before {
   content: "\f09a";
 }
 
-/* line 88, ../sass/partials/_fonts.scss */
+/* line 81, ../sass/partials/_fonts.scss */
 .icon-align-justify:before {
   content: "\f039";
 }
 
-/* line 91, ../sass/partials/_fonts.scss */
+/* line 84, ../sass/partials/_fonts.scss */
 .icon-phone:before {
   content: "\f095";
 }
 
-/* line 94, ../sass/partials/_fonts.scss */
+/* line 87, ../sass/partials/_fonts.scss */
 .icon-sort:before {
   content: "\f0dc";
 }
 
-/* line 97, ../sass/partials/_fonts.scss */
+/* line 90, ../sass/partials/_fonts.scss */
 .icon-arrow-right:before {
   content: "\f061";
 }
 
-/* line 100, ../sass/partials/_fonts.scss */
+/* line 93, ../sass/partials/_fonts.scss */
 .icon-arrow-left:before {
   content: "\f060";
 }
 
-/* line 103, ../sass/partials/_fonts.scss */
+/* line 96, ../sass/partials/_fonts.scss */
 .icon-arrow-up:before {
   content: "\f062";
 }
 
-/* line 106, ../sass/partials/_fonts.scss */
+/* line 99, ../sass/partials/_fonts.scss */
 .icon-arrow-down:before {
   content: "\f063";
 }
 
-/* line 109, ../sass/partials/_fonts.scss */
+/* line 102, ../sass/partials/_fonts.scss */
 .icon-menu:before {
   content: "\e000";
 }
 
-/* line 112, ../sass/partials/_fonts.scss */
+/* line 105, ../sass/partials/_fonts.scss */
 .icon-arrow-right-2:before {
   content: "\e001";
 }
 
-/* line 115, ../sass/partials/_fonts.scss */
+/* line 108, ../sass/partials/_fonts.scss */
 .icon-arrow-up-2:before {
   content: "\e002";
 }
 
-/* line 118, ../sass/partials/_fonts.scss */
+/* line 111, ../sass/partials/_fonts.scss */
 .icon-arrow-down-2:before {
   content: "\e003";
 }
 
-/* line 121, ../sass/partials/_fonts.scss */
+/* line 114, ../sass/partials/_fonts.scss */
 .icon-arrow-left-2:before {
   content: "\e004";
 }
 
-/* line 124, ../sass/partials/_fonts.scss */
+/* line 117, ../sass/partials/_fonts.scss */
 .icon-home:before {
   content: "\e005";
 }
 
-/* line 127, ../sass/partials/_fonts.scss */
+/* line 120, ../sass/partials/_fonts.scss */
 .icon-untitled:before {
   content: "\e006";
 }
 
-/* line 130, ../sass/partials/_fonts.scss */
+/* line 123, ../sass/partials/_fonts.scss */
 .icon-mobil_logo:before {
   content: "\e007";
 }
 
-/* line 133, ../sass/partials/_fonts.scss */
+/* line 126, ../sass/partials/_fonts.scss */
 .icon-bottom_logo:before {
   content: "\e009";
 }
 
-/* line 136, ../sass/partials/_fonts.scss */
+/* line 129, ../sass/partials/_fonts.scss */
 .icon-close:before {
   content: "\e008";
 }
 
-/* line 139, ../sass/partials/_fonts.scss */
+/* line 132, ../sass/partials/_fonts.scss */
 .icon-plus:before {
   content: "\e00a";
 }
 
-/* line 142, ../sass/partials/_fonts.scss */
+/* line 135, ../sass/partials/_fonts.scss */
 .icon-minus:before {
   content: "\e00c";
 }
 
-/* line 145, ../sass/partials/_fonts.scss */
+/* line 138, ../sass/partials/_fonts.scss */
 .icon-images:before {
   content: "\e00b";
 }
 
-/* line 148, ../sass/partials/_fonts.scss */
+/* line 141, ../sass/partials/_fonts.scss */
 .icon-compass:before {
   content: "\e00d";
 }
 
-/* line 151, ../sass/partials/_fonts.scss */
+/* line 144, ../sass/partials/_fonts.scss */
 .icon-images-2:before {
   content: "\e00e";
 }
 
-/* line 154, ../sass/partials/_fonts.scss */
+/* line 147, ../sass/partials/_fonts.scss */
 .icon-plus-2:before {
   content: "\e00f";
 }
 
-/* line 157, ../sass/partials/_fonts.scss */
+/* line 150, ../sass/partials/_fonts.scss */
 .icon-minus-2:before {
   content: "\e010";
 }
 
-/* line 160, ../sass/partials/_fonts.scss */
+/* line 153, ../sass/partials/_fonts.scss */
 .icon-printer:before {
   content: "\e011";
 }
 
-/* line 163, ../sass/partials/_fonts.scss */
+/* line 156, ../sass/partials/_fonts.scss */
 .icon-volume:before {
   content: "\e012";
 }
 
-/* line 166, ../sass/partials/_fonts.scss */
+/* line 159, ../sass/partials/_fonts.scss */
 .icon-money:before {
   content: "\f0d6";
 }
 
-/* line 169, ../sass/partials/_fonts.scss */
+/* line 162, ../sass/partials/_fonts.scss */
 .icon-search:before {
   content: "\e013";
 }
