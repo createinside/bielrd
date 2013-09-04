@@ -610,12 +610,6 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['relationships']['field_self_service_type_tid']['field'] = 'field_self_service_type_tid';
   $handler->display->display_options['relationships']['field_self_service_type_tid']['relationship'] = 'field_main_selfservice_target_id';
   $handler->display->display_options['relationships']['field_self_service_type_tid']['label'] = 'type';
-  /* Forbindelse: Indhold: PDF (field_self_service_pdf:fid) */
-  $handler->display->display_options['relationships']['field_self_service_pdf_fid']['id'] = 'field_self_service_pdf_fid';
-  $handler->display->display_options['relationships']['field_self_service_pdf_fid']['table'] = 'field_data_field_self_service_pdf';
-  $handler->display->display_options['relationships']['field_self_service_pdf_fid']['field'] = 'field_self_service_pdf_fid';
-  $handler->display->display_options['relationships']['field_self_service_pdf_fid']['relationship'] = 'field_main_selfservice_target_id';
-  $handler->display->display_options['relationships']['field_self_service_pdf_fid']['label'] = 'pdf';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Felt: Indhold: Overskrift */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -643,14 +637,6 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['fields']['description']['label'] = '';
   $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['description']['hide_empty'] = TRUE;
-  /* Felt: Fil: Link */
-  $handler->display->display_options['fields']['link']['id'] = 'link';
-  $handler->display->display_options['fields']['link']['table'] = 'file_managed';
-  $handler->display->display_options['fields']['link']['field'] = 'link';
-  $handler->display->display_options['fields']['link']['relationship'] = 'field_self_service_pdf_fid';
-  $handler->display->display_options['fields']['link']['label'] = '';
-  $handler->display->display_options['fields']['link']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['link']['text'] = 'Download fil';
   /* Felt: Indhold: Link */
   $handler->display->display_options['fields']['field_self_service_link']['id'] = 'field_self_service_link';
   $handler->display->display_options['fields']['field_self_service_link']['table'] = 'field_data_field_self_service_link';
@@ -659,6 +645,17 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['fields']['field_self_service_link']['label'] = '';
   $handler->display->display_options['fields']['field_self_service_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_self_service_link']['click_sort_column'] = 'url';
+  /* Felt: Indhold: PDF */
+  $handler->display->display_options['fields']['field_self_service_pdf']['id'] = 'field_self_service_pdf';
+  $handler->display->display_options['fields']['field_self_service_pdf']['table'] = 'field_data_field_self_service_pdf';
+  $handler->display->display_options['fields']['field_self_service_pdf']['field'] = 'field_self_service_pdf';
+  $handler->display->display_options['fields']['field_self_service_pdf']['relationship'] = 'field_main_selfservice_target_id';
+  $handler->display->display_options['fields']['field_self_service_pdf']['label'] = '';
+  $handler->display->display_options['fields']['field_self_service_pdf']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_self_service_pdf']['alter']['text'] = '<a href="[field_self_service_pdf]" target="_new">Download fil</a>';
+  $handler->display->display_options['fields']['field_self_service_pdf']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_self_service_pdf']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_self_service_pdf']['type'] = 'file_url_plain';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Kontekstuelt filter: Indhold: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
@@ -702,8 +699,6 @@ function rebild_self_service_views_default_views() {
     t('EVA Field'),
     t('<h2 class="title">Selvbetjening:</h2>'),
     t('Selvbetjening'),
-    t('pdf'),
-    t('Download fil'),
     t('Alle'),
   );
   $export['selfservice_items'] = $view;
