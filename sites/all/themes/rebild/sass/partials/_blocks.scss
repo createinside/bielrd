@@ -89,6 +89,8 @@
 				li {
 					margin: 0 0 .75em 0;
 					line-height: 1.15em;
+					word-break: break-word;
+					word-wrap: break-word;
 				}
 				li:before {
 					@include icon-prepare();
@@ -720,6 +722,7 @@ div.workbench-info-block {
 .wcag-block {
   display: inline-block;
   margin: 0 $spacing-std 0 0;
+  font-size: $font-size-std;
   a {
     color: $text-color;
     text-decoration: none;

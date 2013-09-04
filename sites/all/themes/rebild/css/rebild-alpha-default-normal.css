@@ -164,3 +164,9 @@ body {
 .view-id-calendar_sidebar .view-content .rebild-calendar .calendar_right {
   max-width: 160px;
 }
+
+/* WCAG */
+/* line 139, ../sass/rebild-alpha-default-normal.scss */
+.wcag-block {
+  margin: 0 20px 0 0;
+}
