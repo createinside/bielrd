@@ -44,6 +44,94 @@
 		}
 	}
 }
+
+/* Calendar - overview  */
+.view-calendar-overview {
+	.views-row {
+		border-bottom: 1px dotted #474747;
+		margin-bottom: $spacing-std;
+		padding-bottom: $spacing-std;
+		.views-field-field-calendar-date {
+			margin-bottom: $spacing-std;
+			font-size: 0.9em;
+		}
+	}
+	
+}
+/* Calendar - sidebar */
+.view-id-calendar_sidebar {
+	.view-content {
+		padding: $spacing-std;
+		.rebild-calendar {
+			min-height:60px;
+			margin: 0 0 $spacing-std 0; 			
+			.calendar_left {
+				width: 60px;
+				float: left;
+				margin: 0 $spacing-std 0 0;
+				text-align: center;
+				@include grid-box(white);
+				padding: 0 0 3px 0;
+				.calendar_day {
+					font-size: 0.8em;
+					line-height: $line-height-std;
+					background: $color-blue;
+					color: white;
+					margin: 0 0 $spacing-std/4;		
+					padding: 0.2em 0.5em;
+					@include text-shadow(none);
+					@include border-radius(3px 3px 0 0);				
+				}
+				.calendar_date {
+					font-size: 1.25em;
+				}
+				.calendar_month {
+					text-transform: uppercase;
+					font-size: 0.7em;
+				}			
+			}
+			.calendar_right {
+				float: left;
+				max-width: 100%;
+				text-align: left;
+				.calendar_section {
+					text-transform: uppercase;
+				}
+				.calendar_title {
+					a {
+						color: $text-color;
+						text-decoration: none;												
+					}
+				}
+			}
+		}
+	}
+	.view-footer {
+		background-color: #f6f6f6;
+		height: 30px;
+		.calendar_view_all {
+			padding: 7px 0 0 15px;
+			display: block;
+			a {
+				text-decoration: none;
+				color: $text-color; 
+				text-transform: uppercase;
+				font-size: 0.8em;
+
+			}
+			a:after {
+				@include icon-prepare();
+				content: "\f061";
+				margin-left: 5px;
+				background-color: #474747;
+				color: #fff;
+				padding: 2px;
+				border-radius: 3px; 
+			}
+		}
+	}		
+}
+
 /* Calendar - frontpage */
 .view-id-calendar_frontpage {	
 	.rebild-calendar {
@@ -89,7 +177,46 @@
 			}
 		}
 	}
+	.calendar_view_all {
+			position: absolute;
+			top: 20px;
+			text-transform: uppercase;
+			left: 0;
+			padding-top: 2px;
+			a {
+				text-shadow: white 1px 1px 1px;
+				font-size: 0.8em;
+				color: #474747;
+				text-decoration: none;
+			}
+			a:after {
+				@include icon-prepare();
+				content: "\f061";
+				margin-left: 5px;
+				background-color: #474747;
+				color: #fff;
+				padding: 2px;
+				border-radius: 3px; 
+				text-shadow: none;
+			}		
+		}
 }
+/* Calendar - Landing pages */
+.not-front {
+	.calendar-block {
+		.view-content {
+			overflow: hidden;
+			padding: $spacing-std;
+			line-height: $line-height-std;
+			color: $text-color;
+			@include grid-box(white);
+			a {
+				word-break: break-word;
+			}
+		}		
+	}
+}
+
 
 /**
  * NEWS ARTICLES
@@ -269,33 +396,35 @@
 					margin-right: 0.5em;
 				}
 			.accordion-content-level-2 {
-				padding: 0 50px $spacing-std;
+				padding: 0 18px $spacing-std;
 				margin: 0;
 				top: 0;
 				border: none;
 				.views-field-field-self-service-link a,
-				.views-field-link a {
+				.views-field-link a,
+				.views-field-field-self-service-pdf a {
 					display: inline-block;
 					color: white;
 					text-transform: uppercase;
 					font-size: $font-size-std;
+					line-height: 1.35em;
 					background-color: $color-purple;
 					padding: 14px 20px;
 					@include background-image(linear-gradient($color-purple, #79648c));
 					@include border-radius($border-radius-std);			
 				}
 				.views-field-field-self-service-link a:after,
-				.views-field-link a:after {
+				.views-field-link a:after,
+				.views-field-field-self-service-pdf a:after {
 					@include icon-prepare();
 					content: "\f061";	
 					color: $color-purple;
 					background: white;
 					display: inline-block;
-					padding: 0.30em 0.40em 0.4em;
+					padding: 0.25em 0.40em 0.25em;
 					margin: 0 0 0 10px;
 					position: relative;
 					font-size: 0.75em;
-					top: -1px;
 					@include border-radius(2px);
 				}
 				.views-field-field-main-body {
@@ -355,4 +484,90 @@
 			}
 		}
 	}	
+}
+
+/**
+ * AGENDAS
+ */
+#region-content {
+	.view-agenda-overview {
+		.view-filters {
+			margin: $spacing-std 0;
+			label {
+				margin: 0 0 10px 0;
+			}
+			.views-exposed-widget {
+				select {
+					margin: 0;
+					padding: 0;
+				}
+				.customSelect {
+					border: 1px solid #dbdbdb;
+				}
+				.form-submit {
+					background: $color-blue;
+					border: none;
+					margin: 24px 0 0 0;
+				}
+			}
+		}
+		h3 {
+			text-transform: capitalize;
+			margin-top: $spacing-std;
+			margin-bottom: 0.5em;
+		}
+		.views-row {
+			margin-bottom: 0.5em;
+			a { color: $color-blue; }
+		}
+	}
+}
+
+/**
+ * SEARCH RESULTS
+ */
+#search-results-page {
+  h2 {
+    padding-bottom: 1em;
+  }
+  .search-result {
+    padding: 15px 10px;
+    margin: 0;
+    h2 {
+      
+    }
+    h3 {
+      margin: 0 0 10px 0;
+      a {
+        color: $color-blue;
+      }
+    }
+    .search-date {
+      font-size: $font-size-small;
+      margin: 0 0 10px;
+    }
+    .search-text {
+     line-height: 1.25em; 
+    }
+  }
+  .odd {
+    background: $bg-color-alt;
+  }
+  ul.pager {
+    margin: $spacing-std 0;
+  }
+}
+
+/**
+ * OFFERINGS
+ */
+#region-content {
+	.view-offerings {
+		h2 {
+			margin: $spacing-std 0;
+		}
+		.views-row {
+			margin-bottom: $spacing-std;
+		}
+	}
 }

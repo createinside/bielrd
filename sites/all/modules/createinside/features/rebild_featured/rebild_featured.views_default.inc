@@ -22,7 +22,7 @@ function rebild_featured_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Aktuelt i Rebild Kommune';
+  $handler->display->display_options['title'] = 'Fokus';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['access']['type'] = 'none';
@@ -146,6 +146,22 @@ function rebild_featured_views_default_views() {
 
   /* Display: Forside */
   $handler = $view->new_display('page', 'Forside', 'page');
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sorteringskriterie: Indhold: Forfremmet til forside */
+  $handler->display->display_options['sorts']['promote']['id'] = 'promote';
+  $handler->display->display_options['sorts']['promote']['table'] = 'node';
+  $handler->display->display_options['sorts']['promote']['field'] = 'promote';
+  $handler->display->display_options['sorts']['promote']['order'] = 'DESC';
+  /* Sorteringskriterie: Indhold: Klæbrig */
+  $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
+  $handler->display->display_options['sorts']['sticky']['table'] = 'node';
+  $handler->display->display_options['sorts']['sticky']['field'] = 'sticky';
+  $handler->display->display_options['sorts']['sticky']['order'] = 'DESC';
+  /* Sorteringskriterie: Indhold: Oprettelsesdato */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['path'] = 'frontpage';
 
   /* Display: Borger */
@@ -277,7 +293,7 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['path'] = 'bo-i-rebild';
   $translatables['rebild_frontpage'] = array(
     t('Master'),
-    t('Aktuelt i Rebild Kommune'),
+    t('Fokus'),
     t('mere'),
     t('Udfør'),
     t('Gendan'),

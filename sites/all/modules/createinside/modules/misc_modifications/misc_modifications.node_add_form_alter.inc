@@ -5,7 +5,7 @@ function misc_modifications_form_alter(&$form, &$form_state, $form_id) {
 	$indholdstyper = node_type_get_types();
 	/* Vi kører en løkke der finder frem til alle machine names på indholdstyperne, og herefter laver vi en form alter. */
 	foreach(element_children($indholdstyper) as $key) {
-		if ($form_id == ($indholdstyper[$key]->type . '_node_form')) {			
+		if ($form_id == ($indholdstyper[$key]->type . '_node_form')) {	
 			/* Tilføjer description til titel feltet */					
 			$form['title']["#description"] = "Indholdets overskrift.";
 			foreach(element_children($form) as $key) {

@@ -109,6 +109,11 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'self_service' => 'self_service',
   );
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
 
   /* Display: Sidebar */
   $handler = $view->new_display('block', 'Sidebar', 'block_1');
@@ -140,6 +145,26 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Indhold: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['alter']['text'] = 'selvbetjening#loesning-[nid]';
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Felt: Indhold: Overskrift */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['path'] = 'selvbetjening#loesning-[nid]';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   $translatables['selfservice_blocks'] = array(
     t('Master'),
     t('Selvbetjening'),
@@ -233,6 +258,11 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'self_service' => 'self_service',
   );
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
 
   /* Display: Forsideblok */
   $handler = $view->new_display('block', 'Forsideblok', 'block');
@@ -262,12 +292,22 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['header']['view_1']['field'] = 'view';
   $handler->display->display_options['header']['view_1']['view_to_insert'] = 'selfservice_frontpage:block_2';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Indhold: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   /* Felt: Indhold: Overskrift */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['path'] = 'selvbetjening#loesning-[nid]';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   $handler->display->display_options['block_description'] = 'Selfbetjening - forside';
 
   /* Display: Selvbetjeningsløsninger */
@@ -281,7 +321,7 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'jump_menu';
   $handler->display->display_options['style_options']['path'] = 'nid';
   $handler->display->display_options['style_options']['text'] = 'Skift';
-  $handler->display->display_options['style_options']['choose'] = '- Vælg -';
+  $handler->display->display_options['style_options']['choose'] = 'Find hjælp';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -301,7 +341,7 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'jump_menu';
   $handler->display->display_options['style_options']['path'] = 'nothing';
   $handler->display->display_options['style_options']['text'] = 'Skift';
-  $handler->display->display_options['style_options']['choose'] = '- Vælg -';
+  $handler->display->display_options['style_options']['choose'] = 'Vælg et emne';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -423,11 +463,6 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['relationships']['field_self_service_type_tid']['table'] = 'field_data_field_self_service_type';
   $handler->display->display_options['relationships']['field_self_service_type_tid']['field'] = 'field_self_service_type_tid';
   $handler->display->display_options['relationships']['field_self_service_type_tid']['label'] = 'type';
-  /* Forbindelse: Indhold: PDF (field_self_service_pdf:fid) */
-  $handler->display->display_options['relationships']['field_self_service_pdf_fid']['id'] = 'field_self_service_pdf_fid';
-  $handler->display->display_options['relationships']['field_self_service_pdf_fid']['table'] = 'field_data_field_self_service_pdf';
-  $handler->display->display_options['relationships']['field_self_service_pdf_fid']['field'] = 'field_self_service_pdf_fid';
-  $handler->display->display_options['relationships']['field_self_service_pdf_fid']['label'] = 'PDF';
   /* Forbindelse: Entity Reference: Refereret entity */
   $handler->display->display_options['relationships']['field_main_selfservice_target_id']['id'] = 'field_main_selfservice_target_id';
   $handler->display->display_options['relationships']['field_main_selfservice_target_id']['table'] = 'field_data_field_main_selfservice';
@@ -472,14 +507,6 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['fields']['field_self_service_link']['label'] = '';
   $handler->display->display_options['fields']['field_self_service_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_self_service_link']['click_sort_column'] = 'url';
-  /* Felt: Fil: Link */
-  $handler->display->display_options['fields']['link']['id'] = 'link';
-  $handler->display->display_options['fields']['link']['table'] = 'file_managed';
-  $handler->display->display_options['fields']['link']['field'] = 'link';
-  $handler->display->display_options['fields']['link']['relationship'] = 'field_self_service_pdf_fid';
-  $handler->display->display_options['fields']['link']['label'] = '';
-  $handler->display->display_options['fields']['link']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['link']['text'] = 'Download fil';
   /* Felt: Ord i ordforråd: Term ID */
   $handler->display->display_options['fields']['tid']['id'] = 'tid';
   $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
@@ -499,6 +526,21 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['fields']['name']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['text'] = '<span class="kategori-[tid]">[name]</span>';
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  /* Felt: Indhold: PDF */
+  $handler->display->display_options['fields']['field_self_service_pdf']['id'] = 'field_self_service_pdf';
+  $handler->display->display_options['fields']['field_self_service_pdf']['table'] = 'field_data_field_self_service_pdf';
+  $handler->display->display_options['fields']['field_self_service_pdf']['field'] = 'field_self_service_pdf';
+  $handler->display->display_options['fields']['field_self_service_pdf']['label'] = '';
+  $handler->display->display_options['fields']['field_self_service_pdf']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_self_service_pdf']['alter']['text'] = '<a href="[field_self_service_pdf]" target="_new">Download fil</a>';
+  $handler->display->display_options['fields']['field_self_service_pdf']['alter']['path'] = '[field_self_service_pdf]';
+  $handler->display->display_options['fields']['field_self_service_pdf']['alter']['target'] = '_blank';
+  $handler->display->display_options['fields']['field_self_service_pdf']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_self_service_pdf']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_self_service_pdf']['type'] = 'file_url_plain';
+  $handler->display->display_options['fields']['field_self_service_pdf']['settings'] = array(
+    'file_view_mode' => 'default',
+  );
   /* Sorteringskriterie: Indhold: Overskrift */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
@@ -568,12 +610,6 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['relationships']['field_self_service_type_tid']['field'] = 'field_self_service_type_tid';
   $handler->display->display_options['relationships']['field_self_service_type_tid']['relationship'] = 'field_main_selfservice_target_id';
   $handler->display->display_options['relationships']['field_self_service_type_tid']['label'] = 'type';
-  /* Forbindelse: Indhold: PDF (field_self_service_pdf:fid) */
-  $handler->display->display_options['relationships']['field_self_service_pdf_fid']['id'] = 'field_self_service_pdf_fid';
-  $handler->display->display_options['relationships']['field_self_service_pdf_fid']['table'] = 'field_data_field_self_service_pdf';
-  $handler->display->display_options['relationships']['field_self_service_pdf_fid']['field'] = 'field_self_service_pdf_fid';
-  $handler->display->display_options['relationships']['field_self_service_pdf_fid']['relationship'] = 'field_main_selfservice_target_id';
-  $handler->display->display_options['relationships']['field_self_service_pdf_fid']['label'] = 'pdf';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Felt: Indhold: Overskrift */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -601,14 +637,6 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['fields']['description']['label'] = '';
   $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['description']['hide_empty'] = TRUE;
-  /* Felt: Fil: Link */
-  $handler->display->display_options['fields']['link']['id'] = 'link';
-  $handler->display->display_options['fields']['link']['table'] = 'file_managed';
-  $handler->display->display_options['fields']['link']['field'] = 'link';
-  $handler->display->display_options['fields']['link']['relationship'] = 'field_self_service_pdf_fid';
-  $handler->display->display_options['fields']['link']['label'] = '';
-  $handler->display->display_options['fields']['link']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['link']['text'] = 'Download fil';
   /* Felt: Indhold: Link */
   $handler->display->display_options['fields']['field_self_service_link']['id'] = 'field_self_service_link';
   $handler->display->display_options['fields']['field_self_service_link']['table'] = 'field_data_field_self_service_link';
@@ -617,6 +645,17 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['fields']['field_self_service_link']['label'] = '';
   $handler->display->display_options['fields']['field_self_service_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_self_service_link']['click_sort_column'] = 'url';
+  /* Felt: Indhold: PDF */
+  $handler->display->display_options['fields']['field_self_service_pdf']['id'] = 'field_self_service_pdf';
+  $handler->display->display_options['fields']['field_self_service_pdf']['table'] = 'field_data_field_self_service_pdf';
+  $handler->display->display_options['fields']['field_self_service_pdf']['field'] = 'field_self_service_pdf';
+  $handler->display->display_options['fields']['field_self_service_pdf']['relationship'] = 'field_main_selfservice_target_id';
+  $handler->display->display_options['fields']['field_self_service_pdf']['label'] = '';
+  $handler->display->display_options['fields']['field_self_service_pdf']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_self_service_pdf']['alter']['text'] = '<a href="[field_self_service_pdf]" target="_new">Download fil</a>';
+  $handler->display->display_options['fields']['field_self_service_pdf']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_self_service_pdf']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_self_service_pdf']['type'] = 'file_url_plain';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Kontekstuelt filter: Indhold: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
@@ -650,18 +689,16 @@ function rebild_self_service_views_default_views() {
     t('Faldende'),
     t('category'),
     t('type'),
-    t('PDF'),
     t('Indhold entity refereret fra field_main_selfservice'),
     t('<span class="loesning-[nid]">[title]</span>'),
-    t('Download fil'),
     t('.'),
     t('<span class="kategori-[tid]">[name]</span>'),
+    t('<a href="[field_self_service_pdf]" target="_new">Download fil</a>'),
     t('Emner'),
     t('Alfabetisk'),
     t('EVA Field'),
     t('<h2 class="title">Selvbetjening:</h2>'),
     t('Selvbetjening'),
-    t('pdf'),
     t('Alle'),
   );
   $export['selfservice_items'] = $view;
@@ -755,6 +792,11 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'self_service' => 'self_service',
   );
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
 
   /* Display: Sidebar */
   $handler = $view->new_display('block', 'Sidebar', 'block_1');
@@ -786,6 +828,25 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Indhold: Overskrift */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Felt: Indhold: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['nid']['alter']['text'] = 'selvbetjening#loesning-[nid]';
+  $handler->display->display_options['fields']['nid']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['nid']['alter']['path'] = 'selvbetjening#loesning-[nid]';
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   $translatables['selfservice_landing'] = array(
     t('Master'),
     t('Selvbetjening'),

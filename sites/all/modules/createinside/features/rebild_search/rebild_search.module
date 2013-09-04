@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Søgning feature.
+ */
+
+include_once 'rebild_search.features.inc';

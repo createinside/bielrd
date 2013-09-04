@@ -61,18 +61,22 @@ Backend
 	Backend
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
+	Nodes
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
 
 [ALPHA-DEFAULT-NARROW]
 
 General
 Menus
 Frontpage
+Landingpage
 
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
 	General
 -------------------------------------------------------------------*/
-/* line 21, ../sass/rebild-alpha-default-narrow.scss */
+/* line 22, ../sass/rebild-alpha-default-narrow.scss */
 body {
   font-size: 11px;
 }
@@ -81,12 +85,12 @@ body {
 	Menus
 -------------------------------------------------------------------*/
 /* Main Menu - (Mega Menu) */
-/* line 32, ../sass/rebild-alpha-default-narrow.scss */
+/* line 33, ../sass/rebild-alpha-default-narrow.scss */
 #region-menu ul.ultimenu > li {
   margin: 0 0 0 35px;
 }
 
-/* line 38, ../sass/rebild-alpha-default-narrow.scss */
+/* line 39, ../sass/rebild-alpha-default-narrow.scss */
 .ultimenu-flyout {
   width: 700px;
   left: -180px;
@@ -95,36 +99,92 @@ body {
 /*------------------------------------------------------------------
 	Frontpage
 -------------------------------------------------------------------*/
-/* line 48, ../sass/rebild-alpha-default-narrow.scss */
+/* line 49, ../sass/rebild-alpha-default-narrow.scss */
 .front #region-header-first .block {
   background-position: 250px -110px;
 }
-/* line 54, ../sass/rebild-alpha-default-narrow.scss */
+/* line 55, ../sass/rebild-alpha-default-narrow.scss */
 .front #region-content .view .views-row {
   height: 338px;
   margin-bottom: 20px;
 }
-/* line 61, ../sass/rebild-alpha-default-narrow.scss */
+/* line 62, ../sass/rebild-alpha-default-narrow.scss */
 .front #region-sidebar-first .block {
   margin-bottom: 20px;
 }
-/* line 64, ../sass/rebild-alpha-default-narrow.scss */
+/* line 65, ../sass/rebild-alpha-default-narrow.scss */
 .front #region-sidebar-first .block-views {
   height: 463px;
 }
-/* line 70, ../sass/rebild-alpha-default-narrow.scss */
+/* line 71, ../sass/rebild-alpha-default-narrow.scss */
 .front #region-sidebar-first .block-block {
   height: 210px;
 }
-/* line 76, ../sass/rebild-alpha-default-narrow.scss */
+/* line 77, ../sass/rebild-alpha-default-narrow.scss */
 .front #region-postscript-first .block .content {
   height: 190px;
 }
-/* line 83, ../sass/rebild-alpha-default-narrow.scss */
+/* line 84, ../sass/rebild-alpha-default-narrow.scss */
 .front #region-postscript-second .block .content {
   height: 190px;
 }
-/* line 86, ../sass/rebild-alpha-default-narrow.scss */
+/* line 87, ../sass/rebild-alpha-default-narrow.scss */
 .front #region-postscript-second .block .content .view-calendar-frontpage .calendar_right {
   width: 120px;
+}
+
+/*------------------------------------------------------------------
+  Landingpage
+-------------------------------------------------------------------*/
+/* Aktuelt */
+/* line 103, ../sass/rebild-alpha-default-narrow.scss */
+.not-front .view-id-rebild_frontpage .views-row {
+  height: 361px;
+  width: 227px;
+}
+
+/*------------------------------------------------------------------
+  Blocks
+-------------------------------------------------------------------*/
+/* Custom blocks - Frivillig */
+/* line 116, ../sass/rebild-alpha-default-narrow.scss */
+.html #page .custom_block.social {
+  background-image: url("../img/social_ansvar.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 255px;
+}
+/* line 121, ../sass/rebild-alpha-default-narrow.scss */
+.html #page .custom_block.social h2 {
+  margin-bottom: 0;
+  margin-top: 190px;
+}
+/* line 126, ../sass/rebild-alpha-default-narrow.scss */
+.html #page .custom_block.frivillig {
+  background-image: url("../img/frivillig.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 255px;
+}
+/* line 131, ../sass/rebild-alpha-default-narrow.scss */
+.html #page .custom_block.frivillig h2 {
+  margin-bottom: 0;
+  margin-top: 190px;
+}
+
+/* line 141, ../sass/rebild-alpha-default-narrow.scss */
+.html #page .custom_block.politics p {
+  margin-bottom: 0px;
+}
+
+/* Calendar - sidebar */
+/* line 152, ../sass/rebild-alpha-default-narrow.scss */
+.view-id-calendar_sidebar .view-content .rebild-calendar .calendar_right {
+  max-width: 80px;
+}
+
+/* WCAG */
+/* line 160, ../sass/rebild-alpha-default-narrow.scss */
+.wcag-block {
+  margin: 0 17px 0 0;
 }

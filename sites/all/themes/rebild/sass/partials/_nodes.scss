@@ -7,13 +7,14 @@ Basic Page
 News Article
 Accordions
 Borger dk
+Agendas
+Calendar
 
 -------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------
 	Nodes
 -------------------------------------------------------------------*/
-
 #region-content {
 	.node-unpublished {
 		background: none;
@@ -57,7 +58,9 @@ Borger dk
 -------------------------------------------------------------------*/
 #region-content {
 	.node-page,
-	.node-news-article {
+	.node-news-article,
+	.node-calendar-post,
+	.node-offering {
 		/* Main Image*/
 		.field-name-field-main-image {
 			margin-bottom: $spacing-std;
@@ -121,7 +124,9 @@ Borger dk
 
 #region-content {
 	.node-page,
-	.node-news-article {
+	.node-news-article,
+	.node-agenda,
+	.node-os2web-borger-dk-article {
 		.ui-accordion {
 			margin: $spacing-std 0;
 			.ui-accordion-header {
@@ -151,6 +156,11 @@ Borger dk
 					background-color: $color-blue;
 					a {
 						color: white;
+					}
+					a .field-content:before {			
+						@include icon-prepare();
+						content: "\e010";	
+						margin-right: 0.5em;
 					}
 				}
 			.ui-accordion-content {
@@ -199,11 +209,138 @@ Borger dk
 				margin: 0;		
 			}
 		}
-		.microArticle.aktiv {
-			h2.mArticle {
-				background-color: $color-blue;
-				color: #fff;			
-			}	
+		h2.mArticle.ui-state-active {
+			background-color: $color-blue;
+			color: #fff;			
+		}	
+	
+	}	
+}
+
+/*------------------------------------------------------------------
+	Agendas
+-------------------------------------------------------------------*/	
+#region-content {
+	.node-agenda {
+		.ui-accordion {
+			.ui-accordion-content {
+				padding: $spacing-std/2 $spacing-std $spacing-std;
+				.views-label {
+					font-weight: bold;
+				}
+				ul {
+					margin-top: $spacing-std/2;
+					margin-bottom: $spacing-std/2;
+					li {
+						margin: 0;
+					}
+				}
+			}
+		}
+		.field-label {
+			margin: 0;
+		}
+		table {
+			max-width: 100%;
+			border: 1px solid $text-color;
+		}
+		table tr td {
+			padding: 5px;
+		}
+	}
+}
+
+#region-content {
+	.node-offering {
+		.field-name-field-offering-link a {
+			display: inline-block;
+			color: white;
+			text-transform: uppercase;
+			font-size: $font-size-std;
+			background-color: $color-purple;
+			padding: 14px 20px;
+			margin-top: $spacing-std;
+			@include background-image(linear-gradient($color-purple, #79648c));
+			@include border-radius($border-radius-std);			
+		}
+		.field-name-field-offering-link a:after {
+			@include icon-prepare();
+			content: "\f061";	
+			color: $color-purple;
+			background: white;
+			display: inline-block;
+			padding: 0.30em 0.40em 0.4em;
+			margin: 0 0 0 10px;
+			position: relative;
+			font-size: 0.75em;
+			top: -1px;
+			@include border-radius(2px);
+		}
+	}
+}
+
+/*------------------------------------------------------------------
+	Calendar
+-------------------------------------------------------------------*/
+#region-content {
+	.node-calendar-post {
+		.group-calendar-info {		
+			padding: 10px;
+			margin-bottom: $spacing-std;
+			@include grid-box-no-shadow(#e6e6e6);	
+			.fieldset-legend {
+				position: absolute;
+				text-transform: uppercase;
+				font-weight: bold;
+				margin-top: 15px;
+			}
+			.fieldset-wrapper {
+				margin-top: $spacing-std*2;
+			}
+			.group-calendar-contact {
+				margin-bottom: $spacing-std;
+				.fieldset-legend {
+					position: relative;
+					margin-top: 0;
+					text-transform: none;
+				}
+				.fieldset-wrapper {
+					margin-top: 0;
+				}
+				.field {
+					margin-bottom: 0;
+				}
+				.field-name-field-calender-email {
+					a {
+						color: #474747;
+					}
+				}
+				
+			}
+		}
+		.field-name-field-calendar-ticket-link {
+			a {
+				background-image: url('../img/bestil_billet.png');
+				background-repeat: no-repeat;
+				height: 43px;
+				width: 213px;
+				text-indent: -999em;
+				display: block;
+				
+			}
+		}
+	}
+}
+
+/*------------------------------------------------------------------
+	Cloned page
+-------------------------------------------------------------------*/
+#region-content {
+	.field-name-field-cloned-page {
+		#region-content-sidebar {
+			ul {
+				margin-left: 0;
+			}
 		}	
 	}	
 }

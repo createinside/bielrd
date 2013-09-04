@@ -1,0 +1,5 @@
+name = Search
+description = Custom search blocks and search tweaks
+core = 7.x
+version = 7.x-1.0
+package = Create Inside

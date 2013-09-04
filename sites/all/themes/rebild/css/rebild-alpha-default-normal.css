@@ -60,17 +60,22 @@ Backend
 	Backend
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
+	Nodes
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
 
 [ALPHA-DEFAULT-NARROW]
 
 General
+Menus
 Frontpage
+Landingpage
 
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
 	General
 -------------------------------------------------------------------*/
-/* line 19, ../sass/rebild-alpha-default-normal.scss */
+/* line 21, ../sass/rebild-alpha-default-normal.scss */
 body {
   font-size: 12px;
 }
@@ -79,12 +84,12 @@ body {
 	Menus
 -------------------------------------------------------------------*/
 /* Main Menu - (Mega Menu) */
-/* line 30, ../sass/rebild-alpha-default-normal.scss */
+/* line 32, ../sass/rebild-alpha-default-normal.scss */
 #region-menu ul.ultimenu > li {
   margin: 0 0 0 35px;
 }
 
-/* line 35, ../sass/rebild-alpha-default-normal.scss */
+/* line 37, ../sass/rebild-alpha-default-normal.scss */
 .ultimenu-flyout {
   width: 940px;
   left: -240px;
@@ -93,7 +98,7 @@ body {
 /*------------------------------------------------------------------
 	Frontpage
 -------------------------------------------------------------------*/
-/* line 45, ../sass/rebild-alpha-default-normal.scss */
+/* line 47, ../sass/rebild-alpha-default-normal.scss */
 .front #region-header-first .block {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -101,32 +106,61 @@ body {
   padding: 25px 0 20px 0;
   background-position: 480px -110px;
 }
-/* line 53, ../sass/rebild-alpha-default-normal.scss */
+/* line 55, ../sass/rebild-alpha-default-normal.scss */
 .front #region-content .view .views-row {
   height: 361px;
   margin-bottom: 20px;
 }
-/* line 60, ../sass/rebild-alpha-default-normal.scss */
+/* line 62, ../sass/rebild-alpha-default-normal.scss */
 .front #region-sidebar-first .block {
   margin-bottom: 20px;
 }
-/* line 63, ../sass/rebild-alpha-default-normal.scss */
+/* line 65, ../sass/rebild-alpha-default-normal.scss */
 .front #region-sidebar-first .block-views {
   height: 530px;
 }
-/* line 66, ../sass/rebild-alpha-default-normal.scss */
+/* line 68, ../sass/rebild-alpha-default-normal.scss */
 .front #region-sidebar-first .block-block {
   height: 190px;
 }
-/* line 72, ../sass/rebild-alpha-default-normal.scss */
+/* line 74, ../sass/rebild-alpha-default-normal.scss */
 .front #region-postscript-first .block .content {
   height: 150px;
 }
-/* line 79, ../sass/rebild-alpha-default-normal.scss */
+/* line 81, ../sass/rebild-alpha-default-normal.scss */
 .front #region-postscript-second .block .content {
   height: 150px;
 }
-/* line 82, ../sass/rebild-alpha-default-normal.scss */
+/* line 84, ../sass/rebild-alpha-default-normal.scss */
 .front #region-postscript-second .block .content .view-calendar-frontpage .calendar_right {
   width: 200px;
+}
+
+/*------------------------------------------------------------------
+  Landingpage
+-------------------------------------------------------------------*/
+/* Aktuelt */
+/* line 100, ../sass/rebild-alpha-default-normal.scss */
+.not-front .view-id-rebild_frontpage .views-row {
+  height: 361px;
+  width: 310px;
+}
+
+/*------------------------------------------------------------------
+  Blocks
+-------------------------------------------------------------------*/
+/* line 112, ../sass/rebild-alpha-default-normal.scss */
+.html #page .custom_block.social h2, .html #page .custom_block.frivillig h2 {
+  margin-bottom: 10px;
+}
+
+/* line 121, ../sass/rebild-alpha-default-normal.scss */
+.html #page .custom_block.politics p {
+  margin-bottom: 10px;
+}
+
+/* Calendar - sidebar */
+/* line 131, ../sass/rebild-alpha-default-normal.scss */
+.view-id-calendar_sidebar .view-content .rebild-calendar .calendar_right {
+  max-width: 160px;
 }

@@ -243,3 +243,30 @@ function rebild_picture($variables) {
     return implode("\n", $output);
   }
 }
+
+/**
+ * Implements the preprocess THEMENAME_preprocess_search_results().
+ *
+ * @param Assoc $variables
+ *   'results': Search results array.
+ *   'module': Module the search results came from (module implementing hook_search_info()).
+ */
+function rebild_preprocess_search_results(&$variables) {
+  $variables['search_results'] = '';
+  if (!empty($variables['module'])) {
+    $variables['module'] = check_plain($variables['module']);
+  }
+  $index = 0;
+  foreach ($variables['results'] as $result) {
+    $variables['search_results'] .= theme('search_result',
+      array(
+        'result' => $result,
+        'module' => $variables['module'],
+        'extra_classes' => $index % 2 === 0 ? ' even' : ' odd',
+      )
+    );
+    ++$index;
+  }
+  $variables['pager'] = theme('pager', array('tags' => NULL));
+  $variables['theme_hook_suggestions'][] = 'search_results__' . $variables['module'];
+}

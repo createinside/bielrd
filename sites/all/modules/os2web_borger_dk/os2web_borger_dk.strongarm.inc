@@ -339,5 +339,12 @@ function os2web_borger_dk_strongarm() {
   $strongarm->value = 0;
   $export['os2web_borger_dk_titles_search_auto_submit'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_os2web_borger_dk_article_pattern';
+  $strongarm->value = '[node:menu-link:parents:join-path]/[node:title]';
+  $export['pathauto_node_os2web_borger_dk_article_pattern'] = $strongarm;
+
   return $export;
 }

@@ -89,6 +89,9 @@ function rebild_offering_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'print' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -96,10 +99,13 @@ function rebild_offering_strongarm() {
           'weight' => '0',
         ),
         'metatags' => array(
-          'weight' => '10',
+          'weight' => '7',
         ),
         'redirect' => array(
-          'weight' => '11',
+          'weight' => '8',
+        ),
+        'path' => array(
+          'weight' => '9',
         ),
       ),
       'display' => array(),
@@ -151,6 +157,13 @@ function rebild_offering_strongarm() {
   $strongarm->name = 'node_submitted_offering';
   $strongarm->value = 0;
   $export['node_submitted_offering'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_offering_pattern';
+  $strongarm->value = 'udbud/[node:title]';
+  $export['pathauto_node_offering_pattern'] = $strongarm;
 
   return $export;
 }

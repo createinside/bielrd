@@ -1,0 +1,195 @@
+<?php
+
+/**
+ * Implements hook_block_info().
+ */
+function ci_search_block_info() {
+  $blocks = array();
+  $blocks['ci_search_results'] = array(
+    'info' => t('Search form - results'),
+  );
+  $blocks['ci_search_front'] = array(
+    'info' => t('Search form - front'),
+  ); 
+  $blocks['ci_search_borger'] = array(
+    'info' => t('Search form - borger'),
+  ); 
+  $blocks['ci_search_erhverv'] = array(
+    'info' => t('Search form - erhverv'),
+  ); 
+  $blocks['ci_search_politik'] = array(
+    'info' => t('Search form - politik'),
+  ); 
+  $blocks['ci_search_rebild'] = array(
+    'info' => t('Search form - bo i rebild'),
+  ); 
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function ci_search_block_view($delta='') {
+	$block = array();
+	
+	switch($delta) {
+		case 'ci_search_results' :
+			$block['subject'] = "";
+			$block['content'] = drupal_get_form("ci_search_results_form");
+		break;
+		case 'ci_search_front' :
+			$block['subject'] = "";
+			$block['content'] = drupal_get_form("ci_search_front_form");
+		break;
+		case 'ci_search_borger' :
+			$block['subject'] = "Hvad søger du efter?";
+			$block['content'] = drupal_get_form("ci_search_sub_form", 1);
+		break;
+		case 'ci_search_erhverv' :
+			$block['subject'] = "Hvad søger du efter?";
+			$block['content'] = drupal_get_form("ci_search_sub_form", 3);
+		break;
+		case 'ci_search_politik' :
+			$block['subject'] = "Hvad søger du efter?";
+			$block['content'] = drupal_get_form("ci_search_sub_form", 2);
+		break;
+		case 'ci_search_rebild' :
+			$block['subject'] = "Hvad søger du efter?";
+			$block['content'] = drupal_get_form("ci_search_sub_form", 4);
+		break;
+	}
+	return $block;
+}
+
+/**
+ * Search results form
+ */
+function ci_search_results_form($form, &$form_state) {
+	
+	$form["search_phrase"] = array(
+		"#type" => "textfield",
+		"#prefix" => "<div class='sf-wrapper'>",
+		"#suffix" => "</div>",
+		"#default_value" => (arg(1)!="" ? arg(1) : ""),
+		"#attributes" => array("placeholder" => "Skriv hvad du søger efter her")
+	); 
+	$form['section'] = array (
+	    '#type' => 'checkboxes',
+	    '#title' => "Begræns din søgning:",
+	    '#default_value' => ci_search_checkboxes_default(),
+	    '#options' => ci_search_checkboxes_options(),
+	);
+	$form["submit"] = array(
+		"#type" => "submit",
+		"#value" => t("Search")
+	); 
+  return $form;	
+}
+
+/**
+ * Search frontpage form
+ */
+function ci_search_front_form($form, &$form_state) {
+
+	$form["search_phrase"] = array(
+		"#type" => "textfield",
+		"#prefix" => "<div class='sf-wrapper'>",
+		"#suffix" => "</div>",
+		"#attributes" => array("placeholder" => "Søg på rebild.dk her og find lige hvad du leder efter!")
+	); 
+	$form["submit"] = array(
+		"#type" => "submit",
+		"#value" => t("Search")
+	); 
+	$form['#submit'][] = 'ci_search_results_form_submit';	
+
+	apachesolr_autocomplete_do_alter($form["search_phrase"]);
+
+  return $form;	
+}
+
+/**
+ * Search submenu form
+ */
+function ci_search_sub_form($form, &$form_state, $tid) {
+
+	$term = taxonomy_term_load($tid);
+
+	$form["markup"] = array(
+		"#markup" => "<p>Brug søgefeltet nedenfor til at søge på indhold under ".$term->name."</p>"
+	); 
+	$form["wrap_start"] = array(
+		"#markup" => "<div class='form-wrap'>"
+	); 
+	$form["search_phrase"] = array(
+		"#type" => "textfield",
+
+ 		"#attributes" => array("placeholder" => "Søg under ".$term->name)
+	); 
+	$form['section'] = array (
+		"#type" => "hidden",
+		"#default_value" => $tid
+	);
+	$form["submit"] = array(
+		"#type" => "submit",
+		"#value" => t("Search")
+	); 
+	$form["wrap_end"] = array(
+		"#markup" => "</div>"
+	); 
+	$form['#submit'][] = 'ci_search_results_form_submit';	
+  return $form;	
+}
+
+/**
+ * Search results form - Submit handler
+ */
+function ci_search_results_form_submit($form, &$form_state) {
+
+  $redirect_url = 'soeg/';
+  $redirect_url .= urlencode($form_state['values']['search_phrase']);
+  $i=0;
+	if(is_array($form_state["values"]["section"])) {
+		foreach($form_state["values"]["section"] as $key => $val) {
+			if($val!=0) {
+				if($i==0) {
+					$redirect_url .= "?f";			
+				}
+				else {
+					$redirect_url .= "&f";			
+				}
+				$redirect_url .= "[".$i."]=im_field_main_section%3A".$val;
+			}
+			$i++;
+		}
+	}
+	else if (isset($form_state["values"]["section"])) {
+		$redirect_url .= "?f[0]=im_field_main_section%3A".$form_state["values"]["section"];
+	}
+	global $base_url;
+  $form_state['redirect'] = $base_url."/".$redirect_url;
+}
+
+function ci_search_checkboxes_options() {
+
+	$vid = taxonomy_vocabulary_machine_name_load('rebild_sections')->vid;
+  $terms = taxonomy_get_tree($vid);
+
+  foreach ($terms as $data) {
+    $output[$data->tid] = $data->name;
+  }
+
+  return $output;
+}
+
+function ci_search_checkboxes_default() {
+	
+	$default_checked = array();
+	if(isset($_GET["f"])) {
+		foreach($_GET["f"] as $key => $val) {
+			$val = str_replace("im_field_main_section:","",$val);
+			$default_checked[] = $val;		
+		}
+	}
+	return $default_checked;
+}

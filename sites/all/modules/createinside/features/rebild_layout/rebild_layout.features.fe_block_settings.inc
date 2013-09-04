@@ -12,6 +12,111 @@ function rebild_layout_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
+  $export['block-custom_block_book_politician'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'machine_name' => 'custom_block_book_politician',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'rebild',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['block-custom_block_digital_map'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'machine_name' => 'custom_block_digital_map',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'rebild',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['block-custom_block_frivillig'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'machine_name' => 'custom_block_frivillig',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'rebild',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['block-custom_block_rebildporten'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'machine_name' => 'custom_block_rebildporten',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'rebild',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['block-custom_block_social_ansvarlig'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'machine_name' => 'custom_block_social_ansvarlig',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'rebild',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   $export['block-rebild_contact_front'] = array(
     'cache' => -1,
     'css_class' => 'contact-sidebar',
@@ -26,7 +131,7 @@ function rebild_layout_default_fe_block_settings() {
         'region' => 'sidebar_first',
         'status' => 1,
         'theme' => 'rebild',
-        'weight' => -42,
+        'weight' => -45,
       ),
     ),
     'title' => 'Kontakt Rebild Kommune',
@@ -50,7 +155,7 @@ bo-i-rebild',
         'region' => 'sidebar_first',
         'status' => 1,
         'theme' => 'rebild',
-        'weight' => -35,
+        'weight' => -38,
       ),
     ),
     'title' => 'Kontakt Rebild Kommune',
@@ -127,38 +232,14 @@ bo-i-rebild',
     'delta' => 16,
     'module' => 'menu_block',
     'node_types' => array(),
-    'pages' => 'borger
-erhverv
-politik
-bo-i-rebild',
+    'pages' => '',
     'roles' => array(),
     'themes' => array(
       'rebild' => array(
         'region' => 'content',
         'status' => 1,
         'theme' => 'rebild',
-        'weight' => -45,
-      ),
-    ),
-    'title' => '<none>',
-    'visibility' => 1,
-  );
-
-  $export['menu_block-8'] = array(
-    'cache' => -1,
-    'css_class' => '',
-    'custom' => 0,
-    'delta' => 8,
-    'module' => 'menu_block',
-    'node_types' => array(),
-    'pages' => '<front>',
-    'roles' => array(),
-    'themes' => array(
-      'rebild' => array(
-        'region' => 'content',
-        'status' => 1,
-        'theme' => 'rebild',
-        'weight' => -44,
+        'weight' => -54,
       ),
     ),
     'title' => '<none>',

@@ -9,7 +9,9 @@
 [ALPHA-DEFAULT-NARROW]
 
 General
+Menus
 Frontpage
+Landingpage
 
 -------------------------------------------------------------------*/
 
@@ -83,6 +85,51 @@ body {
 						width: 200px;
 					}
 				}
+			}
+		}
+	}
+}
+
+/*------------------------------------------------------------------
+  Landingpage
+-------------------------------------------------------------------*/
+
+/* Aktuelt */
+.not-front {
+  .view-id-rebild_frontpage {
+    .views-row {
+      height: 361px;
+      width: 310px;
+    }
+  } 
+}
+/*------------------------------------------------------------------
+  Blocks
+-------------------------------------------------------------------*/
+.html {
+	#page {
+		.custom_block.social, .custom_block.frivillig  {
+			h2 {				
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+.html {
+	#page {
+		.custom_block.politics {
+			p {
+				margin-bottom: 10px;
+			}
+		}
+	}	
+}
+/* Calendar - sidebar */
+.view-id-calendar_sidebar {
+	.view-content {
+		.rebild-calendar {
+			.calendar_right {
+				max-width: 160px;
 			}
 		}
 	}

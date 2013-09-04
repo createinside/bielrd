@@ -25,7 +25,7 @@ function rebild_general_settings_strongarm() {
     1 => array(
       'name' => 'User-1',
       'usertab' => 1,
-      'filesize' => '5',
+      'filesize' => '512',
       'quota' => '0',
       'tuquota' => '0',
       'extensions' => 'png jpg jpeg gif txt doc docx xls xlsx pdf ppt pptx pps ppsx odt ods odp',
@@ -175,20 +175,6 @@ function rebild_general_settings_strongarm() {
     2 => 'media_default--media_browser_my_files',
   );
   $export['media__wysiwyg_browser_plugins'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'site_403';
-  $strongarm->value = '';
-  $export['site_403'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'site_404';
-  $strongarm->value = '';
-  $export['site_404'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

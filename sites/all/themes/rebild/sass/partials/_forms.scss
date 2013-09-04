@@ -5,6 +5,9 @@
 -------------------------------------------------------------------*/
 
 form {
+	:focus {
+		outline: 0;
+	}
 	input[type=text],
 	input[type=search],
 	input[type=password],
@@ -22,7 +25,7 @@ form {
 		appearance:         none;
 		border: 1px solid #EEE;
 		@include background-image(linear-gradient(#ececec, #ffffff 33%));
-		@include box-sizing(content-box);
+		@include box-sizing(border-box);
 	}
 	input[type=submit] {
 		background: $button-bg-color;
@@ -81,4 +84,26 @@ select {
 	cursor: pointer;
 	line-height: 1em;
 	padding: 1em;
+}
+
+/** 
+ * Newsletter subscriptions 
+ */
+#simplenews-subscriptions-page-form {
+	legend {
+		font-weight: bold;
+		margin-bottom: $spacing-std;
+	}
+	.fieldset-description {
+		margin-bottom: $spacing-std;
+	}
+	#edit-newsletters {
+		margin-bottom: $spacing-std;
+	}
+	.form-type-textfield {
+		margin: $spacing-std 0;
+	}
+	.form-submit {
+		margin-right: 10px;
+	}
 }

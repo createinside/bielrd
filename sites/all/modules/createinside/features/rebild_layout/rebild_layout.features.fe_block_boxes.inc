@@ -11,10 +11,56 @@ function rebild_layout_default_fe_block_boxes() {
   $export = array();
 
   $fe_block_boxes = new stdClass();
+  $fe_block_boxes->info = 'Tilpasset block - book en lokalpolitiker';
+  $fe_block_boxes->format = 'filtered_html';
+  $fe_block_boxes->machine_name = 'custom_block_book_politician';
+  $fe_block_boxes->body = '<p>Har du talt med dit byråd i dag?</p>
+<p>-<a href="/politik/book-en-lokalpolitiker"><strong> book en lokalpolitiker!</strong></a></p>';
+
+  $export['custom_block_book_politician'] = $fe_block_boxes;
+
+  $fe_block_boxes = new stdClass();
+  $fe_block_boxes->info = 'Tilpasset block - Kort og godt';
+  $fe_block_boxes->format = 'filtered_html';
+  $fe_block_boxes->machine_name = 'custom_block_digital_map';
+  $fe_block_boxes->body = '<p><a href="/bo-i-rebild/kort-over-rebild-kommune-kortinfo"><strong>Kort og godt Rebild</strong></a><br /><a href="/bo-i-rebild/kort-over-rebild-kommune-kortinfo"><strong>Kommune</strong></a></p>
+<h3>- helt digitalt</h3>';
+
+  $export['custom_block_digital_map'] = $fe_block_boxes;
+
+  $fe_block_boxes = new stdClass();
+  $fe_block_boxes->info = 'Tilpasset block - Vil du være frivillig';
+  $fe_block_boxes->format = 'filtered_html';
+  $fe_block_boxes->machine_name = 'custom_block_frivillig';
+  $fe_block_boxes->body = '<h2>Vil du være frivillig</h2>
+<p>Har du lyst til at gøre en forskel for<br />andre gennem frivilligt socialt arbejde?</p>';
+
+  $export['custom_block_frivillig'] = $fe_block_boxes;
+
+  $fe_block_boxes = new stdClass();
+  $fe_block_boxes->info = 'Tilpasset block - Rebildporten';
+  $fe_block_boxes->format = 'filtered_html';
+  $fe_block_boxes->machine_name = 'custom_block_rebildporten';
+  $fe_block_boxes->body = '<h2><a href="http://rebildporten.dk"><img src="/sites/all/themes/rebild/img/rebild_port.png" alt="" width="181" height="34" /></a></h2>
+<p class="rold"><strong>Rold Skov •&nbsp;Rebild Bakker</strong></p>
+<p>Din indgang til oplevelser, events og spisesteder i Rold Skov og <br />Rebild Bakker</p>';
+
+  $export['custom_block_rebildporten'] = $fe_block_boxes;
+
+  $fe_block_boxes = new stdClass();
+  $fe_block_boxes->info = 'Tilpasset block - Socialt ansvarlig';
+  $fe_block_boxes->format = 'filtered_html';
+  $fe_block_boxes->machine_name = 'custom_block_social_ansvarlig';
+  $fe_block_boxes->body = '<h2>Vil du være social ansvarlig</h2>
+<p><strong>Vis socialt ansvar</strong> - bliv<br />virksomhedscenter og hjælp en ledig<br />videre i livet</p>';
+
+  $export['custom_block_social_ansvarlig'] = $fe_block_boxes;
+
+  $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'Mobile header';
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'mobile_header';
-  $fe_block_boxes->body = '<div id="mob-header"><p id="mob-header-left"><a href="#" id="mobile-menu-toggle"><span class="icon-reorder">&nbsp;</span></a></p><p id="mob-header-center"><a href="/"><span class="icon-mobil_logo">&nbsp;</span></a></p><p id="mob-header-right"><span class="icon-search">&nbsp;</span></p></div>';
+  $fe_block_boxes->body = '<div id="mob-header"><p id="mob-header-left"><a href="#" id="mobile-menu-toggle"><span class="icon-reorder">&nbsp;</span></a></p><p id="mob-header-center"><a href="/"><span class="icon-mobil_logo">&nbsp;</span></a></p><p id="mob-header-right"><a href="/soeg"><span class="icon-search">&nbsp;</span></a></p></div>';
 
   $export['mobile_header'] = $fe_block_boxes;
 
@@ -78,15 +124,21 @@ function rebild_layout_default_fe_block_boxes() {
   $fe_block_boxes->info = 'Forside søgeblok';
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'rebild_search_front';
-  $fe_block_boxes->body = '<form><input type="search" value="Søg på Rebild.dk her - og find lige hvad du leder efter!" /><input type="submit" value="Søg" /></form><p class="small-text"><strong>Mest søgte emner:</strong> <a href="#">Integer accumsan</a><a href="#">sodales euismod</a><a href="#">cum sociis</a><a href="#">penatibus et</a><a href="#">magnis dis</a><a href="#">parturient</a></p>';
+  $fe_block_boxes->body = '<form><input value="Søg på Rebild.dk her - og find lige hvad du leder efter!" type="search" /><input value="Søg" type="submit" /></form><p class="small-text"><strong>Mest søgte emner:</strong> <a href="#">Integer accumsan</a><a href="#">sodales euismod</a><a href="#">cum sociis</a><a href="#">penatibus et</a><a href="#">magnis dis</a><a href="#">parturient</a></p>';
 
   $export['rebild_search_front'] = $fe_block_boxes;
 
   $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'Genveje';
-  $fe_block_boxes->format = 'full_html';
+  $fe_block_boxes->format = 'filtered_html';
   $fe_block_boxes->machine_name = 'rebild_shortcuts_front';
-  $fe_block_boxes->body = '<ul><li><span style="line-height: 1.538em;" data-mce-mark="1">Book en lokalpolitiker&nbsp;</span></li><li><span style="line-height: 1.538em;" data-mce-mark="1">Ledige stillinger</span></li><li><span style="line-height: 1.538em;" data-mce-mark="1">Din kommune informerer</span></li><li><span style="line-height: 1.538em;" data-mce-mark="1">Sådan møder vi borgerne</span></li><li><span style="line-height: 1.538em;">Borgerservicecentret</span></li></ul>';
+  $fe_block_boxes->body = '<ul>
+<li>Book en lokalpolitiker</li>
+<li>Ledige stillinger</li>
+<li>Din kommune informerer</li>
+<li>Sådan møder vi borgerne</li>
+<li><a href="#">Borgerservicecentret</a></li>
+</ul>';
 
   $export['rebild_shortcuts_front'] = $fe_block_boxes;
 
