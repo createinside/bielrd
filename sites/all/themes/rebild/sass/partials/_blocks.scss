@@ -89,6 +89,8 @@
 				li {
 					margin: 0 0 .75em 0;
 					line-height: 1.15em;
+					word-break: break-word;
+					word-wrap: break-word;
 				}
 				li:before {
 					@include icon-prepare();
@@ -716,20 +718,24 @@ div.workbench-info-block {
 	}
 }
 
+
 /* WCAG BLOCKS */
 .wcag-block {
   display: inline-block;
-  margin: 0 $spacing-std 0 0;
+  margin: 0 $spacing-std/2 0 0;
+  padding: 0 $spacing-std/2 0 0;
+  border-right: 1px dotted $text-color;
+  font-size: $font-size-std;
   a {
     color: $text-color;
     text-decoration: none;
-    font-style: italic;
   }
 }
 .wcag-block.textsize {
+	font-size: 1.1em;
   #text_resize_increase {
     background: none;
-    margin: 0 7px 0 0; padding: 0;
+    margin: 0 0.25em 0 0; padding: 0;
     text-indent: 0;
     height: auto;
     width: auto;
@@ -738,6 +744,7 @@ div.workbench-info-block {
       vertical-align: super;
       float: right;
       margin: 0 0 0 1px;
+      font-weight: normal;
     }
   }
   #text_resize_decrease {
@@ -747,34 +754,40 @@ div.workbench-info-block {
     height: auto;
     width: auto;
     font-weight: bold;
-    font-size: 0.95em;
     sup {
       vertical-align: sub;
       margin: 0 0 0 1px;   
-      float: right;   
+      float: right;  
+      font-weight: normal; 
     }
   }
 }
 .wcag-block.read-aloud {
+	a {
+		font-size: $font-size-small;
+	}
   a:before {
     @include icon-prepare();
     content: "\e012"; 
     margin-right: 7px;
-    margin-top: 1px;
-    position: relative;
-    top: 1px;
+    font-size: 1.4em;
+    float: left;
   }  
 }
 .wcag-block.print {
+	border-right: 0;
   span {
     margin: 0;
+  }
+  a {
+	  font-size: $font-size-small;
   }
   a:before {
     @include icon-prepare();
     content: "\e011"; 
     margin-right: 7px;
-    position: relative;
-    top: 1px;
+    font-size: 1.4em;
+    float: left;
   }
 }
 
@@ -844,30 +857,30 @@ div.workbench-info-block {
   }
 	.sf-wrapper {
 		background: #e9e9e9;
-    padding: 10px;
+    padding: 5px;
     overflow: hidden;
     @include border-radius($border-radius-std);		
 	}
 	.form-type-textfield:before {
 		@include icon-prepare();
 		content: "\e013";
-		z-index: 10;
+		z-index: 2;
 		position: absolute;
 		left: 1em;
-		top: 1em;
-		font-size: 1.6em;
+		top: 0.9em;
+		font-size: 1.1em;
 		color: $input-color;
 	}
   input[type=search],
   input[type=text] {
-			font-size: 1em;
+			font-size: $font-size-small;
 			font-style: italic;
-			height: 4.8em;
+			height: 3.25em;
 			width: 100%;
 			line-height: 2em;
 			float: left;
 			position: relative;
-			padding: 1.05em 1em 1.05em 4em;
+			padding: 1.05em 1em 1.05em 3em;
 	    border-top: 1px solid white;
 	    background: white;
 	    background-position: center top;
@@ -877,9 +890,9 @@ div.workbench-info-block {
   }
   input[type=submit] {
     position: absolute;
-    right: 10px;
-    top: 10px;
-    font-size: (20/13)*1em;
+    right: 5px;
+    top: 5px;
+		font-size: $font-size-small;
     padding: 0 1.5em;
     @include border-radius(0 3px 3px 0);
   }
@@ -892,6 +905,7 @@ div.workbench-info-block {
     .form-type-checkbox {
       float: left;
       margin-right: 10px;
+      margin-bottom: 5px;
     }
   }
 }
@@ -901,18 +915,22 @@ div.workbench-info-block {
 	font-size: 10px;
 	text-align: center;
 	form {
-		background: #cfcfcf;
-		padding: 10px;
-		position: relative;
-		overflow: hidden;
-		margin-bottom: (17/10)*1em;
-		@include border-radius($border-radius-std);
+		margin-bottom: 0 !important;
+		width: 100%;
 		.sf-wrapper {
+			background: #cfcfcf;
+			padding: 10px;
+			position: relative;
+			overflow: hidden;
+			margin: 0 auto 15px;
+			@include border-radius($border-radius-std);			
+		}
+		.form-type-textfield {
 			overflow: hidden;
 			position: relative;
 			@include border-radius($border-radius-std);
 		}
-		.sf-wrapper:before {
+		.form-type-textfield:before {
 			@include icon-prepare();
 			content: "\e013";
 			z-index: 10;
@@ -950,21 +968,36 @@ div.workbench-info-block {
 		.form-item, .form-actions {
 			margin: 0;
 		}
-	}
-	p.small-text {
-		font-size: 11px;
-		line-height: $line-height-std;
-		color: $link-color;
-		a, strong { 
+		.most-searched {
+			font-size: 11px;
+			line-height: $line-height-std;
 			color: $link-color;
-			margin-right: 1em;
-			@include text-shadow(rgba(white, 1) 1px 1px 1px);
+			@include text-shadow(rgba(white, 1) 1px 1px 1px);			
+			ul {
+				display: inline-block;
+				text-align: center;
+				li {
+					margin-right: 1em;
+					margin-bottom: 0.5em;
+					display: inline-block;
+					a {
+						color: $link-color;
+					}
+					a:hover {
+						text-decoration: none;
+					}
+				}
+			}
+			strong {
+				display: inline-block;
+				margin-left: 1em;
+			}
 		}
 	}
 }
 /* Search autocomplete widget */
 .ac_results {
-	width: 660px !important;
+	width: 663px !important;
 	border: none;
 	padding: 10px 8px;
 	margin-top: 11px;

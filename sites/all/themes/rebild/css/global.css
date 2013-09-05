@@ -1480,8 +1480,10 @@ Calendar
 #region-content-sidebar .block .content ul li {
   margin: 0 0 .75em 0;
   line-height: 1.15em;
+  word-break: break-word;
+  word-wrap: break-word;
 }
-/* line 93, ../sass/partials/_blocks.scss */
+/* line 95, ../sass/partials/_blocks.scss */
 #region-content-sidebar .block .content ul li:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1498,11 +1500,11 @@ Calendar
   display: block;
   float: left;
 }
-/* line 106, ../sass/partials/_blocks.scss */
+/* line 108, ../sass/partials/_blocks.scss */
 #region-content-sidebar .block .view-content-sidebar-borger-dk-read-also h4 {
   margin: 1em .75em .5em;
 }
-/* line 117, ../sass/partials/_blocks.scss */
+/* line 119, ../sass/partials/_blocks.scss */
 #region-content-sidebar section.related-content-links {
   border: 1px solid #7f9dcd;
   padding-bottom: 10px;
@@ -1512,7 +1514,7 @@ Calendar
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 121, ../sass/partials/_blocks.scss */
+/* line 123, ../sass/partials/_blocks.scss */
 #region-content-sidebar section.related-content-links .block-title {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -1522,27 +1524,27 @@ Calendar
 }
 
 /* Region: Sidebar First */
-/* line 129, ../sass/partials/_blocks.scss */
+/* line 131, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first {
   text-align: center;
 }
-/* line 131, ../sass/partials/_blocks.scss */
+/* line 133, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block {
   text-align: left;
 }
-/* line 133, ../sass/partials/_blocks.scss */
+/* line 135, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block .block-title {
   font-size: 1.33333em;
   text-shadow: none;
 }
-/* line 137, ../sass/partials/_blocks.scss */
+/* line 139, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block .content {
   font-size: 1em;
   line-height: 1.15em;
 }
 
 /* Region: Postcripts First */
-/* line 151, ../sass/partials/_blocks.scss */
+/* line 153, ../sass/partials/_blocks.scss */
 #region-postscript-first .block .content {
   padding: 20px;
   color: white;
@@ -1559,7 +1561,7 @@ Calendar
 }
 
 /* Region: Postscripts Second */
-/* line 166, ../sass/partials/_blocks.scss */
+/* line 168, ../sass/partials/_blocks.scss */
 #region-postscript-second .block .content {
   padding: 20px;
   line-height: 1.15em;
@@ -1574,39 +1576,39 @@ Calendar
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 171, ../sass/partials/_blocks.scss */
+/* line 173, ../sass/partials/_blocks.scss */
 #region-postscript-second .block .content a {
   word-break: break-word;
 }
 
 /* Zone: Footer */
-/* line 180, ../sass/partials/_blocks.scss */
+/* line 182, ../sass/partials/_blocks.scss */
 #zone-footer .block {
   color: #6b6b6b;
 }
-/* line 182, ../sass/partials/_blocks.scss */
+/* line 184, ../sass/partials/_blocks.scss */
 #zone-footer .block .block-title {
   font-size: 14px;
   margin: 0 0 20px 0;
   font-weight: normal;
 }
-/* line 187, ../sass/partials/_blocks.scss */
+/* line 189, ../sass/partials/_blocks.scss */
 #zone-footer .block .content {
   font-size: 0.91667em;
   line-height: 1.15em;
 }
-/* line 190, ../sass/partials/_blocks.scss */
+/* line 192, ../sass/partials/_blocks.scss */
 #zone-footer .block .content a {
   color: #6b6b6b;
   text-decoration: none;
 }
-/* line 194, ../sass/partials/_blocks.scss */
+/* line 196, ../sass/partials/_blocks.scss */
 #zone-footer .block .content a:hover {
   text-decoration: underline;
 }
 
 /* Region: Bottom */
-/* line 204, ../sass/partials/_blocks.scss */
+/* line 206, ../sass/partials/_blocks.scss */
 #region-bottom .block .content {
   padding: 8px 0;
   text-align: center;
@@ -1614,12 +1616,12 @@ Calendar
   line-height: 1.4em;
   color: white;
 }
-/* line 210, ../sass/partials/_blocks.scss */
+/* line 212, ../sass/partials/_blocks.scss */
 #region-bottom .block .content a {
   color: white;
   text-decoration: none;
 }
-/* line 214, ../sass/partials/_blocks.scss */
+/* line 216, ../sass/partials/_blocks.scss */
 #region-bottom .block .content a:hover {
   text-decoration: underline;
 }
@@ -1628,7 +1630,7 @@ Calendar
 	Blocks Specific
 -------------------------------------------------------------------*/
 /* Selfservice block - frontpage */
-/* line 227, ../sass/partials/_blocks.scss */
+/* line 229, ../sass/partials/_blocks.scss */
 #region-header-first .block {
   margin-top: 20px;
   padding: 20px;
@@ -1642,7 +1644,7 @@ Calendar
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 231, ../sass/partials/_blocks.scss */
+/* line 233, ../sass/partials/_blocks.scss */
 #region-header-first .block h2 {
   color: white;
   font-size: 2.33333em;
@@ -1650,35 +1652,35 @@ Calendar
   font-weight: normal;
   margin-bottom: 14px;
 }
-/* line 238, ../sass/partials/_blocks.scss */
+/* line 240, ../sass/partials/_blocks.scss */
 #region-header-first .block p {
   font-size: 1.25em;
   margin-bottom: 15px;
   line-height: 1.15em;
 }
-/* line 243, ../sass/partials/_blocks.scss */
+/* line 245, ../sass/partials/_blocks.scss */
 #region-header-first .block .separator {
   margin: 10px 20px;
   font-size: 0.91667em;
   font-style: italic;
 }
-/* line 248, ../sass/partials/_blocks.scss */
+/* line 250, ../sass/partials/_blocks.scss */
 #region-header-first .block p.arrow-link {
   margin-bottom: 0 !important;
   font-size: 0.91667em;
 }
-/* line 251, ../sass/partials/_blocks.scss */
+/* line 253, ../sass/partials/_blocks.scss */
 #region-header-first .block p.arrow-link a {
   text-transform: uppercase;
   color: #00473e;
   font-weight: bold;
   text-decoration: none;
 }
-/* line 257, ../sass/partials/_blocks.scss */
+/* line 259, ../sass/partials/_blocks.scss */
 #region-header-first .block p.arrow-link a:hover {
   text-decoration: underline;
 }
-/* line 260, ../sass/partials/_blocks.scss */
+/* line 262, ../sass/partials/_blocks.scss */
 #region-header-first .block p.arrow-link a:after {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1704,7 +1706,7 @@ Calendar
   -o-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 275, ../sass/partials/_blocks.scss */
+/* line 277, ../sass/partials/_blocks.scss */
 #region-header-first .block .customSelect {
   font-style: italic;
   color: #00473e;
@@ -1713,7 +1715,7 @@ Calendar
   width: 100%;
   cursor: pointer;
 }
-/* line 283, ../sass/partials/_blocks.scss */
+/* line 285, ../sass/partials/_blocks.scss */
 #region-header-first .block .customSelect:after {
   position: absolute;
   font-style: normal;
@@ -1730,7 +1732,7 @@ Calendar
   -webkit-font-smoothing: antialiased;
   content: "\e000";
 }
-/* line 292, ../sass/partials/_blocks.scss */
+/* line 294, ../sass/partials/_blocks.scss */
 #region-header-first .block .customSelectInner {
   padding: 1em;
   display: block;
@@ -1738,16 +1740,16 @@ Calendar
   max-width: 80%;
 }
 
-/* line 300, ../sass/partials/_blocks.scss */
+/* line 302, ../sass/partials/_blocks.scss */
 .view-selfservice-frontpage {
   position: relative;
 }
-/* line 302, ../sass/partials/_blocks.scss */
+/* line 304, ../sass/partials/_blocks.scss */
 .view-selfservice-frontpage .ctools-jump-menu-button {
   display: none;
 }
 
-/* line 307, ../sass/partials/_blocks.scss */
+/* line 309, ../sass/partials/_blocks.scss */
 .view-id-selfservice_frontpage.view-display-id-block > .view-content {
   font-size: 1em;
   line-height: 1.4em;
@@ -1756,24 +1758,24 @@ Calendar
   margin: 20px auto 25px;
   text-align: center;
 }
-/* line 314, ../sass/partials/_blocks.scss */
+/* line 316, ../sass/partials/_blocks.scss */
 .view-id-selfservice_frontpage.view-display-id-block > .view-content > .views-row {
   color: #00473e;
   margin-right: 0.9em;
   margin-bottom: 0.5em;
   display: inline-block;
 }
-/* line 319, ../sass/partials/_blocks.scss */
+/* line 321, ../sass/partials/_blocks.scss */
 .view-id-selfservice_frontpage.view-display-id-block > .view-content > .views-row a {
   color: #00473e;
 }
-/* line 322, ../sass/partials/_blocks.scss */
+/* line 324, ../sass/partials/_blocks.scss */
 .view-id-selfservice_frontpage.view-display-id-block > .view-content > .views-row a:hover {
   text-decoration: none;
 }
 
 /* Contact block - front page/landing pages */
-/* line 331, ../sass/partials/_blocks.scss */
+/* line 333, ../sass/partials/_blocks.scss */
 #region-sidebar-first .block.contact-sidebar {
   padding: 20px;
   color: white;
@@ -1788,41 +1790,41 @@ Calendar
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 336, ../sass/partials/_blocks.scss */
+/* line 338, ../sass/partials/_blocks.scss */
 #region-sidebar-first .block.contact-sidebar .block-title {
   color: white;
   font-size: 1.33333em;
   line-height: 1.15em;
   text-shadow: none;
 }
-/* line 342, ../sass/partials/_blocks.scss */
+/* line 344, ../sass/partials/_blocks.scss */
 #region-sidebar-first .block.contact-sidebar .content {
   line-height: 1.25em;
 }
-/* line 344, ../sass/partials/_blocks.scss */
+/* line 346, ../sass/partials/_blocks.scss */
 #region-sidebar-first .block.contact-sidebar .content a {
   color: white;
 }
 
 /* 5 shortcuts - frontpage */
-/* line 359, ../sass/partials/_blocks.scss */
+/* line 361, ../sass/partials/_blocks.scss */
 #region-postscript-first .block-block .content ul {
   margin-bottom: 0;
 }
-/* line 361, ../sass/partials/_blocks.scss */
+/* line 363, ../sass/partials/_blocks.scss */
 #region-postscript-first .block-block .content ul li {
   margin-bottom: 1.6em;
 }
-/* line 363, ../sass/partials/_blocks.scss */
+/* line 365, ../sass/partials/_blocks.scss */
 #region-postscript-first .block-block .content ul li a {
   color: white;
   text-decoration: none;
 }
-/* line 367, ../sass/partials/_blocks.scss */
+/* line 369, ../sass/partials/_blocks.scss */
 #region-postscript-first .block-block .content ul li a:hover {
   text-decoration: underline;
 }
-/* line 371, ../sass/partials/_blocks.scss */
+/* line 373, ../sass/partials/_blocks.scss */
 #region-postscript-first .block-block .content ul li:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1837,23 +1839,23 @@ Calendar
 }
 
 /* Custom blocks */
-/* line 381, ../sass/partials/_blocks.scss */
+/* line 383, ../sass/partials/_blocks.scss */
 .custom_block {
   padding: 20px;
   color: white;
   line-height: 1.15em;
 }
-/* line 385, ../sass/partials/_blocks.scss */
+/* line 387, ../sass/partials/_blocks.scss */
 .custom_block a {
   text-decoration: none;
 }
-/* line 388, ../sass/partials/_blocks.scss */
+/* line 390, ../sass/partials/_blocks.scss */
 .custom_block a:hover {
   text-decoration: underline;
 }
 
 /* Custom blocks - book en politiker */
-/* line 396, ../sass/partials/_blocks.scss */
+/* line 398, ../sass/partials/_blocks.scss */
 .html #page .custom_block.politics {
   background-color: #68a386;
   -webkit-border-radius: 3px;
@@ -1869,17 +1871,17 @@ Calendar
   background-repeat: no-repeat;
   font-size: 1.25em;
 }
-/* line 402, ../sass/partials/_blocks.scss */
+/* line 404, ../sass/partials/_blocks.scss */
 .html #page .custom_block.politics p {
   margin-bottom: 5px;
 }
-/* line 405, ../sass/partials/_blocks.scss */
+/* line 407, ../sass/partials/_blocks.scss */
 .html #page .custom_block.politics a {
   color: #fff;
 }
 
 /* Custom blocks - Kort og godt */
-/* line 414, ../sass/partials/_blocks.scss */
+/* line 416, ../sass/partials/_blocks.scss */
 .html #page .custom_block.map {
   background-color: white;
   -webkit-border-radius: 3px;
@@ -1896,22 +1898,22 @@ Calendar
   background-repeat: no-repeat;
   background-position: right bottom;
 }
-/* line 421, ../sass/partials/_blocks.scss */
+/* line 423, ../sass/partials/_blocks.scss */
 .html #page .custom_block.map h3 {
   font-weight: normal;
   color: #68a386;
 }
-/* line 425, ../sass/partials/_blocks.scss */
+/* line 427, ../sass/partials/_blocks.scss */
 .html #page .custom_block.map p {
   margin-bottom: 5px;
 }
-/* line 428, ../sass/partials/_blocks.scss */
+/* line 430, ../sass/partials/_blocks.scss */
 .html #page .custom_block.map a {
   color: #474747;
 }
 
 /* Custom blocks - Rebildporten */
-/* line 437, ../sass/partials/_blocks.scss */
+/* line 439, ../sass/partials/_blocks.scss */
 .html #page .custom_block.rebildporten {
   background-color: #f04f0f;
   -webkit-border-radius: 3px;
@@ -1924,17 +1926,17 @@ Calendar
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   height: 105px;
 }
-/* line 440, ../sass/partials/_blocks.scss */
+/* line 442, ../sass/partials/_blocks.scss */
 .html #page .custom_block.rebildporten h2 {
   margin-bottom: 10px;
 }
-/* line 443, ../sass/partials/_blocks.scss */
+/* line 445, ../sass/partials/_blocks.scss */
 .html #page .custom_block.rebildporten .rold {
   margin-bottom: 10px;
 }
 
 /* Custom blocks - Frivillig */
-/* line 452, ../sass/partials/_blocks.scss */
+/* line 454, ../sass/partials/_blocks.scss */
 .html #page .custom_block.frivillig {
   background-color: white;
   -webkit-border-radius: 3px;
@@ -1951,7 +1953,7 @@ Calendar
   background-repeat: no-repeat;
   background-position: center top;
 }
-/* line 459, ../sass/partials/_blocks.scss */
+/* line 461, ../sass/partials/_blocks.scss */
 .html #page .custom_block.frivillig h2 {
   margin-top: 210px;
   font-size: 1.33333em;
@@ -1960,7 +1962,7 @@ Calendar
 }
 
 /* Custom blocks - Socialt ansvarlig */
-/* line 471, ../sass/partials/_blocks.scss */
+/* line 473, ../sass/partials/_blocks.scss */
 .html #page .custom_block.social {
   background-color: white;
   -webkit-border-radius: 3px;
@@ -1977,7 +1979,7 @@ Calendar
   background-repeat: no-repeat;
   background-position: center top;
 }
-/* line 478, ../sass/partials/_blocks.scss */
+/* line 480, ../sass/partials/_blocks.scss */
 .html #page .custom_block.social h2 {
   margin-top: 210px;
   font-size: 1.33333em;
@@ -1986,7 +1988,7 @@ Calendar
 }
 
 /* Calendar sidebar */
-/* line 490, ../sass/partials/_blocks.scss */
+/* line 492, ../sass/partials/_blocks.scss */
 #section-content .block-calendar-sidebar-block {
   overflow: hidden;
   line-height: 1.15em;
@@ -2001,61 +2003,61 @@ Calendar
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 495, ../sass/partials/_blocks.scss */
+/* line 497, ../sass/partials/_blocks.scss */
 #section-content .block-calendar-sidebar-block .block-title {
   padding: 20px 20px 0 20px;
 }
 
 /* Footer - Contact information */
-/* line 503, ../sass/partials/_blocks.scss */
+/* line 505, ../sass/partials/_blocks.scss */
 #region-footer-first .block {
   text-align: center;
 }
-/* line 506, ../sass/partials/_blocks.scss */
+/* line 508, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content p {
   margin-bottom: 10px;
 }
-/* line 509, ../sass/partials/_blocks.scss */
+/* line 511, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content table {
   margin: auto;
   margin-bottom: 10px;
   line-height: 1.15em;
   text-align: center;
 }
-/* line 515, ../sass/partials/_blocks.scss */
+/* line 517, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content p.large-text {
   font-size: 1.66667em;
   line-height: 1.15em;
 }
-/* line 518, ../sass/partials/_blocks.scss */
+/* line 520, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content p.large-text span {
   position: relative;
   top: 2px;
   display: inline-block;
   width: 20px;
 }
-/* line 524, ../sass/partials/_blocks.scss */
+/* line 526, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content img {
   margin-bottom: 5px;
 }
-/* line 527, ../sass/partials/_blocks.scss */
+/* line 529, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content a {
   color: #6b6b6b;
   text-decoration: none;
 }
-/* line 531, ../sass/partials/_blocks.scss */
+/* line 533, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content a:hover {
   text-decoration: underline;
 }
-/* line 534, ../sass/partials/_blocks.scss */
+/* line 536, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content p.bottom-logo {
   margin-bottom: 13.33333px;
 }
-/* line 536, ../sass/partials/_blocks.scss */
+/* line 538, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content p.bottom-logo span.icon-bottom_logo {
   font-size: 50px;
 }
-/* line 540, ../sass/partials/_blocks.scss */
+/* line 542, ../sass/partials/_blocks.scss */
 #region-footer-first .block .content p.bottom-text {
   font-size: 1.15em;
   line-height: 1.20em;
@@ -2063,24 +2065,24 @@ Calendar
 }
 
 /* Mobile Header */
-/* line 550, ../sass/partials/_blocks.scss */
+/* line 552, ../sass/partials/_blocks.scss */
 #mob-header {
   color: #68a386;
   font-size: 24px;
 }
-/* line 553, ../sass/partials/_blocks.scss */
+/* line 555, ../sass/partials/_blocks.scss */
 #mob-header a {
   color: #68a386;
   text-decoration: none;
 }
-/* line 557, ../sass/partials/_blocks.scss */
+/* line 559, ../sass/partials/_blocks.scss */
 #mob-header #mob-header-left {
   float: left;
   text-align: left;
   width: 33%;
   line-height: 1.5em;
 }
-/* line 563, ../sass/partials/_blocks.scss */
+/* line 565, ../sass/partials/_blocks.scss */
 #mob-header #mob-header-center {
   text-align: center;
   float: left;
@@ -2089,11 +2091,11 @@ Calendar
   color: #00703c;
   line-height: 1em;
 }
-/* line 570, ../sass/partials/_blocks.scss */
+/* line 572, ../sass/partials/_blocks.scss */
 #mob-header #mob-header-center a {
   color: #00703c;
 }
-/* line 574, ../sass/partials/_blocks.scss */
+/* line 576, ../sass/partials/_blocks.scss */
 #mob-header #mob-header-right {
   float: left;
   text-align: right;
@@ -2101,12 +2103,12 @@ Calendar
   line-height: 1.5em;
 }
 
-/* line 582, ../sass/partials/_blocks.scss */
+/* line 584, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first {
   /* Selvbetjening - sidebar */
   /* Background Image blocks */
 }
-/* line 586, ../sass/partials/_blocks.scss */
+/* line 588, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 {
   padding: 20px;
@@ -2121,17 +2123,17 @@ Calendar
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 590, ../sass/partials/_blocks.scss */
+/* line 592, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .block-title,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .block-title {
   color: white;
 }
-/* line 594, ../sass/partials/_blocks.scss */
+/* line 596, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content form,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content form {
   margin-bottom: 1em;
 }
-/* line 597, ../sass/partials/_blocks.scss */
+/* line 599, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content p.arrow-link,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content p.arrow-link {
   font-size: 0.91667em;
@@ -2139,7 +2141,7 @@ Calendar
   margin-bottom: 20px;
   padding-bottom: 20px;
 }
-/* line 602, ../sass/partials/_blocks.scss */
+/* line 604, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content p.arrow-link a,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content p.arrow-link a {
   text-transform: uppercase;
@@ -2147,12 +2149,12 @@ Calendar
   font-weight: bold;
   text-decoration: none;
 }
-/* line 608, ../sass/partials/_blocks.scss */
+/* line 610, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content p.arrow-link a:hover,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content p.arrow-link a:hover {
   text-decoration: underline;
 }
-/* line 611, ../sass/partials/_blocks.scss */
+/* line 613, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content p.arrow-link a:after,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content p.arrow-link a:after {
   font-family: 'Rebild';
@@ -2180,14 +2182,14 @@ Calendar
   -o-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 627, ../sass/partials/_blocks.scss */
+/* line 629, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content .container-inline,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content .container-inline {
   position: relative;
   margin: 0;
   overflow: hidden;
 }
-/* line 632, ../sass/partials/_blocks.scss */
+/* line 634, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content .customSelect,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content .customSelect {
   font-style: italic;
@@ -2196,7 +2198,7 @@ Calendar
   text-align: left;
   width: 100%;
 }
-/* line 639, ../sass/partials/_blocks.scss */
+/* line 641, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content .customSelect:after,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content .customSelect:after {
   font-style: normal;
@@ -2217,35 +2219,35 @@ Calendar
   -webkit-font-smoothing: antialiased;
   content: "\e000";
 }
-/* line 651, ../sass/partials/_blocks.scss */
+/* line 653, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content .customSelectInner,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content .customSelectInner {
   padding: 1em;
   max-width: 80%;
 }
-/* line 655, ../sass/partials/_blocks.scss */
+/* line 657, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content .ctools-jump-menu-button,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content .ctools-jump-menu-button {
   display: none;
 }
-/* line 660, ../sass/partials/_blocks.scss */
+/* line 662, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 ul li,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 ul li {
   margin: 0 0 0.5em 0;
   padding: 0;
 }
-/* line 663, ../sass/partials/_blocks.scss */
+/* line 665, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 ul li a,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 ul li a {
   color: white;
   text-decoration: none;
 }
-/* line 667, ../sass/partials/_blocks.scss */
+/* line 669, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 ul li a:hover,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 ul li a:hover {
   text-decoration: underline;
 }
-/* line 670, ../sass/partials/_blocks.scss */
+/* line 672, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 ul li span:before,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 ul li span:before {
   font-family: 'Rebild';
@@ -2259,7 +2261,7 @@ Calendar
   content: "\f101";
   margin-right: 0.5em;
 }
-/* line 680, ../sass/partials/_blocks.scss */
+/* line 682, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box {
   padding: 20px;
   color: #474747;
@@ -2273,76 +2275,83 @@ Calendar
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 686, ../sass/partials/_blocks.scss */
+/* line 688, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box .content {
   width: 62%;
 }
-/* line 688, ../sass/partials/_blocks.scss */
+/* line 690, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box .content h2 {
   font-size: 1.33333em;
   line-height: 1.1em;
   font-weight: normal;
 }
-/* line 693, ../sass/partials/_blocks.scss */
+/* line 695, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box .content p {
   margin-top: 1em;
 }
-/* line 698, ../sass/partials/_blocks.scss */
+/* line 700, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box.plads {
   background: #f6f6f6 url("../img/image-box-1.png") no-repeat bottom right;
 }
-/* line 701, ../sass/partials/_blocks.scss */
+/* line 703, ../sass/partials/_blocks.scss */
 .not-front #region-sidebar-first .block.image-box.skole {
   background: #f6f6f6 url("../img/image-box-2.png") no-repeat bottom right;
 }
 
-/* line 705, ../sass/partials/_blocks.scss */
+/* line 707, ../sass/partials/_blocks.scss */
 .view-selfservice-blocks {
   position: relative;
 }
 
 /* Workbench Moderation */
-/* line 710, ../sass/partials/_blocks.scss */
+/* line 712, ../sass/partials/_blocks.scss */
 div.workbench-info-block {
   font-size: 1em;
   padding: 10px 20px;
   line-height: 1.5em;
 }
-/* line 714, ../sass/partials/_blocks.scss */
+/* line 716, ../sass/partials/_blocks.scss */
 div.workbench-info-block a {
   font-weight: bold;
 }
 
 /* WCAG BLOCKS */
-/* line 720, ../sass/partials/_blocks.scss */
+/* line 723, ../sass/partials/_blocks.scss */
 .wcag-block {
   display: inline-block;
-  margin: 0 20px 0 0;
+  margin: 0 10px 0 0;
+  padding: 0 10px 0 0;
+  border-right: 1px dotted #474747;
+  font-size: 1em;
 }
-/* line 723, ../sass/partials/_blocks.scss */
+/* line 729, ../sass/partials/_blocks.scss */
 .wcag-block a {
   color: #474747;
   text-decoration: none;
-  font-style: italic;
 }
 
-/* line 730, ../sass/partials/_blocks.scss */
+/* line 734, ../sass/partials/_blocks.scss */
+.wcag-block.textsize {
+  font-size: 1.1em;
+}
+/* line 736, ../sass/partials/_blocks.scss */
 .wcag-block.textsize #text_resize_increase {
   background: none;
-  margin: 0 7px 0 0;
+  margin: 0 0.25em 0 0;
   padding: 0;
   text-indent: 0;
   height: auto;
   width: auto;
   font-weight: bold;
 }
-/* line 737, ../sass/partials/_blocks.scss */
+/* line 743, ../sass/partials/_blocks.scss */
 .wcag-block.textsize #text_resize_increase sup {
   vertical-align: super;
   float: right;
   margin: 0 0 0 1px;
+  font-weight: normal;
 }
-/* line 743, ../sass/partials/_blocks.scss */
+/* line 750, ../sass/partials/_blocks.scss */
 .wcag-block.textsize #text_resize_decrease {
   background: none;
   margin: 0;
@@ -2351,16 +2360,20 @@ div.workbench-info-block a {
   height: auto;
   width: auto;
   font-weight: bold;
-  font-size: 0.95em;
 }
-/* line 751, ../sass/partials/_blocks.scss */
+/* line 757, ../sass/partials/_blocks.scss */
 .wcag-block.textsize #text_resize_decrease sup {
   vertical-align: sub;
   margin: 0 0 0 1px;
   float: right;
+  font-weight: normal;
 }
 
-/* line 759, ../sass/partials/_blocks.scss */
+/* line 766, ../sass/partials/_blocks.scss */
+.wcag-block.read-aloud a {
+  font-size: 0.91667em;
+}
+/* line 769, ../sass/partials/_blocks.scss */
 .wcag-block.read-aloud a:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -2372,16 +2385,23 @@ div.workbench-info-block a {
   -webkit-font-smoothing: antialiased;
   content: "\e012";
   margin-right: 7px;
-  margin-top: 1px;
-  position: relative;
-  top: 1px;
+  font-size: 1.4em;
+  float: left;
 }
 
-/* line 769, ../sass/partials/_blocks.scss */
+/* line 777, ../sass/partials/_blocks.scss */
+.wcag-block.print {
+  border-right: 0;
+}
+/* line 779, ../sass/partials/_blocks.scss */
 .wcag-block.print span {
   margin: 0;
 }
-/* line 772, ../sass/partials/_blocks.scss */
+/* line 782, ../sass/partials/_blocks.scss */
+.wcag-block.print a {
+  font-size: 0.91667em;
+}
+/* line 785, ../sass/partials/_blocks.scss */
 .wcag-block.print a:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -2393,20 +2413,20 @@ div.workbench-info-block a {
   -webkit-font-smoothing: antialiased;
   content: "\e011";
   margin-right: 7px;
-  position: relative;
-  top: 1px;
+  font-size: 1.4em;
+  float: left;
 }
 
 /* Cookie Popup */
-/* line 782, ../sass/partials/_blocks.scss */
+/* line 795, ../sass/partials/_blocks.scss */
 #sliding-popup {
   background: #6b6b6b;
 }
-/* line 784, ../sass/partials/_blocks.scss */
+/* line 797, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content {
   width: auto;
 }
-/* line 786, ../sass/partials/_blocks.scss */
+/* line 799, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-text {
   font-family: Verdana, Arial, sans-serif;
   font-size: 0.91667em;
@@ -2414,38 +2434,38 @@ div.workbench-info-block a {
   width: auto;
   text-align: center;
 }
-/* line 792, ../sass/partials/_blocks.scss */
+/* line 805, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-text h3 {
   font-size: 1.25em;
   margin-bottom: 5px;
   font-weight: bold;
 }
-/* line 797, ../sass/partials/_blocks.scss */
+/* line 810, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-text p {
   font-weight: normal;
   font-size: 1.1em;
 }
-/* line 802, ../sass/partials/_blocks.scss */
+/* line 815, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-buttons {
   margin-top: 20px;
   text-align: center;
   float: none;
 }
-/* line 806, ../sass/partials/_blocks.scss */
+/* line 819, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-buttons .agree-button {
   background: #7f9dcd;
   color: #fff;
 }
-/* line 810, ../sass/partials/_blocks.scss */
+/* line 823, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-buttons .agree-button:hover {
   color: #474747;
 }
-/* line 813, ../sass/partials/_blocks.scss */
+/* line 826, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-buttons .find-more-button {
   color: #474747;
   background: #fff;
 }
-/* line 817, ../sass/partials/_blocks.scss */
+/* line 830, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-buttons button {
   border: 0;
   box-shadow: 0;
@@ -2458,7 +2478,7 @@ div.workbench-info-block a {
 }
 
 /* Search block - search page */
-/* line 832, ../sass/partials/_blocks.scss */
+/* line 845, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results {
   padding: 20px;
   margin: 0;
@@ -2472,22 +2492,22 @@ div.workbench-info-block a {
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 835, ../sass/partials/_blocks.scss */
+/* line 848, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results > div {
   position: relative;
 }
-/* line 839, ../sass/partials/_blocks.scss */
+/* line 852, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-item, #block-ci-search-ci-search-results .form-actions {
   margin: 0;
 }
-/* line 842, ../sass/partials/_blocks.scss */
+/* line 855, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-textfield {
   position: relative;
 }
-/* line 845, ../sass/partials/_blocks.scss */
+/* line 858, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .sf-wrapper {
   background: #e9e9e9;
-  padding: 10px;
+  padding: 5px;
   overflow: hidden;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -2495,7 +2515,7 @@ div.workbench-info-block a {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 851, ../sass/partials/_blocks.scss */
+/* line 864, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-textfield:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -2506,24 +2526,24 @@ div.workbench-info-block a {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   content: "\e013";
-  z-index: 10;
+  z-index: 2;
   position: absolute;
   left: 1em;
-  top: 1em;
-  font-size: 1.6em;
+  top: 0.9em;
+  font-size: 1.1em;
   color: #6b6b6b;
 }
-/* line 862, ../sass/partials/_blocks.scss */
+/* line 875, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results input[type=search],
 #block-ci-search-ci-search-results input[type=text] {
-  font-size: 1em;
+  font-size: 0.91667em;
   font-style: italic;
-  height: 4.8em;
+  height: 3.25em;
   width: 100%;
   line-height: 2em;
   float: left;
   position: relative;
-  padding: 1.05em 1em 1.05em 4em;
+  padding: 1.05em 1em 1.05em 3em;
   border-top: 1px solid white;
   background: white;
   background-position: center top;
@@ -2541,12 +2561,12 @@ div.workbench-info-block a {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 878, ../sass/partials/_blocks.scss */
+/* line 891, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results input[type=submit] {
   position: absolute;
-  right: 10px;
-  top: 10px;
-  font-size: 1.53846em;
+  right: 5px;
+  top: 5px;
+  font-size: 0.91667em;
   padding: 0 1.5em;
   -webkit-border-radius: 0 3px 3px 0;
   -moz-border-radius: 0 3px 3px 0;
@@ -2554,42 +2574,48 @@ div.workbench-info-block a {
   -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-/* line 886, ../sass/partials/_blocks.scss */
+/* line 899, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-checkboxes {
   overflow: hidden;
 }
-/* line 888, ../sass/partials/_blocks.scss */
+/* line 901, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-checkboxes > label {
   font-size: 1.2em;
   margin: 1em 0 0.75em 0;
 }
-/* line 892, ../sass/partials/_blocks.scss */
+/* line 905, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-checkboxes .form-type-checkbox {
   float: left;
   margin-right: 10px;
+  margin-bottom: 5px;
 }
 
 /* Search block - frontpage */
-/* line 900, ../sass/partials/_blocks.scss */
+/* line 914, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front {
   font-size: 10px;
   text-align: center;
 }
-/* line 903, ../sass/partials/_blocks.scss */
+/* line 917, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form {
+  margin-bottom: 0 !important;
+  width: 100%;
+}
+/* line 920, ../sass/partials/_blocks.scss */
+#block-ci-search-ci-search-front form .sf-wrapper {
   background: #cfcfcf;
   padding: 10px;
   position: relative;
   overflow: hidden;
-  margin-bottom: 1.7em;
+  margin: 0 auto 15px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 910, ../sass/partials/_blocks.scss */
-#block-ci-search-ci-search-front form .sf-wrapper {
+/* line 928, ../sass/partials/_blocks.scss */
+#block-ci-search-ci-search-front form .form-type-textfield {
   overflow: hidden;
   position: relative;
   -webkit-border-radius: 3px;
@@ -2598,8 +2624,8 @@ div.workbench-info-block a {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 915, ../sass/partials/_blocks.scss */
-#block-ci-search-ci-search-front form .sf-wrapper:before {
+/* line 933, ../sass/partials/_blocks.scss */
+#block-ci-search-ci-search-front form .form-type-textfield:before {
   font-family: 'Rebild';
   content: attr(data-icon);
   speak: none;
@@ -2616,7 +2642,7 @@ div.workbench-info-block a {
   font-size: 1.6em;
   color: #6b6b6b;
 }
-/* line 926, ../sass/partials/_blocks.scss */
+/* line 944, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form input[type=search],
 #block-ci-search-ci-search-front form input[type=text] {
   font-size: 1em;
@@ -2644,7 +2670,7 @@ div.workbench-info-block a {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 942, ../sass/partials/_blocks.scss */
+/* line 960, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form input[type=submit] {
   position: absolute;
   right: 10px;
@@ -2657,27 +2683,46 @@ div.workbench-info-block a {
   -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-/* line 950, ../sass/partials/_blocks.scss */
+/* line 968, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .form-item, #block-ci-search-ci-search-front form .form-actions {
   margin: 0;
 }
-/* line 954, ../sass/partials/_blocks.scss */
-#block-ci-search-ci-search-front p.small-text {
+/* line 971, ../sass/partials/_blocks.scss */
+#block-ci-search-ci-search-front form .most-searched {
   font-size: 11px;
   line-height: 1.15em;
   color: #474747;
-}
-/* line 958, ../sass/partials/_blocks.scss */
-#block-ci-search-ci-search-front p.small-text a, #block-ci-search-ci-search-front p.small-text strong {
-  color: #474747;
-  margin-right: 1em;
   text-shadow: white 1px 1px 1px;
+}
+/* line 976, ../sass/partials/_blocks.scss */
+#block-ci-search-ci-search-front form .most-searched ul {
+  display: inline-block;
+  text-align: center;
+}
+/* line 979, ../sass/partials/_blocks.scss */
+#block-ci-search-ci-search-front form .most-searched ul li {
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+  display: inline-block;
+}
+/* line 983, ../sass/partials/_blocks.scss */
+#block-ci-search-ci-search-front form .most-searched ul li a {
+  color: #474747;
+}
+/* line 986, ../sass/partials/_blocks.scss */
+#block-ci-search-ci-search-front form .most-searched ul li a:hover {
+  text-decoration: none;
+}
+/* line 991, ../sass/partials/_blocks.scss */
+#block-ci-search-ci-search-front form .most-searched strong {
+  display: inline-block;
+  margin-left: 1em;
 }
 
 /* Search autocomplete widget */
-/* line 966, ../sass/partials/_blocks.scss */
+/* line 999, ../sass/partials/_blocks.scss */
 .ac_results {
-  width: 660px !important;
+  width: 663px !important;
   border: none;
   padding: 10px 8px;
   margin-top: 11px;
@@ -2691,22 +2736,22 @@ div.workbench-info-block a {
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 973, ../sass/partials/_blocks.scss */
+/* line 1006, ../sass/partials/_blocks.scss */
 .ac_results ul li {
   padding: 20px;
   font-size: 1em;
   cursor: pointer;
   color: #474747;
 }
-/* line 985, ../sass/partials/_blocks.scss */
+/* line 1018, ../sass/partials/_blocks.scss */
 .ac_results ul .ac_even {
   background: white;
 }
-/* line 988, ../sass/partials/_blocks.scss */
+/* line 1021, ../sass/partials/_blocks.scss */
 .ac_results ul .ac_odd {
   background: #f6f6f6;
 }
-/* line 991, ../sass/partials/_blocks.scss */
+/* line 1024, ../sass/partials/_blocks.scss */
 .ac_results ul .ac_over {
   background: #cfcfcf;
   color: #474747;
@@ -3627,7 +3672,7 @@ img {
 /* line 51, ../sass/global.scss */
 .not-front #page-title {
   font-size: 2.16667em;
-  line-height: 1.15em;
+  line-height: 1.25em;
   font-weight: bold;
   color: #474747;
   text-shadow: white 1px 1px 1px;

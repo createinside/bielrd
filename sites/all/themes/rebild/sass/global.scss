@@ -50,7 +50,7 @@ img {
 }
 .not-front #page-title {
 	font-size: $font-size-title;
-	line-height: $line-height-std;
+	line-height: 1.25em;
 	font-weight: bold;
 	color: $text-color;
 	@include text-shadow(rgba(white, 1) 1px 1px 1px);
