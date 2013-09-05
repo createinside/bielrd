@@ -795,15 +795,34 @@ div.workbench-info-block {
         font-weight: bold;
       } 
       p {
-        font-size: $font-size-small;
+        font-weight: normal;
+				font-size: 1.1em;
       }
     }
     #popup-buttons {
-      margin: $spacing-std/2 $spacing-std/2;       
+      margin-top: $spacing-std;       
       text-align: center;
       float: none;
+      .agree-button {
+        background: $color-blue;
+        color: #fff;
+      }
+       .agree-button:hover {
+       	color: $text-color;
+       }
+      .find-more-button {
+	      color: $text-color;
+	      background: #fff;
+      }
       button {
-        
+	      border: 0;
+	      box-shadow: 0;
+	      font-family: $font-family-std;
+	      text-shadow: none;
+	      border-radius: 3px;
+	      box-shadow:0px 0 0 0;
+	      border-color: transparent;
+	      padding: 5px 15px;
       }
     }
   }
