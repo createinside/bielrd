@@ -108,6 +108,13 @@ function rebild_search_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'apachesolr_stats_enabled';
+  $strongarm->value = '1';
+  $export['apachesolr_stats_enabled'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'facetapi:block_cache:apachesolr@solr';
   $strongarm->value = -1;
   $export['facetapi:block_cache:apachesolr@solr'] = $strongarm;

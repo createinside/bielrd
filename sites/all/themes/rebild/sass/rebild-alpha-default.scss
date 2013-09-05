@@ -327,14 +327,39 @@ Nodes
 	}
 }
 
+/* Search block - search page */
+#block-ci-search-ci-search-results {
+	.sf-wrapper {
+		padding: 10px;
+	}
+	.form-type-textfield:before {
+		font-size: 1.6em;
+		top: 1em;
+
+	}
+  input[type=search],
+  input[type=text] {
+			font-size: 1em;
+			height: 4.8em;
+			padding: 1.05em 1em 1.05em 4em;
+  }
+  input[type=submit] {
+    font-size: (20/13)*1em;
+    top: 10px;
+    right: 10px;
+  }
+}
+
 /* Search block - frontpage */
 #region-header-second {
 	.block {
 		font-size: 13px;
 		margin-bottom: $spacing-std*2;
 		form {
-			max-width: 680px;
 			margin: 0 auto (17/10)*1em;
+			.sf-wrapper {
+				max-width: 680px;
+			}
 		}
 	}
 }

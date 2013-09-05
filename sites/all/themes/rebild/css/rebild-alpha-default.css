@@ -426,20 +426,47 @@ Nodes
   display: inline-block;
 }
 
-/* Search block - frontpage */
+/* Search block - search page */
 /* line 332, ../sass/rebild-alpha-default.scss */
+#block-ci-search-ci-search-results .sf-wrapper {
+  padding: 10px;
+}
+/* line 335, ../sass/rebild-alpha-default.scss */
+#block-ci-search-ci-search-results .form-type-textfield:before {
+  font-size: 1.6em;
+  top: 1em;
+}
+/* line 341, ../sass/rebild-alpha-default.scss */
+#block-ci-search-ci-search-results input[type=search],
+#block-ci-search-ci-search-results input[type=text] {
+  font-size: 1em;
+  height: 4.8em;
+  padding: 1.05em 1em 1.05em 4em;
+}
+/* line 346, ../sass/rebild-alpha-default.scss */
+#block-ci-search-ci-search-results input[type=submit] {
+  font-size: 1.53846em;
+  top: 10px;
+  right: 10px;
+}
+
+/* Search block - frontpage */
+/* line 355, ../sass/rebild-alpha-default.scss */
 #region-header-second .block {
   font-size: 13px;
   margin-bottom: 40px;
 }
-/* line 335, ../sass/rebild-alpha-default.scss */
+/* line 358, ../sass/rebild-alpha-default.scss */
 #region-header-second .block form {
-  max-width: 680px;
   margin: 0 auto 1.7em;
+}
+/* line 360, ../sass/rebild-alpha-default.scss */
+#region-header-second .block form .sf-wrapper {
+  max-width: 680px;
 }
 
 /* Search block - Inside mega menu */
-/* line 344, ../sass/rebild-alpha-default.scss */
+/* line 369, ../sass/rebild-alpha-default.scss */
 .ultimenu p.small-text {
   font-size: 0.91667em;
   line-height: 1.4em;
@@ -448,20 +475,20 @@ Nodes
   padding-top: 10px;
   margin-bottom: 0 !important;
 }
-/* line 351, ../sass/rebild-alpha-default.scss */
+/* line 376, ../sass/rebild-alpha-default.scss */
 .ultimenu p.small-text a {
   color: #6b6b6b;
   margin: 0 10px 0 0;
 }
-/* line 356, ../sass/rebild-alpha-default.scss */
+/* line 381, ../sass/rebild-alpha-default.scss */
 .ultimenu p {
   font-size: 0.91667em;
 }
-/* line 360, ../sass/rebild-alpha-default.scss */
+/* line 385, ../sass/rebild-alpha-default.scss */
 .ultimenu form .form-item, .ultimenu form .form-actions {
   margin: 0;
 }
-/* line 363, ../sass/rebild-alpha-default.scss */
+/* line 388, ../sass/rebild-alpha-default.scss */
 .ultimenu form .form-wrap {
   background: #e0e0e0;
   padding: 6px;
@@ -473,12 +500,12 @@ Nodes
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 370, ../sass/rebild-alpha-default.scss */
+/* line 395, ../sass/rebild-alpha-default.scss */
 .ultimenu form .form-wrap input[type=search],
 .ultimenu form .form-wrap input[type=text] {
   font-size: 0.91667em;
 }
-/* line 373, ../sass/rebild-alpha-default.scss */
+/* line 398, ../sass/rebild-alpha-default.scss */
 .ultimenu form .form-wrap input[type=submit] {
   position: absolute;
   top: 6px;
@@ -487,24 +514,24 @@ Nodes
 }
 
 /* Footer - Contact information */
-/* line 385, ../sass/rebild-alpha-default.scss */
+/* line 410, ../sass/rebild-alpha-default.scss */
 #region-footer-first .block {
   text-align: left;
 }
-/* line 388, ../sass/rebild-alpha-default.scss */
+/* line 413, ../sass/rebild-alpha-default.scss */
 #region-footer-first .block .content table {
   margin: 0 0 10px;
   text-align: left;
 }
 
 /* Cookie Popup*/
-/* line 399, ../sass/rebild-alpha-default.scss */
+/* line 424, ../sass/rebild-alpha-default.scss */
 #sliding-popup .popup-content #popup-text {
   width: 670px;
   max-width: 50%;
   text-align: left;
 }
-/* line 404, ../sass/rebild-alpha-default.scss */
+/* line 429, ../sass/rebild-alpha-default.scss */
 #sliding-popup .popup-content #popup-buttons {
   max-width: 50%;
   float: right;
@@ -513,14 +540,14 @@ Nodes
 /*------------------------------------------------------------------
 	Nodes
 -------------------------------------------------------------------*/
-/* line 416, ../sass/rebild-alpha-default.scss */
+/* line 441, ../sass/rebild-alpha-default.scss */
 .node #content-main.has-sidebar {
   border-right: 1px dotted #474747;
   width: 70%;
   padding-right: 3%;
   float: left;
 }
-/* line 422, ../sass/rebild-alpha-default.scss */
+/* line 447, ../sass/rebild-alpha-default.scss */
 .node #region-content-sidebar {
   float: right;
   width: 23%;
@@ -529,12 +556,12 @@ Nodes
 }
 
 /* Page & News Articles */
-/* line 432, ../sass/rebild-alpha-default.scss */
+/* line 457, ../sass/rebild-alpha-default.scss */
 .node-page,
 .node-news-article {
   /* Node Image Gallery */
 }
-/* line 436, ../sass/rebild-alpha-default.scss */
+/* line 461, ../sass/rebild-alpha-default.scss */
 .node-page .field-name-field-main-image-gallery .field-items .field-item,
 .node-news-article .field-name-field-main-image-gallery .field-items .field-item {
   width: 21%;

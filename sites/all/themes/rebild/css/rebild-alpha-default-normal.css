@@ -168,5 +168,7 @@ body {
 /* WCAG */
 /* line 139, ../sass/rebild-alpha-default-normal.scss */
 .wcag-block {
-  margin: 0 20px 0 0;
+  font-size: 1em;
+  margin: 0 10px 0 0;
+  padding: 0 10px 0 0;
 }
