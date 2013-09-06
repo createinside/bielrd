@@ -38,11 +38,12 @@ Pager
   -ms-transition: visibility 0s linear 0s, opacity 0s linear, margin 0s ease;
   -o-transition: visibility 0s linear 0s, opacity 0s linear, margin 0s ease;
   -webkit-transition: visibility 0s linear 0s, opacity 0s linear, margin 0s ease;
-  transition: opacity 0s linear, margin 0s ease, visibility 0.1s ease;
-	transition-delay: .25s;
+  transition: opacity 0 linear, margin 0s ease, visibility 0s ease;
+	@include transition-delay(0.25s);
 }
-.ultimenu > li:hover > .ultimenu-flyout {
-	transition-delay: .25s;
+.ultimenu > li:hover > .ultimenu-flyout,
+.ultimenu > li.hover > .ultimenu-flyout {
+	@include transition-delay(0.25s);
 }
 
 /*------------------------------------------------------------------
