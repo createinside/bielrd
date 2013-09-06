@@ -31,7 +31,7 @@ body {
 #region-menu {
 	ul.ultimenu {
 		> li {
-			margin: 0 0 0 35px;
+			/* margin: 0 0 0 35px; */
 		}
 	}
 }
@@ -161,4 +161,14 @@ body {
 	font-size: 11px;
 	margin: 0 8px 0 0;
   padding: 0 8px 0 0;
+}
+
+/* Search Autocomplete */
+.not-front {
+	.ac_results {
+		margin-top: 11px;
+		display: inherit;
+		width: 298px !important;	
+		@include box-shadow(rgba(black, 0.4) 0 0 3px);	
+	}	
 }

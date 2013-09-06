@@ -61,7 +61,3 @@ $(function() {
 	}
 	
 });
-
-$(function() {
-	$(".rebild_menu_block_container").height($(".rebild_menu_container").height());
-});

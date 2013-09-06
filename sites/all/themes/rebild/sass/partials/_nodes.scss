@@ -76,11 +76,9 @@ Calendar
 		}
 		/* Fact Box */
 		.field-name-field-main-factbox {
-			float: right;
-			width: 33%;
 			background: $bg-node-box;
 			padding: $spacing-std/2;
-			margin: 0 0 $spacing-std/2 $spacing-std/2;
+			margin: 0 0 $spacing-std/2 0;
 			@include border-radius(3px);
 		}
 		.field-body {
