@@ -27,7 +27,7 @@ form {
 		@include background-image(linear-gradient(#ececec, #ffffff 33%));
 		@include box-sizing(border-box);
 	}
-	input[type=submit] {
+	input[type=submit], input[type=reset] {
 		background: $button-bg-color;
 		color: white;
 		border: 1px solid $button-bg-color;
@@ -107,3 +107,16 @@ select {
 		margin-right: 10px;
 	}
 }
+/** 
+ * Send page by email 
+ */
+ #print-mail-form {
+	 input[type=submit], input[type=reset] {
+		 margin-right: $spacing-std;
+	 }
+	 .form-item {
+		 input {
+			 width: 100%;
+		 }
+	 }
+ }

@@ -65,3 +65,14 @@ $(function() {
 $(function() {
 	$(".rebild_menu_block_container").height($(".rebild_menu_container").height());
 });
+
+//to the top links
+		$(document).ready(function() {			
+			// Animate the scroll to top
+			$('.go-top').click(function(event) {
+				event.preventDefault();
+				
+				$('html, body').animate({scrollTop: 0}, 300);
+			})
+		});
+	

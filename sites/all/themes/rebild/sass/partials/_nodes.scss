@@ -9,6 +9,7 @@ Accordions
 Borger dk
 Agendas
 Calendar
+Share nodes
 
 -------------------------------------------------------------------*/
 
@@ -47,6 +48,16 @@ Calendar
 				li {
 					margin-bottom: 0.5em;
 				}
+			}
+		}
+	}
+}
+.page-node {
+	#region-content {
+		#block-system-main {
+			padding: 0;
+			.node-page {
+				padding: $spacing-std;
 			}
 		}
 	}
@@ -343,4 +354,61 @@ Calendar
 			}
 		}	
 	}	
+}
+/*------------------------------------------------------------------
+	Share node
+-------------------------------------------------------------------*/
+#region-content {
+	.node-share {
+		background: #f6f6f6;
+		border-radius: 0 0 3px 3px;
+		float: left;
+		width: 100%;
+		padding-bottom: 5px;
+		padding-top: 5px;
+		.share_wrapper {
+			padding: 5px 20px 5px 20px;
+			.share_this {
+				float: left;
+				margin-right: 20px;
+			}
+			.twitter-share {
+				width: 77px;
+			}
+			.facebook-share {
+				#u_0_6 {
+					display: none;
+				}
+			}
+			.email-share {
+				.print_mail {
+					margin-left: 0;
+					a {
+						display: block;
+						background: url('../img/send_email.png');
+						background-repeat: no-repeat;
+						width: 105px;
+						height: 20px;
+						text-indent: -999em;
+					}
+				}
+			}
+			.to_the_top {
+				float: right;
+				margin-top: 2px;
+				.go-top {
+					color: $text-color-footer;
+					font-size: 0.8em;
+					font-style: italic;
+				}
+				.go-top:after {
+					@include icon-prepare();
+					font-style: normal;
+					margin-left: 5px;
+					content: "\e014";
+				}
+			}
+		}
+		
+	}
 }
