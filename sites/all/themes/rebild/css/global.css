@@ -493,7 +493,7 @@ Pager
 .ultimenu-flyout {
   background: white;
   border-radius: 0;
-  margin: -10px 0 0 0;
+  margin: 0 0 0 0;
   padding: 0;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) -10px 10px 10px, rgba(0, 0, 0, 0.1) 10px 10px 10px;
   -moz-box-shadow: rgba(0, 0, 0, 0.1) -10px 10px 10px, rgba(0, 0, 0, 0.1) 10px 10px 10px;
@@ -507,18 +507,26 @@ Pager
   -ms-transition: visibility 0s linear 0s, opacity 0s linear, margin 0s ease;
   -o-transition: visibility 0s linear 0s, opacity 0s linear, margin 0s ease;
   -webkit-transition: visibility 0s linear 0s, opacity 0s linear, margin 0s ease;
-  transition: visibility 0s linear 0s, opacity 0.1s linear, margin 0.1s ease;
+  transition: opacity 0 linear, margin 0s ease, visibility 0s ease;
+  -webkit-transition-delay: 0.25s;
+  -moz-transition-delay: 0.25s;
+  -o-transition-delay: 0.25s;
+  transition-delay: 0.25s;
 }
 
-/* line 43, ../sass/partials/_navigation.scss */
+/* line 45, ../sass/partials/_navigation.scss */
+.ultimenu > li:hover > .ultimenu-flyout,
 .ultimenu > li.hover > .ultimenu-flyout {
-  margin-top: 0;
+  -webkit-transition-delay: 0.25s;
+  -moz-transition-delay: 0.25s;
+  -o-transition-delay: 0.25s;
+  transition-delay: 0.25s;
 }
 
 /*------------------------------------------------------------------
 	Main Menu - Level 3
 -------------------------------------------------------------------*/
-/* line 52, ../sass/partials/_navigation.scss */
+/* line 54, ../sass/partials/_navigation.scss */
 #region-content .block-menu-block {
   background-color: #f6f6f6;
   -webkit-border-radius: 3px;
@@ -532,7 +540,7 @@ Pager
   padding: 20px;
   overflow: hidden;
 }
-/* line 57, ../sass/partials/_navigation.scss */
+/* line 59, ../sass/partials/_navigation.scss */
 #region-content .block-menu-block ul li {
   float: left;
   width: 44%;
@@ -542,19 +550,19 @@ Pager
   height: 2.75em;
   position: relative;
 }
-/* line 65, ../sass/partials/_navigation.scss */
+/* line 67, ../sass/partials/_navigation.scss */
 #region-content .block-menu-block ul li a {
   color: #474747;
   text-decoration: none;
   padding-left: 10px;
   display: block;
 }
-/* line 72, ../sass/partials/_navigation.scss */
+/* line 74, ../sass/partials/_navigation.scss */
 #region-content .block-menu-block ul li a:hover,
 #region-content .block-menu-block ul li a.active {
   text-decoration: underline;
 }
-/* line 75, ../sass/partials/_navigation.scss */
+/* line 77, ../sass/partials/_navigation.scss */
 #region-content .block-menu-block ul li span {
   color: #474747;
   font-size: 0.91667em;
@@ -568,7 +576,7 @@ Pager
 	Mobile Menu
 -------------------------------------------------------------------*/
 /* Mobile Menu Region */
-/* line 92, ../sass/partials/_navigation.scss */
+/* line 94, ../sass/partials/_navigation.scss */
 #region-mobile-menu {
   position: fixed;
   top: 0;
@@ -587,7 +595,7 @@ Pager
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-/* line 106, ../sass/partials/_navigation.scss */
+/* line 108, ../sass/partials/_navigation.scss */
 #region-mobile-menu h2.block-title {
   font-size: 18px;
   padding: 15px;
@@ -597,7 +605,7 @@ Pager
   -moz-box-shadow: 0 1px 0 #78ad93;
   box-shadow: 0 1px 0 #78ad93;
 }
-/* line 113, ../sass/partials/_navigation.scss */
+/* line 115, ../sass/partials/_navigation.scss */
 #region-mobile-menu .icon-close {
   font-size: 1.6em;
   right: 0.6em;
@@ -607,18 +615,18 @@ Pager
   cursor: pointer;
 }
 
-/* line 123, ../sass/partials/_navigation.scss */
+/* line 125, ../sass/partials/_navigation.scss */
 #region-mobile-menu.active {
   left: 0;
 }
 
 /* Accordion Menu */
-/* line 127, ../sass/partials/_navigation.scss */
+/* line 129, ../sass/partials/_navigation.scss */
 #region-mobile-menu {
   /* Default state */
   /* Active state */
 }
-/* line 129, ../sass/partials/_navigation.scss */
+/* line 131, ../sass/partials/_navigation.scss */
 #region-mobile-menu .accordion-header {
   position: relative;
   font-size: 15px;
@@ -631,13 +639,13 @@ Pager
   -moz-box-shadow: 0 1px 0 #78ad93;
   box-shadow: 0 1px 0 #78ad93;
 }
-/* line 138, ../sass/partials/_navigation.scss */
+/* line 140, ../sass/partials/_navigation.scss */
 #region-mobile-menu .accordion-header span {
   margin: 0;
   padding: 0;
   border: 0;
 }
-/* line 144, ../sass/partials/_navigation.scss */
+/* line 146, ../sass/partials/_navigation.scss */
 #region-mobile-menu .accordion-header:after {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -653,36 +661,36 @@ Pager
   right: 1em;
   top: 1.3em;
 }
-/* line 152, ../sass/partials/_navigation.scss */
+/* line 154, ../sass/partials/_navigation.scss */
 #region-mobile-menu .ui-accordion-content {
   margin: 0;
   padding: 5px 25px;
   border: 0;
   top: 0;
 }
-/* line 158, ../sass/partials/_navigation.scss */
+/* line 160, ../sass/partials/_navigation.scss */
 #region-mobile-menu .ui-accordion-content ul.menu li {
   margin-bottom: 15px;
   line-height: 1.25em;
 }
-/* line 161, ../sass/partials/_navigation.scss */
+/* line 163, ../sass/partials/_navigation.scss */
 #region-mobile-menu .ui-accordion-content ul.menu li > ul {
   display: none;
 }
-/* line 164, ../sass/partials/_navigation.scss */
+/* line 166, ../sass/partials/_navigation.scss */
 #region-mobile-menu .ui-accordion-content ul.menu li a {
   color: white;
   text-decoration: none;
 }
-/* line 167, ../sass/partials/_navigation.scss */
+/* line 169, ../sass/partials/_navigation.scss */
 #region-mobile-menu .ui-accordion-content ul.menu li a span {
   display: none;
 }
-/* line 171, ../sass/partials/_navigation.scss */
+/* line 173, ../sass/partials/_navigation.scss */
 #region-mobile-menu .ui-accordion-content ul.menu li .active-trail {
   font-weight: bold;
 }
-/* line 178, ../sass/partials/_navigation.scss */
+/* line 180, ../sass/partials/_navigation.scss */
 #region-mobile-menu .accordion-header.ui-state-active {
   background: #528d6f;
   border-bottom: 0;
@@ -690,7 +698,7 @@ Pager
   -moz-box-shadow: 0;
   box-shadow: 0;
 }
-/* line 183, ../sass/partials/_navigation.scss */
+/* line 185, ../sass/partials/_navigation.scss */
 #region-mobile-menu .accordion-header.ui-state-active:after {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -706,13 +714,13 @@ Pager
   right: 1em;
   top: 1.3em;
 }
-/* line 191, ../sass/partials/_navigation.scss */
+/* line 193, ../sass/partials/_navigation.scss */
 #region-mobile-menu .ui-accordion-content {
   background: #528d6f;
 }
 
 /* Overlay */
-/* line 196, ../sass/partials/_navigation.scss */
+/* line 198, ../sass/partials/_navigation.scss */
 #mobile-overlay {
   background: black;
   position: fixed;
@@ -730,7 +738,7 @@ Pager
   transition: opacity 0.3s ease;
 }
 
-/* line 208, ../sass/partials/_navigation.scss */
+/* line 210, ../sass/partials/_navigation.scss */
 #mobile-overlay.active {
   height: 100%;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
@@ -740,20 +748,20 @@ Pager
 /*------------------------------------------------------------------
 	Footer Menus
 -------------------------------------------------------------------*/
-/* line 219, ../sass/partials/_navigation.scss */
+/* line 221, ../sass/partials/_navigation.scss */
 #zone-footer .block-menu-block ul li {
   margin-bottom: 6px;
 }
-/* line 221, ../sass/partials/_navigation.scss */
+/* line 223, ../sass/partials/_navigation.scss */
 #zone-footer .block-menu-block ul li span {
   display: none;
 }
-/* line 224, ../sass/partials/_navigation.scss */
+/* line 226, ../sass/partials/_navigation.scss */
 #zone-footer .block-menu-block ul li a {
   color: #6b6b6b;
   line-height: 1.25em;
 }
-/* line 228, ../sass/partials/_navigation.scss */
+/* line 230, ../sass/partials/_navigation.scss */
 #zone-footer .block-menu-block ul li a:hover {
   text-decoration: underline;
 }
@@ -761,7 +769,7 @@ Pager
 /*------------------------------------------------------------------
 	Breadcrumbs		
 -------------------------------------------------------------------*/
-/* line 241, ../sass/partials/_navigation.scss */
+/* line 243, ../sass/partials/_navigation.scss */
 #breadcrumb {
   font-size: 0.91667em;
   line-height: 1.5;
@@ -769,14 +777,14 @@ Pager
   margin-bottom: 20px;
   text-shadow: white 1px 1px 1px;
 }
-/* line 247, ../sass/partials/_navigation.scss */
+/* line 249, ../sass/partials/_navigation.scss */
 #breadcrumb a, #breadcrumb strong {
   color: #474747;
   text-decoration: none;
   position: relative;
   top: -1px;
 }
-/* line 253, ../sass/partials/_navigation.scss */
+/* line 255, ../sass/partials/_navigation.scss */
 #breadcrumb span {
   font-size: 1.25em;
 }
@@ -784,15 +792,15 @@ Pager
 /*------------------------------------------------------------------
 	Tabs
 -------------------------------------------------------------------*/
-/* line 262, ../sass/partials/_navigation.scss */
+/* line 264, ../sass/partials/_navigation.scss */
 ul.tabs {
   margin-bottom: 20px;
 }
-/* line 264, ../sass/partials/_navigation.scss */
+/* line 266, ../sass/partials/_navigation.scss */
 ul.tabs li {
   margin-right: 0.5em;
 }
-/* line 266, ../sass/partials/_navigation.scss */
+/* line 268, ../sass/partials/_navigation.scss */
 ul.tabs li a {
   color: #474747;
   text-decoration: none;
@@ -804,11 +812,11 @@ ul.tabs li a {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 273, ../sass/partials/_navigation.scss */
+/* line 275, ../sass/partials/_navigation.scss */
 ul.tabs li a:hover {
   text-decoration: underline;
 }
-/* line 278, ../sass/partials/_navigation.scss */
+/* line 280, ../sass/partials/_navigation.scss */
 ul.tabs li.active a {
   background-color: white;
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
@@ -819,12 +827,12 @@ ul.tabs li.active a {
 /*------------------------------------------------------------------
   Pager
 -------------------------------------------------------------------*/
-/* line 290, ../sass/partials/_navigation.scss */
+/* line 292, ../sass/partials/_navigation.scss */
 .item-list ul.pager li {
   margin: 0 5px;
   padding: 0;
 }
-/* line 298, ../sass/partials/_navigation.scss */
+/* line 300, ../sass/partials/_navigation.scss */
 .item-list ul.pager li.pager-current a {
   font-weight: bold;
 }
@@ -893,7 +901,12 @@ ul.tabs li.active a {
 #region-content .content a {
   color: #474747;
   text-decoration: none;
-  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
 }
 /* line 57, ../sass/partials/_general.scss */
 #region-content .content a:hover {
@@ -989,7 +1002,7 @@ Share nodes
 /*------------------------------------------------------------------
 	Basic Page + News Article
 -------------------------------------------------------------------*/
-/* line 74, ../sass/partials/_nodes.scss */
+/* line 73, ../sass/partials/_nodes.scss */
 #region-content .node-page,
 #region-content .node-news-article,
 #region-content .node-calendar-post,
@@ -999,21 +1012,21 @@ Share nodes
   /* Fact Box */
   /* Node Image Gallery */
 }
-/* line 76, ../sass/partials/_nodes.scss */
+/* line 75, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image,
 #region-content .node-news-article .field-name-field-main-image,
 #region-content .node-calendar-post .field-name-field-main-image,
 #region-content .node-offering .field-name-field-main-image {
   margin-bottom: 20px;
 }
-/* line 78, ../sass/partials/_nodes.scss */
+/* line 77, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image img,
 #region-content .node-news-article .field-name-field-main-image img,
 #region-content .node-calendar-post .field-name-field-main-image img,
 #region-content .node-offering .field-name-field-main-image img {
   width: 100%;
 }
-/* line 83, ../sass/partials/_nodes.scss */
+/* line 82, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-summary,
 #region-content .node-news-article .field-name-field-main-summary,
 #region-content .node-calendar-post .field-name-field-main-summary,
@@ -1022,30 +1035,28 @@ Share nodes
   font-size: 1.33333em;
   line-height: 1.15em;
 }
-/* line 89, ../sass/partials/_nodes.scss */
+/* line 88, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-factbox,
 #region-content .node-news-article .field-name-field-main-factbox,
 #region-content .node-calendar-post .field-name-field-main-factbox,
 #region-content .node-offering .field-name-field-main-factbox {
-  float: right;
-  width: 33%;
   background: #e9e6e6;
   padding: 10px;
-  margin: 0 0 10px 10px;
+  margin: 0 0 10px 0;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 101, ../sass/partials/_nodes.scss */
+/* line 98, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image-gallery,
 #region-content .node-news-article .field-name-field-main-image-gallery,
 #region-content .node-calendar-post .field-name-field-main-image-gallery,
 #region-content .node-offering .field-name-field-main-image-gallery {
   margin: 30px 0;
 }
-/* line 103, ../sass/partials/_nodes.scss */
+/* line 100, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image-gallery .field-items,
 #region-content .node-news-article .field-name-field-main-image-gallery .field-items,
 #region-content .node-calendar-post .field-name-field-main-image-gallery .field-items,
@@ -1059,7 +1070,7 @@ Share nodes
   padding: 20px 20px 0;
   overflow: hidden;
 }
-/* line 108, ../sass/partials/_nodes.scss */
+/* line 105, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image-gallery .field-items .field-item,
 #region-content .node-news-article .field-name-field-main-image-gallery .field-items .field-item,
 #region-content .node-calendar-post .field-name-field-main-image-gallery .field-items .field-item,
@@ -1070,7 +1081,7 @@ Share nodes
   margin-bottom: 20px;
   text-align: center;
 }
-/* line 116, ../sass/partials/_nodes.scss */
+/* line 113, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image-gallery .field-label,
 #region-content .node-news-article .field-name-field-main-image-gallery .field-label,
 #region-content .node-calendar-post .field-name-field-main-image-gallery .field-label,
@@ -1078,7 +1089,7 @@ Share nodes
   margin-bottom: 1.25em;
   font-size: 1.08em;
 }
-/* line 120, ../sass/partials/_nodes.scss */
+/* line 117, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image-gallery .field-label:before,
 #region-content .node-news-article .field-name-field-main-image-gallery .field-label:before,
 #region-content .node-calendar-post .field-name-field-main-image-gallery .field-label:before,
@@ -1101,14 +1112,14 @@ Share nodes
 /*------------------------------------------------------------------
 	Accordions
 -------------------------------------------------------------------*/
-/* line 141, ../sass/partials/_nodes.scss */
+/* line 138, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion,
 #region-content .node-news-article .ui-accordion,
 #region-content .node-agenda .ui-accordion,
 #region-content .node-os2web-borger-dk-article .ui-accordion {
   margin: 20px 0;
 }
-/* line 143, ../sass/partials/_nodes.scss */
+/* line 140, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header,
 #region-content .node-news-article .ui-accordion .ui-accordion-header,
 #region-content .node-agenda .ui-accordion .ui-accordion-header,
@@ -1126,7 +1137,7 @@ Share nodes
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 152, ../sass/partials/_nodes.scss */
+/* line 149, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header > a,
 #region-content .node-news-article .ui-accordion .ui-accordion-header > a,
 #region-content .node-agenda .ui-accordion .ui-accordion-header > a,
@@ -1135,14 +1146,14 @@ Share nodes
   padding: 0;
   margin: 0;
 }
-/* line 157, ../sass/partials/_nodes.scss */
+/* line 154, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header > a:hover,
 #region-content .node-news-article .ui-accordion .ui-accordion-header > a:hover,
 #region-content .node-agenda .ui-accordion .ui-accordion-header > a:hover,
 #region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header > a:hover {
   text-decoration: none;
 }
-/* line 160, ../sass/partials/_nodes.scss */
+/* line 157, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header > a .field-content:before,
 #region-content .node-news-article .ui-accordion .ui-accordion-header > a .field-content:before,
 #region-content .node-agenda .ui-accordion .ui-accordion-header > a .field-content:before,
@@ -1158,21 +1169,21 @@ Share nodes
   content: "\e00f";
   margin-right: 0.5em;
 }
-/* line 166, ../sass/partials/_nodes.scss */
+/* line 163, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active,
 #region-content .node-news-article .ui-accordion .ui-accordion-header.ui-state-active,
 #region-content .node-agenda .ui-accordion .ui-accordion-header.ui-state-active,
 #region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header.ui-state-active {
   background-color: #7f9dcd;
 }
-/* line 168, ../sass/partials/_nodes.scss */
+/* line 165, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active a,
 #region-content .node-news-article .ui-accordion .ui-accordion-header.ui-state-active a,
 #region-content .node-agenda .ui-accordion .ui-accordion-header.ui-state-active a,
 #region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header.ui-state-active a {
   color: white;
 }
-/* line 171, ../sass/partials/_nodes.scss */
+/* line 168, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active a .field-content:before,
 #region-content .node-news-article .ui-accordion .ui-accordion-header.ui-state-active a .field-content:before,
 #region-content .node-agenda .ui-accordion .ui-accordion-header.ui-state-active a .field-content:before,
@@ -1188,7 +1199,7 @@ Share nodes
   content: "\e010";
   margin-right: 0.5em;
 }
-/* line 177, ../sass/partials/_nodes.scss */
+/* line 174, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-content,
 #region-content .node-news-article .ui-accordion .ui-accordion-content,
 #region-content .node-agenda .ui-accordion .ui-accordion-content,
@@ -1201,21 +1212,21 @@ Share nodes
 	Borger dk
 -------------------------------------------------------------------*/
 /* Accordion */
-/* line 192, ../sass/partials/_nodes.scss */
+/* line 189, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .field.field-name-body {
   margin: 2em 0 2em 0;
 }
-/* line 195, ../sass/partials/_nodes.scss */
+/* line 192, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .field-name-field-os2web-borger-dk-header {
   margin-bottom: 20px;
   font-size: 1.33333em;
   line-height: 1.15em;
 }
-/* line 200, ../sass/partials/_nodes.scss */
+/* line 197, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle {
   position: relative;
 }
-/* line 202, ../sass/partials/_nodes.scss */
+/* line 199, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle h2.mArticle {
   background: #e6e6e6;
   color: #474747;
@@ -1231,7 +1242,7 @@ Share nodes
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 213, ../sass/partials/_nodes.scss */
+/* line 210, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle h2.mArticle:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1244,12 +1255,12 @@ Share nodes
   content: "\e00f";
   margin-right: 0.5em;
 }
-/* line 218, ../sass/partials/_nodes.scss */
+/* line 215, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle div.mArticle {
   padding: 10px 20px;
   margin: 0;
 }
-/* line 223, ../sass/partials/_nodes.scss */
+/* line 220, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article h2.mArticle.ui-state-active {
   background-color: #7f9dcd;
   color: #fff;
@@ -1258,38 +1269,38 @@ Share nodes
 /*------------------------------------------------------------------
 	Agendas
 -------------------------------------------------------------------*/
-/* line 237, ../sass/partials/_nodes.scss */
+/* line 234, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content {
   padding: 10px 20px 20px;
 }
-/* line 239, ../sass/partials/_nodes.scss */
+/* line 236, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content .views-label {
   font-weight: bold;
 }
-/* line 242, ../sass/partials/_nodes.scss */
+/* line 239, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content ul {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-/* line 245, ../sass/partials/_nodes.scss */
+/* line 242, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content ul li {
   margin: 0;
 }
-/* line 251, ../sass/partials/_nodes.scss */
+/* line 248, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .field-label {
   margin: 0;
 }
-/* line 254, ../sass/partials/_nodes.scss */
+/* line 251, ../sass/partials/_nodes.scss */
 #region-content .node-agenda table {
   max-width: 100%;
   border: 1px solid #474747;
 }
-/* line 258, ../sass/partials/_nodes.scss */
+/* line 255, ../sass/partials/_nodes.scss */
 #region-content .node-agenda table tr td {
   padding: 5px;
 }
 
-/* line 266, ../sass/partials/_nodes.scss */
+/* line 263, ../sass/partials/_nodes.scss */
 #region-content .node-offering .field-name-field-offering-link a {
   display: inline-block;
   color: white;
@@ -1309,7 +1320,7 @@ Share nodes
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 277, ../sass/partials/_nodes.scss */
+/* line 274, ../sass/partials/_nodes.scss */
 #region-content .node-offering .field-name-field-offering-link a:after {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1338,7 +1349,7 @@ Share nodes
 /*------------------------------------------------------------------
 	Calendar
 -------------------------------------------------------------------*/
-/* line 298, ../sass/partials/_nodes.scss */
+/* line 295, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info {
   padding: 10px;
   margin-bottom: 20px;
@@ -1349,40 +1360,40 @@ Share nodes
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 302, ../sass/partials/_nodes.scss */
+/* line 299, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .fieldset-legend {
   position: absolute;
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 15px;
 }
-/* line 308, ../sass/partials/_nodes.scss */
+/* line 305, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .fieldset-wrapper {
   margin-top: 40px;
 }
-/* line 311, ../sass/partials/_nodes.scss */
+/* line 308, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact {
   margin-bottom: 20px;
 }
-/* line 313, ../sass/partials/_nodes.scss */
+/* line 310, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact .fieldset-legend {
   position: relative;
   margin-top: 0;
   text-transform: none;
 }
-/* line 318, ../sass/partials/_nodes.scss */
+/* line 315, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact .fieldset-wrapper {
   margin-top: 0;
 }
-/* line 321, ../sass/partials/_nodes.scss */
+/* line 318, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact .field {
   margin-bottom: 0;
 }
-/* line 325, ../sass/partials/_nodes.scss */
+/* line 322, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact .field-name-field-calender-email a {
   color: #474747;
 }
-/* line 333, ../sass/partials/_nodes.scss */
+/* line 330, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .field-name-field-calendar-ticket-link a {
   background-image: url("../img/bestil_billet.png");
   background-repeat: no-repeat;
@@ -1395,7 +1406,7 @@ Share nodes
 /*------------------------------------------------------------------
 	Cloned page
 -------------------------------------------------------------------*/
-/* line 352, ../sass/partials/_nodes.scss */
+/* line 349, ../sass/partials/_nodes.scss */
 #region-content .field-name-field-cloned-page #region-content-sidebar ul {
   margin-left: 0;
 }
@@ -1403,7 +1414,7 @@ Share nodes
 /*------------------------------------------------------------------
 	Share node
 -------------------------------------------------------------------*/
-/* line 362, ../sass/partials/_nodes.scss */
+/* line 359, ../sass/partials/_nodes.scss */
 #region-content .node-share {
   background: #f6f6f6;
   border-radius: 0 0 3px 3px;
@@ -1412,28 +1423,28 @@ Share nodes
   padding-bottom: 5px;
   padding-top: 5px;
 }
-/* line 369, ../sass/partials/_nodes.scss */
+/* line 366, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper {
   padding: 5px 20px 5px 20px;
 }
-/* line 371, ../sass/partials/_nodes.scss */
+/* line 368, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .share_this {
   float: left;
   margin-right: 20px;
 }
-/* line 375, ../sass/partials/_nodes.scss */
+/* line 372, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .twitter-share {
   width: 77px;
 }
-/* line 379, ../sass/partials/_nodes.scss */
+/* line 376, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .facebook-share #u_0_6 {
   display: none;
 }
-/* line 384, ../sass/partials/_nodes.scss */
+/* line 381, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .email-share .print_mail {
   margin-left: 0;
 }
-/* line 386, ../sass/partials/_nodes.scss */
+/* line 383, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .email-share .print_mail a {
   display: block;
   background: url("../img/send_email.png");
@@ -1442,18 +1453,18 @@ Share nodes
   height: 20px;
   text-indent: -999em;
 }
-/* line 396, ../sass/partials/_nodes.scss */
+/* line 393, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .to_the_top {
   float: right;
   margin-top: 2px;
 }
-/* line 399, ../sass/partials/_nodes.scss */
+/* line 396, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .to_the_top .go-top {
   color: #6b6b6b;
   font-size: 0.8em;
   font-style: italic;
 }
-/* line 404, ../sass/partials/_nodes.scss */
+/* line 401, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .to_the_top .go-top:after {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1573,12 +1584,10 @@ Share nodes
 }
 /* line 90, ../sass/partials/_blocks.scss */
 #region-content-sidebar .block .content ul li {
-  margin: 0 0 .75em 0;
+  margin: 0 0 .75em 1.2em;
   line-height: 1.15em;
-  word-break: break-word;
-  word-wrap: break-word;
 }
-/* line 96, ../sass/partials/_blocks.scss */
+/* line 94, ../sass/partials/_blocks.scss */
 #region-content-sidebar .block .content ul li:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1590,10 +1599,12 @@ Share nodes
   -webkit-font-smoothing: antialiased;
   content: "\f101";
   color: #7f9dcd;
-  margin: 0.1em 0.5em 0 0;
+  margin: 0.2em 0 -1.1em 0;
   font-size: 0.9em;
-  display: block;
+  display: inline-block;
   float: left;
+  margin-left: -1.1em;
+  width: 1.1em;
 }
 /* line 109, ../sass/partials/_blocks.scss */
 #region-content-sidebar .block .view-content-sidebar-borger-dk-read-also h4 {
@@ -2464,12 +2475,16 @@ div.workbench-info-block a {
   font-weight: normal;
 }
 
-/* line 767, ../sass/partials/_blocks.scss */
-.wcag-block.read-aloud a {
+/* line 766, ../sass/partials/_blocks.scss */
+.wcag-block.read-aloud {
+  border-right: 0;
+}
+/* line 769, ../sass/partials/_blocks.scss */
+.wcag-block.read-aloud .content a {
   font-size: 0.91667em;
 }
-/* line 770, ../sass/partials/_blocks.scss */
-.wcag-block.read-aloud a:before {
+/* line 772, ../sass/partials/_blocks.scss */
+.wcag-block.read-aloud .content a:before {
   font-family: 'Rebild';
   content: attr(data-icon);
   speak: none;
@@ -2480,24 +2495,20 @@ div.workbench-info-block a {
   -webkit-font-smoothing: antialiased;
   content: "\e012";
   margin-right: 7px;
-  font-size: 1.4em;
+  font-size: 1.3em;
   float: left;
 }
 
-/* line 778, ../sass/partials/_blocks.scss */
-.wcag-block.print {
-  border-right: 0;
-}
-/* line 780, ../sass/partials/_blocks.scss */
-.wcag-block.print span {
+/* line 783, ../sass/partials/_blocks.scss */
+.wcag-block.print .content span {
   margin: 0;
 }
-/* line 783, ../sass/partials/_blocks.scss */
-.wcag-block.print a {
+/* line 786, ../sass/partials/_blocks.scss */
+.wcag-block.print .content a {
   font-size: 0.91667em;
 }
-/* line 786, ../sass/partials/_blocks.scss */
-.wcag-block.print a:before {
+/* line 789, ../sass/partials/_blocks.scss */
+.wcag-block.print .content a:before {
   font-family: 'Rebild';
   content: attr(data-icon);
   speak: none;
@@ -2508,20 +2519,20 @@ div.workbench-info-block a {
   -webkit-font-smoothing: antialiased;
   content: "\e011";
   margin-right: 7px;
-  font-size: 1.4em;
+  font-size: 1.3em;
   float: left;
 }
 
 /* Cookie Popup */
-/* line 796, ../sass/partials/_blocks.scss */
+/* line 800, ../sass/partials/_blocks.scss */
 #sliding-popup {
   background: #6b6b6b;
 }
-/* line 798, ../sass/partials/_blocks.scss */
+/* line 802, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content {
   width: auto;
 }
-/* line 800, ../sass/partials/_blocks.scss */
+/* line 804, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-text {
   font-family: Verdana, Arial, sans-serif;
   font-size: 0.91667em;
@@ -2529,38 +2540,38 @@ div.workbench-info-block a {
   width: auto;
   text-align: center;
 }
-/* line 806, ../sass/partials/_blocks.scss */
+/* line 810, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-text h3 {
   font-size: 1.25em;
   margin-bottom: 5px;
   font-weight: bold;
 }
-/* line 811, ../sass/partials/_blocks.scss */
+/* line 815, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-text p {
   font-weight: normal;
   font-size: 1.1em;
 }
-/* line 816, ../sass/partials/_blocks.scss */
+/* line 820, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-buttons {
   margin-top: 20px;
   text-align: center;
   float: none;
 }
-/* line 820, ../sass/partials/_blocks.scss */
+/* line 824, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-buttons .agree-button {
   background: #7f9dcd;
   color: #fff;
 }
-/* line 824, ../sass/partials/_blocks.scss */
+/* line 828, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-buttons .agree-button:hover {
   color: #474747;
 }
-/* line 827, ../sass/partials/_blocks.scss */
+/* line 831, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-buttons .find-more-button {
   color: #474747;
   background: #fff;
 }
-/* line 831, ../sass/partials/_blocks.scss */
+/* line 835, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-buttons button {
   border: 0;
   box-shadow: 0;
@@ -2573,7 +2584,7 @@ div.workbench-info-block a {
 }
 
 /* Search block - search page */
-/* line 846, ../sass/partials/_blocks.scss */
+/* line 850, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results {
   padding: 20px;
   margin: 0;
@@ -2587,19 +2598,19 @@ div.workbench-info-block a {
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 849, ../sass/partials/_blocks.scss */
+/* line 853, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results > div {
   position: relative;
 }
-/* line 853, ../sass/partials/_blocks.scss */
+/* line 857, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-item, #block-ci-search-ci-search-results .form-actions {
   margin: 0;
 }
-/* line 856, ../sass/partials/_blocks.scss */
+/* line 860, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-textfield {
   position: relative;
 }
-/* line 859, ../sass/partials/_blocks.scss */
+/* line 863, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .sf-wrapper {
   background: #e9e9e9;
   padding: 5px;
@@ -2610,7 +2621,7 @@ div.workbench-info-block a {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 865, ../sass/partials/_blocks.scss */
+/* line 869, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-textfield:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -2621,14 +2632,14 @@ div.workbench-info-block a {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   content: "\e013";
-  z-index: 2;
+  z-index: 1;
   position: absolute;
   left: 1em;
   top: 0.9em;
   font-size: 1.1em;
   color: #6b6b6b;
 }
-/* line 876, ../sass/partials/_blocks.scss */
+/* line 880, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results input[type=search],
 #block-ci-search-ci-search-results input[type=text] {
   font-size: 0.91667em;
@@ -2656,7 +2667,7 @@ div.workbench-info-block a {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 892, ../sass/partials/_blocks.scss */
+/* line 896, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results input[type=submit] {
   position: absolute;
   right: 5px;
@@ -2669,16 +2680,16 @@ div.workbench-info-block a {
   -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-/* line 900, ../sass/partials/_blocks.scss */
+/* line 904, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-checkboxes {
   overflow: hidden;
 }
-/* line 902, ../sass/partials/_blocks.scss */
+/* line 906, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-checkboxes > label {
   font-size: 1.2em;
   margin: 1em 0 0.75em 0;
 }
-/* line 906, ../sass/partials/_blocks.scss */
+/* line 910, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-checkboxes .form-type-checkbox {
   float: left;
   margin-right: 10px;
@@ -2686,17 +2697,17 @@ div.workbench-info-block a {
 }
 
 /* Search block - frontpage */
-/* line 915, ../sass/partials/_blocks.scss */
+/* line 919, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front {
   font-size: 10px;
   text-align: center;
 }
-/* line 918, ../sass/partials/_blocks.scss */
+/* line 922, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form {
   margin-bottom: 0 !important;
   width: 100%;
 }
-/* line 921, ../sass/partials/_blocks.scss */
+/* line 925, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .sf-wrapper {
   background: #cfcfcf;
   padding: 10px;
@@ -2709,7 +2720,7 @@ div.workbench-info-block a {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 929, ../sass/partials/_blocks.scss */
+/* line 933, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .form-type-textfield {
   overflow: hidden;
   position: relative;
@@ -2719,7 +2730,7 @@ div.workbench-info-block a {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 934, ../sass/partials/_blocks.scss */
+/* line 938, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .form-type-textfield:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -2730,14 +2741,14 @@ div.workbench-info-block a {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   content: "\e013";
-  z-index: 10;
+  z-index: 1;
   position: absolute;
   left: 1em;
   top: 1em;
   font-size: 1.6em;
   color: #6b6b6b;
 }
-/* line 945, ../sass/partials/_blocks.scss */
+/* line 949, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form input[type=search],
 #block-ci-search-ci-search-front form input[type=text] {
   font-size: 1em;
@@ -2765,7 +2776,7 @@ div.workbench-info-block a {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 961, ../sass/partials/_blocks.scss */
+/* line 965, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form input[type=submit] {
   position: absolute;
   right: 10px;
@@ -2778,49 +2789,63 @@ div.workbench-info-block a {
   -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-/* line 969, ../sass/partials/_blocks.scss */
+/* line 973, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .form-item, #block-ci-search-ci-search-front form .form-actions {
   margin: 0;
 }
-/* line 972, ../sass/partials/_blocks.scss */
+/* line 976, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .most-searched {
   font-size: 11px;
   line-height: 1.15em;
   color: #474747;
   text-shadow: white 1px 1px 1px;
 }
-/* line 977, ../sass/partials/_blocks.scss */
+/* line 981, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .most-searched ul {
   display: inline-block;
   text-align: center;
 }
-/* line 980, ../sass/partials/_blocks.scss */
+/* line 984, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .most-searched ul li {
   margin-right: 1em;
   margin-bottom: 0.5em;
   display: inline-block;
 }
-/* line 984, ../sass/partials/_blocks.scss */
+/* line 988, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .most-searched ul li a {
   color: #474747;
 }
-/* line 987, ../sass/partials/_blocks.scss */
+/* line 991, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .most-searched ul li a:hover {
   text-decoration: none;
 }
-/* line 992, ../sass/partials/_blocks.scss */
+/* line 996, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .most-searched strong {
   display: inline-block;
   margin-left: 1em;
 }
 
 /* Search autocomplete widget */
-/* line 1000, ../sass/partials/_blocks.scss */
+/* line 1004, ../sass/partials/_blocks.scss */
+.ac_results:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid white;
+  position: absolute;
+  top: -8px;
+  left: 30px;
+}
+
+/* line 1015, ../sass/partials/_blocks.scss */
 .ac_results {
-  width: 663px !important;
   border: none;
   padding: 10px 8px;
-  margin-top: 11px;
+  margin-top: 21px;
+  position: relative;
+  overflow: inherit;
   background-color: white;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -2831,25 +2856,35 @@ div.workbench-info-block a {
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 1007, ../sass/partials/_blocks.scss */
+/* line 1023, ../sass/partials/_blocks.scss */
 .ac_results ul li {
   padding: 20px;
   font-size: 1em;
   cursor: pointer;
   color: #474747;
 }
-/* line 1019, ../sass/partials/_blocks.scss */
+/* line 1035, ../sass/partials/_blocks.scss */
 .ac_results ul .ac_even {
   background: white;
 }
-/* line 1022, ../sass/partials/_blocks.scss */
+/* line 1038, ../sass/partials/_blocks.scss */
 .ac_results ul .ac_odd {
   background: #f6f6f6;
 }
-/* line 1025, ../sass/partials/_blocks.scss */
+/* line 1041, ../sass/partials/_blocks.scss */
 .ac_results ul .ac_over {
   background: #cfcfcf;
   color: #474747;
+}
+
+/* line 1048, ../sass/partials/_blocks.scss */
+.front .ac_results {
+  width: 557px !important;
+}
+
+/* line 1053, ../sass/partials/_blocks.scss */
+.responsive-layout-mobile.not-front .ac_results {
+  display: none !important;
 }
 
 /*------------------------------------------------------------------

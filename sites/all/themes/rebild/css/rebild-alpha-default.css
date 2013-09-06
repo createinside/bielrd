@@ -158,7 +158,7 @@ Nodes
 #region-menu ul.ultimenu > li {
   float: left;
   list-style: none;
-  margin: 0 38px 0 0;
+  padding: 0 19px;
 }
 /* line 95, ../sass/rebild-alpha-default.scss */
 #region-menu ul.ultimenu > li > a {
@@ -166,30 +166,31 @@ Nodes
   text-decoration: none;
   font-size: 1.33333em;
   text-transform: uppercase;
+  display: inline-block;
+  height: 44px;
 }
-/* line 102, ../sass/rebild-alpha-default.scss */
+/* line 104, ../sass/rebild-alpha-default.scss */
 #region-menu ul.ultimenu > li a.active,
 #region-menu ul.ultimenu > li a.active-trail {
   color: #68a386;
 }
-/* line 108, ../sass/rebild-alpha-default.scss */
-#region-menu ul.ultimenu > li:hover > a,
+/* line 109, ../sass/rebild-alpha-default.scss */
 #region-menu ul.ultimenu > li.hover > a {
   color: #888888;
 }
 
 /* Sub Menu*/
-/* line 116, ../sass/rebild-alpha-default.scss */
+/* line 117, ../sass/rebild-alpha-default.scss */
 .ultimenu-flyout {
   width: 1200px;
   left: -240px;
 }
-/* line 119, ../sass/rebild-alpha-default.scss */
+/* line 120, ../sass/rebild-alpha-default.scss */
 .ultimenu-flyout > div {
   overflow: hidden;
 }
 
-/* line 123, ../sass/rebild-alpha-default.scss */
+/* line 124, ../sass/rebild-alpha-default.scss */
 .ultimenu-flyout {
   overflow: hidden;
   font-size: 1em;
@@ -200,7 +201,7 @@ Nodes
   /* Search Block*/
   /* Menu Block */
 }
-/* line 131, ../sass/rebild-alpha-default.scss */
+/* line 132, ../sass/rebild-alpha-default.scss */
 .ultimenu-flyout .block {
   width: 33%;
   float: right;
@@ -212,21 +213,21 @@ Nodes
   box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px;
   min-height: 180px;
 }
-/* line 139, ../sass/rebild-alpha-default.scss */
+/* line 140, ../sass/rebild-alpha-default.scss */
 .ultimenu-flyout .block .block-title {
   font-size: 1.33333em;
   font-weight: normal;
   margin-bottom: 10px;
 }
-/* line 144, ../sass/rebild-alpha-default.scss */
+/* line 145, ../sass/rebild-alpha-default.scss */
 .ultimenu-flyout .block .block-inner {
   padding: 20px;
 }
-/* line 146, ../sass/rebild-alpha-default.scss */
+/* line 147, ../sass/rebild-alpha-default.scss */
 .ultimenu-flyout .block .block-inner p {
   margin-bottom: 10px;
 }
-/* line 152, ../sass/rebild-alpha-default.scss */
+/* line 153, ../sass/rebild-alpha-default.scss */
 .ultimenu-flyout .block-menu-block {
   width: 67%;
   float: left;
@@ -237,11 +238,11 @@ Nodes
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 159, ../sass/rebild-alpha-default.scss */
+/* line 160, ../sass/rebild-alpha-default.scss */
 .ultimenu-flyout .block-menu-block .block-inner {
   padding-bottom: 10px;
 }
-/* line 162, ../sass/rebild-alpha-default.scss */
+/* line 163, ../sass/rebild-alpha-default.scss */
 .ultimenu-flyout .block-menu-block li {
   float: left;
   width: 30%;
@@ -251,19 +252,19 @@ Nodes
   height: 2.75em;
   position: relative;
 }
-/* line 170, ../sass/rebild-alpha-default.scss */
+/* line 171, ../sass/rebild-alpha-default.scss */
 .ultimenu-flyout .block-menu-block li a {
   color: #6b6b6b;
   text-decoration: none;
   padding-left: 10px;
   display: block;
 }
-/* line 177, ../sass/rebild-alpha-default.scss */
+/* line 178, ../sass/rebild-alpha-default.scss */
 .ultimenu-flyout .block-menu-block li a:hover,
 .ultimenu-flyout .block-menu-block li a.active {
   text-decoration: underline;
 }
-/* line 180, ../sass/rebild-alpha-default.scss */
+/* line 181, ../sass/rebild-alpha-default.scss */
 .ultimenu-flyout .block-menu-block li span {
   color: #474747;
   font-size: 0.91667em;
@@ -274,30 +275,30 @@ Nodes
 }
 
 /* Main Menu - Level 3 */
-/* line 195, ../sass/rebild-alpha-default.scss */
+/* line 196, ../sass/rebild-alpha-default.scss */
 #region-content .block-menu-block ul li {
   width: 30%;
   padding-right: 3%;
 }
 
-/* line 203, ../sass/rebild-alpha-default.scss */
+/* line 204, ../sass/rebild-alpha-default.scss */
 #breadcrumb {
   margin-bottom: 40px;
 }
 
 /* Secondary Menu */
-/* line 210, ../sass/rebild-alpha-default.scss */
+/* line 211, ../sass/rebild-alpha-default.scss */
 #region-user-first .menu-block-wrapper > ul.menu {
   float: right;
 }
-/* line 212, ../sass/rebild-alpha-default.scss */
+/* line 213, ../sass/rebild-alpha-default.scss */
 #region-user-first .menu-block-wrapper > ul.menu li {
   float: left;
   list-style: none;
   font-size: 0.91667em;
   margin: 0 0 0 5px;
 }
-/* line 217, ../sass/rebild-alpha-default.scss */
+/* line 218, ../sass/rebild-alpha-default.scss */
 #region-user-first .menu-block-wrapper > ul.menu li a {
   color: #6b6b6b;
   background: #f9f9f9;
@@ -310,7 +311,7 @@ Nodes
 	Views
 -------------------------------------------------------------------*/
 /* Frontpage */
-/* line 235, ../sass/rebild-alpha-default.scss */
+/* line 236, ../sass/rebild-alpha-default.scss */
 .view-id-rebild_frontpage .views-row {
   float: left;
   background-color: white;
@@ -323,7 +324,7 @@ Nodes
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 238, ../sass/rebild-alpha-default.scss */
+/* line 239, ../sass/rebild-alpha-default.scss */
 .view-id-rebild_frontpage .views-row .views-field-field-image img {
   -webkit-border-radius: 3px 3px 0 0;
   -moz-border-radius: 3px 3px 0 0;
@@ -332,52 +333,52 @@ Nodes
   border-radius: 3px 3px 0 0;
   height: auto;
 }
-/* line 242, ../sass/rebild-alpha-default.scss */
+/* line 243, ../sass/rebild-alpha-default.scss */
 .view-id-rebild_frontpage .views-row .views-field-title {
   padding: 20px 20px 0;
   font-size: 1.33333em;
   line-height: 1.15em;
 }
-/* line 246, ../sass/rebild-alpha-default.scss */
+/* line 247, ../sass/rebild-alpha-default.scss */
 .view-id-rebild_frontpage .views-row .views-field-title a {
   color: #474747;
   text-decoration: none;
 }
-/* line 251, ../sass/rebild-alpha-default.scss */
+/* line 252, ../sass/rebild-alpha-default.scss */
 .view-id-rebild_frontpage .views-row .views-field-body {
   padding: 10px 20px 20px;
 }
-/* line 255, ../sass/rebild-alpha-default.scss */
+/* line 256, ../sass/rebild-alpha-default.scss */
 .view-id-rebild_frontpage .views-row-odd {
   margin: 0 10px 20px 0;
 }
-/* line 258, ../sass/rebild-alpha-default.scss */
+/* line 259, ../sass/rebild-alpha-default.scss */
 .view-id-rebild_frontpage .views-row-even {
   margin: 0 0 20px 10px;
 }
 
 /* News Articles - Views Block */
-/* line 265, ../sass/rebild-alpha-default.scss */
+/* line 266, ../sass/rebild-alpha-default.scss */
 #block-views-news-articles-block .view-header {
   display: block;
 }
 
 /* Calendar - frontpage */
-/* line 271, ../sass/rebild-alpha-default.scss */
+/* line 272, ../sass/rebild-alpha-default.scss */
 .view-id-calendar_frontpage .rebild-calendar {
   float: left;
   width: 50%;
   margin: 0;
 }
-/* line 275, ../sass/rebild-alpha-default.scss */
+/* line 276, ../sass/rebild-alpha-default.scss */
 .view-id-calendar_frontpage .rebild-calendar .calendar_right {
   width: 200px;
 }
-/* line 279, ../sass/rebild-alpha-default.scss */
+/* line 280, ../sass/rebild-alpha-default.scss */
 .view-id-calendar_frontpage .post1, .view-id-calendar_frontpage .post2 {
   margin: 0 0 20px 0;
 }
-/* line 282, ../sass/rebild-alpha-default.scss */
+/* line 283, ../sass/rebild-alpha-default.scss */
 .view-id-calendar_frontpage .calendar_view_all {
   position: absolute;
   top: 0;
@@ -391,7 +392,7 @@ Nodes
 	Blocks
 -------------------------------------------------------------------*/
 /* Zone: Footer */
-/* line 299, ../sass/rebild-alpha-default.scss */
+/* line 300, ../sass/rebild-alpha-default.scss */
 #zone-footer .block {
   margin-bottom: 0;
 }
@@ -400,7 +401,7 @@ Nodes
 	Blocks - Specific
 -------------------------------------------------------------------*/
 /* Selfservice block - frontpage */
-/* line 310, ../sass/rebild-alpha-default.scss */
+/* line 311, ../sass/rebild-alpha-default.scss */
 #region-header-first .block {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -408,42 +409,42 @@ Nodes
   padding: 25px 0 20px 0;
   margin-top: 0;
 }
-/* line 314, ../sass/rebild-alpha-default.scss */
+/* line 315, ../sass/rebild-alpha-default.scss */
 #region-header-first .block .jump-left, #region-header-first .block .jump-right {
   width: 33%;
   display: inline-block;
 }
-/* line 318, ../sass/rebild-alpha-default.scss */
+/* line 319, ../sass/rebild-alpha-default.scss */
 #region-header-first .block .jump-left {
   text-align: right;
 }
-/* line 321, ../sass/rebild-alpha-default.scss */
+/* line 322, ../sass/rebild-alpha-default.scss */
 #region-header-first .block .jump-right {
   text-align: left;
 }
-/* line 324, ../sass/rebild-alpha-default.scss */
+/* line 325, ../sass/rebild-alpha-default.scss */
 #region-header-first .block p.separator {
   display: inline-block;
 }
 
 /* Search block - search page */
-/* line 332, ../sass/rebild-alpha-default.scss */
+/* line 333, ../sass/rebild-alpha-default.scss */
 #block-ci-search-ci-search-results .sf-wrapper {
   padding: 10px;
 }
-/* line 335, ../sass/rebild-alpha-default.scss */
+/* line 336, ../sass/rebild-alpha-default.scss */
 #block-ci-search-ci-search-results .form-type-textfield:before {
   font-size: 1.6em;
   top: 1em;
 }
-/* line 341, ../sass/rebild-alpha-default.scss */
+/* line 342, ../sass/rebild-alpha-default.scss */
 #block-ci-search-ci-search-results input[type=search],
 #block-ci-search-ci-search-results input[type=text] {
   font-size: 1em;
   height: 4.8em;
   padding: 1.05em 1em 1.05em 4em;
 }
-/* line 346, ../sass/rebild-alpha-default.scss */
+/* line 347, ../sass/rebild-alpha-default.scss */
 #block-ci-search-ci-search-results input[type=submit] {
   font-size: 1.53846em;
   top: 10px;
@@ -451,22 +452,22 @@ Nodes
 }
 
 /* Search block - frontpage */
-/* line 355, ../sass/rebild-alpha-default.scss */
+/* line 356, ../sass/rebild-alpha-default.scss */
 #region-header-second .block {
   font-size: 13px;
   margin-bottom: 40px;
 }
-/* line 358, ../sass/rebild-alpha-default.scss */
+/* line 359, ../sass/rebild-alpha-default.scss */
 #region-header-second .block form {
   margin: 0 auto 1.7em;
 }
-/* line 360, ../sass/rebild-alpha-default.scss */
+/* line 361, ../sass/rebild-alpha-default.scss */
 #region-header-second .block form .sf-wrapper {
   max-width: 680px;
 }
 
 /* Search block - Inside mega menu */
-/* line 369, ../sass/rebild-alpha-default.scss */
+/* line 370, ../sass/rebild-alpha-default.scss */
 .ultimenu p.small-text {
   font-size: 0.91667em;
   line-height: 1.4em;
@@ -475,20 +476,20 @@ Nodes
   padding-top: 10px;
   margin-bottom: 0 !important;
 }
-/* line 376, ../sass/rebild-alpha-default.scss */
+/* line 377, ../sass/rebild-alpha-default.scss */
 .ultimenu p.small-text a {
   color: #6b6b6b;
   margin: 0 10px 0 0;
 }
-/* line 381, ../sass/rebild-alpha-default.scss */
+/* line 382, ../sass/rebild-alpha-default.scss */
 .ultimenu p {
   font-size: 0.91667em;
 }
-/* line 385, ../sass/rebild-alpha-default.scss */
+/* line 386, ../sass/rebild-alpha-default.scss */
 .ultimenu form .form-item, .ultimenu form .form-actions {
   margin: 0;
 }
-/* line 388, ../sass/rebild-alpha-default.scss */
+/* line 389, ../sass/rebild-alpha-default.scss */
 .ultimenu form .form-wrap {
   background: #e0e0e0;
   padding: 6px;
@@ -500,12 +501,12 @@ Nodes
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 395, ../sass/rebild-alpha-default.scss */
+/* line 396, ../sass/rebild-alpha-default.scss */
 .ultimenu form .form-wrap input[type=search],
 .ultimenu form .form-wrap input[type=text] {
   font-size: 0.91667em;
 }
-/* line 398, ../sass/rebild-alpha-default.scss */
+/* line 399, ../sass/rebild-alpha-default.scss */
 .ultimenu form .form-wrap input[type=submit] {
   position: absolute;
   top: 6px;
@@ -514,24 +515,24 @@ Nodes
 }
 
 /* Footer - Contact information */
-/* line 410, ../sass/rebild-alpha-default.scss */
+/* line 411, ../sass/rebild-alpha-default.scss */
 #region-footer-first .block {
   text-align: left;
 }
-/* line 413, ../sass/rebild-alpha-default.scss */
+/* line 414, ../sass/rebild-alpha-default.scss */
 #region-footer-first .block .content table {
   margin: 0 0 10px;
   text-align: left;
 }
 
 /* Cookie Popup*/
-/* line 424, ../sass/rebild-alpha-default.scss */
+/* line 425, ../sass/rebild-alpha-default.scss */
 #sliding-popup .popup-content #popup-text {
   width: 670px;
   max-width: 50%;
   text-align: left;
 }
-/* line 429, ../sass/rebild-alpha-default.scss */
+/* line 430, ../sass/rebild-alpha-default.scss */
 #sliding-popup .popup-content #popup-buttons {
   max-width: 50%;
   float: right;
@@ -540,14 +541,14 @@ Nodes
 /*------------------------------------------------------------------
 	Nodes
 -------------------------------------------------------------------*/
-/* line 441, ../sass/rebild-alpha-default.scss */
+/* line 442, ../sass/rebild-alpha-default.scss */
 .node #content-main.has-sidebar {
   border-right: 1px dotted #474747;
   width: 70%;
   padding-right: 3%;
   float: left;
 }
-/* line 447, ../sass/rebild-alpha-default.scss */
+/* line 448, ../sass/rebild-alpha-default.scss */
 .node #region-content-sidebar {
   float: right;
   width: 23%;
@@ -556,17 +557,25 @@ Nodes
 }
 
 /* Page & News Articles */
-/* line 457, ../sass/rebild-alpha-default.scss */
-.node-page,
-.node-news-article {
+/* line 459, ../sass/rebild-alpha-default.scss */
+#region-content .node-page,
+#region-content .node-news-article {
   /* Node Image Gallery */
+  /* Fact Box */
 }
-/* line 461, ../sass/rebild-alpha-default.scss */
-.node-page .field-name-field-main-image-gallery .field-items .field-item,
-.node-news-article .field-name-field-main-image-gallery .field-items .field-item {
+/* line 463, ../sass/rebild-alpha-default.scss */
+#region-content .node-page .field-name-field-main-image-gallery .field-items .field-item,
+#region-content .node-news-article .field-name-field-main-image-gallery .field-items .field-item {
   width: 21%;
   padding: 0 2%;
   float: left;
   margin-bottom: 20px;
   text-align: center;
+}
+/* line 473, ../sass/rebild-alpha-default.scss */
+#region-content .node-page .field-name-field-main-factbox,
+#region-content .node-news-article .field-name-field-main-factbox {
+  float: right;
+  width: 33%;
+  margin: 0 0 10px 10px;
 }

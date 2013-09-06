@@ -83,7 +83,9 @@ function ci_search_results_form($form, &$form_state) {
 	    '#default_value' => ci_search_checkboxes_default(),
 	    '#options' => ci_search_checkboxes_options(),
 	);
-		
+	
+	apachesolr_autocomplete_do_alter($form["search_phrase"]);
+  
   return $form;	
 }
 

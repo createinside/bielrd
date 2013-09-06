@@ -91,19 +91,20 @@ Nodes
 		> li {
 			float: left;
 			list-style: none;
-			margin: 0 38px 0 0;
+			padding: 0 19px;
 			> a {
 				color: $link-color;
 				text-decoration: none;
 				font-size: $font-size-large;
 				text-transform: uppercase;
+				display: inline-block;
+				height: 44px;
 			}	
 			a.active,
 			a.active-trail {
 				color: $link-color-active;
 			}	
 		}
-		> li:hover,
 		> li.hover {
 			> a {
 				color: $link-color-hover;
@@ -453,18 +454,26 @@ Nodes
 }
 
 /* Page & News Articles */
-.node-page,
-.node-news-article {
-	/* Node Image Gallery */
-	.field-name-field-main-image-gallery {
-		.field-items {
-			.field-item {
-				width: 21%;
-				padding: 0 2%;
-				float: left;
-				margin-bottom: $spacing-std;
-				text-align: center;
+#region-content {
+	.node-page,
+	.node-news-article {
+		/* Node Image Gallery */
+		.field-name-field-main-image-gallery {
+			.field-items {
+				.field-item {
+					width: 21%;
+					padding: 0 2%;
+					float: left;
+					margin-bottom: $spacing-std;
+					text-align: center;
+				}
 			}
+		}
+		/* Fact Box */
+		.field-name-field-main-factbox {
+			float: right;
+			width: 33%;
+			margin: 0 0 $spacing-std/2 $spacing-std/2;
 		}
 	}
 }

@@ -216,6 +216,11 @@ function rebild_edagsorden_views_default_views() {
   $handler->display->display_options['sorts']['field_agenda_date_value']['table'] = 'field_data_field_agenda_date';
   $handler->display->display_options['sorts']['field_agenda_date_value']['field'] = 'field_agenda_date_value';
   $handler->display->display_options['sorts']['field_agenda_date_value']['order'] = 'DESC';
+  /* Sorteringskriterie: Indhold: Overskrift */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
+  $handler->display->display_options['sorts']['title']['order'] = 'DESC';
   /* Kontekstuelt filter: Indhold: Udvalg (field_agenda_committee) */
   $handler->display->display_options['arguments']['field_agenda_committee_tid']['id'] = 'field_agenda_committee_tid';
   $handler->display->display_options['arguments']['field_agenda_committee_tid']['table'] = 'field_data_field_agenda_committee';

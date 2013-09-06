@@ -86,7 +86,7 @@ body {
 /* Main Menu - (Mega Menu) */
 /* line 32, ../sass/rebild-alpha-default-normal.scss */
 #region-menu ul.ultimenu > li {
-  margin: 0 0 0 35px;
+  /* margin: 0 0 0 35px; */
 }
 
 /* line 37, ../sass/rebild-alpha-default-normal.scss */
@@ -171,4 +171,11 @@ body {
   font-size: 1em;
   margin: 0 10px 0 0;
   padding: 0 10px 0 0;
+}
+
+/* Search Autocomplete */
+/* line 147, ../sass/rebild-alpha-default-normal.scss */
+.not-front .ac_results {
+  display: inherit;
+  width: 464px !important;
 }
