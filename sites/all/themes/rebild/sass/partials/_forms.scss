@@ -107,16 +107,29 @@ select {
 		margin-right: 10px;
 	}
 }
+
 /** 
  * Send page by email 
  */
  #print-mail-form {
 	 input[type=submit], input[type=reset] {
 		 margin-right: $spacing-std;
+		 margin-top: $spacing-std;
 	 }
 	 .form-item {
-		 input {
-			 width: 100%;
-		 }
+		label {
+			width: 100%;
+		}
+		input {
+		 width: 100%;
+		}
+		.form-textarea-wrapper {
+			float: left;
+			width: 100%;
+			textarea {
+				padding: 1em 3%;
+				height: 6em;
+			}
+		}
 	 }
  }

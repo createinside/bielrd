@@ -183,5 +183,6 @@ body {
 /* Share buttons */
 /* line 157, ../sass/rebild-alpha-default-normal.scss */
 #region-content .node-share .share_wrapper .share_this {
+  margin-right: 15px;
   margin-bottom: 2px;
 }

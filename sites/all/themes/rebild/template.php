@@ -172,8 +172,11 @@ function rebild_picture($variables) {
 	if(isset($variables['field_file_image_alt_text']['und'][0]['value'])) {
 		$variables["alt"] = $variables['field_file_image_alt_text']['und'][0]['value'];
 	}
-	if(isset($variables['field_file_image_title_text']['und'][0]['value'])) {
+	if(isset($variables['field_file_image_title_text']['und'][0]['value']) && $variables['field_file_image_title_text']['und'][0]['value']!=null) {
 		$variables["title"] = $variables['field_file_image_title_text']['und'][0]['value'];
+	}
+	else {
+		$variables["title"] = "";
 	}
 	
 	  // Make sure that width and height are proper values
