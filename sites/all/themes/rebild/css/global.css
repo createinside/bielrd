@@ -70,8 +70,8 @@ Backend
 -------------------------------------------------------------------*/
 @font-face {
   font-family: 'Rebild';
-  src: url("../fonts/rebild.eot");
-  src: url("../fonts/rebild.eot?#iefix") format("embedded-opentype"), url("../fonts/rebild.svg#Rebild") format("svg"), url("../fonts/rebild.woff") format("woff"), url("../fonts/rebild.ttf") format("truetype");
+  src: url("../fonts/Rebild.eot");
+  src: url("../fonts/Rebild.eot?#iefix") format("embedded-opentype"), url("../fonts/Rebild.svg#Rebild") format("svg"), url("../fonts/Rebild.woff") format("woff"), url("../fonts/Rebild.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
