@@ -56,7 +56,7 @@ Share nodes
 	#region-content {
 		#block-system-main {
 			padding: 0;
-			.node-page {
+			.node {
 				padding: $spacing-std;
 			}
 		}
@@ -363,14 +363,11 @@ Share nodes
 		width: 100%;
 		padding-bottom: 5px;
 		padding-top: 5px;
+		position: relative;
 		.share_wrapper {
 			padding: 5px 20px 5px 20px;
 			.share_this {
-				float: left;
-				margin-right: 20px;
-			}
-			.twitter-share {
-				width: 77px;
+				margin-bottom: 10px;
 			}
 			.facebook-share {
 				#u_0_6 {
@@ -391,8 +388,9 @@ Share nodes
 				}
 			}
 			.to_the_top {
-				float: right;
-				margin-top: 2px;
+				position: absolute;
+				top: 10px;
+				right: 20px;
 				.go-top {
 					color: $text-color-footer;
 					font-size: 0.8em;

@@ -179,3 +179,9 @@ body {
   display: inherit;
   width: 464px !important;
 }
+
+/* Share buttons */
+/* line 157, ../sass/rebild-alpha-default-normal.scss */
+#region-content .node-share .share_wrapper .share_this {
+  margin-bottom: 2px;
+}

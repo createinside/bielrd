@@ -201,3 +201,15 @@ body {
   -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.4) 0 0 3px;
 }
+
+/* Share buttons */
+/* line 181, ../sass/rebild-alpha-default-narrow.scss */
+#region-content .node-share .share_wrapper .twitter-share {
+  width: 77px;
+}
+/* line 184, ../sass/rebild-alpha-default-narrow.scss */
+#region-content .node-share .share_wrapper .share_this {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 8px;
+}
