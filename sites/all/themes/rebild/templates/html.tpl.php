@@ -5,7 +5,8 @@
  * Drupal page.
  */
 ?><?php print $doctype; ?>
-<html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"<?php print $rdf->version . $rdf->namespaces; ?>>
+<html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"<?php print $rdf->version . $rdf->namespaces; ?> xmlns:fb="http://ogp.me/ns/fb#">
+
 <head<?php print $rdf->profile; ?>>
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>  
@@ -14,6 +15,7 @@
   <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body<?php print $attributes;?>>
+
   <div id="skip-link">
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
   </div>

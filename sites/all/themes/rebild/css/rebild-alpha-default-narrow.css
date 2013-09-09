@@ -87,7 +87,7 @@ body {
 /* Main Menu - (Mega Menu) */
 /* line 33, ../sass/rebild-alpha-default-narrow.scss */
 #region-menu ul.ultimenu > li {
-  margin: 0 0 0 35px;
+  /* margin: 0 0 0 35px; */
 }
 
 /* line 39, ../sass/rebild-alpha-default-narrow.scss */
@@ -186,5 +186,30 @@ body {
 /* WCAG */
 /* line 160, ../sass/rebild-alpha-default-narrow.scss */
 .wcag-block {
-  margin: 0 17px 0 0;
+  font-size: 11px;
+  margin: 0 8px 0 0;
+  padding: 0 8px 0 0;
+}
+
+/* Search Autocomplete */
+/* line 168, ../sass/rebild-alpha-default-narrow.scss */
+.not-front .ac_results {
+  margin-top: 11px;
+  display: inherit;
+  width: 298px !important;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 0 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 0 3px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 3px;
+}
+
+/* Share buttons */
+/* line 181, ../sass/rebild-alpha-default-narrow.scss */
+#region-content .node-share .share_wrapper .twitter-share {
+  width: 77px;
+}
+/* line 184, ../sass/rebild-alpha-default-narrow.scss */
+#region-content .node-share .share_wrapper .share_this {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 8px;
 }

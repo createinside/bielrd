@@ -30,7 +30,7 @@ body {
 #region-menu {
 	ul.ultimenu {
 		> li {
-			margin: 0 0 0 35px;
+			/* margin: 0 0 0 35px; */
 		}
 	}
 }
@@ -130,6 +130,32 @@ body {
 		.rebild-calendar {
 			.calendar_right {
 				max-width: 160px;
+			}
+		}
+	}
+}
+
+/* WCAG */
+.wcag-block {
+	font-size: $font-size-std;
+	margin: 0 $spacing-std/2 0 0;
+	padding: 0 $spacing-std/2 0 0;
+}
+
+/* Search Autocomplete */
+.not-front {
+	.ac_results {
+		display: inherit;
+		width: 464px !important;		
+	}	
+}
+
+/* Share buttons */
+#region-content {
+	.node-share {
+		.share_wrapper {
+			.share_this {
+				margin-bottom: 2px;
 			}
 		}
 	}

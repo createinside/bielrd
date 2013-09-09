@@ -1459,11 +1459,18 @@ function rebild_workflow_views_default_views() {
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['value'] = 'All';
   $handler->display->display_options['filters']['status']['exposed'] = TRUE;
   $handler->display->display_options['filters']['status']['expose']['operator_id'] = '';
   $handler->display->display_options['filters']['status']['expose']['label'] = 'Udgivet';
   $handler->display->display_options['filters']['status']['expose']['identifier'] = 'published';
+  $handler->display->display_options['filters']['status']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    4 => 0,
+    5 => 0,
+    3 => 0,
+  );
   /* Filterkriterie: Bruger: Center (field_user_center) */
   $handler->display->display_options['filters']['field_user_center_tid']['id'] = 'field_user_center_tid';
   $handler->display->display_options['filters']['field_user_center_tid']['table'] = 'field_data_field_user_center';
@@ -1483,6 +1490,11 @@ function rebild_workflow_views_default_views() {
   );
   $handler->display->display_options['filters']['field_user_center_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_user_center_tid']['vocabulary'] = 'centrer';
+  /* Filterkriterie: Workbench Moderation: Aktuelle */
+  $handler->display->display_options['filters']['current']['id'] = 'current';
+  $handler->display->display_options['filters']['current']['table'] = 'workbench_moderation_node_history';
+  $handler->display->display_options['filters']['current']['field'] = 'current';
+  $handler->display->display_options['filters']['current']['value'] = '1';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page_1');
@@ -1551,6 +1563,11 @@ function rebild_workflow_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filterkriterie: Workbench Moderation: Aktuelle */
+  $handler->display->display_options['filters']['current']['id'] = 'current';
+  $handler->display->display_options['filters']['current']['table'] = 'workbench_moderation_node_history';
+  $handler->display->display_options['filters']['current']['field'] = 'current';
+  $handler->display->display_options['filters']['current']['value'] = '1';
   $translatables['workbench_rebild_recent_content'] = array(
     t('Defaults'),
     t('Seneste indhold'),

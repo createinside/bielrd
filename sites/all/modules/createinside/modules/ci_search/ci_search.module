@@ -68,21 +68,24 @@ function ci_search_results_form($form, &$form_state) {
 	
 	$form["search_phrase"] = array(
 		"#type" => "textfield",
+		"#default_value" => (arg(1)!="" ? arg(1) : ""),
 		"#prefix" => "<div class='sf-wrapper'>",
 		"#suffix" => "</div>",
-		"#default_value" => (arg(1)!="" ? arg(1) : ""),
-		"#attributes" => array("placeholder" => "Skriv hvad du søger efter her")
-	); 
+		"#attributes" => array("placeholder" => "Skriv hvad du søger her")
+	);
+	$form["submit"] = array(
+		"#type" => "submit",
+		"#value" => t("Search")
+	);  
 	$form['section'] = array (
 	    '#type' => 'checkboxes',
 	    '#title' => "Begræns din søgning:",
 	    '#default_value' => ci_search_checkboxes_default(),
 	    '#options' => ci_search_checkboxes_options(),
 	);
-	$form["submit"] = array(
-		"#type" => "submit",
-		"#value" => t("Search")
-	); 
+	
+	apachesolr_autocomplete_do_alter($form["search_phrase"]);
+  
   return $form;	
 }
 
@@ -91,16 +94,31 @@ function ci_search_results_form($form, &$form_state) {
  */
 function ci_search_front_form($form, &$form_state) {
 
+	$form["wrap_start"] = array(
+		"#markup" => "<div class='sf-wrapper'>"
+	);
 	$form["search_phrase"] = array(
 		"#type" => "textfield",
-		"#prefix" => "<div class='sf-wrapper'>",
-		"#suffix" => "</div>",
 		"#attributes" => array("placeholder" => "Søg på rebild.dk her og find lige hvad du leder efter!")
-	); 
+	);
 	$form["submit"] = array(
 		"#type" => "submit",
 		"#value" => t("Search")
-	); 
+	);  
+	$form["wrap_end"] = array(
+		"#markup" => "</div>"
+	);
+	// Most popular search phrases
+	$links = ci_search_frequent_keywords(5);
+	$list = "<ul>";
+	$list .= "<li><strong>Mest søgte emner: </strong></li>";
+	foreach($links as $link) {
+		$list .= "<li>".$link."</li>";
+	}
+	$list .= "</ul>";
+	$form[] = array(
+		"#markup" => "<div class='most-searched'>".$list."</div>"
+	);
 	$form['#submit'][] = 'ci_search_results_form_submit';	
 
 	apachesolr_autocomplete_do_alter($form["search_phrase"]);
@@ -192,4 +210,37 @@ function ci_search_checkboxes_default() {
 		}
 	}
 	return $default_checked;
+}
+
+/**
+ * Popular search phrases
+ */
+function ci_search_frequent_keywords($limit = 10) {
+  $keywords = array();
+  // Return keywords only last week's logged queries.
+  $timestamp = REQUEST_TIME - 3600 * 24 * 7;
+  $result = db_query_range("SELECT keywords FROM {apachesolr_stats} WHERE
+      numfound > :numfound AND timestamp > :timestamp
+      ORDER BY timestamp DESC", 0, 5000, array(':numfound' => 0, ':timestamp' => $timestamp));
+  foreach ($result as $record) {
+    if (trim($record->keywords) != "") {
+      // Keep track of individual keywords used
+      $keys_filtered = drupal_strtolower(trim($record->keywords));
+      if (isset($keywords[$keys_filtered])) {
+        $keywords[$keys_filtered]++;
+      }
+      else {
+        $keywords[$keys_filtered] = 1;
+      }
+    }
+  }
+  // Sort by most frequent first.
+  arsort($keywords);
+  // Get first $limit items.
+  $keywords = array_slice($keywords, 0, $limit);
+  $links = array();
+  foreach ($keywords as $key => $frequency) {
+    $links[] = l($key, 'soeg/' . $key);
+  }
+  return $links;
 }

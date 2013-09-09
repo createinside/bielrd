@@ -119,30 +119,35 @@ Backend
 #region-content .content em {
   font-style: italic;
 }
-/* line 51, ../sass/partials/_general.scss */
+/* line 52, ../sass/partials/_general.scss */
 #region-content .content a {
   color: #474747;
   text-decoration: none;
-  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
 }
-/* line 56, ../sass/partials/_general.scss */
+/* line 57, ../sass/partials/_general.scss */
 #region-content .content a:hover {
   text-decoration: underline;
 }
-/* line 67, ../sass/partials/_general.scss */
+/* line 68, ../sass/partials/_general.scss */
 #region-content .content #content-main ul li {
   list-style: disc;
 }
-/* line 72, ../sass/partials/_general.scss */
+/* line 73, ../sass/partials/_general.scss */
 #region-content .content #content-main ol li {
   list-style: decimal;
 }
-/* line 78, ../sass/partials/_general.scss */
+/* line 79, ../sass/partials/_general.scss */
 #region-content .content #content-main #region-content-sidebar ul li {
   list-style: none;
   margin-left: 10px;
 }
-/* line 84, ../sass/partials/_general.scss */
+/* line 85, ../sass/partials/_general.scss */
 #region-content .content #content-main #region-content-sidebar ol li {
   list-style: none;
   margin-left: 10px;

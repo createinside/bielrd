@@ -47,11 +47,12 @@
 		em {
 			font-style: italic;
 		}
+		
 		/* Links */
 		a {
 			color: $link-color;
 			text-decoration: none;
-			word-wrap: break-word;
+			@include hyphenation;
 		}	
 		a:hover {
 			text-decoration: underline;
