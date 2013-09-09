@@ -101,6 +101,12 @@ function edagsorden_importer_committees_import() {
 	/**
 	 * Initiate feeds committee importer
 	 */
+	 
+  global $user;
+  $original_user = $user;
+  $old_state = drupal_save_session(FALSE);
+  $user = user_load(1);
+    
 	$committee_source = variable_get('edagsorden_root_url', '')."/committees.xml"; 
 								
 	$importer_id = 'edagsorden_committee_importer';
@@ -154,4 +160,7 @@ function edagsorden_importer_committees_import() {
 			$feedSource->import();
 		}
 	}
+	
+	$user = $original_user;
+  drupal_save_session($old_state);		
 }

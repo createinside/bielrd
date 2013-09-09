@@ -62,6 +62,16 @@ Share nodes
 		}
 	}
 }
+.page-node {
+	#region-content {
+		#block-system-main {
+			padding: 0;
+			.node-cloned-page {
+				padding: 0;
+			}
+		}
+	}
+}
 
 /*------------------------------------------------------------------
 	Basic Page + News Article

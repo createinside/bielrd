@@ -21,7 +21,9 @@ function edagsorden_importer_img_parser_callback($result, $item_key, $element_ke
 	foreach($field as $output) {
 	
 		$dom = new domDocument;
+		libxml_use_internal_errors(true);
 		$dom->loadHTML($output);
+		libxml_use_internal_errors(false);
 		$dom->preserveWhiteSpace = false;
 		$images = $dom->getElementsByTagName('img');
 		if($images->length>0) {
