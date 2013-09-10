@@ -32,8 +32,12 @@ body {
 	@include background-image(linear-gradient($bg-color-main, $bg-color-main 600px, #d4d4d4 900px, $bg-color-main 1200px));
 	background-color: $bg-color-main;
 	font-family: $font-family-std;
-	font-size: 12px;
 	-webkit-text-size-adjust: none;
+}
+#page {
+	header, section, footer {
+		font-size: 12px;
+	}
 }
 img {
 	max-width: 100%;
@@ -100,6 +104,10 @@ img {
 /*------------------------------------------------------------------
 	Regions
 -------------------------------------------------------------------*/
+
+#region-menu {
+	position: relative;
+}
 #region-user-second {
 	padding: $spacing-std/2;
 }

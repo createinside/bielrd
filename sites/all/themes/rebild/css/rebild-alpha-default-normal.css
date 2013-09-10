@@ -75,8 +75,8 @@ Landingpage
 /*------------------------------------------------------------------
 	General
 -------------------------------------------------------------------*/
-/* line 21, ../sass/rebild-alpha-default-normal.scss */
-body {
+/* line 22, ../sass/rebild-alpha-default-normal.scss */
+#page header, #page section, #page footer {
   font-size: 12px;
 }
 
@@ -84,12 +84,12 @@ body {
 	Menus
 -------------------------------------------------------------------*/
 /* Main Menu - (Mega Menu) */
-/* line 32, ../sass/rebild-alpha-default-normal.scss */
+/* line 35, ../sass/rebild-alpha-default-normal.scss */
 #region-menu ul.ultimenu > li {
-  /* margin: 0 0 0 35px; */
+  padding: 0 19px;
 }
 
-/* line 37, ../sass/rebild-alpha-default-normal.scss */
+/* line 40, ../sass/rebild-alpha-default-normal.scss */
 .ultimenu-flyout {
   width: 940px;
   left: -240px;
@@ -98,7 +98,7 @@ body {
 /*------------------------------------------------------------------
 	Frontpage
 -------------------------------------------------------------------*/
-/* line 47, ../sass/rebild-alpha-default-normal.scss */
+/* line 50, ../sass/rebild-alpha-default-normal.scss */
 .front #region-header-first .block {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -106,32 +106,32 @@ body {
   padding: 25px 0 20px 0;
   background-position: 480px -110px;
 }
-/* line 55, ../sass/rebild-alpha-default-normal.scss */
+/* line 58, ../sass/rebild-alpha-default-normal.scss */
 .front #region-content .view .views-row {
   height: 361px;
   margin-bottom: 20px;
 }
-/* line 62, ../sass/rebild-alpha-default-normal.scss */
+/* line 65, ../sass/rebild-alpha-default-normal.scss */
 .front #region-sidebar-first .block {
   margin-bottom: 20px;
 }
-/* line 65, ../sass/rebild-alpha-default-normal.scss */
+/* line 68, ../sass/rebild-alpha-default-normal.scss */
 .front #region-sidebar-first .block-views {
   height: 530px;
 }
-/* line 68, ../sass/rebild-alpha-default-normal.scss */
+/* line 71, ../sass/rebild-alpha-default-normal.scss */
 .front #region-sidebar-first .block-block {
   height: 190px;
 }
-/* line 74, ../sass/rebild-alpha-default-normal.scss */
+/* line 77, ../sass/rebild-alpha-default-normal.scss */
 .front #region-postscript-first .block .content {
   height: 150px;
 }
-/* line 81, ../sass/rebild-alpha-default-normal.scss */
+/* line 84, ../sass/rebild-alpha-default-normal.scss */
 .front #region-postscript-second .block .content {
   height: 150px;
 }
-/* line 84, ../sass/rebild-alpha-default-normal.scss */
+/* line 87, ../sass/rebild-alpha-default-normal.scss */
 .front #region-postscript-second .block .content .view-calendar-frontpage .calendar_right {
   width: 200px;
 }
@@ -140,7 +140,7 @@ body {
   Landingpage
 -------------------------------------------------------------------*/
 /* Aktuelt */
-/* line 100, ../sass/rebild-alpha-default-normal.scss */
+/* line 103, ../sass/rebild-alpha-default-normal.scss */
 .not-front .view-id-rebild_frontpage .views-row {
   height: 361px;
   width: 310px;
@@ -149,24 +149,24 @@ body {
 /*------------------------------------------------------------------
   Blocks
 -------------------------------------------------------------------*/
-/* line 112, ../sass/rebild-alpha-default-normal.scss */
+/* line 115, ../sass/rebild-alpha-default-normal.scss */
 .html #page .custom_block.social h2, .html #page .custom_block.frivillig h2 {
   margin-bottom: 10px;
 }
 
-/* line 121, ../sass/rebild-alpha-default-normal.scss */
+/* line 124, ../sass/rebild-alpha-default-normal.scss */
 .html #page .custom_block.politics p {
   margin-bottom: 10px;
 }
 
 /* Calendar - sidebar */
-/* line 131, ../sass/rebild-alpha-default-normal.scss */
+/* line 134, ../sass/rebild-alpha-default-normal.scss */
 .view-id-calendar_sidebar .view-content .rebild-calendar .calendar_right {
   max-width: 160px;
 }
 
 /* WCAG */
-/* line 139, ../sass/rebild-alpha-default-normal.scss */
+/* line 142, ../sass/rebild-alpha-default-normal.scss */
 .wcag-block {
   font-size: 1em;
   margin: 0 10px 0 0;
@@ -174,14 +174,14 @@ body {
 }
 
 /* Search Autocomplete */
-/* line 147, ../sass/rebild-alpha-default-normal.scss */
+/* line 150, ../sass/rebild-alpha-default-normal.scss */
 .not-front .ac_results {
   display: inherit;
   width: 464px !important;
 }
 
 /* Share buttons */
-/* line 157, ../sass/rebild-alpha-default-normal.scss */
+/* line 160, ../sass/rebild-alpha-default-normal.scss */
 #region-content .node-share .share_wrapper .share_this {
   margin-right: 15px;
   margin-bottom: 2px;

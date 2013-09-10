@@ -11,6 +11,9 @@ function ci_search_block_info() {
   $blocks['ci_search_front'] = array(
     'info' => t('Search form - front'),
   ); 
+  $blocks['ci_search_header'] = array(
+    'info' => t('Search form - header'),
+  ); 
   $blocks['ci_search_borger'] = array(
     'info' => t('Search form - borger'),
   ); 
@@ -40,6 +43,10 @@ function ci_search_block_view($delta='') {
 		case 'ci_search_front' :
 			$block['subject'] = "";
 			$block['content'] = drupal_get_form("ci_search_front_form");
+		break;
+		case 'ci_search_header' :
+			$block['subject'] = "";
+			$block['content'] = drupal_get_form("ci_search_header_form");
 		break;
 		case 'ci_search_borger' :
 			$block['subject'] = "Hvad søger du efter?";
@@ -122,6 +129,37 @@ function ci_search_front_form($form, &$form_state) {
 	$form['#submit'][] = 'ci_search_results_form_submit';	
 
 	apachesolr_autocomplete_do_alter($form["search_phrase"]);
+
+  return $form;	
+}
+
+/**
+ * Search header form
+ */
+function ci_search_header_form($form, &$form_state) {
+
+	$form["button"] = array(
+		"#markup" => "<a href='#' class='dropd-btn'>Søg</a>"
+	);
+	$form["wrap_start"] = array(
+		"#markup" => "<div id='search-dropd-wrapper'>"
+	); 
+	$form["search_phrase"] = array(
+		"#type" => "textfield",
+		"#attributes" => array("placeholder" => "Indtast dine søgeord her")
+	);
+	$form["submit_hidden"] = array(
+		"#type" => "submit",
+	);
+	$form["submit"] = array(
+		"#prefix" => "<button type='submit'>",
+		"#suffix" => "</button>",
+		"#markup" => "<span class='icon-search'></span>"
+	);  
+	$form["wrap_end"] = array(
+		"#markup" => "</div>"
+	); 
+	$form['#submit'][] = 'ci_search_results_form_submit';	
 
   return $form;	
 }

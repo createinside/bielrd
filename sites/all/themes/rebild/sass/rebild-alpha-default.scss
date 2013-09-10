@@ -95,7 +95,7 @@ Nodes
 			> a {
 				color: $link-color;
 				text-decoration: none;
-				font-size: $font-size-large;
+				font-size: 1.33em;
 				text-transform: uppercase;
 				display: inline-block;
 				height: 44px;
@@ -432,6 +432,10 @@ Nodes
       float: right;
     }
   }
+}
+
+#block-ci-search-ci-search-header {
+	display: block;
 }
 
 /*------------------------------------------------------------------

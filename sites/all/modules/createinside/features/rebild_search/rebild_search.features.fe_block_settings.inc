@@ -75,6 +75,27 @@ function rebild_search_default_fe_block_settings() {
     'visibility' => 1,
   );
 
+  $export['ci_search-ci_search_header'] = array(
+    'cache' => 1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'ci_search_header',
+    'module' => 'ci_search',
+    'node_types' => array(),
+    'pages' => '<front>',
+    'roles' => array(),
+    'themes' => array(
+      'rebild' => array(
+        'region' => 'menu',
+        'status' => 1,
+        'theme' => 'rebild',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   $export['ci_search-ci_search_politik'] = array(
     'cache' => 1,
     'css_class' => '',

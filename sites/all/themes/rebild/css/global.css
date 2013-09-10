@@ -336,6 +336,14 @@ form textarea {
   box-sizing: border-box;
 }
 /* line 30, ../sass/partials/_forms.scss */
+form input[type=text]::-ms-clear {
+  display: none;
+}
+/* line 33, ../sass/partials/_forms.scss */
+form ::-ms-clear {
+  display: none;
+}
+/* line 36, ../sass/partials/_forms.scss */
 form input[type=submit], form input[type=reset] {
   background: #c9bd7e;
   color: white;
@@ -355,17 +363,17 @@ form input[type=submit], form input[type=reset] {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
-/* line 47, ../sass/partials/_forms.scss */
+/* line 53, ../sass/partials/_forms.scss */
 form input[type=submit]::-moz-focus-inner {
   margin: 0;
   padding: 0;
   border: 0;
 }
-/* line 50, ../sass/partials/_forms.scss */
+/* line 56, ../sass/partials/_forms.scss */
 form label {
   margin-bottom: 0.3em;
 }
-/* line 53, ../sass/partials/_forms.scss */
+/* line 59, ../sass/partials/_forms.scss */
 form .description {
   margin-top: 0.3em;
 }
@@ -373,12 +381,12 @@ form .description {
 /**
  * Custom Selects
  */
-/* line 61, ../sass/partials/_forms.scss */
+/* line 67, ../sass/partials/_forms.scss */
 select {
   cursor: pointer;
 }
 
-/* line 64, ../sass/partials/_forms.scss */
+/* line 70, ../sass/partials/_forms.scss */
 .customSelect {
   background: white;
   border: 0;
@@ -400,7 +408,7 @@ select {
   box-shadow: rgba(0, 0, 0, 0.1) 0 0 5px;
 }
 
-/* line 74, ../sass/partials/_forms.scss */
+/* line 80, ../sass/partials/_forms.scss */
 .customSelect:after {
   font-style: normal;
   font-size: 1.1em;
@@ -418,7 +426,7 @@ select {
   content: "\e000";
 }
 
-/* line 83, ../sass/partials/_forms.scss */
+/* line 89, ../sass/partials/_forms.scss */
 .customSelectInner {
   cursor: pointer;
   line-height: 1em;
@@ -428,24 +436,24 @@ select {
 /** 
  * Newsletter subscriptions 
  */
-/* line 93, ../sass/partials/_forms.scss */
+/* line 99, ../sass/partials/_forms.scss */
 #simplenews-subscriptions-page-form legend {
   font-weight: bold;
   margin-bottom: 20px;
 }
-/* line 97, ../sass/partials/_forms.scss */
+/* line 103, ../sass/partials/_forms.scss */
 #simplenews-subscriptions-page-form .fieldset-description {
   margin-bottom: 20px;
 }
-/* line 100, ../sass/partials/_forms.scss */
+/* line 106, ../sass/partials/_forms.scss */
 #simplenews-subscriptions-page-form #edit-newsletters {
   margin-bottom: 20px;
 }
-/* line 103, ../sass/partials/_forms.scss */
+/* line 109, ../sass/partials/_forms.scss */
 #simplenews-subscriptions-page-form .form-type-textfield {
   margin: 20px 0;
 }
-/* line 106, ../sass/partials/_forms.scss */
+/* line 112, ../sass/partials/_forms.scss */
 #simplenews-subscriptions-page-form .form-submit {
   margin-right: 10px;
 }
@@ -453,25 +461,25 @@ select {
 /** 
  * Send page by email 
  */
-/* line 115, ../sass/partials/_forms.scss */
+/* line 121, ../sass/partials/_forms.scss */
 #print-mail-form input[type=submit], #print-mail-form input[type=reset] {
   margin-right: 20px;
   margin-top: 20px;
 }
-/* line 120, ../sass/partials/_forms.scss */
+/* line 126, ../sass/partials/_forms.scss */
 #print-mail-form .form-item label {
   width: 100%;
 }
-/* line 123, ../sass/partials/_forms.scss */
+/* line 129, ../sass/partials/_forms.scss */
 #print-mail-form .form-item input {
   width: 100%;
 }
-/* line 126, ../sass/partials/_forms.scss */
+/* line 132, ../sass/partials/_forms.scss */
 #print-mail-form .form-item .form-textarea-wrapper {
   float: left;
   width: 100%;
 }
-/* line 129, ../sass/partials/_forms.scss */
+/* line 135, ../sass/partials/_forms.scss */
 #print-mail-form .form-item .form-textarea-wrapper textarea {
   padding: 1em 3%;
   height: 6em;
@@ -2846,8 +2854,101 @@ div.workbench-info-block a {
   margin-left: 1em;
 }
 
+/* Search block header */
+/* line 1005, ../sass/partials/_blocks.scss */
+#block-ci-search-ci-search-header {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 120px;
+  width: 325px;
+  display: none;
+}
+/* line 1012, ../sass/partials/_blocks.scss */
+#block-ci-search-ci-search-header .dropd-btn {
+  font-size: 1em;
+  line-height: 5.5em;
+  display: inline-block;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  width: 66px;
+  height: 69px;
+  background: #c9bd7e;
+  font-weight: bold;
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10000;
+  -moz-border-radius-topleft: 3px;
+  -webkit-border-top-left-radius: 3px;
+  border-top-left-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -webkit-border-top-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+/* line 1030, ../sass/partials/_blocks.scss */
+#block-ci-search-ci-search-header .dropd-btn:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #c9bd7e;
+  position: absolute;
+  bottom: -7px;
+  left: 25px;
+}
+/* line 1040, ../sass/partials/_blocks.scss */
+#block-ci-search-ci-search-header #search-dropd-wrapper {
+  position: absolute;
+  bottom: -52px;
+  right: 0;
+  height: 52px;
+  display: none;
+  z-index: 9998;
+}
+/* line 1047, ../sass/partials/_blocks.scss */
+#block-ci-search-ci-search-header #search-dropd-wrapper .form-item {
+  margin: 0;
+  padding: 0;
+}
+/* line 1051, ../sass/partials/_blocks.scss */
+#block-ci-search-ci-search-header #search-dropd-wrapper input[type=text] {
+  height: 50px;
+  margin-top: 2px;
+  width: 100%;
+  padding: 0 18% 0 5%;
+  background-image: none;
+  background: white;
+  font-style: italic;
+  border: none !important;
+  -webkit-box-shadow: 0;
+  -moz-box-shadow: 0;
+  box-shadow: 0;
+}
+/* line 1062, ../sass/partials/_blocks.scss */
+#block-ci-search-ci-search-header #search-dropd-wrapper input[type=submit] {
+  display: none;
+}
+/* line 1065, ../sass/partials/_blocks.scss */
+#block-ci-search-ci-search-header #search-dropd-wrapper button[type=submit] {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  height: 50px;
+  border: 0;
+  background: 0;
+  color: #c9bd7e;
+  padding: 0 .8em;
+  font-size: 1.8em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 /* Search autocomplete widget */
-/* line 1004, ../sass/partials/_blocks.scss */
+/* line 1082, ../sass/partials/_blocks.scss */
 .ac_results:before {
   content: "";
   width: 0;
@@ -2860,7 +2961,7 @@ div.workbench-info-block a {
   left: 30px;
 }
 
-/* line 1015, ../sass/partials/_blocks.scss */
+/* line 1093, ../sass/partials/_blocks.scss */
 .ac_results {
   border: none;
   padding: 10px 8px;
@@ -2877,33 +2978,33 @@ div.workbench-info-block a {
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 1023, ../sass/partials/_blocks.scss */
+/* line 1101, ../sass/partials/_blocks.scss */
 .ac_results ul li {
   padding: 20px;
   font-size: 1em;
   cursor: pointer;
   color: #474747;
 }
-/* line 1035, ../sass/partials/_blocks.scss */
+/* line 1113, ../sass/partials/_blocks.scss */
 .ac_results ul .ac_even {
   background: white;
 }
-/* line 1038, ../sass/partials/_blocks.scss */
+/* line 1116, ../sass/partials/_blocks.scss */
 .ac_results ul .ac_odd {
   background: #f6f6f6;
 }
-/* line 1041, ../sass/partials/_blocks.scss */
+/* line 1119, ../sass/partials/_blocks.scss */
 .ac_results ul .ac_over {
   background: #cfcfcf;
   color: #474747;
 }
 
-/* line 1048, ../sass/partials/_blocks.scss */
+/* line 1126, ../sass/partials/_blocks.scss */
 .front .ac_results {
   width: 557px !important;
 }
 
-/* line 1053, ../sass/partials/_blocks.scss */
+/* line 1131, ../sass/partials/_blocks.scss */
 .responsive-layout-mobile.not-front .ac_results {
   display: none !important;
 }
@@ -3800,18 +3901,22 @@ body {
   background-image: linear-gradient(#e8e8e8, #e8e8e8 600px, #d4d4d4 900px, #e8e8e8 1200px);
   background-color: #e8e8e8;
   font-family: Verdana, Arial, sans-serif;
-  font-size: 12px;
   -webkit-text-size-adjust: none;
 }
 
 /* line 38, ../sass/global.scss */
+#page header, #page section, #page footer {
+  font-size: 12px;
+}
+
+/* line 42, ../sass/global.scss */
 img {
   max-width: 100%;
   height: auto;
 }
 
 /* Page titles */
-/* line 44, ../sass/global.scss */
+/* line 48, ../sass/global.scss */
 .front #page-title {
   font-size: 1.5em;
   font-weight: normal;
@@ -3820,7 +3925,7 @@ img {
   text-shadow: white 1px 1px 1px;
 }
 
-/* line 51, ../sass/global.scss */
+/* line 55, ../sass/global.scss */
 .not-front #page-title {
   font-size: 2.16667em;
   line-height: 1.25em;
@@ -3829,7 +3934,7 @@ img {
   text-shadow: white 1px 1px 1px;
 }
 
-/* line 58, ../sass/global.scss */
+/* line 62, ../sass/global.scss */
 #logo {
   display: none;
 }
@@ -3837,7 +3942,7 @@ img {
 /*------------------------------------------------------------------
 	Sections
 -------------------------------------------------------------------*/
-/* line 65, ../sass/global.scss */
+/* line 69, ../sass/global.scss */
 #section-content {
   padding: 20px 0 0;
   background: transparent url("../img/noise_bg_repeat.png") repeat;
@@ -3846,7 +3951,7 @@ img {
 /*------------------------------------------------------------------
 	Zones
 -------------------------------------------------------------------*/
-/* line 73, ../sass/global.scss */
+/* line 77, ../sass/global.scss */
 #zone-user-wrapper {
   background-color: white;
   position: relative;
@@ -3856,7 +3961,7 @@ img {
   box-shadow: rgba(0, 0, 0, 0.075) 0 10px 10px;
 }
 
-/* line 79, ../sass/global.scss */
+/* line 83, ../sass/global.scss */
 #zone-menu-wrapper {
   background-color: white;
   position: relative;
@@ -3866,24 +3971,24 @@ img {
   box-shadow: rgba(0, 0, 0, 0.075) 0 10px 10px;
 }
 
-/* line 85, ../sass/global.scss */
+/* line 89, ../sass/global.scss */
 #zone-header-wrapper {
   color: white;
   background: transparent url("../img/noise_bg_repeat.png") repeat;
 }
 
-/* line 89, ../sass/global.scss */
+/* line 93, ../sass/global.scss */
 #zone-preface-wrapper {
   display: none;
 }
 
-/* line 92, ../sass/global.scss */
+/* line 96, ../sass/global.scss */
 #zone-footer-wrapper {
   background-color: white;
   padding: 20px 0 20px;
 }
 
-/* line 96, ../sass/global.scss */
+/* line 100, ../sass/global.scss */
 #zone-bottom-wrapper {
   background-color: #6b6b6b;
 }
@@ -3891,12 +3996,17 @@ img {
 /*------------------------------------------------------------------
 	Regions
 -------------------------------------------------------------------*/
-/* line 103, ../sass/global.scss */
+/* line 108, ../sass/global.scss */
+#region-menu {
+  position: relative;
+}
+
+/* line 111, ../sass/global.scss */
 #region-user-second {
   padding: 10px;
 }
 
-/* line 110, ../sass/global.scss */
+/* line 118, ../sass/global.scss */
 #region-footer-second,
 #region-footer-third,
 #region-footer-fourth,
@@ -3907,7 +4017,7 @@ img {
 /*------------------------------------------------------------------
 	Menus
 -------------------------------------------------------------------*/
-/* line 119, ../sass/global.scss */
+/* line 127, ../sass/global.scss */
 .ultimenu,
 #region-user-first {
   display: none;
@@ -3916,7 +4026,7 @@ img {
 /*------------------------------------------------------------------
 	Nodes
 -------------------------------------------------------------------*/
-/* line 127, ../sass/global.scss */
+/* line 135, ../sass/global.scss */
 .not-front .block-system-main {
   padding: 20px;
   background-color: white;
@@ -3930,7 +4040,7 @@ img {
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
 
-/* line 137, ../sass/global.scss */
+/* line 145, ../sass/global.scss */
 .page-borger .block-system-main,
 .page-erhverv .block-system-main,
 .page-politik .block-system-main,
