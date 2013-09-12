@@ -85,10 +85,10 @@ function ci_search_results_form($form, &$form_state) {
 		"#value" => t("Search")
 	);  
 	$form['section'] = array (
-	    '#type' => 'checkboxes',
-	    '#title' => "Begræns din søgning:",
-	    '#default_value' => ci_search_checkboxes_default(),
-	    '#options' => ci_search_checkboxes_options(),
+    '#type' => 'checkboxes',
+    '#title' => "Begræns din søgning:",
+    '#default_value' => ci_search_checkboxes_default(),
+    '#options' => ci_search_checkboxes_options(),
 	);
 	
 	apachesolr_autocomplete_do_alter($form["search_phrase"]);
@@ -205,7 +205,7 @@ function ci_search_results_form_submit($form, &$form_state) {
   $redirect_url = 'soeg/';
   $redirect_url .= urlencode($form_state['values']['search_phrase']);
   $i=0;
-	if(is_array($form_state["values"]["section"])) {
+	if(isset($form_state["values"]["section"]) && is_array($form_state["values"]["section"])) {
 		foreach($form_state["values"]["section"] as $key => $val) {
 			if($val!=0) {
 				if($i==0) {
