@@ -14,7 +14,7 @@
 		background-image: url("../img/background_print.png");
 		background-repeat: no-repeat;
 		background-position: top right;	
-		.content {
+		div.content {
 			line-height: $line-height-std;
 			text-align: center;
 			color: $text-color-header;
@@ -41,7 +41,7 @@
 #region-content {
 	.block {
 		margin-bottom: $spacing-std;
-		.content {
+		div.content {
 			color: $text-color;
 			line-height: $line-height-std;
 			padding-bottom: 0;
@@ -79,7 +79,7 @@
 		h3 {
 			margin-top: $spacing-std;
 		}
-		.content {
+		div.content {
 			color: $text-color;
 			line-height: $line-height-std;
 			padding-bottom: 0;
@@ -465,6 +465,9 @@
 				font-weight: normal;
 				margin-bottom: 10px;
 			}
+			a {
+				color: $text-color;
+			}
 		}
 	}
 }
@@ -484,8 +487,52 @@
 				font-weight: normal;
 				margin-bottom: 10px;
 			}
+			a {
+				color: $text-color;
+			}
 		}
-			
+	}
+}
+/* Custom blocks - Fremtidens folkeskole */
+.html {
+	#page {
+		.custom_block.folkeskole {
+			@include grid-box(#fff);
+			color: $text-color;
+			background-image: url('../img/fremtidens_folkeskole_high.png');
+			background-repeat: no-repeat;
+			background-position: center top;
+			padding-top: 220px;
+			h2 {
+				font-size: $font-size-large;
+				line-height: $line-height-std;
+				font-weight: normal;
+			}
+			a {
+				color: $text-color;
+			}
+		}
+	}
+}
+/* Custom blocks - Fremtidens dagtilbud */
+.html {
+	#page {
+		.custom_block.dagtilbud {
+			@include grid-box(#fff);
+			color: $text-color;
+			background-image: url('../img/fremtidens_dagtilbud_high.png');
+			background-repeat: no-repeat;
+			background-position: center top;
+			padding-top: 220px;
+			h2 {
+				font-size: $font-size-large;
+				line-height: $line-height-std;
+				font-weight: normal;
+			}
+			a {
+				color: $text-color;
+			}
+		}
 	}
 }
 /* Calendar sidebar */
@@ -1000,6 +1047,84 @@ div.workbench-info-block {
 		}
 	}
 }
+
+/* Search block header */
+#block-ci-search-ci-search-header {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	height: 120px;
+	width: 325px;
+	display: none;
+	.dropd-btn {
+		font-size: $font-size-std;
+		line-height: 5.5em;
+		display: inline-block;
+		color: white;
+		text-transform: uppercase;
+		text-align: center;
+		width: 66px;
+		height: 69px;	
+		background: $color-yellow;
+		font-weight: bold;
+		text-decoration: none;
+		position: absolute;
+		bottom: 0; right: 0;
+		z-index: 10000;
+		@include border-top-left-radius($border-radius-std);
+		@include border-top-right-radius($border-radius-std);
+}
+	.dropd-btn:before {
+		content: "";
+		width: 0; 
+		height: 0; 
+		border-left: 7px solid transparent;
+		border-right: 7px solid transparent;
+		border-top: 7px solid $color-yellow;
+		position: absolute;
+		bottom: -7px; left: 25px;
+	}
+	#search-dropd-wrapper {
+		position: absolute;
+		bottom: -52px;
+		right: 0;
+		height: 52px;
+		display: none;
+		z-index: 9998;
+		.form-item {
+			margin: 0;
+			padding: 0;
+		}
+		input[type=text] {
+			height: 50px;
+			margin-top: 2px;
+			width: 100%;
+			padding: 0 18% 0 5%;
+			background-image: none;
+			background: white;
+			font-style: italic;
+			border: none !important;
+			@include box-shadow(0);
+		}
+		input[type=submit] {
+			display: none;
+		}
+		button[type=submit] {
+			position: absolute;
+			top: 2px;
+			right: 0;
+			height: 50px;
+			border: 0;
+			background: 0;
+			color: $color-yellow;
+			padding: 0 .8em;
+			font-size: 1.8em;
+			font-weight: bold;
+			cursor: pointer;
+		}
+	}
+}
+
 /* Search autocomplete widget */
 .ac_results:before {
 	content: "";

@@ -23,6 +23,7 @@ features[facetapi][] = apachesolr@solr::im_field_main_section
 features[fe_block_settings][] = ci_search-ci_search_borger
 features[fe_block_settings][] = ci_search-ci_search_erhverv
 features[fe_block_settings][] = ci_search-ci_search_front
+features[fe_block_settings][] = ci_search-ci_search_header
 features[fe_block_settings][] = ci_search-ci_search_politik
 features[fe_block_settings][] = ci_search-ci_search_rebild
 features[fe_block_settings][] = ci_search-ci_search_results

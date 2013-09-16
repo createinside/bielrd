@@ -75,6 +75,15 @@ function rebild_workflow_default_rules_configuration() {
       "PLUGIN" : "reaction rule",
       "REQUIRES" : [ "rules" ],
       "ON" : [ "user_login" ],
+      "IF" : [
+        { "NOT user_has_role" : { "account" : [ "account" ], "roles" : { "value" : { "6" : "6" } } } },
+        { "user_has_role" : {
+            "account" : [ "account" ],
+            "roles" : { "value" : { "1" : "1", "2" : "2", "4" : "4", "5" : "5", "3" : "3" } },
+            "operation" : "OR"
+          }
+        }
+      ],
       "DO" : [ { "redirect" : { "url" : "admin\\/workbench" } } ]
     }
   }');

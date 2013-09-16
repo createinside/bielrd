@@ -242,11 +242,6 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['nid']['alter']['text'] = 'selvbetjening#loesning-[nid]';
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Sorteringskriterie: Indholdsstatistik: Totale visninger */
-  $handler->display->display_options['sorts']['totalcount']['id'] = 'totalcount';
-  $handler->display->display_options['sorts']['totalcount']['table'] = 'node_counter';
-  $handler->display->display_options['sorts']['totalcount']['field'] = 'totalcount';
-  $handler->display->display_options['sorts']['totalcount']['order'] = 'DESC';
   /* Sorteringskriterie: Indhold: Overskrift */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
@@ -313,11 +308,6 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['sorts']['random']['id'] = 'random';
   $handler->display->display_options['sorts']['random']['table'] = 'views';
   $handler->display->display_options['sorts']['random']['field'] = 'random';
-  /* Sorteringskriterie: Indholdsstatistik: Totale visninger */
-  $handler->display->display_options['sorts']['totalcount']['id'] = 'totalcount';
-  $handler->display->display_options['sorts']['totalcount']['table'] = 'node_counter';
-  $handler->display->display_options['sorts']['totalcount']['field'] = 'totalcount';
-  $handler->display->display_options['sorts']['totalcount']['order'] = 'DESC';
   /* Sorteringskriterie: Indhold: Overskrift */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
@@ -555,10 +545,11 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['fields']['field_self_service_pdf']['settings'] = array(
     'file_view_mode' => 'default',
   );
-  /* Sorteringskriterie: Indhold: Overskrift */
-  $handler->display->display_options['sorts']['title']['id'] = 'title';
-  $handler->display->display_options['sorts']['title']['table'] = 'node';
-  $handler->display->display_options['sorts']['title']['field'] = 'title';
+  /* Sorteringskriterie: Ord i ordforråd: Navn */
+  $handler->display->display_options['sorts']['name']['id'] = 'name';
+  $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['name']['field'] = 'name';
+  $handler->display->display_options['sorts']['name']['relationship'] = 'field_self_service_category_tid';
   /* Filterkriterie: Indhold: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -569,6 +560,16 @@ function rebild_self_service_views_default_views() {
 
   /* Display: Emner */
   $handler = $view->new_display('page', 'Emner', 'emner');
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sorteringskriterie: Indhold: Overskrift */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
+  /* Sorteringskriterie: Ord i ordforråd: Navn */
+  $handler->display->display_options['sorts']['name']['id'] = 'name';
+  $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['name']['field'] = 'name';
+  $handler->display->display_options['sorts']['name']['relationship'] = 'field_self_service_category_tid';
   $handler->display->display_options['path'] = 'views/selvbetjening';
 
   /* Display: Alfabetisk */

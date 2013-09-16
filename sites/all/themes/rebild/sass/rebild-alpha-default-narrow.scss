@@ -19,8 +19,10 @@ Landingpage
 /*------------------------------------------------------------------
 	General
 -------------------------------------------------------------------*/
-body {
-	font-size: 11px;
+#page {
+	header, section, footer {
+		font-size: 11px;
+	}
 }
 
 /*------------------------------------------------------------------
@@ -31,7 +33,7 @@ body {
 #region-menu {
 	ul.ultimenu {
 		> li {
-			/* margin: 0 0 0 35px; */
+			padding: 0 12px;			
 		}
 	}
 }
@@ -132,6 +134,14 @@ body {
 				margin-bottom: 0;
 				margin-top: 190px;
 			}
+		}
+		.custom_block.folkeskole {
+			background-image: url('../img/fremtidens_folkeskole.png');
+			padding-top: 215px;
+		}
+		.custom_block.dagtilbud {
+			background-image: url('../img/fremtidens_dagtilbud.png');			
+			padding-top: 215px;
 		}
 	}
 }

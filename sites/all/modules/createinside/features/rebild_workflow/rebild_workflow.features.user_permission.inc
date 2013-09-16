@@ -46,6 +46,7 @@ function rebild_workflow_user_default_permissions() {
     'name' => 'administer menu-secondary-menu menu items',
     'roles' => array(
       'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
     ),
     'module' => 'menu_admin_per_menu',
   );
@@ -115,6 +116,7 @@ function rebild_workflow_user_default_permissions() {
       'administrator' => 'administrator',
       'fagredaktør' => 'fagredaktør',
       'kommunikation' => 'kommunikation',
+      'konfigurator' => 'konfigurator',
     ),
     'module' => 'menu_view_unpublished',
   );
@@ -241,6 +243,7 @@ function rebild_workflow_user_default_permissions() {
       'administrator' => 'administrator',
       'fagredaktør' => 'fagredaktør',
       'kommunikation' => 'kommunikation',
+      'konfigurator' => 'konfigurator',
     ),
     'module' => 'workbench_moderation',
   );

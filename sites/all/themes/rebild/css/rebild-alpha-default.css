@@ -97,7 +97,7 @@ Nodes
 /* line 42, ../sass/rebild-alpha-default.scss */
 .not-front #region-sidebar-first {
   text-align: left;
-  margin-top: -32px;
+  margin-top: -35px;
 }
 
 /* Hide mobile regions */
@@ -164,7 +164,7 @@ Nodes
 #region-menu ul.ultimenu > li > a {
   color: #474747;
   text-decoration: none;
-  font-size: 1.33333em;
+  font-size: 1.33em;
   text-transform: uppercase;
   display: inline-block;
   height: 44px;
@@ -538,17 +538,22 @@ Nodes
   float: right;
 }
 
+/* line 437, ../sass/rebild-alpha-default.scss */
+#block-ci-search-ci-search-header {
+  display: block;
+}
+
 /*------------------------------------------------------------------
 	Nodes
 -------------------------------------------------------------------*/
-/* line 442, ../sass/rebild-alpha-default.scss */
+/* line 446, ../sass/rebild-alpha-default.scss */
 .node #content-main.has-sidebar {
   border-right: 1px dotted #474747;
   width: 70%;
   padding-right: 3%;
   float: left;
 }
-/* line 448, ../sass/rebild-alpha-default.scss */
+/* line 452, ../sass/rebild-alpha-default.scss */
 .node #region-content-sidebar {
   float: right;
   width: 23%;
@@ -557,13 +562,13 @@ Nodes
 }
 
 /* Page & News Articles */
-/* line 459, ../sass/rebild-alpha-default.scss */
+/* line 463, ../sass/rebild-alpha-default.scss */
 #region-content .node-page,
 #region-content .node-news-article {
   /* Node Image Gallery */
   /* Fact Box */
 }
-/* line 463, ../sass/rebild-alpha-default.scss */
+/* line 467, ../sass/rebild-alpha-default.scss */
 #region-content .node-page .field-name-field-main-image-gallery .field-items .field-item,
 #region-content .node-news-article .field-name-field-main-image-gallery .field-items .field-item {
   width: 21%;
@@ -572,7 +577,7 @@ Nodes
   margin-bottom: 20px;
   text-align: center;
 }
-/* line 473, ../sass/rebild-alpha-default.scss */
+/* line 477, ../sass/rebild-alpha-default.scss */
 #region-content .node-page .field-name-field-main-factbox,
 #region-content .node-news-article .field-name-field-main-factbox {
   float: right;

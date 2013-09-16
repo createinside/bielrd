@@ -65,7 +65,8 @@
  */
 ?>
 
-<li class="<?php print $classes; ?><?php print $extra_classes; ?>"<?php print $attributes; ?>>
+
+<li class="<?php print $classes; ?><?php if(isset($extra_classes)) print $extra_classes; ?>"<?php print $attributes; ?>>
   <?php print render($title_prefix); ?>
   <h3 class="title"<?php print $title_attributes; ?>>
 		<?php

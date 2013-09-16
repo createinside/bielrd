@@ -60,7 +60,18 @@ $(function() {
 		}
 	}
 	
-
+	// Search block dropdown
+	$(".dropd-btn").click(function(e) {
+		e.preventDefault();
+		$("#search-dropd-wrapper").toggle();
+		$("#search-dropd-wrapper input[type=text]").focus();
+	});
+/*
+	$("#search-dropd-wrapper input[type=text]").focusout(function(){
+		$("#search-dropd-wrapper").hide();
+	});
+*/
+	
 });
 
 

@@ -27,6 +27,12 @@ form {
 		@include background-image(linear-gradient(#ececec, #ffffff 33%));
 		@include box-sizing(border-box);
 	}
+	input[type=text]::-ms-clear {
+    display: none;
+	}
+	::-ms-clear {
+    display: none;
+	}
 	input[type=submit], input[type=reset] {
 		background: $button-bg-color;
 		color: white;

@@ -17,6 +17,7 @@ function rebild_user_profile_user_default_permissions() {
       'administrator' => 'administrator',
       'fagredaktør' => 'fagredaktør',
       'kommunikation' => 'kommunikation',
+      'konfigurator' => 'konfigurator',
     ),
     'module' => 'user',
   );
@@ -28,6 +29,7 @@ function rebild_user_profile_user_default_permissions() {
       'administrator' => 'administrator',
       'fagredaktør' => 'fagredaktør',
       'kommunikation' => 'kommunikation',
+      'konfigurator' => 'konfigurator',
     ),
     'module' => 'user',
   );
