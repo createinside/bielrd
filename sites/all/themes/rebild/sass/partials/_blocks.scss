@@ -14,7 +14,7 @@
 		background-image: url("../img/background_print.png");
 		background-repeat: no-repeat;
 		background-position: top right;	
-		.content {
+		div.content {
 			line-height: $line-height-std;
 			text-align: center;
 			color: $text-color-header;
@@ -41,7 +41,7 @@
 #region-content {
 	.block {
 		margin-bottom: $spacing-std;
-		.content {
+		div.content {
 			color: $text-color;
 			line-height: $line-height-std;
 			padding-bottom: 0;
@@ -79,7 +79,7 @@
 		h3 {
 			margin-top: $spacing-std;
 		}
-		.content {
+		div.content {
 			color: $text-color;
 			line-height: $line-height-std;
 			padding-bottom: 0;
@@ -465,6 +465,9 @@
 				font-weight: normal;
 				margin-bottom: 10px;
 			}
+			a {
+				color: $text-color;
+			}
 		}
 	}
 }
@@ -484,8 +487,52 @@
 				font-weight: normal;
 				margin-bottom: 10px;
 			}
+			a {
+				color: $text-color;
+			}
 		}
-			
+	}
+}
+/* Custom blocks - Fremtidens folkeskole */
+.html {
+	#page {
+		.custom_block.folkeskole {
+			@include grid-box(#fff);
+			color: $text-color;
+			background-image: url('../img/fremtidens_folkeskole_high.png');
+			background-repeat: no-repeat;
+			background-position: center top;
+			padding-top: 220px;
+			h2 {
+				font-size: $font-size-large;
+				line-height: $line-height-std;
+				font-weight: normal;
+			}
+			a {
+				color: $text-color;
+			}
+		}
+	}
+}
+/* Custom blocks - Fremtidens dagtilbud */
+.html {
+	#page {
+		.custom_block.dagtilbud {
+			@include grid-box(#fff);
+			color: $text-color;
+			background-image: url('../img/fremtidens_dagtilbud_high.png');
+			background-repeat: no-repeat;
+			background-position: center top;
+			padding-top: 220px;
+			h2 {
+				font-size: $font-size-large;
+				line-height: $line-height-std;
+				font-weight: normal;
+			}
+			a {
+				color: $text-color;
+			}
+		}
 	}
 }
 /* Calendar sidebar */
