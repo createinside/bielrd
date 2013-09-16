@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * Implements hook_workbench_moderation_transition().
+ */
+function field_collection_wbm_workbench_moderation_transition($node, $previous_state, $new_state) {
+  // If the node is not published then we just track the latest revision.
+  if (!isset($node->workbench_moderation['published'])) {
+    return;
+  }
+  
+  // Get the machine name of the published state.
+  $published = workbench_moderation_state_published();
+  
+  if (isset($node->original) && $new_state != $published) {
+    // Saved from node form to a non-published state.
+    $host_entity = $node->original;
+    $default = $previous_state == $published;
+  }
+  else {
+    // Moderated to a new state.
+    $host_entity = $node;
+    $default = $new_state == $published;
+  }
+  
+  // Find all field collection fields on the host node.
+  foreach (field_info_instances('node', $node->type) as $field_name => $value) {
+    $field_info = field_info_field($field_name);
+    if ($field_info['type'] == 'field_collection' && ($collections = field_get_items('node', $host_entity, $field_name))) {
+      foreach ($collections as $collection) {
+        // Load each field collection item revision.
+        $entities = entity_load(
+          'field_collection_item', 
+          array($collection['value']),
+          array('revision_id' => array($collection['revision_id']))
+        );
+        
+        // Re-save each field collection item to set the default revision status and ensure 
+        // the values in the corresponding {field_data_*} table reflect the published revision.
+        foreach ($entities as $entity) {
+          // Set default revision state.
+          $entity->default_revision = $default;
+          // Don't save a new revision.
+          $entity->revision = 0;
+          // Save without saving the host node.
+          $entity->save(TRUE);
+        }
+      }
+    }
+  }
+}

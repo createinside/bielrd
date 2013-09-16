@@ -1,0 +1,6 @@
+name = Field collection workbench moderation
+description = Supports use of Workbench Moderation on nodes containing Field Collections.
+core = 7.x
+dependencies[] = field_collection
+dependencies[] = workbench_moderation
+package = Workbench
