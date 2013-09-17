@@ -156,15 +156,18 @@ Share nodes
 				margin: 0 0 5px 0;
 				font-weight: bold;
 				@include border-radius($border-radius-std);
-				> a {
+				> a,
+				.field-item {
 					color: $text-color;
 					padding: 0;
 					margin: 0;
 				}
-				> a:hover {
+				> a:hover,
+				.field-item:hover {
 					text-decoration: none;
 				}
-				> a .field-content:before {
+				> a .field-content:before,
+				.field-item:before {
 					@include icon-prepare();
 					content: "\e00f";	
 					margin-right: 0.5em;
@@ -172,10 +175,12 @@ Share nodes
 			}
 				.ui-accordion-header.ui-state-active {
 					background-color: $color-blue;
-					a {
+					a, 
+					.field-item {
 						color: white;
 					}
-					a .field-content:before {			
+					a .field-content:before,
+					.field-item:before {			
 						@include icon-prepare();
 						content: "\e010";	
 						margin-right: 0.5em;

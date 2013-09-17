@@ -1169,27 +1169,39 @@ Share nodes
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 159, ../sass/partials/_nodes.scss */
+/* line 160, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header > a,
+#region-content .node-page .ui-accordion .ui-accordion-header .field-item,
 #region-content .node-news-article .ui-accordion .ui-accordion-header > a,
+#region-content .node-news-article .ui-accordion .ui-accordion-header .field-item,
 #region-content .node-agenda .ui-accordion .ui-accordion-header > a,
-#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header > a {
+#region-content .node-agenda .ui-accordion .ui-accordion-header .field-item,
+#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header > a,
+#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header .field-item {
   color: #474747;
   padding: 0;
   margin: 0;
 }
-/* line 164, ../sass/partials/_nodes.scss */
+/* line 166, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header > a:hover,
+#region-content .node-page .ui-accordion .ui-accordion-header .field-item:hover,
 #region-content .node-news-article .ui-accordion .ui-accordion-header > a:hover,
+#region-content .node-news-article .ui-accordion .ui-accordion-header .field-item:hover,
 #region-content .node-agenda .ui-accordion .ui-accordion-header > a:hover,
-#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header > a:hover {
+#region-content .node-agenda .ui-accordion .ui-accordion-header .field-item:hover,
+#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header > a:hover,
+#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header .field-item:hover {
   text-decoration: none;
 }
-/* line 167, ../sass/partials/_nodes.scss */
+/* line 170, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header > a .field-content:before,
+#region-content .node-page .ui-accordion .ui-accordion-header .field-item:before,
 #region-content .node-news-article .ui-accordion .ui-accordion-header > a .field-content:before,
+#region-content .node-news-article .ui-accordion .ui-accordion-header .field-item:before,
 #region-content .node-agenda .ui-accordion .ui-accordion-header > a .field-content:before,
-#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header > a .field-content:before {
+#region-content .node-agenda .ui-accordion .ui-accordion-header .field-item:before,
+#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header > a .field-content:before,
+#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header .field-item:before {
   font-family: 'Rebild';
   content: attr(data-icon);
   speak: none;
@@ -1201,25 +1213,33 @@ Share nodes
   content: "\e00f";
   margin-right: 0.5em;
 }
-/* line 173, ../sass/partials/_nodes.scss */
+/* line 176, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active,
 #region-content .node-news-article .ui-accordion .ui-accordion-header.ui-state-active,
 #region-content .node-agenda .ui-accordion .ui-accordion-header.ui-state-active,
 #region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header.ui-state-active {
   background-color: #7f9dcd;
 }
-/* line 175, ../sass/partials/_nodes.scss */
+/* line 179, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active a,
+#region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active .field-item,
 #region-content .node-news-article .ui-accordion .ui-accordion-header.ui-state-active a,
+#region-content .node-news-article .ui-accordion .ui-accordion-header.ui-state-active .field-item,
 #region-content .node-agenda .ui-accordion .ui-accordion-header.ui-state-active a,
-#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header.ui-state-active a {
+#region-content .node-agenda .ui-accordion .ui-accordion-header.ui-state-active .field-item,
+#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header.ui-state-active a,
+#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header.ui-state-active .field-item {
   color: white;
 }
-/* line 178, ../sass/partials/_nodes.scss */
+/* line 183, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active a .field-content:before,
+#region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active .field-item:before,
 #region-content .node-news-article .ui-accordion .ui-accordion-header.ui-state-active a .field-content:before,
+#region-content .node-news-article .ui-accordion .ui-accordion-header.ui-state-active .field-item:before,
 #region-content .node-agenda .ui-accordion .ui-accordion-header.ui-state-active a .field-content:before,
-#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header.ui-state-active a .field-content:before {
+#region-content .node-agenda .ui-accordion .ui-accordion-header.ui-state-active .field-item:before,
+#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header.ui-state-active a .field-content:before,
+#region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header.ui-state-active .field-item:before {
   font-family: 'Rebild';
   content: attr(data-icon);
   speak: none;
@@ -1231,7 +1251,7 @@ Share nodes
   content: "\e010";
   margin-right: 0.5em;
 }
-/* line 184, ../sass/partials/_nodes.scss */
+/* line 189, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-content,
 #region-content .node-news-article .ui-accordion .ui-accordion-content,
 #region-content .node-agenda .ui-accordion .ui-accordion-content,
@@ -1244,21 +1264,21 @@ Share nodes
 	Borger dk
 -------------------------------------------------------------------*/
 /* Accordion */
-/* line 199, ../sass/partials/_nodes.scss */
+/* line 204, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .field.field-name-body {
   margin: 2em 0 2em 0;
 }
-/* line 202, ../sass/partials/_nodes.scss */
+/* line 207, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .field-name-field-os2web-borger-dk-header {
   margin-bottom: 20px;
   font-size: 1.33333em;
   line-height: 1.15em;
 }
-/* line 207, ../sass/partials/_nodes.scss */
+/* line 212, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle {
   position: relative;
 }
-/* line 209, ../sass/partials/_nodes.scss */
+/* line 214, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle h2.mArticle {
   background: #e6e6e6;
   color: #474747;
@@ -1274,7 +1294,7 @@ Share nodes
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 220, ../sass/partials/_nodes.scss */
+/* line 225, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle h2.mArticle:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1287,12 +1307,12 @@ Share nodes
   content: "\e00f";
   margin-right: 0.5em;
 }
-/* line 225, ../sass/partials/_nodes.scss */
+/* line 230, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle div.mArticle {
   padding: 10px 20px;
   margin: 0;
 }
-/* line 230, ../sass/partials/_nodes.scss */
+/* line 235, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article h2.mArticle.ui-state-active {
   background-color: #7f9dcd;
   color: #fff;
@@ -1301,38 +1321,38 @@ Share nodes
 /*------------------------------------------------------------------
 	Agendas
 -------------------------------------------------------------------*/
-/* line 244, ../sass/partials/_nodes.scss */
+/* line 249, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content {
   padding: 10px 20px 20px;
 }
-/* line 246, ../sass/partials/_nodes.scss */
+/* line 251, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content .views-label {
   font-weight: bold;
 }
-/* line 249, ../sass/partials/_nodes.scss */
+/* line 254, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content ul {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-/* line 252, ../sass/partials/_nodes.scss */
+/* line 257, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content ul li {
   margin: 0;
 }
-/* line 258, ../sass/partials/_nodes.scss */
+/* line 263, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .field-label {
   margin: 0;
 }
-/* line 261, ../sass/partials/_nodes.scss */
+/* line 266, ../sass/partials/_nodes.scss */
 #region-content .node-agenda table {
   max-width: 100%;
   border: 1px solid #474747;
 }
-/* line 265, ../sass/partials/_nodes.scss */
+/* line 270, ../sass/partials/_nodes.scss */
 #region-content .node-agenda table tr td {
   padding: 5px;
 }
 
-/* line 273, ../sass/partials/_nodes.scss */
+/* line 278, ../sass/partials/_nodes.scss */
 #region-content .node-offering .field-name-field-offering-link a {
   display: inline-block;
   color: white;
@@ -1352,7 +1372,7 @@ Share nodes
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 284, ../sass/partials/_nodes.scss */
+/* line 289, ../sass/partials/_nodes.scss */
 #region-content .node-offering .field-name-field-offering-link a:after {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1381,7 +1401,7 @@ Share nodes
 /*------------------------------------------------------------------
 	Calendar
 -------------------------------------------------------------------*/
-/* line 305, ../sass/partials/_nodes.scss */
+/* line 310, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info {
   padding: 10px;
   margin-bottom: 20px;
@@ -1392,40 +1412,40 @@ Share nodes
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 309, ../sass/partials/_nodes.scss */
+/* line 314, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .fieldset-legend {
   position: absolute;
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 15px;
 }
-/* line 315, ../sass/partials/_nodes.scss */
+/* line 320, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .fieldset-wrapper {
   margin-top: 40px;
 }
-/* line 318, ../sass/partials/_nodes.scss */
+/* line 323, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact {
   margin-bottom: 20px;
 }
-/* line 320, ../sass/partials/_nodes.scss */
+/* line 325, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact .fieldset-legend {
   position: relative;
   margin-top: 0;
   text-transform: none;
 }
-/* line 325, ../sass/partials/_nodes.scss */
+/* line 330, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact .fieldset-wrapper {
   margin-top: 0;
 }
-/* line 328, ../sass/partials/_nodes.scss */
+/* line 333, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact .field {
   margin-bottom: 0;
 }
-/* line 332, ../sass/partials/_nodes.scss */
+/* line 337, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact .field-name-field-calender-email a {
   color: #474747;
 }
-/* line 340, ../sass/partials/_nodes.scss */
+/* line 345, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .field-name-field-calendar-ticket-link a {
   background-image: url("../img/bestil_billet.png");
   background-repeat: no-repeat;
@@ -1438,7 +1458,7 @@ Share nodes
 /*------------------------------------------------------------------
 	Cloned page
 -------------------------------------------------------------------*/
-/* line 359, ../sass/partials/_nodes.scss */
+/* line 364, ../sass/partials/_nodes.scss */
 #region-content .field-name-field-cloned-page #region-content-sidebar ul {
   margin-left: 0;
 }
@@ -1446,7 +1466,7 @@ Share nodes
 /*------------------------------------------------------------------
 	Share node
 -------------------------------------------------------------------*/
-/* line 369, ../sass/partials/_nodes.scss */
+/* line 374, ../sass/partials/_nodes.scss */
 #region-content .node-share {
   background: #f6f6f6;
   border-radius: 0 0 3px 3px;
@@ -1456,23 +1476,23 @@ Share nodes
   padding-top: 5px;
   position: relative;
 }
-/* line 377, ../sass/partials/_nodes.scss */
+/* line 382, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper {
   padding: 5px 20px 5px 20px;
 }
-/* line 379, ../sass/partials/_nodes.scss */
+/* line 384, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .share_this {
   margin-bottom: 10px;
 }
-/* line 383, ../sass/partials/_nodes.scss */
+/* line 388, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .facebook-share #u_0_6 {
   display: none;
 }
-/* line 388, ../sass/partials/_nodes.scss */
+/* line 393, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .email-share .print_mail {
   margin-left: 0;
 }
-/* line 390, ../sass/partials/_nodes.scss */
+/* line 395, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .email-share .print_mail a {
   display: block;
   background: url("../img/send_email.png");
@@ -1481,19 +1501,19 @@ Share nodes
   height: 20px;
   text-indent: -999em;
 }
-/* line 400, ../sass/partials/_nodes.scss */
+/* line 405, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .to_the_top {
   position: absolute;
   top: 10px;
   right: 20px;
 }
-/* line 404, ../sass/partials/_nodes.scss */
+/* line 409, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .to_the_top .go-top {
   color: #6b6b6b;
   font-size: 0.8em;
   font-style: italic;
 }
-/* line 409, ../sass/partials/_nodes.scss */
+/* line 414, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .to_the_top .go-top:after {
   font-family: 'Rebild';
   content: attr(data-icon);
