@@ -59,6 +59,14 @@ $(function() {
 			console.log($header_1);
 		}
 	}
+	// Selfservice accordion - Alphabetical list level 1 + Embedded list level 1
+	$(".field-name-field-main-accordion").accordion({
+    header: ".field-name-field-accordion-title",
+    autoHeight: false,
+    collapsible: true,
+    active: false
+	});	
+	
 	
 	// Search block dropdown
 	$(".dropd-btn").click(function(e) {

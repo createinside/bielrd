@@ -117,23 +117,11 @@ Landingpage
 	#page {
 		.custom_block.social {
 			background-image: url('../img/social_ansvar.png');
-			background-repeat: no-repeat;
-			background-position: center top;
-			height: 255px;
-			h2 {
-				margin-bottom: 0;
-				margin-top: 190px;
-			}
+			padding-top: 215px;
 		}
 		.custom_block.frivillig {
 			background-image: url('../img/frivillig.png');
-			background-repeat: no-repeat;
-			background-position: center top;
-			height: 255px;
-			h2 {
-				margin-bottom: 0;
-				margin-top: 190px;
-			}
+			padding-top: 215px;
 		}
 		.custom_block.folkeskole {
 			background-image: url('../img/fremtidens_folkeskole.png');
@@ -145,15 +133,6 @@ Landingpage
 		}
 	}
 }
-.html {
-	#page {
-		.custom_block.politics {
-			p {
-				margin-bottom: 0px;
-			}
-		}
-	}	
-}   
 
 /* Calendar - sidebar */
 .view-id-calendar_sidebar {
