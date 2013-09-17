@@ -355,9 +355,6 @@
 /* 5 shortcuts - frontpage */
 #region-postscript-first {
 	.block-block {
-		.block-title {
-
-		}
 		.content {
 			ul {
 				margin-bottom: 0;
@@ -382,17 +379,27 @@
 }
 /* Custom blocks */
 .custom_block {
-    padding: $spacing-std;
-    color: white;
-    line-height: $line-height-std;
+  padding: $spacing-std;
+  color: white;
+  line-height: $line-height-std;
+  .content {
+    h2 {
+	    margin-bottom: 0.5em;
+			font-size: $font-size-large;
+			line-height: 1.25em;
+			font-weight: normal;
+    }
     a {
 	    text-decoration: none;
     }  
     a:hover {
 	    text-decoration: underline;
     }
+    *:last-child {
+	    margin-bottom: 0;
+    }
+	}
 }
-
 /* Custom blocks - book en politiker */
 .html {
 	#page {
@@ -402,8 +409,11 @@
 			background-position: right bottom;
 			background-repeat: no-repeat;
 			font-size: 1.25em;
+			h2 {
+				margin-bottom: 0;
+			}
 			p {
-				margin-bottom: 5px;
+				margin-bottom: 0.25em;
 			}
 			a {
 				color: #fff;
@@ -454,17 +464,11 @@
 	#page {
 		.custom_block.frivillig {
 			@include grid-box(#fff);
-			height: 280px;
 			color: $text-color;
 			background-image: url('../img/frivillig_high.jpg');
 			background-repeat: no-repeat;
 			background-position: center top;
-			h2 {
-				margin-top: 210px;
-				font-size: $font-size-large;
-				font-weight: normal;
-				margin-bottom: 10px;
-			}
+			padding-top: 220px;
 			a {
 				color: $text-color;
 			}
@@ -476,17 +480,11 @@
 	#page {
 		.custom_block.social {
 			@include grid-box(#fff);
-			height: 280px;
 			color: $text-color;
 			background-image: url('../img/social_high.jpg');
 			background-repeat: no-repeat;
 			background-position: center top;
-			h2 {
-				margin-top: 210px;
-				font-size: $font-size-large;
-				font-weight: normal;
-				margin-bottom: 10px;
-			}
+			padding-top: 220px;
 			a {
 				color: $text-color;
 			}
@@ -503,11 +501,6 @@
 			background-repeat: no-repeat;
 			background-position: center top;
 			padding-top: 220px;
-			h2 {
-				font-size: $font-size-large;
-				line-height: $line-height-std;
-				font-weight: normal;
-			}
 			a {
 				color: $text-color;
 			}
@@ -524,17 +517,13 @@
 			background-repeat: no-repeat;
 			background-position: center top;
 			padding-top: 220px;
-			h2 {
-				font-size: $font-size-large;
-				line-height: $line-height-std;
-				font-weight: normal;
-			}
 			a {
 				color: $text-color;
 			}
 		}
 	}
 }
+
 /* Calendar sidebar */
 #section-content {
 	.block-calendar-sidebar-block {
