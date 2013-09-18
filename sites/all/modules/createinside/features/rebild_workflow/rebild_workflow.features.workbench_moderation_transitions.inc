@@ -29,6 +29,10 @@ function rebild_workflow_workbench_moderation_export_transitions() {
       'from_name' => 'needs_review',
       'to_name' => 'revised',
     ),
+    'published:draft' => array(
+      'from_name' => 'published',
+      'to_name' => 'draft',
+    ),
     'published_needs_review:needs_review' => array(
       'from_name' => 'published_needs_review',
       'to_name' => 'needs_review',
