@@ -77,6 +77,22 @@ function edagsorden_importer_ctools_plugin_directory($owner, $plugin_type) {
 function edagsorden_importer_cron() {
 	edagsorden_importer_committees_import();
   watchdog('edagsorden_importer', t("Agendas have been imported on cron"));
+  
+	// Feeds Log
+  if ($importers = feeds_reschedule()) {
+    foreach ($importers as $id) {
+      feeds_importer($id)->schedule();
+      $rows = db_query("SELECT feed_nid FROM {feeds_source} WHERE id = :id", array(':id' => $id));
+      foreach ($rows as $row) {
+        feeds_source($id, $row->feed_nid)->schedule();
+      }
+    }
+    feeds_reschedule(FALSE);
+  }
+  // Expire old log entries.
+  db_delete('feeds_log')
+    ->condition('request_time', REQUEST_TIME - 86400, '<')
+    ->execute();
 }
 
 /**
