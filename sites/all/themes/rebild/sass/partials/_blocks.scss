@@ -269,7 +269,7 @@
 				font-size: 0.75em;
 				line-height: 1em;
 				padding: 0.40em 0.50em;
-				margin: 0 0 0 5px;
+				margin: 0 0 0 7px;
 				position: relative;
 				top: -1px;
 				@include border-radius(2px);
@@ -359,7 +359,7 @@
 			ul {
 				margin-bottom: 0;
 				li {
-					margin-bottom: 1.6em;
+					margin-bottom: 1.1em;
 					a {
 						color: white;
 						text-decoration: none;
@@ -372,6 +372,9 @@
 					@include icon-prepare();
 					content: "\f101";	
 					margin-right: 5px;
+				}
+				li:last-child {
+					margin-bottom: 0;
 				}
 			}
 		}
@@ -571,7 +574,8 @@
 		    text-decoration: underline;
 	    }
 			p.bottom-logo {
-				margin-bottom: $spacing-std/1.5;				
+				margin-bottom: $spacing-std/1.5;
+				margin-right: -11px;				
 				span.icon-bottom_logo {
 					font-size: 50px;
 				}
