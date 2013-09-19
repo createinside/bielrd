@@ -21,6 +21,7 @@ Sections
 Zones
 Menus
 Nodes
+Views
 
 -------------------------------------------------------------------*/
 
@@ -138,6 +139,10 @@ img {
 		@include grid-box(white);	
 	}
 }
+
+/*------------------------------------------------------------------
+	Views
+-------------------------------------------------------------------*/
 .page-borger,
 .page-erhverv,
 .page-politik,
@@ -149,4 +154,10 @@ img {
     @include box-shadow(none);
     @include border-radius(none);
   }
+}
+.page-politik-dagsordener-og-referater {
+  .block-system-main {
+		padding: $spacing-std;
+		@include grid-box(white);		
+	}
 }

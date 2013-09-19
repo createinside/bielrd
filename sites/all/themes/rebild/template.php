@@ -273,3 +273,26 @@ function rebild_preprocess_search_results(&$variables) {
   $variables['pager'] = theme('pager', array('tags' => NULL));
   $variables['theme_hook_suggestions'][] = 'search_results__' . $variables['module'];
 }
+
+function rebild_page_alter(&$page) {
+	
+	$node = menu_get_object();
+
+	// Breadcrumb: Agenda nodes
+	if($node->type=="agenda") {
+	
+		$committee = field_get_items('node', $node, 'field_agenda_committee');
+						
+		$breadcrumb = drupal_get_breadcrumb();
+		$breadcrumb[] = l('Politik', 'politik');
+		$breadcrumb[] = l('Dagsordener og referater', 'politik/dagsordener-og-referater');
+		$breadcrumb[] = l($committee[0]['taxonomy_term']->name, 'politik/dagsordener-og-referater/'.$committee[0]["tid"]);
+		drupal_set_breadcrumb($breadcrumb);
+	}
+	// Breadcrumb: Agenda views
+	else if(arg(1) == 'dagsordener-og-referater' && is_numeric(arg(2))) {
+		$breadcrumb = drupal_get_breadcrumb();
+		array_pop($breadcrumb);
+		drupal_set_breadcrumb($breadcrumb);
+	}
+}

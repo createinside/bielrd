@@ -278,16 +278,12 @@ function rebild_edagsorden_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'dagsordener/%';
+  $handler->display->display_options['path'] = 'politik/dagsordener-og-referater/%';
   $handler->display->display_options['menu']['title'] = 'Dagsordener';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'main-menu';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
-
-  /* Display: Side */
-  $handler = $view->new_display('page', 'Side', 'page_1');
-  $handler->display->display_options['path'] = 'dagsordener/%/%';
   $translatables['agenda_overview'] = array(
     t('Master'),
     t('Dagsordener'),
@@ -304,7 +300,6 @@ function rebild_edagsorden_views_default_views() {
     t('%1'),
     t('Vælg år:'),
     t('Page'),
-    t('Side'),
   );
   $export['agenda_overview'] = $view;
 

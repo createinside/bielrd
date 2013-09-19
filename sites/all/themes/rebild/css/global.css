@@ -3962,12 +3962,13 @@ Sections
 Zones
 Menus
 Nodes
+Views
 
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
 	General
 -------------------------------------------------------------------*/
-/* line 31, ../sass/global.scss */
+/* line 32, ../sass/global.scss */
 body {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 1200, color-stop(0%, #e8e8e8), color-stop(50%, #e8e8e8), color-stop(75%, #d4d4d4), color-stop(100%, #e8e8e8));
   background-image: -webkit-linear-gradient(#e8e8e8, #e8e8e8 600px, #d4d4d4 900px, #e8e8e8 1200px);
@@ -3980,19 +3981,19 @@ body {
   font-size: 12px;
 }
 
-/* line 39, ../sass/global.scss */
+/* line 40, ../sass/global.scss */
 #page header, #page section, #page footer {
   font-size: 12px;
 }
 
-/* line 43, ../sass/global.scss */
+/* line 44, ../sass/global.scss */
 img {
   max-width: 100%;
   height: auto;
 }
 
 /* Page titles */
-/* line 49, ../sass/global.scss */
+/* line 50, ../sass/global.scss */
 .front #page-title {
   font-size: 1.5em;
   font-weight: normal;
@@ -4001,7 +4002,7 @@ img {
   text-shadow: white 1px 1px 1px;
 }
 
-/* line 56, ../sass/global.scss */
+/* line 57, ../sass/global.scss */
 .not-front #page-title {
   font-size: 2.16667em;
   line-height: 1.25em;
@@ -4010,7 +4011,7 @@ img {
   text-shadow: white 1px 1px 1px;
 }
 
-/* line 63, ../sass/global.scss */
+/* line 64, ../sass/global.scss */
 #logo {
   display: none;
 }
@@ -4018,7 +4019,7 @@ img {
 /*------------------------------------------------------------------
 	Sections
 -------------------------------------------------------------------*/
-/* line 70, ../sass/global.scss */
+/* line 71, ../sass/global.scss */
 #section-content {
   padding: 20px 0 0;
   background: transparent url("../img/noise_bg_repeat.png") repeat;
@@ -4027,7 +4028,7 @@ img {
 /*------------------------------------------------------------------
 	Zones
 -------------------------------------------------------------------*/
-/* line 78, ../sass/global.scss */
+/* line 79, ../sass/global.scss */
 #zone-user-wrapper {
   background-color: white;
   position: relative;
@@ -4037,7 +4038,7 @@ img {
   box-shadow: rgba(0, 0, 0, 0.075) 0 10px 10px;
 }
 
-/* line 84, ../sass/global.scss */
+/* line 85, ../sass/global.scss */
 #zone-menu-wrapper {
   background-color: white;
   position: relative;
@@ -4047,24 +4048,24 @@ img {
   box-shadow: rgba(0, 0, 0, 0.075) 0 10px 10px;
 }
 
-/* line 90, ../sass/global.scss */
+/* line 91, ../sass/global.scss */
 #zone-header-wrapper {
   color: white;
   background: transparent url("../img/noise_bg_repeat.png") repeat;
 }
 
-/* line 94, ../sass/global.scss */
+/* line 95, ../sass/global.scss */
 #zone-preface-wrapper {
   display: none;
 }
 
-/* line 97, ../sass/global.scss */
+/* line 98, ../sass/global.scss */
 #zone-footer-wrapper {
   background-color: white;
   padding: 20px 0 20px;
 }
 
-/* line 101, ../sass/global.scss */
+/* line 102, ../sass/global.scss */
 #zone-bottom-wrapper {
   background-color: #6b6b6b;
 }
@@ -4072,17 +4073,17 @@ img {
 /*------------------------------------------------------------------
 	Regions
 -------------------------------------------------------------------*/
-/* line 109, ../sass/global.scss */
+/* line 110, ../sass/global.scss */
 #region-menu {
   position: relative;
 }
 
-/* line 112, ../sass/global.scss */
+/* line 113, ../sass/global.scss */
 #region-user-second {
   padding: 10px;
 }
 
-/* line 119, ../sass/global.scss */
+/* line 120, ../sass/global.scss */
 #region-footer-second,
 #region-footer-third,
 #region-footer-fourth,
@@ -4093,7 +4094,7 @@ img {
 /*------------------------------------------------------------------
 	Menus
 -------------------------------------------------------------------*/
-/* line 128, ../sass/global.scss */
+/* line 129, ../sass/global.scss */
 .ultimenu,
 #region-user-first {
   display: none;
@@ -4102,7 +4103,7 @@ img {
 /*------------------------------------------------------------------
 	Nodes
 -------------------------------------------------------------------*/
-/* line 136, ../sass/global.scss */
+/* line 137, ../sass/global.scss */
 .not-front .block-system-main {
   padding: 20px;
   background-color: white;
@@ -4116,7 +4117,10 @@ img {
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
 
-/* line 146, ../sass/global.scss */
+/*------------------------------------------------------------------
+	Views
+-------------------------------------------------------------------*/
+/* line 151, ../sass/global.scss */
 .page-borger .block-system-main,
 .page-erhverv .block-system-main,
 .page-politik .block-system-main,
@@ -4131,4 +4135,18 @@ img {
   -ms-border-radius: none;
   -o-border-radius: none;
   border-radius: none;
+}
+
+/* line 159, ../sass/global.scss */
+.page-politik-dagsordener-og-referater .block-system-main {
+  padding: 20px;
+  background-color: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
