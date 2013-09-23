@@ -117,7 +117,16 @@ function rebild_edagsorden_strongarm() {
           'weight' => '8',
         ),
         'title' => array(
+          'weight' => '1',
+        ),
+        'path' => array(
+          'weight' => '10',
+        ),
+        'rabbit_hole' => array(
           'weight' => '0',
+        ),
+        'redirect' => array(
+          'weight' => '9',
         ),
       ),
       'display' => array(
