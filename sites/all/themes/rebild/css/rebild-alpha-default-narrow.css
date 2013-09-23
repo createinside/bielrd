@@ -122,22 +122,18 @@ Landingpage
 }
 /* line 79, ../sass/rebild-alpha-default-narrow.scss */
 .front #region-postscript-first .block .content {
-  height: 190px;
+  height: 123px;
 }
 /* line 86, ../sass/rebild-alpha-default-narrow.scss */
 .front #region-postscript-second .block .content {
-  height: 190px;
-}
-/* line 89, ../sass/rebild-alpha-default-narrow.scss */
-.front #region-postscript-second .block .content .view-calendar-frontpage .calendar_right {
-  width: 120px;
+  height: 123px;
 }
 
 /*------------------------------------------------------------------
   Landingpage
 -------------------------------------------------------------------*/
 /* Aktuelt */
-/* line 105, ../sass/rebild-alpha-default-narrow.scss */
+/* line 104, ../sass/rebild-alpha-default-narrow.scss */
 .not-front .view-id-rebild_frontpage .views-row {
   height: 361px;
   width: 227px;
@@ -147,35 +143,35 @@ Landingpage
   Blocks
 -------------------------------------------------------------------*/
 /* Custom blocks - Frivillig */
-/* line 118, ../sass/rebild-alpha-default-narrow.scss */
+/* line 117, ../sass/rebild-alpha-default-narrow.scss */
 .html #page .custom_block.social {
   background-image: url("../img/social_ansvar.png");
   padding-top: 215px;
 }
-/* line 122, ../sass/rebild-alpha-default-narrow.scss */
+/* line 121, ../sass/rebild-alpha-default-narrow.scss */
 .html #page .custom_block.frivillig {
   background-image: url("../img/frivillig.png");
   padding-top: 215px;
 }
-/* line 126, ../sass/rebild-alpha-default-narrow.scss */
+/* line 125, ../sass/rebild-alpha-default-narrow.scss */
 .html #page .custom_block.folkeskole {
   background-image: url("../img/fremtidens_folkeskole.png");
   padding-top: 215px;
 }
-/* line 130, ../sass/rebild-alpha-default-narrow.scss */
+/* line 129, ../sass/rebild-alpha-default-narrow.scss */
 .html #page .custom_block.dagtilbud {
   background-image: url("../img/fremtidens_dagtilbud.png");
   padding-top: 215px;
 }
 
 /* Calendar - sidebar */
-/* line 141, ../sass/rebild-alpha-default-narrow.scss */
+/* line 140, ../sass/rebild-alpha-default-narrow.scss */
 .view-id-calendar_sidebar .view-content .rebild-calendar .calendar_right {
   max-width: 80px;
 }
 
 /* WCAG */
-/* line 149, ../sass/rebild-alpha-default-narrow.scss */
+/* line 148, ../sass/rebild-alpha-default-narrow.scss */
 .wcag-block {
   font-size: 11px;
   margin: 0 8px 0 0;
@@ -183,7 +179,7 @@ Landingpage
 }
 
 /* Search Autocomplete */
-/* line 157, ../sass/rebild-alpha-default-narrow.scss */
+/* line 156, ../sass/rebild-alpha-default-narrow.scss */
 .not-front .ac_results {
   margin-top: 11px;
   display: inherit;
@@ -194,13 +190,19 @@ Landingpage
 }
 
 /* Share buttons */
-/* line 170, ../sass/rebild-alpha-default-narrow.scss */
+/* line 169, ../sass/rebild-alpha-default-narrow.scss */
 #region-content .node-share .share_wrapper .twitter-share {
   width: 77px;
 }
-/* line 173, ../sass/rebild-alpha-default-narrow.scss */
+/* line 172, ../sass/rebild-alpha-default-narrow.scss */
 #region-content .node-share .share_wrapper .share_this {
   float: left;
   margin-right: 20px;
   margin-bottom: 8px;
+}
+
+/* 5 shortcuts - frontpage */
+/* line 186, ../sass/rebild-alpha-default-narrow.scss */
+#region-postscript-first .block-block .content ul li {
+  margin-bottom: 1.25em;
 }

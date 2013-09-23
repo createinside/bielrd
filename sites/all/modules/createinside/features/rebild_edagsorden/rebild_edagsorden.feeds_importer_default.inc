@@ -348,7 +348,7 @@ function rebild_edagsorden_feeds_importer_default() {
             'unique' => FALSE,
           ),
         ),
-        'update_existing' => '0',
+        'update_existing' => '2',
         'input_format' => 'full_html',
         'skip_hash_check' => 0,
         'bundle' => 'field_agenda_items',

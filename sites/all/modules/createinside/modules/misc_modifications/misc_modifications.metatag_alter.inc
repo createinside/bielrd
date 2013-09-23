@@ -33,9 +33,14 @@ function misc_modifications_entity_info_alter(&$info) {
 
 	// This array holds all the entitiy machince names where meta tags should be disabled
 	$entities = array("user", "file", "taxonomy_term");
-
+	$content_types = array("featured_article", "self_service", "simplenews");
+	
 	foreach($entities as $entity) {
 	  $info[$entity]['metatags'] = FALSE;
+	}
+	
+	foreach($content_types as $content_type) {
+		$info["node"]["bundles"][$content_type]["metatags"] = FALSE;
 	}
 }
 

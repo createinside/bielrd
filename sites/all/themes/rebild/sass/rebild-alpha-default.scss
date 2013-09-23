@@ -71,6 +71,9 @@ Nodes
 #zone-preface-wrapper {
 	display: block;
 }
+#zone-postscript-wrapper {
+	padding: $spacing-std 0 0 0;
+}
 #zone-footer-wrapper {
 	padding: $spacing-std/2 0;
 	#zone-footer {
@@ -268,13 +271,17 @@ Nodes
 	}
 }
 /* Calendar - frontpage */
+#block-views-calendar-frontpage-block {
+	.block-title {
+		margin-bottom: 0;
+	}
+}
 .view-id-calendar_frontpage {
 	.rebild-calendar {
 		float: left;
 		width: 50%;	
 		margin: 0;
 		.calendar_right {
-			width: 200px;
 		}	
 	}
 	.post1 , .post2 {

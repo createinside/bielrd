@@ -173,6 +173,16 @@ function rebild_workflow_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
+  // Exported permission: 'moderate content from published to draft'.
+  $permissions['moderate content from published to draft'] = array(
+    'name' => 'moderate content from published to draft',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'workbench_moderation',
+  );
+
   // Exported permission: 'moderate content from published_needs_review to needs_review'.
   $permissions['moderate content from published_needs_review to needs_review'] = array(
     'name' => 'moderate content from published_needs_review to needs_review',

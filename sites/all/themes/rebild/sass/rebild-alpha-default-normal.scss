@@ -75,17 +75,16 @@ Landingpage
 	#region-postscript-first {
 		.block {
 			.content {
-				height: 150px;
+				height: 123px;
 			}
 		}
 	}
 	#region-postscript-second {
 		.block {
 			.content {
-				height: 150px;
+				height: 123px;
 				.view-calendar-frontpage {
 					.calendar_right {
-						width: 200px;
 					}
 				}
 			}
@@ -143,6 +142,19 @@ Landingpage
 			.share_this {
 				margin-right: 15px;
 				margin-bottom: 2px;
+			}
+		}
+	}
+}
+
+/* 5 shortcuts - frontpage */
+#region-postscript-first {
+	.block-block {
+		.content {
+			ul {
+				li {
+					margin-bottom: 1.1em;
+				}
 			}
 		}
 	}

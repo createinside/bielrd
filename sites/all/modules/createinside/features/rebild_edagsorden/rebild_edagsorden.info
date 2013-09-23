@@ -119,3 +119,5 @@ features[views_view][] = agenda_accordion
 features[views_view][] = agenda_overview
 features_exclude[dependencies][field_collection_fieldset] = field_collection_fieldset
 features_exclude[field][taxonomy_term-edagsorden_committees-field_edagsorden_com_id] = taxonomy_term-edagsorden_committees-field_edagsorden_com_id
+features_exclude[field_base][field_agenda_root_id] = field_agenda_root_id
+features_exclude[field_instance][node-agenda-field_agenda_root_id] = node-agenda-field_agenda_root_id

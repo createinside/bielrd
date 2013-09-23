@@ -57,10 +57,16 @@ function rebild_layout_views_default_views() {
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '[title]';
   $handler->display->display_options['fields']['nothing']['alter']['trim_whitespace'] = TRUE;
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Sorteringskriterie: Indholdsstatistik: Visninger i dag */
+  $handler->display->display_options['sorts']['daycount']['id'] = 'daycount';
+  $handler->display->display_options['sorts']['daycount']['table'] = 'node_counter';
+  $handler->display->display_options['sorts']['daycount']['field'] = 'daycount';
+  $handler->display->display_options['sorts']['daycount']['order'] = 'DESC';
   /* Sorteringskriterie: Indholdsstatistik: Totale visninger */
   $handler->display->display_options['sorts']['totalcount']['id'] = 'totalcount';
   $handler->display->display_options['sorts']['totalcount']['table'] = 'node_counter';
   $handler->display->display_options['sorts']['totalcount']['field'] = 'totalcount';
+  $handler->display->display_options['sorts']['totalcount']['order'] = 'DESC';
   /* Filterkriterie: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -76,12 +82,12 @@ function rebild_layout_views_default_views() {
     'os2web_borger_dk_article' => 'os2web_borger_dk_article',
     'page' => 'page',
   );
-  /* Filterkriterie: Indhold: Overskrift */
-  $handler->display->display_options['filters']['title']['id'] = 'title';
-  $handler->display->display_options['filters']['title']['table'] = 'node';
-  $handler->display->display_options['filters']['title']['field'] = 'title';
-  $handler->display->display_options['filters']['title']['operator'] = 'not';
-  $handler->display->display_options['filters']['title']['value'] = '404 - siden findes ikke';
+  /* Filterkriterie: Indhold: Nid */
+  $handler->display->display_options['filters']['nid']['id'] = 'nid';
+  $handler->display->display_options['filters']['nid']['table'] = 'node';
+  $handler->display->display_options['filters']['nid']['field'] = 'nid';
+  $handler->display->display_options['filters']['nid']['operator'] = '!=';
+  $handler->display->display_options['filters']['nid']['value']['value'] = '543';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');

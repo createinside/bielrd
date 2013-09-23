@@ -125,22 +125,18 @@ Landingpage
 }
 /* line 77, ../sass/rebild-alpha-default-normal.scss */
 .front #region-postscript-first .block .content {
-  height: 150px;
+  height: 123px;
 }
 /* line 84, ../sass/rebild-alpha-default-normal.scss */
 .front #region-postscript-second .block .content {
-  height: 150px;
-}
-/* line 87, ../sass/rebild-alpha-default-normal.scss */
-.front #region-postscript-second .block .content .view-calendar-frontpage .calendar_right {
-  width: 200px;
+  height: 123px;
 }
 
 /*------------------------------------------------------------------
   Landingpage
 -------------------------------------------------------------------*/
 /* Aktuelt */
-/* line 103, ../sass/rebild-alpha-default-normal.scss */
+/* line 102, ../sass/rebild-alpha-default-normal.scss */
 .not-front .view-id-rebild_frontpage .views-row {
   height: 361px;
   width: 310px;
@@ -150,13 +146,13 @@ Landingpage
   Blocks
 -------------------------------------------------------------------*/
 /* Calendar - sidebar */
-/* line 117, ../sass/rebild-alpha-default-normal.scss */
+/* line 116, ../sass/rebild-alpha-default-normal.scss */
 .view-id-calendar_sidebar .view-content .rebild-calendar .calendar_right {
   max-width: 160px;
 }
 
 /* WCAG */
-/* line 125, ../sass/rebild-alpha-default-normal.scss */
+/* line 124, ../sass/rebild-alpha-default-normal.scss */
 .wcag-block {
   font-size: 1em;
   margin: 0 10px 0 0;
@@ -164,15 +160,21 @@ Landingpage
 }
 
 /* Search Autocomplete */
-/* line 133, ../sass/rebild-alpha-default-normal.scss */
+/* line 132, ../sass/rebild-alpha-default-normal.scss */
 .not-front .ac_results {
   display: inherit;
   width: 464px !important;
 }
 
 /* Share buttons */
-/* line 143, ../sass/rebild-alpha-default-normal.scss */
+/* line 142, ../sass/rebild-alpha-default-normal.scss */
 #region-content .node-share .share_wrapper .share_this {
   margin-right: 15px;
   margin-bottom: 2px;
+}
+
+/* 5 shortcuts - frontpage */
+/* line 155, ../sass/rebild-alpha-default-normal.scss */
+#region-postscript-first .block-block .content ul li {
+  margin-bottom: 1.1em;
 }
