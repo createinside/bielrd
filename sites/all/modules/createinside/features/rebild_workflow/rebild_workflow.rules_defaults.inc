@@ -66,7 +66,7 @@ function rebild_workflow_default_rules_configuration() {
             "language" : [ "" ]
           }
         },
-        { "data_set" : { "data" : [ "node:field-main-outdated" ], "value" : "+6 months" } }
+        { "data_set" : { "data" : [ "node:field-main-outdated" ], "value" : "+3 months" } }
       ]
     }
   }');

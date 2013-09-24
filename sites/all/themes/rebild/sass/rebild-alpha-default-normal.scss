@@ -120,6 +120,16 @@ Landingpage
 	}
 }
 
+/* Calendar - frontpage */
+.view-id-calendar_frontpage {
+	.rebild-calendar {
+		.calendar_right {
+			width: auto;
+			float: none;
+		}
+	}
+}
+
 /* WCAG */
 .wcag-block {
 	font-size: $font-size-std;

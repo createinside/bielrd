@@ -9,6 +9,9 @@
 define('FEEDS_SKIP_EXISTING', 0);
 define('FEEDS_REPLACE_EXISTING', 1);
 define('FEEDS_UPDATE_EXISTING', 2);
+// Options for handling content in Drupal but not in source data.
+define('FEEDS_SKIP_NON_EXISTENT', 'skip');
+define('FEEDS_DELETE_NON_EXISTENT', 'delete');
 
 // Default limit for creating items on a page load, not respected by all
 // processors.
@@ -176,11 +179,18 @@ abstract class FeedsProcessor extends FeedsPlugin {
    */
   public function process(FeedsSource $source, FeedsParserResult $parser_result) {
     $state = $source->state(FEEDS_PROCESS);
+    if (!isset($state->removeList) && $parser_result->items) {
+      $this->initEntitiesToBeRemoved($source, $state);
+    }
 
     while ($item = $parser_result->shiftItem()) {
 
       // Check if this item already exists.
       $entity_id = $this->existingEntityId($source, $parser_result);
+      // If it's included in the feed, it must not be removed on clean.
+      if ($entity_id) {
+        unset($state->removeList[$entity_id]);
+      }
       $skip_existing = $this->config['update_existing'] == FEEDS_SKIP_EXISTING;
 
       module_invoke_all('feeds_before_update', $source, $item, $entity_id);
@@ -264,6 +274,9 @@ abstract class FeedsProcessor extends FeedsPlugin {
     if ($source->progressImporting() != FEEDS_BATCH_COMPLETE) {
       return;
     }
+    // Remove not included items if needed.
+    // What actually happens to removed items depends on clean function.
+    $this->clean($state);
     $info = $this->entityInfo();
     $tokens = array(
       '@entity' => strtolower($info['label']),
@@ -290,6 +303,16 @@ abstract class FeedsProcessor extends FeedsPlugin {
         ),
       );
     }
+    if ($state->deleted) {
+      $messages[] = array(
+       'message' => format_plural(
+          $state->deleted,
+          'Removed @number @entity.',
+          'Removed @number @entities.',
+          array('@number' => $state->deleted) + $tokens
+        ),
+      );
+    }
     if ($state->failed) {
       $messages[] = array(
        'message' => format_plural(
@@ -309,6 +332,59 @@ abstract class FeedsProcessor extends FeedsPlugin {
     foreach ($messages as $message) {
       drupal_set_message($message['message']);
       $source->log('import', $message['message'], array(), isset($message['level']) ? $message['level'] : WATCHDOG_INFO);
+    }
+  }
+
+  /**
+   * Initialize the array of entities to remove with all existing entities
+   * previously imported from the source.
+   *
+   * @param FeedsSource $source
+   *   Source information about this import.
+   * @param FeedsState $state
+   */
+  protected function initEntitiesToBeRemoved(FeedsSource $source, FeedsState $state) {
+    $state->removeList = array();
+    // We fill it only if needed.
+    if (!isset($this->config['update_non_existent']) || $this->config['update_non_existent'] == FEEDS_SKIP_NON_EXISTENT) {
+      return;
+    }
+    // Build base select statement.
+    $info = $this->entityInfo();
+    $select = db_select($info['base table'], 'e');
+    $select->addField('e', $info['entity keys']['id'], 'entity_id');
+    $select->join(
+      'feeds_item',
+      'fi',
+      "e.{$info['entity keys']['id']} = fi.entity_id AND fi.entity_type = '{$this->entityType()}'");
+    $select->condition('fi.id', $this->id);
+    $select->condition('fi.feed_nid', $source->feed_nid);
+    $entities = $select->execute();
+    // If not found on process, existing entities will be deleted.
+    foreach ($entities as $entity) {
+      // Obviously, items which are still included in the source feed will be
+      // removed from this array when processed.
+      $state->removeList[$entity->entity_id] = $entity->entity_id;
+    }
+  }
+
+  /**
+   * Deletes entities which were not found on process.
+   *
+   * @todo batch delete?
+   *
+   * @param FeedsState $state
+   */
+  protected function clean(FeedsState $state) {
+    // We clean only if needed.
+    if (!isset($this->config['update_non_existent']) || $this->config['update_non_existent'] == FEEDS_SKIP_NON_EXISTENT) {
+      return;
+    }
+
+    $total = count($state->removeList);
+    if ($total) {
+      $this->entityDeleteMultiple($state->removeList);
+      $state->deleted += $total;
     }
   }
 
@@ -538,6 +614,7 @@ abstract class FeedsProcessor extends FeedsPlugin {
       'input_format' => NULL,
       'skip_hash_check' => FALSE,
       'bundle' => $bundle,
+      'update_non_existent' => FEEDS_SKIP_NON_EXISTENT,
     );
   }
 
@@ -596,6 +673,17 @@ abstract class FeedsProcessor extends FeedsPlugin {
       '#options' => $format_options,
       '#default_value' => isset($this->config['input_format']) ? $this->config['input_format'] : 'plain_text',
       '#required' => TRUE,
+    );
+
+    $form['update_non_existent'] = array(
+      '#type' => 'radios',
+      '#title' => t('Update entities missing in the feed'),
+      '#description' => t('Select how entities missing in the feed should be updated.'),
+      '#options' => array(
+        FEEDS_SKIP_NON_EXISTENT => 'Skip non existent entities',
+        FEEDS_DELETE_NON_EXISTENT => 'Delete non existent entities',
+      ),
+      '#default_value' => $this->config['update_non_existent'],
     );
 
     return $form;

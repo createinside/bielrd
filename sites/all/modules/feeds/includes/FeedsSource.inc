@@ -90,6 +90,11 @@ class FeedsState {
   public $failed;
 
   /**
+   * IDs of entities to be removed.
+   */
+   public $removeList;
+
+  /**
    * Constructor, initialize variables.
    */
   public function __construct() {

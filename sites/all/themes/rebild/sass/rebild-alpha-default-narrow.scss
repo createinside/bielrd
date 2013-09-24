@@ -85,10 +85,6 @@ Landingpage
 		.block {
 			.content {
 				height: 123px;
-				.view-calendar-frontpage {
-					.calendar_right {
-					}
-				}
 			}
 		}
 	}
@@ -140,6 +136,16 @@ Landingpage
 			.calendar_right {
 				max-width: 80px;
 			}
+		}
+	}
+}
+
+/* Calendar - frontpage */
+.view-id-calendar_frontpage {
+	.rebild-calendar {
+		.calendar_right {
+			width: 137px;
+			float: left;
 		}
 	}
 }

@@ -557,6 +557,11 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'self_service' => 'self_service',
   );
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
 
   /* Display: Emner */
   $handler = $view->new_display('page', 'Emner', 'emner');
@@ -689,6 +694,12 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['filters']['field_main_selfservice_target_id']['table'] = 'field_data_field_main_selfservice';
   $handler->display->display_options['filters']['field_main_selfservice_target_id']['field'] = 'field_main_selfservice_target_id';
   $handler->display->display_options['filters']['field_main_selfservice_target_id']['operator'] = 'not empty';
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['relationship'] = 'field_main_selfservice_target_id';
+  $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['entity_type'] = 'node';
   $handler->display->display_options['bundles'] = array(
     0 => 'page',

@@ -118,6 +118,7 @@ function edagsorden_importer_committees_import() {
 	 * Initiate feeds committee importer
 	 */
 	 
+	/* Start admin state */
   global $user;
   $original_user = $user;
   $old_state = drupal_save_session(FALSE);
@@ -129,7 +130,7 @@ function edagsorden_importer_committees_import() {
 	$feedSource = feeds_source($importer_id);
 	$config = $feedSource->getConfig();
 	$config['FeedsHTTPFetcher']['source'] = $committee_source;
-	
+		
 	$feedSource->setConfig($config);
 	$feedSource->save();
 	$feedSource->import();
@@ -155,7 +156,19 @@ function edagsorden_importer_committees_import() {
 			$agenda_source = variable_get('edagsorden_root_url', '')."/committee_".$com_id."/agenda_".$agenda_id."/agenda_".$agenda_id.".xml";
 			
 			$importer_id = 'edagsorden_agenda_importer';
-			$feedSource = feeds_source($importer_id);
+			$feedSource = feeds_source($importer_id, $agenda_id);
+			$config = $feedSource->getConfig();
+			$config['FeedsHTTPFetcher']['source'] = $agenda_source;	
+					
+			$feedSource->setConfig($config);
+			$feedSource->save();
+			$feedSource->import();
+						
+			/**
+			 *	Initiate feeds item importer 	
+			 */
+			$importer_id = 'edagsorden_item_importer';
+			$feedSource = feeds_source($importer_id, $agenda_id);
 			$config = $feedSource->getConfig();
 			$config['FeedsHTTPFetcher']['source'] = $agenda_source;	
 					
@@ -163,20 +176,26 @@ function edagsorden_importer_committees_import() {
 			$feedSource->save();
 			$feedSource->import();
 			
-			/**
-			 * Initiate feeds items importer 	
-			 */
-			$importer_id = 'edagsorden_item_importer';
-			$feedSource = feeds_source($importer_id);
-			$config = $feedSource->getConfig();
-			$config['FeedsHTTPFetcher']['source'] = $agenda_source;	
-					
-			$feedSource->setConfig($config);
-			$feedSource->save();
-			$feedSource->import();
+			// Save Agenda Ids
+			$agenda_ids[] = $agenda_id;
 		}
 	}
 	
+	/* Delete expired agendas */
+	$query = new EntityFieldQuery();
+	$query
+	  ->entityCondition('entity_type', 'node')
+	  ->entityCondition('bundle', 'agenda')
+	  ->fieldCondition('field_agenda_id', 'value', $agenda_ids, 'NOT IN');
+	$result = $query->execute();
+	
+	if (isset($result['node'])) {
+		$nids = array_keys($result['node']);
+		node_delete_multiple($nids);
+		drupal_wathcdog("edagsorden_importer", "Deleted ".count($nids)." expired agendas");
+	}
+	
+	/* End admin state */
 	$user = $original_user;
   drupal_save_session($old_state);		
 }

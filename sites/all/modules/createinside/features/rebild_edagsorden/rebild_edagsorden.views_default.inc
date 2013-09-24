@@ -83,6 +83,10 @@ function rebild_edagsorden_views_default_views() {
   $handler->display->display_options['fields']['field_agenda_item_docs']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_agenda_item_docs']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_agenda_item_docs']['multi_type'] = 'ul';
+  /* Sorteringskriterie: Field collection item: Nummer (field_agenda_item_number) */
+  $handler->display->display_options['sorts']['field_agenda_item_number_value']['id'] = 'field_agenda_item_number_value';
+  $handler->display->display_options['sorts']['field_agenda_item_number_value']['table'] = 'field_data_field_agenda_item_number';
+  $handler->display->display_options['sorts']['field_agenda_item_number_value']['field'] = 'field_agenda_item_number_value';
   /* Kontekstuelt filter: Indhold: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
@@ -220,7 +224,6 @@ function rebild_edagsorden_views_default_views() {
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
-  $handler->display->display_options['sorts']['title']['order'] = 'DESC';
   /* Kontekstuelt filter: Indhold: Udvalg (field_agenda_committee) */
   $handler->display->display_options['arguments']['field_agenda_committee_tid']['id'] = 'field_agenda_committee_tid';
   $handler->display->display_options['arguments']['field_agenda_committee_tid']['table'] = 'field_data_field_agenda_committee';

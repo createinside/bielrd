@@ -202,6 +202,7 @@ function rebild_workflow_views_default_views() {
   $handler->display->display_options['filters']['field_main_outdated_value_1']['table'] = 'field_data_field_main_outdated';
   $handler->display->display_options['filters']['field_main_outdated_value_1']['field'] = 'field_main_outdated_value';
   $handler->display->display_options['filters']['field_main_outdated_value_1']['operator'] = '<=';
+  $handler->display->display_options['filters']['field_main_outdated_value_1']['default_date'] = 'now';
   $translatables['outdated_content'] = array(
     t('Master'),
     t('mere'),
