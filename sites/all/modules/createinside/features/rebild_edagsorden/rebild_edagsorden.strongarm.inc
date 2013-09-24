@@ -70,7 +70,7 @@ function rebild_edagsorden_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'edagsorden_root_url';
-  $strongarm->value = 'http://dagsorden.rebild.dk/temp';
+  $strongarm->value = 'http://dagsorden.rebild.dk';
   $export['edagsorden_root_url'] = $strongarm;
 
   $strongarm = new stdClass();
