@@ -192,7 +192,7 @@ function edagsorden_importer_committees_import() {
 	if (isset($result['node'])) {
 		$nids = array_keys($result['node']);
 		node_delete_multiple($nids);
-		drupal_wathcdog("edagsorden_importer", "Deleted ".count($nids)." expired agendas");
+		watchdog("edagsorden_importer", "Deleted ".count($nids)." expired agendas");
 	}
 	
 	/* End admin state */
