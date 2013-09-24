@@ -48,6 +48,10 @@ function edagsorden_importer_img_parser_callback($result, $item_key, $element_ke
 				}
 			}
 		}
+		
+		// Remove empty <p> tags
+		$output = preg_replace("#<p>(\s|&nbsp;|</?\s?br\s?/?>)*</?p>#", "", $output);
+		
 		$field[$j] = "<strong>".$result->items[$item_key]["xpathparser:11"][$j]."</strong><br />".$output;
 		$j++;
 	}

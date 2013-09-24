@@ -21,7 +21,12 @@ function edagsorden_importer_type_decider_callback($result, $item_key, $element_
 
 	foreach($captions as $caption) {
 		if(stripos($caption, "beslutning")!==false) {
-			$field = "Referat";
+			if($field=="Tillægsdagsorden") {
+				$field = "Tillægsreferat";
+			}
+			else {
+				$field = "Referat";
+			}
 			break;
 		}
 	}
