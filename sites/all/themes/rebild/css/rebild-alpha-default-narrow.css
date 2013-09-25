@@ -163,22 +163,27 @@ Landingpage
   background-image: url("../img/fremtidens_dagtilbud.png");
   padding-top: 215px;
 }
+/* line 129, ../sass/rebild-alpha-default-narrow.scss */
+.html #page .custom_block.skolereform {
+  background-image: url("../img/skolereform.png");
+  padding-top: 215px;
+}
 
 /* Calendar - sidebar */
-/* line 136, ../sass/rebild-alpha-default-narrow.scss */
+/* line 140, ../sass/rebild-alpha-default-narrow.scss */
 .view-id-calendar_sidebar .view-content .rebild-calendar .calendar_right {
   max-width: 80px;
 }
 
 /* Calendar - frontpage */
-/* line 146, ../sass/rebild-alpha-default-narrow.scss */
+/* line 150, ../sass/rebild-alpha-default-narrow.scss */
 .view-id-calendar_frontpage .rebild-calendar .calendar_right {
   width: 137px;
   float: left;
 }
 
 /* WCAG */
-/* line 154, ../sass/rebild-alpha-default-narrow.scss */
+/* line 158, ../sass/rebild-alpha-default-narrow.scss */
 .wcag-block {
   font-size: 11px;
   margin: 0 8px 0 0;
@@ -186,7 +191,7 @@ Landingpage
 }
 
 /* Search Autocomplete */
-/* line 162, ../sass/rebild-alpha-default-narrow.scss */
+/* line 166, ../sass/rebild-alpha-default-narrow.scss */
 .not-front .ac_results {
   margin-top: 11px;
   display: inherit;
@@ -197,11 +202,11 @@ Landingpage
 }
 
 /* Share buttons */
-/* line 175, ../sass/rebild-alpha-default-narrow.scss */
+/* line 179, ../sass/rebild-alpha-default-narrow.scss */
 #region-content .node-share .share_wrapper .twitter-share {
   width: 77px;
 }
-/* line 178, ../sass/rebild-alpha-default-narrow.scss */
+/* line 182, ../sass/rebild-alpha-default-narrow.scss */
 #region-content .node-share .share_wrapper .share_this {
   float: left;
   margin-right: 20px;
@@ -209,7 +214,7 @@ Landingpage
 }
 
 /* 5 shortcuts - frontpage */
-/* line 192, ../sass/rebild-alpha-default-narrow.scss */
+/* line 196, ../sass/rebild-alpha-default-narrow.scss */
 #region-postscript-first .block-block .content ul li {
   margin-bottom: 1.25em;
 }

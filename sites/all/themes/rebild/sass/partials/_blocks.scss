@@ -392,6 +392,9 @@
 			line-height: 1.25em;
 			font-weight: normal;
     }
+    p {
+			line-height: 1.25em;
+    }
     a {
 	    text-decoration: none;
     }  
@@ -519,6 +522,22 @@
 			background-image: url('../img/fremtidens_dagtilbud_high.png');
 			background-repeat: no-repeat;
 			background-position: center top;
+			padding-top: 220px;
+			a {
+				color: $text-color;
+			}
+		}
+	}
+}
+/* Custom blocks - Skolereform */
+.html {
+	#page {
+		.custom_block.skolereform {
+			@include grid-box(#fff);
+			color: $text-color;
+			background-image: url('../img/skolereform_high.png');
+			background-repeat: no-repeat;
+			background-position: right top;
 			padding-top: 220px;
 			a {
 				color: $text-color;
