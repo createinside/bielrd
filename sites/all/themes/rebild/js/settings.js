@@ -5,8 +5,16 @@ $(function() {
 	// Custom select boxes init
 	$("select").customSelect();
 	
-	// Swipebox init
-	$(".swipebox").swipebox();
+	// Search block dropdown
+	$(".dropd-btn").click(function(e) {
+		e.preventDefault();
+		$("#search-dropd-wrapper").toggle();
+		$("#search-dropd-wrapper input[type=text]").focus();
+	});
+	
+	/**
+	 * ACCORDIONS
+	 */
 	
 	// Borger DK accordions
 	$(".field-name-body").accordion({
@@ -15,6 +23,15 @@ $(function() {
     collapsible: true,
     active: false
 	});
+	
+	// Agenda accordion
+	$(".view-agenda-accordion .views-row").accordion({
+    header: ".views-field-field-agenda-item-caption",
+    autoHeight: false,
+    collapsible: true,
+    active: false
+	});
+	console.log("test");
 	// Selfservice accordion - Topic list level 1
 	$(".view-selfservice-items.view-display-id-emner").accordion({
     header: ".view-grouping-header",
@@ -67,18 +84,8 @@ $(function() {
     active: false
 	});	
 	
-	
-	// Search block dropdown
-	$(".dropd-btn").click(function(e) {
-		e.preventDefault();
-		$("#search-dropd-wrapper").toggle();
-		$("#search-dropd-wrapper input[type=text]").focus();
-	});
-/*
-	$("#search-dropd-wrapper input[type=text]").focusout(function(){
-		$("#search-dropd-wrapper").hide();
-	});
-*/
+	// Swipebox init
+	$(".swipebox").swipebox();
 	
 });
 
