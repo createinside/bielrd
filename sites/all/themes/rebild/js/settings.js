@@ -22,8 +22,7 @@ $(function() {
     autoHeight: false,
     collapsible: true,
     active: false
-	});
-	
+	});	
 	// Agenda accordion
 	$(".view-agenda-accordion .views-row").accordion({
     header: ".views-field-field-agenda-item-caption",
@@ -31,7 +30,6 @@ $(function() {
     collapsible: true,
     active: false
 	});
-	console.log("test");
 	// Selfservice accordion - Topic list level 1
 	$(".view-selfservice-items.view-display-id-emner").accordion({
     header: ".view-grouping-header",
@@ -85,8 +83,9 @@ $(function() {
 	});	
 	
 	// Swipebox init
-	$(".swipebox").swipebox();
-	
+	if($(".swipebox").length>0) {
+		$(".swipebox").swipebox();
+	}
 });
 
 

@@ -21,6 +21,11 @@
     <link href="/<?php print drupal_get_path("theme","rebild"); ?>/css/print.css" rel="stylesheet" type="text/css">
   </head>
   <body>
+  	<div class="print-wrapper no-print">
+	  	<form>
+				<input type="button" class="send-to-printer" value="Udskriv" onClick="window.print()" />
+			</form>
+  	</div>
     <?php if (!empty($print['message'])) {
       print '<div class="print-message">'. $print['message'] .'</div><p />';
     } ?>
