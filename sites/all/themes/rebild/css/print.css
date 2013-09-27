@@ -2,6 +2,33 @@ body {
 	font-family: "Verdana", "Arial", sans-serif;
 	font-size: 12px;
 }
+.share_wrapper {
+	display: none;
+}
+div.print-logo {
+	margin-bottom: 20px;
+}
+.print-wrapper {
+	background: #EEEEEE;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+.send-to-printer {
+	background: #7F9DCD;
+	color: white;
+	border: 1px solid #7F9DCD;
+	text-transform: uppercase;
+	font-family: "Verdana", "Arial", sans-serif;
+	font-size: 12px;
+	line-height: 1em;
+	margin: 0; 
+	padding: 0 1em;
+	height: 3em;
+	cursor: pointer;
+	-webkit-appearance: none;
+	-moz-appearance:    none;
+ 	appearance:         none;
+}
 
 /**
  * Agendas
@@ -15,4 +42,12 @@ body {
 	margin-bottom: 20px;
 	padding-bottom: 20px;
 	border-bottom: 1px solid #000;
+}
+
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
 }
