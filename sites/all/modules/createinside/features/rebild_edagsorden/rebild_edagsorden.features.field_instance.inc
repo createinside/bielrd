@@ -480,6 +480,46 @@ function rebild_edagsorden_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-agenda-field_agenda_root_id'
+  $field_instances['node-agenda-field_agenda_root_id'] = array(
+    'bundle' => 'agenda',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_agenda_root_id',
+    'label' => 'Rod Id',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-edagsorden_committees-field_edagsorden_com_id'
   $field_instances['taxonomy_term-edagsorden_committees-field_edagsorden_com_id'] = array(
     'bundle' => 'edagsorden_committees',
@@ -531,6 +571,7 @@ function rebild_edagsorden_field_default_field_instances() {
   t('Mødepunkter');
   t('Nummer');
   t('Original committee id from eDagsorden');
+  t('Rod Id');
   t('Sted');
   t('Titel');
   t('Udvalg');
