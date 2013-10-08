@@ -2153,9 +2153,9 @@ Share nodes
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   color: #474747;
-  background-image: url("../img/social_high.jpg");
+  background-image: url("../img/social_high.png");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: left top;
   padding-top: 220px;
 }
 /* line 494, ../sass/partials/_blocks.scss */
