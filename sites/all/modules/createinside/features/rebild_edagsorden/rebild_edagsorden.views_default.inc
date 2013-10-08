@@ -72,13 +72,25 @@ function rebild_edagsorden_views_default_views() {
   $handler->display->display_options['fields']['field_agenda_item_content']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_agenda_item_content']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_agenda_item_content']['separator'] = '';
+  /* Felt: Indhold: Rod Id */
+  $handler->display->display_options['fields']['field_agenda_root_id']['id'] = 'field_agenda_root_id';
+  $handler->display->display_options['fields']['field_agenda_root_id']['table'] = 'field_data_field_agenda_root_id';
+  $handler->display->display_options['fields']['field_agenda_root_id']['field'] = 'field_agenda_root_id';
+  $handler->display->display_options['fields']['field_agenda_root_id']['relationship'] = 'field_agenda_items_node';
+  $handler->display->display_options['fields']['field_agenda_root_id']['label'] = '';
+  $handler->display->display_options['fields']['field_agenda_root_id']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_agenda_root_id']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_agenda_root_id']['settings'] = array(
+    'thousand_separator' => '',
+    'prefix_suffix' => 0,
+  );
   /* Felt: Field collection item: Bilag */
   $handler->display->display_options['fields']['field_agenda_item_docs']['id'] = 'field_agenda_item_docs';
   $handler->display->display_options['fields']['field_agenda_item_docs']['table'] = 'field_data_field_agenda_item_docs';
   $handler->display->display_options['fields']['field_agenda_item_docs']['field'] = 'field_agenda_item_docs';
   $handler->display->display_options['fields']['field_agenda_item_docs']['label'] = '';
   $handler->display->display_options['fields']['field_agenda_item_docs']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_agenda_item_docs']['alter']['text'] = '[field_agenda_item_docs]</div>';
+  $handler->display->display_options['fields']['field_agenda_item_docs']['alter']['text'] = '<a href="http://dagsorden.rebild.dk/committee_[field_agenda_com_id]/agenda_[field_agenda_root_id]/documents/[field_agenda_item_docs-url]">[field_agenda_item_docs-title]</a>';
   $handler->display->display_options['fields']['field_agenda_item_docs']['element_label_type'] = 'strong';
   $handler->display->display_options['fields']['field_agenda_item_docs']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_agenda_item_docs']['empty'] = '<p><em>Ingen bilag</em></p>';
@@ -135,7 +147,7 @@ function rebild_edagsorden_views_default_views() {
     t('<strong class="field-item">[field_agenda_item_number]. [field_agenda_item_caption]</strong>'),
     t('[field_agenda_item_content]
 [field_agenda_item_docs]'),
-    t('[field_agenda_item_docs]</div>'),
+    t('<a href="http://dagsorden.rebild.dk/committee_[field_agenda_com_id]/agenda_[field_agenda_root_id]/documents/[field_agenda_item_docs-url]">[field_agenda_item_docs-title]</a>'),
     t('<p><em>Ingen bilag</em></p>'),
     t('[field_agenda_item_content]
 <strong class="views-label>Bilag:</strong>

@@ -154,7 +154,8 @@ function rebild_preprocess_node(&$variables) {
  */
 function rebild_preprocess_field(&$variables, $hook) {
 	$element = $variables['element'];
-	
+
+	// GIS KORT
   if ($element['#field_name'] == 'field_main_gis_map') {
 		// Hide GIS map on mobile devices
   	$browser = browscap_get_browser();
@@ -164,7 +165,7 @@ function rebild_preprocess_field(&$variables, $hook) {
   	else {
 	  	$variables["items"][0]["#markup"] = "<a href='".$variables["items"][0]["#markup"]."'>Se kort her</a>";	
   	}
-  }	
+  }
 }
 
 function rebild_picture($variables) {
