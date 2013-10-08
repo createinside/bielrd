@@ -30,7 +30,7 @@ function edagsorden_importer_img_parser_callback($result, $item_key, $element_ke
 	
 			$com_id = $result->items[$item_key]["xpathparser:9"];
 			$agenda_id = $result->items[$item_key]["xpathparser:5"];	
-			$img_url = variable_get('edagsorden_root_url', '')."/committee_".$com_id."/agenda_".$agenda_id."/resources/";	
+			$img_url = variable_get('edagsorden_root_url', '')."/committee_".$com_id."/agenda_[root_id]/resources/";	
 			if(is_string($result->items[$item_key]["xpathparser:10"])) {
 				foreach($images as $image) {
 				  $src = $image->getAttribute('src');

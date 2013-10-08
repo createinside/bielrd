@@ -144,7 +144,7 @@ function edagsorden_importer_committees_import() {
 		$com_id 	= (integer)$committee->Id;
 		$com_name = (string)$committee->Name;
 
-		$agendas = $committee->xpath("Agendas/Agenda");
+		$agendas = $committee->xpath("Agendas/Agenda[DagsordenRodId!=0]");
 		
 		foreach($agendas as $agenda) {
 
@@ -152,8 +152,9 @@ function edagsorden_importer_committees_import() {
 			 *	Initiate feeds agenda importer	
 			 */
 			$agenda_id = (integer)$agenda->Id;
+			$root_id = (integer)$agenda->DagsordenRodId;
 
-			$agenda_source = variable_get('edagsorden_root_url', '')."/committee_".$com_id."/agenda_".$agenda_id."/agenda_".$agenda_id.".xml";
+			$agenda_source = variable_get('edagsorden_root_url', '')."/committee_".$com_id."/agenda_".$root_id."/agenda_".$root_id.".xml";
 			
 			$importer_id = 'edagsorden_agenda_importer';
 			$feedSource = feeds_source($importer_id, $agenda_id);

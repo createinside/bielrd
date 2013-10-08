@@ -38,6 +38,7 @@ function rebild_edagsorden_feeds_importer_default() {
           'xpathparser:5' => 'MeetingLocation',
           'xpathparser:6' => 'CommitteeName',
           'xpathparser:7' => 'Items/Item/Presentations/Presentation/PreparedCaption',
+          'xpathparser:8' => 'DagsordenRodId',
         ),
         'rawXML' => array(
           'xpathparser:0' => 0,
@@ -48,6 +49,7 @@ function rebild_edagsorden_feeds_importer_default() {
           'xpathparser:5' => 0,
           'xpathparser:6' => 0,
           'xpathparser:7' => 0,
+          'xpathparser:8' => 0,
         ),
         'context' => '//Agenda',
         'exp' => array(
@@ -62,6 +64,7 @@ function rebild_edagsorden_feeds_importer_default() {
             'xpathparser:5' => 0,
             'xpathparser:6' => 0,
             'xpathparser:7' => 0,
+            'xpathparser:8' => 0,
           ),
         ),
         'allow_override' => 1,
@@ -113,6 +116,11 @@ function rebild_edagsorden_feeds_importer_default() {
           7 => array(
             'source' => 'xpathparser:7',
             'target' => 'Temporary target 1',
+            'unique' => FALSE,
+          ),
+          8 => array(
+            'source' => 'xpathparser:8',
+            'target' => 'field_agenda_root_id',
             'unique' => FALSE,
           ),
         ),

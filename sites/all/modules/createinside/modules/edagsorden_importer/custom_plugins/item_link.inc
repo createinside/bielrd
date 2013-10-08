@@ -17,9 +17,8 @@ function edagsorden_importer_item_link_form($importer, $element_key, $settings) 
 
 function edagsorden_importer_item_link_callback($result, $item_key, $element_key, &$field, $settings) {
 						
-	// Get postal code
 	$com_id = $result->items[$item_key]["xpathparser:9"];
-	$agenda_id = $result->items[$item_key]["xpathparser:5"];
-	 
-	$field = variable_get('edagsorden_root_url', '')."/committee_".$com_id."/agenda_".$agenda_id."/documents/".$field.".pdf";
+	//$agenda_id = $result->items[$item_key]["xpathparser:5"];
+	 	
+	$field = variable_get('edagsorden_root_url', '')."/committee_".$com_id."/agenda_[root_id]/documents/".$field.".pdf";
 }
