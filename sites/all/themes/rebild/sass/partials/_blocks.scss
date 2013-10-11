@@ -574,6 +574,22 @@
 		}
 	}
 }
+/* Custom blocks - Fremtidens senior- og handicapservice */
+.html {
+	#page {
+		.custom_block.handicapservice {
+			@include grid-box(#fff);
+			color: $text-color;
+			background-image: url('../img/handicapservice_high.png');
+			background-repeat: no-repeat;
+			background-position: center top;
+			padding-top: 220px;
+			a {
+				color: $text-color;
+			}
+		}
+	}
+}
 
 /* Calendar sidebar */
 #section-content {
