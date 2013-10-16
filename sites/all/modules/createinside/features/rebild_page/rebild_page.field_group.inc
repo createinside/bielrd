@@ -127,6 +127,69 @@ function rebild_page_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_contact_hours|node|page|form';
+  $field_group->group_name = 'group_contact_hours';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_contact';
+  $field_group->data = array(
+    'label' => 'Åbnings- og telefontider',
+    'weight' => '28',
+    'children' => array(
+      0 => 'field_con_opening_hours',
+      1 => 'field_con_phone_hours',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Åbnings- og telefontider',
+      'instance_settings' => array(
+        'required_fields' => 0,
+        'classes' => '',
+        'description' => '',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_contact_hours|node|page|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_contact|node|page|form';
+  $field_group->group_name = 'group_contact';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_ho_tabs';
+  $field_group->data = array(
+    'label' => 'Kontakt',
+    'weight' => '20',
+    'children' => array(
+      0 => 'field_con_name',
+      1 => 'field_con_title',
+      2 => 'field_con_phone',
+      3 => 'field_con_email',
+      4 => 'field_con_link',
+      5 => 'field_con_center',
+      6 => 'field_con_address',
+      7 => 'group_contact_hours',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_contact|node|page|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_faktaboks|node|page|form';
   $field_group->group_name = 'group_faktaboks';
   $field_group->entity_type = 'node';
@@ -163,7 +226,7 @@ function rebild_page_field_group_info() {
   $field_group->parent_name = 'group_ho_tabs';
   $field_group->data = array(
     'label' => 'Forældelsesdato',
-    'weight' => '20',
+    'weight' => '21',
     'children' => array(
       0 => 'field_main_outdated',
     ),
@@ -191,7 +254,7 @@ function rebild_page_field_group_info() {
   $field_group->parent_name = 'group_ho_tabs';
   $field_group->data = array(
     'label' => 'GIS-kort',
-    'weight' => '21',
+    'weight' => '22',
     'children' => array(
       0 => 'field_main_gis_map',
     ),
@@ -229,6 +292,7 @@ function rebild_page_field_group_info() {
       5 => 'group_gis_kort',
       6 => 'group_oversigt',
       7 => 'group_selfservices',
+      8 => 'group_contact',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -251,7 +315,7 @@ function rebild_page_field_group_info() {
   $field_group->parent_name = 'group_ho_tabs';
   $field_group->data = array(
     'label' => 'Oversigt',
-    'weight' => '22',
+    'weight' => '23',
     'children' => array(
       0 => 'field_main_view',
       1 => 'field_main_block',
