@@ -119,6 +119,9 @@ function rebild_page_strongarm() {
         'redirect' => array(
           'weight' => '8',
         ),
+        'rabbit_hole' => array(
+          'weight' => '0',
+        ),
       ),
       'display' => array(
         'content_accordion_entity_view_1' => array(
@@ -135,7 +138,7 @@ function rebild_page_strongarm() {
         ),
         'selfservice_items_embedded' => array(
           'default' => array(
-            'weight' => '6',
+            'weight' => '5',
             'visible' => TRUE,
           ),
         ),
