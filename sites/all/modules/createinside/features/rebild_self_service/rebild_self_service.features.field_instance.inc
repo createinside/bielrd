@@ -269,7 +269,7 @@ function rebild_self_service_field_default_field_instances() {
   $field_instances['node-self_service-field_self_service_pdf'] = array(
     'bundle' => 'self_service',
     'deleted' => 0,
-    'description' => 'Upload en PDF fil til denne selvbetjeningsløsning.',
+    'description' => 'Upload en PDF eller tekstfil fil til denne selvbetjeningsløsning.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -287,12 +287,12 @@ function rebild_self_service_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_self_service_pdf',
-    'label' => 'PDF',
+    'label' => 'Fil',
     'required' => 1,
     'settings' => array(
       'description_field' => 1,
       'file_directory' => 'selfservice',
-      'file_extensions' => 'pdf',
+      'file_extensions' => 'pdf doc docx',
       'max_filesize' => '5 MB',
       'user_register_form' => FALSE,
     ),
@@ -304,6 +304,7 @@ function rebild_self_service_field_default_field_instances() {
           'public' => 'public',
         ),
         'allowed_types' => array(
+          0 => 0,
           'application' => 0,
           'audio' => 0,
           'document' => 0,
@@ -329,6 +330,7 @@ function rebild_self_service_field_default_field_instances() {
           'inline_bottom' => 0,
           'inline_top' => 0,
           'nyhed_forside' => 0,
+          'nyhed_oversigt' => 0,
         ),
         'manualcrop_styles_list' => array(
           'blok' => 0,
@@ -336,6 +338,7 @@ function rebild_self_service_field_default_field_instances() {
           'inline_bottom' => 0,
           'inline_top' => 0,
           'nyhed_forside' => 0,
+          'nyhed_oversigt' => 0,
         ),
         'manualcrop_styles_mode' => 'exclude',
         'manualcrop_thumblist' => 0,
@@ -387,16 +390,16 @@ function rebild_self_service_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Angiv en dato for hvornår dette indhold skal opdateres eller gennemses igen.');
   t('Brødtekst');
+  t('Fil');
   t('Forældelsesdato');
   t('Indtast en brødtekst for selvbetjeningsløsningen.');
   t('Indtast et link til en ekstern selvbetjeningsløsning.');
   t('Kategori');
   t('Link');
-  t('PDF');
   t('Sektion');
   t('Tags');
   t('Type');
-  t('Upload en PDF fil til denne selvbetjeningsløsning.');
+  t('Upload en PDF eller tekstfil fil til denne selvbetjeningsløsning.');
   t('Vælg en kategori til selvbetjeningsløsningen.');
   t('Vælg en type af selvbetjeningsløsning.');
   t('Vælg et eller flere tags der er med til at beskrive indholdet.');

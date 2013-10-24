@@ -530,7 +530,7 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['fields']['name']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['text'] = '<span class="kategori-[tid]">[name]</span>';
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
-  /* Felt: Indhold: PDF */
+  /* Felt: Indhold: Fil */
   $handler->display->display_options['fields']['field_self_service_pdf']['id'] = 'field_self_service_pdf';
   $handler->display->display_options['fields']['field_self_service_pdf']['table'] = 'field_data_field_self_service_pdf';
   $handler->display->display_options['fields']['field_self_service_pdf']['field'] = 'field_self_service_pdf';
@@ -665,7 +665,7 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['fields']['field_self_service_link']['label'] = '';
   $handler->display->display_options['fields']['field_self_service_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_self_service_link']['click_sort_column'] = 'url';
-  /* Felt: Indhold: PDF */
+  /* Felt: Indhold: Fil */
   $handler->display->display_options['fields']['field_self_service_pdf']['id'] = 'field_self_service_pdf';
   $handler->display->display_options['fields']['field_self_service_pdf']['table'] = 'field_data_field_self_service_pdf';
   $handler->display->display_options['fields']['field_self_service_pdf']['field'] = 'field_self_service_pdf';
