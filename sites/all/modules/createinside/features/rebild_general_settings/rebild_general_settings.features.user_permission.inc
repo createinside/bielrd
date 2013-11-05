@@ -22,5 +22,16 @@ function rebild_general_settings_user_default_permissions() {
     'module' => 'admin_menu',
   );
 
+  // Exported permission: 'access contextual links'.
+  $permissions['access contextual links'] = array(
+    'name' => 'access contextual links',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+      'konfigurator' => 'konfigurator',
+    ),
+    'module' => 'contextual',
+  );
+
   return $permissions;
 }
