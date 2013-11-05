@@ -91,9 +91,29 @@ function rebild_page_user_default_permissions() {
     'module' => 'field_permissions',
   );
 
+  // Exported permission: 'create field_con_opening_hours'.
+  $permissions['create field_con_opening_hours'] = array(
+    'name' => 'create field_con_opening_hours',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: 'create field_con_phone'.
   $permissions['create field_con_phone'] = array(
     'name' => 'create field_con_phone',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'create field_con_phone_hours'.
+  $permissions['create field_con_phone_hours'] = array(
+    'name' => 'create field_con_phone_hours',
     'roles' => array(
       'administrator' => 'administrator',
       'kommunikation' => 'kommunikation',
@@ -224,9 +244,29 @@ function rebild_page_user_default_permissions() {
     'module' => 'field_permissions',
   );
 
+  // Exported permission: 'edit field_con_opening_hours'.
+  $permissions['edit field_con_opening_hours'] = array(
+    'name' => 'edit field_con_opening_hours',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: 'edit field_con_phone'.
   $permissions['edit field_con_phone'] = array(
     'name' => 'edit field_con_phone',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'edit field_con_phone_hours'.
+  $permissions['edit field_con_phone_hours'] = array(
+    'name' => 'edit field_con_phone_hours',
     'roles' => array(
       'administrator' => 'administrator',
       'kommunikation' => 'kommunikation',
@@ -314,9 +354,29 @@ function rebild_page_user_default_permissions() {
     'module' => 'field_permissions',
   );
 
+  // Exported permission: 'edit own field_con_opening_hours'.
+  $permissions['edit own field_con_opening_hours'] = array(
+    'name' => 'edit own field_con_opening_hours',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: 'edit own field_con_phone'.
   $permissions['edit own field_con_phone'] = array(
     'name' => 'edit own field_con_phone',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'edit own field_con_phone_hours'.
+  $permissions['edit own field_con_phone_hours'] = array(
+    'name' => 'edit own field_con_phone_hours',
     'roles' => array(
       'administrator' => 'administrator',
       'kommunikation' => 'kommunikation',
@@ -432,9 +492,31 @@ function rebild_page_user_default_permissions() {
     'module' => 'field_permissions',
   );
 
+  // Exported permission: 'view field_con_opening_hours'.
+  $permissions['view field_con_opening_hours'] = array(
+    'name' => 'view field_con_opening_hours',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: 'view field_con_phone'.
   $permissions['view field_con_phone'] = array(
     'name' => 'view field_con_phone',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'view field_con_phone_hours'.
+  $permissions['view field_con_phone_hours'] = array(
+    'name' => 'view field_con_phone_hours',
     'roles' => array(
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
@@ -529,9 +611,29 @@ function rebild_page_user_default_permissions() {
     'module' => 'field_permissions',
   );
 
+  // Exported permission: 'view own field_con_opening_hours'.
+  $permissions['view own field_con_opening_hours'] = array(
+    'name' => 'view own field_con_opening_hours',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: 'view own field_con_phone'.
   $permissions['view own field_con_phone'] = array(
     'name' => 'view own field_con_phone',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'view own field_con_phone_hours'.
+  $permissions['view own field_con_phone_hours'] = array(
+    'name' => 'view own field_con_phone_hours',
     'roles' => array(
       'administrator' => 'administrator',
       'kommunikation' => 'kommunikation',
