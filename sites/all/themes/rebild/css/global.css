@@ -1533,6 +1533,24 @@ Share nodes
 }
 
 /*------------------------------------------------------------------
+	Kontakt sidebar
+-------------------------------------------------------------------*/
+/* line 434, ../sass/partials/_nodes.scss */
+#region-content-sidebar #kontaktlink {
+  background: #937ea7;
+  display: block;
+  height: 20px;
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-top: 5px;
+}
+/* line 443, ../sass/partials/_nodes.scss */
+#region-content-sidebar #kontaktdiv {
+  display: none;
+}
+
+/*------------------------------------------------------------------
 
 [BLOCKS]
 
