@@ -26,6 +26,16 @@ function misc_modifications_form_alter(&$form, &$form_state, $form_id) {
 		unset($form['replace_upload']);
 		unset($form['redirect']);
 	}
+	/* Ændringer ved bean oprettelse/edit */
+	if ($form_id == 'bean_form') {
+		$form['title']['#required'] = TRUE;
+		$form['title']['#description'] = 'Blokkens overskrift.';
+		unset($form['redirect']);
+		$form['field_billede']['#weight'] = 2;
+		$form['field_bean_short_text']['#weight'] = 2;
+		$form['field_bean_link']['#weight'] = 3;
+		$form['field_bean_intern_link']['#weight'] = 3;
+	}
 }
 
 

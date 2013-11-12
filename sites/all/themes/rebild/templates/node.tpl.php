@@ -1,4 +1,4 @@
-<?php dpm($content); ?>
+
 <article<?php print $attributes; ?>>
   <?php print $user_picture; ?>
   <?php if ($display_submitted): ?>

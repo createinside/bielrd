@@ -591,6 +591,50 @@
 	}
 }
 
+/* Bean - Høj format block */
+.html {
+	#page {
+		.bean-blok-hoej-format, .bean-blok-lav-format {
+			@include grid-box(#fff);
+			color: $text-color;
+			background-repeat: no-repeat;
+			background-position: center top;
+			img {
+				border-top-left-radius: 3px;
+				border-top-right-radius: 3px;
+			}
+			#bean-content {			
+				padding: 20px;
+				h2 {
+					font-size: $font-size-headline;
+					line-height: 1em;
+					font-weight: normal;
+					padding: 0 0 $spacing-std 0;
+					color: $text-color;
+					@include text-shadow(rgba(white, 1) 1px 1px 1px);
+					a {
+						text-decoration: none;
+						line-height: 1em;
+						font-weight: normal;
+						padding: 0 0 $spacing-std 0;
+						color: $text-color;
+						@include text-shadow(rgba(white, 1) 1px 1px 1px);
+					}
+				}
+			}
+		}
+		.bean-blok-lav-format {
+			img {
+				float: right;
+				border-radius: 3px;
+			}
+			#bean-content {
+				position: absolute;
+			}
+		}
+	}
+}
+
 /* Calendar sidebar */
 #section-content {
 	.block-calendar-sidebar-block {
