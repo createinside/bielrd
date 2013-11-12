@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Bean feature.
+ */
+
+include_once 'rebild_bean.features.inc';

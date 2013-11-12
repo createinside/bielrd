@@ -207,6 +207,35 @@ function rebild_general_settings_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'site_map_page_title';
+  $strongarm->value = 'Site map';
+  $export['site_map_page_title'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'site_map_show_front';
+  $strongarm->value = 1;
+  $export['site_map_show_front'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'site_map_show_menus';
+  $strongarm->value = array(
+    'main-menu' => 'main-menu',
+    'features' => 0,
+    'management' => 0,
+    'navigation' => 0,
+    'menu-secondary-menu' => 0,
+    'devel' => 0,
+    'user-menu' => 0,
+  );
+  $export['site_map_show_menus'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'site_name';
   $strongarm->value = 'Rebild Kommune';
   $export['site_name'] = $strongarm;
