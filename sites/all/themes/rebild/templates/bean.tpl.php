@@ -32,7 +32,7 @@
 	
   <div class="content"<?php print $content_attributes; ?>>
     <?php   if (isset($content['field_bean_link'][0]['#element']['url']) || isset($content['field_bean_intern_link'])) {?>
-    	<a href="<?php if (isset($content['field_bean_link'][0]['#element']['url'])) { print $content['field_bean_link'][0]['#element']['url']; } else if (isset($content['field_bean_intern_link'])) { print 'node/' . $content['field_bean_intern_link']['#items'][0]['target_id']; }   	 ?>">
+    	<a href="<?php if (isset($content['field_bean_link'][0]['#element']['url'])) { print $content['field_bean_link'][0]['#element']['url']; } else if (isset($content['field_bean_intern_link'])) { print '/node/' . $content['field_bean_intern_link']['#items'][0]['target_id']; }   	 ?>">
 	  <?php  print render($content['field_billede']); ?>
       </a> 
     <?php }
@@ -41,7 +41,7 @@
     } ?>
     	<?php if(isset($content['field_image'])) { print render($content['field_image']); } ?>
       
-      <div id="bean-content"><h2><?php if (isset($content['field_bean_link'][0]['#element']['url']) || isset($content['field_bean_intern_link'])) {?><a href="<?php if (isset($content['field_bean_link'][0]['#element']['url'])) { print $content['field_bean_link'][0]['#element']['url']; } else if (isset($content['field_bean_intern_link'])) { print 'node/' . $content['field_bean_intern_link']['#items'][0]['target_id']; }   	 ?>"> <?php print $title; ?> </a><?php } else {print $title; } ?></h2>
+      <div id="bean-content"><h2><?php if (isset($content['field_bean_link'][0]['#element']['url']) || isset($content['field_bean_intern_link'])) {?><a href="<?php if (isset($content['field_bean_link'][0]['#element']['url'])) { print $content['field_bean_link'][0]['#element']['url']; } else if (isset($content['field_bean_intern_link'])) { print '/node/' . $content['field_bean_intern_link']['#items'][0]['target_id']; }   	 ?>"> <?php print $title; ?> </a><?php } else {print $title; } ?></h2>
            
       <?php if(isset($content['field_bean_tekstlinie'])) { print render($content['field_bean_tekstlinie']); } 
       print render($content['field_bean_short_text']); 
