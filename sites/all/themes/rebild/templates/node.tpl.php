@@ -43,26 +43,27 @@
 	
 		<?php if(isset($region['content_sidebar'])) { ?>
 			<div id="region-content-sidebar">
-			<?php if ($kontakt == 1) { ?>
-				<a href="#kontaktdiv" id="kontaktlink">Kontakt</a>
-				<div id="kontaktdiv"><?php 	
-					  if(isset($content['field_con_address'])) print render($content['field_con_address']);
-				      if(isset($content['field_con_name'])) print render($content['field_con_name']);
-				      if(isset($content['field_con_title'])) print render($content['field_con_title']);
-				      if(isset($content['field_con_phone'])) print render($content['field_con_phone']);
-				      if(isset($content['field_con_email'])) print render($content['field_con_email']);
-				      if(isset($content['field_con_link'])) print render($content['field_con_link']);
-				      if(isset($content['field_con_center'])) print render($content['field_con_center']);
-				      if(isset($content['field_con_opening_hours']))?><div class="kontaktleft"><?php print render($content['field_con_opening_hours']);?></div>
-				     <?php if(isset($content['field_con_phone_hours']))?><div class="kontaktright"><?php print render($content['field_con_phone_hours']);?></div> 	
 			
-				</div>
-			<?php } ?>
 			
 			  <?php 
 					/* Region: Content Sidebar */
 					print render($region['content_sidebar']);   
 				?>
+				<?php if ($kontakt == 1) { ?>
+				<a href="#kontaktdiv" id="kontaktlink">Kontakt os</a>
+				<div id="kontaktdiv"><?php 	
+					if(isset($content['field_con_center'])) print render($content['field_con_center']);
+					if(isset($content['field_con_name'])) print render($content['field_con_name']);
+					if(isset($content['field_con_title'])) print render($content['field_con_title']);
+					if(isset($content['field_con_phone'])) print render($content['field_con_phone']);
+					if(isset($content['field_con_email'])) print render($content['field_con_email']);
+					if(isset($content['field_con_link'])) print render($content['field_con_link']);
+					if(isset($content['field_con_address'])) print render($content['field_con_address']);
+				      				      
+				      if(isset($content['field_con_opening_hours']))?><div class="kontaktleft"><?php print render($content['field_con_opening_hours']);?></div>
+				     <?php if(isset($content['field_con_phone_hours']))?><div class="kontaktright"><?php print render($content['field_con_phone_hours']);?></div> 				
+				</div>
+			<?php } ?>
 			</div>
 		<?php } ?>  
 	</div>

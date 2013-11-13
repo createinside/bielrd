@@ -100,12 +100,12 @@ $(document).ready(function() {
 // fancybox - kontakt
 $(document).ready(function() {
 	$("#kontaktlink").fancybox({
-		maxWidth	: 800,
+		maxWidth	: 300,
 		maxHeight	: 600,
 		fitToView	: false,
 		width		: '70%',
 		height		: '70%',
-		autoSize	: false,
+		autoSize	: true,
 		closeClick	: false,
 		openEffect	: 'none',
 		closeEffect	: 'none'

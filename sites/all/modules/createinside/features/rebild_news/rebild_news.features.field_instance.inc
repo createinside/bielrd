@@ -191,16 +191,16 @@ function rebild_news_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'swipebox',
+        'module' => 'fancybox',
         'settings' => array(
-          'swipebox_caption' => 'auto',
-          'swipebox_caption_custom' => '',
-          'swipebox_gallery' => 'post',
-          'swipebox_gallery_custom' => '',
-          'swipebox_image_style_content' => 'galleri_lille',
-          'swipebox_image_style_swipebox' => 'galleri_stor',
+          'fancybox_caption' => 'auto',
+          'fancybox_caption_custom' => '',
+          'fancybox_gallery' => 'post',
+          'fancybox_gallery_custom' => '',
+          'fancybox_image_style_content' => 'galleri_lille',
+          'fancybox_image_style_fancybox' => 'galleri_stor',
         ),
-        'type' => 'swipebox',
+        'type' => 'fancybox',
         'weight' => 6,
       ),
       'teaser' => array(

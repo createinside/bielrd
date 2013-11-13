@@ -1537,17 +1537,46 @@ Share nodes
 -------------------------------------------------------------------*/
 /* line 434, ../sass/partials/_nodes.scss */
 #region-content-sidebar #kontaktlink {
-  background: #937ea7;
+  background: url("../img/kontakt_btn.png");
+  background-repeat: no-repeat;
   display: block;
-  height: 20px;
+  height: 30px;
+  width: 138px;
   color: #fff;
+  text-transform: uppercase;
   margin-bottom: 20px;
   text-align: center;
-  padding-top: 5px;
+  padding-top: 14px;
 }
-/* line 443, ../sass/partials/_nodes.scss */
+/* line 446, ../sass/partials/_nodes.scss */
 #region-content-sidebar #kontaktdiv {
   display: none;
+}
+
+/* line 450, ../sass/partials/_nodes.scss */
+.fancybox-skin {
+  background: #fff;
+}
+
+/* line 454, ../sass/partials/_nodes.scss */
+.fancybox-inner #kontaktdiv {
+  padding: 20px;
+  overflow: hidden;
+}
+/* line 457, ../sass/partials/_nodes.scss */
+.fancybox-inner #kontaktdiv .field {
+  margin-bottom: 10px;
+}
+/* line 460, ../sass/partials/_nodes.scss */
+.fancybox-inner #kontaktdiv .field-name-field-con-center {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+/* line 465, ../sass/partials/_nodes.scss */
+.fancybox-inner #kontaktdiv .field-name-field-con-name {
+  font-weight: bold;
+  margin-bottom: 0;
 }
 
 /*------------------------------------------------------------------
