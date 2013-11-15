@@ -16,12 +16,16 @@ Share nodes
 /*------------------------------------------------------------------
 	Nodes
 -------------------------------------------------------------------*/
-#.page-node-2525 {  
+
+/* Google Docs - Valgstatistik */
+#page-node-2525 { 
 	#region-content {
-	.content {
-		display:none;
+		.node {
+			display:none;
+		}
 	}
 }
+
 #region-content {
 	.node-unpublished {
 		background: none;
