@@ -4,6 +4,7 @@ core = 7.x
 package = Rebild
 dependencies[] = breakpoints
 dependencies[] = date
+dependencies[] = fancybox
 dependencies[] = fe_block
 dependencies[] = field_group
 dependencies[] = node

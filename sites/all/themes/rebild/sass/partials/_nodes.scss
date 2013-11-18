@@ -437,3 +437,47 @@ Share nodes
 		
 	}
 }
+/*------------------------------------------------------------------
+	Kontakt sidebar
+-------------------------------------------------------------------*/
+#region-content-sidebar {
+	#kontaktlink {
+		background:url('../img/kontakt_btn.png');
+		background-repeat: no-repeat;
+		display: block;
+		height: 30px;
+		width: 138px;
+		color: #fff;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		text-align: center;
+		padding-top: 14px;
+	}
+	#kontaktdiv {
+		display: none;		
+	}
+}
+.fancybox-skin {
+	background: #fff;
+}
+.fancybox-inner {
+	#kontaktdiv {
+		padding: 20px;
+		overflow: hidden;
+		.field {
+			margin-bottom: 10px;
+		}
+		.field-name-field-con-center {
+			font-weight: bold;
+			font-size: 1.5em;
+			margin-bottom: 5px;
+		}
+		.field-name-field-con-name {
+			font-weight: bold;
+			margin-bottom: 0;
+		}
+	}
+	
+
+
+}

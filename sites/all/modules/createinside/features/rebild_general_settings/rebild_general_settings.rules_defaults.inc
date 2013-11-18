@@ -22,7 +22,7 @@ function rebild_general_settings_default_rules_configuration() {
           }
         }
       ],
-      "DO" : [ { "redirect" : { "url" : "admin\\/people" } } ]
+      "DO" : [ { "redirect" : { "url" : "admin\\u002Fpeople" } } ]
     }
   }');
   return $items;

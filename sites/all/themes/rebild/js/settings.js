@@ -82,22 +82,34 @@ $(function() {
     active: false
 	});	
 	
-	// Swipebox init
-	if($(".swipebox").length>0) {
-		$(".swipebox").swipebox();
-	}
+
 });
 
 
 
 //to the top links
-	$(document).ready(function() {			
-		// Animate the scroll to top
-		$('.go-top').click(function(event) {
-			event.preventDefault();
-			
-			$('html, body').animate({scrollTop: 0}, 300);
-		})
+$(document).ready(function() {			
+	// Animate the scroll to top
+	$('.go-top').click(function(event) {
+		event.preventDefault();
+		
+		$('html, body').animate({scrollTop: 0}, 300);
+	})
+});
+
+// fancybox - kontakt
+$(document).ready(function() {
+	$("#kontaktlink").fancybox({
+		maxWidth	: 300,
+		maxHeight	: 600,
+		fitToView	: false,
+		width		: '70%',
+		height		: '70%',
+		autoSize	: true,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none'
 	});
+});
 	
 

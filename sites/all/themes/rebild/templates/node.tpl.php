@@ -1,3 +1,4 @@
+
 <article<?php print $attributes; ?>>
   <?php print $user_picture; ?>
   <?php if ($display_submitted): ?>
@@ -15,18 +16,54 @@
       if(isset($content['field_main_image'])) print render($content['field_main_image']);
       if(isset($content['field_main_summary'])) print render($content['field_main_summary']);
       if(isset($content['field_os2web_borger_dk_header'])) print render($content['field_os2web_borger_dk_header']);
+      // Kontakt fields
+      if(isset($content['field_con_address'])) hide($content['field_con_address']);
+      if(isset($content['field_con_name'])) hide($content['field_con_name']);
+      if(isset($content['field_con_title'])) hide($content['field_con_title']);
+      if(isset($content['field_con_phone'])) hide($content['field_con_phone']);
+      if(isset($content['field_con_email'])) hide($content['field_con_email']);
+      if(isset($content['field_con_link'])) hide($content['field_con_link']);
+      if(isset($content['field_con_center'])) hide($content['field_con_center']);
+      if(isset($content['field_con_opening_hours'])) hide($content['field_con_opening_hours']);
+      if(isset($content['field_con_phone_hours'])) hide($content['field_con_phone_hours']);
+      // Check if any kontakt field is set
+      if(isset($content['field_con_address']) || isset($content['field_con_name']) || isset($content['field_con_title']) || isset($content['field_con_phone']) || isset($content['field_con_email']) || isset($content['field_con_link']) || isset($content['field_con_center']) || isset($content['field_con_opening_hours']) || isset($content['field_con_phone_hours'])) {
+	      $kontakt = 1;
+      }
+      else {
+	      $kontakt = 0;
+      }
+
 		?>
    	<div id='content-main'<?php if(!empty($region['content_sidebar'])) print " class='has-sidebar'"; ?>>
 		<?php
       print render($content);
-    ?>        
+    ?>        				
 		</div>
+	
 		<?php if(isset($region['content_sidebar'])) { ?>
 			<div id="region-content-sidebar">
+			
+			
 			  <?php 
 					/* Region: Content Sidebar */
 					print render($region['content_sidebar']);   
 				?>
+				<?php if ($kontakt == 1) { ?>
+				<a href="#kontaktdiv" id="kontaktlink">Kontakt os</a>
+				<div id="kontaktdiv"><?php 	
+					if(isset($content['field_con_center'])) print render($content['field_con_center']);
+					if(isset($content['field_con_name'])) print render($content['field_con_name']);
+					if(isset($content['field_con_title'])) print render($content['field_con_title']);
+					if(isset($content['field_con_phone'])) print render($content['field_con_phone']);
+					if(isset($content['field_con_email'])) print render($content['field_con_email']);
+					if(isset($content['field_con_link'])) print render($content['field_con_link']);
+					if(isset($content['field_con_address'])) print render($content['field_con_address']);
+				      				      
+				      if(isset($content['field_con_opening_hours']))?><div class="kontaktleft"><?php print render($content['field_con_opening_hours']);?></div>
+				     <?php if(isset($content['field_con_phone_hours']))?><div class="kontaktright"><?php print render($content['field_con_phone_hours']);?></div> 				
+				</div>
+			<?php } ?>
 			</div>
 		<?php } ?>  
 	</div>

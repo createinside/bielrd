@@ -159,7 +159,7 @@ User profile
 	Opret indhold 
 
 -------------------------------------------------------------------*/
-.page-node-add, .page-node-edit, .page-node, .page-user, .page-file {
+.page-node-add, .page-node-edit, .page-node, .page-user, .page-file, .page-block {
 	#page {
 		font-family: $font-family-std;
 		font-size: 12px;
@@ -718,6 +718,29 @@ User profile
 #media-browser-page {
 	#branding {
 		background: #fff;
+	}
+}
+
+/*------------------------------------------------------------------
+
+	BEAN
+	
+-------------------------------------------------------------------*/
+.page-block {
+	#bean-form {
+		.form-item-is-new-revision,.form-item-default-revision, .form-item-view-mode {
+			display: none;
+		}
+		#edit-log-wrapper {
+			.form-item {
+				display: none;
+			}			
+		}
+		.form-item-default-revision {
+			input, label {
+				display: none;
+			}
+		}
 	}
 }
 

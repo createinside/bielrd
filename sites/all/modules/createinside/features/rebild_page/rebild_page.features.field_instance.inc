@@ -491,8 +491,9 @@ function rebild_page_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'text_default',
         'weight' => 10,
       ),
       'teaser' => array(
@@ -529,9 +530,10 @@ function rebild_page_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'taxonomy_term_reference_plain',
         'weight' => 16,
       ),
       'teaser' => array(
@@ -568,8 +570,9 @@ function rebild_page_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
+        'module' => 'email',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'email_default',
         'weight' => 14,
       ),
       'teaser' => array(
@@ -606,8 +609,9 @@ function rebild_page_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
+        'module' => 'link',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'link_default',
         'weight' => 15,
       ),
       'teaser' => array(
@@ -658,9 +662,10 @@ function rebild_page_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'text_plain',
         'weight' => 11,
       ),
       'teaser' => array(
@@ -698,8 +703,28 @@ function rebild_page_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'module' => 'office_hours',
+        'settings' => array(
+          'closedformat' => 'Closed',
+          'compress' => FALSE,
+          'current_status' => array(
+            'closed_text' => 'Currently closed',
+            'open_text' => 'Currently open!',
+            'position' => 'hide',
+          ),
+          'date_first_day' => 1,
+          'daysformat' => 'long',
+          'grouped' => FALSE,
+          'hoursformat' => 0,
+          'separator_day_hours' => ': ',
+          'separator_days' => '<br />',
+          'separator_grouped_days' => ' - ',
+          'separator_hours_hours' => '-',
+          'separator_more_hours' => ', ',
+          'showclosed' => 'all',
+          'timezone_field' => '',
+        ),
+        'type' => 'office_hours',
         'weight' => 17,
       ),
       'teaser' => array(
@@ -733,8 +758,9 @@ function rebild_page_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
+        'module' => 'cck_phone',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'global_phone_number',
         'weight' => 13,
       ),
       'teaser' => array(
@@ -1013,8 +1039,28 @@ function rebild_page_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'module' => 'office_hours',
+        'settings' => array(
+          'closedformat' => 'Closed',
+          'compress' => FALSE,
+          'current_status' => array(
+            'closed_text' => 'Currently closed',
+            'open_text' => 'Currently open!',
+            'position' => 'hide',
+          ),
+          'date_first_day' => 1,
+          'daysformat' => 'long',
+          'grouped' => FALSE,
+          'hoursformat' => 0,
+          'separator_day_hours' => ': ',
+          'separator_days' => '<br />',
+          'separator_grouped_days' => ' - ',
+          'separator_hours_hours' => '-',
+          'separator_more_hours' => ', ',
+          'showclosed' => 'all',
+          'timezone_field' => '',
+        ),
+        'type' => 'office_hours',
         'weight' => 18,
       ),
       'teaser' => array(
@@ -1048,9 +1094,10 @@ function rebild_page_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'text_default',
         'weight' => 12,
       ),
       'teaser' => array(
@@ -1373,16 +1420,16 @@ function rebild_page_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'swipebox',
+        'module' => 'fancybox',
         'settings' => array(
-          'swipebox_caption' => 'auto',
-          'swipebox_caption_custom' => '',
-          'swipebox_gallery' => 'post',
-          'swipebox_gallery_custom' => '',
-          'swipebox_image_style_content' => 'galleri_lille',
-          'swipebox_image_style_swipebox' => 'galleri_stor',
+          'fancybox_caption' => 'auto',
+          'fancybox_caption_custom' => '',
+          'fancybox_gallery' => 'post',
+          'fancybox_gallery_custom' => '',
+          'fancybox_image_style_content' => 'galleri_lille',
+          'fancybox_image_style_fancybox' => 'galleri_stor',
         ),
-        'type' => 'swipebox',
+        'type' => 'fancybox',
         'weight' => 6,
       ),
       'teaser' => array(
