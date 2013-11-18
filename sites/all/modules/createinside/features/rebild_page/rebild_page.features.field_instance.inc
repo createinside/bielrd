@@ -546,7 +546,7 @@ function rebild_page_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_con_center',
     'label' => 'Center',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
