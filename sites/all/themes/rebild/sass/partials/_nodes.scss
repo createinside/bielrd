@@ -442,16 +442,17 @@ Share nodes
 -------------------------------------------------------------------*/
 #region-content-sidebar {
 	#kontaktlink {
-		background:url('../img/kontakt_btn.png');
-		background-repeat: no-repeat;
-		display: block;
-		height: 30px;
-		width: 138px;
-		color: #fff;
+		display: inline-block;
+		color: white;
 		text-transform: uppercase;
-		margin-bottom: 20px;
+		font-size: $font-size-std;
 		text-align: center;
-		padding-top: 14px;
+		width: 98px;
+		line-height: 1.35em;
+		background-color: $color-purple;
+		padding: 14px 20px;
+		@include background-image(linear-gradient($color-purple, #79648c));
+		@include border-radius($border-radius-std);		
 	}
 	#kontaktdiv {
 		display: none;		

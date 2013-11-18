@@ -1541,45 +1541,54 @@ Share nodes
 /*------------------------------------------------------------------
 	Kontakt sidebar
 -------------------------------------------------------------------*/
-/* line 434, ../sass/partials/_nodes.scss */
+/* line 444, ../sass/partials/_nodes.scss */
 #region-content-sidebar #kontaktlink {
-  background: url("../img/kontakt_btn.png");
-  background-repeat: no-repeat;
-  display: block;
-  height: 30px;
-  width: 138px;
-  color: #fff;
+  display: inline-block;
+  color: white;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  font-size: 1em;
   text-align: center;
-  padding-top: 14px;
+  width: 98px;
+  line-height: 1.35em;
+  background-color: #937ea7;
+  padding: 14px 20px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #937ea7), color-stop(100%, #79648c));
+  background-image: -webkit-linear-gradient(#937ea7, #79648c);
+  background-image: -moz-linear-gradient(#937ea7, #79648c);
+  background-image: -o-linear-gradient(#937ea7, #79648c);
+  background-image: linear-gradient(#937ea7, #79648c);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
 }
-/* line 446, ../sass/partials/_nodes.scss */
+/* line 457, ../sass/partials/_nodes.scss */
 #region-content-sidebar #kontaktdiv {
   display: none;
 }
 
-/* line 450, ../sass/partials/_nodes.scss */
+/* line 461, ../sass/partials/_nodes.scss */
 .fancybox-skin {
   background: #fff;
 }
 
-/* line 454, ../sass/partials/_nodes.scss */
+/* line 465, ../sass/partials/_nodes.scss */
 .fancybox-inner #kontaktdiv {
   padding: 20px;
   overflow: hidden;
 }
-/* line 457, ../sass/partials/_nodes.scss */
+/* line 468, ../sass/partials/_nodes.scss */
 .fancybox-inner #kontaktdiv .field {
   margin-bottom: 10px;
 }
-/* line 460, ../sass/partials/_nodes.scss */
+/* line 471, ../sass/partials/_nodes.scss */
 .fancybox-inner #kontaktdiv .field-name-field-con-center {
   font-weight: bold;
   font-size: 1.5em;
   margin-bottom: 5px;
 }
-/* line 465, ../sass/partials/_nodes.scss */
+/* line 476, ../sass/partials/_nodes.scss */
 .fancybox-inner #kontaktdiv .field-name-field-con-name {
   font-weight: bold;
   margin-bottom: 0;
