@@ -971,27 +971,33 @@ Share nodes
 /*------------------------------------------------------------------
 	Nodes
 -------------------------------------------------------------------*/
-/* line 20, ../sass/partials/_nodes.scss */
+/* Google Docs - Valgstatistik */
+/* line 23, ../sass/partials/_nodes.scss */
+.page-node-2525 #region-content .node {
+  display: none;
+}
+
+/* line 30, ../sass/partials/_nodes.scss */
 #region-content .node-unpublished {
   background: none;
 }
-/* line 24, ../sass/partials/_nodes.scss */
+/* line 34, ../sass/partials/_nodes.scss */
 #region-content .node .field {
   margin-bottom: 1em;
 }
-/* line 27, ../sass/partials/_nodes.scss */
+/* line 37, ../sass/partials/_nodes.scss */
 #region-content .node .field-label {
   margin: 20px 0 10px;
 }
-/* line 31, ../sass/partials/_nodes.scss */
+/* line 41, ../sass/partials/_nodes.scss */
 #region-content .node p a {
   color: #7f9dcd;
 }
-/* line 35, ../sass/partials/_nodes.scss */
+/* line 45, ../sass/partials/_nodes.scss */
 #region-content .node a {
   color: #7f9dcd;
 }
-/* line 39, ../sass/partials/_nodes.scss */
+/* line 49, ../sass/partials/_nodes.scss */
 #region-content .node .field-name-field-main-gis-map .field-label:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1004,22 +1010,13 @@ Share nodes
   content: "\e00d";
   margin-right: 0.5em;
 }
-/* line 46, ../sass/partials/_nodes.scss */
+/* line 56, ../sass/partials/_nodes.scss */
 #region-content .node #content-main ul, #region-content .node #content-main ol {
   margin-left: 40px;
 }
-/* line 48, ../sass/partials/_nodes.scss */
+/* line 58, ../sass/partials/_nodes.scss */
 #region-content .node #content-main ul li, #region-content .node #content-main ol li {
   margin-bottom: 0.5em;
-}
-
-/* line 57, ../sass/partials/_nodes.scss */
-.page-node #region-content #block-system-main {
-  padding: 0;
-}
-/* line 59, ../sass/partials/_nodes.scss */
-.page-node #region-content #block-system-main .node {
-  padding: 20px;
 }
 
 /* line 67, ../sass/partials/_nodes.scss */
@@ -1027,6 +1024,15 @@ Share nodes
   padding: 0;
 }
 /* line 69, ../sass/partials/_nodes.scss */
+.page-node #region-content #block-system-main .node {
+  padding: 20px;
+}
+
+/* line 77, ../sass/partials/_nodes.scss */
+.page-node #region-content #block-system-main {
+  padding: 0;
+}
+/* line 79, ../sass/partials/_nodes.scss */
 .page-node #region-content #block-system-main .node-cloned-page {
   padding: 0;
 }
@@ -1034,7 +1040,7 @@ Share nodes
 /*------------------------------------------------------------------
 	Basic Page + News Article
 -------------------------------------------------------------------*/
-/* line 83, ../sass/partials/_nodes.scss */
+/* line 93, ../sass/partials/_nodes.scss */
 #region-content .node-page,
 #region-content .node-news-article,
 #region-content .node-calendar-post,
@@ -1044,21 +1050,21 @@ Share nodes
   /* Fact Box */
   /* Node Image Gallery */
 }
-/* line 85, ../sass/partials/_nodes.scss */
+/* line 95, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image,
 #region-content .node-news-article .field-name-field-main-image,
 #region-content .node-calendar-post .field-name-field-main-image,
 #region-content .node-offering .field-name-field-main-image {
   margin-bottom: 20px;
 }
-/* line 87, ../sass/partials/_nodes.scss */
+/* line 97, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image img,
 #region-content .node-news-article .field-name-field-main-image img,
 #region-content .node-calendar-post .field-name-field-main-image img,
 #region-content .node-offering .field-name-field-main-image img {
   width: 100%;
 }
-/* line 92, ../sass/partials/_nodes.scss */
+/* line 102, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-summary,
 #region-content .node-news-article .field-name-field-main-summary,
 #region-content .node-calendar-post .field-name-field-main-summary,
@@ -1067,7 +1073,7 @@ Share nodes
   font-size: 1.33333em;
   line-height: 1.15em;
 }
-/* line 98, ../sass/partials/_nodes.scss */
+/* line 108, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-factbox,
 #region-content .node-news-article .field-name-field-main-factbox,
 #region-content .node-calendar-post .field-name-field-main-factbox,
@@ -1081,14 +1087,14 @@ Share nodes
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 108, ../sass/partials/_nodes.scss */
+/* line 118, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image-gallery,
 #region-content .node-news-article .field-name-field-main-image-gallery,
 #region-content .node-calendar-post .field-name-field-main-image-gallery,
 #region-content .node-offering .field-name-field-main-image-gallery {
   margin: 30px 0;
 }
-/* line 110, ../sass/partials/_nodes.scss */
+/* line 120, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image-gallery .field-items,
 #region-content .node-news-article .field-name-field-main-image-gallery .field-items,
 #region-content .node-calendar-post .field-name-field-main-image-gallery .field-items,
@@ -1102,7 +1108,7 @@ Share nodes
   padding: 20px 20px 0;
   overflow: hidden;
 }
-/* line 115, ../sass/partials/_nodes.scss */
+/* line 125, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image-gallery .field-items .field-item,
 #region-content .node-news-article .field-name-field-main-image-gallery .field-items .field-item,
 #region-content .node-calendar-post .field-name-field-main-image-gallery .field-items .field-item,
@@ -1113,7 +1119,7 @@ Share nodes
   margin-bottom: 20px;
   text-align: center;
 }
-/* line 123, ../sass/partials/_nodes.scss */
+/* line 133, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image-gallery .field-label,
 #region-content .node-news-article .field-name-field-main-image-gallery .field-label,
 #region-content .node-calendar-post .field-name-field-main-image-gallery .field-label,
@@ -1121,7 +1127,7 @@ Share nodes
   margin-bottom: 1.25em;
   font-size: 1.08em;
 }
-/* line 127, ../sass/partials/_nodes.scss */
+/* line 137, ../sass/partials/_nodes.scss */
 #region-content .node-page .field-name-field-main-image-gallery .field-label:before,
 #region-content .node-news-article .field-name-field-main-image-gallery .field-label:before,
 #region-content .node-calendar-post .field-name-field-main-image-gallery .field-label:before,
@@ -1144,14 +1150,14 @@ Share nodes
 /*------------------------------------------------------------------
 	Accordions
 -------------------------------------------------------------------*/
-/* line 148, ../sass/partials/_nodes.scss */
+/* line 158, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion,
 #region-content .node-news-article .ui-accordion,
 #region-content .node-agenda .ui-accordion,
 #region-content .node-os2web-borger-dk-article .ui-accordion {
   margin: 20px 0;
 }
-/* line 150, ../sass/partials/_nodes.scss */
+/* line 160, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header,
 #region-content .node-news-article .ui-accordion .ui-accordion-header,
 #region-content .node-agenda .ui-accordion .ui-accordion-header,
@@ -1169,7 +1175,7 @@ Share nodes
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 160, ../sass/partials/_nodes.scss */
+/* line 170, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header > a,
 #region-content .node-page .ui-accordion .ui-accordion-header .field-item,
 #region-content .node-news-article .ui-accordion .ui-accordion-header > a,
@@ -1182,7 +1188,7 @@ Share nodes
   padding: 0;
   margin: 0;
 }
-/* line 166, ../sass/partials/_nodes.scss */
+/* line 176, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header > a:hover,
 #region-content .node-page .ui-accordion .ui-accordion-header .field-item:hover,
 #region-content .node-news-article .ui-accordion .ui-accordion-header > a:hover,
@@ -1193,7 +1199,7 @@ Share nodes
 #region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header .field-item:hover {
   text-decoration: none;
 }
-/* line 170, ../sass/partials/_nodes.scss */
+/* line 180, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header > a .field-content:before,
 #region-content .node-page .ui-accordion .ui-accordion-header .field-item:before,
 #region-content .node-news-article .ui-accordion .ui-accordion-header > a .field-content:before,
@@ -1213,14 +1219,14 @@ Share nodes
   content: "\e00f";
   margin-right: 0.5em;
 }
-/* line 176, ../sass/partials/_nodes.scss */
+/* line 186, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active,
 #region-content .node-news-article .ui-accordion .ui-accordion-header.ui-state-active,
 #region-content .node-agenda .ui-accordion .ui-accordion-header.ui-state-active,
 #region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header.ui-state-active {
   background-color: #7f9dcd;
 }
-/* line 179, ../sass/partials/_nodes.scss */
+/* line 189, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active a,
 #region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active .field-item,
 #region-content .node-news-article .ui-accordion .ui-accordion-header.ui-state-active a,
@@ -1231,7 +1237,7 @@ Share nodes
 #region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header.ui-state-active .field-item {
   color: white;
 }
-/* line 183, ../sass/partials/_nodes.scss */
+/* line 193, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active a .field-content:before,
 #region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active .field-item:before,
 #region-content .node-news-article .ui-accordion .ui-accordion-header.ui-state-active a .field-content:before,
@@ -1251,7 +1257,7 @@ Share nodes
   content: "\e010";
   margin-right: 0.5em;
 }
-/* line 189, ../sass/partials/_nodes.scss */
+/* line 199, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-content,
 #region-content .node-news-article .ui-accordion .ui-accordion-content,
 #region-content .node-agenda .ui-accordion .ui-accordion-content,
@@ -1259,7 +1265,7 @@ Share nodes
   padding: 10px 20px;
   margin: 0;
 }
-/* line 196, ../sass/partials/_nodes.scss */
+/* line 206, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion {
   margin: 0;
 }
@@ -1268,21 +1274,21 @@ Share nodes
 	Borger dk
 -------------------------------------------------------------------*/
 /* Accordion */
-/* line 209, ../sass/partials/_nodes.scss */
+/* line 219, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .field.field-name-body {
   margin: 2em 0 2em 0;
 }
-/* line 212, ../sass/partials/_nodes.scss */
+/* line 222, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .field-name-field-os2web-borger-dk-header {
   margin-bottom: 20px;
   font-size: 1.33333em;
   line-height: 1.15em;
 }
-/* line 217, ../sass/partials/_nodes.scss */
+/* line 227, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle {
   position: relative;
 }
-/* line 219, ../sass/partials/_nodes.scss */
+/* line 229, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle h2.mArticle {
   background: #e6e6e6;
   color: #474747;
@@ -1298,7 +1304,7 @@ Share nodes
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 230, ../sass/partials/_nodes.scss */
+/* line 240, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle h2.mArticle:before {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1311,12 +1317,12 @@ Share nodes
   content: "\e00f";
   margin-right: 0.5em;
 }
-/* line 235, ../sass/partials/_nodes.scss */
+/* line 245, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle div.mArticle {
   padding: 10px 20px;
   margin: 0;
 }
-/* line 240, ../sass/partials/_nodes.scss */
+/* line 250, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article h2.mArticle.ui-state-active {
   background-color: #7f9dcd;
   color: #fff;
@@ -1325,38 +1331,38 @@ Share nodes
 /*------------------------------------------------------------------
 	Agendas
 -------------------------------------------------------------------*/
-/* line 254, ../sass/partials/_nodes.scss */
+/* line 264, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content {
   padding: 10px 20px 20px;
 }
-/* line 256, ../sass/partials/_nodes.scss */
+/* line 266, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content .views-label {
   font-weight: bold;
 }
-/* line 259, ../sass/partials/_nodes.scss */
+/* line 269, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content ul {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-/* line 262, ../sass/partials/_nodes.scss */
+/* line 272, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content ul li {
   margin: 0;
 }
-/* line 268, ../sass/partials/_nodes.scss */
+/* line 278, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .field-label {
   margin: 0;
 }
-/* line 271, ../sass/partials/_nodes.scss */
+/* line 281, ../sass/partials/_nodes.scss */
 #region-content .node-agenda table {
   max-width: 100%;
   border: 1px solid #474747;
 }
-/* line 275, ../sass/partials/_nodes.scss */
+/* line 285, ../sass/partials/_nodes.scss */
 #region-content .node-agenda table tr td {
   padding: 5px;
 }
 
-/* line 283, ../sass/partials/_nodes.scss */
+/* line 293, ../sass/partials/_nodes.scss */
 #region-content .node-offering .field-name-field-offering-link a {
   display: inline-block;
   color: white;
@@ -1376,7 +1382,7 @@ Share nodes
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 294, ../sass/partials/_nodes.scss */
+/* line 304, ../sass/partials/_nodes.scss */
 #region-content .node-offering .field-name-field-offering-link a:after {
   font-family: 'Rebild';
   content: attr(data-icon);
@@ -1405,7 +1411,7 @@ Share nodes
 /*------------------------------------------------------------------
 	Calendar
 -------------------------------------------------------------------*/
-/* line 315, ../sass/partials/_nodes.scss */
+/* line 325, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info {
   padding: 10px;
   margin-bottom: 20px;
@@ -1416,40 +1422,40 @@ Share nodes
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 319, ../sass/partials/_nodes.scss */
+/* line 329, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .fieldset-legend {
   position: absolute;
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 15px;
 }
-/* line 325, ../sass/partials/_nodes.scss */
+/* line 335, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .fieldset-wrapper {
   margin-top: 40px;
 }
-/* line 328, ../sass/partials/_nodes.scss */
+/* line 338, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact {
   margin-bottom: 20px;
 }
-/* line 330, ../sass/partials/_nodes.scss */
+/* line 340, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact .fieldset-legend {
   position: relative;
   margin-top: 0;
   text-transform: none;
 }
-/* line 335, ../sass/partials/_nodes.scss */
+/* line 345, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact .fieldset-wrapper {
   margin-top: 0;
 }
-/* line 338, ../sass/partials/_nodes.scss */
+/* line 348, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact .field {
   margin-bottom: 0;
 }
-/* line 342, ../sass/partials/_nodes.scss */
+/* line 352, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact .field-name-field-calender-email a {
   color: #474747;
 }
-/* line 350, ../sass/partials/_nodes.scss */
+/* line 360, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .field-name-field-calendar-ticket-link a {
   background-image: url("../img/bestil_billet.png");
   background-repeat: no-repeat;
@@ -1462,7 +1468,7 @@ Share nodes
 /*------------------------------------------------------------------
 	Cloned page
 -------------------------------------------------------------------*/
-/* line 369, ../sass/partials/_nodes.scss */
+/* line 379, ../sass/partials/_nodes.scss */
 #region-content .field-name-field-cloned-page #region-content-sidebar ul {
   margin-left: 0;
 }
@@ -1470,7 +1476,7 @@ Share nodes
 /*------------------------------------------------------------------
 	Share node
 -------------------------------------------------------------------*/
-/* line 379, ../sass/partials/_nodes.scss */
+/* line 389, ../sass/partials/_nodes.scss */
 #region-content .node-share {
   background: #f6f6f6;
   border-radius: 0 0 3px 3px;
@@ -1480,23 +1486,23 @@ Share nodes
   padding-top: 5px;
   position: relative;
 }
-/* line 387, ../sass/partials/_nodes.scss */
+/* line 397, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper {
   padding: 5px 20px 5px 20px;
 }
-/* line 389, ../sass/partials/_nodes.scss */
+/* line 399, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .share_this {
   margin-bottom: 10px;
 }
-/* line 393, ../sass/partials/_nodes.scss */
+/* line 403, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .facebook-share #u_0_6 {
   display: none;
 }
-/* line 398, ../sass/partials/_nodes.scss */
+/* line 408, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .email-share .print_mail {
   margin-left: 0;
 }
-/* line 400, ../sass/partials/_nodes.scss */
+/* line 410, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .email-share .print_mail a {
   display: block;
   background: url("../img/send_email.png");
@@ -1505,19 +1511,19 @@ Share nodes
   height: 20px;
   text-indent: -999em;
 }
-/* line 410, ../sass/partials/_nodes.scss */
+/* line 420, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .to_the_top {
   position: absolute;
   top: 10px;
   right: 20px;
 }
-/* line 414, ../sass/partials/_nodes.scss */
+/* line 424, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .to_the_top .go-top {
   color: #6b6b6b;
   font-size: 0.8em;
   font-style: italic;
 }
-/* line 419, ../sass/partials/_nodes.scss */
+/* line 429, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .to_the_top .go-top:after {
   font-family: 'Rebild';
   content: attr(data-icon);
