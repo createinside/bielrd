@@ -224,3 +224,9 @@ Landingpage
 #region-postscript-first .block-block .content ul li {
   margin-bottom: 1.25em;
 }
+
+/* Sidebar kontaktlink */
+/* line 210, ../sass/rebild-alpha-default-narrow.scss */
+#region-content-sidebar #kontaktlink {
+  width: auto;
+}
