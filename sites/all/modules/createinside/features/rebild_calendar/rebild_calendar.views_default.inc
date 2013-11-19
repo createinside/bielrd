@@ -193,7 +193,7 @@ function rebild_calendar_views_default_views() {
   $handler->display->display_options['filters']['field_calendar_date_value']['table'] = 'field_data_field_calendar_date';
   $handler->display->display_options['filters']['field_calendar_date_value']['field'] = 'field_calendar_date_value';
   $handler->display->display_options['filters']['field_calendar_date_value']['operator'] = '>';
-  $handler->display->display_options['filters']['field_calendar_date_value']['default_date'] = 'now';
+  $handler->display->display_options['filters']['field_calendar_date_value']['default_date'] = 'yesterday';
 
   /* Display: Bo i rebild */
   $handler = $view->new_display('block', 'Bo i rebild', 'block_1');
@@ -218,7 +218,7 @@ function rebild_calendar_views_default_views() {
   $handler->display->display_options['filters']['field_calendar_date_value']['table'] = 'field_data_field_calendar_date';
   $handler->display->display_options['filters']['field_calendar_date_value']['field'] = 'field_calendar_date_value';
   $handler->display->display_options['filters']['field_calendar_date_value']['operator'] = '>';
-  $handler->display->display_options['filters']['field_calendar_date_value']['default_date'] = 'now';
+  $handler->display->display_options['filters']['field_calendar_date_value']['default_date'] = 'yesterday';
   /* Filterkriterie: Felt: Sektion (field_main_section) */
   $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
   $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
@@ -252,7 +252,7 @@ function rebild_calendar_views_default_views() {
   $handler->display->display_options['filters']['field_calendar_date_value']['table'] = 'field_data_field_calendar_date';
   $handler->display->display_options['filters']['field_calendar_date_value']['field'] = 'field_calendar_date_value';
   $handler->display->display_options['filters']['field_calendar_date_value']['operator'] = '>';
-  $handler->display->display_options['filters']['field_calendar_date_value']['default_date'] = 'now';
+  $handler->display->display_options['filters']['field_calendar_date_value']['default_date'] = 'yesterday';
   /* Filterkriterie: Felt: Sektion (field_main_section) */
   $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
   $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
@@ -286,7 +286,7 @@ function rebild_calendar_views_default_views() {
   $handler->display->display_options['filters']['field_calendar_date_value']['table'] = 'field_data_field_calendar_date';
   $handler->display->display_options['filters']['field_calendar_date_value']['field'] = 'field_calendar_date_value';
   $handler->display->display_options['filters']['field_calendar_date_value']['operator'] = '>';
-  $handler->display->display_options['filters']['field_calendar_date_value']['default_date'] = 'now';
+  $handler->display->display_options['filters']['field_calendar_date_value']['default_date'] = 'yesterday';
   /* Filterkriterie: Felt: Sektion (field_main_section) */
   $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
   $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
@@ -320,7 +320,7 @@ function rebild_calendar_views_default_views() {
   $handler->display->display_options['filters']['field_calendar_date_value']['table'] = 'field_data_field_calendar_date';
   $handler->display->display_options['filters']['field_calendar_date_value']['field'] = 'field_calendar_date_value';
   $handler->display->display_options['filters']['field_calendar_date_value']['operator'] = '>';
-  $handler->display->display_options['filters']['field_calendar_date_value']['default_date'] = 'now';
+  $handler->display->display_options['filters']['field_calendar_date_value']['default_date'] = 'yesterday';
   /* Filterkriterie: Felt: Sektion (field_main_section) */
   $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
   $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
@@ -481,7 +481,7 @@ function rebild_calendar_views_default_views() {
   $handler->display->display_options['filters']['field_calendar_date_value']['table'] = 'field_data_field_calendar_date';
   $handler->display->display_options['filters']['field_calendar_date_value']['field'] = 'field_calendar_date_value';
   $handler->display->display_options['filters']['field_calendar_date_value']['operator'] = '>';
-  $handler->display->display_options['filters']['field_calendar_date_value']['default_date'] = 'now';
+  $handler->display->display_options['filters']['field_calendar_date_value']['default_date'] = 'yesterday';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
@@ -717,7 +717,7 @@ function rebild_calendar_views_default_views() {
   $handler->display->display_options['filters']['field_calendar_date_value']['table'] = 'field_data_field_calendar_date';
   $handler->display->display_options['filters']['field_calendar_date_value']['field'] = 'field_calendar_date_value';
   $handler->display->display_options['filters']['field_calendar_date_value']['operator'] = '>';
-  $handler->display->display_options['filters']['field_calendar_date_value']['default_date'] = 'now';
+  $handler->display->display_options['filters']['field_calendar_date_value']['default_date'] = 'yesterday';
   $translatables['calendar_sidebar'] = array(
     t('Master'),
     t('Det sker i kommunen:'),
