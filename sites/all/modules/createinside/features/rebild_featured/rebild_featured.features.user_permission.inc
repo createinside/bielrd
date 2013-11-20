@@ -10,6 +10,15 @@
 function rebild_featured_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'administer nodequeue'.
+  $permissions['administer nodequeue'] = array(
+    'name' => 'administer nodequeue',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'nodequeue',
+  );
+
   // Exported permission: 'create featured_article content'.
   $permissions['create featured_article content'] = array(
     'name' => 'create featured_article content',
@@ -53,6 +62,26 @@ function rebild_featured_user_default_permissions() {
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'manipulate all queues'.
+  $permissions['manipulate all queues'] = array(
+    'name' => 'manipulate all queues',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'nodequeue',
+  );
+
+  // Exported permission: 'manipulate queues'.
+  $permissions['manipulate queues'] = array(
+    'name' => 'manipulate queues',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'nodequeue',
   );
 
   return $permissions;

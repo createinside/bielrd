@@ -48,6 +48,10 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'Ingen resultater.';
   $handler->display->display_options['empty']['area']['format'] = 'full_html';
+  /* Forbindelse: Nodequeue: Queue */
+  $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
   /* Felt: Indhold: Link */
   $handler->display->display_options['fields']['field_featured_link']['id'] = 'field_featured_link';
   $handler->display->display_options['fields']['field_featured_link']['table'] = 'field_data_field_featured_link';
@@ -90,8 +94,7 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['fields']['field_featured_summary']['table'] = 'field_data_field_featured_summary';
   $handler->display->display_options['fields']['field_featured_summary']['field'] = 'field_featured_summary';
   $handler->display->display_options['fields']['field_featured_summary']['label'] = '';
-  $handler->display->display_options['fields']['field_featured_summary']['alter']['max_length'] = '100';
-  $handler->display->display_options['fields']['field_featured_summary']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['field_featured_summary']['alter']['max_length'] = '240';
   $handler->display->display_options['fields']['field_featured_summary']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_featured_summary']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_featured_summary']['element_wrapper_class'] = 'featured-summary';
@@ -99,14 +102,6 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['fields']['field_featured_summary']['settings'] = array(
     'trim_length' => '100',
   );
-  /* Felt: Indhold: Oprettelsesdato */
-  $handler->display->display_options['fields']['created']['id'] = 'created';
-  $handler->display->display_options['fields']['created']['table'] = 'node';
-  $handler->display->display_options['fields']['created']['field'] = 'created';
-  $handler->display->display_options['fields']['created']['label'] = 'Oprettet';
-  $handler->display->display_options['fields']['created']['element_wrapper_class'] = 'featured-date';
-  $handler->display->display_options['fields']['created']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['created']['date_format'] = 'short';
   /* Sorteringskriterie: Indhold: Klæbrig */
   $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
   $handler->display->display_options['sorts']['sticky']['table'] = 'node';
@@ -117,6 +112,11 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Sorteringskriterie: Nodequeue: Placering */
+  $handler->display->display_options['sorts']['position']['id'] = 'position';
+  $handler->display->display_options['sorts']['position']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['sorts']['position']['field'] = 'position';
+  $handler->display->display_options['sorts']['position']['relationship'] = 'nodequeue_rel';
   /* Filterkriterie: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -146,17 +146,40 @@ function rebild_featured_views_default_views() {
 
   /* Display: Forside */
   $handler = $view->new_display('page', 'Forside', 'page');
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Forbindelse: Nodequeue: Queue */
+  $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = 1;
+  $handler->display->display_options['relationships']['nodequeue_rel']['names'] = array(
+    'forsidek_' => 'forsidek_',
+    'borger_queue' => 0,
+    'erhverv_queue' => 0,
+    'politik_queue' => 0,
+    'bo_i_rebild_queue' => 0,
+  );
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sorteringskriterie: Indhold: Forfremmet til forside */
-  $handler->display->display_options['sorts']['promote']['id'] = 'promote';
-  $handler->display->display_options['sorts']['promote']['table'] = 'node';
-  $handler->display->display_options['sorts']['promote']['field'] = 'promote';
-  $handler->display->display_options['sorts']['promote']['order'] = 'DESC';
+  /* Sorteringskriterie: Nodequeue: Placering */
+  $handler->display->display_options['sorts']['position']['id'] = 'position';
+  $handler->display->display_options['sorts']['position']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['sorts']['position']['field'] = 'position';
+  $handler->display->display_options['sorts']['position']['relationship'] = 'nodequeue_rel';
+  /* Sorteringskriterie: Nodequeue: Subqueue reference */
+  $handler->display->display_options['sorts']['reference']['id'] = 'reference';
+  $handler->display->display_options['sorts']['reference']['table'] = 'nodequeue_subqueue';
+  $handler->display->display_options['sorts']['reference']['field'] = 'reference';
+  $handler->display->display_options['sorts']['reference']['relationship'] = 'nodequeue_rel';
   /* Sorteringskriterie: Indhold: Klæbrig */
   $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
   $handler->display->display_options['sorts']['sticky']['table'] = 'node';
   $handler->display->display_options['sorts']['sticky']['field'] = 'sticky';
   $handler->display->display_options['sorts']['sticky']['order'] = 'DESC';
+  /* Sorteringskriterie: Indhold: Forfremmet til forside */
+  $handler->display->display_options['sorts']['promote']['id'] = 'promote';
+  $handler->display->display_options['sorts']['promote']['table'] = 'node';
+  $handler->display->display_options['sorts']['promote']['field'] = 'promote';
+  $handler->display->display_options['sorts']['promote']['order'] = 'DESC';
   /* Sorteringskriterie: Indhold: Oprettelsesdato */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -168,6 +191,35 @@ function rebild_featured_views_default_views() {
   $handler = $view->new_display('page', 'Borger', 'page_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Borger';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Forbindelse: Nodequeue: Queue */
+  $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = 1;
+  $handler->display->display_options['relationships']['nodequeue_rel']['names'] = array(
+    'borger_queue' => 'borger_queue',
+    'forsidek_' => 0,
+    'erhverv_queue' => 0,
+    'politik_queue' => 0,
+    'bo_i_rebild_queue' => 0,
+  );
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sorteringskriterie: Nodequeue: Placering */
+  $handler->display->display_options['sorts']['position']['id'] = 'position';
+  $handler->display->display_options['sorts']['position']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['sorts']['position']['field'] = 'position';
+  $handler->display->display_options['sorts']['position']['relationship'] = 'nodequeue_rel';
+  /* Sorteringskriterie: Indhold: Klæbrig */
+  $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
+  $handler->display->display_options['sorts']['sticky']['table'] = 'node';
+  $handler->display->display_options['sorts']['sticky']['field'] = 'sticky';
+  $handler->display->display_options['sorts']['sticky']['order'] = 'DESC';
+  /* Sorteringskriterie: Indhold: Oprettelsesdato */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filterkriterie: Indhold: Udgivet */
@@ -199,6 +251,35 @@ function rebild_featured_views_default_views() {
   $handler = $view->new_display('page', 'Erhverv', 'page_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Erhverv';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Forbindelse: Nodequeue: Queue */
+  $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = 1;
+  $handler->display->display_options['relationships']['nodequeue_rel']['names'] = array(
+    'erhverv_queue' => 'erhverv_queue',
+    'forsidek_' => 0,
+    'borger_queue' => 0,
+    'politik_queue' => 0,
+    'bo_i_rebild_queue' => 0,
+  );
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sorteringskriterie: Nodequeue: Placering */
+  $handler->display->display_options['sorts']['position']['id'] = 'position';
+  $handler->display->display_options['sorts']['position']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['sorts']['position']['field'] = 'position';
+  $handler->display->display_options['sorts']['position']['relationship'] = 'nodequeue_rel';
+  /* Sorteringskriterie: Indhold: Klæbrig */
+  $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
+  $handler->display->display_options['sorts']['sticky']['table'] = 'node';
+  $handler->display->display_options['sorts']['sticky']['field'] = 'sticky';
+  $handler->display->display_options['sorts']['sticky']['order'] = 'DESC';
+  /* Sorteringskriterie: Indhold: Oprettelsesdato */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filterkriterie: Indhold: Udgivet */
@@ -234,6 +315,35 @@ function rebild_featured_views_default_views() {
   $handler = $view->new_display('page', 'Politik', 'page_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Politik';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Forbindelse: Nodequeue: Queue */
+  $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = 1;
+  $handler->display->display_options['relationships']['nodequeue_rel']['names'] = array(
+    'politik_queue' => 'politik_queue',
+    'forsidek_' => 0,
+    'borger_queue' => 0,
+    'erhverv_queue' => 0,
+    'bo_i_rebild_queue' => 0,
+  );
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sorteringskriterie: Nodequeue: Placering */
+  $handler->display->display_options['sorts']['position']['id'] = 'position';
+  $handler->display->display_options['sorts']['position']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['sorts']['position']['field'] = 'position';
+  $handler->display->display_options['sorts']['position']['relationship'] = 'nodequeue_rel';
+  /* Sorteringskriterie: Indhold: Klæbrig */
+  $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
+  $handler->display->display_options['sorts']['sticky']['table'] = 'node';
+  $handler->display->display_options['sorts']['sticky']['field'] = 'sticky';
+  $handler->display->display_options['sorts']['sticky']['order'] = 'DESC';
+  /* Sorteringskriterie: Indhold: Oprettelsesdato */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filterkriterie: Indhold: Udgivet */
@@ -265,6 +375,35 @@ function rebild_featured_views_default_views() {
   $handler = $view->new_display('page', 'Bo i Rebild', 'page_4');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Bo i Rebild';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Forbindelse: Nodequeue: Queue */
+  $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = 1;
+  $handler->display->display_options['relationships']['nodequeue_rel']['names'] = array(
+    'bo_i_rebild_queue' => 'bo_i_rebild_queue',
+    'forsidek_' => 0,
+    'borger_queue' => 0,
+    'erhverv_queue' => 0,
+    'politik_queue' => 0,
+  );
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sorteringskriterie: Nodequeue: Placering */
+  $handler->display->display_options['sorts']['position']['id'] = 'position';
+  $handler->display->display_options['sorts']['position']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['sorts']['position']['field'] = 'position';
+  $handler->display->display_options['sorts']['position']['relationship'] = 'nodequeue_rel';
+  /* Sorteringskriterie: Indhold: Klæbrig */
+  $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
+  $handler->display->display_options['sorts']['sticky']['table'] = 'node';
+  $handler->display->display_options['sorts']['sticky']['field'] = 'sticky';
+  $handler->display->display_options['sorts']['sticky']['order'] = 'DESC';
+  /* Sorteringskriterie: Indhold: Oprettelsesdato */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filterkriterie: Indhold: Udgivet */
@@ -301,7 +440,7 @@ function rebild_featured_views_default_views() {
     t('Stigende'),
     t('Faldende'),
     t('Ingen resultater.'),
-    t('Oprettet'),
+    t('queue'),
     t('Forside'),
     t('Borger'),
     t('Erhverv'),

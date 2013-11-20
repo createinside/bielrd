@@ -30,6 +30,130 @@ function rebild_featured_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_fe_nodequeue_export_fields().
+ */
+function rebild_featured_fe_nodequeue_export_fields() {
+  $nodequeues = array();
+
+  // Exported nodequeues: bo_i_rebild_queue
+  $nodequeues['bo_i_rebild_queue'] = array(
+    'name' => 'bo_i_rebild_queue',
+    'title' => 'Bo i Rebild',
+    'subqueue_title' => '',
+    'size' => 0,
+    'link' => 'Tilføj til Bo i Rebild-rækkefølge',
+    'link_remove' => 'Fjern fra Bo i Rebild-rækkefølge',
+    'owner' => 'nodequeue',
+    'show_in_ui' => 1,
+    'show_in_tab' => 1,
+    'show_in_links' => 1,
+    'reference' => 0,
+    'reverse' => 0,
+    'i18n' => 0,
+    'subqueues' => 1,
+    'types' => array(
+      0 => 'featured_article',
+    ),
+    'roles' => array(),
+    'count' => 0,
+  );
+
+  // Exported nodequeues: borger_queue
+  $nodequeues['borger_queue'] = array(
+    'name' => 'borger_queue',
+    'title' => 'Borger',
+    'subqueue_title' => '',
+    'size' => 0,
+    'link' => 'Tilføj til Borger-rækkefølge',
+    'link_remove' => 'Fjern fra Borger-rækkefølge',
+    'owner' => 'nodequeue',
+    'show_in_ui' => 1,
+    'show_in_tab' => 1,
+    'show_in_links' => 1,
+    'reference' => 0,
+    'reverse' => 0,
+    'i18n' => 0,
+    'subqueues' => 1,
+    'types' => array(
+      0 => 'featured_article',
+    ),
+    'roles' => array(),
+    'count' => 0,
+  );
+
+  // Exported nodequeues: erhverv_queue
+  $nodequeues['erhverv_queue'] = array(
+    'name' => 'erhverv_queue',
+    'title' => 'Erhverv',
+    'subqueue_title' => '',
+    'size' => 0,
+    'link' => 'Tilføj til Erhverv-rækkefølge',
+    'link_remove' => 'Fjern fra Erhverv-rækkefølge',
+    'owner' => 'nodequeue',
+    'show_in_ui' => 1,
+    'show_in_tab' => 1,
+    'show_in_links' => 1,
+    'reference' => 0,
+    'reverse' => 0,
+    'i18n' => 0,
+    'subqueues' => 1,
+    'types' => array(
+      0 => 'featured_article',
+    ),
+    'roles' => array(),
+    'count' => 0,
+  );
+
+  // Exported nodequeues: forsidek_
+  $nodequeues['forsidek_'] = array(
+    'name' => 'forsidek_',
+    'title' => 'Forside',
+    'subqueue_title' => '',
+    'size' => 0,
+    'link' => 'Tilføj til forsidekø',
+    'link_remove' => 'Fjern fra forsidekø',
+    'owner' => 'nodequeue',
+    'show_in_ui' => 1,
+    'show_in_tab' => 1,
+    'show_in_links' => 1,
+    'reference' => 0,
+    'reverse' => 0,
+    'i18n' => 0,
+    'subqueues' => 1,
+    'types' => array(
+      0 => 'featured_article',
+    ),
+    'roles' => array(),
+    'count' => 0,
+  );
+
+  // Exported nodequeues: politik_queue
+  $nodequeues['politik_queue'] = array(
+    'name' => 'politik_queue',
+    'title' => 'Politik',
+    'subqueue_title' => '',
+    'size' => 0,
+    'link' => 'Tilføj til Politik-rækkefølge',
+    'link_remove' => 'Fjern fra Politik-rækkefølge',
+    'owner' => 'nodequeue',
+    'show_in_ui' => 1,
+    'show_in_tab' => 1,
+    'show_in_links' => 1,
+    'reference' => 0,
+    'reverse' => 0,
+    'i18n' => 0,
+    'subqueues' => 1,
+    'types' => array(
+      0 => 'featured_article',
+    ),
+    'roles' => array(),
+    'count' => 0,
+  );
+
+  return $nodequeues;
+}
+
+/**
  * Implements hook_image_default_styles().
  */
 function rebild_featured_image_default_styles() {
