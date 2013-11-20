@@ -293,6 +293,7 @@ function rebild_page_field_group_info() {
       6 => 'group_gis_kort',
       7 => 'group_oversigt',
       8 => 'group_selfservices',
+      9 => 'group_youtube',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(

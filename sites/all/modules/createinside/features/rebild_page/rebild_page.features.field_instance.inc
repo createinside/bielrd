@@ -1832,6 +1832,48 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-page-field_main_youtube_link'
+  $field_instances['node-page-field_main_youtube_link'] = array(
+    'bundle' => 'page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Indtast et youtube link.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'youtube',
+        'settings' => array(
+          'youtube_autoplay' => 0,
+          'youtube_height' => '',
+          'youtube_size' => '420x315',
+          'youtube_width' => '',
+        ),
+        'type' => 'youtube_video',
+        'weight' => 25,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_main_youtube_link',
+    'label' => 'Youtube link',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'youtube',
+      'settings' => array(),
+      'type' => 'youtube',
+      'weight' => 28,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Accordion');
@@ -1853,6 +1895,7 @@ function rebild_page_field_default_field_instances() {
   t('GIS Kort');
   t('Indsæt den generede iframe kode fra siden her: www.gis-kort.dk - placeres under hovedindholdet.');
   t('Indtast et resumé. Resuméet vises øverst før brødteksten.');
+  t('Indtast et youtube link.');
   t('Indtast tekst til en eller flere accordions. En accordion er et sammenklappeligt element, der vises nederst på indholdet.');
   t('Interne links');
   t('Navn');
@@ -1876,6 +1919,7 @@ function rebild_page_field_default_field_instances() {
   t('Vælg et eller flere tags der er med til at beskrive indholdet.');
   t('Vælg hvilken sektion indholdet hører til.');
   t('Website');
+  t('Youtube link');
   t('Åbningstider');
 
   return $field_instances;
