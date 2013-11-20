@@ -254,6 +254,35 @@
 	@include box-shadow(rgba(black, 0.15) 0 0 3px);		
 	}
 	.view-header {
+		.news_view_all {
+			position: absolute;
+			top: 0;
+			text-transform: uppercase;
+			right: 0;
+			left: auto;
+			padding-top: 2px;
+			a {
+				text-shadow: white 1px 1px 1px;
+				font-size: 0.8em;
+				color: #474747;
+				text-decoration: none;
+			}
+			a:after {
+				@include icon-prepare();
+				content: "\f061";	
+				color: #FFFFFF;
+				background: #474747;
+				display: inline-block;
+				font-size: 0.85em;
+				line-height: 1em;
+				padding: 0.40em 0.50em;
+				margin: 0 0 0 7px;
+				text-shadow: none;
+				position: relative;
+				top: -1px;
+				@include border-radius(2px);
+			}
+		}
 		img {
 			width: 100%;
 			@include border-radius(3px 3px 0 0);

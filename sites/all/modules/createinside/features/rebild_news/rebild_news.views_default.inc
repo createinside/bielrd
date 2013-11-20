@@ -38,6 +38,11 @@ function rebild_news_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '6';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Overskrift: Global: Unfiltered text */
+  $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<span class="news_view_all"><a href="/nyheder">Se alle nyheder</a></span>';
   /* Overskrift: Global: Tekstområde */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
@@ -296,6 +301,7 @@ function rebild_news_views_default_views() {
     t('Sortér efter'),
     t('Stigende'),
     t('Faldende'),
+    t('<span class="news_view_all"><a href="/nyheder">Se alle nyheder</a></span>'),
     t('[field_main_image]'),
     t('Forside'),
     t('Nyheder - forside'),
