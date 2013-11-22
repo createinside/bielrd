@@ -61,8 +61,8 @@ function rebild_workflow_default_rules_configuration() {
       "DO" : [
         { "mail" : {
             "to" : [ "node:author:mail" ],
-            "subject" : "Gennemse indhold på [site:name]",
-            "message" : "Dette er en automatisk påmindelse om at gennemse og om nødvendigt opdatere følgende indhold:\\u000D\\u000A\\u000D\\u000ATitel:\\u000D\\u000A[node:title]\\u000D\\u000ALink:\\u000D\\u000A[node:url]\\u000D\\u000A\\u000D\\u000ADu får denne email, fordi du er angivet som forfatter af ovenstående indhold. ",
+            "subject" : "Gennemse indhold p\\u00e5 [site:name]",
+            "message" : "Dette er en automatisk p\\u00e5mindelse om at gennemse og om n\\u00f8dvendigt opdatere f\\u00f8lgende indhold:\\r\\n\\r\\nTitel:\\r\\n[node:title]\\r\\nLink:\\r\\n[node:url]\\r\\n\\r\\nDu f\\u00e5r denne email, fordi du er angivet som forfatter af ovenst\\u00e5ende indhold. ",
             "language" : [ "" ]
           }
         },
@@ -84,7 +84,7 @@ function rebild_workflow_default_rules_configuration() {
           }
         }
       ],
-      "DO" : [ { "redirect" : { "url" : "admin\\u002Fworkbench" } } ]
+      "DO" : [ { "redirect" : { "url" : "admin\\/workbench" } } ]
     }
   }');
   $items['rules_workbench_moderation_published_needs_review'] = entity_import('rules_config', '{ "rules_workbench_moderation_published_needs_review" : {
@@ -125,7 +125,7 @@ function rebild_workflow_default_rules_configuration() {
         { "mail_to_users_of_role" : {
             "roles" : { "value" : { "5" : "5" } },
             "subject" : "Indhold klar til godkendelse",
-            "message" : "Følgende indhold er netop sendt til godkendelse:\\u000D\\u000A\\u000D\\u000ATitel: [node:title]\\u000D\\u000AForfatter: [node:author]\\u000D\\u000ALink:[node:edit-url]\\u000D\\u000A\\u000D\\u000ASe indholdet igennem og revidér eller publicér."
+            "message" : "F\\u00f8lgende indhold er netop sendt til godkendelse:\\r\\n\\r\\nTitel: [node:title]\\r\\nForfatter: [node:author]\\r\\nLink:[node:edit-url]\\r\\n\\r\\nSe indholdet igennem og revid\\u00e9r eller public\\u00e9r."
           }
         }
       ]
@@ -147,7 +147,7 @@ function rebild_workflow_default_rules_configuration() {
         { "mail" : {
             "to" : [ "node:author:mail" ],
             "subject" : "Indhold er blevet udgivet",
-            "message" : "Følgende indhold er netop blevet godkendt og udgivet:\\u000D\\u000A\\u000D\\u000ATitel: [node:title]\\u000D\\u000ALink: [node:url]\\u000D\\u000A\\u000D\\u000ADu får denne email, da du er angivet som forfatter af dette indhold.",
+            "message" : "F\\u00f8lgende indhold er netop blevet godkendt og udgivet:\\r\\n\\r\\nTitel: [node:title]\\r\\nLink: [node:url]\\r\\n\\r\\nDu f\\u00e5r denne email, da du er angivet som forfatter af dette indhold.",
             "language" : [ "" ]
           }
         }
@@ -170,7 +170,7 @@ function rebild_workflow_default_rules_configuration() {
         { "mail" : {
             "to" : [ "node:author:mail" ],
             "subject" : "Dit indhold er blevet revideret",
-            "message" : "Følgende indhold er netop blevet revideret og skal gennemses af dig:\\u000D\\u000A\\u000D\\u000ATitel: [node:title]\\u000D\\u000AForfatter: [node:author]\\u000D\\u000ALink: [node:edit-url]\\u000D\\u000A\\u000D\\u000ASe ændringerne igennem og send til godkendelse igen, hvis du ikke har yderligere at tilføje.",
+            "message" : "F\\u00f8lgende indhold er netop blevet revideret og skal gennemses af dig:\\r\\n\\r\\nTitel: [node:title]\\r\\nForfatter: [node:author]\\r\\nLink: [node:edit-url]\\r\\n\\r\\nSe \\u00e6ndringerne igennem og send til godkendelse igen, hvis du ikke har yderligere at tilf\\u00f8je.",
             "language" : [ "" ]
           }
         }
@@ -193,7 +193,7 @@ function rebild_workflow_default_rules_configuration() {
         { "mail_to_users_of_role" : {
             "roles" : { "value" : { "5" : "5" } },
             "subject" : "Indhold klar til godkendelse",
-            "message" : "Følgende indhold er netop sendt til godkendelse:\\u000D\\u000A\\u000D\\u000ATitel: [node:title]\\u000D\\u000AForfatter: [node:author]\\u000D\\u000ALink:[node:edit-url]\\u000D\\u000A\\u000D\\u000ASe indholdet igennem og revidér eller publicér."
+            "message" : "F\\u00f8lgende indhold er netop sendt til godkendelse:\\r\\n\\r\\nTitel: [node:title]\\r\\nForfatter: [node:author]\\r\\nLink:[node:edit-url]\\r\\n\\r\\nSe indholdet igennem og revid\\u00e9r eller public\\u00e9r."
           }
         }
       ]

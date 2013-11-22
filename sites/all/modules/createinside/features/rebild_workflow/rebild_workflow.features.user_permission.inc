@@ -26,6 +26,7 @@ function rebild_workflow_user_default_permissions() {
     'name' => 'administer main-menu menu items',
     'roles' => array(
       'administrator' => 'administrator',
+      'fagredaktør' => 'fagredaktør',
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'menu_admin_per_menu',
