@@ -50,7 +50,6 @@ function rebild_general_settings_user_default_permissions() {
     'name' => 'customize shortcut links',
     'roles' => array(
       'administrator' => 'administrator',
-      'fagredaktør' => 'fagredaktør',
       'kommunikation' => 'kommunikation',
       'konfigurator' => 'konfigurator',
     ),
