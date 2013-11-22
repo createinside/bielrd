@@ -177,12 +177,13 @@ function rebild_page_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Kontakt',
       'instance_settings' => array(
-        'description' => '',
+        'required_fields' => 0,
         'classes' => '',
-        'required_fields' => 1,
+        'description' => '',
       ),
+      'formatter' => 'collapsible',
     ),
   );
   $export['group_contact|node|page|form'] = $field_group;
@@ -352,7 +353,7 @@ function rebild_page_field_group_info() {
     'format_settings' => array(
       'label' => 'Selvbetjening',
       'instance_settings' => array(
-        'required_fields' => 1,
+        'required_fields' => 0,
         'classes' => '',
         'description' => '',
       ),
