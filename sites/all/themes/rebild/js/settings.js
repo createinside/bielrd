@@ -81,6 +81,13 @@ $(function() {
     collapsible: true,
     active: false
 	});	
+	// Expand/Collapse all
+/*
+$('.accordion-expand-collapse a').click(function() {
+   $('.ui-accordion .ui-accordion-header').next().slideDown();
+   $('.ui-accordion-header').next().addClass('ui-state-active');
+});
+*/
 	
 
 });

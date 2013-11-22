@@ -91,3 +91,13 @@
 		}
 	}	
 }
+
+/* Contextual links */
+.page.contextual-links-region {
+	.contextual-links-wrapper {
+		z-index: 99999;
+		ul.contextual-links {
+			z-index: 99999;
+		}
+	}
+}

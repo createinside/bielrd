@@ -153,6 +153,16 @@ Backend
   margin-left: 10px;
 }
 
+/* Contextual links */
+/* line 97, ../sass/partials/_general.scss */
+.page.contextual-links-region .contextual-links-wrapper {
+  z-index: 99999;
+}
+/* line 99, ../sass/partials/_general.scss */
+.page.contextual-links-region .contextual-links-wrapper ul.contextual-links {
+  z-index: 99999;
+}
+
 /* line 4, ../sass/wysiwyg.scss */
 body {
   font-family: Verdana, Arial, sans-serif;
