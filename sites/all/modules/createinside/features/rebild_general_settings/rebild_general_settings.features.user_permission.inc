@@ -33,40 +33,5 @@ function rebild_general_settings_user_default_permissions() {
     'module' => 'contextual',
   );
 
-  // Exported permission: 'administer shortcuts'.
-  $permissions['administer shortcuts'] = array(
-    'name' => 'administer shortcuts',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'fagredaktør' => 'fagredaktør',
-      'kommunikation' => 'kommunikation',
-      'konfigurator' => 'konfigurator',
-    ),
-    'module' => 'shortcut',
-  );
-
-  // Exported permission: 'customize shortcut links'.
-  $permissions['customize shortcut links'] = array(
-    'name' => 'customize shortcut links',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
-      'konfigurator' => 'konfigurator',
-    ),
-    'module' => 'shortcut',
-  );
-
-  // Exported permission: 'switch shortcut sets'.
-  $permissions['switch shortcut sets'] = array(
-    'name' => 'switch shortcut sets',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'fagredaktør' => 'fagredaktør',
-      'kommunikation' => 'kommunikation',
-      'konfigurator' => 'konfigurator',
-    ),
-    'module' => 'shortcut',
-  );
-
   return $permissions;
 }
