@@ -116,7 +116,8 @@ function ci_search_front_form($form, &$form_state) {
 		"#markup" => "</div>"
 	);
 	// Most popular search phrases
-	$links = ci_search_frequent_keywords(5);
+	/*
+$links = ci_search_frequent_keywords(5);
 	$list = "<ul>";
 	$list .= "<li><strong>Mest søgte emner: </strong></li>";
 	foreach($links as $link) {
@@ -126,6 +127,7 @@ function ci_search_front_form($form, &$form_state) {
 	$form[] = array(
 		"#markup" => "<div class='most-searched'>".$list."</div>"
 	);
+*/
 	$form['#submit'][] = 'ci_search_results_form_submit';	
 
 	apachesolr_autocomplete_do_alter($form["search_phrase"]);
