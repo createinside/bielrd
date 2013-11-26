@@ -118,7 +118,7 @@ function rebild_layout_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Læs også';
+  $handler->display->display_options['title'] = 'Læs endnu mere';
   $handler->display->display_options['css_class'] = 'read_also';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
@@ -210,7 +210,7 @@ function rebild_layout_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'block');
   $translatables['content_sidebar_read_also'] = array(
     t('Master'),
-    t('Læs også'),
+    t('Læs endnu mere'),
     t('mere'),
     t('Udfør'),
     t('Gendan'),
@@ -234,7 +234,7 @@ function rebild_layout_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Relevant indhold';
+  $handler->display->display_options['title'] = 'Læs mere';
   $handler->display->display_options['css_class'] = 'related-content-links';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
@@ -319,7 +319,7 @@ function rebild_layout_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'block');
   $translatables['content_sidebar_relevant_content'] = array(
     t('Master'),
-    t('Relevant indhold'),
+    t('Læs mere'),
     t('mere'),
     t('Udfør'),
     t('Gendan'),

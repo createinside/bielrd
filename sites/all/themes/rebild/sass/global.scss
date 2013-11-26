@@ -78,7 +78,6 @@ img {
 -------------------------------------------------------------------*/
 #zone-user-wrapper {
 	background-color: white;
-	position: relative;
 	z-index: 2;
 	@include box-shadow(rgba(black, 0.075) 0 10px 10px);
 }

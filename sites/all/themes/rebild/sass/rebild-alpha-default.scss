@@ -463,7 +463,15 @@ Nodes
 		margin-top: 0;
 	}
 }
+/* Fancybox */
+.fancybox-outer {
+	margin-bottom: 20px;
+}
 
+.fancybox-title-float-wrap {
+	margin-bottom: -45px;
+	position: relative;
+}
 /* Page & News Articles */
 #region-content {
 	.node-page,

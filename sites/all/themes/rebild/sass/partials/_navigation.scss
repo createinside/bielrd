@@ -52,37 +52,39 @@ Pager
 
 #region-content {
 	.block-menu-block {
-		@include grid-box($bg-color-alt);
-		padding: $spacing-std;
-		overflow: hidden;
-		ul {
-			li {
-				float: left;
-				width: 44%;
-				padding-right: 3%;
-				font-size: $font-size-std;
-				line-height: 1.2em;
-				height: 2.75em;
-				position: relative;
-				a {
-					color: $link-color;
-					text-decoration: none;
-					padding-left: 10px;
-					display: block;
-				}
-				a:hover,
-				a.active {
-					text-decoration: underline;
-				}
-				span {
-					color: $link-color;
-					font-size: $font-size-small;
+		.content {
+			@include grid-box($bg-color-alt);
+			padding: $spacing-std;
+			overflow: hidden;
+			ul {
+				li {
+					float: left;
+					width: 44%;
+					padding-right: 3%;
+					font-size: $font-size-std;
+					line-height: 1.2em;
 					height: 2.75em;
-					position: absolute;
-					top: 2px; left: 0;
+					position: relative;
+					a {
+						color: $link-color;
+						text-decoration: none;
+						padding-left: 10px;
+						display: block;
+					}
+					a:hover,
+					a.active {
+						text-decoration: underline;
+					}
+					span {
+						color: $link-color;
+						font-size: $font-size-small;
+						height: 2.75em;
+						position: absolute;
+						top: 2px; left: 0;
+					}
 				}
-			}
-		}
+			}	
+		}	
 	}
 }
 

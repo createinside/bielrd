@@ -567,14 +567,26 @@ Nodes
   margin-top: 0;
 }
 
+/* Fancybox */
+/* line 467, ../sass/rebild-alpha-default.scss */
+.fancybox-outer {
+  margin-bottom: 20px;
+}
+
+/* line 471, ../sass/rebild-alpha-default.scss */
+.fancybox-title-float-wrap {
+  margin-bottom: -45px;
+  position: relative;
+}
+
 /* Page & News Articles */
-/* line 470, ../sass/rebild-alpha-default.scss */
+/* line 478, ../sass/rebild-alpha-default.scss */
 #region-content .node-page,
 #region-content .node-news-article {
   /* Node Image Gallery */
   /* Fact Box */
 }
-/* line 474, ../sass/rebild-alpha-default.scss */
+/* line 482, ../sass/rebild-alpha-default.scss */
 #region-content .node-page .field-name-field-main-image-gallery .field-items .field-item,
 #region-content .node-news-article .field-name-field-main-image-gallery .field-items .field-item {
   width: 21%;
@@ -583,7 +595,7 @@ Nodes
   margin-bottom: 20px;
   text-align: center;
 }
-/* line 484, ../sass/rebild-alpha-default.scss */
+/* line 492, ../sass/rebild-alpha-default.scss */
 #region-content .node-page .field-name-field-main-factbox,
 #region-content .node-news-article .field-name-field-main-factbox {
   float: right;

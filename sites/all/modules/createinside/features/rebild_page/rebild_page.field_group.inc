@@ -177,12 +177,13 @@ function rebild_page_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Kontakt',
       'instance_settings' => array(
-        'description' => '',
+        'required_fields' => 0,
         'classes' => '',
-        'required_fields' => 1,
+        'description' => '',
       ),
+      'formatter' => 'collapsible',
     ),
   );
   $export['group_contact|node|page|form'] = $field_group;
@@ -293,6 +294,7 @@ function rebild_page_field_group_info() {
       6 => 'group_gis_kort',
       7 => 'group_oversigt',
       8 => 'group_selfservices',
+      9 => 'group_youtube',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -351,7 +353,7 @@ function rebild_page_field_group_info() {
     'format_settings' => array(
       'label' => 'Selvbetjening',
       'instance_settings' => array(
-        'required_fields' => 1,
+        'required_fields' => 0,
         'classes' => '',
         'description' => '',
       ),
@@ -359,6 +361,34 @@ function rebild_page_field_group_info() {
     ),
   );
   $export['group_selfservices|node|page|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_youtube|node|page|form';
+  $field_group->group_name = 'group_youtube';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_ho_tabs';
+  $field_group->data = array(
+    'label' => 'Youtube',
+    'weight' => '24',
+    'children' => array(
+      0 => 'field_main_youtube_link',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'label' => 'Youtube',
+      'instance_settings' => array(
+        'required_fields' => 0,
+        'classes' => '',
+        'description' => '',
+      ),
+      'formatter' => 'closed',
+    ),
+  );
+  $export['group_youtube|node|page|form'] = $field_group;
 
   return $export;
 }

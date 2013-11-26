@@ -114,6 +114,14 @@ Share nodes
 		.field-body {
 			
 		}
+		.field-name-field-main-youtube-link {			
+			iframe {
+				width: 100%;
+			}
+			.field-item {
+				margin-bottom: 20px;
+			}
+		}
 		/* Node Image Gallery */
 		.field-name-field-main-image-gallery {
 			margin: $spacing-std*1.5 0;
@@ -145,6 +153,16 @@ Share nodes
 		}
 	}
 }
+
+/* Fancybox settings */
+
+.fancybox-title-float-wrap {
+	margin-bottom: -55px;
+	.child {
+		white-space: normal;	
+	}	
+}
+
 
 /*------------------------------------------------------------------
 	Accordions

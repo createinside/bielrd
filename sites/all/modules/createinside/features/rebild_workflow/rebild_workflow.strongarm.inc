@@ -728,70 +728,70 @@ function rebild_workflow_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'scheduler_unpublish_revision_announcement';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['scheduler_unpublish_revision_announcement'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'scheduler_unpublish_revision_calendar_post';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['scheduler_unpublish_revision_calendar_post'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'scheduler_unpublish_revision_cloned_page';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['scheduler_unpublish_revision_cloned_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'scheduler_unpublish_revision_consultation';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['scheduler_unpublish_revision_consultation'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'scheduler_unpublish_revision_featured_article';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['scheduler_unpublish_revision_featured_article'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'scheduler_unpublish_revision_news_article';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['scheduler_unpublish_revision_news_article'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'scheduler_unpublish_revision_offering';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['scheduler_unpublish_revision_offering'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'scheduler_unpublish_revision_os2web_borger_dk_article';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['scheduler_unpublish_revision_os2web_borger_dk_article'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'scheduler_unpublish_revision_page';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['scheduler_unpublish_revision_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'scheduler_unpublish_revision_self_service';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['scheduler_unpublish_revision_self_service'] = $strongarm;
 
   $strongarm = new stdClass();

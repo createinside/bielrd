@@ -1020,5 +1020,28 @@ function rebild_page_field_default_field_bases() {
     'type' => 'viewreference',
   );
 
+  // Exported field_base: 'field_main_youtube_link'
+  $field_bases['field_main_youtube_link'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_main_youtube_link',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(),
+    'indexes' => array(
+      'video_id' => array(
+        0 => 'video_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'youtube',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'youtube',
+  );
+
   return $field_bases;
 }

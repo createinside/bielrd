@@ -16,7 +16,6 @@ div.print-logo {
 .send-to-printer {
 	background: #7F9DCD;
 	color: white;
-	border: 1px solid #7F9DCD;
 	text-transform: uppercase;
 	font-family: "Verdana", "Arial", sans-serif;
 	font-size: 12px;
@@ -29,7 +28,10 @@ div.print-logo {
 	-moz-appearance:    none;
  	appearance:         none;
 }
+.print-message {
+    border: 0;
 
+}
 /**
  * Agendas
  */
