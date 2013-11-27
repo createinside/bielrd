@@ -479,10 +479,17 @@ Share nodes
 .fancybox-skin {
 	background: #fff;
 }
-.fancybox-inner {
+#fancybox-outer {
+	border-radius: 3px;
+}
+#fancybox-wrap {
+	width: 100%;
+}
+#fancybox-inner {
 	#kontaktdiv {
 		padding: 20px;
 		overflow: hidden;
+		width: 400px;
 		.field {
 			margin-bottom: 10px;
 		}
