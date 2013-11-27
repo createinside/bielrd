@@ -57,9 +57,11 @@ Pager
 			padding: $spacing-std;
 			overflow: hidden;
 			ul {
+				overflow: hidden;
+				padding-bottom: 20px;
 				li {
 					float: left;
-					width: 44%;
+					width: 30%;
 					padding-right: 3%;
 					font-size: $font-size-std;
 					line-height: 1.2em;

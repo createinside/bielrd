@@ -22,6 +22,21 @@ function rebild_workflow_default_rules_configuration() {
       ]
     }
   }');
+  $items['rules_opdater_for_ldelsesdato'] = entity_import('rules_config', '{ "rules_opdater_for_ldelsesdato" : {
+      "LABEL" : "Opdater for\\u00e6ldelsesdato",
+      "PLUGIN" : "reaction rule",
+      "REQUIRES" : [ "workbench_moderation", "rules" ],
+      "ON" : [ "node_update" ],
+      "IF" : [
+        { "NOT contents_previous_state" : { "node" : [ "node" ], "moderation_state" : "published" } },
+        { "contents_current_state" : { "node" : [ "node" ], "moderation_state" : "published" } },
+        { "entity_has_field" : { "entity" : [ "node" ], "field" : "field_main_outdated" } }
+      ],
+      "DO" : [
+        { "data_set" : { "data" : [ "node:field-main-outdated" ], "value" : "+3 months" } }
+      ]
+    }
+  }');
   $items['rules_outdated_content_checker'] = entity_import('rules_config', '{ "rules_outdated_content_checker" : {
       "LABEL" : "Outdated content checker",
       "PLUGIN" : "rule",
@@ -53,20 +68,21 @@ function rebild_workflow_default_rules_configuration() {
   $items['rules_outdated_content_processor'] = entity_import('rules_config', '{ "rules_outdated_content_processor" : {
       "LABEL" : "Outdated content processor",
       "PLUGIN" : "rule",
-      "REQUIRES" : [ "rules" ],
+      "REQUIRES" : [ "rules", "php" ],
       "USES VARIABLES" : { "node" : { "label" : "Node", "type" : "node" } },
       "IF" : [
         { "entity_has_field" : { "entity" : [ "node" ], "field" : "field_main_outdated" } }
       ],
       "DO" : [
         { "mail" : {
-            "to" : [ "node:author:mail" ],
+            "to" : "kasper@createinside.com",
             "subject" : "Gennemse indhold p\\u00e5 [site:name]",
             "message" : "Dette er en automatisk p\\u00e5mindelse om at gennemse og om n\\u00f8dvendigt opdatere f\\u00f8lgende indhold:\\r\\n\\r\\nTitel:\\r\\n[node:title]\\r\\nLink:\\r\\n[node:url]\\r\\n\\r\\nDu f\\u00e5r denne email, fordi du er angivet som forfatter af ovenst\\u00e5ende indhold. ",
             "language" : [ "" ]
           }
         },
-        { "data_set" : { "data" : [ "node:field-main-outdated" ], "value" : "+3 months" } }
+        { "data_set" : { "data" : [ "node:field-main-outdated" ], "value" : "+3 months" } },
+        { "php_eval" : { "code" : "$node-\\u003Eworkbench_moderation[\\u0027updating_live_revision\\u0027] = 1;\\r\\n\\r\\n" } }
       ]
     }
   }');
