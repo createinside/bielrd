@@ -1422,14 +1422,10 @@ function rebild_page_field_default_field_instances() {
         'label' => 'above',
         'module' => 'fancybox',
         'settings' => array(
-          'fancybox_caption' => 'auto',
-          'fancybox_caption_custom' => '',
-          'fancybox_gallery' => 'post',
-          'fancybox_gallery_custom' => '',
-          'fancybox_image_style_content' => 'galleri_lille',
-          'fancybox_image_style_fancybox' => 'galleri_stor',
+          'image_link_style' => 'galleri_stor',
+          'image_style' => 'galleri_lille',
         ),
-        'type' => 'fancybox',
+        'type' => 'fancybox_image',
         'weight' => 6,
       ),
       'teaser' => array(

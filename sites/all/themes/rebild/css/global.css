@@ -1612,23 +1612,34 @@ Share nodes
   background: #fff;
 }
 
-/* line 483, ../sass/partials/_nodes.scss */
-.fancybox-inner #kontaktdiv {
+/* line 482, ../sass/partials/_nodes.scss */
+#fancybox-outer {
+  border-radius: 3px;
+}
+
+/* line 485, ../sass/partials/_nodes.scss */
+#fancybox-wrap {
+  width: 100%;
+}
+
+/* line 489, ../sass/partials/_nodes.scss */
+#fancybox-inner #kontaktdiv {
   padding: 20px;
   overflow: hidden;
+  width: 400px;
 }
-/* line 486, ../sass/partials/_nodes.scss */
-.fancybox-inner #kontaktdiv .field {
+/* line 493, ../sass/partials/_nodes.scss */
+#fancybox-inner #kontaktdiv .field {
   margin-bottom: 10px;
 }
-/* line 489, ../sass/partials/_nodes.scss */
-.fancybox-inner #kontaktdiv .field-name-field-con-center {
+/* line 496, ../sass/partials/_nodes.scss */
+#fancybox-inner #kontaktdiv .field-name-field-con-center {
   font-weight: bold;
   font-size: 1.5em;
   margin-bottom: 5px;
 }
-/* line 494, ../sass/partials/_nodes.scss */
-.fancybox-inner #kontaktdiv .field-name-field-con-name {
+/* line 501, ../sass/partials/_nodes.scss */
+#fancybox-inner #kontaktdiv .field-name-field-con-name {
   font-weight: bold;
   margin-bottom: 0;
 }
