@@ -62,6 +62,27 @@ function rebild_page_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'content_access_page';
+  $strongarm->value = array(
+    'view_own' => array(
+      0 => 1,
+      1 => 2,
+      2 => 5,
+      3 => 3,
+    ),
+    'view' => array(
+      0 => 1,
+      1 => 2,
+      2 => 5,
+      3 => 3,
+    ),
+    'per_node' => 1,
+  );
+  $export['content_access_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'fancybox_files';
   $strongarm->value = array(
     'js' => 'jquery.fancybox-1.3.1.js',

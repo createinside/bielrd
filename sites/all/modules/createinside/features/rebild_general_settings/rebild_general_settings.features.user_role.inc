@@ -34,5 +34,11 @@ function rebild_general_settings_user_default_roles() {
     'weight' => 4,
   );
 
+  // Exported role: politiker.
+  $roles['politiker'] = array(
+    'name' => 'politiker',
+    'weight' => 6,
+  );
+
   return $roles;
 }
