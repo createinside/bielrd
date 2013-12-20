@@ -141,6 +141,16 @@ function rebild_page_user_default_permissions() {
     'module' => 'field_permissions',
   );
 
+  // Exported permission: 'create field_main_protected'.
+  $permissions['create field_main_protected'] = array(
+    'name' => 'create field_main_protected',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: 'create field_main_view'.
   $permissions['create field_main_view'] = array(
     'name' => 'create field_main_view',
@@ -294,6 +304,16 @@ function rebild_page_user_default_permissions() {
     'module' => 'field_permissions',
   );
 
+  // Exported permission: 'edit field_main_protected'.
+  $permissions['edit field_main_protected'] = array(
+    'name' => 'edit field_main_protected',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: 'edit field_main_view'.
   $permissions['edit field_main_view'] = array(
     'name' => 'edit field_main_view',
@@ -397,6 +417,16 @@ function rebild_page_user_default_permissions() {
   // Exported permission: 'edit own field_main_block'.
   $permissions['edit own field_main_block'] = array(
     'name' => 'edit own field_main_block',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'edit own field_main_protected'.
+  $permissions['edit own field_main_protected'] = array(
+    'name' => 'edit own field_main_protected',
     'roles' => array(
       'administrator' => 'administrator',
       'kommunikation' => 'kommunikation',
@@ -549,6 +579,16 @@ function rebild_page_user_default_permissions() {
     'module' => 'field_permissions',
   );
 
+  // Exported permission: 'view field_main_protected'.
+  $permissions['view field_main_protected'] = array(
+    'name' => 'view field_main_protected',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: 'view field_main_view'.
   $permissions['view field_main_view'] = array(
     'name' => 'view field_main_view',
@@ -654,6 +694,16 @@ function rebild_page_user_default_permissions() {
   // Exported permission: 'view own field_main_block'.
   $permissions['view own field_main_block'] = array(
     'name' => 'view own field_main_block',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'view own field_main_protected'.
+  $permissions['view own field_main_protected'] = array(
+    'name' => 'view own field_main_protected',
     'roles' => array(
       'administrator' => 'administrator',
       'kommunikation' => 'kommunikation',

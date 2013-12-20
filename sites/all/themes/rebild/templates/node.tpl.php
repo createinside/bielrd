@@ -1,4 +1,3 @@
-
 <article<?php print $attributes; ?>>
   <?php print $user_picture; ?>
   <?php if ($display_submitted): ?>
@@ -37,7 +36,13 @@
 		?>
    	<div id='content-main'<?php if(!empty($region['content_sidebar'])) print " class='has-sidebar'"; ?>>
 		<?php
-      print render($content);
+		print render($content);
+		$indhold = menu_get_object();	
+		if ($indhold->field_main_protected['und'][0]['value'] == 1) {
+			if(!user_is_logged_in() ){
+			    print drupal_render(drupal_get_form('user_login')); 
+			}
+		}		      
     ?>        				
 		</div>
 	

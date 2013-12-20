@@ -33,5 +33,25 @@ function rebild_general_settings_user_default_permissions() {
     'module' => 'contextual',
   );
 
+  // Exported permission: 'grant content access'.
+  $permissions['grant content access'] = array(
+    'name' => 'grant content access',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'content_access',
+  );
+
+  // Exported permission: 'grant own content access'.
+  $permissions['grant own content access'] = array(
+    'name' => 'grant own content access',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'content_access',
+  );
+
   return $permissions;
 }
