@@ -232,7 +232,6 @@ features[variable][] = comment_form_location_page
 features[variable][] = comment_page
 features[variable][] = comment_preview_page
 features[variable][] = comment_subject_field_page
-features[variable][] = content_access_page
 features[variable][] = fancybox_files
 features[variable][] = fancybox_settings
 features[variable][] = field_bundle_settings_node__page
