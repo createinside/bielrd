@@ -18,7 +18,9 @@ function rebild_general_settings_default_rules_configuration() {
         { "user_has_role" : { "account" : [ "account" ], "roles" : { "value" : { "7" : "7" } } } },
         { "php_eval" : { "code" : "$test = drupal_get_destination();\\r\\nreturn $test;" } }
       ],
-      "DO" : [ { "redirect" : { "url" : [ "site:current-page:url" ] } } ]
+      "DO" : [
+        { "redirect" : { "url" : "http:\\/\\/rebild.dk\\/politik\\/haandbog-politikere" } }
+      ]
     }
   }');
   $items['rules_redirect_til_brugeroversigt_efter_login'] = entity_import('rules_config', '{ "rules_redirect_til_brugeroversigt_efter_login" : {
