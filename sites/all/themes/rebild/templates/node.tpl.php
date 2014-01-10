@@ -1,5 +1,7 @@
 <article<?php print $attributes; ?>>
-  <?php print $user_picture; ?>
+  <?php print $user_picture; 
+	  $indhold = menu_get_object();
+	  $user = user_is_logged_in();  ?>
   <?php if ($display_submitted): ?>
   <footer class="submitted"><?php print $date; ?> -- <?php print $name; ?></footer>
   <?php endif; ?>  
@@ -12,9 +14,11 @@
       // Print banner image and summary if they exist
       if(isset($content['field_main_image'])) hide($content['field_main_image']);
       if(isset($content['field_main_summary'])) hide($content['field_main_summary']);
-      if(isset($content['field_main_image'])) print render($content['field_main_image']);
-      if(isset($content['field_main_summary'])) print render($content['field_main_summary']);
-      if(isset($content['field_os2web_borger_dk_header'])) print render($content['field_os2web_borger_dk_header']);
+      //if(isset($content['field_main_image'])) print render($content['field_main_image']);
+      
+      if ($indhold->field_main_protected['und'][0]['value'] == 1) { if($user == 1){ if(isset($content['field_main_image'])) print render($content['field_main_image']); if(isset($content['field_main_summary'])) print render($content['field_main_summary']); }}
+	  if ($indhold->field_main_protected['und'][0]['value'] == 0) {if(isset($content['field_main_image'])) print render($content['field_main_image']); if(isset($content['field_main_summary'])) print render($content['field_main_summary']); }
+       if(isset($content['field_os2web_borger_dk_header'])) print render($content['field_os2web_borger_dk_header']);
       // Kontakt fields
       if(isset($content['field_con_address'])) hide($content['field_con_address']);
       if(isset($content['field_con_name'])) hide($content['field_con_name']);
@@ -32,24 +36,26 @@
       else {
 	      $kontakt = 0;
       }
-
 		?>
    	<div id='content-main'<?php if(!empty($region['content_sidebar'])) print " class='has-sidebar'"; ?>>
 		<?php
-		print render($content);
-		$indhold = menu_get_object();	
 		if ($indhold->field_main_protected['und'][0]['value'] == 1) {
 			if(!user_is_logged_in() ){
+				print t('Du skal anvende brugernavn og adgangskode for at logge ind. Kontakt kommunikation@rebild.dk hvis du har mistet adgangskoden.');
 			    print drupal_render(drupal_get_form('user_login')); 
 			}
-		}		      
+			else {
+				print render($content);
+			}			
+		}
+		else {
+				print render($content);
+			}		      
     ?>        				
 		</div>
 	
 		<?php if(isset($region['content_sidebar'])) { ?>
-			<div id="region-content-sidebar">
-			
-			
+			<div id="region-content-sidebar">			
 			  <?php 
 					/* Region: Content Sidebar */
 					print render($region['content_sidebar']);   

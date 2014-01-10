@@ -119,6 +119,15 @@ img {
 #region-footer-fifth {
 	display: none;
 }
+#region-user-menu {
+	.block-politik-user-menu {
+		margin: 0 0 0 10px;
+		p, a {
+			color: $top-menu-color;
+			text-align: left;
+		}
+	}	
+}
 
 /*------------------------------------------------------------------
 	Menus
