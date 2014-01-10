@@ -4438,11 +4438,11 @@ img {
 }
 
 /* line 123, ../sass/global.scss */
-#region-user-menu .block-politik-user-menu {
+#region-user-menu-first .block-politik-user-menu {
   margin: 0 0 0 10px;
 }
 /* line 125, ../sass/global.scss */
-#region-user-menu .block-politik-user-menu p, #region-user-menu .block-politik-user-menu a {
+#region-user-menu-first .block-politik-user-menu p, #region-user-menu-first .block-politik-user-menu a {
   color: #6b6b6b;
   text-align: left;
 }
