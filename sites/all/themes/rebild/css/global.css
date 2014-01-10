@@ -4437,10 +4437,20 @@ img {
   display: none;
 }
 
+/* line 123, ../sass/global.scss */
+#region-user-menu-first .block-politik-user-menu {
+  margin: 0 0 0 10px;
+}
+/* line 125, ../sass/global.scss */
+#region-user-menu-first .block-politik-user-menu p, #region-user-menu-first .block-politik-user-menu a {
+  color: #6b6b6b;
+  text-align: left;
+}
+
 /*------------------------------------------------------------------
 	Menus
 -------------------------------------------------------------------*/
-/* line 128, ../sass/global.scss */
+/* line 137, ../sass/global.scss */
 .ultimenu,
 #region-user-first {
   display: none;
@@ -4449,7 +4459,7 @@ img {
 /*------------------------------------------------------------------
 	Nodes
 -------------------------------------------------------------------*/
-/* line 136, ../sass/global.scss */
+/* line 145, ../sass/global.scss */
 .not-front .block-system-main {
   padding: 20px;
   background-color: white;
@@ -4466,7 +4476,7 @@ img {
 /*------------------------------------------------------------------
 	Views
 -------------------------------------------------------------------*/
-/* line 150, ../sass/global.scss */
+/* line 159, ../sass/global.scss */
 .page-borger .block-system-main,
 .page-erhverv .block-system-main,
 .page-politik .block-system-main,
@@ -4483,7 +4493,7 @@ img {
   border-radius: none;
 }
 
-/* line 158, ../sass/global.scss */
+/* line 167, ../sass/global.scss */
 .page-politik-dagsordener-og-referater .block-system-main {
   padding: 20px;
   background-color: white;
