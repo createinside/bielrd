@@ -53,27 +53,32 @@ class FeedsFieldCollectionProcessor extends FeedsProcessor {
    */
   public function entitysave($entity) {
 
-    $values = (array)$entity;
+//    $values = (array)$entity;
+      $values = array();
+      foreach ($entity as $key => $item) {
+          $values[str_replace('*', '', $key)] = $item;
+      }
     $skip_host_save = FALSE;
     $field_collection_item = entity_create('field_collection_item', $values);
-	  
-    if (!empty($entity->hostEntityId)) {
-      $hostEntity_array = entity_load($this->config['host_entity_type'], array($entity->hostEntityId));
+
+  	    if (method_exists($entity,'hostentityId')) {  $entityid=$entity->hostEntityId();  } else {  $entityid=NULL; }
+    if (!empty($entityid)) {
+      $hostEntity_array = entity_load($this->config['host_entity_type'], array($entity->hostEntityId()));
       $hostEntity = reset($hostEntity_array);
       $field_collection_item->setHostEntity($this->config['host_entity_type'], $hostEntity);
       //update by set item_id
-	 
-      if ($this->config['update_existing'] == FEEDS_UPDATE_EXISTING && isset($field_collection_item->identifier_field) && isset($this->config['identifier_field_name'])) {
-       
-	   $query = new EntityFieldQuery();
+
+      if ($this->config['update_existing'] == FEEDS_UPDATE_EXISTING && isset($field_collection_item->{$this->config['identifier_field_name']}['und'][0]['value']) && isset($this->config['identifier_field_name'])) {
+        $query = new EntityFieldQuery();
         $query->entityCondition('entity_type', 'field_collection_item');
         $query->entityCondition('bundle', $this->config['field_name']);
         $items  = isset($hostEntity->{$this->config['field_name']}[LANGUAGE_NONE]) ? $hostEntity->{$this->config['field_name']}[LANGUAGE_NONE] : array();
         $ids = field_collection_field_item_to_ids($items);
 		if(!empty($ids)){
           $query->entityCondition('entity_id', $ids, 'IN');
-		
-          $query->fieldCondition($this->config['identifier_field_name'], 'value', $field_collection_item->identifier_field);
+
+//          $query->fieldCondition($this->config['identifier_field_name'], 'value', $field_collection_item->identifier_field);
+          $query->fieldCondition($this->config['identifier_field_name'], 'value', $field_collection_item->{$this->config['identifier_field_name']}['und'][0]['value']);
           $result = $query->execute();
 		
           list($EntityType, $data) = each($result);
@@ -90,7 +95,7 @@ class FeedsFieldCollectionProcessor extends FeedsProcessor {
 	  
 
     }
-	
+
     $field_collection_item->save($skip_host_save);
   }
 
@@ -98,7 +103,10 @@ class FeedsFieldCollectionProcessor extends FeedsProcessor {
    * Delete a series of entities.
    */
   protected function entityDeleteMultiple($ids) {
-    entity_delete_multiple($this->entityType(), $ids);
+    $entities = field_collection_item_load_multiple($ids);
+    foreach ($entities as $entity) {
+      $entity->delete();
+    }
   }
   /**
    * Override parent::configDefaults().
@@ -180,7 +188,8 @@ class FeedsFieldCollectionProcessor extends FeedsProcessor {
         }
         $result = $query->execute();
         list($hostEntityType, $data) = each($result);
-        $target_item->hostEntityId = $data ? key($data) : FALSE;
+        if(!method_exists($target_item,'hostentityId')) //TODO: verify that this check is necessary
+            $target_item->hostEntityId = $data ? key($data) : FALSE;
         break;
       default:
         parent::setTargetElement($source, $target_item, $target_element, $value);
