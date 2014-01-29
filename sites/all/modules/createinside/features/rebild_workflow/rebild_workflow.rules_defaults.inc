@@ -75,9 +75,9 @@ function rebild_workflow_default_rules_configuration() {
       ],
       "DO" : [
         { "mail" : {
-            "to" : "kasper@createinside.com",
+            "to" : "[node:author:mail]",
             "subject" : "Gennemse indhold p\\u00e5 [site:name]",
-            "message" : "Dette er en automatisk p\\u00e5mindelse om at gennemse og om n\\u00f8dvendigt opdatere f\\u00f8lgende indhold:\\r\\n\\r\\nTitel:\\r\\n[node:title]\\r\\nLink:\\r\\n[node:url]\\r\\n\\r\\nDu f\\u00e5r denne email, fordi du er angivet som forfatter af ovenst\\u00e5ende indhold. ",
+            "message" : "Dette er en automatisk p\\u00e5mindelse om at gennemse og om n\\u00f8dvendigt opdatere f\\u00f8lgende indhold:\\r\\n\\r\\nTitel: [node:title]\\r\\nLink: [node:url]\\r\\n\\r\\nDu f\\u00e5r denne email, fordi du er angivet som forfatter af ovenst\\u00e5ende indhold. ",
             "language" : [ "" ]
           }
         },
