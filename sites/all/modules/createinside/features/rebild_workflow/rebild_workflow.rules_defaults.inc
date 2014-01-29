@@ -149,7 +149,6 @@ function rebild_workflow_default_rules_configuration() {
   $items['rules_workflow_email_needs_review_published'] = entity_import('rules_config', '{ "rules_workflow_email_needs_review_published" : {
       "LABEL" : "Workflow email: Needs review =\\u003E Published",
       "PLUGIN" : "reaction rule",
-      "ACTIVE" : false,
       "TAGS" : [ "workflow" ],
       "REQUIRES" : [ "workbench_moderation", "rules" ],
       "ON" : [ "workbench_moderation_after_moderation_transition" ],
@@ -162,7 +161,7 @@ function rebild_workflow_default_rules_configuration() {
         { "mail" : {
             "to" : [ "node:author:mail" ],
             "subject" : "Indhold er blevet udgivet",
-            "message" : "F\\u00f8lgende indhold er netop blevet godkendt og udgivet:\\r\\n\\r\\nTitel: [node:title]\\r\\nLink: [node:url]\\r\\n\\r\\nDu f\\u00e5r denne email, da du er angivet som forfatter af dette indhold.",
+            "message" : "F\\u00f8lgende indhold er netop blevet godkendt og udgivet:\\r\\n\\r\\nTitel: [node:title]\\r\\nForfatter: [node:author]\\r\\nLink: [node:url]\\r\\n\\r\\nDu f\\u00e5r denne email, fordi du er angivet som forfatter af ovenst\\u00e5ende indhold.",
             "language" : [ "" ]
           }
         }
@@ -172,7 +171,6 @@ function rebild_workflow_default_rules_configuration() {
   $items['rules_workflow_email_needs_review_revised'] = entity_import('rules_config', '{ "rules_workflow_email_needs_review_revised" : {
       "LABEL" : "Workflow email: Needs review =\\u003E Revised",
       "PLUGIN" : "reaction rule",
-      "ACTIVE" : false,
       "TAGS" : [ "workflow" ],
       "REQUIRES" : [ "workbench_moderation", "rules" ],
       "ON" : [ "workbench_moderation_after_moderation_transition" ],
@@ -184,8 +182,8 @@ function rebild_workflow_default_rules_configuration() {
       "DO" : [
         { "mail" : {
             "to" : [ "node:author:mail" ],
-            "subject" : "Dit indhold er blevet revideret",
-            "message" : "F\\u00f8lgende indhold er netop blevet revideret og skal gennemses af dig:\\r\\n\\r\\nTitel: [node:title]\\r\\nForfatter: [node:author]\\r\\nLink: [node:edit-url]\\r\\n\\r\\nSe \\u00e6ndringerne igennem og send til godkendelse igen, hvis du ikke har yderligere at tilf\\u00f8je.",
+            "subject" : "Indhold er blevet revideret",
+            "message" : "F\\u00f8lgende indhold er netop blevet revideret og skal gennemses:\\r\\n\\r\\nTitel: [node:title]\\r\\nForfatter: [node:author]\\r\\nLink: [node:edit-url]\\r\\n\\r\\nSe \\u00e6ndringerne igennem og send til godkendelse igen, hvis du ikke har yderligere at tilf\\u00f8je.\\r\\n\\r\\nDu f\\u00e5r denne email, fordi du er angivet som forfatter af ovenst\\u00e5ende indhold.",
             "language" : [ "" ]
           }
         }
