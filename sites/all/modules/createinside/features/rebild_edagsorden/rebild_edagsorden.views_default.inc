@@ -308,7 +308,7 @@ function rebild_edagsorden_views_default_views() {
   );
   $handler->display->display_options['filters']['field_agenda_date_value']['granularity'] = 'year';
   $handler->display->display_options['filters']['field_agenda_date_value']['default_date'] = 'now';
-  $handler->display->display_options['filters']['field_agenda_date_value']['year_range'] = '-1:+0';
+  $handler->display->display_options['filters']['field_agenda_date_value']['year_range'] = '-2:+0';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
