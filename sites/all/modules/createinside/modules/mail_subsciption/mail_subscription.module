@@ -1,0 +1,170 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function mail_subscription_menu() {
+  $items['abonnement/tilmeld'] = array(
+  	'title' => 'Tilmeld abonnement',
+    'page callback' => 'mail_subscription_subscribe_page_callback',
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access content'),
+  );
+  $items['abonnement/afmeld'] = array(
+  	'title' => 'Afmeld abonnement',
+    'page callback' => 'mail_subscription_unsubscribe_page_callback',
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access content'),
+  );
+  $items['subscription/confirm/add/%'] = array(
+  	'title' => 'Bekræft tilmelding',
+    'page callback' => 'mail_subscription_confirm_add_callback',
+    'page arguments' => array(3),
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access content'),
+  );
+  $items['subscription/confirm/remove/%'] = array(
+  	'title' => 'Bekræft afmelding',
+    'page callback' => 'mail_subscription_confirm_remove_callback',
+    'page arguments' => array(3),
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access content'),
+  );
+	/*
+  $items['abonnement/opdater'] = array(
+  	'title' => 'Opdater abonnement',
+    'page callback' => 'mail_subscription_modify_form',
+    'type' => MENU_NORMAL_ITEM,
+    'access arguments' => array('access content'),
+  );
+	*/
+  return $items;
+}
+
+/* Subscribe Form Page */
+function mail_subscription_subscribe_page_callback() {
+	$form = drupal_get_form('mail_subscription_subscribe_form');
+	return render($form);
+}
+
+/* Unsubscribe Form Page */
+function mail_subscription_unsubscribe_page_callback() {
+	$form = drupal_get_form('mail_subscription_unsubscribe_form');
+	return render($form);
+}
+
+/* Confirm Add Form Page */
+function mail_subscription_confirm_add_callback() {	
+	$form = drupal_get_form('mail_subscription_confirm_add_form');
+	return render($form);	
+}
+
+/* Confirm Remove Form Page */
+function mail_subscription_confirm_remove_callback() {
+	$form = drupal_get_form('mail_subscription_confirm_remove_form');
+	return render($form);	
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function mail_subscription_block_info() {
+  $blocks = array();
+  
+  $blocks['subscribe_form'] = array(
+    'info' => t('Subscription: subscribe form'),
+  );
+  $blocks['unsubscribe_form'] = array(
+    'info' => t('Subscription: unsubscribe form'),
+  );
+	/*
+  $blocks['modify_form'] = array(
+    'info' => t('Subscription: modify form'),
+  );
+	*/
+ 
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function mail_subscription_block_view($delta='') {
+  $block = array();
+ 
+  switch($delta) {
+  	case 'subscribe_form':
+    	$block['content'] = mail_subscription_subscribe_form();
+		break;
+  	case 'unsubscribe_form':
+    	$block['content'] = mail_subscription_unsubscribe_form();
+		break;
+		/*
+  	case 'modify_form':
+    	$block['content'] = mail_subscription_modify_form();
+		break;
+		*/
+  }
+  
+  return $block;
+}
+
+/**
+ * Generate the hash key used for subscribe/unsubscribe link.
+ */
+function mail_subscription_generate_hash($mail, $sid) {
+  return drupal_substr(md5($mail . drupal_get_hash_salt()), 0, 10) . $sid;
+}
+
+function mail_subscription_subscriber_load_by_hash($hash) {
+
+  $md5 = drupal_substr($hash, 0, 10);
+	$sid = drupal_substr($hash, 10);
+	
+	// Load subscriber
+	$subscriber = entityform_load($sid);
+
+  // Compare hash with MD5 sum
+  if ($md5 != drupal_substr(md5($subscriber->field_sub_email[LANGUAGE_NONE][0]["email"] . drupal_get_hash_salt()), 0, 10)) {
+    return FALSE;
+  }
+  return $subscriber;
+}
+
+module_load_include("inc", "mail_subscription", "mail_subscription.form");
+module_load_include("inc", "mail_subscription", "mail_subscription.rules");
+module_load_include("inc", "mail_subscription", "mail_subscription.tokens");
+
+/**
+ * Subscribe form
+ */
+/*
+function mail_subscription_subscribe_form() {
+
+	module_load_include('inc', 'entityform', 'entityform.admin');
+  $form = entityform_form_wrapper(entityform_empty_load('service_subscriber'), 'submit', 'embedded');
+
+	// Alter submit button text
+	$form['actions']['submit']['#value'] = t("Subscribe");
+
+	$form["sub_stats"] = "subscribe";
+				
+  return drupal_render($form);
+}
+*/
+
+/**
+ * Implements hook_form_alter().
+ */
+/*
+function mail_subscription_form_alter(&$form, &$form_state, $form_id) {
+	if($form_id=="service_subscriber_entityform_edit_form") {
+			
+		// Replace standard submit handler
+		$form["actions"]["submit"]["#submit"] = array("mail_subscription_subscribe_form_submit"); 
+		
+		// Add extra validation handler
+		$form["#validate"][] = "mail_subscription_subscribe_form_validate";
+	}
+}
+*/
