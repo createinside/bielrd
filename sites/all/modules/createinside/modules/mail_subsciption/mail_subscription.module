@@ -18,28 +18,26 @@ function mail_subscription_menu() {
   );
   $items['subscription/confirm/add/%'] = array(
   	'title' => 'Bekræft tilmelding',
-    'page callback' => 'mail_subscription_confirm_add_callback',
+    'page callback' => 'mail_subscription_confirm_add_page_callback',
     'page arguments' => array(3),
+    'access callback' => 'mail_subscription_confirm_add_access_callback',
+    'access arguments' => array(3),
     'type' => MENU_CALLBACK,
-    'access arguments' => array('access content'),
   );
   $items['subscription/confirm/remove/%'] = array(
   	'title' => 'Bekræft afmelding',
-    'page callback' => 'mail_subscription_confirm_remove_callback',
+    'page callback' => 'mail_subscription_confirm_remove_page_callback',
     'page arguments' => array(3),
+    'access callback' => 'mail_subscription_confirm_remove_access_callback',
+    'access arguments' => array(3),
     'type' => MENU_CALLBACK,
-    'access arguments' => array('access content'),
   );
-	/*
-  $items['abonnement/opdater'] = array(
-  	'title' => 'Opdater abonnement',
-    'page callback' => 'mail_subscription_modify_form',
-    'type' => MENU_NORMAL_ITEM,
-    'access arguments' => array('access content'),
-  );
-	*/
   return $items;
 }
+
+/**
+ * Page Callback
+ */
 
 /* Subscribe Form Page */
 function mail_subscription_subscribe_page_callback() {
@@ -54,15 +52,49 @@ function mail_subscription_unsubscribe_page_callback() {
 }
 
 /* Confirm Add Form Page */
-function mail_subscription_confirm_add_callback() {	
+function mail_subscription_confirm_add_page_callback() {	
 	$form = drupal_get_form('mail_subscription_confirm_add_form');
 	return render($form);	
 }
 
 /* Confirm Remove Form Page */
-function mail_subscription_confirm_remove_callback() {
+function mail_subscription_confirm_remove_page_callback() {
 	$form = drupal_get_form('mail_subscription_confirm_remove_form');
 	return render($form);	
+}
+
+/**
+ * Access Callbacks
+ */
+ 
+/* Confirm Add Form Access */
+function mail_subscription_confirm_add_access_callback($hash) {	
+	$subscriber = mail_subscription_subscriber_load_by_hash($hash);
+	
+	// Subscriber must exist
+	if(!$subscriber) {
+		return FALSE;
+	}
+	// Subscriber must be unconfirmed
+	elseif($subscriber->field_sub_confirmed[LANGUAGE_NONE][0]["value"]==1) {
+		return FALSE;
+	}
+	return TRUE;
+}
+
+/* Confirm Remove Form Access */
+function mail_subscription_confirm_remove_access_callback($hash) {	
+	$subscriber = mail_subscription_subscriber_load_by_hash($hash);
+	
+	// Subscriber must exist
+	if(!$subscriber) {
+		return FALSE;
+	}
+	// Subscriber must be confirmed
+	elseif($subscriber->field_sub_confirmed[LANGUAGE_NONE][0]["value"]==0) {
+		return FALSE;
+	}
+	return TRUE;
 }
 
 /**
@@ -72,17 +104,17 @@ function mail_subscription_block_info() {
   $blocks = array();
   
   $blocks['subscribe_form'] = array(
-    'info' => t('Subscription: subscribe form'),
+    'info' => "Tilmeldingsformular til abonnement",
   );
   $blocks['unsubscribe_form'] = array(
-    'info' => t('Subscription: unsubscribe form'),
+    'info' => "Afmeldingsformular til abonnement",
   );
-	/*
-  $blocks['modify_form'] = array(
-    'info' => t('Subscription: modify form'),
+  $blocks['subscribe_news_form'] = array(
+    'info' => "Tilmelding til nyheder",
   );
-	*/
- 
+  $blocks['subscribe_offering_form'] = array(
+    'info' => "Tilmelding til udbud",
+  );
   return $blocks;
 }
 
@@ -94,19 +126,30 @@ function mail_subscription_block_view($delta='') {
  
   switch($delta) {
   	case 'subscribe_form':
-    	$block['content'] = mail_subscription_subscribe_form();
+  		$block['title'] = "Tilmeld abonnement";
+    	$block['content'] = mail_subscription_subscribe_page_callback();
 		break;
   	case 'unsubscribe_form':
-    	$block['content'] = mail_subscription_unsubscribe_form();
+  		$block['title'] = "Afmeld abonnement";
+    	$block['content'] = mail_subscription_unsubscribe_page_callback();
 		break;
-		/*
-  	case 'modify_form':
-    	$block['content'] = mail_subscription_modify_form();
+  	case 'subscribe_news_form':
+  		$block['title'] = "Abonnér på nyheder";
+    	$block['content'] = mail_subscription_subscribe_block(105);
 		break;
-		*/
+  	case 'subscribe_offering_form':
+  		$block['title'] = "Abonnér på udbud";
+    	$block['content'] = mail_subscription_subscribe_block(106);
+		break;
   }
   
   return $block;
+}
+
+function mail_subscription_subscribe_block($tid) {
+	
+	$form = drupal_get_form('mail_subscription_subscribe_form', $tid);
+	return render($form);	
 }
 
 /**
@@ -116,6 +159,9 @@ function mail_subscription_generate_hash($mail, $sid) {
   return drupal_substr(md5($mail . drupal_get_hash_salt()), 0, 10) . $sid;
 }
 
+/**
+ * Load subscriber by HASH value
+ */
 function mail_subscription_subscriber_load_by_hash($hash) {
 
   $md5 = drupal_substr($hash, 0, 10);
@@ -131,40 +177,26 @@ function mail_subscription_subscriber_load_by_hash($hash) {
   return $subscriber;
 }
 
+/**
+ * Load subscriber by email
+ */ 
+function mail_subscription_subscriber_load_by_email($email) {
+
+	$query = new EntityFieldQuery();
+	$query->entityCondition('entity_type', 'entityform')
+	->entityCondition('bundle', 'service_subscriber')
+  ->fieldCondition('field_sub_email', 'email', $email, '=');
+	$result = $query->execute();
+	
+	if(isset($result["entityform"]) && count($result["entityform"] > 0)) {
+		foreach($result["entityform"] as $key => $value) {
+			$subscriber = entityform_load($value->entityform_id);
+			return $subscriber;		
+		}
+	}
+	return FALSE;
+}
+
 module_load_include("inc", "mail_subscription", "mail_subscription.form");
 module_load_include("inc", "mail_subscription", "mail_subscription.rules");
 module_load_include("inc", "mail_subscription", "mail_subscription.tokens");
-
-/**
- * Subscribe form
- */
-/*
-function mail_subscription_subscribe_form() {
-
-	module_load_include('inc', 'entityform', 'entityform.admin');
-  $form = entityform_form_wrapper(entityform_empty_load('service_subscriber'), 'submit', 'embedded');
-
-	// Alter submit button text
-	$form['actions']['submit']['#value'] = t("Subscribe");
-
-	$form["sub_stats"] = "subscribe";
-				
-  return drupal_render($form);
-}
-*/
-
-/**
- * Implements hook_form_alter().
- */
-/*
-function mail_subscription_form_alter(&$form, &$form_state, $form_id) {
-	if($form_id=="service_subscriber_entityform_edit_form") {
-			
-		// Replace standard submit handler
-		$form["actions"]["submit"]["#submit"] = array("mail_subscription_subscribe_form_submit"); 
-		
-		// Add extra validation handler
-		$form["#validate"][] = "mail_subscription_subscribe_form_validate";
-	}
-}
-*/

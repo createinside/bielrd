@@ -50,6 +50,5 @@ function mail_subscription_tokens($type, $tokens, array $data = array(), array $
 			}
 		}	
 	}
-	
 	return $replacements;
 }
