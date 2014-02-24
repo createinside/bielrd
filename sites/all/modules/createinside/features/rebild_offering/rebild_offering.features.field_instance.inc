@@ -212,6 +212,59 @@ function rebild_offering_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-offering-field_offering_deadline'
+  $field_instances['node-offering-field_offering_deadline'] = array(
+    'bundle' => 'offering',
+    'deleted' => 0,
+    'description' => 'Indtast leverandørens tilbudsfrist.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 11,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_offering_deadline',
+    'label' => 'Tilbudsfrist',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'd/m/Y - H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_popup',
+      'weight' => 11,
+    ),
+  );
+
   // Exported field_instance: 'node-offering-field_offering_link'
   $field_instances['node-offering-field_offering_link'] = array(
     'bundle' => 'offering',
@@ -291,7 +344,7 @@ function rebild_offering_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_offering_pdf',
     'label' => 'PDF filer',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'description_field' => 0,
       'file_directory' => '',
@@ -307,12 +360,16 @@ function rebild_offering_field_default_field_instances() {
           'public' => 'public',
         ),
         'allowed_types' => array(
+          0 => 0,
+          'application' => 0,
           'audio' => 0,
           'document' => 0,
           'image' => 'image',
           'video' => 0,
         ),
         'browser_plugins' => array(
+          'media_browser_clone--media_browser_1' => 0,
+          'media_browser_clone--media_browser_my_files' => 0,
           'media_default--media_browser_1' => 0,
           'media_default--media_browser_my_files' => 0,
           'upload' => 0,
@@ -329,6 +386,7 @@ function rebild_offering_field_default_field_instances() {
           'inline_bottom' => 0,
           'inline_top' => 0,
           'nyhed_forside' => 0,
+          'nyhed_oversigt' => 0,
         ),
         'manualcrop_styles_list' => array(
           'blok' => 0,
@@ -336,6 +394,7 @@ function rebild_offering_field_default_field_instances() {
           'inline_bottom' => 0,
           'inline_top' => 0,
           'nyhed_forside' => 0,
+          'nyhed_oversigt' => 0,
         ),
         'manualcrop_styles_mode' => 'exclude',
         'manualcrop_thumblist' => 0,
@@ -353,12 +412,14 @@ function rebild_offering_field_default_field_instances() {
   t('Forældelsesdato');
   t('Indtast en brødtekst for udbuddet.');
   t('Indtast et resumé. Resuméet vises øverst før brødteksten.');
+  t('Indtast leverandørens tilbudsfrist.');
   t('Link');
   t('Link til udbud.dk');
   t('PDF filer');
   t('Resumé');
   t('Sektion');
   t('Tags');
+  t('Tilbudsfrist');
   t('Upload en eller flere PDF filer.');
   t('Vælg et eller flere tags der er med til at beskrive indholdet.');
   t('Vælg hvilken sektion indholdet hører til.');
