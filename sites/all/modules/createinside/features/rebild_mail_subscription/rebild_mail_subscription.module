@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Mail subscription feature.
+ */
+
+include_once 'rebild_mail_subscription.features.inc';

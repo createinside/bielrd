@@ -107,6 +107,9 @@ function rebild_offering_strongarm() {
         'path' => array(
           'weight' => '9',
         ),
+        'rabbit_hole' => array(
+          'weight' => '0',
+        ),
       ),
       'display' => array(),
     ),

@@ -56,13 +56,56 @@ function rebild_offering_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sorteringskriterie: Indhold: Oprettelsesdato */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Felt: Indhold: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nid']['link_to_node'] = TRUE;
+  /* Felt: Indhold: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['view_node']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['view_node']['alter']['text'] = '<a href="[view_node]">[title]</a>';
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  /* Felt: Indhold: Link */
+  $handler->display->display_options['fields']['field_offering_link']['id'] = 'field_offering_link';
+  $handler->display->display_options['fields']['field_offering_link']['table'] = 'field_data_field_offering_link';
+  $handler->display->display_options['fields']['field_offering_link']['field'] = 'field_offering_link';
+  $handler->display->display_options['fields']['field_offering_link']['label'] = '';
+  $handler->display->display_options['fields']['field_offering_link']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_offering_link']['alter']['text'] = '[field_offering_link]';
+  $handler->display->display_options['fields']['field_offering_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_offering_link']['empty'] = '[view_node] ';
+  $handler->display->display_options['fields']['field_offering_link']['click_sort_column'] = 'url';
+  /* Felt: Indhold: Tilbudsfrist */
+  $handler->display->display_options['fields']['field_offering_deadline']['id'] = 'field_offering_deadline';
+  $handler->display->display_options['fields']['field_offering_deadline']['table'] = 'field_data_field_offering_deadline';
+  $handler->display->display_options['fields']['field_offering_deadline']['field'] = 'field_offering_deadline';
+  $handler->display->display_options['fields']['field_offering_deadline']['label'] = '';
+  $handler->display->display_options['fields']['field_offering_deadline']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_offering_deadline']['alter']['text'] = '<p>Tilbudsfrist: [field_offering_deadline]</p>';
+  $handler->display->display_options['fields']['field_offering_deadline']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_offering_deadline']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_offering_deadline']['settings'] = array(
+    'format_type' => 'medium',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Sorteringskriterie: Indhold: Tilbudsfrist (field_offering_deadline) */
+  $handler->display->display_options['sorts']['field_offering_deadline_value']['id'] = 'field_offering_deadline_value';
+  $handler->display->display_options['sorts']['field_offering_deadline_value']['table'] = 'field_data_field_offering_deadline';
+  $handler->display->display_options['sorts']['field_offering_deadline_value']['field'] = 'field_offering_deadline_value';
+  $handler->display->display_options['sorts']['field_offering_deadline_value']['expose']['label'] = 'Tilbudsfrist (field_offering_deadline)';
   /* Filterkriterie: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -77,6 +120,14 @@ function rebild_offering_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'offering' => 'offering',
   );
+  /* Filterkriterie: Indhold: Tilbudsfrist (field_offering_deadline) */
+  $handler->display->display_options['filters']['field_offering_deadline_value']['id'] = 'field_offering_deadline_value';
+  $handler->display->display_options['filters']['field_offering_deadline_value']['table'] = 'field_data_field_offering_deadline';
+  $handler->display->display_options['filters']['field_offering_deadline_value']['field'] = 'field_offering_deadline_value';
+  $handler->display->display_options['filters']['field_offering_deadline_value']['operator'] = '>';
+  $handler->display->display_options['filters']['field_offering_deadline_value']['granularity'] = 'hour';
+  $handler->display->display_options['filters']['field_offering_deadline_value']['form_type'] = 'date_popup';
+  $handler->display->display_options['filters']['field_offering_deadline_value']['default_date'] = 'now';
 
   /* Display: Blok */
   $handler = $view->new_display('block', 'Blok', 'block_1');
@@ -97,6 +148,11 @@ function rebild_offering_views_default_views() {
     t('næste ›'),
     t('sidste »'),
     t('<h2>Oversigt over udbud</h2>'),
+    t('<a href="[view_node]">[title]</a>'),
+    t('[field_offering_link]'),
+    t('[view_node] '),
+    t('<p>Tilbudsfrist: [field_offering_deadline]</p>'),
+    t('Tilbudsfrist (field_offering_deadline)'),
     t('Blok'),
   );
   $export['offerings'] = $view;

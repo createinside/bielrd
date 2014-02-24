@@ -1,0 +1,251 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function mail_subscription_menu() {
+  $items['abonnement/tilmeld'] = array(
+  	'title' => 'Tilmeld abonnement',
+    'page callback' => 'mail_subscription_subscribe_page_callback',
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access content'),
+  );
+  $items['abonnement/afmeld'] = array(
+  	'title' => 'Afmeld abonnement',
+    'page callback' => 'mail_subscription_unsubscribe_page_callback',
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access content'),
+  );
+  $items['subscription/confirm/add/%'] = array(
+  	'title' => 'Bekræft tilmelding',
+    'page callback' => 'mail_subscription_confirm_add_page_callback',
+    'page arguments' => array(3),
+    'access callback' => 'mail_subscription_confirm_add_access_callback',
+    'access arguments' => array(3),
+    'type' => MENU_CALLBACK,
+  );
+  $items['subscription/confirm/remove/%'] = array(
+  	'title' => 'Bekræft afmelding',
+    'page callback' => 'mail_subscription_confirm_remove_page_callback',
+    'page arguments' => array(3),
+    'access callback' => 'mail_subscription_confirm_remove_access_callback',
+    'access arguments' => array(3),
+    'type' => MENU_CALLBACK,
+  );
+	$items['admin/config/system/mail_subscription_settings'] = array(
+	    'title' => 'Email SendGrid settings',
+	    'description' => 'Administer SendGrid email settings',
+	    'page callback' =>'drupal_get_form',
+	    'page arguments' => array('mail_subscription_sendgrid_admin_form'),
+	    'access arguments' => array('administer sendgrid email'),	
+	);
+	$items['node/%node/send'] = array(
+	    'title' => 'Send',
+	    'page callback' => 'drupal_get_form',
+	    'page arguments' => array('mail_subscription_admin_send_form'),
+	    'access callback' => 'mail_subscription_addtab_totype_access_callback',
+	    'access arguments' => array(1),	
+	    'type' => MENU_LOCAL_TASK,
+	    'weight' => 100,
+	);  
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function mail_subscription_permission() {
+  return array(
+    'administer sendgrid email' => array(
+      'title' => t('Administer SendGrid settings'),
+    ),
+  );
+}
+
+/**
+ * Show send tab only on specific content type.
+ */
+function mail_subscription_addtab_totype_access_callback($node) {
+	return $node->type == 'subscription_email' && user_access('access content');
+}
+
+/**
+ * Page Callback
+ */
+
+/* Subscribe Form Page */
+function mail_subscription_subscribe_page_callback() {
+	$form = drupal_get_form('mail_subscription_subscribe_form');
+	return render($form);
+}
+
+/* Unsubscribe Form Page */
+function mail_subscription_unsubscribe_page_callback() {
+	$form = drupal_get_form('mail_subscription_unsubscribe_form');
+	return render($form);
+}
+
+/* Confirm Add Form Page */
+function mail_subscription_confirm_add_page_callback() {	
+	$form = drupal_get_form('mail_subscription_confirm_add_form');
+	return render($form);	
+}
+
+/* Confirm Remove Form Page */
+function mail_subscription_confirm_remove_page_callback() {
+	$form = drupal_get_form('mail_subscription_confirm_remove_form');
+	return render($form);	
+}
+
+/**
+ * Access Callbacks
+ */
+ 
+/* Confirm Add Form Access */
+function mail_subscription_confirm_add_access_callback($hash) {	
+	$subscriber = mail_subscription_subscriber_load_by_hash($hash);
+	
+	// Subscriber must exist
+	if(!$subscriber) {
+		return FALSE;
+	}
+	// Subscriber must be unconfirmed
+	elseif($subscriber->field_sub_confirmed[LANGUAGE_NONE][0]["value"]==1) {
+		return FALSE;
+	}
+	return TRUE;
+}
+
+/* Confirm Remove Form Access */
+function mail_subscription_confirm_remove_access_callback($hash) {	
+	$subscriber = mail_subscription_subscriber_load_by_hash($hash);
+	
+	// Subscriber must exist
+	if(!$subscriber) {
+		return FALSE;
+	}
+	// Subscriber must be confirmed
+	elseif($subscriber->field_sub_confirmed[LANGUAGE_NONE][0]["value"]==0) {
+		return FALSE;
+	}
+	return TRUE;
+}
+
+/**
+ * TEMPLATES
+ * 
+ * Registrering af templatefiler
+ */
+function mail_subscription_theme() {
+
+	$items['mail_subscription_email'] = array(
+		'template' => 'mail-subscription-email',
+		'variables' => array("content" => NULL)
+	);
+	return $items;
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function mail_subscription_block_info() {
+  $blocks = array();
+  
+  $blocks['subscribe_form'] = array(
+    'info' => "Tilmeldingsformular til abonnement",
+  );
+  $blocks['unsubscribe_form'] = array(
+    'info' => "Afmeldingsformular til abonnement",
+  );
+  $blocks['subscribe_news_form'] = array(
+    'info' => "Tilmelding til nyheder",
+  );
+  $blocks['subscribe_offering_form'] = array(
+    'info' => "Tilmelding til udbud",
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function mail_subscription_block_view($delta='') {
+  $block = array();
+ 
+  switch($delta) {
+  	case 'subscribe_form':
+  		$block['title'] = "Tilmeld abonnement";
+    	$block['content'] = mail_subscription_subscribe_page_callback();
+		break;
+  	case 'unsubscribe_form':
+  		$block['title'] = "Afmeld abonnement";
+    	$block['content'] = mail_subscription_unsubscribe_page_callback();
+		break;
+  	case 'subscribe_news_form':
+  		$block['title'] = "Abonnér på nyheder";
+    	$block['content'] = mail_subscription_subscribe_block(105);
+		break;
+  	case 'subscribe_offering_form':
+  		$block['title'] = "Abonnér på udbud";
+    	$block['content'] = mail_subscription_subscribe_block(106);
+		break;
+  }
+  
+  return $block;
+}
+
+function mail_subscription_subscribe_block($tid) {
+	
+	$form = drupal_get_form('mail_subscription_subscribe_form', $tid);
+	return render($form);	
+}
+
+/**
+ * Generate the hash key used for subscribe/unsubscribe link.
+ */
+function mail_subscription_generate_hash($mail, $sid) {
+  return drupal_substr(md5($mail . drupal_get_hash_salt()), 0, 10) . $sid;
+}
+
+/**
+ * Load subscriber by HASH value
+ */
+function mail_subscription_subscriber_load_by_hash($hash) {
+
+  $md5 = drupal_substr($hash, 0, 10);
+	$sid = drupal_substr($hash, 10);
+	
+	// Load subscriber
+	$subscriber = entityform_load($sid);
+
+  // Compare hash with MD5 sum
+  if ($md5 != drupal_substr(md5($subscriber->field_sub_email[LANGUAGE_NONE][0]["email"] . drupal_get_hash_salt()), 0, 10)) {
+    return FALSE;
+  }
+  return $subscriber;
+}
+
+/**
+ * Load subscriber by email
+ */ 
+function mail_subscription_subscriber_load_by_email($email) {
+
+	$query = new EntityFieldQuery();
+	$query->entityCondition('entity_type', 'entityform')
+	->entityCondition('bundle', 'service_subscriber')
+  ->fieldCondition('field_sub_email', 'email', $email, '=')
+  ->addMetaData('account', user_load(1));
+	$result = $query->execute();
+	
+	if(isset($result["entityform"]) && count($result["entityform"] > 0)) {
+		foreach($result["entityform"] as $key => $value) {
+			$subscriber = entityform_load($value->entityform_id);
+			return $subscriber;		
+		}
+	}
+	return FALSE;
+}
+
+module_load_include("inc", "mail_subscription", "mail_subscription.form");
+module_load_include("inc", "mail_subscription", "mail_subscription.rules");
+module_load_include("inc", "mail_subscription", "mail_subscription.tokens");
