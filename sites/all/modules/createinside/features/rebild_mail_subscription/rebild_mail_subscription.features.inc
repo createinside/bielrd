@@ -5,6 +5,15 @@
  */
 
 /**
+ * Implements hook_ctools_plugin_api().
+ */
+function rebild_mail_subscription_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => "1");
+  }
+}
+
+/**
  * Implements hook_views_api().
  */
 function rebild_mail_subscription_views_api($module = NULL, $api = NULL) {
@@ -45,5 +54,22 @@ function rebild_mail_subscription_default_entityform_type() {
     "rdf_mapping" : [],
     "paths" : []
   }');
+  return $items;
+}
+
+/**
+ * Implements hook_node_info().
+ */
+function rebild_mail_subscription_node_info() {
+  $items = array(
+    'subscription_email' => array(
+      'name' => t('Subscription Email'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Titel'),
+      'help' => '',
+    ),
+  );
   return $items;
 }
