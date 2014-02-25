@@ -578,6 +578,7 @@ function rebild_mail_subscription_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'newsletter-title';
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Felt: Indhold: Tilbudsfrist */
   $handler->display->display_options['fields']['field_offering_deadline']['id'] = 'field_offering_deadline';
   $handler->display->display_options['fields']['field_offering_deadline']['table'] = 'field_data_field_offering_deadline';
@@ -586,7 +587,7 @@ function rebild_mail_subscription_views_default_views() {
   $handler->display->display_options['fields']['field_offering_deadline']['element_label_type'] = 'strong';
   $handler->display->display_options['fields']['field_offering_deadline']['element_wrapper_class'] = 'newsletter-date';
   $handler->display->display_options['fields']['field_offering_deadline']['settings'] = array(
-    'format_type' => 'long',
+    'format_type' => 'medium',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
@@ -606,9 +607,19 @@ function rebild_mail_subscription_views_default_views() {
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['element_wrapper_class'] = 'newsletter-link';
   $handler->display->display_options['fields']['view_node']['text'] = 'Læs mere';
+  /* Felt: Indhold: Link */
+  $handler->display->display_options['fields']['field_offering_link']['id'] = 'field_offering_link';
+  $handler->display->display_options['fields']['field_offering_link']['table'] = 'field_data_field_offering_link';
+  $handler->display->display_options['fields']['field_offering_link']['field'] = 'field_offering_link';
+  $handler->display->display_options['fields']['field_offering_link']['label'] = '';
+  $handler->display->display_options['fields']['field_offering_link']['alter']['text'] = '[field_offering_link]';
+  $handler->display->display_options['fields']['field_offering_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_offering_link']['empty'] = '[view_node]';
+  $handler->display->display_options['fields']['field_offering_link']['click_sort_column'] = 'url';
 
   /* Display: Latest offerings - Count */
   $handler = $view->new_display('block', 'Latest offerings - Count', 'block_2');
@@ -624,6 +635,8 @@ function rebild_mail_subscription_views_default_views() {
     t('Læs mere'),
     t('Latest offerings'),
     t('Tilbudsfrist'),
+    t('[field_offering_link]'),
+    t('[view_node]'),
     t('Latest offerings - Count'),
   );
   $export['subscription_offerings'] = $view;
