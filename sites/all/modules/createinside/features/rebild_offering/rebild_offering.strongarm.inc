@@ -99,16 +99,16 @@ function rebild_offering_strongarm() {
           'weight' => '0',
         ),
         'metatags' => array(
-          'weight' => '7',
-        ),
-        'redirect' => array(
           'weight' => '8',
         ),
-        'path' => array(
+        'redirect' => array(
           'weight' => '9',
         ),
+        'path' => array(
+          'weight' => '10',
+        ),
         'rabbit_hole' => array(
-          'weight' => '0',
+          'weight' => '11',
         ),
       ),
       'display' => array(),

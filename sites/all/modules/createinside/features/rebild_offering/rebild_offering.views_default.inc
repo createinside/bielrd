@@ -45,12 +45,6 @@ function rebild_offering_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['last'] = 'sidste »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Overskrift: Global: Tekstområde */
-  $handler->display->display_options['header']['area']['id'] = 'area';
-  $handler->display->display_options['header']['area']['table'] = 'views';
-  $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h2>Oversigt over udbud</h2>';
-  $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* Felt: Indhold: Overskrift */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -147,7 +141,6 @@ function rebild_offering_views_default_views() {
     t('‹ forrige'),
     t('næste ›'),
     t('sidste »'),
-    t('<h2>Oversigt over udbud</h2>'),
     t('<a href="[view_node]">[title]</a>'),
     t('[field_offering_link]'),
     t('[view_node] '),

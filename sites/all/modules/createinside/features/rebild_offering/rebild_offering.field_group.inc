@@ -21,7 +21,7 @@ function rebild_offering_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Kategorisering',
-    'weight' => '5',
+    'weight' => '6',
     'children' => array(
       0 => 'field_main_section',
       1 => 'field_main_tags',
