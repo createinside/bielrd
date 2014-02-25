@@ -130,10 +130,10 @@ function rebild_mail_subscription_default_rules_configuration() {
               },
               { "data_set" : {
                   "data" : [ "subscription-email:field-subscription-list" ],
-                  "value" : "105"
+                  "value" : "106"
                 }
               },
-              { "php_eval" : { "code" : "$subscription_email-\\u003Efield_subscription_attach_view[LANGUAGE_NONE][0][\\u0022view_id\\u0022] = \\u0022subscription_news:nyheder\\u0022;" } },
+              { "php_eval" : { "code" : "$subscription_email-\\u003Efield_subscription_attach_view[LANGUAGE_NONE][0][\\u0022view_id\\u0022] = \\u0022subscription_offerings:nyheder\\u0022;" } },
               { "entity_save" : { "data" : [ "subscription-email" ], "immediate" : 1 } }
             ],
             "LABEL" : "Create entity"

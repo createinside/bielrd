@@ -54,6 +54,7 @@
 						</tr>
 						<tr>
 							<td style="text-align: center;">
+								<p style="font-size: 12px; margin-top: 10px;"><a href="http://rebild.dk/abonnement">Klik her for at opsige dit abonnement</a></p>
 								<p style="font-size: 11px; margin-top: 20px;">Rebild Kommune - <a href="http://rebild.dk">rebild.dk</a></p>
 							</td>
 						</tr>

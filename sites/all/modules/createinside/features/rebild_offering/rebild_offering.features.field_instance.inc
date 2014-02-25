@@ -34,7 +34,7 @@ function rebild_offering_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_main_body',
     'label' => 'Brødtekst',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 1,
       'user_register_form' => FALSE,
@@ -46,7 +46,7 @@ function rebild_offering_field_default_field_instances() {
         'rows' => 10,
       ),
       'type' => 'text_textarea',
-      'weight' => 2,
+      'weight' => 5,
     ),
   );
 
@@ -92,7 +92,7 @@ function rebild_offering_field_default_field_instances() {
         'year_range' => '-0:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -158,7 +158,7 @@ function rebild_offering_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_main_summary',
     'label' => 'Resumé',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -170,7 +170,7 @@ function rebild_offering_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 1,
+      'weight' => 4,
     ),
   );
 
@@ -241,7 +241,7 @@ function rebild_offering_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_offering_deadline',
     'label' => 'Tilbudsfrist',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'default_value' => 'now',
       'default_value2' => 'same',
@@ -261,7 +261,7 @@ function rebild_offering_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 11,
+      'weight' => 1,
     ),
   );
 
@@ -295,7 +295,7 @@ function rebild_offering_field_default_field_instances() {
         'class' => '',
         'configurable_title' => 0,
         'rel' => '',
-        'target' => 'default',
+        'target' => '_blank',
         'title' => '',
       ),
       'display' => array(
@@ -303,7 +303,7 @@ function rebild_offering_field_default_field_instances() {
       ),
       'enable_tokens' => 1,
       'rel_remove' => 'default',
-      'title' => 'optional',
+      'title' => 'required',
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
@@ -315,7 +315,7 @@ function rebild_offering_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -401,7 +401,7 @@ function rebild_offering_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 

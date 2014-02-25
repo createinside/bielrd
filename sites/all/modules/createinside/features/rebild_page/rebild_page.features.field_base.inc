@@ -1013,7 +1013,7 @@ function rebild_page_field_default_field_bases() {
         'news_articles:block_4' => 0,
         'news_articles:page_1' => 'news_articles:page_1',
         'newsletter_news:nyheder' => 0,
-        'newsletter_news:udbud' => 'newsletter_news:udbud',
+        'newsletter_news:udbud' => 0,
         'nodequeue_1:block' => 0,
         'nodequeue_1:page' => 0,
         'nodequeue_2:block' => 0,
