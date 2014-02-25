@@ -85,8 +85,8 @@ function mail_subscription_send($node) {
 	    'subject'   => $subject,
 	    'html'      => $content,
 	    'text'      => $textversion,
-	    'from'      => 'intern@createinside.com',
-	    'fromname'	=> 'Rebild',	    
+	    'from'      => 'abonnement@rebild.dk',
+	    'fromname'	=> 'Rebild Kommune',	    
 	  );	
 	
 	$request =  $url.'api/mail.send.json';
