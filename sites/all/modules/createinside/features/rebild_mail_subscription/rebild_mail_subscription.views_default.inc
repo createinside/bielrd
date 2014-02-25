@@ -268,7 +268,7 @@ function rebild_mail_subscription_views_default_views() {
   $handler->display->display_options['filters']['created']['table'] = 'node';
   $handler->display->display_options['filters']['created']['field'] = 'created';
   $handler->display->display_options['filters']['created']['operator'] = '>';
-  $handler->display->display_options['filters']['created']['value']['value'] = '-240 hours';
+  $handler->display->display_options['filters']['created']['value']['value'] = '-24 hours';
   $handler->display->display_options['filters']['created']['value']['type'] = 'offset';
 
   /* Display: Latest news */
