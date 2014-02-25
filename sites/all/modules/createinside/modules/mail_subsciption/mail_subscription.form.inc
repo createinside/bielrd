@@ -353,11 +353,18 @@ function mail_subscription_admin_send_form() {
  *	TODO: Batch send mass emails. JSON string cannot exceed 1000 subscribers.
  **/
 function mail_subscription_admin_send_form_submit($form, $form_state) {
+
 	$node = node_load(arg(1));
+
+	$subject = $node->title;
+	$node->title = NULL;
 	$indhold = node_view($node, 'standard');
 		
 	unset($indhold['#contextual_links']);
+			
 	$content = drupal_render($indhold);
+	$content = theme("mail_subscription_email", array("content" => $content));
+	
 	$textversion = strip_tags($content);
 	/* Variables defining the content of the newsletter */
 	
@@ -376,7 +383,6 @@ function mail_subscription_admin_send_form_submit($form, $form_state) {
 	$url = 'http://sendgrid.com/';
 	$subuser = variable_get('mail_sendgrid_sub_username');
 	$subpass = variable_get('mail_sendgrid_sub_key');
-	
 
 	$json_string['category'] = strip_tags($category);	
 	
@@ -385,11 +391,11 @@ function mail_subscription_admin_send_form_submit($form, $form_state) {
 	    'api_key'   => $subpass,
 	    'x-smtpapi' => json_encode($json_string),
 	    'to'        => 'intern@createinside.com',
-	    'subject'   => $node->title,
+	    'subject'   => $subject,
 	    'html'      => $content,
 	    'text'      => $textversion,
-	    'from'      => 'intern@createinside.com',
-	    'fromname'	=> 'Rebild',	    
+	    'from'      => 'abonnement@rebild.dk',
+	    'fromname'	=> 'Rebild Kommune',	    
 	  );	
 	
 	$request =  $url.'api/mail.send.json';
@@ -418,7 +424,6 @@ function mail_subscription_admin_send_form_submit($form, $form_state) {
 		drupal_set_message('Der opstod en fejl; ' . $decoded_response['errors'][0]);
 	}	
 	return $response;
-
 }
 
 /**
