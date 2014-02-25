@@ -101,5 +101,66 @@ function rebild_mail_subscription_default_rules_configuration() {
       ]
     }
   }');
+  $items['rules_service_subscription_mail_offerings'] = entity_import('rules_config', '{ "rules_service_subscription_mail_offerings" : {
+      "LABEL" : "Service subscription mail: Offerings",
+      "PLUGIN" : "rule set",
+      "REQUIRES" : [
+        "views_bulk_operations",
+        "rules",
+        "php",
+        "mail_subscription",
+        "rules_scheduler"
+      ],
+      "RULES" : [
+        { "RULE" : {
+            "PROVIDE" : { "entity_created" : { "subscription_email" : "Subscription Email" } },
+            "IF" : [
+              { "views_bulk_operations_condition_result_count" : { "view" : "subscription_offerings|block_2", "minimum" : "1" } }
+            ],
+            "DO" : [
+              { "entity_create" : {
+                  "USING" : {
+                    "type" : "node",
+                    "param_type" : "subscription_email",
+                    "param_title" : "Seneste udbud",
+                    "param_author" : [ "site:current-user" ]
+                  },
+                  "PROVIDE" : { "entity_created" : { "subscription_email" : "Subscription Email" } }
+                }
+              },
+              { "data_set" : {
+                  "data" : [ "subscription-email:field-subscription-list" ],
+                  "value" : "105"
+                }
+              },
+              { "php_eval" : { "code" : "$subscription_email-\\u003Efield_subscription_attach_view[LANGUAGE_NONE][0][\\u0022view_id\\u0022] = \\u0022subscription_news:nyheder\\u0022;" } },
+              { "entity_save" : { "data" : [ "subscription-email" ], "immediate" : 1 } }
+            ],
+            "LABEL" : "Create entity"
+          }
+        },
+        { "RULE" : {
+            "IF" : [
+              { "views_bulk_operations_condition_result_count" : { "view" : "subscription_offerings|block_2", "minimum" : "1" } }
+            ],
+            "DO" : [ { "mail_subscription_send" : { "node" : [ "subscription-email" ] } } ],
+            "LABEL" : "Send email"
+          }
+        },
+        { "RULE" : {
+            "DO" : [
+              { "schedule" : {
+                  "component" : "rules_service_subscription_mail_offerings",
+                  "date" : "+24 hours",
+                  "identifier" : "subscription-mail-offerings"
+                }
+              }
+            ],
+            "LABEL" : "Reschedule"
+          }
+        }
+      ]
+    }
+  }');
   return $items;
 }
