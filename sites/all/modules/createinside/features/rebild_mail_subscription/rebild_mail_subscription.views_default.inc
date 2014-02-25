@@ -41,6 +41,18 @@ function rebild_mail_subscription_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['row_class'] = 'newsletter-row';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Overskrift: Global: Tekstområde */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<p>Seneste nyt fra Rebild Kommune:</p>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  /* Sidefod: Global: Tekstområde */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<p>Du modtager denne mail fordi du abonnerer på nyheder fra Rebild Kommune.</p>';
+  $handler->display->display_options['footer']['area']['format'] = 'full_html';
   /* Felt: Indhold: Overskrift */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -256,7 +268,7 @@ function rebild_mail_subscription_views_default_views() {
   $handler->display->display_options['filters']['created']['table'] = 'node';
   $handler->display->display_options['filters']['created']['field'] = 'created';
   $handler->display->display_options['filters']['created']['operator'] = '>';
-  $handler->display->display_options['filters']['created']['value']['value'] = '-24 hours';
+  $handler->display->display_options['filters']['created']['value']['value'] = '-240 hours';
   $handler->display->display_options['filters']['created']['value']['type'] = 'offset';
 
   /* Display: Latest news */
@@ -310,6 +322,8 @@ function rebild_mail_subscription_views_default_views() {
     t('Sortér efter'),
     t('Stigende'),
     t('Faldende'),
+    t('<p>Seneste nyt fra Rebild Kommune:</p>'),
+    t('<p>Du modtager denne mail fordi du abonnerer på nyheder fra Rebild Kommune.</p>'),
     t('Dato'),
     t('Læs mere'),
     t('Latest news'),
@@ -348,6 +362,18 @@ function rebild_mail_subscription_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['row_class'] = 'newsletter-row';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Overskrift: Global: Tekstområde */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<p>Rebild Kommune har sendt følgende i udbud:</p>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  /* Sidefod: Global: Tekstområde */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<p>Du modtager denne mail fordi du abonnerer på Rebild Kommunes udbud.</p>';
+  $handler->display->display_options['footer']['area']['format'] = 'full_html';
   /* Felt: Indhold: Overskrift */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -631,6 +657,8 @@ function rebild_mail_subscription_views_default_views() {
     t('Sortér efter'),
     t('Stigende'),
     t('Faldende'),
+    t('<p>Rebild Kommune har sendt følgende i udbud:</p>'),
+    t('<p>Du modtager denne mail fordi du abonnerer på Rebild Kommunes udbud.</p>'),
     t('Dato'),
     t('Læs mere'),
     t('Latest offerings'),

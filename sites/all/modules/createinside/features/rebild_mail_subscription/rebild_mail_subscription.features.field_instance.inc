@@ -216,56 +216,9 @@ function rebild_mail_subscription_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-subscription_email-field_subscription_text'
-  $field_instances['node-subscription_email-field_subscription_text'] = array(
-    'bundle' => 'subscription_email',
-    'default_value' => array(
-      0 => array(
-        'value' => '<p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Donec sollicitudin molestie malesuada. Donec rutrum congue leo eget malesuada. Nulla porttitor accumsan tincidunt. Donec sollicitudin molestie malesuada. Donec rutrum congue leo eget malesuada. Donec rutrum congue leo eget malesuada. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
-<p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>',
-        'format' => 'filtered_html',
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_subscription_text',
-    'label' => 'Brødtekst',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 2,
-    ),
-  );
-
   // Translatables
   // Included for use with string extractors like potx.
   t('Abonnementstype');
-  t('Brødtekst');
   t('Confirm status');
   t('Email');
   t('Kontaktliste');
