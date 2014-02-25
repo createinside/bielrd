@@ -177,19 +177,15 @@ function mail_subscription_block_view($delta='') {
    
   switch($delta) {
   	case 'subscribe_form':
-  		$block['title'] = "Tilmeld abonnement";
     	$block['content'] = mail_subscription_subscribe_page_callback();
 		break;
   	case 'unsubscribe_form':
-  		$block['title'] = "Afmeld abonnement";
     	$block['content'] = mail_subscription_unsubscribe_page_callback();
 		break;
   	case 'subscribe_news_form':
-  		$block['title'] = "Abonnér på nyheder";
     	$block['content'] = mail_subscription_subscribe_block($news[0]->tid);
 		break;
   	case 'subscribe_offering_form':
-  		$block['title'] = "Abonnér på udbud";
     	$block['content'] = mail_subscription_subscribe_block($offering[0]->tid);
 		break;
   }
