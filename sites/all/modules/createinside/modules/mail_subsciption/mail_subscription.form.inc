@@ -247,7 +247,8 @@ function mail_subscription_unique_email($email) {
 	$query = new EntityFieldQuery();
 	$query->entityCondition('entity_type', 'entityform')
 	->entityCondition('bundle', 'service_subscriber')
-  ->fieldCondition('field_sub_email', 'email', $email, '=');
+  ->fieldCondition('field_sub_email', 'email', $email, '=')
+	->addMetaData('account', user_load(1));
 	$count = $query->count()->execute();
 
 	if($count>0) return FALSE;

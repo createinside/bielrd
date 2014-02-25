@@ -171,23 +171,22 @@ function mail_subscription_block_info() {
  */
 function mail_subscription_block_view($delta='') {
   $block = array();
- 
+  
+  $news = array_values(taxonomy_get_term_by_name("Nyheder", "subscription_types"));
+  $offering = array_values(taxonomy_get_term_by_name("Udbud", "subscription_types"));
+   
   switch($delta) {
   	case 'subscribe_form':
-  		$block['title'] = "Tilmeld abonnement";
     	$block['content'] = mail_subscription_subscribe_page_callback();
 		break;
   	case 'unsubscribe_form':
-  		$block['title'] = "Afmeld abonnement";
     	$block['content'] = mail_subscription_unsubscribe_page_callback();
 		break;
   	case 'subscribe_news_form':
-  		$block['title'] = "Abonnér på nyheder";
-    	$block['content'] = mail_subscription_subscribe_block(105);
+    	$block['content'] = mail_subscription_subscribe_block($news[0]->tid);
 		break;
   	case 'subscribe_offering_form':
-  		$block['title'] = "Abonnér på udbud";
-    	$block['content'] = mail_subscription_subscribe_block(106);
+    	$block['content'] = mail_subscription_subscribe_block($offering[0]->tid);
 		break;
   }
   
@@ -234,7 +233,7 @@ function mail_subscription_subscriber_load_by_email($email) {
 	$query->entityCondition('entity_type', 'entityform')
 	->entityCondition('bundle', 'service_subscriber')
   ->fieldCondition('field_sub_email', 'email', $email, '=')
-  ->addMetaData('account', user_load(1));
+	->addMetaData('account', user_load(1));
 	$result = $query->execute();
 	
 	if(isset($result["entityform"]) && count($result["entityform"] > 0)) {
