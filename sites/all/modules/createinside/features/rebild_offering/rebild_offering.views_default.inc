@@ -95,11 +95,11 @@ function rebild_offering_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Sorteringskriterie: Indhold: Tilbudsfrist (field_offering_deadline) */
-  $handler->display->display_options['sorts']['field_offering_deadline_value']['id'] = 'field_offering_deadline_value';
-  $handler->display->display_options['sorts']['field_offering_deadline_value']['table'] = 'field_data_field_offering_deadline';
-  $handler->display->display_options['sorts']['field_offering_deadline_value']['field'] = 'field_offering_deadline_value';
-  $handler->display->display_options['sorts']['field_offering_deadline_value']['expose']['label'] = 'Tilbudsfrist (field_offering_deadline)';
+  /* Sorteringskriterie: Indhold: Oprettelsesdato */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   /* Filterkriterie: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -114,14 +114,6 @@ function rebild_offering_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'offering' => 'offering',
   );
-  /* Filterkriterie: Indhold: Tilbudsfrist (field_offering_deadline) */
-  $handler->display->display_options['filters']['field_offering_deadline_value']['id'] = 'field_offering_deadline_value';
-  $handler->display->display_options['filters']['field_offering_deadline_value']['table'] = 'field_data_field_offering_deadline';
-  $handler->display->display_options['filters']['field_offering_deadline_value']['field'] = 'field_offering_deadline_value';
-  $handler->display->display_options['filters']['field_offering_deadline_value']['operator'] = '>';
-  $handler->display->display_options['filters']['field_offering_deadline_value']['granularity'] = 'hour';
-  $handler->display->display_options['filters']['field_offering_deadline_value']['form_type'] = 'date_popup';
-  $handler->display->display_options['filters']['field_offering_deadline_value']['default_date'] = 'now';
 
   /* Display: Blok */
   $handler = $view->new_display('block', 'Blok', 'block_1');
@@ -145,7 +137,6 @@ function rebild_offering_views_default_views() {
     t('[field_offering_link]'),
     t('[view_node] '),
     t('<p>Tilbudsfrist: [field_offering_deadline]</p>'),
-    t('Tilbudsfrist (field_offering_deadline)'),
     t('Blok'),
   );
   $export['offerings'] = $view;
