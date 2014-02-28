@@ -297,3 +297,7 @@ function rebild_page_alter(&$page) {
 		drupal_set_breadcrumb($breadcrumb);
 	}
 }
+
+function rebild_date_all_day_label() { 
+	return ''; 
+}

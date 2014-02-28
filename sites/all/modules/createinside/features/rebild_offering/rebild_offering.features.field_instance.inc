@@ -84,6 +84,7 @@ function rebild_offering_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
+        'display_all_day' => 0,
         'increment' => 15,
         'input_format' => 'd/m/Y - H:i:s',
         'input_format_custom' => '',
@@ -241,9 +242,9 @@ function rebild_offering_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_offering_deadline',
     'label' => 'Tilbudsfrist',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
-      'default_value' => 'now',
+      'default_value' => 'blank',
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
@@ -253,6 +254,7 @@ function rebild_offering_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
+        'display_all_day' => 1,
         'increment' => 15,
         'input_format' => 'd/m/Y - H:i:s',
         'input_format_custom' => '',
