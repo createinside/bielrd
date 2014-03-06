@@ -26,9 +26,7 @@ function mail_subscription_rules_event_info() {
 
 /**
  * Implements hook_rules_action_info()
- * 
 **/ 
-
 function mail_subscription_rules_action_info() {
 	$actions = array(
 	  'mail_subscription_send' => array(
@@ -109,7 +107,7 @@ function mail_subscription_send($node) {
 	$decoded_response = drupal_json_decode($response);
 	
 	if ($decoded_response['message'] == 'success') {
-		drupal_set_message('Email afsendelse gennemfÃ¸rt!');
+		drupal_set_message('Email afsendelse gennemf¿rt!');
 	}
 	else {
 		drupal_set_message('Der opstod en fejl; ' . $decoded_response['errors'][0]);
