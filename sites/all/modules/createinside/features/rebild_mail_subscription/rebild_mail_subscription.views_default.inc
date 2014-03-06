@@ -35,8 +35,7 @@ function rebild_mail_subscription_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Sortér efter';
   $handler->display->display_options['exposed_form']['options']['sort_asc_label'] = 'Stigende';
   $handler->display->display_options['exposed_form']['options']['sort_desc_label'] = 'Faldende';
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['row_class'] = 'newsletter-row';
@@ -356,8 +355,7 @@ function rebild_mail_subscription_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Sortér efter';
   $handler->display->display_options['exposed_form']['options']['sort_asc_label'] = 'Stigende';
   $handler->display->display_options['exposed_form']['options']['sort_desc_label'] = 'Faldende';
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['row_class'] = 'newsletter-row';
@@ -612,6 +610,7 @@ function rebild_mail_subscription_views_default_views() {
   $handler->display->display_options['fields']['field_offering_deadline']['element_type'] = 'span';
   $handler->display->display_options['fields']['field_offering_deadline']['element_label_type'] = 'strong';
   $handler->display->display_options['fields']['field_offering_deadline']['element_wrapper_class'] = 'newsletter-date';
+  $handler->display->display_options['fields']['field_offering_deadline']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_offering_deadline']['settings'] = array(
     'format_type' => 'medium',
     'fromto' => 'both',
@@ -634,6 +633,8 @@ function rebild_mail_subscription_views_default_views() {
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['view_node']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['view_node']['alter']['absolute'] = TRUE;
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['element_wrapper_class'] = 'newsletter-link';
   $handler->display->display_options['fields']['view_node']['text'] = 'Læs mere';

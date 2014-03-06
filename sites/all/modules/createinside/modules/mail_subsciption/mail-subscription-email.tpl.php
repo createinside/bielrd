@@ -37,14 +37,12 @@
 				
 			}
     </style>
-    <div id="center">
-      <div id="main">
       <table cellpadding="0" cellspacing="0" width="100%" style="font-family: Verdana, Arial, sans-serif; color: #474747;">
 				<tr>
-					<td width="100%" style="text-align: center;">
-					<table cellpadding="0" cellspacing="0" width="600px" style="margin: auto; text-align: left; font-family: Verdana, Arial, sans-serif; color: #474747; font-size: 12px;">
+					<td width="100%" align="center">
+					<table cellpadding="0" cellspacing="0" width="600" align="center" style="font-family: Verdana, Arial, sans-serif; color: #474747; font-size: 12px;">
 						<tr>
-							<td style="padding: 20px; text-align: center"><img src="http://www.createinside.com/mailsignatur/rebild/rebild-logo.png" alt="Rebild Kommune Logo" />
+							<td style="padding: 20px;" align="center"><img src="http://www.createinside.com/mailsignatur/rebild/rebild-logo.png" alt="Rebild Kommune Logo" />
 							</td>
 						</tr>
 						<tr>
@@ -53,16 +51,14 @@
 							</td>
 						</tr>
 						<tr>
-							<td style="text-align: center;">
-								<p style="font-size: 12px; margin-top: 10px;"><a href="http://rebild.dk/abonnement">Klik her for at opsige dit abonnement</a></p>
-								<p style="font-size: 11px; margin-top: 20px;">Rebild Kommune - <a href="http://rebild.dk">rebild.dk</a></p>
+							<td align="center">
+								<p style="font-size: 12px; margin-top: 10px;"><a href="http://rebild.dk/abonnement" style="color: #68a386">Klik her for at opsige dit abonnement</a></p>
+								<p style="font-size: 11px; margin-top: 20px;">Rebild Kommune - <a href="http://rebild.dk" style="color: #68a386">rebild.dk</a></p>
 							</td>
 						</tr>
 					</table>
 					</td>
 				</tr>
       </table>
-      </div>
-    </div>
   </body>
 </html>

@@ -90,7 +90,7 @@ function rebild_mail_subscription_default_rules_configuration() {
             "DO" : [
               { "schedule" : {
                   "component" : "rules_service_subscription_mail_news",
-                  "date" : "+24 hours",
+                  "date" : "tomorrow 12:00:00",
                   "identifier" : "subscription-mail-news"
                 }
               }
@@ -151,7 +151,7 @@ function rebild_mail_subscription_default_rules_configuration() {
             "DO" : [
               { "schedule" : {
                   "component" : "rules_service_subscription_mail_offerings",
-                  "date" : "+24 hours",
+                  "date" : "tomorrow 12:00:00",
                   "identifier" : "subscription-mail-offerings"
                 }
               }

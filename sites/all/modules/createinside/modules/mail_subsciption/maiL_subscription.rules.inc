@@ -86,7 +86,7 @@ function mail_subscription_send($node) {
 	    'html'      => $content,
 	    'text'      => $textversion,
 	    'from'      => 'abonnement@rebild.dk',
-	    'fromname'	=> 'Rebild Kommune',	    
+	    'fromname'	=> 'Rebild Kommune',
 	  );	
 	
 	$request =  $url.'api/mail.send.json';
