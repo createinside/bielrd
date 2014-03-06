@@ -114,7 +114,5 @@ function mail_subscription_send($node) {
 	else {
 		drupal_set_message('Der opstod en fejl; ' . $decoded_response['errors'][0]);
 	}	
-	return $response;
-
-	
+	return $response;	
 }
