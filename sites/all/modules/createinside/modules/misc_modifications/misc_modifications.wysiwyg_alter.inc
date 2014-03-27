@@ -38,4 +38,19 @@ function misc_modifications_process_format($element) {
 	return $element;
 }
 
-?>
+/**
+ * LinkIt
+ */
+function misc_modifications_linkit_attributes($profile) {
+  $attributes['anchor'] = array(
+    '#type' => 'textfield',
+    '#title' => "Accordionpunkt",
+    '#description' => "Indtast et tal for at linke direkte til et accordionpunkt. Eks. 2 for det andet punkt i listen.",
+    '#maxlength' => 255,
+    '#size' => 40,
+    '#default_value' => '',
+    '#weight' => isset($profile->data['attributes']['anchor']['weight']) ? $profile->data['attributes']['anchor']['weight'] : 0,
+  );
+
+  return $attributes;
+}
