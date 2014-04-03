@@ -215,7 +215,7 @@ function rebild_general_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_mail';
-  $strongarm->value = 'dev@createinside.com';
+  $strongarm->value = 'rebild.dk@rebild.dk';
   $export['site_mail'] = $strongarm;
 
   $strongarm = new stdClass();

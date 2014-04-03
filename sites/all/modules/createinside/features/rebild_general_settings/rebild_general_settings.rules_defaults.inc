@@ -29,7 +29,13 @@ function rebild_general_settings_default_rules_configuration() {
       "REQUIRES" : [ "rules" ],
       "ON" : [ "user_login" ],
       "IF" : [
-        { "user_has_role" : { "account" : [ "account" ], "roles" : { "value" : { "6" : "6" } } } }
+        { "user_has_role" : { "account" : [ "account" ], "roles" : { "value" : { "6" : "6" } } } },
+        { "text_matches" : {
+            "text" : [ "site:current-page:path" ],
+            "match" : "user",
+            "operation" : "ends"
+          }
+        }
       ],
       "DO" : [ { "redirect" : { "url" : "admin\\/people" } } ]
     }
