@@ -15,28 +15,7 @@ function rebild_workflow_user_cancel_methods_alter(&$methods) {
 	unset($methods["user_cancel_block_unpublish"]);
 	unset($methods["user_cancel_reassign"]);
 	unset($methods["user_cancel_delete"]);
-	
-	// Add a custom zero-out method.
-/*
-  $methods['rebild_workflow_reassign_author'] = array(
-    'title' => "Slet bruger og overdrag indhold",
-    'access' => user_access('administer users'),
-    'description' => "Brugeren slettes fra system og indhold overdrages til en anden bruger."
-  );
-*/
 }
-
-/*
-function rebild_workflow_user_cancel($edit, $account, $method) {
-  switch ($method) {
-    case 'rebild_workflow_reassign_author':
-
-			// Logik til håndtering af sletning af bruger her
-
-    break;	
-	}
-}
-*/
 
 /**
  * Implements hook_menu().
@@ -65,7 +44,7 @@ function rebild_workflow_user_operations() {
 }
 
 /**
- * User Opretion: Delete and Reassign.
+ * User Operation: Delete and Reassign.
  */
 function rebild_workflow_user_delete_reassign($accounts) {
 	$count = count($accounts);
@@ -213,7 +192,6 @@ function rebild_workflow_form_alter(&$form, $form_state, $form_id) {
 	}
 	
 	if ($form_id == 'user_profile_form') {
-		dpm($form);
 		// Remove the cancel user button
 		hide($form["actions"]["cancel"]);
 	}

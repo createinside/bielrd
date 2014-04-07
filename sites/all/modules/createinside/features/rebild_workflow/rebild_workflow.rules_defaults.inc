@@ -68,16 +68,21 @@ function rebild_workflow_default_rules_configuration() {
   $items['rules_outdated_content_processor'] = entity_import('rules_config', '{ "rules_outdated_content_processor" : {
       "LABEL" : "Outdated content processor",
       "PLUGIN" : "rule",
-      "REQUIRES" : [ "rules", "php" ],
+      "REQUIRES" : [ "rules", "rebild_workflow", "php" ],
       "USES VARIABLES" : { "node" : { "label" : "Node", "type" : "node" } },
       "IF" : [
         { "entity_has_field" : { "entity" : [ "node" ], "field" : "field_main_outdated" } }
       ],
       "DO" : [
+        { "rebild_workflow_fetch_revision_editor_or_author" : {
+            "USING" : { "nid" : [ "node:nid" ], "vid" : [ "node:vid" ] },
+            "PROVIDE" : { "revision_author" : { "revision_author" : "Revision author" } }
+          }
+        },
         { "mail" : {
-            "to" : "[node:author:mail]",
+            "to" : "[revision-author:mail]",
             "subject" : "Gennemse indhold p\\u00e5 [site:name]",
-            "message" : "Dette er en automatisk p\\u00e5mindelse om at gennemse og om n\\u00f8dvendigt opdatere f\\u00f8lgende indhold:\\r\\n\\r\\nTitel: [node:title]\\r\\nLink: [node:url]\\r\\n\\r\\nDu f\\u00e5r denne email, fordi du er angivet som forfatter af ovenst\\u00e5ende indhold. ",
+            "message" : "Dette er en automatisk p\\u00e5mindelse om at gennemse og om n\\u00f8dvendigt opdatere f\\u00f8lgende indhold:\\r\\n\\r\\nTitel: [node:title]\\r\\nForfatter: [node:author]\\r\\nSeneste forfatter: [revision-author:name]\\r\\nLink: [node:url]\\r\\n\\r\\nDu f\\u00e5r denne email, fordi du er angivet som seneste forfatter af ovenst\\u00e5ende indhold. ",
             "language" : [ "" ]
           }
         },
@@ -96,6 +101,12 @@ function rebild_workflow_default_rules_configuration() {
             "account" : [ "account" ],
             "roles" : { "value" : { "4" : "4", "5" : "5", "3" : "3" } },
             "operation" : "OR"
+          }
+        },
+        { "text_matches" : {
+            "text" : [ "site:current-page:path" ],
+            "match" : "user",
+            "operation" : "ends"
           }
         }
       ],
@@ -168,11 +179,39 @@ function rebild_workflow_default_rules_configuration() {
       ]
     }
   }');
+  $items['rules_workflow_email_needs_review_published_latest_author'] = entity_import('rules_config', '{ "rules_workflow_email_needs_review_published_latest_author" : {
+      "LABEL" : "Workflow email: Needs review =\\u003E Published (Latest author)",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "workflow" ],
+      "REQUIRES" : [ "workbench_moderation", "rebild_workflow", "rules" ],
+      "ON" : [ "workbench_moderation_after_moderation_transition" ],
+      "IF" : [
+        { "content_is_using_workbench_moderation" : { "node" : [ "node" ] } },
+        { "contents_previous_state" : { "node" : [ "node" ], "moderation_state" : "needs_review" } },
+        { "contents_current_state" : { "node" : [ "node" ], "moderation_state" : "published" } },
+        { "rebild_workflow_content_has_multiple_editors" : { "nid" : [ "node:nid" ] } }
+      ],
+      "DO" : [
+        { "rebild_workflow_fetch_revision_editor" : {
+            "USING" : { "nid" : [ "node:nid" ], "vid" : [ "node:vid" ] },
+            "PROVIDE" : { "revision_author" : { "revision_author" : "Revision author" } }
+          }
+        },
+        { "mail" : {
+            "to" : [ "revision-author:mail" ],
+            "subject" : "Indhold er blevet udgivet",
+            "message" : "F\\u00f8lgende indhold er netop blevet godkendt og udgivet:\\r\\n\\r\\nTitel: [node:title]\\r\\nForfatter: [node:author]\\r\\nSeneste forfatter: [revision-author:name]\\r\\nLink: [node:url]\\r\\n\\r\\nDu f\\u00e5r denne email, fordi du er angivet som seneste forfatter af ovenst\\u00e5ende indhold.",
+            "language" : [ "" ]
+          }
+        }
+      ]
+    }
+  }');
   $items['rules_workflow_email_needs_review_revised'] = entity_import('rules_config', '{ "rules_workflow_email_needs_review_revised" : {
       "LABEL" : "Workflow email: Needs review =\\u003E Revised",
       "PLUGIN" : "reaction rule",
       "TAGS" : [ "workflow" ],
-      "REQUIRES" : [ "workbench_moderation", "rules" ],
+      "REQUIRES" : [ "workbench_moderation", "rebild_workflow", "rules" ],
       "ON" : [ "workbench_moderation_after_moderation_transition" ],
       "IF" : [
         { "content_is_using_workbench_moderation" : { "node" : [ "node" ] } },
@@ -180,10 +219,39 @@ function rebild_workflow_default_rules_configuration() {
         { "contents_current_state" : { "node" : [ "node" ], "moderation_state" : "revised" } }
       ],
       "DO" : [
+        { "rebild_workflow_fetch_revision_editor_or_author" : {
+            "USING" : { "nid" : [ "node:nid" ], "vid" : [ "node:vid" ] },
+            "PROVIDE" : { "revision_author" : { "revision_author" : "Revision author" } }
+          }
+        },
         { "mail" : {
-            "to" : [ "node:author:mail" ],
+            "to" : "[revision-author:mail]",
             "subject" : "Indhold er blevet revideret",
-            "message" : "F\\u00f8lgende indhold er netop blevet revideret og skal gennemses:\\r\\n\\r\\nTitel: [node:title]\\r\\nForfatter: [node:author]\\r\\nLink: [node:edit-url]\\r\\n\\r\\nSe \\u00e6ndringerne igennem og send til godkendelse igen, hvis du ikke har yderligere at tilf\\u00f8je.\\r\\n\\r\\nDu f\\u00e5r denne email, fordi du er angivet som forfatter af ovenst\\u00e5ende indhold.",
+            "message" : "F\\u00f8lgende indhold er netop blevet revideret og skal gennemses:\\r\\n\\r\\nTitel: [node:title]\\r\\nForfatter: [node:author]\\r\\nSeneste forfatter: [revision-author:name]\\r\\nLink: [node:edit-url]\\r\\n\\r\\nSe \\u00e6ndringerne igennem og send til godkendelse igen, hvis du ikke har yderligere at tilf\\u00f8je.\\r\\n\\r\\nDu f\\u00e5r denne email, fordi du er angivet som seneste forfatter af ovenst\\u00e5ende indhold.",
+            "language" : [ "" ]
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_workflow_email_new_author'] = entity_import('rules_config', '{ "rules_workflow_email_new_author" : {
+      "LABEL" : "Workflow email: New author",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "workflow" ],
+      "REQUIRES" : [ "rules" ],
+      "ON" : [ "node_update" ],
+      "IF" : [
+        { "NOT data_is" : {
+            "data" : [ "node:author:uid" ],
+            "value" : [ "node-unchanged:author:uid" ]
+          }
+        }
+      ],
+      "DO" : [
+        { "mail" : {
+            "to" : "[node:author:mail], [node-unchanged:author:mail]",
+            "subject" : "Ny forfatter p\\u00e5 indhold",
+            "message" : "Der er blevet angivet en ny forfatter p\\u00e5 f\\u00f8lgende indhold:\\r\\n\\r\\nTitel: [node:title]\\r\\nTidligere forfatter: [node-unchanged:author:name]\\r\\nNy forfatter: [node:author:name]\\r\\nLink: [node:url]",
             "language" : [ "" ]
           }
         }
