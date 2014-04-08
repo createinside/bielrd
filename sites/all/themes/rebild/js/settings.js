@@ -75,14 +75,14 @@ $(function() {
 		if(hash.indexOf("kategori") != -1) {
 			$header_1 = $("."+hash).closest(".ui-accordion-header");
 			$header_1.click();	
-			$(document).scrollTop($header_1.offset().top);
+			$(document).scrollTop($header_1.offset().top-100);
 		}
 		else if(hash.indexOf("loesning") != -1) {
 			$header_2 = $("."+hash).closest("h3");
 			$header_2.click();
 			$header_1 = $("."+hash).closest("h3").parent().siblings();
 			$header_1.click();
-			$(document).scrollTop($header_2.offset().top);
+			$(document).scrollTop($header_2.offset().top-100);
 		}
 		// Main accordion
 		else if(hash.indexOf("punkt") != -1) {
@@ -93,14 +93,14 @@ $(function() {
 				$header = $("#"+hash);
 				if($header.length>0) {
 					$header.click();
-					$(document).scrollTop($header.offset().top);
+					$(document).scrollTop($header.offset().top-100);
 				}			
 			}
 			else {
 				$header = $("."+hash+" .ui-accordion-header");
 				if($header.length>0) {
 					$header.click();
-					$(document).scrollTop($header.offset().top);
+					$(document).scrollTop($header.offset().top-100);
 				}
 			}
 		}
