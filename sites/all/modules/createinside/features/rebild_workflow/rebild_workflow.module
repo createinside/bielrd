@@ -116,12 +116,21 @@ function rebild_workflow_transfer_form($form, $form_state, $uid) {
  */
 function rebild_workflow_transfer_form_validate($form, &$form_state) {
 
-	$user_from = user_load_by_name($form_state["values"]["author_from"]);
+	if(isset($form_state["storage"])) {
+		$from_name = $form_state['storage']['original_form']['author_from'];
+		$to_name = $form_state['storage']['original_form']['author_to'];	
+	}
+	else {
+		$from_name = $form_state["values"]["author_from"];
+		$to_name = $form_state["values"]["author_to"];
+	}
+	
+	$user_from = user_load_by_name($from_name);
 	if(!$user_from) {
 		form_set_error("author_from", "Brugeren eksisterer ikke");
 	}
 	
-	$user_to = user_load_by_name($form_state["values"]["author_to"]);
+	$user_to = user_load_by_name($to_name);
 	if(!$user_to) {
 		form_set_error("author_to", "Brugeren eksisterer ikke");
 	}
@@ -151,31 +160,42 @@ function rebild_workflow_transfer_form_submit($form, &$form_state) {
 	    'SELECT uid FROM {users} WHERE name = :name',
 	    array(':name' => $from_name)
 	  )->fetchField();
-	  
-	  // Update author
+
+	  // Update author on nodes
 	  db_update('node')
 	    ->fields(array(
 	      'uid' => $to_uid,
 	    ))
 	    ->condition('uid', $from_uid, '=')
 	    ->execute();
+	    
+	  // Update author on node revisions
 	  db_update('node_revision')
 	    ->fields(array(
 	      'uid' => $to_uid,
 	    ))
 	    ->condition('uid', $from_uid, '=')
 	    ->execute();
-	  
+	    
+	  // Update author on node moderation history
+	  db_update('workbench_moderation_node_history')
+	    ->fields(array(
+	      'uid' => $to_uid,
+	    ))
+	    ->condition('uid', $from_uid, '=')
+	    ->execute();
+	    	  
 	  $account = user_load($from_uid);
 	   
 	  // Delete user entirely
 	  user_delete($from_uid);
-	  
-	  drupal_set_message('Indhold er blevet overført fra %from_name til %to_name.', array('%from_name' => $account->name, '%to_name' => $to_name));
-	  drupal_set_message('%name er blevet slettet.', array('%name' => $account->name));
+	  		
+	  drupal_set_message('Indhold er blevet overført fra <em>'.$from_name.'</em> til <em>'.$to_name.'</em>.');
+		drupal_set_message('<em>'.$from_name.'</em> er blevet slettet.');
+
 	  watchdog('rebild_workflow', 'Deleted user: %name %email.', array('%name' => $account->name, '%email' => '<' . $account->mail . '>'), WATCHDOG_NOTICE);
 	
-	  drupal_goto("admin/people");
+	  $form_state["redirect"] = "admin/people";	  
   }
 }
 
