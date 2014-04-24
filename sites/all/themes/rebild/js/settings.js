@@ -58,29 +58,54 @@ $(function() {
   		$(this).parent().siblings('.ctools-jump-menu-button').click();
 		}
 	});
-	// Selfservice accordion - Hash Link
-	var hash = window.location.hash;
-	if(hash!="") {
-		hash = hash.replace("#","");
-		if(hash.indexOf("kategori") != -1) {
-			$header_1 = $("."+hash).closest(".ui-accordion-header");
-			$header_1.click();		
-		}
-		else {
-			$header_2 = $("."+hash).closest("h3");
-			$header_2.click();
-			$header_1 = $("."+hash).closest("h3").parent().siblings();
-			$header_1.click();
-			console.log($header_1);
-		}
-	}
-	// Selfservice accordion - Alphabetical list level 1 + Embedded list level 1
+	// Main Accordion
 	$(".field-name-field-main-accordion").accordion({
     header: ".field-name-field-accordion-title",
     autoHeight: false,
     collapsible: true,
     active: false
 	});	
+	
+	// Hash URL Handling
+	var hash = window.location.hash;
+	if(hash!="") {
+		hash = hash.replace("#","");
+		
+		// Selfservice accordion
+		if(hash.indexOf("kategori") != -1) {
+			$header_1 = $("."+hash).closest(".ui-accordion-header");
+			$header_1.click();	
+			$(document).scrollTop($header_1.offset().top-100);
+		}
+		else if(hash.indexOf("loesning") != -1) {
+			$header_2 = $("."+hash).closest("h3");
+			$header_2.click();
+			$header_1 = $("."+hash).closest("h3").parent().siblings();
+			$header_1.click();
+			$(document).scrollTop($header_2.offset().top-100);
+		}
+		// Main accordion
+		else if(hash.indexOf("punkt") != -1) {
+			if($(".node-type-os2web-borger-dk-article").length==1) {
+			
+				hash = hash.replace("punkt", "mArticle")
+			
+				$header = $("#"+hash);
+				if($header.length>0) {
+					$header.click();
+					$(document).scrollTop($header.offset().top-100);
+				}			
+			}
+			else {
+				$header = $("."+hash+" .ui-accordion-header");
+				if($header.length>0) {
+					$header.click();
+					$(document).scrollTop($header.offset().top-100);
+				}
+			}
+		}
+	}	
+
 	// Expand/Collapse all
 /*
 $('.accordion-expand-collapse a').click(function() {

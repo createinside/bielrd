@@ -3,5 +3,216 @@
  * @file
  * Code for the Workflow indstillinger feature.
  */
-
+ 
 include_once 'rebild_workflow.features.inc';
+
+/**
+ * Implements hook_user_cancel_methods_alter().
+ */
+function rebild_workflow_user_cancel_methods_alter(&$methods) {
+
+	//unset($methods["user_cancel_block"]);
+	unset($methods["user_cancel_block_unpublish"]);
+	unset($methods["user_cancel_reassign"]);
+	unset($methods["user_cancel_delete"]);
+}
+
+/**
+ * Implements hook_menu().
+ */
+function rebild_workflow_menu() {
+  $items['admin/content/transfer/%'] = array(
+  	'access arguments' 	=> array('administer content'),
+    'page callback'     => 'drupal_get_form',
+    'page arguments'    => array('rebild_workflow_transfer_form', 3),
+    'title'             => 'Slet den valgte brugerkonto',
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_user_operations().
+ */
+function rebild_workflow_user_operations() {
+  $operations = array(
+    'delete_reassign' => array(
+      'label' => "Slet den valgte brugerkonto",
+      'callback' => 'rebild_workflow_user_delete_reassign',
+    ),
+  );
+  return $operations;
+}
+
+/**
+ * User Operation: Delete and Reassign.
+ */
+function rebild_workflow_user_delete_reassign($accounts) {
+	$count = count($accounts);
+	
+	// Only allow operation on one user at a time
+	if($count==1) {
+		$account = array_keys($accounts);
+		drupal_goto("admin/content/transfer/".$account[0]);
+	}
+	else {
+		drupal_set_message("Du skal vælge én bruger.", "error");
+	}
+}
+
+/**
+ * Transfer form
+ *
+ * Transfer content from one user to another. Delete original user afterwards.
+ */
+function rebild_workflow_transfer_form($form, $form_state, $uid) {
+
+	$user = user_load($uid);
+	
+	// Regular form
+	if(!isset($form_state['storage']['confirm'])) {
+		$form["description"] = array(
+			'#markup' =>	"Før du sletter brugeren <em>".$user->name."</em>, skal du angive hvilken bruger der skal overtage det indhold, som <em>".$user->name."</em> har oprettet."
+		);
+	  $form['author_from'] = array(
+	    '#autocomplete_path'  => 'user/autocomplete',
+	    '#title'              => "Oprindelig forfatter",
+	    '#type'               => 'textfield',
+	    '#default_value' 			=> $user->name,
+	    '#required' 					=> TRUE,
+	    '#disabled'						=> TRUE,
+	  );
+	  $form['author_to'] = array(
+	    '#autocomplete_path'  => 'user/autocomplete',
+	    '#title'              => "Ny forfatter",
+	    '#type'               => 'textfield',
+	    '#required' 					=> TRUE
+	  );
+	  $form['submit'] = array(
+	    '#type'               => 'submit',
+	    '#value'              => "Udfør",
+	    '#suffix' 						=> l("Annullér", "admin/people")
+	  );
+	  return $form;
+	}
+  
+  // Confirm form
+	else {
+		$desc = "<ul><li>".$form_state['values']['author_from']."</li></ul>";
+		$desc .= "<p>Alt indhold der er oprettet af <em>".$form_state['values']['author_from']."</em> vil blive overdraget til <em>".$form_state['values']['author_to'].".</em></p>";
+	  $desc .=	"<p>Denne handling kan ikke fortrydes.</p>";
+		return confirm_form(
+        $form,
+        'Er du sikker på, at du vil slette denne bruger?',
+        'admin/people',
+        $desc,
+        'Slet bruger',
+        'Annullér'
+     );
+	}     
+}
+
+/**
+ * Transfer form validate
+ */
+function rebild_workflow_transfer_form_validate($form, &$form_state) {
+
+	if(isset($form_state["storage"])) {
+		$from_name = $form_state['storage']['original_form']['author_from'];
+		$to_name = $form_state['storage']['original_form']['author_to'];	
+	}
+	else {
+		$from_name = $form_state["values"]["author_from"];
+		$to_name = $form_state["values"]["author_to"];
+	}
+	
+	$user_from = user_load_by_name($from_name);
+	if(!$user_from) {
+		form_set_error("author_from", "Brugeren eksisterer ikke");
+	}
+	
+	$user_to = user_load_by_name($to_name);
+	if(!$user_to) {
+		form_set_error("author_to", "Brugeren eksisterer ikke");
+	}
+}
+
+/**
+ * Transfer form submit
+ */
+function rebild_workflow_transfer_form_submit($form, &$form_state) {
+
+
+	if(!isset($form_state['storage']['confirm'])) {
+    $form_state['storage']['confirm'] = TRUE;
+    $form_state['storage']['original_form'] = $form_state['values'];
+    $form_state['rebuild'] = TRUE;
+  }
+	else {
+		$from_name = $form_state['storage']['original_form']['author_from'];
+		$to_name = $form_state['storage']['original_form']['author_to'];
+	
+		// Fetch user ids
+	  $to_uid = db_query(
+	    'SELECT uid FROM {users} WHERE name = :name',
+	    array(':name' => $to_name)
+	  )->fetchField();
+	  $from_uid = db_query(
+	    'SELECT uid FROM {users} WHERE name = :name',
+	    array(':name' => $from_name)
+	  )->fetchField();
+
+	  // Update author on nodes
+	  db_update('node')
+	    ->fields(array(
+	      'uid' => $to_uid,
+	    ))
+	    ->condition('uid', $from_uid, '=')
+	    ->execute();
+	    
+	  // Update author on node revisions
+	  db_update('node_revision')
+	    ->fields(array(
+	      'uid' => $to_uid,
+	    ))
+	    ->condition('uid', $from_uid, '=')
+	    ->execute();
+	    
+	  // Update author on node moderation history
+	  db_update('workbench_moderation_node_history')
+	    ->fields(array(
+	      'uid' => $to_uid,
+	    ))
+	    ->condition('uid', $from_uid, '=')
+	    ->execute();
+	    	  
+	  $account = user_load($from_uid);
+	   
+	  // Delete user entirely
+	  user_delete($from_uid);
+	  		
+	  drupal_set_message('Indhold er blevet overført fra <em>'.$from_name.'</em> til <em>'.$to_name.'</em>.');
+		drupal_set_message('<em>'.$from_name.'</em> er blevet slettet.');
+
+	  watchdog('rebild_workflow', 'Deleted user: %name %email.', array('%name' => $account->name, '%email' => '<' . $account->mail . '>'), WATCHDOG_NOTICE);
+	
+	  $form_state["redirect"] = "admin/people";	  
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function rebild_workflow_form_alter(&$form, $form_state, $form_id) {
+
+	if($form_id == 'user_admin_account') {
+		// Remove the cancel user operation
+		unset($form['options']['operation']['#options']['cancel']);
+		// Set the "Delete and reassign" user operation as default option
+		$form['options']['operation']['#default_value'] = "delete_reassign";
+	}
+	
+	if ($form_id == 'user_profile_form') {
+		// Remove the cancel user button
+		hide($form["actions"]["cancel"]);
+	}
+}

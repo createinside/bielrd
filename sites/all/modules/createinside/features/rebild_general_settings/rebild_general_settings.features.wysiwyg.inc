@@ -28,7 +28,6 @@ function rebild_general_settings_wysiwyg_default_profiles() {
           'numlist' => 1,
           'undo' => 1,
           'redo' => 1,
-          'link' => 1,
           'unlink' => 1,
           'formatselect' => 1,
         ),
@@ -37,6 +36,9 @@ function rebild_general_settings_wysiwyg_default_profiles() {
         ),
         'imce' => array(
           'imce' => 1,
+        ),
+        'linkit' => array(
+          'linkit' => 1,
         ),
       ),
       'toolbar_loc' => 'top',
@@ -53,6 +55,7 @@ function rebild_general_settings_wysiwyg_default_profiles() {
       'css_setting' => 'self',
       'css_path' => 'sites/all/themes/rebild/css/wysiwyg.css',
       'css_classes' => '',
+      'buttonorder' => 'bold,italic,bullist,numlist,undo,redo,linkit,unlink,formatselect,pasteword,imce',
     ),
     'rdf_mapping' => array(),
   );
@@ -79,7 +82,7 @@ function rebild_general_settings_wysiwyg_default_profiles() {
           'numlist' => 1,
           'undo' => 1,
           'redo' => 1,
-          'link' => 1,
+          'unlink' => 1,
           'anchor' => 1,
           'image' => 1,
           'cleanup' => 1,
@@ -91,6 +94,9 @@ function rebild_general_settings_wysiwyg_default_profiles() {
         ),
         'table' => array(
           'tablecontrols' => 1,
+        ),
+        'linkit' => array(
+          'linkit' => 1,
         ),
         'drupal' => array(
           'media' => 1,
