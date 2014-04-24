@@ -61,9 +61,9 @@ function rebild_general_settings_default_linkit_profiles() {
       'result_description' => '',
       'bundles' => array(
         'document' => 'document',
-        'image' => 'image',
         'application' => 0,
         'audio' => 0,
+        'image' => 0,
         'video' => 0,
       ),
       'group_by_bundle' => 1,
@@ -99,7 +99,7 @@ function rebild_general_settings_default_linkit_profiles() {
       'use_imce' => 1,
     ),
     'autocomplete' => array(
-      'charLimit' => 3,
+      'charLimit' => 2,
       'wait' => 350,
       'remoteTimeout' => 10000,
     ),
