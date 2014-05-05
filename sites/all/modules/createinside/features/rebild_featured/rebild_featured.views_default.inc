@@ -48,7 +48,7 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'Ingen resultater.';
   $handler->display->display_options['empty']['area']['format'] = 'full_html';
-  /* Forbindelse: Nodekø: Kø */
+  /* Forbindelse: Nodequeue: Queue */
   $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
   $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
@@ -110,7 +110,7 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['fields']['field_featured_summary']['settings'] = array(
     'trim_length' => '100',
   );
-  /* Sorteringskriterie: Nodekø: Placering */
+  /* Sorteringskriterie: Nodequeue: Placering */
   $handler->display->display_options['sorts']['position']['id'] = 'position';
   $handler->display->display_options['sorts']['position']['table'] = 'nodequeue_nodes';
   $handler->display->display_options['sorts']['position']['field'] = 'position';
@@ -139,7 +139,7 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'featured_article' => 'featured_article',
   );
-  /* Filterkriterie: Nodekø: I kø */
+  /* Filterkriterie: Nodequeue: In queue */
   $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
   $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
   $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
@@ -149,7 +149,7 @@ function rebild_featured_views_default_views() {
   /* Display: Forside */
   $handler = $view->new_display('page', 'Forside', 'page');
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Forbindelse: Nodekø: Kø */
+  /* Forbindelse: Nodequeue: Queue */
   $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
   $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
@@ -162,7 +162,7 @@ function rebild_featured_views_default_views() {
     'borger_queue' => 0,
   );
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sorteringskriterie: Nodekø: Placering */
+  /* Sorteringskriterie: Nodequeue: Placering */
   $handler->display->display_options['sorts']['position']['id'] = 'position';
   $handler->display->display_options['sorts']['position']['table'] = 'nodequeue_nodes';
   $handler->display->display_options['sorts']['position']['field'] = 'position';
@@ -189,7 +189,7 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Borger';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Forbindelse: Nodekø: Kø */
+  /* Forbindelse: Nodequeue: Queue */
   $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
   $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
@@ -217,7 +217,7 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'featured_article' => 'featured_article',
   );
-  /* Filterkriterie: Nodekø: I kø */
+  /* Filterkriterie: Nodequeue: In queue */
   $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
   $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
   $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
@@ -230,7 +230,7 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Erhverv';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Forbindelse: Nodekø: Kø */
+  /* Forbindelse: Nodequeue: Queue */
   $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
   $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
@@ -258,7 +258,7 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'featured_article' => 'featured_article',
   );
-  /* Filterkriterie: Nodekø: I kø */
+  /* Filterkriterie: Nodequeue: In queue */
   $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
   $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
   $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
@@ -271,7 +271,7 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Politik';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Forbindelse: Nodekø: Kø */
+  /* Forbindelse: Nodequeue: Queue */
   $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
   $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
@@ -299,7 +299,7 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'featured_article' => 'featured_article',
   );
-  /* Filterkriterie: Nodekø: I kø */
+  /* Filterkriterie: Nodequeue: In queue */
   $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
   $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
   $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
@@ -307,12 +307,12 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['filters']['in_queue']['value'] = '1';
   $handler->display->display_options['path'] = 'politik';
 
-  /* Display: Bo i Rebild */
-  $handler = $view->new_display('page', 'Bo i Rebild', 'page_4');
+  /* Display: Kom til Rebild */
+  $handler = $view->new_display('page', 'Kom til Rebild', 'page_4');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Bo i Rebild';
+  $handler->display->display_options['title'] = 'Kom til Rebild';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Forbindelse: Nodekø: Kø */
+  /* Forbindelse: Nodequeue: Queue */
   $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
   $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
@@ -340,13 +340,13 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'featured_article' => 'featured_article',
   );
-  /* Filterkriterie: Nodekø: I kø */
+  /* Filterkriterie: Nodequeue: In queue */
   $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
   $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
   $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
   $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
   $handler->display->display_options['filters']['in_queue']['value'] = '1';
-  $handler->display->display_options['path'] = 'bo-i-rebild';
+  $handler->display->display_options['path'] = 'kom-til-rebild';
   $translatables['rebild_frontpage'] = array(
     t('Master'),
     t('Fokus'),
@@ -357,12 +357,12 @@ function rebild_featured_views_default_views() {
     t('Stigende'),
     t('Faldende'),
     t('Ingen resultater.'),
-    t('kø'),
+    t('queue'),
     t('Forside'),
     t('Borger'),
     t('Erhverv'),
     t('Politik'),
-    t('Bo i Rebild'),
+    t('Kom til Rebild'),
   );
   $export['rebild_frontpage'] = $view;
 
