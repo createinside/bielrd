@@ -116,6 +116,29 @@ Nodes
 				color: $link-color-hover;
 			}	
 		}
+		> li.last > a {
+			position: relative;
+		}
+		> li.last > a:after {
+			font-family: 'Rebild';
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+		
+			/* Better Font Rendering =========== */
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;			
+			content: "\e600";
+			color: #f04f0f;
+			
+			position: absolute;
+			right: 0;
+			bottom:  0;
+			font-size: 2.25em;
+		}
 	}
 }
 
