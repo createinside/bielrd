@@ -27,6 +27,7 @@ regions[bottom] = 'Bottom'
 regions[ultimenu_main_borger] = 'Ultimenu:main: Borger'
 regions[ultimenu_main_erhverv] = 'Ultimenu:main: Erhverv'
 regions[ultimenu_main_politik] = 'Ultimenu:main: Politik'
+regions[ultimenu_main_kom_til_rebild] = Ultimenu:main: Kom til Rebild
 regions[ultimenu_main_bo_i_rebild] = 'Ultimenu:main: Bo i Rebild'
 zones[header] = 'Header'
 zones[content] = 'Content'

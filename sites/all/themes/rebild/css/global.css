@@ -77,16 +77,18 @@ Backend
 }
 
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
-/* line 30, ../sass/partials/_fonts.scss */
-[data-icon]:before {
+/* line 33, ../sass/partials/_fonts.scss */
+[class^="icon-"], [class*=" icon-"] {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /**
@@ -98,204 +100,197 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-/* line 44, ../sass/partials/_fonts.scss */
-.icon-reorder, .icon-rss, .icon-envelope, .icon-double-angle-right, .icon-double-angle-left, .icon-double-angle-down, .icon-double-angle-up, .icon-list-ul, .icon-facebook, .icon-align-justify, .icon-phone, .icon-sort, .icon-arrow-right, .icon-arrow-left, .icon-arrow-up, .icon-arrow-down, .icon-menu, .icon-arrow-right-2, .icon-arrow-up-2, .icon-arrow-down-2, .icon-arrow-left-2, .icon-home, .icon-untitled, .icon-mobil_logo, .icon-bottom_logo, .icon-close, .icon-plus, .icon-minus, .icon-images, .icon-compass, .icon-images-2, .icon-plus-2, .icon-minus-2, .icon-printer, .icon-volume, .icon-money, .icon-search, .icon-pil2 {
-  font-family: 'Rebild';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
+/* line 48, ../sass/partials/_fonts.scss */
+.icon-og_bliv_her2:before {
+  content: "\e600";
 }
 
-/* line 54, ../sass/partials/_fonts.scss */
+/* line 51, ../sass/partials/_fonts.scss */
 .icon-reorder:before {
   content: "\f0c9";
 }
 
-/* line 57, ../sass/partials/_fonts.scss */
+/* line 54, ../sass/partials/_fonts.scss */
 .icon-rss:before {
-  content: "\f09e";
+  content: "\f09f";
 }
 
-/* line 60, ../sass/partials/_fonts.scss */
+/* line 57, ../sass/partials/_fonts.scss */
 .icon-envelope:before {
   content: "\f003";
 }
 
-/* line 63, ../sass/partials/_fonts.scss */
+/* line 60, ../sass/partials/_fonts.scss */
 .icon-double-angle-right:before {
   content: "\f101";
 }
 
-/* line 66, ../sass/partials/_fonts.scss */
+/* line 63, ../sass/partials/_fonts.scss */
 .icon-double-angle-left:before {
   content: "\f100";
 }
 
-/* line 69, ../sass/partials/_fonts.scss */
+/* line 66, ../sass/partials/_fonts.scss */
 .icon-double-angle-down:before {
   content: "\f103";
 }
 
-/* line 72, ../sass/partials/_fonts.scss */
+/* line 69, ../sass/partials/_fonts.scss */
 .icon-double-angle-up:before {
   content: "\f102";
 }
 
-/* line 75, ../sass/partials/_fonts.scss */
+/* line 72, ../sass/partials/_fonts.scss */
 .icon-list-ul:before {
   content: "\f0ca";
 }
 
-/* line 78, ../sass/partials/_fonts.scss */
+/* line 75, ../sass/partials/_fonts.scss */
 .icon-facebook:before {
   content: "\f09a";
 }
 
-/* line 81, ../sass/partials/_fonts.scss */
+/* line 78, ../sass/partials/_fonts.scss */
 .icon-align-justify:before {
   content: "\f039";
 }
 
-/* line 84, ../sass/partials/_fonts.scss */
+/* line 81, ../sass/partials/_fonts.scss */
 .icon-phone:before {
   content: "\f095";
 }
 
-/* line 87, ../sass/partials/_fonts.scss */
+/* line 84, ../sass/partials/_fonts.scss */
 .icon-sort:before {
   content: "\f0dc";
 }
 
-/* line 90, ../sass/partials/_fonts.scss */
+/* line 87, ../sass/partials/_fonts.scss */
 .icon-arrow-right:before {
   content: "\f061";
 }
 
-/* line 93, ../sass/partials/_fonts.scss */
+/* line 90, ../sass/partials/_fonts.scss */
 .icon-arrow-left:before {
   content: "\f060";
 }
 
-/* line 96, ../sass/partials/_fonts.scss */
+/* line 93, ../sass/partials/_fonts.scss */
 .icon-arrow-up:before {
   content: "\f062";
 }
 
-/* line 99, ../sass/partials/_fonts.scss */
+/* line 96, ../sass/partials/_fonts.scss */
 .icon-arrow-down:before {
   content: "\f063";
 }
 
-/* line 102, ../sass/partials/_fonts.scss */
+/* line 99, ../sass/partials/_fonts.scss */
 .icon-menu:before {
   content: "\e000";
 }
 
-/* line 105, ../sass/partials/_fonts.scss */
-.icon-arrow-right-2:before {
+/* line 102, ../sass/partials/_fonts.scss */
+.icon-arrow-right2:before {
   content: "\e001";
 }
 
-/* line 108, ../sass/partials/_fonts.scss */
-.icon-arrow-up-2:before {
+/* line 105, ../sass/partials/_fonts.scss */
+.icon-arrow-up2:before {
   content: "\e002";
 }
 
-/* line 111, ../sass/partials/_fonts.scss */
+/* line 108, ../sass/partials/_fonts.scss */
 .icon-arrow-down-2:before {
   content: "\e003";
 }
 
-/* line 114, ../sass/partials/_fonts.scss */
-.icon-arrow-left-2:before {
+/* line 111, ../sass/partials/_fonts.scss */
+.icon-arrow-left2:before {
   content: "\e004";
 }
 
-/* line 117, ../sass/partials/_fonts.scss */
+/* line 114, ../sass/partials/_fonts.scss */
 .icon-home:before {
   content: "\e005";
 }
 
-/* line 120, ../sass/partials/_fonts.scss */
+/* line 117, ../sass/partials/_fonts.scss */
 .icon-untitled:before {
   content: "\e006";
 }
 
-/* line 123, ../sass/partials/_fonts.scss */
+/* line 120, ../sass/partials/_fonts.scss */
 .icon-mobil_logo:before {
   content: "\e007";
 }
 
-/* line 126, ../sass/partials/_fonts.scss */
+/* line 123, ../sass/partials/_fonts.scss */
 .icon-bottom_logo:before {
   content: "\e009";
 }
 
-/* line 129, ../sass/partials/_fonts.scss */
+/* line 126, ../sass/partials/_fonts.scss */
 .icon-close:before {
   content: "\e008";
 }
 
-/* line 132, ../sass/partials/_fonts.scss */
+/* line 129, ../sass/partials/_fonts.scss */
 .icon-plus:before {
   content: "\e00a";
 }
 
-/* line 135, ../sass/partials/_fonts.scss */
+/* line 132, ../sass/partials/_fonts.scss */
 .icon-minus:before {
   content: "\e00c";
 }
 
-/* line 138, ../sass/partials/_fonts.scss */
+/* line 135, ../sass/partials/_fonts.scss */
 .icon-images:before {
   content: "\e00b";
 }
 
-/* line 141, ../sass/partials/_fonts.scss */
+/* line 138, ../sass/partials/_fonts.scss */
 .icon-compass:before {
   content: "\e00d";
 }
 
-/* line 144, ../sass/partials/_fonts.scss */
-.icon-images-2:before {
+/* line 141, ../sass/partials/_fonts.scss */
+.icon-images2:before {
   content: "\e00e";
 }
 
-/* line 147, ../sass/partials/_fonts.scss */
-.icon-plus-2:before {
+/* line 144, ../sass/partials/_fonts.scss */
+.icon-plus2:before {
   content: "\e00f";
 }
 
-/* line 150, ../sass/partials/_fonts.scss */
-.icon-minus-2:before {
+/* line 147, ../sass/partials/_fonts.scss */
+.icon-minus2:before {
   content: "\e010";
 }
 
-/* line 153, ../sass/partials/_fonts.scss */
+/* line 150, ../sass/partials/_fonts.scss */
 .icon-printer:before {
   content: "\e011";
 }
 
-/* line 156, ../sass/partials/_fonts.scss */
+/* line 153, ../sass/partials/_fonts.scss */
 .icon-volume:before {
   content: "\e012";
 }
 
-/* line 159, ../sass/partials/_fonts.scss */
+/* line 156, ../sass/partials/_fonts.scss */
 .icon-money:before {
   content: "\f0d6";
 }
 
-/* line 162, ../sass/partials/_fonts.scss */
+/* line 159, ../sass/partials/_fonts.scss */
 .icon-search:before {
   content: "\e013";
 }
 
-/* line 165, ../sass/partials/_fonts.scss */
+/* line 162, ../sass/partials/_fonts.scss */
 .icon-pil2:before {
   content: "\e014";
 }
@@ -416,13 +411,15 @@ select {
   margin-top: 0.8em;
   padding-right: 0.3em;
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\e000";
 }
 
@@ -676,49 +673,69 @@ Pager
 /* line 150, ../sass/partials/_navigation.scss */
 #region-mobile-menu .accordion-header:after {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\e00a";
   position: absolute;
   font-size: 0.8em;
   right: 1em;
   top: 1.3em;
 }
-/* line 158, ../sass/partials/_navigation.scss */
+/* line 160, ../sass/partials/_navigation.scss */
+#region-mobile-menu .accordion-header.last span:after {
+  font-family: 'Rebild';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e600";
+  color: white;
+  position: absolute;
+  top: 3px;
+  font-size: 2.25em;
+}
+/* line 179, ../sass/partials/_navigation.scss */
 #region-mobile-menu .ui-accordion-content {
   margin: 0;
   padding: 5px 25px;
   border: 0;
   top: 0;
 }
-/* line 164, ../sass/partials/_navigation.scss */
+/* line 185, ../sass/partials/_navigation.scss */
 #region-mobile-menu .ui-accordion-content ul.menu li {
   margin-bottom: 15px;
   line-height: 1.25em;
 }
-/* line 167, ../sass/partials/_navigation.scss */
+/* line 188, ../sass/partials/_navigation.scss */
 #region-mobile-menu .ui-accordion-content ul.menu li > ul {
   display: none;
 }
-/* line 170, ../sass/partials/_navigation.scss */
+/* line 191, ../sass/partials/_navigation.scss */
 #region-mobile-menu .ui-accordion-content ul.menu li a {
   color: white;
   text-decoration: none;
 }
-/* line 173, ../sass/partials/_navigation.scss */
+/* line 194, ../sass/partials/_navigation.scss */
 #region-mobile-menu .ui-accordion-content ul.menu li a span {
   display: none;
 }
-/* line 177, ../sass/partials/_navigation.scss */
+/* line 198, ../sass/partials/_navigation.scss */
 #region-mobile-menu .ui-accordion-content ul.menu li .active-trail {
   font-weight: bold;
 }
-/* line 184, ../sass/partials/_navigation.scss */
+/* line 205, ../sass/partials/_navigation.scss */
 #region-mobile-menu .accordion-header.ui-state-active {
   background: #528d6f;
   border-bottom: 0;
@@ -726,29 +743,31 @@ Pager
   -moz-box-shadow: 0;
   box-shadow: 0;
 }
-/* line 189, ../sass/partials/_navigation.scss */
+/* line 210, ../sass/partials/_navigation.scss */
 #region-mobile-menu .accordion-header.ui-state-active:after {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\e00c";
   position: absolute;
   font-size: 0.8em;
   right: 1em;
   top: 1.3em;
 }
-/* line 197, ../sass/partials/_navigation.scss */
+/* line 218, ../sass/partials/_navigation.scss */
 #region-mobile-menu .ui-accordion-content {
   background: #528d6f;
 }
 
 /* Overlay */
-/* line 202, ../sass/partials/_navigation.scss */
+/* line 223, ../sass/partials/_navigation.scss */
 #mobile-overlay {
   background: black;
   position: fixed;
@@ -766,7 +785,7 @@ Pager
   transition: opacity 0.3s ease;
 }
 
-/* line 214, ../sass/partials/_navigation.scss */
+/* line 235, ../sass/partials/_navigation.scss */
 #mobile-overlay.active {
   height: 100%;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
@@ -776,20 +795,20 @@ Pager
 /*------------------------------------------------------------------
 	Footer Menus
 -------------------------------------------------------------------*/
-/* line 225, ../sass/partials/_navigation.scss */
+/* line 246, ../sass/partials/_navigation.scss */
 #zone-footer .block-menu-block ul li {
   margin-bottom: 6px;
 }
-/* line 227, ../sass/partials/_navigation.scss */
+/* line 248, ../sass/partials/_navigation.scss */
 #zone-footer .block-menu-block ul li span {
   display: none;
 }
-/* line 230, ../sass/partials/_navigation.scss */
+/* line 251, ../sass/partials/_navigation.scss */
 #zone-footer .block-menu-block ul li a {
   color: #6b6b6b;
   line-height: 1.25em;
 }
-/* line 234, ../sass/partials/_navigation.scss */
+/* line 255, ../sass/partials/_navigation.scss */
 #zone-footer .block-menu-block ul li a:hover {
   text-decoration: underline;
 }
@@ -797,7 +816,7 @@ Pager
 /*------------------------------------------------------------------
 	Breadcrumbs		
 -------------------------------------------------------------------*/
-/* line 247, ../sass/partials/_navigation.scss */
+/* line 268, ../sass/partials/_navigation.scss */
 #breadcrumb {
   font-size: 0.91667em;
   line-height: 1.5;
@@ -805,14 +824,14 @@ Pager
   margin-bottom: 20px;
   text-shadow: white 1px 1px 1px;
 }
-/* line 253, ../sass/partials/_navigation.scss */
+/* line 274, ../sass/partials/_navigation.scss */
 #breadcrumb a, #breadcrumb strong {
   color: #474747;
   text-decoration: none;
   position: relative;
   top: -1px;
 }
-/* line 259, ../sass/partials/_navigation.scss */
+/* line 280, ../sass/partials/_navigation.scss */
 #breadcrumb span {
   font-size: 1.25em;
 }
@@ -820,15 +839,15 @@ Pager
 /*------------------------------------------------------------------
 	Tabs
 -------------------------------------------------------------------*/
-/* line 268, ../sass/partials/_navigation.scss */
+/* line 289, ../sass/partials/_navigation.scss */
 ul.tabs {
   margin-bottom: 20px;
 }
-/* line 270, ../sass/partials/_navigation.scss */
+/* line 291, ../sass/partials/_navigation.scss */
 ul.tabs li {
   margin-right: 0.5em;
 }
-/* line 272, ../sass/partials/_navigation.scss */
+/* line 293, ../sass/partials/_navigation.scss */
 ul.tabs li a {
   color: #474747;
   text-decoration: none;
@@ -840,11 +859,11 @@ ul.tabs li a {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 279, ../sass/partials/_navigation.scss */
+/* line 300, ../sass/partials/_navigation.scss */
 ul.tabs li a:hover {
   text-decoration: underline;
 }
-/* line 284, ../sass/partials/_navigation.scss */
+/* line 305, ../sass/partials/_navigation.scss */
 ul.tabs li.active a {
   background-color: white;
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
@@ -855,12 +874,12 @@ ul.tabs li.active a {
 /*------------------------------------------------------------------
   Pager
 -------------------------------------------------------------------*/
-/* line 296, ../sass/partials/_navigation.scss */
+/* line 317, ../sass/partials/_navigation.scss */
 .item-list ul.pager li {
   margin: 0 5px;
   padding: 0;
 }
-/* line 304, ../sass/partials/_navigation.scss */
+/* line 325, ../sass/partials/_navigation.scss */
 .item-list ul.pager li.pager-current a {
   font-weight: bold;
 }
@@ -1015,13 +1034,15 @@ Share nodes
 /* line 49, ../sass/partials/_nodes.scss */
 #region-content .node .field-name-field-main-gis-map .field-label:before {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\e00d";
   margin-right: 0.5em;
 }
@@ -1162,13 +1183,15 @@ Share nodes
 #region-content .node-calendar-post .field-name-field-main-image-gallery .field-label:before,
 #region-content .node-offering .field-name-field-main-image-gallery .field-label:before {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\e00e";
   margin-right: 0.5em;
   font-size: 1.5em;
@@ -1248,13 +1271,15 @@ Share nodes
 #region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header > a .field-content:before,
 #region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header .field-item:before {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\e00f";
   margin-right: 0.5em;
 }
@@ -1286,13 +1311,15 @@ Share nodes
 #region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header.ui-state-active a .field-content:before,
 #region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header.ui-state-active .field-item:before {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\e010";
   margin-right: 0.5em;
 }
@@ -1346,13 +1373,15 @@ Share nodes
 /* line 258, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle h2.mArticle:before {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\e00f";
   margin-right: 0.5em;
 }
@@ -1424,13 +1453,15 @@ Share nodes
 /* line 322, ../sass/partials/_nodes.scss */
 #region-content .node-offering .field-name-field-offering-link a:after {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\f061";
   color: #937ea7;
   background: white;
@@ -1565,13 +1596,15 @@ Share nodes
 /* line 447, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .to_the_top .go-top:after {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-style: normal;
   margin-left: 5px;
   content: "\e014";
@@ -1755,13 +1788,15 @@ Share nodes
 /* line 94, ../sass/partials/_blocks.scss */
 #region-content-sidebar .block div.content ul li:before {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\f101";
   color: #7f9dcd;
   margin: 0.2em 0 -1.1em 0;
@@ -1954,13 +1989,15 @@ Share nodes
 /* line 263, ../sass/partials/_blocks.scss */
 #region-header-first .block p.arrow-link a:after {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\f061";
   color: #68a386;
   background: #00473e;
@@ -1994,13 +2031,15 @@ Share nodes
   top: 0;
   right: 0;
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\e000";
 }
 /* line 295, ../sass/partials/_blocks.scss */
@@ -2098,13 +2137,15 @@ Share nodes
 /* line 371, ../sass/partials/_blocks.scss */
 #region-postscript-first .block-block .content ul li:before {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\f101";
   margin-right: 5px;
 }
@@ -2631,13 +2672,15 @@ Share nodes
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 .content p.arrow-link a:after,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 .content p.arrow-link a:after {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\f061";
   color: #68a386;
   background: #00473e;
@@ -2683,13 +2726,15 @@ Share nodes
   top: 0;
   right: 0;
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\e000";
 }
 /* line 803, ../sass/partials/_blocks.scss */
@@ -2724,13 +2769,15 @@ Share nodes
 .not-front #region-sidebar-first .block-selfservice-blocks-block-1 ul li span:before,
 .not-front #region-sidebar-first .block-selfservice-landing-block-1 ul li span:before {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\f101";
   margin-right: 0.5em;
 }
@@ -2853,13 +2900,15 @@ div.workbench-info-block a {
 /* line 921, ../sass/partials/_blocks.scss */
 .wcag-block.read-aloud .content a:before {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\e012";
   margin-right: 7px;
   font-size: 1.3em;
@@ -2877,13 +2926,15 @@ div.workbench-info-block a {
 /* line 938, ../sass/partials/_blocks.scss */
 .wcag-block.print .content a:before {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\e011";
   margin-right: 7px;
   font-size: 1.3em;
@@ -2991,13 +3042,15 @@ div.workbench-info-block a {
 /* line 1018, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-textfield:before {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\e013";
   z-index: 1;
   position: absolute;
@@ -3100,13 +3153,15 @@ div.workbench-info-block a {
 /* line 1087, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .form-type-textfield:before {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\e013";
   z-index: 1;
   position: absolute;
@@ -3512,13 +3567,15 @@ div.workbench-info-block a {
 /* line 122, ../sass/partials/_views.scss */
 .view-id-calendar_sidebar .view-footer .calendar_view_all a:after {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\f061";
   color: #FFFFFF;
   background: #474747;
@@ -3626,13 +3683,15 @@ div.workbench-info-block a {
 /* line 209, ../sass/partials/_views.scss */
 .view-id-calendar_frontpage .calendar_view_all a:after {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\f061";
   color: #FFFFFF;
   background: #474747;
@@ -3718,13 +3777,15 @@ div.workbench-info-block a {
 #block-views-news-articles-block-3 .view-header .news_view_all a:after,
 #block-views-news-articles-block-4 .view-header .news_view_all a:after {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\f061";
   color: #FFFFFF;
   background: #474747;
@@ -3819,13 +3880,15 @@ div.workbench-info-block a {
   right: 3%;
   top: 33%;
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\e001";
 }
 /* line 323, ../sass/partials/_views.scss */
@@ -3942,13 +4005,15 @@ div.workbench-info-block a {
 /* line 405, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping > .ui-accordion-header:before {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\e00f";
   margin-right: 0.5em;
 }
@@ -3960,13 +4025,15 @@ div.workbench-info-block a {
 /* line 414, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-emner .view-grouping > .ui-accordion-header.ui-state-active:before {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\e010";
   margin-right: 0.5em;
 }
@@ -4001,13 +4068,15 @@ div.workbench-info-block a {
 #region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content > h3:before,
 #region-content .view-selfservice-items.view-display-id-embedded .view-content > h3:before {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\e00f";
   margin-right: 0.5em;
 }
@@ -4028,13 +4097,15 @@ div.workbench-info-block a {
 #region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content > h3.ui-state-active:before,
 #region-content .view-selfservice-items.view-display-id-embedded .view-content > h3.ui-state-active:before {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\e010";
   margin-right: 0.5em;
 }
@@ -4107,13 +4178,15 @@ div.workbench-info-block a {
 #region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-link a:after,
 #region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .views-field-field-self-service-pdf a:after {
   font-family: 'Rebild';
-  content: attr(data-icon);
   speak: none;
+  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\f061";
   color: #937ea7;
   background: white;
@@ -4480,7 +4553,7 @@ img {
 .page-borger .block-system-main,
 .page-erhverv .block-system-main,
 .page-politik .block-system-main,
-.page-bo-i-rebild .block-system-main {
+.page-kom-til-rebild .block-system-main {
   padding: 0;
   background: transparent;
   -webkit-box-shadow: none;

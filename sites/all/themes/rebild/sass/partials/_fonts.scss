@@ -6,13 +6,16 @@
 
 @mixin icon-prepare() {
 	font-family: 'Rebild';
-	content: attr(data-icon);
 	speak: none;
+	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
+
+	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 @font-face {
@@ -27,7 +30,7 @@
 }
 
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
-[data-icon]:before {
+[class^="icon-"], [class*=" icon-"] {
 	@include icon-prepare();
 }
 
@@ -41,21 +44,15 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-reorder, .icon-rss, .icon-envelope, .icon-double-angle-right, .icon-double-angle-left, .icon-double-angle-down, .icon-double-angle-up, .icon-list-ul, .icon-facebook, .icon-align-justify, .icon-phone, .icon-sort, .icon-arrow-right, .icon-arrow-left, .icon-arrow-up, .icon-arrow-down, .icon-menu, .icon-arrow-right-2, .icon-arrow-up-2, .icon-arrow-down-2, .icon-arrow-left-2, .icon-home, .icon-untitled, .icon-mobil_logo, .icon-bottom_logo, .icon-close, .icon-plus, .icon-minus, .icon-images, .icon-compass, .icon-images-2, .icon-plus-2, .icon-minus-2, .icon-printer, .icon-volume, .icon-money, .icon-search, .icon-pil2 {
-	font-family: 'Rebild';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
+
+.icon-og_bliv_her2:before {
+	content: "\e600";
 }
 .icon-reorder:before {
 	content: "\f0c9";
 }
 .icon-rss:before {
-	content: "\f09e";
+	content: "\f09f";
 }
 .icon-envelope:before {
 	content: "\f003";
@@ -102,16 +99,16 @@ you can use the generic selector below, but it's slower:
 .icon-menu:before {
 	content: "\e000";
 }
-.icon-arrow-right-2:before {
+.icon-arrow-right2:before {
 	content: "\e001";
 }
-.icon-arrow-up-2:before {
+.icon-arrow-up2:before {
 	content: "\e002";
 }
 .icon-arrow-down-2:before {
 	content: "\e003";
 }
-.icon-arrow-left-2:before {
+.icon-arrow-left2:before {
 	content: "\e004";
 }
 .icon-home:before {
@@ -141,13 +138,13 @@ you can use the generic selector below, but it's slower:
 .icon-compass:before {
 	content: "\e00d";
 }
-.icon-images-2:before {
+.icon-images2:before {
 	content: "\e00e";
 }
-.icon-plus-2:before {
+.icon-plus2:before {
 	content: "\e00f";
 }
-.icon-minus-2:before {
+.icon-minus2:before {
 	content: "\e010";
 }
 .icon-printer:before {

@@ -35,6 +35,9 @@ Landingpage
 		> li {
 			padding: 0 12px;			
 		}
+		> li.last > a:after {
+			right: 15px;
+		}
 	}
 }
  
