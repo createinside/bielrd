@@ -62,7 +62,7 @@
 					<td width="100%" align="center">
 					<table cellpadding="0" cellspacing="0" width="600" align="center" style="font-family: Verdana, Arial, sans-serif; color: #474747; font-size: 12px;">
 						<tr>
-							<td style="padding: 20px; text-align: center"><img src="http://www.createinside.com/mailsignatur/rebild/rebild-logo.png" alt="Rebild Kommune Logo" />
+							<td style="padding: 20px; text-align: center"><img src="http://rebild.dk/sites/all/themes/rebild/img/emailbilleder/rebild-logo.png" alt="Rebild Kommune Logo" />
 							</td>
 						</tr>
 						<tr>
