@@ -22,7 +22,7 @@ function rebild_workflow_user_cancel_methods_alter(&$methods) {
  */
 function rebild_workflow_menu() {
   $items['admin/content/transfer/%'] = array(
-  	'access arguments' 	=> array('administer content'),
+  	'access arguments' 	=> array('administer users'),
     'page callback'     => 'drupal_get_form',
     'page arguments'    => array('rebild_workflow_transfer_form', 3),
     'title'             => 'Slet den valgte brugerkonto',
