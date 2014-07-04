@@ -96,6 +96,17 @@ $(function() {
 					$(document).scrollTop($header.offset().top-100);
 				}			
 			}
+			else if($(".node-type-agenda").length==1) {
+			
+				hash = hash.replace("punkt", "views-row-");
+				
+				$header = $("."+hash+" .ui-accordion-header");
+				if($header.length>0) {
+					$header.click();
+					$(document).scrollTop($header.offset().top-100);
+				}			
+			
+			}
 			else {
 				$header = $("."+hash+" .ui-accordion-header");
 				if($header.length>0) {
