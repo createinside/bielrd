@@ -66,7 +66,7 @@ function mail_subscription_permission() {
  * Show send tab only on specific content type.
  */
 function mail_subscription_addtab_totype_access_callback($node) {
-	return $node->type == 'subscription_email' && user_access('access content');
+	return $node->type == 'subscription_email' && user_access('administer sendgrid email');
 }
 
 /**
