@@ -68,9 +68,17 @@ img {
 /*------------------------------------------------------------------
 	Sections
 -------------------------------------------------------------------*/
+#section-header {
+	position: relative;
+	z-index: 2;
+}
 #section-content {
-	padding: $spacing-std 0 0;
 	background: transparent url("../img/noise_bg_repeat.png") repeat;	
+}
+.not-front {
+	#section-content {
+		padding: $spacing-std 0 0;	
+	}
 }
 
 /*------------------------------------------------------------------
@@ -89,7 +97,8 @@ img {
 }
 #zone-header-wrapper {
 	color: white;
-	background: transparent url("../img/noise_bg_repeat.png") repeat;	
+	background: $bg-color-header;
+	margin-bottom: $spacing-std*2;
 }
 #zone-preface-wrapper {
 	display: none;

@@ -29,6 +29,16 @@ Landingpage
 	Menus
 -------------------------------------------------------------------*/
 
+#zone-menu-wrapper.stuck {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	.logo-img {
+		opacity: 0;
+	}
+}
+
+
 /* Main Menu - (Mega Menu) */
 #region-menu {
 	ul.ultimenu {
@@ -51,15 +61,10 @@ Landingpage
 	Frontpage
 -------------------------------------------------------------------*/
 .front {
-	#region-header-first {
-		.block {
-			background-position: 250px -110px;
-		}	
-	} 
 	#region-content {
 		.view {
 			.views-row {
-				height: 338px;
+				height: 345px;
 				margin-bottom: $spacing-std;
 			}
 		}
@@ -68,28 +73,14 @@ Landingpage
 		.block {
 				margin-bottom: $spacing-std;
 		}
-		.block-views {
-			height: 463px;
+		.block-news-articles-block {
+			height: 430px;
 			.views-row {
 				
 			}
 		}
 		.block-block {
 			height: 210px;
-		}
-	}
-	#region-postscript-first {
-		.block {
-			.content {
-				height: 123px;
-			}
-		}
-	}
-	#region-postscript-second {
-		.block {
-			.content {
-				height: 123px;
-			}
 		}
 	}
 }
@@ -156,10 +147,10 @@ Landingpage
 /* Calendar - frontpage */
 .view-id-calendar_frontpage {
 	.rebild-calendar {
-		.calendar_right {
-			width: 137px;
-			float: left;
-		}
+		width: 50%;
+	}
+	.post1 , .post2, .post3, .post4 {
+		margin: 0 0 $spacing-std 0;
 	}
 }
 

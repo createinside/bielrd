@@ -28,10 +28,17 @@ Nodes
 /*------------------------------------------------------------------
 	Sections
 -------------------------------------------------------------------*/
-
+#section-content {
+	padding: $spacing-std 0 0;
+	#zone-header {
+		.block-title {
+			padding: $spacing-std 0;
+		}
+	}
+}
 .front {
 	#section-content {
-		padding: $spacing-std*2 0 $spacing-std;
+		padding: 0 0 $spacing-std;
 	}
 }
 
@@ -65,8 +72,8 @@ Nodes
 /*------------------------------------------------------------------
 	Zones
 -------------------------------------------------------------------*/
-#zone-menu-wrapper {
-	padding: 14px 0 0;
+#zone-user-wrapper {
+	padding: 0 0 14px;
 }
 #zone-header-wrapper {
 	background: $bg-color-header;
@@ -139,6 +146,9 @@ Nodes
 			bottom:  0;
 		}
 	}
+}
+
+#zone-menu-wrapper {
 }
 
 	/* Sub Menu*/
@@ -313,12 +323,14 @@ Nodes
 .view-id-calendar_frontpage {
 	.rebild-calendar {
 		float: left;
-		width: 50%;	
+		width: 33%;	
 		margin: 0;
+		padding: 0 10px 0 0;
+		@include box-sizing(border-box);
 		.calendar_right {
 		}	
 	}
-	.post1 , .post2 {
+	.post1 , .post2, .post3 {
 		margin: 0 0 $spacing-std 0;
 	}
 	.calendar_view_all {
@@ -347,24 +359,32 @@ Nodes
 	Blocks - Specific
 -------------------------------------------------------------------*/
 
-/* Selfservice block - frontpage */
-#region-header-first {
-	.block {
-		@include box-shadow(none);
-		padding: 25px 0 20px 0;
-		margin-top: 0;
-		.jump-left, .jump-right {
-			width: 33%;
-			display: inline-block;
+/* Search block - frontpage */
+#block-ci-search-ci-search-front {
+	form {
+		.form-type-textfield:before {
+			content: "\e013";
 		}
-		.jump-left {
-		  text-align: right;
+		input[type=search],
+		input[type=text] {
+			font-size: 1em;
+			font-style: italic;
+			height: 4.8em;
+			width: 100%;
+			line-height: 2em;
+			float: left;
+			position: relative;
+			padding: 1.05em 1em 1.05em 4em;
+	    border-top: 1px solid white;
+	    background: white;
+	    background-position: center top;
+			@include background-image(linear-gradient(#eeeeee, #ffffff 33%));
+			@include border-radius($border-radius-std);
+			@include box-sizing(border-box);
 		}
-		.jump-right {
-		  text-align: left;
-		}
-		p.separator {
-		  display: inline-block;
+		input[type=submit] {
+			font-size: 1.55em;
+			padding: 0 1.5em;
 		}
 	}
 }
@@ -393,10 +413,9 @@ Nodes
 }
 
 /* Search block - frontpage */
-#region-header-second {
+#region-header-first {
+	background: url("../img/background_print.png") right -105px no-repeat;
 	.block {
-		font-size: 13px;
-		margin-bottom: $spacing-std*2;
 		form {
 			margin: 0 auto (17/10)*1em;
 			.sf-wrapper {

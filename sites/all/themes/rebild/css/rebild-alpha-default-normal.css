@@ -98,47 +98,27 @@ Landingpage
 /*------------------------------------------------------------------
 	Frontpage
 -------------------------------------------------------------------*/
-/* line 50, ../sass/rebild-alpha-default-normal.scss */
-.front #region-header-first .block {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  padding: 25px 0 20px 0;
-  background-position: 480px -110px;
-}
-/* line 58, ../sass/rebild-alpha-default-normal.scss */
+/* line 51, ../sass/rebild-alpha-default-normal.scss */
 .front #region-content .view .views-row {
-  height: 361px;
+  height: 370px;
   margin-bottom: 20px;
 }
-/* line 65, ../sass/rebild-alpha-default-normal.scss */
+/* line 58, ../sass/rebild-alpha-default-normal.scss */
 .front #region-sidebar-first .block {
   margin-bottom: 20px;
 }
-/* line 68, ../sass/rebild-alpha-default-normal.scss */
-.front #region-sidebar-first .block-views {
-  height: 530px;
-}
-/* line 71, ../sass/rebild-alpha-default-normal.scss */
-.front #region-sidebar-first .block-block {
-  height: 190px;
-}
-/* line 77, ../sass/rebild-alpha-default-normal.scss */
-.front #region-postscript-first .block .content {
-  height: 123px;
-}
-/* line 84, ../sass/rebild-alpha-default-normal.scss */
-.front #region-postscript-second .block .content {
-  height: 123px;
+/* line 61, ../sass/rebild-alpha-default-normal.scss */
+.front #region-sidebar-first .block-news-articles-block {
+  height: 490px;
 }
 
 /*------------------------------------------------------------------
   Landingpage
 -------------------------------------------------------------------*/
 /* Aktuelt */
-/* line 102, ../sass/rebild-alpha-default-normal.scss */
+/* line 74, ../sass/rebild-alpha-default-normal.scss */
 .not-front .view-id-rebild_frontpage .views-row {
-  height: 361px;
+  height: 375px;
   width: 310px;
 }
 
@@ -146,20 +126,20 @@ Landingpage
   Blocks
 -------------------------------------------------------------------*/
 /* Calendar - sidebar */
-/* line 116, ../sass/rebild-alpha-default-normal.scss */
+/* line 88, ../sass/rebild-alpha-default-normal.scss */
 .view-id-calendar_sidebar .view-content .rebild-calendar .calendar_right {
   max-width: 160px;
 }
 
 /* Calendar - frontpage */
-/* line 126, ../sass/rebild-alpha-default-normal.scss */
+/* line 98, ../sass/rebild-alpha-default-normal.scss */
 .view-id-calendar_frontpage .rebild-calendar .calendar_right {
   width: auto;
   float: none;
 }
 
 /* WCAG */
-/* line 134, ../sass/rebild-alpha-default-normal.scss */
+/* line 106, ../sass/rebild-alpha-default-normal.scss */
 .wcag-block {
   font-size: 1em;
   margin: 0 10px 0 0;
@@ -167,21 +147,21 @@ Landingpage
 }
 
 /* Search Autocomplete */
-/* line 142, ../sass/rebild-alpha-default-normal.scss */
+/* line 114, ../sass/rebild-alpha-default-normal.scss */
 .not-front .ac_results {
   display: inherit;
   width: 464px !important;
 }
 
 /* Share buttons */
-/* line 152, ../sass/rebild-alpha-default-normal.scss */
+/* line 124, ../sass/rebild-alpha-default-normal.scss */
 #region-content .node-share .share_wrapper .share_this {
   margin-right: 15px;
   margin-bottom: 2px;
 }
 
 /* 5 shortcuts - frontpage */
-/* line 165, ../sass/rebild-alpha-default-normal.scss */
+/* line 137, ../sass/rebild-alpha-default-normal.scss */
 #region-postscript-first .block-block .content ul li {
   margin-bottom: 1.1em;
 }
