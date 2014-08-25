@@ -21,13 +21,14 @@ function rebild_general_settings_delta_default_templates() {
   $delta->parent = 'rebild_primary';
   $delta->settings = array(
     'theme_rebild_settings' => array(
-      'default_favicon' => 0,
-      'favicon_path' => 'public://favicon_0_0.ico',
       'alpha_toggle_page_title' => 1,
-      'alpha_region_user_menu_first_equal_height_element' => 0,
       'alpha_region_user_first_columns' => '12',
+      'alpha_zone_header_section' => 'content',
+      'alpha_zone_header_weight' => '0',
       'alpha_region_content_columns' => '10',
       'alpha_region_sidebar_first_columns' => '6',
+      'alpha_region_postscript_first_columns' => '16',
+      'alpha_region_postscript_second_columns' => '16',
     ),
   );
   $export['rebild_frontpage'] = $delta;
