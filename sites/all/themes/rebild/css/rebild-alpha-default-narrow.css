@@ -191,8 +191,8 @@ Landingpage
   width: 50%;
 }
 /* line 152, ../sass/rebild-alpha-default-narrow.scss */
-.view-id-calendar_frontpage .post1, .view-id-calendar_frontpage .post2, .view-id-calendar_frontpage .post3, .view-id-calendar_frontpage .post4 {
-  margin: 0 0 20px 0;
+.view-id-calendar_frontpage .post3, .view-id-calendar_frontpage .post4, .view-id-calendar_frontpage .post5, .view-id-calendar_frontpage .post6 {
+  margin: 20px 0 0 0;
 }
 
 /* WCAG */

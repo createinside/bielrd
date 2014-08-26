@@ -327,11 +327,12 @@ Nodes
 		margin: 0;
 		padding: 0 10px 0 0;
 		@include box-sizing(border-box);
-		.calendar_right {
-		}	
 	}
-	.post1 , .post2, .post3 {
-		margin: 0 0 $spacing-std 0;
+	.post4:last-child, .post5:last-child, .post6:last-child {
+		margin: $spacing-std 0 0 0;
+	}
+	.post4, .post5, .post6 {
+		margin: $spacing-std 0 0 0;
 	}
 	.calendar_view_all {
 		position: absolute;
