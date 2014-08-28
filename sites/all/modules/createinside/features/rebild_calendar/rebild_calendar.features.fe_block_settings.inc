@@ -49,7 +49,7 @@ function rebild_calendar_default_fe_block_settings() {
         'region' => 'sidebar_first',
         'status' => 1,
         'theme' => 'rebild',
-        'weight' => -57,
+        'weight' => -64,
       ),
     ),
     'title' => '',

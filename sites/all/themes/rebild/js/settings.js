@@ -1,6 +1,12 @@
 $ = jQuery;
 
 $(function() {
+
+/*
+	$('#zone-menu-wrapper').waypoint('sticky', {
+		offset: 0
+	});
+*/
 	
 	// Custom select boxes init
 	$("select").customSelect();
@@ -105,7 +111,6 @@ $(function() {
 					$header.click();
 					$(document).scrollTop($header.offset().top-100);
 				}			
-			
 			}
 			else {
 				$header = $("."+hash+" .ui-accordion-header");

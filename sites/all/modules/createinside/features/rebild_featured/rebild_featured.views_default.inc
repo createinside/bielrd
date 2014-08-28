@@ -102,6 +102,8 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['fields']['field_featured_summary']['table'] = 'field_data_field_featured_summary';
   $handler->display->display_options['fields']['field_featured_summary']['field'] = 'field_featured_summary';
   $handler->display->display_options['fields']['field_featured_summary']['label'] = '';
+  $handler->display->display_options['fields']['field_featured_summary']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_featured_summary']['alter']['path'] = '[field_featured_link]';
   $handler->display->display_options['fields']['field_featured_summary']['alter']['max_length'] = '240';
   $handler->display->display_options['fields']['field_featured_summary']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_featured_summary']['element_label_colon'] = FALSE;

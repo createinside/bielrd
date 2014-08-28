@@ -67,6 +67,26 @@ function rebild_bean_user_default_permissions() {
     'module' => 'bean',
   );
 
+  // Exported permission: 'create any forsideblokke bean'.
+  $permissions['create any forsideblokke bean'] = array(
+    'name' => 'create any forsideblokke bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'create any link_collection bean'.
+  $permissions['create any link_collection bean'] = array(
+    'name' => 'create any link_collection bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'bean',
+  );
+
   // Exported permission: 'delete any blok_hoej_format bean'.
   $permissions['delete any blok_hoej_format bean'] = array(
     'name' => 'delete any blok_hoej_format bean',
@@ -80,6 +100,26 @@ function rebild_bean_user_default_permissions() {
   // Exported permission: 'delete any blok_lav_format bean'.
   $permissions['delete any blok_lav_format bean'] = array(
     'name' => 'delete any blok_lav_format bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'delete any forsideblokke bean'.
+  $permissions['delete any forsideblokke bean'] = array(
+    'name' => 'delete any forsideblokke bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'delete any link_collection bean'.
+  $permissions['delete any link_collection bean'] = array(
+    'name' => 'delete any link_collection bean',
     'roles' => array(
       'administrator' => 'administrator',
       'kommunikation' => 'kommunikation',
@@ -107,6 +147,26 @@ function rebild_bean_user_default_permissions() {
     'module' => 'bean',
   );
 
+  // Exported permission: 'edit any forsideblokke bean'.
+  $permissions['edit any forsideblokke bean'] = array(
+    'name' => 'edit any forsideblokke bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'edit any link_collection bean'.
+  $permissions['edit any link_collection bean'] = array(
+    'name' => 'edit any link_collection bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'bean',
+  );
+
   // Exported permission: 'edit bean view mode'.
   $permissions['edit bean view mode'] = array(
     'name' => 'edit bean view mode',
@@ -121,6 +181,7 @@ function rebild_bean_user_default_permissions() {
     'name' => 'view any blok_hoej_format bean',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'bean',
@@ -131,6 +192,29 @@ function rebild_bean_user_default_permissions() {
     'name' => 'view any blok_lav_format bean',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'view any forsideblokke bean'.
+  $permissions['view any forsideblokke bean'] = array(
+    'name' => 'view any forsideblokke bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'view any link_collection bean'.
+  $permissions['view any link_collection bean'] = array(
+    'name' => 'view any link_collection bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'bean',

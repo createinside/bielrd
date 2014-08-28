@@ -17,16 +17,27 @@
 			}
 		}
 		.featured-title {
-			padding: $spacing-std $spacing-std 0;
-			font-size: $font-size-large;
-			line-height: $line-height-std;
 			a {
+				display: block;
+				padding: $spacing-std $spacing-std 0;
+				font-size: $font-size-large;
+				line-height: $line-height-std;
 				color: $text-color;
+				text-decoration: none;
+			}
+			a:hover {
 				text-decoration: none;
 			}
 		}
 		.featured-summary {
-			padding: $spacing-std/2 $spacing-std $spacing-std*2.4;
+			a {
+				display: block;
+				padding: $spacing-std/2 $spacing-std $spacing-std*2.4;
+				line-height: $line-height-std;				
+			}
+			a:hover {
+				text-decoration: none;
+			}
 		}
 		.featured-date {
 			padding: $spacing-std/2 0;
@@ -42,6 +53,65 @@
 				position: relative; left: $spacing-std;
 			}
 		}
+	}
+	.views-row:hover {
+		a {
+			text-decoration: none !important;
+		}
+		.featured-title {
+			a {
+				color: $color-green !important;
+			}
+		}
+	}
+}
+
+/* Frontpage Shortcuts */
+.view-frontpage-blocks {
+	overflow: hidden;
+	.views-row {
+		position: relative;
+		float: left;
+		height: 160px;
+		width: 30%;
+		@include grid-box(white);
+		a {
+			display: inline-block;
+			height: 160px;
+			color: $text-color;
+			text-decoration: none;
+			.title {
+				display: block;
+				position: relative;
+				z-index: 2;
+				font-size: (14/12)*1em;
+				padding: 8px 7px 5px;
+				line-height: 1.15em;
+				color: black;
+			}
+			.subtitle {
+				display: block;
+				position: relative;
+				z-index: 2;
+				padding: 0 7px;
+				line-height: 1.15em;
+			}
+			img {
+				position: absolute;
+				bottom: 0;
+				z-index: 1;
+				@include border-bottom-left-radius($border-radius-std);
+				@include border-bottom-right-radius($border-radius-std);
+			}
+		}
+		a:hover {
+			.title {
+				color: $color-green;
+			}
+		}
+	}
+	.views-row-2 {
+		margin: 0 5%;
 	}
 }
 
@@ -177,9 +247,11 @@
 		.calendar_right {
 			.calendar_section {
 				text-transform: uppercase;
-				margin-bottom: 2px;
+				margin-bottom: 4px;
+				margin-top: 2px;
 			}
 			.calendar_title {
+				line-height: $line-height-std;
 				a {
 					color: $text-color;
 					text-decoration: none;
@@ -190,6 +262,27 @@
 				}
 			}
 		}
+	}
+	.sektion-Borger {
+		.calendar_left {
+			.calendar_day {
+				background: $color-green;
+			}
+		}			
+	}
+	.sektion-Politik {
+		.calendar_left {
+			.calendar_day {
+				background: $color-purple;
+			}
+		}			
+	}
+	.sektion-Erhverv {
+		.calendar_left {
+			.calendar_day {
+				background: $color-blue;
+			}
+		}			
 	}
 	.rebild-calendar:last-child {
 		margin: 0 0 0 0; 			
