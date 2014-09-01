@@ -101,108 +101,108 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
 /* line 48, ../sass/partials/_fonts.scss */
-.icon-og_bliv_her2:before {
-  content: "\e600";
+.icon-mega-phone:before {
+  content: "\e601";
 }
 
 /* line 51, ../sass/partials/_fonts.scss */
-.icon-reorder:before {
-  content: "\f0c9";
+.icon-mobil_logo:before {
+  content: "\e007";
 }
 
 /* line 54, ../sass/partials/_fonts.scss */
-.icon-rss:before {
-  content: "\f09f";
+.icon-printer:before {
+  content: "\e011";
 }
 
 /* line 57, ../sass/partials/_fonts.scss */
-.icon-envelope:before {
-  content: "\f003";
+.icon-volume:before {
+  content: "\e012";
 }
 
 /* line 60, ../sass/partials/_fonts.scss */
-.icon-double-angle-right:before {
-  content: "\f101";
+.icon-money:before {
+  content: "\f0d6";
 }
 
 /* line 63, ../sass/partials/_fonts.scss */
-.icon-double-angle-left:before {
-  content: "\f100";
+.icon-search:before {
+  content: "\e013";
 }
 
 /* line 66, ../sass/partials/_fonts.scss */
-.icon-double-angle-down:before {
-  content: "\f103";
+.icon-plus2:before {
+  content: "\e00f";
 }
 
 /* line 69, ../sass/partials/_fonts.scss */
-.icon-double-angle-up:before {
-  content: "\f102";
+.icon-minus2:before {
+  content: "\e010";
 }
 
 /* line 72, ../sass/partials/_fonts.scss */
-.icon-list-ul:before {
-  content: "\f0ca";
+.icon-arrow-down2:before {
+  content: "\e003";
 }
 
 /* line 75, ../sass/partials/_fonts.scss */
-.icon-facebook:before {
-  content: "\f09a";
+.icon-bottom_logo:before {
+  content: "\e009";
 }
 
 /* line 78, ../sass/partials/_fonts.scss */
-.icon-align-justify:before {
-  content: "\f039";
-}
-
-/* line 81, ../sass/partials/_fonts.scss */
 .icon-phone:before {
   content: "\f095";
 }
 
+/* line 81, ../sass/partials/_fonts.scss */
+.icon-envelope:before {
+  content: "\f003";
+}
+
 /* line 84, ../sass/partials/_fonts.scss */
-.icon-sort:before {
-  content: "\f0dc";
+.icon-home:before {
+  content: "\e005";
 }
 
 /* line 87, ../sass/partials/_fonts.scss */
-.icon-arrow-right:before {
-  content: "\f061";
+.icon-double-angle-right:before {
+  content: "\f101";
 }
 
 /* line 90, ../sass/partials/_fonts.scss */
-.icon-arrow-left:before {
-  content: "\f060";
+.icon-double-angle-left:before {
+  content: "\f100";
 }
 
 /* line 93, ../sass/partials/_fonts.scss */
-.icon-arrow-up:before {
-  content: "\f062";
+.icon-double-angle-down:before {
+  content: "\f103";
 }
 
 /* line 96, ../sass/partials/_fonts.scss */
-.icon-arrow-down:before {
-  content: "\f063";
+.icon-double-angle-up:before {
+  content: "\f102";
 }
 
 /* line 99, ../sass/partials/_fonts.scss */
+.icon-images:before {
+  content: "\e00e";
+}
+
+/* line 102, ../sass/partials/_fonts.scss */
 .icon-menu:before {
   content: "\e000";
 }
 
-/* line 102, ../sass/partials/_fonts.scss */
-.icon-arrow-right2:before {
-  content: "\e001";
-}
-
 /* line 105, ../sass/partials/_fonts.scss */
-.icon-arrow-up2:before {
-  content: "\e002";
+.icon-pil2:before {
+  content: "\e014";
 }
 
 /* line 108, ../sass/partials/_fonts.scss */
-.icon-arrow-down-2:before {
-  content: "\e003";
+.icon-angle-right:before {
+  content: "\e006";
 }
 
 /* line 111, ../sass/partials/_fonts.scss */
@@ -211,88 +211,73 @@ you can use the generic selector below, but it's slower:
 }
 
 /* line 114, ../sass/partials/_fonts.scss */
-.icon-home:before {
-  content: "\e005";
+.icon-arrow-up2:before {
+  content: "\e002";
 }
 
 /* line 117, ../sass/partials/_fonts.scss */
-.icon-untitled:before {
-  content: "\e006";
+.icon-arrow-right2:before {
+  content: "\e001";
 }
 
 /* line 120, ../sass/partials/_fonts.scss */
-.icon-mobil_logo:before {
-  content: "\e007";
+.icon-arrow-up:before {
+  content: "\f062";
 }
 
 /* line 123, ../sass/partials/_fonts.scss */
-.icon-bottom_logo:before {
-  content: "\e009";
+.icon-arrow-down:before {
+  content: "\f063";
 }
 
 /* line 126, ../sass/partials/_fonts.scss */
+.icon-arrow-right:before {
+  content: "\f061";
+}
+
+/* line 129, ../sass/partials/_fonts.scss */
+.icon-arrow-left:before {
+  content: "\f060";
+}
+
+/* line 132, ../sass/partials/_fonts.scss */
 .icon-close:before {
   content: "\e008";
 }
 
-/* line 129, ../sass/partials/_fonts.scss */
+/* line 135, ../sass/partials/_fonts.scss */
 .icon-plus:before {
   content: "\e00a";
 }
 
-/* line 132, ../sass/partials/_fonts.scss */
+/* line 138, ../sass/partials/_fonts.scss */
 .icon-minus:before {
   content: "\e00c";
 }
 
-/* line 135, ../sass/partials/_fonts.scss */
-.icon-images:before {
-  content: "\e00b";
-}
-
-/* line 138, ../sass/partials/_fonts.scss */
+/* line 141, ../sass/partials/_fonts.scss */
 .icon-compass:before {
   content: "\e00d";
 }
 
-/* line 141, ../sass/partials/_fonts.scss */
-.icon-images2:before {
-  content: "\e00e";
-}
-
 /* line 144, ../sass/partials/_fonts.scss */
-.icon-plus2:before {
-  content: "\e00f";
+.icon-reorder:before {
+  content: "\f0c9";
 }
 
 /* line 147, ../sass/partials/_fonts.scss */
-.icon-minus2:before {
-  content: "\e010";
+.icon-rss:before {
+  content: "\f09f";
 }
 
 /* line 150, ../sass/partials/_fonts.scss */
-.icon-printer:before {
-  content: "\e011";
+.icon-facebook:before {
+  content: "\f09a";
 }
 
 /* line 153, ../sass/partials/_fonts.scss */
-.icon-volume:before {
-  content: "\e012";
-}
-
-/* line 156, ../sass/partials/_fonts.scss */
-.icon-money:before {
-  content: "\f0d6";
-}
-
-/* line 159, ../sass/partials/_fonts.scss */
-.icon-search:before {
-  content: "\e013";
-}
-
-/* line 162, ../sass/partials/_fonts.scss */
-.icon-pil2:before {
-  content: "\e014";
+.icon-og_bliv_her2:before {
+  content: "\e600";
 }
 
 /*------------------------------------------------------------------
@@ -3437,6 +3422,72 @@ div.workbench-info-block a {
   display: none !important;
 }
 
+/**
+ * Announcement (Din kommune informerer)
+ */
+/* line 1346, ../sass/partials/_blocks.scss */
+.block-din-kommune-informerer a {
+  color: #474747;
+}
+/* line 1349, ../sass/partials/_blocks.scss */
+.block-din-kommune-informerer .announcement-front {
+  padding: 18px 0;
+  overflow: hidden;
+  background-color: #f6f6f6;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+}
+/* line 1354, ../sass/partials/_blocks.scss */
+.block-din-kommune-informerer .announcement-front .week-number {
+  float: left;
+  width: 25%;
+  font-weight: bold;
+  text-align: center;
+  border-right: 1px solid #d6d6d6;
+  height: 55px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 1362, ../sass/partials/_blocks.scss */
+.block-din-kommune-informerer .announcement-front .week-number span.icon-mega-phone {
+  display: block;
+  font-size: 3em;
+  margin-bottom: 5px;
+}
+/* line 1368, ../sass/partials/_blocks.scss */
+.block-din-kommune-informerer .announcement-front .body {
+  float: left;
+  width: 75%;
+  padding-right: 15px;
+  padding-left: 15px;
+  border-left: 1px solid white;
+  height: 55px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 1376, ../sass/partials/_blocks.scss */
+.block-din-kommune-informerer .announcement-front .body h2 {
+  font-size: 1.33333em;
+  margin-bottom: 5px;
+  font-weight: normal;
+  color: black;
+  line-height: 1.25em;
+}
+/* line 1383, ../sass/partials/_blocks.scss */
+.block-din-kommune-informerer .announcement-front .body p {
+  font-size: 1em;
+  margin: 0;
+  line-height: 1.25em;
+}
+
 /*------------------------------------------------------------------
 
 [VIEWS]
@@ -4508,6 +4559,100 @@ div.workbench-info-block a {
   margin-bottom: 20px;
 }
 
+/* line 720, ../sass/partials/_views.scss */
+#region-content .view-id-messages {
+  margin-top: 25px;
+}
+/* line 722, ../sass/partials/_views.scss */
+#region-content .view-id-messages .date-nav-wrapper {
+  margin: 0;
+  padding: 0;
+}
+/* line 725, ../sass/partials/_views.scss */
+#region-content .view-id-messages .date-nav-wrapper .date-nav {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: inherit;
+}
+/* line 733, ../sass/partials/_views.scss */
+#region-content .view-id-messages .ui-accordion .ui-accordion-header {
+  background: #e6e6e6;
+  color: #474747;
+  font-size: 1.08em;
+  line-height: 1.5em;
+  padding: 6px 8px;
+  margin: 0 0 5px 0;
+  font-weight: bold;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 742, ../sass/partials/_views.scss */
+#region-content .view-id-messages .ui-accordion .ui-accordion-header a {
+  color: #474747;
+  padding: 0;
+  margin: 0;
+}
+/* line 747, ../sass/partials/_views.scss */
+#region-content .view-id-messages .ui-accordion .ui-accordion-header a:hover {
+  text-decoration: none;
+}
+/* line 750, ../sass/partials/_views.scss */
+#region-content .view-id-messages .ui-accordion .ui-accordion-header a:before {
+  font-family: 'Rebild';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e00f";
+  margin-right: 0.5em;
+}
+/* line 756, ../sass/partials/_views.scss */
+#region-content .view-id-messages .ui-accordion .ui-accordion-header.ui-state-active {
+  background-color: #7f9dcd;
+}
+/* line 759, ../sass/partials/_views.scss */
+#region-content .view-id-messages .ui-accordion .ui-accordion-header.ui-state-active a,
+#region-content .view-id-messages .ui-accordion .ui-accordion-header.ui-state-active .field-item {
+  color: white;
+}
+/* line 762, ../sass/partials/_views.scss */
+#region-content .view-id-messages .ui-accordion .ui-accordion-header.ui-state-active a:before {
+  font-family: 'Rebild';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e010";
+  margin-right: 0.5em;
+}
+/* line 768, ../sass/partials/_views.scss */
+#region-content .view-id-messages .ui-accordion .ui-accordion-content {
+  padding: 10px 20px;
+  margin: 0;
+}
+/* line 771, ../sass/partials/_views.scss */
+#region-content .view-id-messages .ui-accordion .ui-accordion-content p {
+  margin-bottom: 20px;
+}
+/* line 776, ../sass/partials/_views.scss */
+#region-content .view-id-messages .view-empty {
+  margin: 20px 0 0 0;
+}
+
 /*------------------------------------------------------------------
 
 [GLOBAL]
@@ -4536,19 +4681,23 @@ body {
   font-size: 12px;
 }
 
-/* line 40, ../sass/global.scss */
+/* line 39, ../sass/global.scss */
+#page {
+  background: transparent url("../img/noise_bg_repeat.png") repeat;
+}
+/* line 41, ../sass/global.scss */
 #page header, #page section, #page footer {
   font-size: 12px;
 }
 
-/* line 44, ../sass/global.scss */
+/* line 45, ../sass/global.scss */
 img {
   max-width: 100%;
   height: auto;
 }
 
 /* Page titles */
-/* line 50, ../sass/global.scss */
+/* line 51, ../sass/global.scss */
 .front #page-title {
   font-size: 1.5em;
   font-weight: normal;
@@ -4557,7 +4706,7 @@ img {
   text-shadow: white 1px 1px 1px;
 }
 
-/* line 57, ../sass/global.scss */
+/* line 58, ../sass/global.scss */
 .not-front #page-title {
   font-size: 2.16667em;
   line-height: 1.25em;
@@ -4566,7 +4715,7 @@ img {
   text-shadow: white 1px 1px 1px;
 }
 
-/* line 64, ../sass/global.scss */
+/* line 65, ../sass/global.scss */
 #logo {
   display: none;
 }
@@ -4574,18 +4723,13 @@ img {
 /*------------------------------------------------------------------
 	Sections
 -------------------------------------------------------------------*/
-/* line 71, ../sass/global.scss */
+/* line 72, ../sass/global.scss */
 #section-header {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
-/* line 75, ../sass/global.scss */
-#section-content {
-  background: transparent url("../img/noise_bg_repeat.png") repeat;
-}
-
-/* line 79, ../sass/global.scss */
+/* line 77, ../sass/global.scss */
 .not-front #section-content {
   padding: 20px 0 0;
 }
@@ -4593,7 +4737,7 @@ img {
 /*------------------------------------------------------------------
 	Zones
 -------------------------------------------------------------------*/
-/* line 87, ../sass/global.scss */
+/* line 85, ../sass/global.scss */
 #zone-user-wrapper {
   background-color: white;
   z-index: 2;
@@ -4602,7 +4746,7 @@ img {
   box-shadow: rgba(0, 0, 0, 0.075) 0 10px 10px;
 }
 
-/* line 92, ../sass/global.scss */
+/* line 90, ../sass/global.scss */
 #zone-menu-wrapper {
   background-color: white;
   position: relative;
@@ -4612,25 +4756,25 @@ img {
   box-shadow: rgba(0, 0, 0, 0.075) 0 10px 10px;
 }
 
-/* line 98, ../sass/global.scss */
+/* line 96, ../sass/global.scss */
 #zone-header-wrapper {
   color: white;
   background: #68a386;
   margin-bottom: 40px;
 }
 
-/* line 103, ../sass/global.scss */
+/* line 101, ../sass/global.scss */
 #zone-preface-wrapper {
   display: none;
 }
 
-/* line 106, ../sass/global.scss */
+/* line 104, ../sass/global.scss */
 #zone-footer-wrapper {
   background-color: white;
   padding: 20px 0 20px;
 }
 
-/* line 110, ../sass/global.scss */
+/* line 108, ../sass/global.scss */
 #zone-bottom-wrapper {
   background-color: #6b6b6b;
 }
@@ -4638,17 +4782,17 @@ img {
 /*------------------------------------------------------------------
 	Regions
 -------------------------------------------------------------------*/
-/* line 118, ../sass/global.scss */
+/* line 116, ../sass/global.scss */
 #region-menu {
   position: relative;
 }
 
-/* line 121, ../sass/global.scss */
+/* line 119, ../sass/global.scss */
 #region-user-second {
   padding: 10px;
 }
 
-/* line 128, ../sass/global.scss */
+/* line 126, ../sass/global.scss */
 #region-footer-second,
 #region-footer-third,
 #region-footer-fourth,
@@ -4656,11 +4800,11 @@ img {
   display: none;
 }
 
-/* line 132, ../sass/global.scss */
+/* line 130, ../sass/global.scss */
 #region-user-menu-first .block-politik-user-menu {
   margin: 0 0 0 10px;
 }
-/* line 134, ../sass/global.scss */
+/* line 132, ../sass/global.scss */
 #region-user-menu-first .block-politik-user-menu p, #region-user-menu-first .block-politik-user-menu a {
   color: #6b6b6b;
   text-align: left;
@@ -4669,7 +4813,7 @@ img {
 /*------------------------------------------------------------------
 	Menus
 -------------------------------------------------------------------*/
-/* line 146, ../sass/global.scss */
+/* line 144, ../sass/global.scss */
 .ultimenu,
 #region-user-first {
   display: none;
@@ -4678,7 +4822,7 @@ img {
 /*------------------------------------------------------------------
 	Nodes
 -------------------------------------------------------------------*/
-/* line 154, ../sass/global.scss */
+/* line 152, ../sass/global.scss */
 .not-front .block-system-main {
   padding: 20px;
   background-color: white;
@@ -4695,7 +4839,7 @@ img {
 /*------------------------------------------------------------------
 	Views
 -------------------------------------------------------------------*/
-/* line 168, ../sass/global.scss */
+/* line 166, ../sass/global.scss */
 .page-borger .block-system-main,
 .page-erhverv .block-system-main,
 .page-politik .block-system-main,
@@ -4712,7 +4856,7 @@ img {
   border-radius: none;
 }
 
-/* line 176, ../sass/global.scss */
+/* line 174, ../sass/global.scss */
 .page-politik-dagsordener-og-referater .block-system-main {
   padding: 20px;
   background-color: white;

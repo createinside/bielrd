@@ -141,3 +141,19 @@ Landingpage
 		}
 	}
 }
+
+/* Announcement (Din kommune informerer) */
+.block-din-kommune-informerer {
+	.announcement-front {
+		padding: 22px 0;
+		.week-number {
+			height: 63px;
+			width: 25%;
+			padding-top: 0;
+		}
+		.body {
+			height: 63px;
+			width: 75%;
+		}
+	}
+}

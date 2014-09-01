@@ -29,15 +29,52 @@ Landingpage
 	Menus
 -------------------------------------------------------------------*/
 
-#zone-menu-wrapper.stuck {
+.region-branding {
+	position: relative;
+}
+.sticky-wrapper {
+	height: 113px;
+}
+.logo-img {
+	img {
+		height: 57px;
+		opacity: 1;
+		margin-top: 0;
+		@include transition-timing-function(ease-in-out);
+		@include transition-property(height, margin-top);
+		@include transition-duration(0.25s);
+	}
+}
+#section-header {
 	position: fixed;
 	top: 0;
 	width: 100%;
+	transition: top 0.25s ease-in-out, height 0.25s ease-in-out;	
+}
+#section-header.stuck {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+	background: white;
+	top: -40px;
+	.region-branding {
+		.region-inner {
+			top: 10px;
+		}
+	}
 	.logo-img {
-		opacity: 0;
+		img {
+			margin-top: 13px;
+			height: 45px;
+		}
 	}
 }
-
+.front {
+	.sticky-wrapper {
+		background: $color-green;
+	}
+}
 
 /* Main Menu - (Mega Menu) */
 #region-menu {
@@ -204,5 +241,21 @@ Landingpage
 #region-content-sidebar {
 	#kontaktlink {
 		width: auto;
+	}
+}
+
+/* Announcement (Din kommune informerer) */
+.block-din-kommune-informerer {
+	.announcement-front {
+		.week-number {
+			height: 80px;
+			width: 30%;
+			padding-top: 10px;
+		}
+		.body {
+			height: 80px;
+			width: 70%;
+
+		}
 	}
 }

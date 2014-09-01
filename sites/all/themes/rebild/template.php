@@ -80,7 +80,7 @@ function rebild_ultimenu_link(array $variables) {
     $sub_menu = drupal_render($element['#below']);
   }
   $element['#localized_options']["html"] = TRUE;
-  $output = l($element['#title'].' <span class="icon-arrow-down-2"></span>', $element['#href'], $element['#localized_options']);
+  $output = l($element['#title'].' <span class="icon-arrow-down2"></span>', $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
 
@@ -120,8 +120,8 @@ function rebild_breadcrumb($variables) {
     array_shift($breadcrumb); // Removes the Home item
     array_unshift($breadcrumb,l(' <span class="icon-home"></span> ','<front>', array("html" => TRUE)));
     $output = '<div class="breadcrumb">';
-    $output .= implode(' <span class="icon-untitled"></span> ', $breadcrumb);
-    $output .= ' <span class="icon-untitled"></span> <strong>'.drupal_get_title().'</strong>';
+    $output .= implode(' <span class="icon-angle-right"></span> ', $breadcrumb);
+    $output .= ' <span class="icon-angle-right"></span> <strong>'.drupal_get_title().'</strong>';
     $output .= '</div>';
     return $output;
   }
@@ -300,4 +300,45 @@ function rebild_page_alter(&$page) {
 
 function rebild_date_all_day_label() { 
 	return ''; 
+}
+
+/**
+ * CALENDAR TITLES
+ */
+function rebild_date_nav_title($params) {
+  $granularity = $params['granularity'];
+  $view = $params['view'];
+  $date_info = $view->date_info;
+  $link = !empty($params['link']) ? $params['link'] : FALSE;
+  $format = !empty($params['format']) ? $params['format'] : NULL;
+  switch ($granularity) {
+    case 'year':
+      $title = $date_info->year;
+      $date_arg = $date_info->year;
+      break;
+    case 'month':
+      $format = !empty($format) ? $format : (empty($date_info->mini) ? 'F Y' : 'F Y');
+      $title = date_format_date($date_info->min_date, 'custom', $format);
+      $date_arg = $date_info->year . '-' . date_pad($date_info->month);
+      break;
+    case 'day':
+      $format = !empty($format) ? $format : (empty($date_info->mini) ? 'l, d. F' : 'l, F j');
+      $title = date_format_date($date_info->min_date, 'custom', $format);
+      $date_arg = $date_info->year . '-' . date_pad($date_info->month) . '-' . date_pad($date_info->day);
+      break;
+    case 'week':
+      $format = !empty($format) ? $format : (empty($date_info->mini) ? 'W, Y' : 'F j');
+      $title = t('Uge @date', array('@date' => date_format_date($date_info->min_date, 'custom', $format)));
+      $date_arg = $date_info->year . '-W' . date_pad($date_info->week);
+      break;
+  }
+  if (!empty($date_info->mini) || $link) {
+    // Month navigation titles are used as links in the mini view.
+    $attributes = array('title' => t('View full page month'));
+    $url = date_pager_url($view, $granularity, $date_arg, TRUE);
+    return l($title, $url, array('attributes' => $attributes));
+  }
+  else {
+    return $title;
+  }
 }
