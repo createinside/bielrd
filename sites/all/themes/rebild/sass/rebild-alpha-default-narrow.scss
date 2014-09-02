@@ -29,6 +29,53 @@ Landingpage
 	Menus
 -------------------------------------------------------------------*/
 
+.region-branding {
+	position: relative;
+}
+.sticky-wrapper {
+	height: 113px;
+}
+.logo-img {
+	img {
+		height: 57px;
+		opacity: 1;
+		margin-top: 0;
+		@include transition-timing-function(ease-in-out);
+		@include transition-property(height, margin-top);
+		@include transition-duration(0.25s);
+	}
+}
+#section-header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	transition: top 0.25s ease-in-out, height 0.25s ease-in-out;	
+}
+#section-header.stuck {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+	background: white;
+	top: -40px;
+	.region-branding {
+		.region-inner {
+			top: 10px;
+		}
+	}
+	.logo-img {
+		img {
+			margin-top: 13px;
+			height: 45px;
+		}
+	}
+}
+.front {
+	.sticky-wrapper {
+		background: $color-green;
+	}
+}
+
 /* Main Menu - (Mega Menu) */
 #region-menu {
 	ul.ultimenu {
@@ -51,15 +98,10 @@ Landingpage
 	Frontpage
 -------------------------------------------------------------------*/
 .front {
-	#region-header-first {
-		.block {
-			background-position: 250px -110px;
-		}	
-	} 
 	#region-content {
 		.view {
 			.views-row {
-				height: 338px;
+				height: 345px;
 				margin-bottom: $spacing-std;
 			}
 		}
@@ -68,28 +110,14 @@ Landingpage
 		.block {
 				margin-bottom: $spacing-std;
 		}
-		.block-views {
-			height: 463px;
+		.block-news-articles-block {
+			height: 430px;
 			.views-row {
 				
 			}
 		}
 		.block-block {
 			height: 210px;
-		}
-	}
-	#region-postscript-first {
-		.block {
-			.content {
-				height: 123px;
-			}
-		}
-	}
-	#region-postscript-second {
-		.block {
-			.content {
-				height: 123px;
-			}
 		}
 	}
 }
@@ -156,10 +184,10 @@ Landingpage
 /* Calendar - frontpage */
 .view-id-calendar_frontpage {
 	.rebild-calendar {
-		.calendar_right {
-			width: 137px;
-			float: left;
-		}
+		width: 50%;
+	}
+	.post3 , .post4, .post5, .post6 {
+		margin: $spacing-std 0 0 0;
 	}
 }
 
@@ -213,5 +241,21 @@ Landingpage
 #region-content-sidebar {
 	#kontaktlink {
 		width: auto;
+	}
+}
+
+/* Announcement (Din kommune informerer) */
+.block-din-kommune-informerer {
+	.announcement-front {
+		.week-number {
+			height: 80px;
+			width: 30%;
+			padding-top: 10px;
+		}
+		.body {
+			height: 80px;
+			width: 70%;
+
+		}
 	}
 }

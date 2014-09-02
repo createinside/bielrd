@@ -39,11 +39,11 @@ function rebild_calendar_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'rebild_calendar post[counter]';
+  $handler->display->display_options['style_options']['row_class'] = 'rebild_calendar post[counter] sektion-[field_main_section]';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-  /* Sidefod: Global: Unfiltered text */
+  /* Sidefod: Global: Ufiltreret tekst */
   $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
@@ -55,7 +55,7 @@ function rebild_calendar_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['max_length'] = '70';
+  $handler->display->display_options['fields']['title']['alter']['max_length'] = '60';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
@@ -172,6 +172,10 @@ function rebild_calendar_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '6';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filterkriterie: Indhold: Udgivet */
@@ -481,6 +485,10 @@ function rebild_calendar_views_default_views() {
   $handler->display->display_options['filters']['field_calendar_date_value']['table'] = 'field_data_field_calendar_date';
   $handler->display->display_options['filters']['field_calendar_date_value']['field'] = 'field_calendar_date_value';
   $handler->display->display_options['filters']['field_calendar_date_value']['operator'] = '>';
+  $handler->display->display_options['filters']['field_calendar_date_value']['expose']['operator_id'] = 'field_calendar_date_value_op';
+  $handler->display->display_options['filters']['field_calendar_date_value']['expose']['label'] = 'Dato -  startdato (field_calendar_date)';
+  $handler->display->display_options['filters']['field_calendar_date_value']['expose']['operator'] = 'field_calendar_date_value_op';
+  $handler->display->display_options['filters']['field_calendar_date_value']['expose']['identifier'] = 'field_calendar_date_value';
   $handler->display->display_options['filters']['field_calendar_date_value']['default_date'] = 'yesterday';
 
   /* Display: Page */
@@ -503,6 +511,7 @@ function rebild_calendar_views_default_views() {
     t('næste ›'),
     t('sidste »'),
     t('<strong>Dato:</strong> [field_calendar_date]. [field_calendar_date_1]  [field_calendar_date_2]'),
+    t('Dato -  startdato (field_calendar_date)'),
     t('Page'),
   );
   $export['calendar_overview'] = $view;
@@ -540,7 +549,7 @@ function rebild_calendar_views_default_views() {
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-  /* Sidefod: Global: Unfiltered text */
+  /* Sidefod: Global: Ufiltreret tekst */
   $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';

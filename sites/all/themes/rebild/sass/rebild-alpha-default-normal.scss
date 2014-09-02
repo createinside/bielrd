@@ -46,17 +46,10 @@ Landingpage
 	Frontpage
 -------------------------------------------------------------------*/
 .front {
-	#region-header-first {
-		.block {
-			@include box-shadow(none);
-			padding: 25px 0 20px 0;		
-			background-position: 480px -110px;
-		}
-	}
 	#region-content {
 		.view {
 			.views-row {
-				height: 361px;
+				height: 370px;
 				margin-bottom: $spacing-std;
 			}
 		}
@@ -65,29 +58,8 @@ Landingpage
 		.block {
 				margin-bottom: $spacing-std;
 		}
-		.block-views {
-			height: 530px;
-		}
-		.block-block {
-			height: 190px;
-		}
-	}
-	#region-postscript-first {
-		.block {
-			.content {
-				height: 123px;
-			}
-		}
-	}
-	#region-postscript-second {
-		.block {
-			.content {
-				height: 123px;
-				.view-calendar-frontpage {
-					.calendar_right {
-					}
-				}
-			}
+		.block-news-articles-block {
+			height: 490px;
 		}
 	}
 }
@@ -100,7 +72,7 @@ Landingpage
 .not-front {
   .view-id-rebild_frontpage {
     .views-row {
-      height: 361px;
+			height: 375px;
       width: 310px;
     }
   } 
@@ -166,6 +138,22 @@ Landingpage
 					margin-bottom: 1.1em;
 				}
 			}
+		}
+	}
+}
+
+/* Announcement (Din kommune informerer) */
+.block-din-kommune-informerer {
+	.announcement-front {
+		padding: 22px 0;
+		.week-number {
+			height: 63px;
+			width: 25%;
+			padding-top: 0;
+		}
+		.body {
+			height: 63px;
+			width: 75%;
 		}
 	}
 }

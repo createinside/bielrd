@@ -1,6 +1,10 @@
 $ = jQuery;
 
 $(function() {
+
+	$('#section-header').waypoint('sticky', {
+		offset: -20
+	});
 	
 	// Custom select boxes init
 	$("select").customSelect();
@@ -105,7 +109,6 @@ $(function() {
 					$header.click();
 					$(document).scrollTop($header.offset().top-100);
 				}			
-			
 			}
 			else {
 				$header = $("."+hash+" .ui-accordion-header");
