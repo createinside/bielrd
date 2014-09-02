@@ -3418,7 +3418,7 @@ div.workbench-info-block a {
 }
 
 /* line 1337, ../sass/partials/_blocks.scss */
-.responsive-layout-mobile.not-front .ac_results {
+.responsive-layout-mobile .ac_results {
   display: none !important;
 }
 
