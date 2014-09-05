@@ -61,10 +61,14 @@ function rebild_announcement_views_default_views() {
   $handler->display->display_options['fields']['field_main_body']['field'] = 'field_main_body';
   $handler->display->display_options['fields']['field_main_body']['label'] = '';
   $handler->display->display_options['fields']['field_main_body']['element_label_colon'] = FALSE;
-  /* Sorteringskriterie: Indhold: Dato (field_announcement_date) */
-  $handler->display->display_options['sorts']['field_announcement_date_value']['id'] = 'field_announcement_date_value';
-  $handler->display->display_options['sorts']['field_announcement_date_value']['table'] = 'field_data_field_announcement_date';
-  $handler->display->display_options['sorts']['field_announcement_date_value']['field'] = 'field_announcement_date_value';
+  /* Sorteringskriterie: Indhold: Position (field_announcement_weight:value:null sort) */
+  $handler->display->display_options['sorts']['field_announcement_weight_value_nullsort']['id'] = 'field_announcement_weight_value_nullsort';
+  $handler->display->display_options['sorts']['field_announcement_weight_value_nullsort']['table'] = 'field_data_field_announcement_weight';
+  $handler->display->display_options['sorts']['field_announcement_weight_value_nullsort']['field'] = 'field_announcement_weight_value_nullsort';
+  /* Sorteringskriterie: Indhold: Position (field_announcement_weight) */
+  $handler->display->display_options['sorts']['field_announcement_weight_value']['id'] = 'field_announcement_weight_value';
+  $handler->display->display_options['sorts']['field_announcement_weight_value']['table'] = 'field_data_field_announcement_weight';
+  $handler->display->display_options['sorts']['field_announcement_weight_value']['field'] = 'field_announcement_weight_value';
   /* Kontekstuelt filter: Indhold: Dato (field_announcement_date) */
   $handler->display->display_options['arguments']['field_announcement_date_value']['id'] = 'field_announcement_date_value';
   $handler->display->display_options['arguments']['field_announcement_date_value']['table'] = 'field_data_field_announcement_date';
