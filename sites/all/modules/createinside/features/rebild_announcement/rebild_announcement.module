@@ -67,9 +67,9 @@ function rebild_announcement_block_save($delta = '', $edit = array()) {
  */
 function rebild_announcement_front_block_view() {
   
-	$output = "<a href='/din-kommune-informerer?dato=".date("Y")."-W".date("W")."'>";
+	$output = "<a href='/din-kommune-informerer?dato=".date("Y")."-W".date("W", strtotime("+2 days 12 hours"))."'>";
 	$output .= "<div class='announcement-front'>";
-	$output .= "<div class='week-number'><span class='icon-mega-phone'></span><span>Uge ".date("W")."</span></div>";
+	$output .= "<div class='week-number'><span class='icon-mega-phone'></span><span>Uge ".date("W", strtotime("+2 days 12 hours"))."</span></div>";
 	$output .= "<div class='body'>".variable_get('announcement_front_body', '')."</div>";
 	$output .= "</div></a>";
 		
