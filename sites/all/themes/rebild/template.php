@@ -342,3 +342,18 @@ function rebild_date_nav_title($params) {
     return $title;
   }
 }
+/**
+ * hook_menu_local_task_alter
+ *
+ * Convert Clone link from action link to tab.
+ */
+function rebild_menu_local_tasks_alter(&$data, $router_item, $root_path) {
+	if (isset($data['actions']['output'][0])) {
+		if($data['actions']['output'][0]['#link']['page_callback'] == 'clone_node_check') {
+			$data['actions']['output'][0]['#theme'] = 'menu_local_task';
+			$data['actions']['output'][0]['#link']['title'] = 'Opret kopi';
+			$data['tabs'][0]['output'][] = $data['actions']['output'][0];
+			unset($data['actions']['output'][0]);
+		}
+	}
+}
