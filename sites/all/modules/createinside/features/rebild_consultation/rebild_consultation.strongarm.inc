@@ -89,6 +89,9 @@ function rebild_consultation_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'print' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -100,6 +103,9 @@ function rebild_consultation_strongarm() {
         ),
         'redirect' => array(
           'weight' => '12',
+        ),
+        'path' => array(
+          'weight' => '30',
         ),
       ),
       'display' => array(),

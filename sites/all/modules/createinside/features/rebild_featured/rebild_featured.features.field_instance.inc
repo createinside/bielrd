@@ -191,6 +191,48 @@ function rebild_featured_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-featured_article-field_main_allow_publishing'
+  $field_instances['node-featured_article-field_main_allow_publishing'] = array(
+    'bundle' => 'featured_article',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Tillad at fagredaktører kan udgive indholdet uden normal godkendelsesprocedure.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_main_allow_publishing',
+    'label' => 'Tillad udgivelse uden godkendelse',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 32,
+    ),
+  );
+
   // Exported field_instance: 'node-featured_article-field_main_outdated'
   $field_instances['node-featured_article-field_main_outdated'] = array(
     'bundle' => 'featured_article',
@@ -225,7 +267,6 @@ function rebild_featured_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
-        'display_all_day' => 0,
         'increment' => 15,
         'input_format' => 'd/m/Y - H:i:s',
         'input_format_custom' => '',
@@ -326,6 +367,8 @@ function rebild_featured_field_default_field_instances() {
   t('Sektion');
   t('Stort bannerbillede - placeres øverst i boksen. Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet.');
   t('Tags');
+  t('Tillad at fagredaktører kan udgive indholdet uden normal godkendelsesprocedure.');
+  t('Tillad udgivelse uden godkendelse');
   t('Vælg et eller flere tags der er med til at beskrive indholdet.');
   t('Vælg hvilken sektion indholdet hører til.');
 

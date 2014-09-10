@@ -48,14 +48,15 @@ function rebild_page_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Advancerede indstillinger',
-    'weight' => '31',
+    'label' => 'Avancerede indstillinger',
+    'weight' => '10',
     'children' => array(
       0 => 'field_main_protected',
+      1 => 'field_main_allow_publishing',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'label' => 'Advancerede indstillinger',
+      'label' => 'Avancerede indstillinger',
       'instance_settings' => array(
         'required_fields' => 0,
         'classes' => '',

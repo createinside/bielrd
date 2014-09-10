@@ -172,16 +172,16 @@ node/*/edit',
           'weight' => '0',
         ),
         'metatags' => array(
-          'weight' => '7',
+          'weight' => '6',
         ),
         'workbench_access' => array(
           'weight' => '11',
         ),
         'path' => array(
-          'weight' => '9',
+          'weight' => '8',
         ),
         'redirect' => array(
-          'weight' => '8',
+          'weight' => '7',
         ),
         'rabbit_hole' => array(
           'weight' => '0',
@@ -209,6 +209,12 @@ node/*/edit',
         'content_accordion_revisions__entity_view_1' => array(
           'default' => array(
             'weight' => '4',
+            'visible' => TRUE,
+          ),
+        ),
+        'test_klon_embedded' => array(
+          'default' => array(
+            'weight' => '10',
             'visible' => TRUE,
           ),
         ),
