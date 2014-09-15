@@ -278,24 +278,26 @@ function rebild_preprocess_search_results(&$variables) {
 function rebild_page_alter(&$page) {
 	
 	$node = menu_get_object();
-
 	// Breadcrumb: Agenda nodes
-	if($node->type=="agenda") {
-	
-		$committee = field_get_items('node', $node, 'field_agenda_committee');
-						
-		$breadcrumb = drupal_get_breadcrumb();
-		$breadcrumb[] = l('Politik', 'politik');
-		$breadcrumb[] = l('Dagsordener og referater', 'politik/dagsordener-og-referater');
-		$breadcrumb[] = l($committee[0]['taxonomy_term']->name, 'politik/dagsordener-og-referater/'.$committee[0]["tid"]);
-		drupal_set_breadcrumb($breadcrumb);
-	}
+	if(!empty($node)) {
+		if($node->type=="agenda") {
+		
+			$committee = field_get_items('node', $node, 'field_agenda_committee');
+							
+			$breadcrumb = drupal_get_breadcrumb();
+			$breadcrumb[] = l('Politik', 'politik');
+			$breadcrumb[] = l('Dagsordener og referater', 'politik/dagsordener-og-referater');
+			$breadcrumb[] = l($committee[0]['taxonomy_term']->name, 'politik/dagsordener-og-referater/'.$committee[0]["tid"]);
+			drupal_set_breadcrumb($breadcrumb);
+		}
 	// Breadcrumb: Agenda views
-	else if(arg(1) == 'dagsordener-og-referater' && is_numeric(arg(2))) {
-		$breadcrumb = drupal_get_breadcrumb();
-		array_pop($breadcrumb);
-		drupal_set_breadcrumb($breadcrumb);
+		else if(arg(1) == 'dagsordener-og-referater' && is_numeric(arg(2))) {
+			$breadcrumb = drupal_get_breadcrumb();
+			array_pop($breadcrumb);
+			drupal_set_breadcrumb($breadcrumb);
+		}
 	}
+	
 }
 
 function rebild_date_all_day_label() { 
@@ -341,4 +343,19 @@ function rebild_date_nav_title($params) {
   else {
     return $title;
   }
+}
+/**
+ * hook_menu_local_task_alter
+ *
+ * Convert Clone link from action link to tab.
+ */
+function rebild_menu_local_tasks_alter(&$data, $router_item, $root_path) {
+	if (isset($data['actions']['output'][0])) {
+		if($data['actions']['output'][0]['#link']['page_callback'] == 'clone_node_check') {
+			$data['actions']['output'][0]['#theme'] = 'menu_local_task';
+			$data['actions']['output'][0]['#link']['title'] = 'Opret kopi';
+			$data['tabs'][0]['output'][] = $data['actions']['output'][0];
+			unset($data['actions']['output'][0]);
+		}
+	}
 }

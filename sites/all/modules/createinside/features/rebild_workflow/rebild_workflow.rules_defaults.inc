@@ -135,6 +135,30 @@ function rebild_workflow_default_rules_configuration() {
       ]
     }
   }');
+  $items['rules_workflow_allow_publishing'] = entity_import('rules_config', '{ "rules_workflow_allow_publishing" : {
+      "LABEL" : "Workflow: Allow publishing",
+      "PLUGIN" : "reaction rule",
+      "REQUIRES" : [ "rules", "workbench_moderation" ],
+      "ON" : [ "workbench_moderation_after_moderation_transition" ],
+      "IF" : [
+        { "entity_has_field" : { "entity" : [ "node" ], "field" : "field_main_allow_publishing" } },
+        { "NOT data_is_empty" : { "data" : [ "node:field-main-allow-publishing" ] } },
+        { "user_has_role" : {
+            "account" : [ "site:current-user" ],
+            "roles" : { "value" : { "4" : "4" } }
+          }
+        }
+      ],
+      "DO" : [
+        { "workbench_moderation_set_state" : {
+            "node" : [ "node" ],
+            "moderation_state" : "published",
+            "force_transition" : 1
+          }
+        }
+      ]
+    }
+  }');
   $items['rules_workflow_email_draft_needs_review'] = entity_import('rules_config', '{ "rules_workflow_email_draft_needs_review" : {
       "LABEL" : "Workflow email: Draft =\\u003E Needs review",
       "PLUGIN" : "reaction rule",

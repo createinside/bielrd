@@ -103,6 +103,48 @@ function rebild_announcement_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-announcement-field_main_allow_publishing'
+  $field_instances['node-announcement-field_main_allow_publishing'] = array(
+    'bundle' => 'announcement',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Tillad at fagredaktører kan udgive indholdet uden normal godkendelsesprocedure.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_main_allow_publishing',
+    'label' => 'Tillad udgivelse uden godkendelse',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 11,
+    ),
+  );
+
   // Exported field_instance: 'node-announcement-field_main_body'
   $field_instances['node-announcement-field_main_body'] = array(
     'bundle' => 'announcement',
@@ -228,6 +270,46 @@ function rebild_announcement_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-announcement-field_main_summary'
+  $field_instances['node-announcement-field_main_summary'] = array(
+    'bundle' => 'announcement',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Resumétekst der kortfattet og præcist beskriver indholdet. ',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_main_summary',
+    'label' => 'Resumé',
+    'required' => 1,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 3,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'node-announcement-field_main_tags'
   $field_instances['node-announcement-field_main_tags'] = array(
     'bundle' => 'announcement',
@@ -274,8 +356,12 @@ function rebild_announcement_field_default_field_instances() {
   t('Forældelsesdato');
   t('Position');
   t('Primær indhold.');
+  t('Resumé');
+  t('Resumétekst der kortfattet og præcist beskriver indholdet. ');
   t('Sektion');
   t('Tags');
+  t('Tillad at fagredaktører kan udgive indholdet uden normal godkendelsesprocedure.');
+  t('Tillad udgivelse uden godkendelse');
   t('Vælg en dato for meddelelsen.');
   t('Vælg et eller flere tags der er med til at beskrive indholdet.');
   t('Vælg hvilken sektion indholdet hører til.');

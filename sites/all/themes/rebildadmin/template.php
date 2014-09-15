@@ -15,16 +15,16 @@ function rebildadmin_preprocess_page(&$vars) {
 function rebildadmin_breadcrumb($variables) {
 	
 	$breadcrumb = $variables['breadcrumb'];
-
-  if (!empty($breadcrumb)) {
+ if (!empty($breadcrumb)) {
     array_shift($breadcrumb); // Removes the Home item
     array_unshift($breadcrumb,l(' <span class="icon-home"></span> ','<front>', array("html" => TRUE)));
     $output = '<div class="breadcrumb">';
-    $output .= implode(' <span class="icon-untitled"></span> ', $breadcrumb);
-    $output .= ' <span class="icon-untitled"></span> <strong>'.drupal_get_title().'</strong>';
+    $output .= implode(' <span class="icon-angle-right"></span> ', $breadcrumb);
+    $output .= ' <span class="icon-angle-right"></span> <strong>'.drupal_get_title().'</strong>';
     $output .= '</div>';
     return $output;
   }
+  
 }
 
 

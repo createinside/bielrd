@@ -10,6 +10,48 @@
 function rebild_news_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-news_article-field_main_allow_publishing'
+  $field_instances['node-news_article-field_main_allow_publishing'] = array(
+    'bundle' => 'news_article',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Tillad at fagredaktører kan udgive indholdet uden normal godkendelsesprocedure.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_main_allow_publishing',
+    'label' => 'Tillad udgivelse uden godkendelse',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 32,
+    ),
+  );
+
   // Exported field_instance: 'node-news_article-field_main_body'
   $field_instances['node-news_article-field_main_body'] = array(
     'bundle' => 'news_article',
@@ -303,7 +345,6 @@ function rebild_news_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
-        'display_all_day' => 0,
         'increment' => 15,
         'input_format' => 'd/m/Y - H:i:s',
         'input_format_custom' => '',
@@ -446,6 +487,8 @@ function rebild_news_field_default_field_instances() {
   t('Resumé');
   t('Sektion');
   t('Tags');
+  t('Tillad at fagredaktører kan udgive indholdet uden normal godkendelsesprocedure.');
+  t('Tillad udgivelse uden godkendelse');
   t('Upload et billede, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
   t('Upload et eller flere billeder, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
   t('Vælg et eller flere tags der er med til at beskrive indholdet.');

@@ -1165,6 +1165,48 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-page-field_main_allow_publishing'
+  $field_instances['node-page-field_main_allow_publishing'] = array(
+    'bundle' => 'page',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Tillad at fagredaktører kan udgive indholdet uden normal godkendelsesprocedure.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 27,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_main_allow_publishing',
+    'label' => 'Tillad udgivelse uden godkendelse',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 9,
+    ),
+  );
+
   // Exported field_instance: 'node-page-field_main_block'
   $field_instances['node-page-field_main_block'] = array(
     'bundle' => 'page',
@@ -1623,7 +1665,6 @@ function rebild_page_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
-        'display_all_day' => 0,
         'increment' => 30,
         'input_format' => 'd/m/Y - H:i:s',
         'input_format_custom' => '',
@@ -1645,7 +1686,7 @@ function rebild_page_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Hvis du sætter mærke her er det kun brugere med rollen ’Politiker’ eller højere der kan se siden. Ellers kan alle brugere se siden.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1674,7 +1715,7 @@ function rebild_page_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 29,
+      'weight' => 10,
     ),
   );
 
@@ -1933,6 +1974,7 @@ function rebild_page_field_default_field_instances() {
   t('Forældelsesdato');
   t('Funktion/Titel');
   t('GIS Kort');
+  t('Hvis du sætter mærke her er det kun brugere med rollen ’Politiker’ eller højere der kan se siden. Ellers kan alle brugere se siden.');
   t('Indsæt den generede iframe kode fra siden her: www.gis-kort.dk - placeres under hovedindholdet.');
   t('Indtast et resumé. Resuméet vises øverst før brødteksten.');
   t('Indtast et youtube link.');
@@ -1952,6 +1994,8 @@ function rebild_page_field_default_field_instances() {
   t('Telefontider');
   t('Tilknyt en dynamisk oversigt til denne side.');
   t('Tilknyt en forudindstillet blok.');
+  t('Tillad at fagredaktører kan udgive indholdet uden normal godkendelsesprocedure.');
+  t('Tillad udgivelse uden godkendelse');
   t('Title tekst');
   t('Title text is used in the tool tip when a user hovers their mouse over the image. Adding title text makes it easier to understand the context of an image and improves usability.');
   t('Upload et eller flere billeder, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');

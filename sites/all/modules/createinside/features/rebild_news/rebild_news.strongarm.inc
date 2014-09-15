@@ -107,6 +107,9 @@ function rebild_news_strongarm() {
         'redirect' => array(
           'weight' => '11',
         ),
+        'path' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(),
     ),
