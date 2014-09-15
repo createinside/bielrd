@@ -2,11 +2,9 @@ $ = jQuery;
 
 $(function() {
 
-/*
-	$('#zone-menu-wrapper').waypoint('sticky', {
-		offset: 0
+	$('#section-header').waypoint('sticky', {
+		offset: -20
 	});
-*/
 	
 	// Custom select boxes init
 	$("select").customSelect();

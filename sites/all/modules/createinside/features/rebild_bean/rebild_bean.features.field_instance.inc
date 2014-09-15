@@ -493,7 +493,7 @@ function rebild_bean_field_default_field_instances() {
   $field_instances['field_collection_item-field_front_block-field_front_block_image'] = array(
     'bundle' => 'field_front_block',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Vælg et billede der er minimum 110x50 px',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -517,7 +517,7 @@ function rebild_bean_field_default_field_instances() {
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '',
+      'min_resolution' => '110x50',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -529,6 +529,7 @@ function rebild_bean_field_default_field_instances() {
           'public' => 'public',
         ),
         'allowed_types' => array(
+          0 => 0,
           'application' => 0,
           'audio' => 0,
           'document' => 0,
@@ -714,6 +715,7 @@ function rebild_bean_field_default_field_instances() {
   t('Tekstlinie');
   t('Titel');
   t('Undertitel');
+  t('Vælg et billede der er minimum 110x50 px');
 
   return $field_instances;
 }

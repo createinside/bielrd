@@ -90,13 +90,22 @@ function rebild_announcement_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '0',
+          'weight' => '1',
         ),
         'metatags' => array(
-          'weight' => '8',
+          'weight' => '7',
         ),
         'redirect' => array(
+          'weight' => '8',
+        ),
+        'path' => array(
           'weight' => '9',
+        ),
+        'rabbit_hole' => array(
+          'weight' => '0',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '10',
         ),
       ),
       'display' => array(),

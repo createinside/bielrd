@@ -37,6 +37,7 @@ body {
 	font-size: 12px;
 }
 #page {
+	background: transparent url("../img/noise_bg_repeat.png") repeat;	
 	header, section, footer {
 		font-size: 12px;
 	}
@@ -70,10 +71,7 @@ img {
 -------------------------------------------------------------------*/
 #section-header {
 	position: relative;
-	z-index: 2;
-}
-#section-content {
-	background: transparent url("../img/noise_bg_repeat.png") repeat;	
+	z-index: 3;
 }
 .not-front {
 	#section-content {

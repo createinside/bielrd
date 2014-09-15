@@ -165,3 +165,20 @@ Landingpage
 #region-postscript-first .block-block .content ul li {
   margin-bottom: 1.1em;
 }
+
+/* Announcement (Din kommune informerer) */
+/* line 147, ../sass/rebild-alpha-default-normal.scss */
+.block-din-kommune-informerer .announcement-front {
+  padding: 22px 0;
+}
+/* line 149, ../sass/rebild-alpha-default-normal.scss */
+.block-din-kommune-informerer .announcement-front .week-number {
+  height: 63px;
+  width: 25%;
+  padding-top: 0;
+}
+/* line 154, ../sass/rebild-alpha-default-normal.scss */
+.block-din-kommune-informerer .announcement-front .body {
+  height: 63px;
+  width: 75%;
+}

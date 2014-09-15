@@ -1333,8 +1333,58 @@ div.workbench-info-block {
 		width: 557px !important;		
 	}	
 } 
-.responsive-layout-mobile.not-front {
+.responsive-layout-mobile {
 	.ac_results {
 		display: none !important;
 	}	
+}
+
+/**
+ * Announcement (Din kommune informerer)
+ */
+.block-din-kommune-informerer {
+	a {
+		color: $text-color;
+	}
+	.announcement-front {
+		padding: 18px 0;
+		overflow: hidden;
+		@include grid-box($bg-color-alt);
+
+		.week-number {
+			float: left;
+			width: 25%;
+			font-weight: bold;
+			text-align: center;
+			border-right: 1px solid #d6d6d6;
+			height: 55px;
+			@include box-sizing(border-box);
+			span.icon-mega-phone {
+				display: block;
+				font-size: 3em;
+				margin-bottom: 5px;
+			}
+		}
+		.body {
+			float: left;
+			width: 75%;
+			padding-right: 15px;
+			padding-left: 15px;
+			border-left: 1px solid white;
+			height: 55px;
+			@include box-sizing(border-box);
+			h2 {
+				font-size: (16/12)*1em;
+				margin-bottom: 5px;
+				font-weight: normal;
+				color: black;
+				line-height: $line-height-std;
+			}
+			p {
+				font-size: 1em;
+				margin: 0;
+				line-height: $line-height-std;
+			}
+		}
+	}
 }
