@@ -203,6 +203,7 @@ features[variable][] = workbench_moderation_default_state_page
 features[variable][] = workbench_moderation_default_state_self_service
 features[variable][] = workbench_moderation_default_state_webform
 features[views_view][] = outdated_content
+features[views_view][] = workbench_rebild_content_without_moderations
 features[views_view][] = workbench_rebild_current_user
 features[views_view][] = workbench_rebild_edits_by_user
 features[views_view][] = workbench_rebild_moderation_require_attention

@@ -1686,7 +1686,7 @@ function rebild_page_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Hvis du sætter mærke her er det kun brugere med rollen ’Politiker’ eller højere der kan se siden. Ellers kan alle brugere se siden.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1974,6 +1974,7 @@ function rebild_page_field_default_field_instances() {
   t('Forældelsesdato');
   t('Funktion/Titel');
   t('GIS Kort');
+  t('Hvis du sætter mærke her er det kun brugere med rollen ’Politiker’ eller højere der kan se siden. Ellers kan alle brugere se siden.');
   t('Indsæt den generede iframe kode fra siden her: www.gis-kort.dk - placeres under hovedindholdet.');
   t('Indtast et resumé. Resuméet vises øverst før brødteksten.');
   t('Indtast et youtube link.');

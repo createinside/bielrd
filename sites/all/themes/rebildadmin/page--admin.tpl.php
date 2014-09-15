@@ -36,8 +36,6 @@ $bruger = user_load($user->uid, $reset = FALSE);
         </div>
       <?php endif; ?>
       <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
-
-
 	<div id="min_profil_side">
 		<div class="min_profil_top">
 			<?php print render($page['content']['system_main']['workbench_edited']); ?>
@@ -51,7 +49,7 @@ $bruger = user_load($user->uid, $reset = FALSE);
 		</div>
 		<div class="min_profil_bottom">
 			<?php print render($page['content']['system_main']['workbench_recent_content2']); ?>	
-		
+			<?php print render($page['content']['system_main']['workbench_content_without_moderation']); ?>		
 		</div>
 	</div>
     </div>

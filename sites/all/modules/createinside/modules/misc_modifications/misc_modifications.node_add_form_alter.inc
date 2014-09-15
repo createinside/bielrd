@@ -8,7 +8,7 @@ function misc_modifications_form_alter(&$form, &$form_state, $form_id) {
 		if ($form_id == ($indholdstyper[$key]->type . '_node_form')) {				
 			if(isset($form['field_main_allow_publishing'])) {
 				if ($form['field_main_allow_publishing']['und']['#default_value'] == 1) {
-					drupal_set_message('OBS! Dette indhold udgives uden godkendelse for fagredaktører.', 'warning');
+					drupal_set_message('OBS! Denne side kan udgives af fagredaktører. Så snart du trykker ’Gem’ er alle ændringer udgivet.', 'warning');
 				}
 			}
 			/* Tilføjer description til titel feltet */					

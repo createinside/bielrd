@@ -15,9 +15,12 @@
       if(isset($content['field_main_image'])) hide($content['field_main_image']);
       if(isset($content['field_main_summary'])) hide($content['field_main_summary']);
       //if(isset($content['field_main_image'])) print render($content['field_main_image']);
-      
-      if ($indhold->field_main_protected['und'][0]['value'] == 1) { if($user == 1){ if(isset($content['field_main_image'])) print render($content['field_main_image']); if(isset($content['field_main_summary'])) print render($content['field_main_summary']); }}
-	  if ($indhold->field_main_protected['und'][0]['value'] == 0) {if(isset($content['field_main_image'])) print render($content['field_main_image']); if(isset($content['field_main_summary'])) print render($content['field_main_summary']); }
+     
+      if (isset($indhold->field_main_protected['und'])) {
+	      if ($indhold->field_main_protected['und'][0]['value'] == 1) { if($user == 1){ if(isset($content['field_main_image'])) print render($content['field_main_image']); if(isset($content['field_main_summary'])) print render($content['field_main_summary']); }}
+		  if ($indhold->field_main_protected['und'][0]['value'] == 0) {if(isset($content['field_main_image'])) print render($content['field_main_image']); 
+      }
+      if(isset($content['field_main_summary'])) print render($content['field_main_summary']); }
        if(isset($content['field_os2web_borger_dk_header'])) print render($content['field_os2web_borger_dk_header']);
       // Kontakt fields
       if(isset($content['field_con_address'])) hide($content['field_con_address']);
@@ -39,7 +42,8 @@
 		?>
    	<div id='content-main'<?php if(!empty($region['content_sidebar'])) print " class='has-sidebar'"; ?>>
 		<?php
-		if ($indhold->field_main_protected['und'][0]['value'] == 1) {
+		if (isset($indhold->field_main_protected['und'])) {
+			if ($indhold->field_main_protected['und'][0]['value'] == 1) {
 			if(!user_is_logged_in() ){
 				print t('Du skal anvende brugernavn og adgangskode for at logge ind. Kontakt kommunikation@rebild.dk hvis du har mistet adgangskoden.');
 			    print drupal_render(drupal_get_form('user_login')); 
@@ -47,6 +51,7 @@
 			else {
 				print render($content);
 			}			
+			}
 		}
 		else {
 				print render($content);

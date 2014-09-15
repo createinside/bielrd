@@ -25,7 +25,7 @@ function rebild_self_service_field_group_info() {
     'children' => array(
       0 => 'field_main_allow_publishing',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
       'label' => 'Avancerede indstillinger',
       'instance_settings' => array(
@@ -33,7 +33,7 @@ function rebild_self_service_field_group_info() {
         'classes' => '',
         'description' => '',
       ),
-      'formatter' => 'collapsed',
+      'formatter' => 'closed',
     ),
   );
   $export['group_advanced|node|self_service|form'] = $field_group;

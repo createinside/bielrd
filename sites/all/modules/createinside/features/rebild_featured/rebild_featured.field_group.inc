@@ -25,15 +25,15 @@ function rebild_featured_field_group_info() {
     'children' => array(
       0 => 'field_main_allow_publishing',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
       'label' => 'Avancerede indstillinger',
       'instance_settings' => array(
-        'required_fields' => 1,
+        'required_fields' => 0,
         'classes' => '',
         'description' => '',
       ),
-      'formatter' => 'collapsed',
+      'formatter' => 'closed',
     ),
   );
   $export['group_advanced|node|featured_article|form'] = $field_group;
