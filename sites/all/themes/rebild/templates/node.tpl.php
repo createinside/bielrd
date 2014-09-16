@@ -42,17 +42,16 @@
 		?>
    	<div id='content-main'<?php if(!empty($region['content_sidebar'])) print " class='has-sidebar'"; ?>>
 		<?php
-		if (isset($indhold->field_main_protected['und'])) {
-			if ($indhold->field_main_protected['und'][0]['value'] == 1) {
+	
+		if ($indhold->field_main_protected['und'][0]['value'] == 1) {
 			if(!user_is_logged_in() ){
 				print t('Du skal anvende brugernavn og adgangskode for at logge ind. Kontakt kommunikation@rebild.dk hvis du har mistet adgangskoden.');
 			    print drupal_render(drupal_get_form('user_login')); 
 			}
-			else {
+		else {
 				print render($content);
 			}			
 			}
-		}
 		else {
 				print render($content);
 			}		      
