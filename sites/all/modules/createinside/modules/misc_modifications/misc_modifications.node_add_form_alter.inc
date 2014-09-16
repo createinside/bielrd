@@ -5,7 +5,15 @@ function misc_modifications_form_alter(&$form, &$form_state, $form_id) {
 	$indholdstyper = node_type_get_types();
 	/* Vi kører en løkke der finder frem til alle machine names på indholdstyperne, og herefter laver vi en form alter. */
 	foreach(element_children($indholdstyper) as $key) {
-		if ($form_id == ($indholdstyper[$key]->type . '_node_form')) {				
+		if ($form_id == ($indholdstyper[$key]->type . '_node_form')) {			
+			//dpm($form['#fieldgroups']['group_adv']);
+			if (isset($form['#fieldgroups']['group_advanced'])) {
+				$form['#fieldgroups']['group_advanced']->weight = 200;
+			}
+			if (isset($form['#fieldgroups']['group_adv'])) {
+				$form['#fieldgroups']['group_adv']->weight = 200;
+			}
+				
 			if(isset($form['field_main_allow_publishing'])) {
 				if ($form['field_main_allow_publishing']['und']['#default_value'] == 1) {
 					drupal_set_message('OBS! Denne side kan udgives af fagredaktører. Så snart du trykker ’Gem’ er alle ændringer udgivet.', 'warning');
