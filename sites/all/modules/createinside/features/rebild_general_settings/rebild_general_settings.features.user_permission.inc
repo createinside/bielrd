@@ -55,5 +55,16 @@ function rebild_general_settings_user_default_permissions() {
     'module' => 'clone',
   );
 
+  // Exported permission: 'flush caches'.
+  $permissions['flush caches'] = array(
+    'name' => 'flush caches',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+      'konfigurator' => 'konfigurator',
+    ),
+    'module' => 'admin_menu',
+  );
+
   return $permissions;
 }
