@@ -23,6 +23,7 @@ function rebild_announcement_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Din kommune informerer';
+  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -75,6 +76,7 @@ function rebild_announcement_views_default_views() {
   $handler->display->display_options['arguments']['field_announcement_date_value']['field'] = 'field_announcement_date_value';
   $handler->display->display_options['arguments']['field_announcement_date_value']['default_action'] = 'default';
   $handler->display->display_options['arguments']['field_announcement_date_value']['exception']['title'] = 'Alle';
+  $handler->display->display_options['arguments']['field_announcement_date_value']['default_argument_type'] = 'php';
   $handler->display->display_options['arguments']['field_announcement_date_value']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_announcement_date_value']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_announcement_date_value']['summary_options']['items_per_page'] = '25';

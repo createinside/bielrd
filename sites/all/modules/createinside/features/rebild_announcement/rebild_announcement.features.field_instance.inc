@@ -270,46 +270,6 @@ function rebild_announcement_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-announcement-field_main_summary'
-  $field_instances['node-announcement-field_main_summary'] = array(
-    'bundle' => 'announcement',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Resumétekst der kortfattet og præcist beskriver indholdet. ',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_main_summary',
-    'label' => 'Resumé',
-    'required' => 1,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 3,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 1,
-    ),
-  );
-
   // Exported field_instance: 'node-announcement-field_main_tags'
   $field_instances['node-announcement-field_main_tags'] = array(
     'bundle' => 'announcement',
@@ -356,8 +316,6 @@ function rebild_announcement_field_default_field_instances() {
   t('Forældelsesdato');
   t('Position');
   t('Primær indhold.');
-  t('Resumé');
-  t('Resumétekst der kortfattet og præcist beskriver indholdet. ');
   t('Sektion');
   t('Tags');
   t('Tillad at fagredaktører kan udgive indholdet uden normal godkendelsesprocedure.');
