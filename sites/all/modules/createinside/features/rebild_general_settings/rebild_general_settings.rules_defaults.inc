@@ -12,11 +12,16 @@ function rebild_general_settings_default_rules_configuration() {
   $items['rules_redirect_byraadspolitikere'] = entity_import('rules_config', '{ "rules_redirect_byraadspolitikere" : {
       "LABEL" : "Redirect byraadspolitikere",
       "PLUGIN" : "reaction rule",
-      "REQUIRES" : [ "rules", "php" ],
+      "REQUIRES" : [ "rules" ],
       "ON" : [ "user_login" ],
       "IF" : [
         { "user_has_role" : { "account" : [ "account" ], "roles" : { "value" : { "7" : "7" } } } },
-        { "php_eval" : { "code" : "$test = drupal_get_destination();\\r\\nreturn $test;" } }
+        { "text_matches" : {
+            "text" : [ "site:current-page:path" ],
+            "match" : "user",
+            "operation" : "ends"
+          }
+        }
       ],
       "DO" : [
         { "redirect" : { "url" : "http:\\/\\/rebild.dk\\/politik\\/haandbog-politikere" } }
