@@ -46,6 +46,7 @@ features[metatag][] = global
 features[metatag][] = global:frontpage
 features[metatag][] = node
 features[rules_config][] = rules_redirect_byraadspolitikere
+features[rules_config][] = rules_redirect_politiker_efter_opdatering_af_profil
 features[rules_config][] = rules_redirect_til_brugeroversigt_efter_login
 features[user_permission][] = access administration menu
 features[user_permission][] = access contextual links
