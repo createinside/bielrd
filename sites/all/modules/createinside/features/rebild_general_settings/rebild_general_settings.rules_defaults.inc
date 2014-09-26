@@ -16,11 +16,19 @@ function rebild_general_settings_default_rules_configuration() {
       "ON" : [ "user_login" ],
       "IF" : [
         { "user_has_role" : { "account" : [ "account" ], "roles" : { "value" : { "7" : "7" } } } },
-        { "text_matches" : {
-            "text" : [ "site:current-page:path" ],
-            "match" : "user",
-            "operation" : "ends"
-          }
+        { "OR" : [
+            { "text_matches" : {
+                "text" : [ "site:current-page:path" ],
+                "match" : "user",
+                "operation" : "ends"
+              }
+            },
+            { "text_matches" : {
+                "text" : [ "site:current-page:url" ],
+                "match" : "politik\\/haandbog-politikere"
+              }
+            }
+          ]
         }
       ],
       "DO" : [
