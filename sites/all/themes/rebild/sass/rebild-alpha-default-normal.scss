@@ -154,6 +154,13 @@ Landingpage
 		.body {
 			height: 63px;
 			width: 75%;
+			h2 {
+				font-size: (16/12)*1em;
+				margin-bottom: 10px;
+			}
+			p {
+				font-size: 1em;
+			}
 		}
 	}
 }

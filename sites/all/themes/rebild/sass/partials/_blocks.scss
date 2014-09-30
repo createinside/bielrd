@@ -1167,6 +1167,9 @@ div.workbench-info-block {
 			@include background-image(linear-gradient(#eeeeee, #ffffff 33%));
 			@include border-radius($border-radius-std);
 			@include box-sizing(border-box);
+			@include placeholder {
+				color: transparent;
+			}
 		}
 		input[type=submit] {
 			position: absolute;
@@ -1350,7 +1353,6 @@ div.workbench-info-block {
 		padding: 18px 0;
 		overflow: hidden;
 		@include grid-box($bg-color-alt);
-
 		.week-number {
 			float: left;
 			width: 25%;
@@ -1374,14 +1376,14 @@ div.workbench-info-block {
 			height: 55px;
 			@include box-sizing(border-box);
 			h2 {
-				font-size: (16/12)*1em;
-				margin-bottom: 5px;
+				font-size: (15/12)*1em;
+				margin-bottom: 10px;
 				font-weight: normal;
 				color: black;
 				line-height: $line-height-std;
 			}
 			p {
-				font-size: 1em;
+				font-size: 0.9em;
 				margin: 0;
 				line-height: $line-height-std;
 			}
