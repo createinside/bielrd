@@ -57,6 +57,9 @@ Backend
 	Blocks
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
+	Input
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
 	Backend
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
@@ -3218,7 +3221,27 @@ div.workbench-info-block a {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 1171, ../sass/partials/_blocks.scss */
+/* line 24, ../sass/modules/_mixins.scss */
+#block-ci-search-ci-search-front form input[type=search]::-webkit-input-placeholder,
+#block-ci-search-ci-search-front form input[type=text]::-webkit-input-placeholder {
+  color: transparent;
+}
+/* line 25, ../sass/modules/_mixins.scss */
+#block-ci-search-ci-search-front form input[type=search]:-moz-placeholder,
+#block-ci-search-ci-search-front form input[type=text]:-moz-placeholder {
+  color: transparent;
+}
+/* line 26, ../sass/modules/_mixins.scss */
+#block-ci-search-ci-search-front form input[type=search]::-moz-placeholder,
+#block-ci-search-ci-search-front form input[type=text]::-moz-placeholder {
+  color: transparent;
+}
+/* line 27, ../sass/modules/_mixins.scss */
+#block-ci-search-ci-search-front form input[type=search]:-ms-input-placeholder,
+#block-ci-search-ci-search-front form input[type=text]:-ms-input-placeholder {
+  color: transparent;
+}
+/* line 1174, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form input[type=submit] {
   position: absolute;
   right: 10px;
@@ -3231,44 +3254,44 @@ div.workbench-info-block a {
   -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-/* line 1179, ../sass/partials/_blocks.scss */
+/* line 1182, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .form-item, #block-ci-search-ci-search-front form .form-actions {
   margin: 0;
 }
-/* line 1182, ../sass/partials/_blocks.scss */
+/* line 1185, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .most-searched {
   font-size: 11px;
   line-height: 1.25em;
   color: #474747;
   text-shadow: white 1px 1px 1px;
 }
-/* line 1187, ../sass/partials/_blocks.scss */
+/* line 1190, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .most-searched ul {
   display: inline-block;
   text-align: center;
 }
-/* line 1190, ../sass/partials/_blocks.scss */
+/* line 1193, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .most-searched ul li {
   margin-right: 1em;
   margin-bottom: 0.5em;
   display: inline-block;
 }
-/* line 1194, ../sass/partials/_blocks.scss */
+/* line 1197, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .most-searched ul li a {
   color: #474747;
 }
-/* line 1197, ../sass/partials/_blocks.scss */
+/* line 1200, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .most-searched ul li a:hover {
   text-decoration: none;
 }
-/* line 1202, ../sass/partials/_blocks.scss */
+/* line 1205, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .most-searched strong {
   display: inline-block;
   margin-left: 1em;
 }
 
 /* Search block header */
-/* line 1211, ../sass/partials/_blocks.scss */
+/* line 1214, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-header {
   position: absolute;
   right: 0;
@@ -3277,7 +3300,7 @@ div.workbench-info-block a {
   width: 325px;
   display: none;
 }
-/* line 1218, ../sass/partials/_blocks.scss */
+/* line 1221, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-header .dropd-btn {
   font-size: 1em;
   line-height: 5.5em;
@@ -3301,7 +3324,7 @@ div.workbench-info-block a {
   -webkit-border-top-right-radius: 3px;
   border-top-right-radius: 3px;
 }
-/* line 1236, ../sass/partials/_blocks.scss */
+/* line 1239, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-header .dropd-btn:before {
   content: "";
   width: 0;
@@ -3313,7 +3336,7 @@ div.workbench-info-block a {
   bottom: -7px;
   left: 25px;
 }
-/* line 1246, ../sass/partials/_blocks.scss */
+/* line 1249, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-header #search-dropd-wrapper {
   position: absolute;
   bottom: -52px;
@@ -3322,12 +3345,12 @@ div.workbench-info-block a {
   display: none;
   z-index: 9998;
 }
-/* line 1253, ../sass/partials/_blocks.scss */
+/* line 1256, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-header #search-dropd-wrapper .form-item {
   margin: 0;
   padding: 0;
 }
-/* line 1257, ../sass/partials/_blocks.scss */
+/* line 1260, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-header #search-dropd-wrapper input[type=text] {
   height: 50px;
   margin-top: 2px;
@@ -3341,11 +3364,11 @@ div.workbench-info-block a {
   -moz-box-shadow: 0;
   box-shadow: 0;
 }
-/* line 1268, ../sass/partials/_blocks.scss */
+/* line 1271, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-header #search-dropd-wrapper input[type=submit] {
   display: none;
 }
-/* line 1271, ../sass/partials/_blocks.scss */
+/* line 1274, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-header #search-dropd-wrapper button[type=submit] {
   position: absolute;
   top: 2px;
@@ -3361,7 +3384,7 @@ div.workbench-info-block a {
 }
 
 /* Search autocomplete widget */
-/* line 1288, ../sass/partials/_blocks.scss */
+/* line 1291, ../sass/partials/_blocks.scss */
 .ac_results:before {
   content: "";
   width: 0;
@@ -3374,7 +3397,7 @@ div.workbench-info-block a {
   left: 30px;
 }
 
-/* line 1299, ../sass/partials/_blocks.scss */
+/* line 1302, ../sass/partials/_blocks.scss */
 .ac_results {
   border: none;
   padding: 10px 8px;
@@ -3391,33 +3414,33 @@ div.workbench-info-block a {
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 1307, ../sass/partials/_blocks.scss */
+/* line 1310, ../sass/partials/_blocks.scss */
 .ac_results ul li {
   padding: 20px;
   font-size: 1em;
   cursor: pointer;
   color: #474747;
 }
-/* line 1319, ../sass/partials/_blocks.scss */
+/* line 1322, ../sass/partials/_blocks.scss */
 .ac_results ul .ac_even {
   background: white;
 }
-/* line 1322, ../sass/partials/_blocks.scss */
+/* line 1325, ../sass/partials/_blocks.scss */
 .ac_results ul .ac_odd {
   background: #f6f6f6;
 }
-/* line 1325, ../sass/partials/_blocks.scss */
+/* line 1328, ../sass/partials/_blocks.scss */
 .ac_results ul .ac_over {
   background: #cfcfcf;
   color: #474747;
 }
 
-/* line 1332, ../sass/partials/_blocks.scss */
+/* line 1335, ../sass/partials/_blocks.scss */
 .front .ac_results {
   width: 557px !important;
 }
 
-/* line 1337, ../sass/partials/_blocks.scss */
+/* line 1340, ../sass/partials/_blocks.scss */
 .responsive-layout-mobile .ac_results {
   display: none !important;
 }
@@ -3425,11 +3448,11 @@ div.workbench-info-block a {
 /**
  * Announcement (Din kommune informerer)
  */
-/* line 1346, ../sass/partials/_blocks.scss */
+/* line 1349, ../sass/partials/_blocks.scss */
 .block-din-kommune-informerer a {
   color: #474747;
 }
-/* line 1349, ../sass/partials/_blocks.scss */
+/* line 1352, ../sass/partials/_blocks.scss */
 .block-din-kommune-informerer .announcement-front {
   padding: 18px 0;
   overflow: hidden;
@@ -3443,7 +3466,7 @@ div.workbench-info-block a {
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 1354, ../sass/partials/_blocks.scss */
+/* line 1356, ../sass/partials/_blocks.scss */
 .block-din-kommune-informerer .announcement-front .week-number {
   float: left;
   width: 25%;
@@ -3455,13 +3478,13 @@ div.workbench-info-block a {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 1362, ../sass/partials/_blocks.scss */
+/* line 1364, ../sass/partials/_blocks.scss */
 .block-din-kommune-informerer .announcement-front .week-number span.icon-mega-phone {
   display: block;
   font-size: 3em;
   margin-bottom: 5px;
 }
-/* line 1368, ../sass/partials/_blocks.scss */
+/* line 1370, ../sass/partials/_blocks.scss */
 .block-din-kommune-informerer .announcement-front .body {
   float: left;
   width: 75%;
@@ -3473,17 +3496,17 @@ div.workbench-info-block a {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 1376, ../sass/partials/_blocks.scss */
+/* line 1378, ../sass/partials/_blocks.scss */
 .block-din-kommune-informerer .announcement-front .body h2 {
-  font-size: 1.33333em;
-  margin-bottom: 5px;
+  font-size: 1.25em;
+  margin-bottom: 10px;
   font-weight: normal;
   color: black;
   line-height: 1.25em;
 }
-/* line 1383, ../sass/partials/_blocks.scss */
+/* line 1385, ../sass/partials/_blocks.scss */
 .block-din-kommune-informerer .announcement-front .body p {
-  font-size: 1em;
+  font-size: 0.9em;
   margin: 0;
   line-height: 1.25em;
 }

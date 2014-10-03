@@ -57,6 +57,9 @@ Backend
 	Blocks
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
+	Input
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
 	Backend
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
@@ -181,4 +184,13 @@ Landingpage
 .block-din-kommune-informerer .announcement-front .body {
   height: 63px;
   width: 75%;
+}
+/* line 157, ../sass/rebild-alpha-default-normal.scss */
+.block-din-kommune-informerer .announcement-front .body h2 {
+  font-size: 1.33333em;
+  margin-bottom: 10px;
+}
+/* line 161, ../sass/rebild-alpha-default-normal.scss */
+.block-din-kommune-informerer .announcement-front .body p {
+  font-size: 1em;
 }

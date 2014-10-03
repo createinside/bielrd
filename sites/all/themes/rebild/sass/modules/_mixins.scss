@@ -17,6 +17,15 @@ Backend
 	@include box-shadow(rgba(black, 0.15) 0 0 3px);
 }
 
+/*------------------------------------------------------------------
+	Input
+-------------------------------------------------------------------*/
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}  
+}
 
 /*------------------------------------------------------------------
 	Backend
@@ -33,10 +42,10 @@ Backend
 	@include border-radius($border-radius-std);
 	@include box-shadow(rgba(black, 0.85) 0 0 3px);
 }
+
 /*------------------------------------------------------------------
 	Nodes
 -------------------------------------------------------------------*/
-
 // Calendar fieldgroup
 @mixin grid-box-no-shadow($color) {
 	background-color: $color;

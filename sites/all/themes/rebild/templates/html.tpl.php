@@ -32,8 +32,9 @@
 			?>
 		</div>
 		<div id="mobile-overlay"></div>
-	<?php } ?>  
+	<?php } ?>
 	<script>
+	// Facebook Advertising
 	(function() {
 
 	  var _fbq = window._fbq || (window._fbq = []);
@@ -65,5 +66,7 @@
 	</script>
 	
 	<noscript><img height="1" width="1" border="0" alt="" style="display:none" src="https://www.facebook.com/tr?id=1439638206280265&amp;ev=NoScript" /></noscript>
+	<!-- Survey -->
+	<script type="text/javascript" src="https://coachego.com/sitetesten/SiteTesten_2014_REBILDKOM.js"></script>  
 </body>
 </html>

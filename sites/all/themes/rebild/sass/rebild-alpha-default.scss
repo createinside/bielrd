@@ -382,6 +382,9 @@ Nodes
 			@include background-image(linear-gradient(#eeeeee, #ffffff 33%));
 			@include border-radius($border-radius-std);
 			@include box-sizing(border-box);
+			@include placeholder {
+				color: $input-color;
+			}
 		}
 		input[type=submit] {
 			font-size: 1.55em;
