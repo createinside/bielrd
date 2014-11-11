@@ -112,6 +112,120 @@ function rebild_edagsorden_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'field_collection_item-field_agenda_items-field_agenda_item_case_nr'
+  $field_instances['field_collection_item-field_agenda_items-field_agenda_item_case_nr'] = array(
+    'bundle' => 'field_agenda_items',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_agenda_item_case_nr',
+    'label' => 'Sagsnummer',
+    'required' => 1,
+    'settings' => array(
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_agenda_items-field_agenda_item_com'
+  $field_instances['field_collection_item-field_agenda_items-field_agenda_item_com'] = array(
+    'bundle' => 'field_agenda_items',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 9,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_agenda_item_com',
+    'label' => 'Udvalg',
+    'required' => 0,
+    'settings' => array(
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_agenda_items-field_agenda_item_com_dec'
+  $field_instances['field_collection_item-field_agenda_items-field_agenda_item_com_dec'] = array(
+    'bundle' => 'field_agenda_items',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 8,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_agenda_item_com_dec',
+    'label' => 'Besluttende udvalg',
+    'required' => 0,
+    'settings' => array(
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 7,
+    ),
+  );
+
   // Exported field_instance: 'field_collection_item-field_agenda_items-field_agenda_item_content'
   $field_instances['field_collection_item-field_agenda_items-field_agenda_item_content'] = array(
     'bundle' => 'field_agenda_items',
@@ -600,6 +714,7 @@ function rebild_edagsorden_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Agenda Id');
+  t('Besluttende udvalg');
   t('Bilag');
   t('Brødtekst');
   t('Committee Id');
@@ -609,6 +724,7 @@ function rebild_edagsorden_field_default_field_instances() {
   t('Nummer');
   t('Original committee id from eDagsorden');
   t('Rod Id');
+  t('Sagsnummer');
   t('Sted');
   t('Titel');
   t('Type');
