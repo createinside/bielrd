@@ -13,6 +13,18 @@ function rebild_edagsorden_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'edagsorden_agenda_importer-xpathparser_1-detect_agenda_type';
+  $feeds_tamper->importer = 'edagsorden_agenda_importer';
+  $feeds_tamper->source = 'xpathparser:1';
+  $feeds_tamper->plugin_id = 'type_decider';
+  $feeds_tamper->settings = '';
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Detect agenda type';
+  $export['edagsorden_agenda_importer-xpathparser_1-detect_agenda_type'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'edagsorden_agenda_importer-xpathparser_3-string_to_unix_timestamp';
   $feeds_tamper->importer = 'edagsorden_agenda_importer';
   $feeds_tamper->source = 'xpathparser:3';
@@ -57,6 +69,66 @@ function rebild_edagsorden_feeds_tamper_default() {
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'Convert to file URL';
   $export['edagsorden_item_importer-xpathparser_8-item_url'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'sbsys_agenda_importer-xpathparser_3-sbsys__date_converter';
+  $feeds_tamper->importer = 'sbsys_agenda_importer';
+  $feeds_tamper->source = 'xpathparser:3';
+  $feeds_tamper->plugin_id = 'sbsys_date_converter';
+  $feeds_tamper->settings = '';
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'SBSYS: Date Converter';
+  $export['sbsys_agenda_importer-xpathparser_3-sbsys__date_converter'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'sbsys_agenda_importer-xpathparser_4-sbsys__date_converter';
+  $feeds_tamper->importer = 'sbsys_agenda_importer';
+  $feeds_tamper->source = 'xpathparser:4';
+  $feeds_tamper->plugin_id = 'sbsys_date_converter';
+  $feeds_tamper->settings = '';
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'SBSYS: Date Converter';
+  $export['sbsys_agenda_importer-xpathparser_4-sbsys__date_converter'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'sbsys_item_importer-xpathparser_11-sbsys__attachment_item_link';
+  $feeds_tamper->importer = 'sbsys_item_importer';
+  $feeds_tamper->source = 'xpathparser:11';
+  $feeds_tamper->plugin_id = 'sbsys_attachment_link';
+  $feeds_tamper->settings = '';
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'SBSYS: Attachment Item Link';
+  $export['sbsys_item_importer-xpathparser_11-sbsys__attachment_item_link'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'sbsys_item_importer-xpathparser_6-sbsys__img_parser';
+  $feeds_tamper->importer = 'sbsys_item_importer';
+  $feeds_tamper->source = 'xpathparser:6';
+  $feeds_tamper->plugin_id = 'sbsys_img_parser';
+  $feeds_tamper->settings = '';
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'SBSYS: Img parser';
+  $export['sbsys_item_importer-xpathparser_6-sbsys__img_parser'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'sbsys_item_importer-xpathparser_6-structure_content';
+  $feeds_tamper->importer = 'sbsys_item_importer';
+  $feeds_tamper->source = 'xpathparser:6';
+  $feeds_tamper->plugin_id = 'structure_content';
+  $feeds_tamper->settings = '';
+  $feeds_tamper->weight = 2;
+  $feeds_tamper->description = 'Structure Content';
+  $export['sbsys_item_importer-xpathparser_6-structure_content'] = $feeds_tamper;
 
   return $export;
 }
