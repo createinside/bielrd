@@ -161,7 +161,7 @@ class FeedsFileFetcher extends FeedsFetcher {
     else {
       // Check if chosen url scheme is allowed.
       $scheme = file_uri_scheme($values['source']);
-      if (!$scheme || !in_array($scheme, $this->config['allowed_schemes'])) {
+      if ($scheme && !in_array($scheme, $this->config['allowed_schemes'])) {
         form_set_error('feeds][FeedsFileFetcher][source', t("The file needs to reside within the site's files directory, its path needs to start with scheme://. Available schemes: @schemes.", array('@schemes' => implode(', ', $this->config['allowed_schemes']))));
       }
       // Check wether the given path exists.
