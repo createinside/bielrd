@@ -102,17 +102,17 @@ Landingpage
   height: 57px;
   opacity: 1;
   margin-top: 0;
-  -webkit-transition-timing-function: ease-in-out;
   -moz-transition-timing-function: ease-in-out;
   -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
-  -webkit-transition-property: height, margin-top;
   -moz-transition-property: height, margin-top;
   -o-transition-property: height, margin-top;
+  -webkit-transition-property: height, margin-top;
   transition-property: height, margin-top;
-  -webkit-transition-duration: 0.25s;
   -moz-transition-duration: 0.25s;
   -o-transition-duration: 0.25s;
+  -webkit-transition-duration: 0.25s;
   transition-duration: 0.25s;
 }
 
@@ -262,8 +262,8 @@ Landingpage
   margin-top: 11px;
   display: inherit;
   width: 298px !important;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 0 3px;
   -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 0 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.4) 0 0 3px;
 }
 

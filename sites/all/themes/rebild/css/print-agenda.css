@@ -1,0 +1,13 @@
+body {
+	background: white;
+	background-image: none;
+}
+#page {
+	background: none;
+}
+.ui-accordion-content {
+	display: block !important;
+}
+.area-print-trigger {
+	display: none;
+}
