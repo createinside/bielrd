@@ -113,14 +113,14 @@ Nodes
 }
 
 /* Hide mobile regions */
-/* line 56, ../sass/rebild-alpha-default.scss */
+/* line 55, ../sass/rebild-alpha-default.scss */
 #region-user-second,
 #region-mobile-menu {
   display: none;
 }
 
 /* Expose hidden regions */
-/* line 65, ../sass/rebild-alpha-default.scss */
+/* line 61, ../sass/rebild-alpha-default.scss */
 #region-user-first,
 #region-footer-second,
 #region-footer-third,
@@ -191,14 +191,14 @@ Nodes
   display: inline-block;
   height: 44px;
 }
-/* line 117, ../sass/rebild-alpha-default.scss */
+/* line 116, ../sass/rebild-alpha-default.scss */
 #region-menu ul.ultimenu > li a.active,
 #region-menu ul.ultimenu > li a.active-trail {
   color: #68a386;
 }
 /* line 122, ../sass/rebild-alpha-default.scss */
 #region-menu ul.ultimenu > li.hover > a {
-  color: #888888;
+  color: #888;
 }
 /* line 126, ../sass/rebild-alpha-default.scss */
 #region-menu ul.ultimenu > li.last > a {
@@ -252,8 +252,8 @@ Nodes
   position: relative;
   z-index: 2;
   background-color: #f6f6f6;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px;
   -moz-box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px;
   box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px;
   min-height: 180px;
 }
@@ -278,8 +278,8 @@ Nodes
   position: relative;
   z-index: 1;
   background: white;
-  -webkit-box-shadow: none;
   -moz-box-shadow: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* line 198, ../sass/rebild-alpha-default.scss */
@@ -303,7 +303,7 @@ Nodes
   padding-left: 10px;
   display: block;
 }
-/* line 216, ../sass/rebild-alpha-default.scss */
+/* line 215, ../sass/rebild-alpha-default.scss */
 .ultimenu-flyout .block-menu-block li a:hover,
 .ultimenu-flyout .block-menu-block li a.active {
   text-decoration: underline;
@@ -369,21 +369,17 @@ Nodes
 .view-id-rebild_frontpage .views-row {
   float: left;
   background-color: white;
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
 /* line 286, ../sass/rebild-alpha-default.scss */
 .view-id-rebild_frontpage .views-row .views-field-field-image img {
-  -webkit-border-radius: 3px 3px 0 0;
   -moz-border-radius: 3px 3px 0 0;
-  -ms-border-radius: 3px 3px 0 0;
-  -o-border-radius: 3px 3px 0 0;
+  -webkit-border-radius: 3px;
   border-radius: 3px 3px 0 0;
   height: auto;
 }
@@ -429,8 +425,8 @@ Nodes
   width: 33%;
   margin: 0;
   padding: 0 10px 0 0;
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 /* line 331, ../sass/rebild-alpha-default.scss */
@@ -468,7 +464,7 @@ Nodes
 #block-ci-search-ci-search-front form .form-type-textfield:before {
   content: "\e013";
 }
-/* line 370, ../sass/rebild-alpha-default.scss */
+/* line 369, ../sass/rebild-alpha-default.scss */
 #block-ci-search-ci-search-front form input[type=search],
 #block-ci-search-ci-search-front form input[type=text] {
   font-size: 1em;
@@ -482,18 +478,17 @@ Nodes
   border-top: 1px solid white;
   background: white;
   background-position: center top;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIvPjxzdG9wIG9mZnNldD0iMzMlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeeeee), color-stop(33%, #ffffff));
-  background-image: -webkit-linear-gradient(#eeeeee, #ffffff 33%);
   background-image: -moz-linear-gradient(#eeeeee, #ffffff 33%);
-  background-image: -o-linear-gradient(#eeeeee, #ffffff 33%);
+  background-image: -webkit-linear-gradient(#eeeeee, #ffffff 33%);
   background-image: linear-gradient(#eeeeee, #ffffff 33%);
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 /* line 24, ../sass/modules/_mixins.scss */
@@ -532,7 +527,7 @@ Nodes
   font-size: 1.6em;
   top: 1em;
 }
-/* line 407, ../sass/rebild-alpha-default.scss */
+/* line 406, ../sass/rebild-alpha-default.scss */
 #block-ci-search-ci-search-results input[type=search],
 #block-ci-search-ci-search-results input[type=text] {
   font-size: 1em;
@@ -589,13 +584,11 @@ Nodes
   padding: 6px;
   margin-bottom: 10px;
   position: relative;
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 460, ../sass/rebild-alpha-default.scss */
+/* line 459, ../sass/rebild-alpha-default.scss */
 .ultimenu form .form-wrap input[type=search],
 .ultimenu form .form-wrap input[type=text] {
   font-size: 0.91667em;
@@ -668,7 +661,7 @@ Nodes
 }
 
 /* Page & News Articles */
-/* line 535, ../sass/rebild-alpha-default.scss */
+/* line 534, ../sass/rebild-alpha-default.scss */
 #region-content .node-page,
 #region-content .node-news-article {
   /* Node Image Gallery */

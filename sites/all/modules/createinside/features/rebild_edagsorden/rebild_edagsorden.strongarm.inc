@@ -137,6 +137,9 @@ function rebild_edagsorden_strongarm() {
         'redirect' => array(
           'weight' => '9',
         ),
+        'xmlsitemap' => array(
+          'weight' => '11',
+        ),
       ),
       'display' => array(
         'agenda_accordion_entity_view_1' => array(

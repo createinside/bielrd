@@ -1,4 +1,4 @@
-<article<?php print $attributes; ?>>
+<article<?php print $attributes; ?>>	
   <?php print $user_picture; 
 	  $indhold = menu_get_object();
 	  $user = user_is_logged_in();  ?>
