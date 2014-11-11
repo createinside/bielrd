@@ -297,6 +297,35 @@ function rebild_edagsorden_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
+  // Exported field_base: 'field_agenda_type'
+  $field_bases['field_agenda_type'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_agenda_type',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'Dagsorden' => 'Dagsorden',
+        'Referat' => 'Referat',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_edagsorden_com_id'
   $field_bases['field_edagsorden_com_id'] = array(
     'active' => 1,
