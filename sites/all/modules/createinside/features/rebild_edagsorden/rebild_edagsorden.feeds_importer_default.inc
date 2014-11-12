@@ -123,6 +123,11 @@ function rebild_edagsorden_feeds_importer_default() {
             'target' => 'field_agenda_root_id',
             'unique' => FALSE,
           ),
+          9 => array(
+            'source' => 'Blank source 1',
+            'target' => 'field_agenda_source',
+            'unique' => FALSE,
+          ),
         ),
         'update_existing' => '2',
         'input_format' => 'full_html',
@@ -488,6 +493,11 @@ function rebild_edagsorden_feeds_importer_default() {
             'target' => 'Temporary target 1',
             'unique' => FALSE,
           ),
+          9 => array(
+            'source' => 'Blank source 1',
+            'target' => 'field_agenda_source',
+            'unique' => FALSE,
+          ),
         ),
         'update_existing' => '2',
         'input_format' => 'full_html',
@@ -539,6 +549,7 @@ function rebild_edagsorden_feeds_importer_default() {
           'xpathparser:9' => '/Dagsorden/Møde/@Udvalg',
           'xpathparser:10' => 'Bilagsliste/Bilag/@Linktekst',
           'xpathparser:11' => 'Bilagsliste/Bilag/@BilagUrl',
+          'xpathparser:13' => '@Åbent',
         ),
         'rawXML' => array(
           'xpathparser:6' => 'xpathparser:6',
@@ -553,6 +564,7 @@ function rebild_edagsorden_feeds_importer_default() {
           'xpathparser:9' => 0,
           'xpathparser:10' => 0,
           'xpathparser:11' => 0,
+          'xpathparser:13' => 0,
         ),
         'context' => '//Dagsorden/Dagsordenpunkter/Dagsordenpunkt',
         'exp' => array(
@@ -571,6 +583,7 @@ function rebild_edagsorden_feeds_importer_default() {
             'xpathparser:9' => 0,
             'xpathparser:10' => 0,
             'xpathparser:11' => 0,
+            'xpathparser:13' => 0,
           ),
         ),
         'allow_override' => 0,
@@ -643,6 +656,11 @@ function rebild_edagsorden_feeds_importer_default() {
           11 => array(
             'source' => 'xpathparser:11',
             'target' => 'field_agenda_item_docs:url',
+            'unique' => FALSE,
+          ),
+          12 => array(
+            'source' => 'xpathparser:13',
+            'target' => 'field_agenda_item_closed',
             'unique' => FALSE,
           ),
         ),

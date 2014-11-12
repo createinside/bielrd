@@ -94,9 +94,9 @@ function edagsorden_importer_ctools_plugin_directory($owner, $plugin_type) {
  * Implementation of hook_cron().
  */
 function edagsorden_importer_cron() {
-	/*
-	edagsorden_importer_committees_import();
-  watchdog('edagsorden_importer', t("Agendas have been imported on cron"));
+
+	edagsorden_importer_agenda_import_sbsys();
+  watchdog('edagsorden_importer', t("Agendas have been imported from SBSYS on cron"));
   
 	// Feeds Log
   if ($importers = feeds_reschedule()) {
@@ -113,7 +113,6 @@ function edagsorden_importer_cron() {
   db_delete('feeds_log')
     ->condition('request_time', REQUEST_TIME - 86400, '<')
     ->execute();
-	*/
 }
 
 /**
@@ -123,7 +122,7 @@ function edagsorden_importer_cron() {
  */
 function edagsorden_importer_sync() {
 	
-	edagsorden_importer_committees_import();
+	edagsorden_importer_agenda_import_edagsorden();
 	
   watchdog('edagsorden_importer', t("Agendas have been imported manually from eDagsorden"));
   drupal_set_message(t("The manual import from eDagsorden has been triggered"));
@@ -137,7 +136,7 @@ function edagsorden_importer_sync() {
  */
 function edagsorden_importer_sbsys_sync() {
 	
-	edagsorden_importer_committees_import_new();
+	edagsorden_importer_agenda_import_sbsys();
 	
   watchdog('edagsorden_importer', t("Agendas have been imported manually from SBSYS"));
   drupal_set_message(t("The manual import from SBSYS has been triggered"));
@@ -149,7 +148,7 @@ function edagsorden_importer_sbsys_sync() {
  *
  * Create/update committee taxonomy terms
  */
-function edagsorden_importer_committees_import_new() {
+function edagsorden_importer_agenda_import_sbsys() {
 	
 	/**
 	 * Initiate feeds committee importer
@@ -201,6 +200,24 @@ function edagsorden_importer_committees_import_new() {
 		$feedSource->setConfig($config);
 		$feedSource->save();
 		$feedSource->import();
+		
+		// Save Agenda Ids
+		$agenda_ids[] = $agenda_id;
+	}
+	
+	/* Delete expired agendas */
+	$query = new EntityFieldQuery();
+	$query
+	  ->entityCondition('entity_type', 'node')
+	  ->entityCondition('bundle', 'agenda')
+	  ->fieldCondition('field_agenda_source', 'value', 'sbsys')
+	  ->fieldCondition('field_agenda_id', 'value', $agenda_ids, 'NOT IN');
+	$result = $query->execute();
+	
+	if (isset($result['node'])) {
+		$nids = array_keys($result['node']);
+		node_delete_multiple($nids);
+		watchdog("edagsorden_importer", "Deleted ".count($nids)." expired agendas");
 	}
 	
 	/* End admin state */
@@ -213,7 +230,7 @@ function edagsorden_importer_committees_import_new() {
  *
  * Create/update committee taxonomy terms
  */
-function edagsorden_importer_committees_import() {
+function edagsorden_importer_agenda_import_edagsorden() {
 	
 	/**
 	 * Initiate feeds committee importer

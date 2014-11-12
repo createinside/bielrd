@@ -48,6 +48,18 @@ function rebild_edagsorden_views_default_views() {
   $handler->display->display_options['relationships']['field_agenda_items_node']['table'] = 'field_collection_item';
   $handler->display->display_options['relationships']['field_agenda_items_node']['field'] = 'field_agenda_items_node';
   $handler->display->display_options['relationships']['field_agenda_items_node']['label'] = 'indholdselement';
+  /* Felt: Field collection item: Lukket punkt */
+  $handler->display->display_options['fields']['field_agenda_item_closed']['id'] = 'field_agenda_item_closed';
+  $handler->display->display_options['fields']['field_agenda_item_closed']['table'] = 'field_data_field_agenda_item_closed';
+  $handler->display->display_options['fields']['field_agenda_item_closed']['field'] = 'field_agenda_item_closed';
+  $handler->display->display_options['fields']['field_agenda_item_closed']['label'] = '';
+  $handler->display->display_options['fields']['field_agenda_item_closed']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_agenda_item_closed']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_agenda_item_closed']['alter']['text'] = 'Lukket punkt:';
+  $handler->display->display_options['fields']['field_agenda_item_closed']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_agenda_item_closed']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_agenda_item_closed']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_agenda_item_closed']['type'] = 'list_key';
   /* Felt: Field collection item: Nummer */
   $handler->display->display_options['fields']['field_agenda_item_number']['id'] = 'field_agenda_item_number';
   $handler->display->display_options['fields']['field_agenda_item_number']['table'] = 'field_data_field_agenda_item_number';
@@ -65,7 +77,7 @@ function rebild_edagsorden_views_default_views() {
   $handler->display->display_options['fields']['field_agenda_item_caption']['field'] = 'field_agenda_item_caption';
   $handler->display->display_options['fields']['field_agenda_item_caption']['label'] = '';
   $handler->display->display_options['fields']['field_agenda_item_caption']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_agenda_item_caption']['alter']['text'] = '<strong class="field-item">[field_agenda_item_number]. [field_agenda_item_caption]</strong>';
+  $handler->display->display_options['fields']['field_agenda_item_caption']['alter']['text'] = '<strong class="field-item">[field_agenda_item_number]. [field_agenda_item_closed] [field_agenda_item_caption]</strong>';
   $handler->display->display_options['fields']['field_agenda_item_caption']['element_label_colon'] = FALSE;
   /* Felt: Field collection item: Brødtekst */
   $handler->display->display_options['fields']['field_agenda_item_content']['id'] = 'field_agenda_item_content';
@@ -215,7 +227,8 @@ $static++;
     t('Faldende'),
     t('<p class=\'field\'><a href="#" class="toggle-expand-all"><span class=\'icon-double-angle-down\'></span> Udvid alle punkter</a></p>'),
     t('indholdselement'),
-    t('<strong class="field-item">[field_agenda_item_number]. [field_agenda_item_caption]</strong>'),
+    t('Lukket punkt:'),
+    t('<strong class="field-item">[field_agenda_item_number]. [field_agenda_item_closed] [field_agenda_item_caption]</strong>'),
     t('[field_agenda_item_content]
 [field_agenda_item_docs]'),
     t('Bilag [field_agenda_item_docs] '),

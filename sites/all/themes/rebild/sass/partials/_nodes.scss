@@ -294,6 +294,7 @@ Share nodes
 					line-height: 1.5em;
 					position: relative;
 					font-style: italic;
+					margin-bottom: 1em;
 					.area-print-trigger {
 						position: absolute;
 						top: 0;
@@ -313,9 +314,16 @@ Share nodes
 				p:last-child {
 					margin-bottom: 1.25em;
 				}
-				div.item-resume {
-					/* background: #e6e6e6; */
-
+				h3 {
+					font-size: 1.2em;
+					line-height: 1.2em;
+					padding-top: 0.5em;
+					padding-bottom: 0.25em;
+				}
+				div.item-resume,
+				div.item-decision {
+					background: #e6e6e6;
+					margin: 0 0 10px;
 				}
 				div.item-setting,
 				div.item-decision {
@@ -336,9 +344,10 @@ Share nodes
 			margin: 0;
 		}
 		.toggle-expand-all {
-			display: inline-block;
-			margin-bottom: 15px;
 			text-decoration: none;
+			position: absolute;
+			top: -26px;
+			right: 5px;
 			&:hover {
 				text-decoration: none;
 			}

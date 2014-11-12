@@ -13,6 +13,20 @@ function rebild_edagsorden_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'edagsorden_agenda_importer-blank_source_1-set_default_value';
+  $feeds_tamper->importer = 'edagsorden_agenda_importer';
+  $feeds_tamper->source = 'Blank source 1';
+  $feeds_tamper->plugin_id = 'default_value';
+  $feeds_tamper->settings = array(
+    'default_value' => 'edagsorden',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Set default value';
+  $export['edagsorden_agenda_importer-blank_source_1-set_default_value'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'edagsorden_agenda_importer-xpathparser_1-detect_agenda_type';
   $feeds_tamper->importer = 'edagsorden_agenda_importer';
   $feeds_tamper->source = 'xpathparser:1';
@@ -73,6 +87,20 @@ function rebild_edagsorden_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'sbsys_agenda_importer-blank_source_1-set_default_value';
+  $feeds_tamper->importer = 'sbsys_agenda_importer';
+  $feeds_tamper->source = 'Blank source 1';
+  $feeds_tamper->plugin_id = 'default_value';
+  $feeds_tamper->settings = array(
+    'default_value' => 'sbsys',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Set default value';
+  $export['sbsys_agenda_importer-blank_source_1-set_default_value'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'sbsys_agenda_importer-xpathparser_3-sbsys__date_converter';
   $feeds_tamper->importer = 'sbsys_agenda_importer';
   $feeds_tamper->source = 'xpathparser:3';
@@ -105,6 +133,46 @@ function rebild_edagsorden_feeds_tamper_default() {
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'SBSYS: Attachment Item Link';
   $export['sbsys_item_importer-xpathparser_11-sbsys__attachment_item_link'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'sbsys_item_importer-xpathparser_13-find_replace';
+  $feeds_tamper->importer = 'sbsys_item_importer';
+  $feeds_tamper->source = 'xpathparser:13';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'find' => 'false',
+    'replace' => '1',
+    'case_sensitive' => 0,
+    'word_boundaries' => 0,
+    'whole' => 0,
+    'regex' => FALSE,
+    'func' => 'str_ireplace',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Find replace';
+  $export['sbsys_item_importer-xpathparser_13-find_replace'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'sbsys_item_importer-xpathparser_13-find_replace_true';
+  $feeds_tamper->importer = 'sbsys_item_importer';
+  $feeds_tamper->source = 'xpathparser:13';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'find' => 'true',
+    'replace' => '0',
+    'case_sensitive' => 0,
+    'word_boundaries' => 0,
+    'whole' => 0,
+    'regex' => FALSE,
+    'func' => 'str_ireplace',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Find replace';
+  $export['sbsys_item_importer-xpathparser_13-find_replace_true'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */

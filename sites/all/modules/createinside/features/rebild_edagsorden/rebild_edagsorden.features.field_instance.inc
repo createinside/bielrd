@@ -256,7 +256,7 @@ function rebild_edagsorden_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -304,7 +304,7 @@ function rebild_edagsorden_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -487,7 +487,7 @@ function rebild_edagsorden_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -527,7 +527,7 @@ function rebild_edagsorden_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -606,7 +606,7 @@ function rebild_edagsorden_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -635,6 +635,42 @@ function rebild_edagsorden_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-agenda-field_agenda_source'
+  $field_instances['node-agenda-field_agenda_source'] = array(
+    'bundle' => 'agenda',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_agenda_source',
+    'label' => 'Kilde',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 5,
+    ),
+  );
+
   // Exported field_instance: 'node-agenda-field_agenda_type'
   $field_instances['node-agenda-field_agenda_type'] = array(
     'bundle' => 'agenda',
@@ -646,7 +682,7 @@ function rebild_edagsorden_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -720,6 +756,7 @@ function rebild_edagsorden_field_default_field_instances() {
   t('Committee Id');
   t('Dato');
   t('Id');
+  t('Kilde');
   t('Mødepunkter');
   t('Nummer');
   t('Original committee id from eDagsorden');

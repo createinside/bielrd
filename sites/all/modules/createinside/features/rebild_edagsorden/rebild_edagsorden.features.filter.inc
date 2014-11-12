@@ -22,7 +22,7 @@ function rebild_edagsorden_filter_default_formats() {
         'weight' => -49,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <p> <b> <u> <h1> <h2> <h3> <table> <tr> <td> <img> <div>',
+          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <p> <b> <i> <h1> <h2> <h3> <table> <tr> <td> <img> <div>',
           'filter_html_help' => 0,
           'filter_html_nofollow' => 0,
         ),
