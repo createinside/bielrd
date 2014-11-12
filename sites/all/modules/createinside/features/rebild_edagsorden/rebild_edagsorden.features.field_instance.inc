@@ -150,6 +150,43 @@ function rebild_edagsorden_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'field_collection_item-field_agenda_items-field_agenda_item_closed'
+  $field_instances['field_collection_item-field_agenda_items-field_agenda_item_closed'] = array(
+    'bundle' => 'field_agenda_items',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 10,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_agenda_item_closed',
+    'label' => 'Lukket punkt',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 8,
+    ),
+  );
+
   // Exported field_instance: 'field_collection_item-field_agenda_items-field_agenda_item_com'
   $field_instances['field_collection_item-field_agenda_items-field_agenda_item_com'] = array(
     'bundle' => 'field_agenda_items',
@@ -757,6 +794,7 @@ function rebild_edagsorden_field_default_field_instances() {
   t('Dato');
   t('Id');
   t('Kilde');
+  t('Lukket punkt');
   t('Mødepunkter');
   t('Nummer');
   t('Original committee id from eDagsorden');
