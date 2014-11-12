@@ -70,6 +70,33 @@ function rebild_page_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_agendas_view|node|page|form';
+  $field_group->group_name = 'group_agendas_view';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_ho_tabs';
+  $field_group->data = array(
+    'label' => 'Dagsordener',
+    'weight' => '23',
+    'children' => array(
+      0 => 'field_agenda_view_com',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_agendas_view|node|page|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_billedegalleri|node|page|form';
   $field_group->group_name = 'group_billedegalleri';
   $field_group->entity_type = 'node';
@@ -135,7 +162,7 @@ function rebild_page_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Kategorisering',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(
       0 => 'field_main_section',
       1 => 'field_main_tags',
@@ -312,18 +339,19 @@ function rebild_page_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Ikke obligatoriske felter',
-    'weight' => '5',
+    'weight' => '6',
     'children' => array(
-      0 => 'group_accordion',
-      1 => 'group_billedegalleri',
-      2 => 'group_blocks',
-      3 => 'group_contact',
-      4 => 'group_faktaboks',
-      5 => 'group_foraeldelsesdato',
-      6 => 'group_gis_kort',
-      7 => 'group_oversigt',
-      8 => 'group_selfservices',
-      9 => 'group_youtube',
+      0 => 'group_agendas_view',
+      1 => 'group_accordion',
+      2 => 'group_billedegalleri',
+      3 => 'group_blocks',
+      4 => 'group_contact',
+      5 => 'group_faktaboks',
+      6 => 'group_foraeldelsesdato',
+      7 => 'group_gis_kort',
+      8 => 'group_oversigt',
+      9 => 'group_selfservices',
+      10 => 'group_youtube',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -346,10 +374,10 @@ function rebild_page_field_group_info() {
   $field_group->parent_name = 'group_ho_tabs';
   $field_group->data = array(
     'label' => 'Oversigt',
-    'weight' => '23',
+    'weight' => '24',
     'children' => array(
-      0 => 'field_main_view',
-      1 => 'field_main_block',
+      0 => 'field_main_block',
+      1 => 'field_main_view',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -402,7 +430,7 @@ function rebild_page_field_group_info() {
   $field_group->parent_name = 'group_ho_tabs';
   $field_group->data = array(
     'label' => 'Youtube',
-    'weight' => '24',
+    'weight' => '25',
     'children' => array(
       0 => 'field_main_youtube_link',
     ),

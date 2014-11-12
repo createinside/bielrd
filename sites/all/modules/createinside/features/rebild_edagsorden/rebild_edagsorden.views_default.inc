@@ -398,6 +398,12 @@ $static++;
   $handler->display->display_options['menu']['name'] = 'main-menu';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Embedded Page */
+  $handler = $view->new_display('block', 'Embedded Page', 'embedded_page');
+  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+  $handler->display->display_options['use_ajax'] = TRUE;
+  $handler->display->display_options['block_description'] = 'Embedded Agendas';
   $translatables['agenda_overview'] = array(
     t('Master'),
     t('Dagsordener'),
@@ -414,6 +420,8 @@ $static++;
     t('%1'),
     t('Vælg år:'),
     t('Page'),
+    t('Embedded Page'),
+    t('Embedded Agendas'),
   );
   $export['agenda_overview'] = $view;
 

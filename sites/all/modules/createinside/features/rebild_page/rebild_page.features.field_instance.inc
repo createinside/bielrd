@@ -482,6 +482,50 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-page-field_agenda_view_com'
+  $field_instances['node-page-field_agenda_view_com'] = array(
+    'bundle' => 'page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Vælg hvilket udvalg du ønsker at vise dagsordener og referater fra.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(),
+        'type' => 'entityreference_entity_id',
+        'weight' => 20,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_agenda_view_com',
+    'label' => 'Udvalg',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'taxonomy-index' => array(
+          'status' => TRUE,
+        ),
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => 0,
+      ),
+      'type' => 'options_select',
+      'weight' => 29,
+    ),
+  );
+
   // Exported field_instance: 'node-page-field_con_address'
   $field_instances['node-page-field_con_address'] = array(
     'bundle' => 'page',
@@ -1180,7 +1224,7 @@ function rebild_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 28,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1282,7 +1326,7 @@ function rebild_page_field_default_field_instances() {
         'rows' => 25,
       ),
       'type' => 'text_textarea',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -1449,7 +1493,7 @@ function rebild_page_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 1,
+      'weight' => 2,
     ),
     'workbench_access_field' => 0,
   );
@@ -1551,7 +1595,7 @@ function rebild_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 24,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1604,7 +1648,7 @@ function rebild_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 23,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1641,7 +1685,7 @@ function rebild_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 22,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1665,6 +1709,7 @@ function rebild_page_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
+        'display_all_day' => 0,
         'increment' => 30,
         'input_format' => 'd/m/Y - H:i:s',
         'input_format_custom' => '',
@@ -1692,7 +1737,7 @@ function rebild_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 26,
+        'weight' => 27,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1730,7 +1775,7 @@ function rebild_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 26,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1768,7 +1813,7 @@ function rebild_page_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 21,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1833,7 +1878,7 @@ function rebild_page_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -1848,7 +1893,7 @@ function rebild_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 25,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1929,7 +1974,7 @@ function rebild_page_field_default_field_instances() {
           'youtube_width' => '',
         ),
         'type' => 'youtube_video',
-        'weight' => 25,
+        'weight' => 19,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1998,10 +2043,12 @@ function rebild_page_field_default_field_instances() {
   t('Tillad udgivelse uden godkendelse');
   t('Title tekst');
   t('Title text is used in the tool tip when a user hovers their mouse over the image. Adding title text makes it easier to understand the context of an image and improves usability.');
+  t('Udvalg');
   t('Upload et eller flere billeder, eller vælg fra biblioteket. Du har mulighed for at beskære og indstille billedet til forskellige visninger.');
   t('Vælg en eller flere selvbetjeningsløsninger, du ønsker at tilknytte til denne side. Løsningerne vil blive vist i en accordion nederst på siden.');
   t('Vælg et eller flere tags der er med til at beskrive indholdet.');
   t('Vælg hvilken sektion indholdet hører til.');
+  t('Vælg hvilket udvalg du ønsker at vise dagsordener og referater fra.');
   t('Website');
   t('Youtube link');
   t('Åbningstider');

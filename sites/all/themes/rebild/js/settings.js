@@ -9,6 +9,12 @@ $(function() {
 	// Custom select boxes init
 	$("select").customSelect();
 	
+	Drupal.behaviors.rebild = {
+    attach: function(context, settings) {
+	    	$("select").not(".customised-select").customSelect();
+		}
+	}
+	
 	// Search block dropdown
 	$(".dropd-btn").click(function(e) {
 		e.preventDefault();

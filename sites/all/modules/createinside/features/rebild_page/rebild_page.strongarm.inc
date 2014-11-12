@@ -169,22 +169,25 @@ node/*/edit',
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '0',
+          'weight' => '1',
         ),
         'metatags' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
         'workbench_access' => array(
           'weight' => '11',
         ),
         'path' => array(
-          'weight' => '8',
+          'weight' => '9',
         ),
         'redirect' => array(
-          'weight' => '7',
+          'weight' => '8',
         ),
         'rabbit_hole' => array(
           'weight' => '0',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '11',
         ),
       ),
       'display' => array(
