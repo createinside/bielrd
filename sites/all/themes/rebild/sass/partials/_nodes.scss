@@ -324,6 +324,10 @@ Share nodes
 				div.item-decision {
 					background: #e6e6e6;
 					margin: 0 0 10px;
+					padding: 10px;
+					p:last-child {
+						margin-bottom: 0;
+					}
 				}
 				div.item-setting,
 				div.item-decision {
@@ -337,6 +341,13 @@ Share nodes
 							}
 						}
 					}
+				}
+			}
+		}
+		.ui-accordion.closed-item {
+			.ui-accordion-content {
+				div.bilag {
+					display: none;
 				}
 			}
 		}
