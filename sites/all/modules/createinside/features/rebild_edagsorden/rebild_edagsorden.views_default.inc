@@ -58,7 +58,6 @@ function rebild_edagsorden_views_default_views() {
   $handler->display->display_options['fields']['field_agenda_item_closed']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_agenda_item_closed']['alter']['text'] = 'Lukket punkt:';
   $handler->display->display_options['fields']['field_agenda_item_closed']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_agenda_item_closed']['empty'] = 'åben';
   $handler->display->display_options['fields']['field_agenda_item_closed']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_agenda_item_closed']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_agenda_item_closed']['type'] = 'list_key';
@@ -242,7 +241,6 @@ $static++;
     t('<p class=\'field\'><a href="#" class="toggle-expand-all"><span class=\'icon-double-angle-down\'></span> Udvid alle punkter</a></p>'),
     t('indholdselement'),
     t('Lukket punkt:'),
-    t('åben'),
     t('<strong class="field-item">[field_agenda_item_number]. [field_agenda_item_closed] [field_agenda_item_caption]</strong>'),
     t('[field_agenda_item_content]
 [field_agenda_item_docs]'),
