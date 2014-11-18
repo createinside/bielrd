@@ -5,7 +5,7 @@
  */
 function edagsorden_importer_menu() {
 	$items = array();
-	$items['admin/config/services/agenda_importer'] = array(
+	$items['admin/config/services/agenda-importer'] = array(
 	  'title' => 'Agenda Importer',
 	  'description' => t('Configure general settings and do manual imports.'),
 	  'page callback' => 'drupal_get_form',
@@ -126,7 +126,7 @@ function edagsorden_importer_sync() {
 	
   watchdog('edagsorden_importer', t("Agendas have been imported manually from eDagsorden"));
   drupal_set_message(t("The manual import from eDagsorden has been triggered"));
-  drupal_goto("admin/config/services/edagsorden");
+  drupal_goto("admin/config/services/agenda-importer");
 }
 
 /**
@@ -140,7 +140,7 @@ function edagsorden_importer_sbsys_sync() {
 	
   watchdog('edagsorden_importer', t("Agendas have been imported manually from SBSYS"));
   drupal_set_message(t("The manual import from SBSYS has been triggered"));
-  drupal_goto("admin/config/services/edagsorden");
+  drupal_goto("admin/config/services/agenda-importer");
 }
 
 /**
