@@ -123,19 +123,22 @@ function rebild_edagsorden_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '8',
+          'weight' => '9',
         ),
         'title' => array(
           'weight' => '1',
         ),
         'path' => array(
-          'weight' => '10',
+          'weight' => '11',
         ),
         'rabbit_hole' => array(
           'weight' => '0',
         ),
         'redirect' => array(
-          'weight' => '9',
+          'weight' => '10',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '12',
         ),
       ),
       'display' => array(
@@ -198,7 +201,7 @@ function rebild_edagsorden_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_agenda_pattern';
-  $strongarm->value = 'politik/dagsordener-og-referater/[node:field-agenda-committee:tid]/[node:title]';
+  $strongarm->value = 'politik/dagsordener-og-referater/[node:field-agenda-committee:tid]/[node:nid]';
   $export['pathauto_node_agenda_pattern'] = $strongarm;
 
   $strongarm = new stdClass();

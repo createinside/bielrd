@@ -131,11 +131,11 @@ Backend
 #region-content .content a {
   color: #474747;
   text-decoration: none;
-  -ms-word-break: break-all;
   word-break: break-all;
   word-break: break-word;
-  -webkit-hyphens: auto;
   -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
   hyphens: auto;
 }
 /* line 61, ../sass/partials/_general.scss */
@@ -146,7 +146,7 @@ Backend
 #region-content .content ul, #region-content .content ol {
   margin-bottom: 1.25em;
 }
-/* line 72, ../sass/partials/_general.scss */
+/* line 71, ../sass/partials/_general.scss */
 #region-content .content ul:last-child,
 #region-content .content ol:last-child {
   margin-bottom: 0;

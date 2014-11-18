@@ -36,12 +36,31 @@ function rebild_edagsorden_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = '[field_agenda_item_closed_1]';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Overskrift: Global: Tekstområde */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<p class=\'field\'><a href="#" class="toggle-expand-all"><span class=\'icon-double-angle-down\'></span> Udvid alle punkter</a></p>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* Forbindelse: Field collection item: Entity with the Mødepunkter (field_agenda_items) */
   $handler->display->display_options['relationships']['field_agenda_items_node']['id'] = 'field_agenda_items_node';
   $handler->display->display_options['relationships']['field_agenda_items_node']['table'] = 'field_collection_item';
   $handler->display->display_options['relationships']['field_agenda_items_node']['field'] = 'field_agenda_items_node';
   $handler->display->display_options['relationships']['field_agenda_items_node']['label'] = 'indholdselement';
+  /* Felt: Field collection item: Lukket punkt */
+  $handler->display->display_options['fields']['field_agenda_item_closed']['id'] = 'field_agenda_item_closed';
+  $handler->display->display_options['fields']['field_agenda_item_closed']['table'] = 'field_data_field_agenda_item_closed';
+  $handler->display->display_options['fields']['field_agenda_item_closed']['field'] = 'field_agenda_item_closed';
+  $handler->display->display_options['fields']['field_agenda_item_closed']['label'] = '';
+  $handler->display->display_options['fields']['field_agenda_item_closed']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_agenda_item_closed']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_agenda_item_closed']['alter']['text'] = 'Lukket punkt:';
+  $handler->display->display_options['fields']['field_agenda_item_closed']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_agenda_item_closed']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_agenda_item_closed']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_agenda_item_closed']['type'] = 'list_key';
   /* Felt: Field collection item: Nummer */
   $handler->display->display_options['fields']['field_agenda_item_number']['id'] = 'field_agenda_item_number';
   $handler->display->display_options['fields']['field_agenda_item_number']['table'] = 'field_data_field_agenda_item_number';
@@ -59,7 +78,7 @@ function rebild_edagsorden_views_default_views() {
   $handler->display->display_options['fields']['field_agenda_item_caption']['field'] = 'field_agenda_item_caption';
   $handler->display->display_options['fields']['field_agenda_item_caption']['label'] = '';
   $handler->display->display_options['fields']['field_agenda_item_caption']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_agenda_item_caption']['alter']['text'] = '<strong class="field-item">[field_agenda_item_number]. [field_agenda_item_caption]</strong>';
+  $handler->display->display_options['fields']['field_agenda_item_caption']['alter']['text'] = '<strong class="field-item">[field_agenda_item_number]. [field_agenda_item_closed] [field_agenda_item_caption]</strong>';
   $handler->display->display_options['fields']['field_agenda_item_caption']['element_label_colon'] = FALSE;
   /* Felt: Field collection item: Brødtekst */
   $handler->display->display_options['fields']['field_agenda_item_content']['id'] = 'field_agenda_item_content';
@@ -80,34 +99,110 @@ function rebild_edagsorden_views_default_views() {
   $handler->display->display_options['fields']['field_agenda_root_id']['label'] = '';
   $handler->display->display_options['fields']['field_agenda_root_id']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_agenda_root_id']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_agenda_root_id']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_agenda_root_id']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_agenda_root_id']['settings'] = array(
     'thousand_separator' => '',
     'prefix_suffix' => 0,
   );
+  /* Felt: Field collection item: Sagsnummer */
+  $handler->display->display_options['fields']['field_agenda_item_case_nr']['id'] = 'field_agenda_item_case_nr';
+  $handler->display->display_options['fields']['field_agenda_item_case_nr']['table'] = 'field_data_field_agenda_item_case_nr';
+  $handler->display->display_options['fields']['field_agenda_item_case_nr']['field'] = 'field_agenda_item_case_nr';
+  $handler->display->display_options['fields']['field_agenda_item_case_nr']['label'] = '';
+  $handler->display->display_options['fields']['field_agenda_item_case_nr']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_agenda_item_case_nr']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_agenda_item_case_nr']['alter']['text'] = '<label>Sagsnr:</label> [field_agenda_item_case_nr]<br />';
+  $handler->display->display_options['fields']['field_agenda_item_case_nr']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_agenda_item_case_nr']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_agenda_item_case_nr']['empty_zero'] = TRUE;
+  /* Felt: Field collection item: Udvalg */
+  $handler->display->display_options['fields']['field_agenda_item_com']['id'] = 'field_agenda_item_com';
+  $handler->display->display_options['fields']['field_agenda_item_com']['table'] = 'field_data_field_agenda_item_com';
+  $handler->display->display_options['fields']['field_agenda_item_com']['field'] = 'field_agenda_item_com';
+  $handler->display->display_options['fields']['field_agenda_item_com']['label'] = '';
+  $handler->display->display_options['fields']['field_agenda_item_com']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_agenda_item_com']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_agenda_item_com']['alter']['text'] = '<label>Udvalg:</label> [field_agenda_item_com]<br />';
+  $handler->display->display_options['fields']['field_agenda_item_com']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_agenda_item_com']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_agenda_item_com']['empty_zero'] = TRUE;
+  /* Felt: Field collection item: Besluttende udvalg */
+  $handler->display->display_options['fields']['field_agenda_item_com_dec']['id'] = 'field_agenda_item_com_dec';
+  $handler->display->display_options['fields']['field_agenda_item_com_dec']['table'] = 'field_data_field_agenda_item_com_dec';
+  $handler->display->display_options['fields']['field_agenda_item_com_dec']['field'] = 'field_agenda_item_com_dec';
+  $handler->display->display_options['fields']['field_agenda_item_com_dec']['label'] = '';
+  $handler->display->display_options['fields']['field_agenda_item_com_dec']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_agenda_item_com_dec']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_agenda_item_com_dec']['alter']['text'] = '<label>Sagen afgøres i:</label> [field_agenda_item_com_dec]';
+  $handler->display->display_options['fields']['field_agenda_item_com_dec']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_agenda_item_com_dec']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_agenda_item_com_dec']['empty_zero'] = TRUE;
   /* Felt: Field collection item: Bilag */
   $handler->display->display_options['fields']['field_agenda_item_docs']['id'] = 'field_agenda_item_docs';
   $handler->display->display_options['fields']['field_agenda_item_docs']['table'] = 'field_data_field_agenda_item_docs';
   $handler->display->display_options['fields']['field_agenda_item_docs']['field'] = 'field_agenda_item_docs';
-  $handler->display->display_options['fields']['field_agenda_item_docs']['label'] = '';
   $handler->display->display_options['fields']['field_agenda_item_docs']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_agenda_item_docs']['alter']['text'] = '<a href="http://dagsorden.rebild.dk/committee_[field_agenda_com_id]/agenda_[field_agenda_root_id]/documents/[field_agenda_item_docs-url]">[field_agenda_item_docs-title]</a>';
-  $handler->display->display_options['fields']['field_agenda_item_docs']['element_label_type'] = 'strong';
-  $handler->display->display_options['fields']['field_agenda_item_docs']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_agenda_item_docs']['empty'] = '<p><em>Ingen bilag</em></p>';
+  $handler->display->display_options['fields']['field_agenda_item_docs']['alter']['text'] = '[field_agenda_item_docs] ';
+  $handler->display->display_options['fields']['field_agenda_item_docs']['element_label_type'] = 'h3';
+  $handler->display->display_options['fields']['field_agenda_item_docs']['empty'] = '<p><em>Ingen bilag.</p></em>';
   $handler->display->display_options['fields']['field_agenda_item_docs']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_agenda_item_docs']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_agenda_item_docs']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_agenda_item_docs']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_agenda_item_docs']['multi_type'] = 'ul';
+  /* Felt: Global: PHP */
+  $handler->display->display_options['fields']['php']['id'] = 'php';
+  $handler->display->display_options['fields']['php']['table'] = 'views';
+  $handler->display->display_options['fields']['php']['field'] = 'php';
+  $handler->display->display_options['fields']['php']['label'] = '';
+  $handler->display->display_options['fields']['php']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['php']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['php']['use_php_setup'] = 1;
+  $handler->display->display_options['fields']['php']['php_setup'] = '$static = 1;';
+  $handler->display->display_options['fields']['php']['php_output'] = '<?php  
+$options = array(
+	\'target_id\' => \'views-row-\'.$static,
+	\'button_id\' => \'print-row-\'.$static,
+	\'value\' =>	\'Print\',
+	\'type\' => \'button\',
+	\'custom_css\' => drupal_get_path(\'theme\',\'rebild\').\'/css/print-agenda.css\'
+);
+print area_print_form($options);
+
+$static++;
+?>';
+  $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
   /* Felt: Global: Tilpasset tekst */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_agenda_item_content]
-<strong class="views-label>Bilag:</strong>
-[field_agenda_item_docs]';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<p class="item-intro">
+[php]
+[field_agenda_item_case_nr]
+[field_agenda_item_com]
+</p>
+[field_agenda_item_content]
+<div class="bilag">
+<h3>Bilag:</h3>
+[field_agenda_item_docs]
+</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Felt: Field collection item: Lukket punkt */
+  $handler->display->display_options['fields']['field_agenda_item_closed_1']['id'] = 'field_agenda_item_closed_1';
+  $handler->display->display_options['fields']['field_agenda_item_closed_1']['table'] = 'field_data_field_agenda_item_closed';
+  $handler->display->display_options['fields']['field_agenda_item_closed_1']['field'] = 'field_agenda_item_closed';
+  $handler->display->display_options['fields']['field_agenda_item_closed_1']['label'] = '';
+  $handler->display->display_options['fields']['field_agenda_item_closed_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_agenda_item_closed_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_agenda_item_closed_1']['alter']['text'] = 'closed-item';
+  $handler->display->display_options['fields']['field_agenda_item_closed_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_agenda_item_closed_1']['empty'] = 'open-item';
+  $handler->display->display_options['fields']['field_agenda_item_closed_1']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_agenda_item_closed_1']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_agenda_item_closed_1']['type'] = 'list_key';
   /* Sorteringskriterie: Field collection item: Nummer (field_agenda_item_number) */
   $handler->display->display_options['sorts']['field_agenda_item_number_value']['id'] = 'field_agenda_item_number_value';
   $handler->display->display_options['sorts']['field_agenda_item_number_value']['table'] = 'field_data_field_agenda_item_number';
@@ -143,15 +238,30 @@ function rebild_edagsorden_views_default_views() {
     t('Sortér efter'),
     t('Stigende'),
     t('Faldende'),
+    t('<p class=\'field\'><a href="#" class="toggle-expand-all"><span class=\'icon-double-angle-down\'></span> Udvid alle punkter</a></p>'),
     t('indholdselement'),
-    t('<strong class="field-item">[field_agenda_item_number]. [field_agenda_item_caption]</strong>'),
+    t('Lukket punkt:'),
+    t('<strong class="field-item">[field_agenda_item_number]. [field_agenda_item_closed] [field_agenda_item_caption]</strong>'),
     t('[field_agenda_item_content]
 [field_agenda_item_docs]'),
-    t('<a href="http://dagsorden.rebild.dk/committee_[field_agenda_com_id]/agenda_[field_agenda_root_id]/documents/[field_agenda_item_docs-url]">[field_agenda_item_docs-title]</a>'),
-    t('<p><em>Ingen bilag</em></p>'),
-    t('[field_agenda_item_content]
-<strong class="views-label>Bilag:</strong>
-[field_agenda_item_docs]'),
+    t('<label>Sagsnr:</label> [field_agenda_item_case_nr]<br />'),
+    t('<label>Udvalg:</label> [field_agenda_item_com]<br />'),
+    t('<label>Sagen afgøres i:</label> [field_agenda_item_com_dec]'),
+    t('Bilag'),
+    t('[field_agenda_item_docs] '),
+    t('<p><em>Ingen bilag.</p></em>'),
+    t('<p class="item-intro">
+[php]
+[field_agenda_item_case_nr]
+[field_agenda_item_com]
+</p>
+[field_agenda_item_content]
+<div class="bilag">
+<h3>Bilag:</h3>
+[field_agenda_item_docs]
+</div>'),
+    t('closed-item'),
+    t('open-item'),
     t('Alle'),
     t('EVA Field'),
   );
@@ -318,6 +428,12 @@ function rebild_edagsorden_views_default_views() {
   $handler->display->display_options['menu']['name'] = 'main-menu';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Embedded Page */
+  $handler = $view->new_display('block', 'Embedded Page', 'embedded_page');
+  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+  $handler->display->display_options['use_ajax'] = TRUE;
+  $handler->display->display_options['block_description'] = 'Embedded Agendas';
   $translatables['agenda_overview'] = array(
     t('Master'),
     t('Dagsordener'),
@@ -334,6 +450,8 @@ function rebild_edagsorden_views_default_views() {
     t('%1'),
     t('Vælg år:'),
     t('Page'),
+    t('Embedded Page'),
+    t('Embedded Agendas'),
   );
   $export['agenda_overview'] = $view;
 

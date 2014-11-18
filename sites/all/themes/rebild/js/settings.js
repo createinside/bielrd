@@ -9,6 +9,12 @@ $(function() {
 	// Custom select boxes init
 	$("select").customSelect();
 	
+	Drupal.behaviors.rebild = {
+    attach: function(context, settings) {
+	    	$("select").not(".customised-select").customSelect();
+		}
+	}
+	
 	// Search block dropdown
 	$(".dropd-btn").click(function(e) {
 		e.preventDefault();
@@ -121,13 +127,35 @@ $(function() {
 	}	
 
 	// Expand/Collapse all
+	$('.toggle-expand-all').click(function(e) {
+		e.preventDefault();
+		
+		$(this).toggleClass('open');
+		
+		$(".view-agenda-accordion .views-row").accordion("option", {animated: false });
+				
+		// Expand All
+		if($(this).hasClass('open')) {
+			$(this).html('<span class="icon-double-angle-up"></span> Luk alle punkter');
+			$('.ui-accordion-header').not('.ui-state-active').click();
 /*
-$('.accordion-expand-collapse a').click(function() {
-   $('.ui-accordion .ui-accordion-header').next().slideDown();
-   $('.ui-accordion-header').next().addClass('ui-state-active');
-});
+			$('.ui-accordion-header').not('.ui-state-active').addClass('ui-state-active').addClass('ui-state-focus').attr("aria-expanded", true);
+			$('.ui-accordion-content').slideDown(0);
 */
-	
+		}
+		// Collapse All
+		else {
+			$(this).html('<span class="icon-double-angle-down"></span> Udvid alle punkter');
+			$('.ui-accordion-header.ui-state-active').click();
+			//$(this).html('<span class="icon-double-angle-down"></span> Udvid alle punkter');
+		/*
+	$('.ui-accordion-header.ui-state-active').removeClass('ui-state-active').removeClass('ui-state-focus').attr("aria-expanded", false);
+			$('.ui-accordion-content').slideUp(0);	
+*/
+		}
+		$(".view-agenda-accordion .views-row").accordion("option", {animated: true });
+		window.scrollTo(0,0);
+	});
 
 });
 

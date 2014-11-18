@@ -123,6 +123,11 @@ function rebild_edagsorden_feeds_importer_default() {
             'target' => 'field_agenda_root_id',
             'unique' => FALSE,
           ),
+          9 => array(
+            'source' => 'Blank source 1',
+            'target' => 'field_agenda_source',
+            'unique' => FALSE,
+          ),
         ),
         'update_existing' => '2',
         'input_format' => 'full_html',
@@ -359,7 +364,7 @@ function rebild_edagsorden_feeds_importer_default() {
           ),
         ),
         'update_existing' => '2',
-        'input_format' => 'full_html',
+        'input_format' => 'sbsys',
         'skip_hash_check' => 0,
         'bundle' => 'field_agenda_items',
         'update_non_existent' => 'delete',
@@ -373,6 +378,307 @@ function rebild_edagsorden_feeds_importer_default() {
     'process_in_background' => 0,
   );
   $export['edagsorden_item_importer'] = $feeds_importer;
+
+  $feeds_importer = new stdClass();
+  $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
+  $feeds_importer->api_version = 1;
+  $feeds_importer->id = 'sbsys_agenda_importer';
+  $feeds_importer->config = array(
+    'name' => 'SBSYS: Importér dagsordener',
+    'description' => 'Importerer dagsordener fra SBSYS',
+    'fetcher' => array(
+      'plugin_key' => 'FeedsFileFetcher',
+      'config' => array(
+        'allowed_extensions' => 'txt csv tsv xml opml html htm',
+        'direct' => 1,
+        'directory' => 'public://feeds',
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+      ),
+    ),
+    'parser' => array(
+      'plugin_key' => 'FeedsXPathParserXML',
+      'config' => array(
+        'sources' => array(
+          'xpathparser:0' => '@DagsordenID',
+          'xpathparser:1' => '@Dagsordentype',
+          'xpathparser:2' => '@DagsordenID',
+          'xpathparser:3' => 'Møde/@Mødedato',
+          'xpathparser:4' => 'Møde/@Mødedato',
+          'xpathparser:5' => 'Møde/@Mødested',
+          'xpathparser:6' => '@Dagsordentype',
+          'xpathparser:7' => 'Møde/@Udvalg',
+          'xpathparser:8' => 'Møde/@Mødetid',
+        ),
+        'rawXML' => array(
+          'xpathparser:0' => 0,
+          'xpathparser:1' => 0,
+          'xpathparser:2' => 0,
+          'xpathparser:3' => 0,
+          'xpathparser:4' => 0,
+          'xpathparser:5' => 0,
+          'xpathparser:6' => 0,
+          'xpathparser:7' => 0,
+          'xpathparser:8' => 0,
+        ),
+        'context' => '//Dagsorden',
+        'exp' => array(
+          'errors' => 0,
+          'debug' => array(
+            'context' => 0,
+            'xpathparser:0' => 0,
+            'xpathparser:1' => 0,
+            'xpathparser:2' => 0,
+            'xpathparser:3' => 0,
+            'xpathparser:4' => 0,
+            'xpathparser:5' => 0,
+            'xpathparser:6' => 0,
+            'xpathparser:7' => 0,
+            'xpathparser:8' => 0,
+          ),
+        ),
+        'allow_override' => 1,
+      ),
+    ),
+    'processor' => array(
+      'plugin_key' => 'FeedsNodeProcessor',
+      'config' => array(
+        'expire' => '-1',
+        'author' => '1',
+        'authorize' => 1,
+        'mappings' => array(
+          0 => array(
+            'source' => 'xpathparser:0',
+            'target' => 'guid',
+            'unique' => 1,
+          ),
+          1 => array(
+            'source' => 'xpathparser:1',
+            'target' => 'title',
+            'unique' => FALSE,
+          ),
+          2 => array(
+            'source' => 'xpathparser:2',
+            'target' => 'field_agenda_id',
+            'unique' => FALSE,
+          ),
+          3 => array(
+            'source' => 'xpathparser:3',
+            'target' => 'field_agenda_date:start',
+            'unique' => FALSE,
+          ),
+          4 => array(
+            'source' => 'xpathparser:4',
+            'target' => 'field_agenda_date:end',
+            'unique' => FALSE,
+          ),
+          5 => array(
+            'source' => 'xpathparser:5',
+            'target' => 'field_agenda_location',
+            'unique' => FALSE,
+          ),
+          6 => array(
+            'source' => 'xpathparser:6',
+            'target' => 'field_agenda_type',
+            'unique' => FALSE,
+          ),
+          7 => array(
+            'source' => 'xpathparser:7',
+            'target' => 'field_agenda_committee',
+            'unique' => FALSE,
+          ),
+          8 => array(
+            'source' => 'xpathparser:8',
+            'target' => 'Temporary target 1',
+            'unique' => FALSE,
+          ),
+          9 => array(
+            'source' => 'Blank source 1',
+            'target' => 'field_agenda_source',
+            'unique' => FALSE,
+          ),
+        ),
+        'update_existing' => '2',
+        'input_format' => 'full_html',
+        'skip_hash_check' => 0,
+        'bundle' => 'agenda',
+        'update_non_existent' => 'skip',
+      ),
+    ),
+    'content_type' => '',
+    'update' => 0,
+    'import_period' => '-1',
+    'expire_period' => 3600,
+    'import_on_create' => 1,
+    'process_in_background' => 0,
+  );
+  $export['sbsys_agenda_importer'] = $feeds_importer;
+
+  $feeds_importer = new stdClass();
+  $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
+  $feeds_importer->api_version = 1;
+  $feeds_importer->id = 'sbsys_item_importer';
+  $feeds_importer->config = array(
+    'name' => 'SBSYS: Importér mødepunkter',
+    'description' => 'Importerer mødepunkter fra SBSYS',
+    'fetcher' => array(
+      'plugin_key' => 'FeedsFileFetcher',
+      'config' => array(
+        'allowed_extensions' => 'txt csv tsv xml opml html htm',
+        'direct' => 1,
+        'directory' => 'public://feeds',
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+      ),
+    ),
+    'parser' => array(
+      'plugin_key' => 'FeedsXPathParserXML',
+      'config' => array(
+        'sources' => array(
+          'xpathparser:0' => '/Dagsorden/@DagsordenID',
+          'xpathparser:1' => '@DagsordenpunktID',
+          'xpathparser:2' => '@DagsordenpunktID',
+          'xpathparser:3' => 'Overskrift',
+          'xpathparser:4' => '@Nummer',
+          'xpathparser:5' => '/Dagsorden/@DagsordenID',
+          'xpathparser:6' => 'Indhold',
+          'xpathparser:7' => '@Sagsnr',
+          'xpathparser:8' => '@BesluttendeUdvalg',
+          'xpathparser:9' => '/Dagsorden/Møde/@Udvalg',
+          'xpathparser:10' => 'Bilagsliste/Bilag/@Linktekst',
+          'xpathparser:11' => 'Bilagsliste/Bilag/@BilagUrl',
+          'xpathparser:13' => '@Åbent',
+        ),
+        'rawXML' => array(
+          'xpathparser:6' => 'xpathparser:6',
+          'xpathparser:0' => 0,
+          'xpathparser:1' => 0,
+          'xpathparser:2' => 0,
+          'xpathparser:3' => 0,
+          'xpathparser:4' => 0,
+          'xpathparser:5' => 0,
+          'xpathparser:7' => 0,
+          'xpathparser:8' => 0,
+          'xpathparser:9' => 0,
+          'xpathparser:10' => 0,
+          'xpathparser:11' => 0,
+          'xpathparser:13' => 0,
+        ),
+        'context' => '//Dagsorden/Dagsordenpunkter/Dagsordenpunkt',
+        'exp' => array(
+          'errors' => 0,
+          'debug' => array(
+            'context' => 0,
+            'xpathparser:0' => 0,
+            'xpathparser:1' => 0,
+            'xpathparser:2' => 0,
+            'xpathparser:3' => 0,
+            'xpathparser:4' => 0,
+            'xpathparser:5' => 0,
+            'xpathparser:6' => 0,
+            'xpathparser:7' => 0,
+            'xpathparser:8' => 0,
+            'xpathparser:9' => 0,
+            'xpathparser:10' => 0,
+            'xpathparser:11' => 0,
+            'xpathparser:13' => 0,
+          ),
+        ),
+        'allow_override' => 0,
+      ),
+    ),
+    'processor' => array(
+      'plugin_key' => 'FeedsFieldCollectionProcessor',
+      'config' => array(
+        'field_name' => 'field_agenda_items',
+        'host_entity_type' => 'node',
+        'is_field' => 1,
+        'guid_field_name' => 'field_agenda_id',
+        'identifier_field_name' => 'field_agenda_item_id',
+        'mappings' => array(
+          0 => array(
+            'source' => 'xpathparser:0',
+            'target' => 'host_entity_guid',
+            'unique' => FALSE,
+          ),
+          1 => array(
+            'source' => 'xpathparser:1',
+            'target' => 'guid',
+            'unique' => 1,
+          ),
+          2 => array(
+            'source' => 'xpathparser:2',
+            'target' => 'field_agenda_item_id',
+            'unique' => FALSE,
+          ),
+          3 => array(
+            'source' => 'xpathparser:3',
+            'target' => 'field_agenda_item_caption',
+            'unique' => FALSE,
+          ),
+          4 => array(
+            'source' => 'xpathparser:4',
+            'target' => 'field_agenda_item_number',
+            'unique' => FALSE,
+          ),
+          5 => array(
+            'source' => 'xpathparser:5',
+            'target' => 'field_agenda_id',
+            'unique' => FALSE,
+          ),
+          6 => array(
+            'source' => 'xpathparser:6',
+            'target' => 'field_agenda_item_content',
+            'unique' => FALSE,
+          ),
+          7 => array(
+            'source' => 'xpathparser:7',
+            'target' => 'field_agenda_item_case_nr',
+            'unique' => FALSE,
+          ),
+          8 => array(
+            'source' => 'xpathparser:8',
+            'target' => 'field_agenda_item_com_dec',
+            'unique' => FALSE,
+          ),
+          9 => array(
+            'source' => 'xpathparser:9',
+            'target' => 'field_agenda_item_com',
+            'unique' => FALSE,
+          ),
+          10 => array(
+            'source' => 'xpathparser:10',
+            'target' => 'field_agenda_item_docs:title',
+            'unique' => FALSE,
+          ),
+          11 => array(
+            'source' => 'xpathparser:11',
+            'target' => 'field_agenda_item_docs:url',
+            'unique' => FALSE,
+          ),
+          12 => array(
+            'source' => 'xpathparser:13',
+            'target' => 'field_agenda_item_closed',
+            'unique' => FALSE,
+          ),
+        ),
+        'update_existing' => '2',
+        'input_format' => 'sbsys',
+        'skip_hash_check' => 0,
+        'bundle' => 'field_agenda_items',
+        'update_non_existent' => 'delete',
+      ),
+    ),
+    'content_type' => '',
+    'update' => 0,
+    'import_period' => '-1',
+    'expire_period' => 3600,
+    'import_on_create' => 1,
+    'process_in_background' => 0,
+  );
+  $export['sbsys_item_importer'] = $feeds_importer;
 
   return $export;
 }

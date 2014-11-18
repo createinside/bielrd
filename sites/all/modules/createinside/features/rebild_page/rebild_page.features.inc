@@ -61,6 +61,7 @@ function rebild_page_image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'galleri_lille',
   );
 
   // Exported image style: galleri_stor.
@@ -84,6 +85,7 @@ function rebild_page_image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'galleri_stor',
   );
 
   // Exported image style: indhold_top.
@@ -110,6 +112,7 @@ function rebild_page_image_default_styles() {
         'weight' => 0,
       ),
     ),
+    'label' => 'indhold_top',
   );
 
   // Exported image style: indhold_top_mobile.
@@ -146,6 +149,7 @@ function rebild_page_image_default_styles() {
         'weight' => 2,
       ),
     ),
+    'label' => 'indhold_top_mobile',
   );
 
   // Exported image style: indhold_top_narrow.
@@ -182,6 +186,7 @@ function rebild_page_image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'indhold_top_narrow',
   );
 
   // Exported image style: inline_bottom.
@@ -208,6 +213,7 @@ function rebild_page_image_default_styles() {
         'weight' => 0,
       ),
     ),
+    'label' => 'inline_bottom',
   );
 
   // Exported image style: inline_top.
@@ -234,6 +240,7 @@ function rebild_page_image_default_styles() {
         'weight' => 0,
       ),
     ),
+    'label' => 'inline_top',
   );
 
   return $styles;

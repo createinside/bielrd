@@ -269,7 +269,6 @@ Share nodes
 			background-color: $color-blue;
 			color: #fff;			
 		}	
-	
 	}	
 }
 
@@ -291,17 +290,97 @@ Share nodes
 						margin: 0;
 					}
 				}
+				p.item-intro {
+					line-height: 1.5em;
+					position: relative;
+					font-style: italic;
+					margin-bottom: 1em;
+					.area-print-trigger {
+						position: absolute;
+						top: 0;
+						right: 0;
+						cursor: pointer;
+						color: $color-blue;
+						text-decoration: underline;
+						padding: 0;
+						margin: 0;
+						border: none;
+						background: none;
+						font-size: $font-size-std;
+						font-family: $font-family-std;
+						font-style: normal;
+					}
+				}
+				p:last-child {
+					margin-bottom: 1.25em;
+				}
+				h3 {
+					font-size: 1.2em;
+					line-height: 1.2em;
+					padding-top: 0.5em;
+					padding-bottom: 0.25em;
+				}
+				div.item-resume,
+				div.item-decision {
+					background: #e6e6e6;
+					margin: 0 0 10px;
+					padding: 10px;
+					p:last-child {
+						margin-bottom: 0;
+					}
+				}
+				div.item-setting,
+				div.item-decision {
+					table {
+						margin: 0;
+						border: none;
+						tr {
+							border: none;
+							td {
+								border: none;
+							}
+						}
+					}
+				}
+			}
+		}
+		.ui-accordion.closed-item {
+			.ui-accordion-content {
+				div.bilag {
+					display: none;
+				}
 			}
 		}
 		.field-label {
 			margin: 0;
 		}
-		table {
-			max-width: 100%;
-			border: 1px solid $text-color;
+		.toggle-expand-all {
+			text-decoration: none;
+			position: absolute;
+			top: -26px;
+			right: 5px;
+			&:hover {
+				text-decoration: none;
+			}
 		}
-		table tr td {
-			padding: 5px;
+		table {
+			width: 100%;
+			max-width: 100%;
+			margin: 0 0 1.25em 0;
+			tr {
+				td {
+					padding: 5px;
+					border: 1px solid black;
+				}
+				td.indstillingat {
+					width: 1%;
+					padding: 0 5px 1.25em 20px;
+				}
+				td.indstillinglinje {
+					width: 99%;
+					padding: 0 0 1.25em;
+				}
+			}
 		}
 	}
 }

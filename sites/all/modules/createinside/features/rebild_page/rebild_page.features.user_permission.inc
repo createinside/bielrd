@@ -41,6 +41,16 @@ function rebild_page_user_default_permissions() {
     'module' => 'file_entity',
   );
 
+  // Exported permission: 'create field_agenda_view_com'.
+  $permissions['create field_agenda_view_com'] = array(
+    'name' => 'create field_agenda_view_com',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: 'create field_con_address'.
   $permissions['create field_con_address'] = array(
     'name' => 'create field_con_address',
@@ -214,6 +224,16 @@ function rebild_page_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'edit field_agenda_view_com'.
+  $permissions['edit field_agenda_view_com'] = array(
+    'name' => 'edit field_agenda_view_com',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: 'edit field_con_address'.
   $permissions['edit field_con_address'] = array(
     'name' => 'edit field_con_address',
@@ -337,6 +357,16 @@ function rebild_page_user_default_permissions() {
   // Exported permission: 'edit field_main_view'.
   $permissions['edit field_main_view'] = array(
     'name' => 'edit field_main_view',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'edit own field_agenda_view_com'.
+  $permissions['edit own field_agenda_view_com'] = array(
+    'name' => 'edit own field_agenda_view_com',
     'roles' => array(
       'administrator' => 'administrator',
       'kommunikation' => 'kommunikation',
@@ -494,6 +524,17 @@ function rebild_page_user_default_permissions() {
     'module' => 'media',
   );
 
+  // Exported permission: 'view field_agenda_view_com'.
+  $permissions['view field_agenda_view_com'] = array(
+    'name' => 'view field_agenda_view_com',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: 'view field_con_address'.
   $permissions['view field_con_address'] = array(
     'name' => 'view field_con_address',
@@ -636,6 +677,16 @@ function rebild_page_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'view own field_agenda_view_com'.
+  $permissions['view own field_agenda_view_com'] = array(
+    'name' => 'view own field_agenda_view_com',
+    'roles' => array(
+      'administrator' => 'administrator',
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
