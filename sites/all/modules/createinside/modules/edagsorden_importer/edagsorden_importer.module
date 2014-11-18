@@ -5,8 +5,8 @@
  */
 function edagsorden_importer_menu() {
 	$items = array();
-	$items['admin/config/services/edagsorden'] = array(
-	  'title' => 'eDagsorden Importer',
+	$items['admin/config/services/agenda_importer'] = array(
+	  'title' => 'Agenda Importer',
 	  'description' => t('Configure general settings and do manual imports.'),
 	  'page callback' => 'drupal_get_form',
 	  'page arguments' => array('edagsorden_importer_form'),
@@ -217,7 +217,7 @@ function edagsorden_importer_agenda_import_sbsys() {
 	if (isset($result['node'])) {
 		$nids = array_keys($result['node']);
 		node_delete_multiple($nids);
-		watchdog("edagsorden_importer", "Deleted ".count($nids)." expired agendas");
+		watchdog("edagsorden_importer", "Deleted ".count($nids)." expired agendas from SBSYS");
 	}
 	
 	/* End admin state */
@@ -301,20 +301,19 @@ function edagsorden_importer_agenda_import_edagsorden() {
 	}
 	
 	/* Delete expired agendas */
-	/*
 	$query = new EntityFieldQuery();
 	$query
 	  ->entityCondition('entity_type', 'node')
 	  ->entityCondition('bundle', 'agenda')
+	  ->fieldCondition('field_agenda_source', 'value', 'edagsorden')
 	  ->fieldCondition('field_agenda_id', 'value', $agenda_ids, 'NOT IN');
 	$result = $query->execute();
 	
 	if (isset($result['node'])) {
 		$nids = array_keys($result['node']);
 		node_delete_multiple($nids);
-		watchdog("edagsorden_importer", "Deleted ".count($nids)." expired agendas");
+		watchdog("edagsorden_importer", "Deleted ".count($nids)." expired agendas from eDagsorden");
 	}
-	*/
 	
 	/* End admin state */
 	$user = $original_user;
