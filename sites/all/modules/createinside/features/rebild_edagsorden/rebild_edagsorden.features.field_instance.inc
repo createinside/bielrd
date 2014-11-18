@@ -27,7 +27,7 @@ function rebild_edagsorden_field_default_field_instances() {
     'entity_type' => 'field_collection_item',
     'field_name' => 'field_agenda_com_id',
     'label' => 'Committee Id',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -61,7 +61,7 @@ function rebild_edagsorden_field_default_field_instances() {
     'entity_type' => 'field_collection_item',
     'field_name' => 'field_agenda_id',
     'label' => 'Agenda Id',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -96,8 +96,12 @@ function rebild_edagsorden_field_default_field_instances() {
     'entity_type' => 'field_collection_item',
     'field_name' => 'field_agenda_item_caption',
     'label' => 'Titel',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -130,7 +134,7 @@ function rebild_edagsorden_field_default_field_instances() {
     'entity_type' => 'field_collection_item',
     'field_name' => 'field_agenda_item_case_nr',
     'label' => 'Sagsnummer',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'linkit' => array(
         'enable' => 0,
@@ -281,8 +285,12 @@ function rebild_edagsorden_field_default_field_instances() {
     'entity_type' => 'field_collection_item',
     'field_name' => 'field_agenda_item_content',
     'label' => 'Brødtekst',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -362,7 +370,7 @@ function rebild_edagsorden_field_default_field_instances() {
     'entity_type' => 'field_collection_item',
     'field_name' => 'field_agenda_item_id',
     'label' => 'Id',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -402,7 +410,7 @@ function rebild_edagsorden_field_default_field_instances() {
     'entity_type' => 'field_collection_item',
     'field_name' => 'field_agenda_item_number',
     'label' => 'Nummer',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -588,7 +596,7 @@ function rebild_edagsorden_field_default_field_instances() {
         'last_item_collapsed' => FALSE,
       ),
       'type' => 'field_collection_embed',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -740,7 +748,7 @@ function rebild_edagsorden_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
