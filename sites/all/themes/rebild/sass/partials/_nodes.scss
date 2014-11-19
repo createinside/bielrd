@@ -277,6 +277,18 @@ Share nodes
 -------------------------------------------------------------------*/	
 #region-content {
 	.node-agenda {
+		.view-agenda-accordion {
+			position: relative;
+			.toggle-expand-all {
+				text-decoration: none;
+				position: absolute;
+				top: -26px;
+				right: 5px;
+				&:hover {
+					text-decoration: none;
+				}
+			}			
+		}
 		.ui-accordion {
 			.ui-accordion-content {
 				padding: $spacing-std/2 $spacing-std $spacing-std;
@@ -353,15 +365,6 @@ Share nodes
 		}
 		.field-label {
 			margin: 0;
-		}
-		.toggle-expand-all {
-			text-decoration: none;
-			position: absolute;
-			top: -26px;
-			right: 5px;
-			&:hover {
-				text-decoration: none;
-			}
 		}
 		table {
 			width: 100%;
