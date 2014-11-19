@@ -161,6 +161,7 @@ function edagsorden_importer_agenda_import_sbsys() {
   $user = user_load(1);
     
 	$committee_source = variable_get('sbsys_root_path', '');
+	$agenda_ids = array();
 	
 	// Find all XML files recursively
 	$dir = new RecursiveDirectoryIterator($committee_source);
@@ -206,20 +207,21 @@ function edagsorden_importer_agenda_import_sbsys() {
 	}
 	
 	/* Delete expired agendas */
-	$query = new EntityFieldQuery();
-	$query
-	  ->entityCondition('entity_type', 'node')
-	  ->entityCondition('bundle', 'agenda')
-	  ->fieldCondition('field_agenda_source', 'value', 'sbsys')
-	  ->fieldCondition('field_agenda_id', 'value', $agenda_ids, 'NOT IN');
-	$result = $query->execute();
-	
-	if (isset($result['node'])) {
-		$nids = array_keys($result['node']);
-		node_delete_multiple($nids);
-		watchdog("edagsorden_importer", "Deleted ".count($nids)." expired agendas from SBSYS");
-	}
-	
+	if(!empty($agenda_ids)) {
+		$query = new EntityFieldQuery();
+		$query
+		  ->entityCondition('entity_type', 'node')
+		  ->entityCondition('bundle', 'agenda')
+		  ->fieldCondition('field_agenda_source', 'value', 'sbsys')
+		  ->fieldCondition('field_agenda_id', 'value', $agenda_ids, 'NOT IN');
+		$result = $query->execute();
+		
+		if (isset($result['node'])) {
+			$nids = array_keys($result['node']);
+			node_delete_multiple($nids);
+			watchdog("edagsorden_importer", "Deleted ".count($nids)." expired agendas from SBSYS");
+		}
+	}	
 	/* End admin state */
 	$user = $original_user;
   drupal_save_session($old_state);		
@@ -243,6 +245,7 @@ function edagsorden_importer_agenda_import_edagsorden() {
   $user = user_load(1);
     
 	$committee_source = variable_get('edagsorden_root_url', '')."/committees.xml"; 
+	$agenda_ids = array();
 								
 	$importer_id = 'edagsorden_committee_importer';
 	$feedSource = feeds_source($importer_id);
@@ -301,18 +304,20 @@ function edagsorden_importer_agenda_import_edagsorden() {
 	}
 	
 	/* Delete expired agendas */
-	$query = new EntityFieldQuery();
-	$query
-	  ->entityCondition('entity_type', 'node')
-	  ->entityCondition('bundle', 'agenda')
-	  ->fieldCondition('field_agenda_source', 'value', 'edagsorden')
-	  ->fieldCondition('field_agenda_id', 'value', $agenda_ids, 'NOT IN');
-	$result = $query->execute();
-	
-	if (isset($result['node'])) {
-		$nids = array_keys($result['node']);
-		node_delete_multiple($nids);
-		watchdog("edagsorden_importer", "Deleted ".count($nids)." expired agendas from eDagsorden");
+	if(!empty($agenda_ids)) {
+		$query = new EntityFieldQuery();
+		$query
+		  ->entityCondition('entity_type', 'node')
+		  ->entityCondition('bundle', 'agenda')
+		  ->fieldCondition('field_agenda_source', 'value', 'edagsorden')
+		  ->fieldCondition('field_agenda_id', 'value', $agenda_ids, 'NOT IN');
+		$result = $query->execute();
+		
+		if (isset($result['node'])) {
+			$nids = array_keys($result['node']);
+			node_delete_multiple($nids);
+			watchdog("edagsorden_importer", "Deleted ".count($nids)." expired agendas from eDagsorden");
+		}
 	}
 	
 	/* End admin state */
