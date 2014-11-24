@@ -101,6 +101,18 @@ function rebild_edagsorden_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'sbsys_agenda_importer-xpathparser_1-sbsys__title';
+  $feeds_tamper->importer = 'sbsys_agenda_importer';
+  $feeds_tamper->source = 'xpathparser:1';
+  $feeds_tamper->plugin_id = 'sbsys_title';
+  $feeds_tamper->settings = '';
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'SBSYS: Title';
+  $export['sbsys_agenda_importer-xpathparser_1-sbsys__title'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'sbsys_agenda_importer-xpathparser_3-sbsys__date_converter';
   $feeds_tamper->importer = 'sbsys_agenda_importer';
   $feeds_tamper->source = 'xpathparser:3';
