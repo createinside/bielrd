@@ -402,6 +402,7 @@ function rebild_edagsorden_feeds_importer_default() {
       'config' => array(
         'sources' => array(
           'xpathparser:0' => '@DagsordenID',
+          'xpathparser:9' => '@Tillægsdagsorden',
           'xpathparser:1' => '@Dagsordentype',
           'xpathparser:2' => '@DagsordenID',
           'xpathparser:3' => 'Møde/@Mødedato',
@@ -413,6 +414,7 @@ function rebild_edagsorden_feeds_importer_default() {
         ),
         'rawXML' => array(
           'xpathparser:0' => 0,
+          'xpathparser:9' => 0,
           'xpathparser:1' => 0,
           'xpathparser:2' => 0,
           'xpathparser:3' => 0,
@@ -428,6 +430,7 @@ function rebild_edagsorden_feeds_importer_default() {
           'debug' => array(
             'context' => 0,
             'xpathparser:0' => 0,
+            'xpathparser:9' => 0,
             'xpathparser:1' => 0,
             'xpathparser:2' => 0,
             'xpathparser:3' => 0,
@@ -454,46 +457,51 @@ function rebild_edagsorden_feeds_importer_default() {
             'unique' => 1,
           ),
           1 => array(
+            'source' => 'xpathparser:9',
+            'target' => 'Temporary target 2',
+            'unique' => FALSE,
+          ),
+          2 => array(
             'source' => 'xpathparser:1',
             'target' => 'title',
             'unique' => FALSE,
           ),
-          2 => array(
+          3 => array(
             'source' => 'xpathparser:2',
             'target' => 'field_agenda_id',
             'unique' => FALSE,
           ),
-          3 => array(
+          4 => array(
             'source' => 'xpathparser:3',
             'target' => 'field_agenda_date:start',
             'unique' => FALSE,
           ),
-          4 => array(
+          5 => array(
             'source' => 'xpathparser:4',
             'target' => 'field_agenda_date:end',
             'unique' => FALSE,
           ),
-          5 => array(
+          6 => array(
             'source' => 'xpathparser:5',
             'target' => 'field_agenda_location',
             'unique' => FALSE,
           ),
-          6 => array(
+          7 => array(
             'source' => 'xpathparser:6',
             'target' => 'field_agenda_type',
             'unique' => FALSE,
           ),
-          7 => array(
+          8 => array(
             'source' => 'xpathparser:7',
             'target' => 'field_agenda_committee',
             'unique' => FALSE,
           ),
-          8 => array(
+          9 => array(
             'source' => 'xpathparser:8',
             'target' => 'Temporary target 1',
             'unique' => FALSE,
           ),
-          9 => array(
+          10 => array(
             'source' => 'Blank source 1',
             'target' => 'field_agenda_source',
             'unique' => FALSE,
