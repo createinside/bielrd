@@ -4481,32 +4481,41 @@ div.workbench-info-block a {
 #region-content .view-agenda-overview .view-filters label {
   margin: 0 0 10px 0;
 }
-/* line 643, ../sass/partials/_views.scss */
+/* line 642, ../sass/partials/_views.scss */
+#region-content .view-agenda-overview .view-filters .views-exposed-widget {
+  position: relative;
+}
+/* line 644, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .view-filters .views-exposed-widget select {
   margin: 0;
   padding: 0;
 }
-/* line 647, ../sass/partials/_views.scss */
+/* line 648, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .view-filters .views-exposed-widget .customSelect {
   border: 1px solid #dbdbdb;
 }
-/* line 650, ../sass/partials/_views.scss */
+/* line 651, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .view-filters .views-exposed-widget .form-submit {
   background: #7f9dcd;
   border: none;
   margin: 24px 0 0 0;
+  display: none;
 }
 /* line 657, ../sass/partials/_views.scss */
+#region-content .view-agenda-overview .view-filters .views-exposed-widget .ajax-progress {
+  margin-top: 33px;
+}
+/* line 662, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview h3 {
   text-transform: capitalize;
   margin-top: 20px;
   margin-bottom: 0.5em;
 }
-/* line 662, ../sass/partials/_views.scss */
+/* line 667, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .views-row {
   margin-bottom: 0.5em;
 }
-/* line 664, ../sass/partials/_views.scss */
+/* line 669, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .views-row a {
   color: #7f9dcd;
 }
@@ -4514,37 +4523,37 @@ div.workbench-info-block a {
 /**
  * SEARCH RESULTS
  */
-/* line 673, ../sass/partials/_views.scss */
+/* line 678, ../sass/partials/_views.scss */
 #search-results-page h2 {
   padding-bottom: 1em;
 }
-/* line 676, ../sass/partials/_views.scss */
+/* line 681, ../sass/partials/_views.scss */
 #search-results-page .search-result {
   padding: 15px 10px;
   margin: 0;
 }
-/* line 682, ../sass/partials/_views.scss */
+/* line 687, ../sass/partials/_views.scss */
 #search-results-page .search-result h3 {
   margin: 0 0 10px 0;
 }
-/* line 684, ../sass/partials/_views.scss */
+/* line 689, ../sass/partials/_views.scss */
 #search-results-page .search-result h3 a {
   color: #7f9dcd;
 }
-/* line 688, ../sass/partials/_views.scss */
+/* line 693, ../sass/partials/_views.scss */
 #search-results-page .search-result .search-date {
   font-size: 0.91667em;
   margin: 0 0 10px;
 }
-/* line 692, ../sass/partials/_views.scss */
+/* line 697, ../sass/partials/_views.scss */
 #search-results-page .search-result .search-text {
   line-height: 1.25em;
 }
-/* line 696, ../sass/partials/_views.scss */
+/* line 701, ../sass/partials/_views.scss */
 #search-results-page .odd {
   background: #f6f6f6;
 }
-/* line 699, ../sass/partials/_views.scss */
+/* line 704, ../sass/partials/_views.scss */
 #search-results-page ul.pager {
   margin: 20px 0;
 }
@@ -4552,32 +4561,32 @@ div.workbench-info-block a {
 /**
  * OFFERINGS
  */
-/* line 709, ../sass/partials/_views.scss */
+/* line 714, ../sass/partials/_views.scss */
 #region-content .view-offerings h2 {
   margin: 20px 0;
 }
-/* line 712, ../sass/partials/_views.scss */
+/* line 717, ../sass/partials/_views.scss */
 #region-content .view-offerings .views-row {
   margin-bottom: 20px;
 }
 
-/* line 719, ../sass/partials/_views.scss */
+/* line 724, ../sass/partials/_views.scss */
 #region-content .view-id-messages {
   margin-top: 25px;
 }
-/* line 721, ../sass/partials/_views.scss */
+/* line 726, ../sass/partials/_views.scss */
 #region-content .view-id-messages .date-nav-wrapper {
   margin: 0;
   padding: 0;
 }
-/* line 724, ../sass/partials/_views.scss */
+/* line 729, ../sass/partials/_views.scss */
 #region-content .view-id-messages .date-nav-wrapper .date-nav {
   margin: 0;
   padding: 0;
   height: auto;
   min-height: inherit;
 }
-/* line 732, ../sass/partials/_views.scss */
+/* line 737, ../sass/partials/_views.scss */
 #region-content .view-id-messages .ui-accordion .ui-accordion-header {
   background: #e6e6e6;
   color: #474747;
@@ -4590,17 +4599,17 @@ div.workbench-info-block a {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 741, ../sass/partials/_views.scss */
+/* line 746, ../sass/partials/_views.scss */
 #region-content .view-id-messages .ui-accordion .ui-accordion-header a {
   color: #474747;
   padding: 0;
   margin: 0;
 }
-/* line 746, ../sass/partials/_views.scss */
+/* line 751, ../sass/partials/_views.scss */
 #region-content .view-id-messages .ui-accordion .ui-accordion-header a:hover {
   text-decoration: none;
 }
-/* line 749, ../sass/partials/_views.scss */
+/* line 754, ../sass/partials/_views.scss */
 #region-content .view-id-messages .ui-accordion .ui-accordion-header a:before {
   font-family: 'Rebild';
   speak: none;
@@ -4615,16 +4624,16 @@ div.workbench-info-block a {
   content: "\e00f";
   margin-right: 0.5em;
 }
-/* line 755, ../sass/partials/_views.scss */
+/* line 760, ../sass/partials/_views.scss */
 #region-content .view-id-messages .ui-accordion .ui-accordion-header.ui-state-active {
   background-color: #7f9dcd;
 }
-/* line 757, ../sass/partials/_views.scss */
+/* line 762, ../sass/partials/_views.scss */
 #region-content .view-id-messages .ui-accordion .ui-accordion-header.ui-state-active a,
 #region-content .view-id-messages .ui-accordion .ui-accordion-header.ui-state-active .field-item {
   color: white;
 }
-/* line 761, ../sass/partials/_views.scss */
+/* line 766, ../sass/partials/_views.scss */
 #region-content .view-id-messages .ui-accordion .ui-accordion-header.ui-state-active a:before {
   font-family: 'Rebild';
   speak: none;
@@ -4639,16 +4648,16 @@ div.workbench-info-block a {
   content: "\e010";
   margin-right: 0.5em;
 }
-/* line 767, ../sass/partials/_views.scss */
+/* line 772, ../sass/partials/_views.scss */
 #region-content .view-id-messages .ui-accordion .ui-accordion-content {
   padding: 10px 20px;
   margin: 0;
 }
-/* line 770, ../sass/partials/_views.scss */
+/* line 775, ../sass/partials/_views.scss */
 #region-content .view-id-messages .ui-accordion .ui-accordion-content p {
   margin-bottom: 20px;
 }
-/* line 775, ../sass/partials/_views.scss */
+/* line 780, ../sass/partials/_views.scss */
 #region-content .view-id-messages .view-empty {
   margin: 20px 0 0 0;
 }

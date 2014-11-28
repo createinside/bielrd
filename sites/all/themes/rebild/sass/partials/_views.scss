@@ -640,6 +640,7 @@
 				margin: 0 0 10px 0;
 			}
 			.views-exposed-widget {
+				position: relative;
 				select {
 					margin: 0;
 					padding: 0;
@@ -651,6 +652,10 @@
 					background: $color-blue;
 					border: none;
 					margin: 24px 0 0 0;
+					display: none;
+				}
+				.ajax-progress {
+					margin-top: 33px;
 				}
 			}
 		}
