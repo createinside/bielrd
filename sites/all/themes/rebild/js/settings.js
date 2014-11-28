@@ -9,9 +9,16 @@ $(function() {
 	// Custom select boxes init
 	$("select").customSelect();
 	
+	$("#edit-aar-value-year").change(function() {
+		$("#edit-submit-agenda-overview").click();
+	});
+	
 	Drupal.behaviors.rebild = {
     attach: function(context, settings) {
-	    	$("select").not(".customised-select").customSelect();
+			$("select").not(".customised-select").customSelect();
+			$("#edit-aar-value-year").change(function() {
+				$("#edit-submit-agenda-overview").click();
+			});
 		}
 	}
 	
@@ -126,7 +133,7 @@ $(function() {
 		}
 	}	
 
-	// Expand/Collapse all
+	// Accordion - Expand/Collapse all
 	$('.toggle-expand-all').click(function(e) {
 		e.preventDefault();
 		
@@ -138,28 +145,26 @@ $(function() {
 		if($(this).hasClass('open')) {
 			$(this).html('<span class="icon-double-angle-up"></span> Luk alle punkter');
 			$('.ui-accordion-header').not('.ui-state-active').click();
-/*
+			/*
 			$('.ui-accordion-header').not('.ui-state-active').addClass('ui-state-active').addClass('ui-state-focus').attr("aria-expanded", true);
 			$('.ui-accordion-content').slideDown(0);
-*/
+			*/
 		}
 		// Collapse All
 		else {
 			$(this).html('<span class="icon-double-angle-down"></span> Udvid alle punkter');
 			$('.ui-accordion-header.ui-state-active').click();
 			//$(this).html('<span class="icon-double-angle-down"></span> Udvid alle punkter');
-		/*
-	$('.ui-accordion-header.ui-state-active').removeClass('ui-state-active').removeClass('ui-state-focus').attr("aria-expanded", false);
+			/*
+			$('.ui-accordion-header.ui-state-active').removeClass('ui-state-active').removeClass('ui-state-focus').attr("aria-expanded", false);
 			$('.ui-accordion-content').slideUp(0);	
-*/
+			*/
 		}
 		$(".view-agenda-accordion .views-row").accordion("option", {animated: true });
 		window.scrollTo(0,0);
 	});
 
 });
-
-
 
 //to the top links
 $(document).ready(function() {			
@@ -179,5 +184,3 @@ $(document).ready(function() {
     height: 500
 	});
 });
-	
-
