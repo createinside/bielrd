@@ -330,7 +330,13 @@ function rebild_date_nav_title($params) {
       break;
     case 'week':
       $format = !empty($format) ? $format : (empty($date_info->mini) ? 'W, Y' : 'F j');
-      $title = t('Uge @date', array('@date' => date_format_date($date_info->min_date, 'custom', $format)));
+			if($date_info->week == 1 || $date_info->week == 53) {
+				$max_date = $date_info->max_date->sub( new DateInterval('PT1S') );
+	      $title = t('Uge @date', array('@date' => date_format_date($max_date, 'custom', $format)));
+			}
+			else {
+	      $title = t('Uge @date', array('@date' => date_format_date($date_info->min_date, 'custom', $format)));
+      }
       $date_arg = $date_info->year . '-W' . date_pad($date_info->week);
       break;
   }
