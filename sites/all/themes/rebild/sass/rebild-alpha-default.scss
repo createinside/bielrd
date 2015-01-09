@@ -230,11 +230,13 @@ Nodes
 /* Main Menu - Level 3 */
 #region-content {
 	.block-menu-block {
+		.content {
 		ul {
 			li {
 				width: 30%;
 				padding-right: 3%;
 			}
+		}
 		}
 	}
 }
