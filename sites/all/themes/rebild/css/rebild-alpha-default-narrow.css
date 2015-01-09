@@ -159,7 +159,7 @@ Landingpage
   font-size: 2.25em;
 }
 
-/* line 92, ../sass/rebild-alpha-default-narrow.scss */
+/* line 91, ../sass/rebild-alpha-default-narrow.scss */
 .ultimenu-flyout {
   width: 700px;
   left: -180px;
@@ -168,20 +168,20 @@ Landingpage
 /*------------------------------------------------------------------
 	Frontpage
 -------------------------------------------------------------------*/
-/* line 103, ../sass/rebild-alpha-default-narrow.scss */
+/* line 102, ../sass/rebild-alpha-default-narrow.scss */
 .front #region-content .view .views-row {
   height: 345px;
   margin-bottom: 20px;
 }
-/* line 110, ../sass/rebild-alpha-default-narrow.scss */
+/* line 109, ../sass/rebild-alpha-default-narrow.scss */
 .front #region-sidebar-first .block {
   margin-bottom: 20px;
 }
-/* line 113, ../sass/rebild-alpha-default-narrow.scss */
+/* line 112, ../sass/rebild-alpha-default-narrow.scss */
 .front #region-sidebar-first .block-news-articles-block {
   height: 430px;
 }
-/* line 119, ../sass/rebild-alpha-default-narrow.scss */
+/* line 118, ../sass/rebild-alpha-default-narrow.scss */
 .front #region-sidebar-first .block-block {
   height: 210px;
 }
@@ -190,7 +190,7 @@ Landingpage
   Landingpage
 -------------------------------------------------------------------*/
 /* Aktuelt */
-/* line 132, ../sass/rebild-alpha-default-narrow.scss */
+/* line 131, ../sass/rebild-alpha-default-narrow.scss */
 .not-front .view-id-rebild_frontpage .views-row {
   height: 361px;
   width: 227px;
@@ -200,56 +200,56 @@ Landingpage
   Blocks
 -------------------------------------------------------------------*/
 /* Custom blocks - Frivillig */
-/* line 145, ../sass/rebild-alpha-default-narrow.scss */
+/* line 144, ../sass/rebild-alpha-default-narrow.scss */
 .html #page .custom_block.social {
   background-image: url("../img/social_ansvar.png");
   background-position-x: center;
   padding-top: 178px;
 }
-/* line 150, ../sass/rebild-alpha-default-narrow.scss */
+/* line 149, ../sass/rebild-alpha-default-narrow.scss */
 .html #page .custom_block.frivillig {
   background-image: url("../img/frivillig.png");
   padding-top: 215px;
 }
-/* line 154, ../sass/rebild-alpha-default-narrow.scss */
+/* line 153, ../sass/rebild-alpha-default-narrow.scss */
 .html #page .custom_block.folkeskole {
   background-image: url("../img/fremtidens_folkeskole.png");
   padding-top: 215px;
 }
-/* line 158, ../sass/rebild-alpha-default-narrow.scss */
+/* line 157, ../sass/rebild-alpha-default-narrow.scss */
 .html #page .custom_block.dagtilbud {
   background-image: url("../img/fremtidens_dagtilbud.png");
   padding-top: 215px;
 }
-/* line 162, ../sass/rebild-alpha-default-narrow.scss */
+/* line 161, ../sass/rebild-alpha-default-narrow.scss */
 .html #page .custom_block.skolereform {
   background-image: url("../img/skolereform.png");
   padding-top: 215px;
 }
-/* line 166, ../sass/rebild-alpha-default-narrow.scss */
+/* line 165, ../sass/rebild-alpha-default-narrow.scss */
 .html #page .custom_block.handicapservice {
   background-image: url("../img/handicapservice.png");
   padding-top: 215px;
 }
 
 /* Calendar - sidebar */
-/* line 177, ../sass/rebild-alpha-default-narrow.scss */
+/* line 176, ../sass/rebild-alpha-default-narrow.scss */
 .view-id-calendar_sidebar .view-content .rebild-calendar .calendar_right {
   max-width: 80px;
 }
 
 /* Calendar - frontpage */
-/* line 186, ../sass/rebild-alpha-default-narrow.scss */
+/* line 185, ../sass/rebild-alpha-default-narrow.scss */
 .view-id-calendar_frontpage .rebild-calendar {
   width: 50%;
 }
-/* line 189, ../sass/rebild-alpha-default-narrow.scss */
+/* line 188, ../sass/rebild-alpha-default-narrow.scss */
 .view-id-calendar_frontpage .post3, .view-id-calendar_frontpage .post4, .view-id-calendar_frontpage .post5, .view-id-calendar_frontpage .post6 {
   margin: 20px 0 0 0;
 }
 
 /* WCAG */
-/* line 195, ../sass/rebild-alpha-default-narrow.scss */
+/* line 194, ../sass/rebild-alpha-default-narrow.scss */
 .wcag-block {
   font-size: 11px;
   margin: 0 8px 0 0;
@@ -257,7 +257,7 @@ Landingpage
 }
 
 /* Search Autocomplete */
-/* line 203, ../sass/rebild-alpha-default-narrow.scss */
+/* line 202, ../sass/rebild-alpha-default-narrow.scss */
 .not-front .ac_results {
   margin-top: 11px;
   display: inherit;
@@ -268,11 +268,11 @@ Landingpage
 }
 
 /* Share buttons */
-/* line 216, ../sass/rebild-alpha-default-narrow.scss */
+/* line 215, ../sass/rebild-alpha-default-narrow.scss */
 #region-content .node-share .share_wrapper .twitter-share {
   width: 77px;
 }
-/* line 219, ../sass/rebild-alpha-default-narrow.scss */
+/* line 218, ../sass/rebild-alpha-default-narrow.scss */
 #region-content .node-share .share_wrapper .share_this {
   float: left;
   margin-right: 20px;
@@ -280,25 +280,25 @@ Landingpage
 }
 
 /* 5 shortcuts - frontpage */
-/* line 233, ../sass/rebild-alpha-default-narrow.scss */
+/* line 232, ../sass/rebild-alpha-default-narrow.scss */
 #region-postscript-first .block-block .content ul li {
   margin-bottom: 1.25em;
 }
 
 /* Sidebar kontaktlink */
-/* line 242, ../sass/rebild-alpha-default-narrow.scss */
+/* line 241, ../sass/rebild-alpha-default-narrow.scss */
 #region-content-sidebar #kontaktlink {
   width: auto;
 }
 
 /* Announcement (Din kommune informerer) */
-/* line 250, ../sass/rebild-alpha-default-narrow.scss */
+/* line 249, ../sass/rebild-alpha-default-narrow.scss */
 .block-din-kommune-informerer .announcement-front .week-number {
   height: 80px;
   width: 30%;
   padding-top: 10px;
 }
-/* line 255, ../sass/rebild-alpha-default-narrow.scss */
+/* line 254, ../sass/rebild-alpha-default-narrow.scss */
 .block-din-kommune-informerer .announcement-front .body {
   height: 80px;
   width: 70%;
