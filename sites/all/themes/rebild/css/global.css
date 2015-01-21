@@ -104,181 +104,206 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
 /* line 48, ../sass/partials/_fonts.scss */
+.icon-pencil:before {
+  content: "\e905";
+}
+
+/* line 52, ../sass/partials/_fonts.scss */
+.icon-folder:before {
+  content: "\e92f";
+}
+
+/* line 56, ../sass/partials/_fonts.scss */
+.icon-folder-open:before {
+  content: "\e930";
+}
+
+/* line 60, ../sass/partials/_fonts.scss */
+.icon-folder-plus:before {
+  content: "\e931";
+}
+
+/* line 64, ../sass/partials/_fonts.scss */
+.icon-bin:before {
+  content: "\e9ac";
+}
+
+/* line 68, ../sass/partials/_fonts.scss */
 .icon-mega-phone:before {
   content: "\e601";
 }
 
-/* line 51, ../sass/partials/_fonts.scss */
+/* line 72, ../sass/partials/_fonts.scss */
 .icon-mobil_logo:before {
   content: "\e007";
 }
 
-/* line 54, ../sass/partials/_fonts.scss */
+/* line 76, ../sass/partials/_fonts.scss */
 .icon-printer:before {
   content: "\e011";
 }
 
-/* line 57, ../sass/partials/_fonts.scss */
+/* line 80, ../sass/partials/_fonts.scss */
 .icon-volume:before {
   content: "\e012";
 }
 
-/* line 60, ../sass/partials/_fonts.scss */
+/* line 84, ../sass/partials/_fonts.scss */
 .icon-money:before {
   content: "\f0d6";
 }
 
-/* line 63, ../sass/partials/_fonts.scss */
+/* line 88, ../sass/partials/_fonts.scss */
 .icon-search:before {
   content: "\e013";
 }
 
-/* line 66, ../sass/partials/_fonts.scss */
+/* line 92, ../sass/partials/_fonts.scss */
 .icon-plus2:before {
   content: "\e00f";
 }
 
-/* line 69, ../sass/partials/_fonts.scss */
+/* line 96, ../sass/partials/_fonts.scss */
 .icon-minus2:before {
   content: "\e010";
 }
 
-/* line 72, ../sass/partials/_fonts.scss */
+/* line 100, ../sass/partials/_fonts.scss */
 .icon-arrow-down2:before {
   content: "\e003";
 }
 
-/* line 75, ../sass/partials/_fonts.scss */
+/* line 104, ../sass/partials/_fonts.scss */
 .icon-bottom_logo:before {
   content: "\e009";
 }
 
-/* line 78, ../sass/partials/_fonts.scss */
+/* line 108, ../sass/partials/_fonts.scss */
 .icon-phone:before {
   content: "\f095";
 }
 
-/* line 81, ../sass/partials/_fonts.scss */
+/* line 112, ../sass/partials/_fonts.scss */
 .icon-envelope:before {
   content: "\f003";
 }
 
-/* line 84, ../sass/partials/_fonts.scss */
+/* line 116, ../sass/partials/_fonts.scss */
 .icon-home:before {
   content: "\e005";
 }
 
-/* line 87, ../sass/partials/_fonts.scss */
+/* line 120, ../sass/partials/_fonts.scss */
 .icon-double-angle-right:before {
   content: "\f101";
 }
 
-/* line 90, ../sass/partials/_fonts.scss */
+/* line 124, ../sass/partials/_fonts.scss */
 .icon-double-angle-left:before {
   content: "\f100";
 }
 
-/* line 93, ../sass/partials/_fonts.scss */
+/* line 128, ../sass/partials/_fonts.scss */
 .icon-double-angle-down:before {
   content: "\f103";
 }
 
-/* line 96, ../sass/partials/_fonts.scss */
+/* line 132, ../sass/partials/_fonts.scss */
 .icon-double-angle-up:before {
   content: "\f102";
 }
 
-/* line 99, ../sass/partials/_fonts.scss */
+/* line 136, ../sass/partials/_fonts.scss */
 .icon-images:before {
   content: "\e00e";
 }
 
-/* line 102, ../sass/partials/_fonts.scss */
+/* line 140, ../sass/partials/_fonts.scss */
 .icon-menu:before {
   content: "\e000";
 }
 
-/* line 105, ../sass/partials/_fonts.scss */
+/* line 144, ../sass/partials/_fonts.scss */
 .icon-pil2:before {
   content: "\e014";
 }
 
-/* line 108, ../sass/partials/_fonts.scss */
+/* line 148, ../sass/partials/_fonts.scss */
 .icon-angle-right:before {
   content: "\e006";
 }
 
-/* line 111, ../sass/partials/_fonts.scss */
+/* line 152, ../sass/partials/_fonts.scss */
 .icon-arrow-left2:before {
   content: "\e004";
 }
 
-/* line 114, ../sass/partials/_fonts.scss */
+/* line 156, ../sass/partials/_fonts.scss */
 .icon-arrow-up2:before {
   content: "\e002";
 }
 
-/* line 117, ../sass/partials/_fonts.scss */
+/* line 160, ../sass/partials/_fonts.scss */
 .icon-arrow-right2:before {
   content: "\e001";
 }
 
-/* line 120, ../sass/partials/_fonts.scss */
+/* line 164, ../sass/partials/_fonts.scss */
 .icon-arrow-up:before {
   content: "\f062";
 }
 
-/* line 123, ../sass/partials/_fonts.scss */
+/* line 168, ../sass/partials/_fonts.scss */
 .icon-arrow-down:before {
   content: "\f063";
 }
 
-/* line 126, ../sass/partials/_fonts.scss */
+/* line 172, ../sass/partials/_fonts.scss */
 .icon-arrow-right:before {
   content: "\f061";
 }
 
-/* line 129, ../sass/partials/_fonts.scss */
+/* line 176, ../sass/partials/_fonts.scss */
 .icon-arrow-left:before {
   content: "\f060";
 }
 
-/* line 132, ../sass/partials/_fonts.scss */
+/* line 180, ../sass/partials/_fonts.scss */
 .icon-close:before {
   content: "\e008";
 }
 
-/* line 135, ../sass/partials/_fonts.scss */
+/* line 184, ../sass/partials/_fonts.scss */
 .icon-plus:before {
   content: "\e00a";
 }
 
-/* line 138, ../sass/partials/_fonts.scss */
+/* line 188, ../sass/partials/_fonts.scss */
 .icon-minus:before {
   content: "\e00c";
 }
 
-/* line 141, ../sass/partials/_fonts.scss */
+/* line 192, ../sass/partials/_fonts.scss */
 .icon-compass:before {
   content: "\e00d";
 }
 
-/* line 144, ../sass/partials/_fonts.scss */
+/* line 196, ../sass/partials/_fonts.scss */
 .icon-reorder:before {
   content: "\f0c9";
 }
 
-/* line 147, ../sass/partials/_fonts.scss */
+/* line 200, ../sass/partials/_fonts.scss */
 .icon-rss:before {
   content: "\f09f";
 }
 
-/* line 150, ../sass/partials/_fonts.scss */
+/* line 204, ../sass/partials/_fonts.scss */
 .icon-facebook:before {
   content: "\f09a";
 }
 
-/* line 153, ../sass/partials/_fonts.scss */
+/* line 208, ../sass/partials/_fonts.scss */
 .icon-og_bliv_her2:before {
   content: "\e600";
 }

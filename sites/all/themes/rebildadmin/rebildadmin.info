@@ -6,6 +6,7 @@ core = 7.x
 base theme = seven
 
 stylesheets[all][] = css/custom.css
+stylesheets[all][] = css/media_browser.css
 
 scripts[] = '/js/jquery.maxlength-min.js'
 scripts[] = '/js/backend_settings.js'
