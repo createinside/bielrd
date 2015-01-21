@@ -47,9 +47,7 @@ Drupal.linkit.editorDialog.tinymce = {
    *   The link object.
    */
   insertLink : function(data) {
-  
-  	console.log(data);
-  
+    
     var linkitCache = Drupal.linkit.getLinkitCache(),
         editor = linkitCache.editor,
         element = editor.dom.getParent(editor.selection.getNode(), 'A');
@@ -71,7 +69,7 @@ Drupal.linkit.editorDialog.tinymce = {
 	    data.attributes.href = data.path;
 		}
 		/* /OBS */
-		
+			
     // No link element selected, create a new anchor element.
     if (element == null) {
       // If there is no selection, lets inser a new element.

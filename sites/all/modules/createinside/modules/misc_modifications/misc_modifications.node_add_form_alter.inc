@@ -36,7 +36,7 @@ function misc_modifications_form_alter(&$form, &$form_state, $form_id) {
 	}
 	/* Ved fil edit fjerner vi replace upload og redirect feltet. Fordi felterne virker overflødige */
 	if ($form_id == 'file_entity_edit') {
-		unset($form['replace_upload']);
+		// unset($form['replace_upload']);
 		unset($form['redirect']);
 	}
 	/* Ændringer ved bean oprettelse/edit */
