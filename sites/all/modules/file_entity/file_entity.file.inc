@@ -59,17 +59,15 @@ function file_entity_file_insert($file) {
 
   // Save file metadata.
   if (!empty($file->metadata)) {
+    $query = db_insert('file_metadata')->fields(array('fid', 'name', 'value'));
     foreach ($file->metadata as $name => $value) {
-      db_merge('file_metadata')
-        ->fields(array(
-          'value' => serialize($value),
-        ))
-        ->key(array(
-          'fid' => $file->fid,
-          'name' => $name,
-        ))
-        ->execute();
+      $query->values(array(
+        'fid' => $file->fid,
+        'name' => $name,
+        'value' => serialize($value),
+      ));
     }
+    $query->execute();
   }
 
   // Clear any related field caches.
@@ -77,56 +75,42 @@ function file_entity_file_insert($file) {
 }
 
 /**
- * Implement hook_file_update().
+ * Implements hook_file_update().
  */
 function file_entity_file_update($file) {
   // Ensure field data is saved since file_save() does not in Drupal 7.
   field_attach_update('file', $file);
 
   // Save file metadata.
+  db_delete('file_metadata')->condition('fid', $file->fid)->execute();
   if (!empty($file->metadata)) {
+    $query = db_insert('file_metadata')->fields(array('fid', 'name', 'value'));
     foreach ($file->metadata as $name => $value) {
-      db_merge('file_metadata')
-        ->fields(array(
-          'value' => serialize($value),
-        ))
-        ->key(array(
-          'fid' => $file->fid,
-          'name' => $name,
-        ))
-        ->execute();
+      $query->values(array(
+        'fid' => $file->fid,
+        'name' => $name,
+        'value' => serialize($value),
+      ));
     }
+    $query->execute();
   }
 
-  // Save file metadata.
-  db_delete('file_metadata')->condition('fid', $file->fid);
-  if (!empty($file->metadata)) {
-    foreach ($file->metadata as $name => $value) {
-      db_merge('file_metadata')
-        ->fields(array(
-          'value' => serialize($value),
-        ))
-        ->key(array(
-          'fid' => $file->fid,
-          'name' => $name,
-        ))
-        ->execute();
-    }
-  }
-
-  if (file_entity_file_get_mimetype_type($file) == 'image' && module_exists('image')) {
-    // If the image dimensions have changed, update any image field references
-    // to this file and flush image style derivatives.
-    if ($file->metadata['width'] != $file->metadata['width'] || $file->metadata['height'] != $file->metadata['height']) {
+  if (module_exists('image') && file_entity_file_get_mimetype_type($file) == 'image' && $file->filesize) {
+    // If the file has changed dimensions or a new file has been uploaded,
+    // update any image field reference to this file and flush image style
+    // derivatives.
+    $file->metadata += array('width' => NULL, 'height' => NULL);
+    $file->original->metadata += array('width' => NULL, 'height' => NULL);
+    if ($file->filesize != $file->original->filesize || $file->metadata['width'] != $file->original->metadata['width'] || $file->metadata['height'] != $file->original->metadata['height']) {
       _file_entity_update_image_field_dimensions($file);
     }
 
     // Flush image style derivatives whenever an image is updated.
     image_path_flush($file->uri);
+  }
 
   // Clear any related field caches.
   file_entity_invalidate_field_caches($file);
-  }
 }
 
 /**
@@ -143,9 +127,9 @@ function file_entity_file_delete($file) {
   db_delete('file_metadata')->condition('fid', $file->fid)->execute();
 
   // Remove this file from the search index if needed.
-  // This code is implemented in file entity module rather than in search module,
-  // because file entity module is implementing search module's API, not the other
-  // way around.
+  // This code is implemented in file entity module rather than in search
+  // module because file entity is implementing search module's API, not the
+  // other way around.
   if (module_exists('search')) {
     search_reindex($file->fid, 'file');
   }
@@ -155,21 +139,13 @@ function file_entity_file_delete($file) {
  * Implements hook_file_mimetype_mapping_alter().
  */
 function file_entity_file_mimetype_mapping_alter(&$mapping) {
-  // Fix the mime type mapping for ogg.
-  // @todo Remove when http://drupal.org/node/1239376 is fixed in core (7.8).
-  $new_mappings['ogg'] = 'audio/ogg';
-
-  // Add support for m4v.
-  // @todo Remove when http://drupal.org/node/1290486 is fixed in core (7.9).
-  $new_mappings['m4v'] = 'video/x-m4v';
-
   // Add support for mka and mkv.
-  // @todo Remove when http://drupal.org/node/1293140 is fixed in core.
+  // @todo Remove when http://drupal.org/node/1443070 is fixed in core.
   $new_mappings['mka'] = 'audio/x-matroska';
   $new_mappings['mkv'] = 'video/x-matroska';
 
   // Add support for weba, webm, and webp.
-  // @todo Remove when http://drupal.org/node/1347624 is fixed in core.
+  // @todo Remove when http://drupal.org/node/1443070 is fixed in core.
   $new_mappings['weba'] = 'audio/webm';
   $new_mappings['webm'] = 'video/webm';
   $new_mappings['webp'] = 'image/webp';
@@ -254,18 +230,19 @@ function file_entity_metadata_fetch_image_dimensions($file) {
  * @see http://drupal.org/node/1448124
  */
 function _file_entity_update_image_field_dimensions($file) {
+  // Prevent PHP notices when trying to read empty files.
+  // @see http://drupal.org/node/681042
+  if (!$file->filesize) {
+    return;
+  }
+
   // Do not bother proceeding if this file does not have an image mime type.
   if (file_entity_file_get_mimetype_type($file) != 'image') {
     return;
   }
 
   // Find all image field enabled on the site.
-  $image_fields = array();
-  foreach (field_info_fields() as $field) {
-    if ($field['type'] == 'image') {
-      $image_fields[] = $field['field_name'];
-    }
-  }
+  $image_fields = _file_entity_get_fields_by_type('image');
 
   foreach ($image_fields as $image_field) {
     $query = new EntityFieldQuery();

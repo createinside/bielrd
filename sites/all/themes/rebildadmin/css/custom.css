@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* This styling will affect the backend administrative theme */
 /* Partials from main theme */
 /*------------------------------------------------------------------
@@ -12,7 +13,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 /* line 33, ../../rebild/sass/partials/_fonts.scss */
 [class^="icon-"], [class*=" icon-"] {
@@ -38,181 +38,206 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
 /* line 48, ../../rebild/sass/partials/_fonts.scss */
+.icon-pencil:before {
+  content: "\e905";
+}
+
+/* line 52, ../../rebild/sass/partials/_fonts.scss */
+.icon-folder:before {
+  content: "\e92f";
+}
+
+/* line 56, ../../rebild/sass/partials/_fonts.scss */
+.icon-folder-open:before {
+  content: "\e930";
+}
+
+/* line 60, ../../rebild/sass/partials/_fonts.scss */
+.icon-folder-plus:before {
+  content: "\e931";
+}
+
+/* line 64, ../../rebild/sass/partials/_fonts.scss */
+.icon-bin:before {
+  content: "\e9ac";
+}
+
+/* line 68, ../../rebild/sass/partials/_fonts.scss */
 .icon-mega-phone:before {
   content: "\e601";
 }
 
-/* line 51, ../../rebild/sass/partials/_fonts.scss */
+/* line 72, ../../rebild/sass/partials/_fonts.scss */
 .icon-mobil_logo:before {
   content: "\e007";
 }
 
-/* line 54, ../../rebild/sass/partials/_fonts.scss */
+/* line 76, ../../rebild/sass/partials/_fonts.scss */
 .icon-printer:before {
   content: "\e011";
 }
 
-/* line 57, ../../rebild/sass/partials/_fonts.scss */
+/* line 80, ../../rebild/sass/partials/_fonts.scss */
 .icon-volume:before {
   content: "\e012";
 }
 
-/* line 60, ../../rebild/sass/partials/_fonts.scss */
+/* line 84, ../../rebild/sass/partials/_fonts.scss */
 .icon-money:before {
   content: "\f0d6";
 }
 
-/* line 63, ../../rebild/sass/partials/_fonts.scss */
+/* line 88, ../../rebild/sass/partials/_fonts.scss */
 .icon-search:before {
   content: "\e013";
 }
 
-/* line 66, ../../rebild/sass/partials/_fonts.scss */
+/* line 92, ../../rebild/sass/partials/_fonts.scss */
 .icon-plus2:before {
   content: "\e00f";
 }
 
-/* line 69, ../../rebild/sass/partials/_fonts.scss */
+/* line 96, ../../rebild/sass/partials/_fonts.scss */
 .icon-minus2:before {
   content: "\e010";
 }
 
-/* line 72, ../../rebild/sass/partials/_fonts.scss */
+/* line 100, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-down2:before {
   content: "\e003";
 }
 
-/* line 75, ../../rebild/sass/partials/_fonts.scss */
+/* line 104, ../../rebild/sass/partials/_fonts.scss */
 .icon-bottom_logo:before {
   content: "\e009";
 }
 
-/* line 78, ../../rebild/sass/partials/_fonts.scss */
+/* line 108, ../../rebild/sass/partials/_fonts.scss */
 .icon-phone:before {
   content: "\f095";
 }
 
-/* line 81, ../../rebild/sass/partials/_fonts.scss */
+/* line 112, ../../rebild/sass/partials/_fonts.scss */
 .icon-envelope:before {
   content: "\f003";
 }
 
-/* line 84, ../../rebild/sass/partials/_fonts.scss */
+/* line 116, ../../rebild/sass/partials/_fonts.scss */
 .icon-home:before {
   content: "\e005";
 }
 
-/* line 87, ../../rebild/sass/partials/_fonts.scss */
+/* line 120, ../../rebild/sass/partials/_fonts.scss */
 .icon-double-angle-right:before {
   content: "\f101";
 }
 
-/* line 90, ../../rebild/sass/partials/_fonts.scss */
+/* line 124, ../../rebild/sass/partials/_fonts.scss */
 .icon-double-angle-left:before {
   content: "\f100";
 }
 
-/* line 93, ../../rebild/sass/partials/_fonts.scss */
+/* line 128, ../../rebild/sass/partials/_fonts.scss */
 .icon-double-angle-down:before {
   content: "\f103";
 }
 
-/* line 96, ../../rebild/sass/partials/_fonts.scss */
+/* line 132, ../../rebild/sass/partials/_fonts.scss */
 .icon-double-angle-up:before {
   content: "\f102";
 }
 
-/* line 99, ../../rebild/sass/partials/_fonts.scss */
+/* line 136, ../../rebild/sass/partials/_fonts.scss */
 .icon-images:before {
   content: "\e00e";
 }
 
-/* line 102, ../../rebild/sass/partials/_fonts.scss */
+/* line 140, ../../rebild/sass/partials/_fonts.scss */
 .icon-menu:before {
   content: "\e000";
 }
 
-/* line 105, ../../rebild/sass/partials/_fonts.scss */
+/* line 144, ../../rebild/sass/partials/_fonts.scss */
 .icon-pil2:before {
   content: "\e014";
 }
 
-/* line 108, ../../rebild/sass/partials/_fonts.scss */
+/* line 148, ../../rebild/sass/partials/_fonts.scss */
 .icon-angle-right:before {
   content: "\e006";
 }
 
-/* line 111, ../../rebild/sass/partials/_fonts.scss */
+/* line 152, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-left2:before {
   content: "\e004";
 }
 
-/* line 114, ../../rebild/sass/partials/_fonts.scss */
+/* line 156, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-up2:before {
   content: "\e002";
 }
 
-/* line 117, ../../rebild/sass/partials/_fonts.scss */
+/* line 160, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-right2:before {
   content: "\e001";
 }
 
-/* line 120, ../../rebild/sass/partials/_fonts.scss */
+/* line 164, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-up:before {
   content: "\f062";
 }
 
-/* line 123, ../../rebild/sass/partials/_fonts.scss */
+/* line 168, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-down:before {
   content: "\f063";
 }
 
-/* line 126, ../../rebild/sass/partials/_fonts.scss */
+/* line 172, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-right:before {
   content: "\f061";
 }
 
-/* line 129, ../../rebild/sass/partials/_fonts.scss */
+/* line 176, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-left:before {
   content: "\f060";
 }
 
-/* line 132, ../../rebild/sass/partials/_fonts.scss */
+/* line 180, ../../rebild/sass/partials/_fonts.scss */
 .icon-close:before {
   content: "\e008";
 }
 
-/* line 135, ../../rebild/sass/partials/_fonts.scss */
+/* line 184, ../../rebild/sass/partials/_fonts.scss */
 .icon-plus:before {
   content: "\e00a";
 }
 
-/* line 138, ../../rebild/sass/partials/_fonts.scss */
+/* line 188, ../../rebild/sass/partials/_fonts.scss */
 .icon-minus:before {
   content: "\e00c";
 }
 
-/* line 141, ../../rebild/sass/partials/_fonts.scss */
+/* line 192, ../../rebild/sass/partials/_fonts.scss */
 .icon-compass:before {
   content: "\e00d";
 }
 
-/* line 144, ../../rebild/sass/partials/_fonts.scss */
+/* line 196, ../../rebild/sass/partials/_fonts.scss */
 .icon-reorder:before {
   content: "\f0c9";
 }
 
-/* line 147, ../../rebild/sass/partials/_fonts.scss */
+/* line 200, ../../rebild/sass/partials/_fonts.scss */
 .icon-rss:before {
   content: "\f09f";
 }
 
-/* line 150, ../../rebild/sass/partials/_fonts.scss */
+/* line 204, ../../rebild/sass/partials/_fonts.scss */
 .icon-facebook:before {
   content: "\f09a";
 }
 
-/* line 153, ../../rebild/sass/partials/_fonts.scss */
+/* line 208, ../../rebild/sass/partials/_fonts.scss */
 .icon-og_bliv_her2:before {
   content: "\e600";
 }
@@ -267,6 +292,9 @@ Backend
 	Blocks
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
+	Input
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
 	Backend
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
@@ -298,10 +326,11 @@ User profile
 
 /* line 36, ../sass/custom.scss */
 .page-admin, .page-node-add, .page-node-edit, .page-node {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U4ZThlOCIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjZThlOGU4Ii8+PHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiNkNGQ0ZDQiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlOGU4ZTgiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 1200, color-stop(0%, #e8e8e8), color-stop(50%, #e8e8e8), color-stop(75%, #d4d4d4), color-stop(100%, #e8e8e8));
-  background-image: -webkit-linear-gradient(#e8e8e8, #e8e8e8 600px, #d4d4d4 900px, #e8e8e8 1200px);
   background-image: -moz-linear-gradient(#e8e8e8, #e8e8e8 600px, #d4d4d4 900px, #e8e8e8 1200px);
-  background-image: -o-linear-gradient(#e8e8e8, #e8e8e8 600px, #d4d4d4 900px, #e8e8e8 1200px);
+  background-image: -webkit-linear-gradient(#e8e8e8, #e8e8e8 600px, #d4d4d4 900px, #e8e8e8 1200px);
   background-image: linear-gradient(#e8e8e8, #e8e8e8 600px, #d4d4d4 900px, #e8e8e8 1200px);
   background-color: #e8e8e8;
   font-family: Verdana, Arial, sans-serif;
@@ -351,13 +380,11 @@ User profile
 /* line 81, ../sass/custom.scss */
 .page-admin input[type="file"], .page-node-add input[type="file"], .page-node-edit input[type="file"], .page-node input[type="file"] {
   background-color: white;
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   -moz-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   border: 0;
   margin-right: 20px;
@@ -368,8 +395,8 @@ User profile
   margin-left: 0;
   margin-right: 0;
   background-color: white;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) -1px -1px 0px;
   -moz-box-shadow: rgba(0, 0, 0, 0.1) -1px -1px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) -1px -1px 0px;
   box-shadow: rgba(0, 0, 0, 0.1) -1px -1px 0px;
 }
 /* line 92, ../sass/custom.scss */
@@ -384,13 +411,11 @@ User profile
 /* line 101, ../sass/custom.scss */
 .page-admin #page table, .page-node-add #page table, .page-node-edit #page table, .page-node #page table {
   background-color: white;
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   -moz-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   border: hidden;
   border-collapse: separate;
@@ -502,13 +527,11 @@ User profile
   min-height: 30px;
   border: none;
   background-color: white;
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   -moz-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   font-size: 13px;
 }
@@ -526,13 +549,11 @@ User profile
 /* line 210, ../sass/custom.scss */
 .page-node-add #page .form-text, .page-node-edit #page .form-text, .page-node #page .form-text, .page-user #page .form-text, .page-file #page .form-text, .page-block #page .form-text {
   background-color: white;
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   -moz-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   height: 30px;
   padding: 0 0 0 1%;
@@ -542,13 +563,11 @@ User profile
 /* line 217, ../sass/custom.scss */
 .page-node-add #page .date-clear, .page-node-edit #page .date-clear, .page-node #page .date-clear, .page-user #page .date-clear, .page-file #page .date-clear, .page-block #page .date-clear {
   background-color: white;
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   -moz-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   font-size: 13px;
   border: 0;
@@ -769,13 +788,11 @@ User profile
 /* line 410, ../sass/custom.scss */
 .page-node-add #page .vertical-tabs .form-text, .page-node-edit #page .vertical-tabs .form-text, .page-node #page .vertical-tabs .form-text, .page-user #page .vertical-tabs .form-text, .page-file #page .vertical-tabs .form-text, .page-block #page .vertical-tabs .form-text {
   background-color: white;
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   -moz-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   height: 30px;
   border: none;
@@ -827,13 +844,11 @@ User profile
 /* line 460, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content {
   background-color: white;
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   -moz-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
 }
 /* line 462, ../sass/custom.scss */
@@ -880,13 +895,11 @@ User profile
 .page-admin-workbench #page #min_profil_side .min_profil_middle #block-block-16 {
   float: right;
   background-color: white;
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   -moz-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   width: 28%;
   margin-top: 68px;
@@ -1019,13 +1032,11 @@ User profile
 /* line 640, ../sass/custom.scss */
 .page-media input[type="file"] {
   background-color: white;
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   -moz-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   border: 0;
   margin-right: 20px;
@@ -1054,9 +1065,9 @@ User profile
   -ms-border-radius: none;
   -o-border-radius: none;
   border-radius: none;
-  -webkit-box-shadow: rgba(0, 0, 0, 0) 0 0 0;
-  -moz-box-shadow: rgba(0, 0, 0, 0) 0 0 0;
-  box-shadow: rgba(0, 0, 0, 0) 0 0 0;
+  -webkit-box-shadow: transparent 0 0 0;
+  -moz-box-shadow: transparent 0 0 0;
+  box-shadow: transparent 0 0 0;
 }
 /* line 678, ../sass/custom.scss */
 #file-entity-edit input[type="text"], #file-entity-edit--2 input[type="text"] {
@@ -1065,13 +1076,11 @@ User profile
   min-height: 30px;
   border: none;
   background-color: white;
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   -moz-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
   font-size: 13px;
 }
