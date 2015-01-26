@@ -77,9 +77,9 @@ $(function() {
 });
 
 function mediaLinkit(file) {
-	
+		
 	link = {
-		path: Drupal.settings.basePath + Drupal.settings.linkit.publicFilesDirectory + '/' +file[0].filename,
+		path: file[0].url,
 		attributes: {}
 	};
 	link.attributes['class'] = 'file-link-'+file[0].fid;

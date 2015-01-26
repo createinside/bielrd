@@ -9,21 +9,6 @@ require_once dirname(__FILE__) . '/includes/media_browser_ux.file_usage.inc';
 function media_browser_ux_init() {
 	drupal_add_library('media_browser_ux', 'media_browser_ux');
 }
-
-/**
- * Implements hook_linkit_attributes().
- */
-/*
-function media_browser_ux_linkit_attributes($profile) {
-  $attributes['data_file_id'] = array(
-    '#type' => 'textfield',
-    '#title' => t('File Id'),
-    '#default_value' => '',
-    '#weight' => 3,
-  );
-  return $attributes;
-}
-*/
 	
 /**
  * Implements hook_library().
@@ -35,12 +20,6 @@ function media_browser_ux_library() {
     'version' => '1',
     'js' => array(
       $path . '/js/media_browser_ux.js' => array(),
-    ),
-    'css' => array(
-      $path . '/css/media_browser_ux.css' => array(
-        'type' => 'file',
-        'media' => 'screen',
-      ),
     ),
   );
   return $libraries;
@@ -58,7 +37,6 @@ function media_browser_ux_form_alter(&$form, &$form_state) {
 		
 		// Prevent file deletion if file is in use
 	  if ($references = file_usage_list($file)) {
-		  
 		  drupal_set_message(t("This file is used somewhere on the website and cannot be deleted"), "error");
 		  
 			unset($form['actions']['submit']);
@@ -81,7 +59,6 @@ function media_browser_ux_form_alter(&$form, &$form_state) {
 			if(is_integer($fid)) {
 				$file = file_load($fid);
 				if ($references = file_usage_list($file)) {
-					
 					$in_use = TRUE;
 					$form['files'][$fid]['#prefix'] = '<li class="error" style="font-weight: bold;">'; 
 				}
@@ -115,6 +92,18 @@ function media_browser_ux_menu_alter(&$items) {
 
 function media_browser_ux_menu_local_tasks_alter(&$data, $router_item, $root_path) {
 	if($root_path=="admin/content/file") {
-		//unset($data["actions"]);
+		
+		foreach($data['actions']['output'] as $key => $action) {
+			switch($action['#link']['path']) {
+				case "file/add": 
+					$data['actions']['output'][$key]['#weight'] = 0;
+					$data['actions']['output'][$key]['#link']['title'] = "+ Upload filer";
+					$data['actions']['output'][$key]['#link']['localized_options']['attributes']['class'] = "upload-button";
+				break;
+				case "admin/content/file/import":
+					$data['actions']['output'][$key]['#weight'] = 1;
+				break;
+			}
+		}
 	}
 }

@@ -45,6 +45,26 @@
 }
 
 /**
+ * Local Actions
+ */
+ul.action-links {
+	padding: 0;
+	.upload-button {
+		color: white;
+		background: $color-green;
+		padding-left: 0;
+		display: block;
+		padding: 3px 14px;
+		line-height: 1.85em;
+		border: 1px solid darken($color-green, 5%);
+		&:hover {
+			text-decoration: none;
+			background: darken($color-green, 5%);
+		}
+	}
+}
+
+/**
  * Controls / Actions / Filters
  */
 #views-form-media-browser-plus-customized-media-browser-plus #edit-select {
@@ -283,3 +303,10 @@
 		display: none !important;
 	}
 }
+
+/**
+ * LinkIt
+ */
+ .form-item-linkit-class {
+	 display: none;
+ }
