@@ -339,14 +339,37 @@ Backend
 }
 
 /**
- * Controls / Actions / Filters
+ * Local Actions
  */
 /* line 50, ../sass/media_browser.scss */
+ul.action-links {
+  padding: 0;
+}
+/* line 52, ../sass/media_browser.scss */
+ul.action-links .upload-button {
+  color: white;
+  background: #68a386;
+  padding-left: 0;
+  display: block;
+  padding: 3px 14px;
+  line-height: 1.85em;
+  border: 1px solid #5b9679;
+}
+/* line 60, ../sass/media_browser.scss */
+ul.action-links .upload-button:hover {
+  text-decoration: none;
+  background: #5b9679;
+}
+
+/**
+ * Controls / Actions / Filters
+ */
+/* line 70, ../sass/media_browser.scss */
 #views-form-media-browser-plus-customized-media-browser-plus #edit-select {
   display: none;
 }
 
-/* line 53, ../sass/media_browser.scss */
+/* line 73, ../sass/media_browser.scss */
 #views-form-media-browser-plus-customized-media-browser-plus .vbo-fieldset-select-all {
   width: 100%;
   padding-left: 15px;
@@ -354,7 +377,7 @@ Backend
   box-sizing: border-box;
 }
 
-/* line 61, ../sass/media_browser.scss */
+/* line 81, ../sass/media_browser.scss */
 .view-media-browser-plus-customized .view-footer .form-submit {
   background-color: #7f9dcd;
   color: #fff;
@@ -368,7 +391,7 @@ Backend
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 74, ../sass/media_browser.scss */
+/* line 94, ../sass/media_browser.scss */
 .view-media-browser-plus-customized .view-footer .mbp-action-delete {
   /* background: #8c2e0b; */
 }
@@ -376,7 +399,7 @@ Backend
 /**
  * Table
  */
-/* line 83, ../sass/media_browser.scss */
+/* line 103, ../sass/media_browser.scss */
 .page-admin-content-file table {
   border: 1px solid #ccc !important;
   box-shadow: none !important;
@@ -386,13 +409,13 @@ Backend
 /**
  * Toolbar
  */
-/* line 93, ../sass/media_browser.scss */
+/* line 113, ../sass/media_browser.scss */
 .mbp-toolbar-folders,
 .mbp-toolbar-files {
   border-top: 1px solid #ccc !important;
   border-bottom: 1px solid #ccc !important;
 }
-/* line 97, ../sass/media_browser.scss */
+/* line 117, ../sass/media_browser.scss */
 .mbp-toolbar-folders input.form-submit, .mbp-toolbar-folders a.button,
 .mbp-toolbar-files input.form-submit,
 .mbp-toolbar-files a.button {
@@ -405,7 +428,7 @@ Backend
   -webkit-border-radius: 0;
   border-radius: 0;
 }
-/* line 104, ../sass/media_browser.scss */
+/* line 124, ../sass/media_browser.scss */
 .mbp-toolbar-folders input.form-submit:active, .mbp-toolbar-folders a.button:active,
 .mbp-toolbar-files input.form-submit:active,
 .mbp-toolbar-files a.button:active {
@@ -415,7 +438,7 @@ Backend
   text-shadow: none;
 }
 
-/* line 112, ../sass/media_browser.scss */
+/* line 132, ../sass/media_browser.scss */
 .mbp-toolbar-folders {
   border-right: 1px solid #f0f0f0 !important;
 }
@@ -423,13 +446,13 @@ Backend
 /**
  * Folders
  */
-/* line 119, ../sass/media_browser.scss */
+/* line 139, ../sass/media_browser.scss */
 .mbp-folders {
   border-right: 1px solid #eee !important;
   padding: 0;
 }
 
-/* line 126, ../sass/media_browser.scss */
+/* line 146, ../sass/media_browser.scss */
 #views-form-media-browser-plus-customized-media-browser-plus .mbp-folders li,
 #media-tab-media_browser_plus_customized--media_browser_thumbnails .mbp-folders li {
   margin: 0;
@@ -437,7 +460,7 @@ Backend
   margin-bottom: 0;
   position: relative;
 }
-/* line 131, ../sass/media_browser.scss */
+/* line 151, ../sass/media_browser.scss */
 #views-form-media-browser-plus-customized-media-browser-plus .mbp-folders li .folder-name,
 #media-tab-media_browser_plus_customized--media_browser_thumbnails .mbp-folders li .folder-name {
   height: 20px;
@@ -445,7 +468,7 @@ Backend
   padding: 5px 8px 5px 37px;
   color: #555;
 }
-/* line 136, ../sass/media_browser.scss */
+/* line 156, ../sass/media_browser.scss */
 #views-form-media-browser-plus-customized-media-browser-plus .mbp-folders li .folder-name .icon,
 #media-tab-media_browser_plus_customized--media_browser_thumbnails .mbp-folders li .folder-name .icon {
   background: none !important;
@@ -454,7 +477,7 @@ Backend
   top: 5px;
   left: 10px;
 }
-/* line 143, ../sass/media_browser.scss */
+/* line 163, ../sass/media_browser.scss */
 #views-form-media-browser-plus-customized-media-browser-plus .mbp-folders li .folder-name .icon:before,
 #media-tab-media_browser_plus_customized--media_browser_thumbnails .mbp-folders li .folder-name .icon:before {
   content: "\e92f";
@@ -470,28 +493,28 @@ Backend
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* line 150, ../sass/media_browser.scss */
+/* line 170, ../sass/media_browser.scss */
 #views-form-media-browser-plus-customized-media-browser-plus .mbp-folders li .folder-name.ui-droppable .ajax-progress-throbber,
 #media-tab-media_browser_plus_customized--media_browser_thumbnails .mbp-folders li .folder-name.ui-droppable .ajax-progress-throbber {
   margin-top: 4px;
 }
-/* line 154, ../sass/media_browser.scss */
+/* line 174, ../sass/media_browser.scss */
 #views-form-media-browser-plus-customized-media-browser-plus .mbp-folders li .ajax-progress-throbber,
 #media-tab-media_browser_plus_customized--media_browser_thumbnails .mbp-folders li .ajax-progress-throbber {
   margin-top: 8px;
 }
-/* line 159, ../sass/media_browser.scss */
+/* line 179, ../sass/media_browser.scss */
 #views-form-media-browser-plus-customized-media-browser-plus .mbp-folders li.active > div.folder-name,
 #media-tab-media_browser_plus_customized--media_browser_thumbnails .mbp-folders li.active > div.folder-name {
   background-color: #eeeeee;
 }
-/* line 161, ../sass/media_browser.scss */
+/* line 181, ../sass/media_browser.scss */
 #views-form-media-browser-plus-customized-media-browser-plus .mbp-folders li.active > div.folder-name .icon:before,
 #media-tab-media_browser_plus_customized--media_browser_thumbnails .mbp-folders li.active > div.folder-name .icon:before {
   content: "\e930";
   color: #7f9dcd;
 }
-/* line 169, ../sass/media_browser.scss */
+/* line 189, ../sass/media_browser.scss */
 #views-form-media-browser-plus-customized-media-browser-plus .mbp-folders li.open > div.folder-name .icon:before,
 #media-tab-media_browser_plus_customized--media_browser_thumbnails .mbp-folders li.open > div.folder-name .icon:before {
   content: "\e930";
@@ -500,23 +523,23 @@ Backend
 /**
  * Files
  */
-/* line 180, ../sass/media_browser.scss */
+/* line 200, ../sass/media_browser.scss */
 .view td.mbp-file-list {
   padding: 0;
   padding-left: 0;
 }
 
-/* line 184, ../sass/media_browser.scss */
+/* line 204, ../sass/media_browser.scss */
 #media-browser-library-list li:nth-child(odd) {
   background: #fafafa;
 }
 
-/* line 187, ../sass/media_browser.scss */
+/* line 207, ../sass/media_browser.scss */
 #media-browser-library-list li.selected {
   background: #FFFFDC;
 }
 
-/* line 190, ../sass/media_browser.scss */
+/* line 210, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview-vbo {
   position: relative;
   overflow: hidden;
@@ -526,7 +549,7 @@ Backend
   box-sizing: border-box;
   cursor: pointer;
 }
-/* line 198, ../sass/media_browser.scss */
+/* line 218, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview-vbo .media-item {
   float: left;
   width: 46%;
@@ -535,59 +558,59 @@ Backend
   background: transparent;
   box-shadow: none;
 }
-/* line 205, ../sass/media_browser.scss */
+/* line 225, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview-vbo .media-item img {
   display: inline-block;
 }
-/* line 208, ../sass/media_browser.scss */
+/* line 228, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview-vbo .media-item a:hover {
   text-decoration: underline;
 }
-/* line 212, ../sass/media_browser.scss */
+/* line 232, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview-vbo .media-item.selected {
   background: #FFFFDC;
 }
-/* line 215, ../sass/media_browser.scss */
+/* line 235, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview-vbo .doc-filesize {
   float: left;
   width: 12%;
 }
-/* line 219, ../sass/media_browser.scss */
+/* line 239, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview-vbo .doc-user {
   float: left;
   width: 20%;
 }
-/* line 222, ../sass/media_browser.scss */
+/* line 242, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview-vbo .doc-user a:hover {
   text-decoration: underline;
 }
-/* line 226, ../sass/media_browser.scss */
+/* line 246, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview-vbo .doc-actions {
   float: left;
   width: 12%;
   text-align: left;
 }
-/* line 230, ../sass/media_browser.scss */
+/* line 250, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview-vbo .doc-actions a {
   color: #888;
   font-size: 1.25em;
   margin: 0 5px 0 0;
 }
-/* line 235, ../sass/media_browser.scss */
+/* line 255, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview-vbo .doc-actions a:hover {
   color: #bbb;
 }
-/* line 239, ../sass/media_browser.scss */
+/* line 259, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview-vbo .doc-use {
   width: 5%;
   float: left;
 }
-/* line 242, ../sass/media_browser.scss */
+/* line 262, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview-vbo .doc-use a:hover {
   text-decoration: underline;
 }
 
-/* line 249, ../sass/media_browser.scss */
+/* line 269, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview .media-item {
   position: relative;
   overflow: hidden;
@@ -603,32 +626,40 @@ Backend
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 261, ../sass/media_browser.scss */
+/* line 281, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview .media-item img {
   display: inline-block;
 }
-/* line 265, ../sass/media_browser.scss */
+/* line 285, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview .media-item.selected {
   background: #FFFFDC !important;
   border-color: #f0f0f0;
 }
-/* line 269, ../sass/media_browser.scss */
+/* line 289, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview .media-item:hover {
   border-color: #f0f0f0;
 }
 
 /* Active Draggable Element */
-/* line 275, ../sass/media_browser.scss */
+/* line 295, ../sass/media_browser.scss */
 #draggingContainer {
   max-width: 500px;
   min-width: 300px;
 }
-/* line 278, ../sass/media_browser.scss */
+/* line 298, ../sass/media_browser.scss */
 #draggingContainer .media-item {
   width: 100%;
 }
-/* line 281, ../sass/media_browser.scss */
+/* line 301, ../sass/media_browser.scss */
 #draggingContainer .doc-actions,
 #draggingContainer .doc-filesize {
   display: none !important;
+}
+
+/**
+ * LinkIt
+ */
+/* line 310, ../sass/media_browser.scss */
+.form-item-linkit-class {
+  display: none;
 }

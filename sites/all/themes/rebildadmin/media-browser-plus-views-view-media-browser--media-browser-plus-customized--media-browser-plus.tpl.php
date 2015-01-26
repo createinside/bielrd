@@ -19,7 +19,7 @@
   <tbody>
 	  <tr>
 		  <td class="mbp-toolbar-folders">
-			  <a href="/admin/structure/taxonomy/media_folders" class="button"><?php print t('Create folder'); ?></a>
+			  <?php print l(t("Create folder"), "admin/structure/taxonomy/media_folders", array("attributes" => array("class" => array("button")))); ?>
 			</td>
 		  <td class="mbp-toolbar-files">
   				<?php print $view->footer['media_browser_plus_views_handler_area_actions']->render(); ?>
