@@ -65,13 +65,13 @@ function rebild_search_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'rebild' => array(
-        'region' => 'header_second',
+        'region' => 'header_first',
         'status' => 1,
         'theme' => 'rebild',
-        'weight' => 0,
+        'weight' => -69,
       ),
     ),
-    'title' => '',
+    'title' => 'Hvad kan vi hjælpe dig med?',
     'visibility' => 1,
   );
 
@@ -89,7 +89,7 @@ function rebild_search_default_fe_block_settings() {
         'region' => 'menu',
         'status' => 1,
         'theme' => 'rebild',
-        'weight' => -60,
+        'weight' => -59,
       ),
     ),
     'title' => '',
@@ -128,10 +128,10 @@ function rebild_search_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'rebild' => array(
-        'region' => 'ultimenu_main_bo_i_rebild',
+        'region' => 'ultimenu_main_kom_til_rebild',
         'status' => 1,
         'theme' => 'rebild',
-        'weight' => -50,
+        'weight' => -66,
       ),
     ),
     'title' => '',
@@ -145,15 +145,15 @@ function rebild_search_default_fe_block_settings() {
     'delta' => 'ci_search_results',
     'module' => 'ci_search',
     'node_types' => array(),
-    'pages' => 'soeg
-soeg/*',
+    'pages' => 'search
+search/*',
     'roles' => array(),
     'themes' => array(
       'rebild' => array(
         'region' => 'content',
         'status' => 1,
         'theme' => 'rebild',
-        'weight' => -59,
+        'weight' => -60,
       ),
     ),
     'title' => '',
