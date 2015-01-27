@@ -75,7 +75,7 @@ function ci_search_results_form($form, &$form_state) {
 	
 	$form["search_phrase"] = array(
 		"#type" => "textfield",
-		"#default_value" => (arg(1)!="" ? arg(1) : ""),
+		"#default_value" => (arg(2)!="" ? arg(2) : ""),
 		"#prefix" => "<div class='sf-wrapper'>",
 		"#suffix" => "</div>",
 		"#attributes" => array("placeholder" => "Skriv hvad du søger her")
