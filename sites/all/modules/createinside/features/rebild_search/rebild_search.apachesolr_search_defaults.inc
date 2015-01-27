@@ -16,7 +16,7 @@ function rebild_search_apachesolr_search_default_searchers() {
   $searcher->page_id = 'core_search_0';
   $searcher->label = 'Primary search';
   $searcher->description = 'This is the primary sitewide search';
-  $searcher->search_path = 'soeg';
+  $searcher->search_path = 'search/site';
   $searcher->page_title = 'Søgeresultater';
   $searcher->env_id = 'solr';
   $searcher->settings = array(

@@ -208,7 +208,7 @@ function ci_search_sub_form($form, &$form_state, $tid) {
  */
 function ci_search_results_form_submit($form, &$form_state) {
 
-  $redirect_url = 'soeg/';
+  $redirect_url = 'search/site/';
   $redirect_url .= urlencode($form_state['values']['search_phrase']);
   $i=0;
 	if(isset($form_state["values"]["section"]) && is_array($form_state["values"]["section"])) {
@@ -284,7 +284,7 @@ function ci_search_frequent_keywords($limit = 10) {
   $keywords = array_slice($keywords, 0, $limit);
   $links = array();
   foreach ($keywords as $key => $frequency) {
-    $links[] = l($key, 'soeg/' . $key);
+    $links[] = l($key, 'search/site/' . $key);
   }
   return $links;
 }
