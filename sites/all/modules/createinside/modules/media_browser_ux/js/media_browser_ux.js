@@ -33,7 +33,7 @@ $(function() {
 		var href = $(this).attr('href');
 		window.open(
 		  href,
-		  '_blank' // <- This is what makes it open in a new window.
+		  '_blank'
 		);
 	});
 	
@@ -51,7 +51,7 @@ $(function() {
 				var href = $(this).attr('href');
 				window.open(
 				  href,
-				  '_blank' // <- This is what makes it open in a new window.
+				  '_blank'
 				);
 			});
 	  }
@@ -74,8 +74,28 @@ $(function() {
 		};
 	}
 	
+	/**
+	 * File Edit - Dynamically populate Alt and Title fileds
+	 */
+		$(".copy-alt-text").click(function(e) {
+			
+			e.preventDefault();
+			
+			$altInput = $(this).closest('.group_image_descriptions').find('.field-name-field-file-image-alt-text input');
+			$titleInput = $(this).closest('.group_image_descriptions').find('.field-name-field-file-image-title-text input');
+												
+			$titleInput.val(
+				$altInput.val()
+			);
+		});
+	
 });
 
+/**
+ * Callback Media => Linkit
+ *
+ * Populates the linkit form with information from media file
+ */
 function mediaLinkit(file) {
 		
 	link = {
