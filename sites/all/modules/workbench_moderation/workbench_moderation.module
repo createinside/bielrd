@@ -702,7 +702,7 @@ function workbench_moderation_node_update($node) {
   // state has changed.
   if (!empty($node->revision) || $node->workbench_moderation_state_current != $node->workbench_moderation_state_new) {
     // Update attached fields.
-    field_attach_update('node', $node);
+    // field_attach_update('node', $node);
     // Moderate the node.
     workbench_moderation_moderate($node, $node->workbench_moderation_state_new);
   }
@@ -1574,6 +1574,11 @@ function workbench_moderation_store($node) {
   // Reset flag from taxonomy_field_update() so that {taxonomy_index} values aren't written twice.
   $taxonomy_index_flag = &drupal_static('taxonomy_field_update', array());
   unset($taxonomy_index_flag[$node->nid]);
+
+   // Set the original to the current we are updating otherwise node_load
+   // will return the draft as original and will produce different kinds of side
+   // effects leading to data mismatch or even worse to data loss.
+   $live_revision->original = clone $live_revision;
 
   // Save the node.
   node_save($live_revision);

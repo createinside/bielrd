@@ -413,7 +413,7 @@ ul.action-links .upload-button:hover {
 .mbp-toolbar-folders,
 .mbp-toolbar-files {
   border-top: 1px solid #ccc !important;
-  border-bottom: 1px solid #ccc !important;
+  border-bottom: 1px dashed #ddd !important;
 }
 /* line 117, ../sass/media_browser.scss */
 .mbp-toolbar-folders input.form-submit, .mbp-toolbar-folders a.button,
@@ -440,7 +440,7 @@ ul.action-links .upload-button:hover {
 
 /* line 132, ../sass/media_browser.scss */
 .mbp-toolbar-folders {
-  border-right: 1px solid #f0f0f0 !important;
+  border-right: 1px solid #d2d2d2 !important;
 }
 
 /**
@@ -448,7 +448,7 @@ ul.action-links .upload-button:hover {
  */
 /* line 139, ../sass/media_browser.scss */
 .mbp-folders {
-  border-right: 1px solid #eee !important;
+  border-right: 1px solid #d2d2d2 !important;
   padding: 0;
 }
 
@@ -530,16 +530,21 @@ ul.action-links .upload-button:hover {
 }
 
 /* line 204, ../sass/media_browser.scss */
+#media-browser-library-list {
+  margin: 0;
+}
+
+/* line 207, ../sass/media_browser.scss */
 #media-browser-library-list li:nth-child(odd) {
   background: #fafafa;
 }
 
-/* line 207, ../sass/media_browser.scss */
+/* line 210, ../sass/media_browser.scss */
 #media-browser-library-list li.selected {
   background: #FFFFDC;
 }
 
-/* line 210, ../sass/media_browser.scss */
+/* line 213, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview-vbo {
   position: relative;
   overflow: hidden;
@@ -549,7 +554,7 @@ ul.action-links .upload-button:hover {
   box-sizing: border-box;
   cursor: pointer;
 }
-/* line 218, ../sass/media_browser.scss */
+/* line 221, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview-vbo .media-item {
   float: left;
   width: 46%;
@@ -558,59 +563,63 @@ ul.action-links .upload-button:hover {
   background: transparent;
   box-shadow: none;
 }
-/* line 225, ../sass/media_browser.scss */
+/* line 228, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview-vbo .media-item img {
   display: inline-block;
 }
-/* line 228, ../sass/media_browser.scss */
+/* line 231, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview-vbo .media-item a:hover {
   text-decoration: underline;
 }
-/* line 232, ../sass/media_browser.scss */
+/* line 235, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview-vbo .media-item.selected {
   background: #FFFFDC;
 }
-/* line 235, ../sass/media_browser.scss */
+/* line 238, ../sass/media_browser.scss */
+.views-field-media-browser-plus-preview-vbo .form-item {
+  margin: 0;
+}
+/* line 241, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview-vbo .doc-filesize {
   float: left;
   width: 12%;
 }
-/* line 239, ../sass/media_browser.scss */
+/* line 245, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview-vbo .doc-user {
   float: left;
   width: 20%;
 }
-/* line 242, ../sass/media_browser.scss */
+/* line 248, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview-vbo .doc-user a:hover {
   text-decoration: underline;
 }
-/* line 246, ../sass/media_browser.scss */
+/* line 252, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview-vbo .doc-actions {
   float: left;
   width: 12%;
   text-align: left;
 }
-/* line 250, ../sass/media_browser.scss */
+/* line 256, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview-vbo .doc-actions a {
   color: #888;
   font-size: 1.25em;
   margin: 0 5px 0 0;
 }
-/* line 255, ../sass/media_browser.scss */
+/* line 261, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview-vbo .doc-actions a:hover {
   color: #bbb;
 }
-/* line 259, ../sass/media_browser.scss */
+/* line 265, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview-vbo .doc-use {
   width: 5%;
   float: left;
 }
-/* line 262, ../sass/media_browser.scss */
+/* line 268, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview-vbo .doc-use a:hover {
   text-decoration: underline;
 }
 
-/* line 269, ../sass/media_browser.scss */
+/* line 275, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview .media-item {
   position: relative;
   overflow: hidden;
@@ -626,31 +635,31 @@ ul.action-links .upload-button:hover {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 281, ../sass/media_browser.scss */
+/* line 287, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview .media-item img {
   display: inline-block;
 }
-/* line 285, ../sass/media_browser.scss */
+/* line 291, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview .media-item.selected {
   background: #FFFFDC !important;
   border-color: #f0f0f0;
 }
-/* line 289, ../sass/media_browser.scss */
+/* line 295, ../sass/media_browser.scss */
 .views-field-media-browser-plus-preview .media-item:hover {
   border-color: #f0f0f0;
 }
 
 /* Active Draggable Element */
-/* line 295, ../sass/media_browser.scss */
+/* line 301, ../sass/media_browser.scss */
 #draggingContainer {
   max-width: 500px;
   min-width: 300px;
 }
-/* line 298, ../sass/media_browser.scss */
+/* line 304, ../sass/media_browser.scss */
 #draggingContainer .media-item {
   width: 100%;
 }
-/* line 301, ../sass/media_browser.scss */
+/* line 307, ../sass/media_browser.scss */
 #draggingContainer .doc-actions,
 #draggingContainer .doc-filesize {
   display: none !important;
@@ -659,7 +668,52 @@ ul.action-links .upload-button:hover {
 /**
  * LinkIt
  */
-/* line 310, ../sass/media_browser.scss */
+/* line 316, ../sass/media_browser.scss */
 .form-item-linkit-class {
+  display: none;
+}
+
+/*
+========================================================================== 
+	File Form
+========================================================================== 
+*/
+/* line 327, ../sass/media_browser.scss */
+.page-file-edit #file-entity-edit .form-text.required {
+  width: 50%;
+}
+
+/* line 334, ../sass/media_browser.scss */
+.media-bulk-upload-multiedit-form h2 {
+  background: url("../images/dot.png") repeat-x top;
+  padding-top: 30px;
+}
+/* line 338, ../sass/media_browser.scss */
+.media-bulk-upload-multiedit-form h2:first-child {
+  background: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+/* line 343, ../sass/media_browser.scss */
+.media-bulk-upload-multiedit-form .file-form {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+
+/*
+========================================================================== 
+	File Usage Table
+========================================================================== 
+*/
+/* line 358, ../sass/media_browser.scss */
+.page-file-usage .region-content table th:nth-child(1) {
+  width: 50%;
+}
+/* line 361, ../sass/media_browser.scss */
+.page-file-usage .region-content table th:nth-child(2),
+.page-file-usage .region-content table th:nth-child(3),
+.page-file-usage .region-content table td:nth-child(2),
+.page-file-usage .region-content table td:nth-child(3) {
   display: none;
 }

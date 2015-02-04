@@ -24,10 +24,10 @@ function media_browser_ux_field_attach_update($entity_type, $entity) {
  * Add file usage from file references in an entity's text fields.
  */
 function _media_browser_ux_filter_add_file_usage_from_fields($entity_type, $entity) {
-	
+		
 	// Track the total usage for files from all fields combined.
   $entity_files = media_browser_ux_entity_field_count_files($entity_type, $entity);
-
+  
   list($entity_id, $entity_vid, $entity_bundle) = entity_extract_ids($entity_type, $entity);
   
   // When an entity has revisions and then is saved again NOT as new version the
@@ -84,8 +84,9 @@ function _media_browser_ux_filter_add_file_usage_from_fields($entity_type, $enti
  */
 function media_browser_ux_filter_parse_from_fields($entity_type, $entity) {
   $file_references = array();
-
+  
   foreach (media_wysiwyg_filter_fields_with_text_filtering($entity_type, $entity) as $field_name) {
+	  	  
     if ($field_items = field_get_items($entity_type, $entity, $field_name)) {
       foreach ($field_items as $field_item) {
 
