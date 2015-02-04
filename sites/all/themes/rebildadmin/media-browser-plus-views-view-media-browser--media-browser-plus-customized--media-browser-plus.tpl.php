@@ -6,7 +6,7 @@
  * @see views-view-list.tpl.php
  * @see template_preprocess_media_views_view_media_browser()
  * @ingroup views_templates
- */   
+ */    
 ?>
 <?php print $wrapper_prefix; ?>
 <table>
@@ -19,7 +19,13 @@
   <tbody>
 	  <tr>
 		  <td class="mbp-toolbar-folders">
-			  <?php print l(t("Create folder"), "admin/structure/taxonomy/media_folders", array("attributes" => array("class" => array("button")))); ?>
+			  <?php 
+				   
+				   $current_folder = $view->exposed_raw_input['mbp_current_folder'];
+				   
+				   print l("Opret", 'admin/media_browser_ux/add_folder/'.$current_folder, array('attributes' => array('class' => 'add-folder button')));
+				   print l("Slet", 'admin/media_browser_ux/delete_folder/'.$current_folder, array('attributes' => array('class' => 'delete-folder button')));
+			  ?>
 			</td>
 		  <td class="mbp-toolbar-files">
   				<?php print $view->footer['media_browser_plus_views_handler_area_actions']->render(); ?>

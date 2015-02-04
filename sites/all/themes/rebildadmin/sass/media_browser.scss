@@ -113,7 +113,7 @@ ul.action-links {
 .mbp-toolbar-folders,
 .mbp-toolbar-files {
 	border-top: 1px solid #ccc !important;
-	border-bottom: 1px solid #ccc !important;
+	border-bottom: 1px dashed #ddd !important;
 	input.form-submit, a.button {
 		margin: 0 10px 0 0;
 		font-size: 11px;
@@ -130,14 +130,14 @@ ul.action-links {
 	}
 }
 .mbp-toolbar-folders {
-	border-right: 1px solid #f0f0f0 !important;
+	border-right: 1px solid #d2d2d2 !important;
 }
 
 /**
  * Folders
  */
 .mbp-folders {
-	border-right: 1px solid #eee !important;	
+	border-right: 1px solid #d2d2d2 !important;	
 	padding: 0;
 }
 #views-form-media-browser-plus-customized-media-browser-plus,
@@ -201,6 +201,9 @@ ul.action-links {
 	padding: 0;
 	padding-left: 0;
 }
+#media-browser-library-list {
+	margin: 0;
+}
 #media-browser-library-list li:nth-child(odd) {
 	background: #fafafa;
 }
@@ -231,6 +234,9 @@ ul.action-links {
 	}
 	.media-item.selected {
 		background: #FFFFDC;
+	}
+	.form-item {
+		margin: 0;
 	}
 	.doc-filesize {
 		float: left; 
@@ -309,4 +315,55 @@ ul.action-links {
  */
  .form-item-linkit-class {
 	 display: none;
+ }
+ 
+ /*
+ ========================================================================== 
+ 	File Form
+ ========================================================================== 
+ */
+.page-file-edit {
+	#file-entity-edit {
+		.form-text.required {
+			width: 50%;
+		}	 
+	}
+}
+
+.media-bulk-upload-multiedit-form {
+	h2 {
+		background: url("../images/dot.png") repeat-x top;
+		padding-top: 30px;
+	}
+	h2:first-child {
+		background: none;
+		padding-top: 0;
+		margin-top: 0;
+	}
+	.file-form {
+		padding: 10px 20px;
+		border: 1px solid #ccc;
+		margin-bottom: 30px;
+	}
+}
+
+ /*
+ ========================================================================== 
+ 	File Usage Table
+ ========================================================================== 
+ */
+ .page-file-usage {
+	 .region-content {
+		 table {
+		 	 th:nth-child(1) {
+			 	 width: 50%;
+		 	 }
+			 th:nth-child(2),
+			 th:nth-child(3),
+			 td:nth-child(2),
+			 td:nth-child(3) {
+				 display: none;
+			 }
+		 }
+	 }
  }
