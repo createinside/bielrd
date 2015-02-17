@@ -68,7 +68,24 @@ function media_browser_ux_delete_folder_form($form, $form_state, $folder_id) {
 		"#value" => $folder_id,
 	);
 	
-	// Check to see if the folder is empty or not
+	// Check to see if the folder contains other folders
+	$children = taxonomy_get_children($folder->tid);
+		
+	if(!empty($children)) {
+
+	  drupal_set_message("Du kan ikke slette denne mappe, fordi den indeholder andre mapper.", "error");
+	  
+	  $form["error"] = array(
+			"#markup" => "<p>Før du kan slette denne mappe, skal du slette de underliggende mapper.</p>",
+	  );	  
+		$form['cancel'] = array(
+	    '#markup' => l(t('Cancel'), 'admin/content/file') ,
+	    '#weight' => 1001,  
+	  );	  
+	  return $form;
+	}
+		
+	// Check to see if the folder contains files
   $file_query = new EntityFieldQuery();
   $files = $file_query
     ->entityCondition('entity_type', 'file')
