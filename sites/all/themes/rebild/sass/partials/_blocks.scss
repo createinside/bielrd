@@ -1008,6 +1008,7 @@ div.workbench-info-block {
   background: $bg-color-bottom;
   .popup-content {
     width: auto;
+    display: inline-block;
     #popup-text {
       font-family: $font-family-std;
       font-size: $font-size-small;

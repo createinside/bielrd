@@ -131,51 +131,45 @@ Backend
 #region-content .content a {
   color: #474747;
   text-decoration: none;
-  word-break: break-all;
-  word-break: break-word;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
 }
-/* line 61, ../sass/partials/_general.scss */
+/* line 60, ../sass/partials/_general.scss */
 #region-content .content a:hover {
   text-decoration: underline;
 }
-/* line 65, ../sass/partials/_general.scss */
+/* line 64, ../sass/partials/_general.scss */
 #region-content .content ul, #region-content .content ol {
   margin-bottom: 1.25em;
 }
-/* line 71, ../sass/partials/_general.scss */
+/* line 70, ../sass/partials/_general.scss */
 #region-content .content ul:last-child,
 #region-content .content ol:last-child {
   margin-bottom: 0;
 }
-/* line 77, ../sass/partials/_general.scss */
+/* line 76, ../sass/partials/_general.scss */
 #region-content .content #content-main ul li {
   list-style: disc;
 }
-/* line 82, ../sass/partials/_general.scss */
+/* line 81, ../sass/partials/_general.scss */
 #region-content .content #content-main ol li {
   list-style: decimal;
 }
-/* line 88, ../sass/partials/_general.scss */
+/* line 87, ../sass/partials/_general.scss */
 #region-content .content #content-main #region-content-sidebar ul li {
   list-style: none;
   margin-left: 10px;
 }
-/* line 94, ../sass/partials/_general.scss */
+/* line 93, ../sass/partials/_general.scss */
 #region-content .content #content-main #region-content-sidebar ol li {
   list-style: none;
   margin-left: 10px;
 }
 
 /* Contextual links */
-/* line 106, ../sass/partials/_general.scss */
+/* line 105, ../sass/partials/_general.scss */
 .page.contextual-links-region .contextual-links-wrapper {
   z-index: 99999;
 }
-/* line 108, ../sass/partials/_general.scss */
+/* line 107, ../sass/partials/_general.scss */
 .page.contextual-links-region .contextual-links-wrapper ul.contextual-links {
   z-index: 99999;
 }

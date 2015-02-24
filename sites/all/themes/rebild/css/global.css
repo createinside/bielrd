@@ -935,51 +935,45 @@ ul.tabs li.active a {
 #region-content .content a {
   color: #474747;
   text-decoration: none;
-  word-break: break-all;
-  word-break: break-word;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
 }
-/* line 61, ../sass/partials/_general.scss */
+/* line 60, ../sass/partials/_general.scss */
 #region-content .content a:hover {
   text-decoration: underline;
 }
-/* line 65, ../sass/partials/_general.scss */
+/* line 64, ../sass/partials/_general.scss */
 #region-content .content ul, #region-content .content ol {
   margin-bottom: 1.25em;
 }
-/* line 71, ../sass/partials/_general.scss */
+/* line 70, ../sass/partials/_general.scss */
 #region-content .content ul:last-child,
 #region-content .content ol:last-child {
   margin-bottom: 0;
 }
-/* line 77, ../sass/partials/_general.scss */
+/* line 76, ../sass/partials/_general.scss */
 #region-content .content #content-main ul li {
   list-style: disc;
 }
-/* line 82, ../sass/partials/_general.scss */
+/* line 81, ../sass/partials/_general.scss */
 #region-content .content #content-main ol li {
   list-style: decimal;
 }
-/* line 88, ../sass/partials/_general.scss */
+/* line 87, ../sass/partials/_general.scss */
 #region-content .content #content-main #region-content-sidebar ul li {
   list-style: none;
   margin-left: 10px;
 }
-/* line 94, ../sass/partials/_general.scss */
+/* line 93, ../sass/partials/_general.scss */
 #region-content .content #content-main #region-content-sidebar ol li {
   list-style: none;
   margin-left: 10px;
 }
 
 /* Contextual links */
-/* line 106, ../sass/partials/_general.scss */
+/* line 105, ../sass/partials/_general.scss */
 .page.contextual-links-region .contextual-links-wrapper {
   z-index: 99999;
 }
-/* line 108, ../sass/partials/_general.scss */
+/* line 107, ../sass/partials/_general.scss */
 .page.contextual-links-region .contextual-links-wrapper ul.contextual-links {
   z-index: 99999;
 }
@@ -3004,8 +2998,9 @@ div.workbench-info-block a {
 /* line 1009, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content {
   width: auto;
+  display: inline-block;
 }
-/* line 1011, ../sass/partials/_blocks.scss */
+/* line 1012, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-text {
   font-family: Verdana, Arial, sans-serif;
   font-size: 0.91667em;
@@ -3013,38 +3008,38 @@ div.workbench-info-block a {
   width: auto;
   text-align: center;
 }
-/* line 1017, ../sass/partials/_blocks.scss */
+/* line 1018, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-text h3 {
   font-size: 1.25em;
   margin-bottom: 5px;
   font-weight: bold;
 }
-/* line 1022, ../sass/partials/_blocks.scss */
+/* line 1023, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-text p {
   font-weight: normal;
   font-size: 1.1em;
 }
-/* line 1027, ../sass/partials/_blocks.scss */
+/* line 1028, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-buttons {
   margin-top: 20px;
   text-align: center;
   float: none;
 }
-/* line 1031, ../sass/partials/_blocks.scss */
+/* line 1032, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-buttons .agree-button {
   background: #7f9dcd;
   color: #fff;
 }
-/* line 1035, ../sass/partials/_blocks.scss */
+/* line 1036, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-buttons .agree-button:hover {
   color: #474747;
 }
-/* line 1038, ../sass/partials/_blocks.scss */
+/* line 1039, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-buttons .find-more-button {
   color: #474747;
   background: #fff;
 }
-/* line 1042, ../sass/partials/_blocks.scss */
+/* line 1043, ../sass/partials/_blocks.scss */
 #sliding-popup .popup-content #popup-buttons button {
   border: 0;
   box-shadow: 0;
@@ -3057,7 +3052,7 @@ div.workbench-info-block a {
 }
 
 /* Search block - search page */
-/* line 1057, ../sass/partials/_blocks.scss */
+/* line 1058, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results {
   padding: 20px;
   margin: 0;
@@ -3069,19 +3064,19 @@ div.workbench-info-block a {
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 1060, ../sass/partials/_blocks.scss */
+/* line 1061, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results > div {
   position: relative;
 }
-/* line 1064, ../sass/partials/_blocks.scss */
+/* line 1065, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-item, #block-ci-search-ci-search-results .form-actions {
   margin: 0;
 }
-/* line 1067, ../sass/partials/_blocks.scss */
+/* line 1068, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-textfield {
   position: relative;
 }
-/* line 1070, ../sass/partials/_blocks.scss */
+/* line 1071, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .sf-wrapper {
   background: #e9e9e9;
   padding: 5px;
@@ -3090,7 +3085,7 @@ div.workbench-info-block a {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 1076, ../sass/partials/_blocks.scss */
+/* line 1077, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-textfield:before {
   font-family: 'Rebild';
   speak: none;
@@ -3110,7 +3105,7 @@ div.workbench-info-block a {
   font-size: 1.1em;
   color: #6b6b6b;
 }
-/* line 1086, ../sass/partials/_blocks.scss */
+/* line 1087, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results input[type=search],
 #block-ci-search-ci-search-results input[type=text] {
   font-size: 0.91667em;
@@ -3137,7 +3132,7 @@ div.workbench-info-block a {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 1103, ../sass/partials/_blocks.scss */
+/* line 1104, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results input[type=submit] {
   position: absolute;
   right: 5px;
@@ -3148,16 +3143,16 @@ div.workbench-info-block a {
   -webkit-border-radius: 0;
   border-radius: 0 3px 3px 0;
 }
-/* line 1111, ../sass/partials/_blocks.scss */
+/* line 1112, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-checkboxes {
   overflow: hidden;
 }
-/* line 1113, ../sass/partials/_blocks.scss */
+/* line 1114, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-checkboxes > label {
   font-size: 1.2em;
   margin: 1em 0 0.75em 0;
 }
-/* line 1117, ../sass/partials/_blocks.scss */
+/* line 1118, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-results .form-type-checkboxes .form-type-checkbox {
   float: left;
   margin-right: 10px;
@@ -3165,17 +3160,17 @@ div.workbench-info-block a {
 }
 
 /* Search block - frontpage */
-/* line 1126, ../sass/partials/_blocks.scss */
+/* line 1127, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front {
   font-size: 10px;
   text-align: center;
 }
-/* line 1129, ../sass/partials/_blocks.scss */
+/* line 1130, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form {
   margin-bottom: 0 !important;
   width: 100%;
 }
-/* line 1132, ../sass/partials/_blocks.scss */
+/* line 1133, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .sf-wrapper {
   background: rgba(71, 71, 71, 0.15);
   padding: 10px;
@@ -3186,7 +3181,7 @@ div.workbench-info-block a {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 1140, ../sass/partials/_blocks.scss */
+/* line 1141, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .form-type-textfield {
   overflow: hidden;
   position: relative;
@@ -3194,7 +3189,7 @@ div.workbench-info-block a {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 1145, ../sass/partials/_blocks.scss */
+/* line 1146, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .form-type-textfield:before {
   font-family: 'Rebild';
   speak: none;
@@ -3213,7 +3208,7 @@ div.workbench-info-block a {
   font-size: 1.6em;
   color: #6b6b6b;
 }
-/* line 1154, ../sass/partials/_blocks.scss */
+/* line 1155, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form input[type=search],
 #block-ci-search-ci-search-front form input[type=text] {
   font-size: .9em;
@@ -3260,7 +3255,7 @@ div.workbench-info-block a {
 #block-ci-search-ci-search-front form input[type=text]:-ms-input-placeholder {
   color: transparent;
 }
-/* line 1174, ../sass/partials/_blocks.scss */
+/* line 1175, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form input[type=submit] {
   position: absolute;
   right: 10px;
@@ -3271,44 +3266,44 @@ div.workbench-info-block a {
   -webkit-border-radius: 0;
   border-radius: 0 3px 3px 0;
 }
-/* line 1182, ../sass/partials/_blocks.scss */
+/* line 1183, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .form-item, #block-ci-search-ci-search-front form .form-actions {
   margin: 0;
 }
-/* line 1185, ../sass/partials/_blocks.scss */
+/* line 1186, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .most-searched {
   font-size: 11px;
   line-height: 1.25em;
   color: #474747;
   text-shadow: white 1px 1px 1px;
 }
-/* line 1190, ../sass/partials/_blocks.scss */
+/* line 1191, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .most-searched ul {
   display: inline-block;
   text-align: center;
 }
-/* line 1193, ../sass/partials/_blocks.scss */
+/* line 1194, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .most-searched ul li {
   margin-right: 1em;
   margin-bottom: 0.5em;
   display: inline-block;
 }
-/* line 1197, ../sass/partials/_blocks.scss */
+/* line 1198, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .most-searched ul li a {
   color: #474747;
 }
-/* line 1200, ../sass/partials/_blocks.scss */
+/* line 1201, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .most-searched ul li a:hover {
   text-decoration: none;
 }
-/* line 1205, ../sass/partials/_blocks.scss */
+/* line 1206, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-front form .most-searched strong {
   display: inline-block;
   margin-left: 1em;
 }
 
 /* Search block header */
-/* line 1214, ../sass/partials/_blocks.scss */
+/* line 1215, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-header {
   position: absolute;
   right: 0;
@@ -3317,7 +3312,7 @@ div.workbench-info-block a {
   width: 325px;
   display: none;
 }
-/* line 1221, ../sass/partials/_blocks.scss */
+/* line 1222, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-header .dropd-btn {
   font-size: 1em;
   line-height: 5.5em;
@@ -3341,7 +3336,7 @@ div.workbench-info-block a {
   -webkit-border-top-right-radius: 3px;
   border-top-right-radius: 3px;
 }
-/* line 1239, ../sass/partials/_blocks.scss */
+/* line 1240, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-header .dropd-btn:before {
   content: "";
   width: 0;
@@ -3353,7 +3348,7 @@ div.workbench-info-block a {
   bottom: -7px;
   left: 25px;
 }
-/* line 1249, ../sass/partials/_blocks.scss */
+/* line 1250, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-header #search-dropd-wrapper {
   position: absolute;
   bottom: -52px;
@@ -3362,12 +3357,12 @@ div.workbench-info-block a {
   display: none;
   z-index: 9998;
 }
-/* line 1256, ../sass/partials/_blocks.scss */
+/* line 1257, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-header #search-dropd-wrapper .form-item {
   margin: 0;
   padding: 0;
 }
-/* line 1260, ../sass/partials/_blocks.scss */
+/* line 1261, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-header #search-dropd-wrapper input[type=text] {
   height: 50px;
   margin-top: 2px;
@@ -3381,11 +3376,11 @@ div.workbench-info-block a {
   -webkit-box-shadow: 0;
   box-shadow: 0;
 }
-/* line 1271, ../sass/partials/_blocks.scss */
+/* line 1272, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-header #search-dropd-wrapper input[type=submit] {
   display: none;
 }
-/* line 1274, ../sass/partials/_blocks.scss */
+/* line 1275, ../sass/partials/_blocks.scss */
 #block-ci-search-ci-search-header #search-dropd-wrapper button[type=submit] {
   position: absolute;
   top: 2px;
@@ -3401,7 +3396,7 @@ div.workbench-info-block a {
 }
 
 /* Search autocomplete widget */
-/* line 1291, ../sass/partials/_blocks.scss */
+/* line 1292, ../sass/partials/_blocks.scss */
 .ac_results:before {
   content: "";
   width: 0;
@@ -3414,7 +3409,7 @@ div.workbench-info-block a {
   left: 30px;
 }
 
-/* line 1302, ../sass/partials/_blocks.scss */
+/* line 1303, ../sass/partials/_blocks.scss */
 .ac_results {
   border: none;
   padding: 10px 8px;
@@ -3429,33 +3424,33 @@ div.workbench-info-block a {
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 1310, ../sass/partials/_blocks.scss */
+/* line 1311, ../sass/partials/_blocks.scss */
 .ac_results ul li {
   padding: 20px;
   font-size: 1em;
   cursor: pointer;
   color: #474747;
 }
-/* line 1322, ../sass/partials/_blocks.scss */
+/* line 1323, ../sass/partials/_blocks.scss */
 .ac_results ul .ac_even {
   background: white;
 }
-/* line 1325, ../sass/partials/_blocks.scss */
+/* line 1326, ../sass/partials/_blocks.scss */
 .ac_results ul .ac_odd {
   background: #f6f6f6;
 }
-/* line 1328, ../sass/partials/_blocks.scss */
+/* line 1329, ../sass/partials/_blocks.scss */
 .ac_results ul .ac_over {
   background: #cfcfcf;
   color: #474747;
 }
 
-/* line 1335, ../sass/partials/_blocks.scss */
+/* line 1336, ../sass/partials/_blocks.scss */
 .front .ac_results {
   width: 557px !important;
 }
 
-/* line 1340, ../sass/partials/_blocks.scss */
+/* line 1341, ../sass/partials/_blocks.scss */
 .responsive-layout-mobile .ac_results {
   display: none !important;
 }
@@ -3463,11 +3458,11 @@ div.workbench-info-block a {
 /**
  * Announcement (Din kommune informerer)
  */
-/* line 1349, ../sass/partials/_blocks.scss */
+/* line 1350, ../sass/partials/_blocks.scss */
 .block-din-kommune-informerer a {
   color: #474747;
 }
-/* line 1352, ../sass/partials/_blocks.scss */
+/* line 1353, ../sass/partials/_blocks.scss */
 .block-din-kommune-informerer .announcement-front {
   padding: 18px 0;
   overflow: hidden;
@@ -3479,7 +3474,7 @@ div.workbench-info-block a {
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
 }
-/* line 1356, ../sass/partials/_blocks.scss */
+/* line 1357, ../sass/partials/_blocks.scss */
 .block-din-kommune-informerer .announcement-front .week-number {
   float: left;
   width: 25%;
@@ -3491,13 +3486,13 @@ div.workbench-info-block a {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 1364, ../sass/partials/_blocks.scss */
+/* line 1365, ../sass/partials/_blocks.scss */
 .block-din-kommune-informerer .announcement-front .week-number span.icon-mega-phone {
   display: block;
   font-size: 3em;
   margin-bottom: 5px;
 }
-/* line 1370, ../sass/partials/_blocks.scss */
+/* line 1371, ../sass/partials/_blocks.scss */
 .block-din-kommune-informerer .announcement-front .body {
   float: left;
   width: 75%;
@@ -3509,7 +3504,7 @@ div.workbench-info-block a {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 1378, ../sass/partials/_blocks.scss */
+/* line 1379, ../sass/partials/_blocks.scss */
 .block-din-kommune-informerer .announcement-front .body h2 {
   font-size: 1.25em;
   margin-bottom: 10px;
@@ -3517,7 +3512,7 @@ div.workbench-info-block a {
   color: black;
   line-height: 1.25em;
 }
-/* line 1385, ../sass/partials/_blocks.scss */
+/* line 1386, ../sass/partials/_blocks.scss */
 .block-din-kommune-informerer .announcement-front .body p {
   font-size: 0.9em;
   margin: 0;

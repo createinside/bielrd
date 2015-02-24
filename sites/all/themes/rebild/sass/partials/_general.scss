@@ -56,7 +56,6 @@
 		a {
 			color: $link-color;
 			text-decoration: none;
-			@include hyphenation;
 		}	
 		a:hover {
 			text-decoration: underline;
