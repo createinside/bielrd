@@ -50,7 +50,7 @@
 	
 		if ($indhold->field_main_protected['und'][0]['value'] == 1) {
 			if(!user_is_logged_in() ){
-				print "<p>Du skal anvende brugernavn og adgangskode for at logge ind. Hvis du har mistet din adgangskode, kan du bestille en ny via nedenstående link.</p><p>" . l('Bestil ny adgangskode', 'user/password')."</p>";
+				print "<p>Du skal anvende brugernavn og adgangskode for at logge ind. Hvis du har mistet din adgangskode, kan du oprette en ny via nedenstående link.</p><p>" . l('Opret ny adgangskode', 'user/password')."</p>";
 			    print drupal_render(drupal_get_form('user_login')); 
 			}
 		else {
