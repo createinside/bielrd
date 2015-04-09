@@ -49,14 +49,36 @@ function media_browser_ux_library() {
  * Implements hook_form_alter().
  */
 function media_browser_ux_form_alter(&$form, &$form_state) {
+	
+	// Node edit form
+	if($form['#form_id']=='page_node_form') {
+		if(isset($form['field_main_image'])) {
+			$form['field_main_image']['und'][0]['#process'][] = 'media_browser_ux_element_process'; 
+		}
+	}
+			
+	// File entity upload
+	if($form['#form_id']=='file_entity_add_upload') {
+		// Hide title field
+		if(isset($form['field_file_image_title_text'])) {
+			$form['field_file_image_title_text']['#access'] = FALSE;
+		}	
+	}
 		
 	// File entity edit
 	if($form['#form_id']=="file_entity_edit") {
 		$form['destination']['#access'] = FALSE;		
 		$form['preview'] = file_view_file($form['preview']['#file'], 'teaser');
 		
+		/*
+		// Clone Alt text to Title text
 		if(isset($form['field_file_image_title_text'])) {
 		$form['field_file_image_title_text']["#prefix"] = "<p><a href='#' class='copy-alt-text'>Klon tekst <span class='icon-arrow-down'></span></a></p>";
+		}
+		*/
+		
+		if(isset($form['field_file_image_title_text'])) {
+			$form['field_file_image_title_text']['#access'] = FALSE;
 		}
 	}
 	
@@ -66,9 +88,16 @@ function media_browser_ux_form_alter(&$form, &$form_state) {
 		$form['redirect']['#access'] = FALSE;		
 		$form['preview'] = file_view_file($form['preview']['#file'], 'teaser');	
 		
+		/*
+		// Clone Alt text to Title text
 		if(isset($form['field_file_image_title_text'])) {
 			$form['field_file_image_title_text']["#prefix"] = "<p><a href='#' class='copy-alt-text'>Klon tekst <span class='icon-arrow-down'></span></a></p>";
 		}	
+		*/
+		
+		if(isset($form['field_file_image_title_text'])) {
+			$form['field_file_image_title_text']['#access'] = FALSE;
+		}
 	}
 
 	// File entity delete
@@ -78,10 +107,10 @@ function media_browser_ux_form_alter(&$form, &$form_state) {
 		
 		// Prevent file deletion if file is in use
 	  if ($references = file_usage_list($file)) {
-		  drupal_set_message("Du kan ikke slette denne fil, da den bliver brugt et sted på hjemmesiden.", "error");
-		  
 			unset($form['actions']['submit']);
-						
+
+		  drupal_set_message("Du kan ikke slette denne fil, da den bliver brugt et sted på hjemmesiden.", "error");
+		  						
 			$description = "<p>Før du kan slette den, skal du fjerne alle links og andre referencer til filen.";
 			$description .= " Klik her for at ".l("se en oversigt over hvor filen er i brug", "file/".arg(1)."/usage").".</p>";
 			
@@ -92,7 +121,7 @@ function media_browser_ux_form_alter(&$form, &$form_state) {
 	}
 	
 	// File entity delete multiple
-	else if($form['#form_id'] == 'file_entity_multiple_delete_confirm') {
+	if($form['#form_id'] == 'file_entity_multiple_delete_confirm') {
 		
 		$in_use = FALSE;
 				
@@ -105,7 +134,8 @@ function media_browser_ux_form_alter(&$form, &$form_state) {
 				}
 			}
 		}
-		
+
+		// Prevent file deletion if file is in use		
 		if($in_use) {
 			unset($form['actions']['submit']);
 	
@@ -124,10 +154,12 @@ function media_browser_ux_form_alter(&$form, &$form_state) {
  * Implements hook_menu_alter().
  */
 function media_browser_ux_menu_alter(&$items) {
-	
+		
 	// Disable the default file lists / views
   $items['admin/content/file']['access callback'] = FALSE;
   $items['admin/content/file/thumbnails']['access callback'] = FALSE;
+  // Disable archive upload function
+  $items['file/add/upload/archive']['access callback'] = FALSE;
 }
 
 /**
@@ -160,4 +192,41 @@ function media_browser_ux_module_implements_alter(&$implementations, $hook) {
 	if($hook == "taxonomy_term_delete" && is_array($implementations)) {
 		unset($implementations['media_browser_plus']);
 	}
+}
+
+/**
+ * Process callback for the media form element.
+ */
+function media_browser_ux_element_process($element, &$form_state, $form) {
+  $fid = isset($element['#value']['fid']) ? $element['#value']['fid'] : 0;  
+  if ($fid && $element['#file']) {
+    $element['preview']['content'] = media_browser_ux_get_thumbnail_preview($element['#file']);
+  }	
+  return $element;
+}
+
+/**
+ * Media thumbnail render function.
+ *
+ * Returns a renderable array with the necessary classes to support a media
+ * thumbnail. Also provides default fallback images if no image is available.
+ *
+ * @param object $file
+ *   A Drupal file object.
+ *
+ * @return array
+ *   Renderable array.
+ */
+function media_browser_ux_get_thumbnail_preview($file, $link = NULL) {
+  // If a file has an invalid type, allow file_view_file() to work.
+  if (!file_type_is_enabled($file->type)) {
+    $file->type = file_get_type($file);
+  }
+
+  $preview = file_view_file($file, 'teaser');
+  $preview['#show_names'] = TRUE;
+  $preview['#add_link'] = $link;
+  $preview['#theme_wrappers'][] = 'media_thumbnail';
+  $preview['#attached']['css'][] = drupal_get_path('module', 'media') . '/css/media.css';
+  return $preview;
 }
