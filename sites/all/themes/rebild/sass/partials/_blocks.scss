@@ -648,6 +648,60 @@
 		}
 	}
 }
+/* Custom blocks - Fremtidens senior- og handicapservice */
+.html {
+	#page {
+		.custom_block.business_rebild {
+			@include grid-box(#1a171b);
+			color: white;
+			background-image: url('../img/business_rebild.png');
+			background-repeat: no-repeat;
+			background-position: left top;
+			padding-top: 130px;
+			text-align: right;
+			.content {
+				h2, h3 {
+					text-transform: uppercase;
+				}
+				h3 {
+					font-size: 1.66em;
+					color: #d76221;
+					font-weight: bold;
+					margin-bottom: 7px;
+				}
+				h2 {
+					font-size: 2.1em;
+					span {
+						color: #d76221;
+					}
+				}
+				p.manchet {
+					font-size: 1.25em;
+					line-height: $line-height-std;
+				}
+				p {
+					margin-bottom: 9px;
+				}
+				a {
+					color: #d76221;
+					&:hover {
+						text-decoration: none;
+						color: lighten(#d76221, 10%);
+					}
+					&:after {
+						@include icon-prepare();
+						content: "\e001";
+						font-weight: bold;
+						font-size: 1.2em;
+						margin: 0 0 0 2px;
+						position: relative;
+						top: 2px;
+					}
+				}
+			}
+		}
+	}
+}
 
 /* Bean - Høj format block */
 .html {
