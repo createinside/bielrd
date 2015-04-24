@@ -1,0 +1,17 @@
+diff --git a/field_collection.module b/field_collection.module
+index 66a4179..34836de 100644
+--- a/field_collection.module
++++ b/field_collection.module
+@@ -923,6 +923,12 @@ function field_collection_field_presave($host_entity_type, $host_entity, $field,
+  * Care about removed field collection items.
+  */
+ function field_collection_field_update($entity_type, $entity, $field, $instance, $langcode, &$items) {
++
++  // Prevent workbench moderation from messing up our field_collection
++  if (!empty($entity->workbench_moderation['updating_live_revision'])) {
++    return;
++  }
++
+   $items_original = !empty($entity->original->{$field['field_name']}[$langcode]) ? $entity->original->{$field['field_name']}[$langcode] : array();
+   $original_by_id = array_flip(field_collection_field_item_to_ids($items_original));
+ 
