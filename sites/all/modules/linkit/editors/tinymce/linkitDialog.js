@@ -56,6 +56,8 @@ Drupal.linkit.editorDialog.tinymce = {
         
     editor.selection.moveToBookmark(editor.windowManager.bookmark);
 
+    editor.selection.moveToBookmark(editor.windowManager.bookmark);
+
     // Restore the selection if the browser is IE.
     if (tinymce.isIE) {
       editor.selection.moveToBookmark(editor.windowManager.bookmark);
