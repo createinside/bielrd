@@ -17,6 +17,8 @@ Drupal.linkit.editorDialog.tinymce = {
     var linkitCache = Drupal.linkit.getLinkitCache(),
         editor = linkitCache.editor, element, link;
 
+    editor.selection.moveToBookmark(editor.windowManager.bookmark);
+
     // Restore the selection if the browser is IE.
     if (tinymce.isIE) {
       editor.selection.moveToBookmark(editor.windowManager.bookmark);
@@ -51,6 +53,8 @@ Drupal.linkit.editorDialog.tinymce = {
     var linkitCache = Drupal.linkit.getLinkitCache(),
         editor = linkitCache.editor,
         element = editor.dom.getParent(editor.selection.getNode(), 'A');
+        
+    editor.selection.moveToBookmark(editor.windowManager.bookmark);
 
     // Restore the selection if the browser is IE.
     if (tinymce.isIE) {

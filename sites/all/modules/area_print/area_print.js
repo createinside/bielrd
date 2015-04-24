@@ -32,7 +32,9 @@
                     }
                     // Print and close
                     newWin.print();
-                    newWin.close();
+                    setTimeout(function () {
+								    	newWin.close();
+								    }, 10); 
                 }
 
 
@@ -58,7 +60,9 @@
                     }
                     // Print and close
                     newWin.print();
-                    newWin.close();
+                    setTimeout(function () {
+								    	newWin.close();
+								    }, 10); 
                 }
             }
 
