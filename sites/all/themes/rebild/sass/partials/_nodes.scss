@@ -156,12 +156,16 @@ Share nodes
 }
 
 /* Fancybox settings */
-
 .fancybox-title-float-wrap {
 	margin-bottom: -55px;
 	.child {
 		white-space: normal;	
 	}	
+}
+
+/* Colorbox */
+#colorbox {
+	max-height: 360px;
 }
 
 /*------------------------------------------------------------------
@@ -179,25 +183,59 @@ Share nodes
 			> .field-items > .field-item {
 				padding: 0 0 20px;
 				margin: 0;
+				&:last-child {
+					padding: 0;
+				}
 			}
 			/* Reset field margin */
 			.field-name-field-main-accordion,
 			.field-name-field-main-image-gallery,
 			.view-selfservice-items.view-display-id-embedded_ext {
 				margin: 0;
+				.view-content {
+					margin: 0;
+				}
 			}
 			/* Text and Image */
 			.field-name-field-sec-txt-img-image {
 				float: left;
-				margin: 0 20px 10px 0;
+				margin: 0 12px 8px 0;
+			}
+			/* Text and Video */
+			.field-name-field-sec-txt-vid-video {
+				float: left;
+				margin: 0 12px 8px 0;
+				position: relative;
+				.youtube-field-player {
+					&:before {
+						content: url("/sites/all/themes/rebild/img/youtube-play.png");
+						position: absolute;
+						top: 21px;
+						left: 45px;
+					}
+				}
 			}
 			/* PDF List */
-			.field-name-field-sec-pdf-file {
-				.field-item {
-					margin-bottom: 8px;
-					padding: 0 0 0 1em;
+			.view-section-pdf-list {
+				.views-row {
+					margin-bottom: 13px;
+					.file-icon {
+						float: left;
+						font-size: 2.45em;
+						color: #e14045;
+						margin: 0 5px 0 0;
+					}
+					.file-name {
+						a {
+							color: #e14045;
+						}
+					}
+					.file-meta {
+						text-transform: uppercase;
+						font-style: italic;
+					}
 				}
-				.field-item:last-child {
+				.views-row-last {
 					margin-bottom: 0;
 				}
 			}
@@ -205,10 +243,9 @@ Share nodes
 			.field-name-field-sec-nav-elment {
 				> .field-items {
 					> .field-item {
-						margin-bottom: 20px;
-						overflow: hidden;
+						margin-bottom: 15px;
 						position: relative;
-						min-height: 80px;
+						min-height: 90px;
 						a.nav-link {
 							display: block;
 							min-height: 80px;
@@ -222,19 +259,29 @@ Share nodes
 						}
 						.field-name-field-sec-nav-image {
 							position: absolute;
-							width: 25%;
-							overflow: hidden;
+							top: 0;
+							left: 0;
 							margin-bottom: 0;
+							width: 76px;
 						}
-						.field-name-field-sec-nav-title {
-							font-size: $font-size-large;
+						h3 {
+							font-size: 1.08em;
+							padding-top: 0;
 							line-height: $line-height-std;
-							padding-left: 29%;
-							margin-bottom: 10px;
+							padding-left: 88px;
+							margin: 0;
 							font-weight: bold;
 						}
 						.field-name-field-sec-nav-body {
-							padding-left: 29%;
+							padding-left: 88px;
+							margin-bottom: 6px;
+							word-break: normal;
+							word-wrap: normal;
+						}
+						.read-more {
+							display: block;
+							padding-left: 88px;
+							color: $color-blue;
 						}
 					}	
 					> .field-item:last-child {

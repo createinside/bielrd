@@ -126,23 +126,48 @@ Landingpage
 }
 
 /*------------------------------------------------------------------
+  Nodes
+-------------------------------------------------------------------*/
+/* Basic Page Extended */
+/* line 89, ../sass/rebild-alpha-default-normal.scss */
+#region-content .node-page-extended .field-name-field-main-sections {
+  /* Navigation List */
+}
+/* line 94, ../sass/rebild-alpha-default-normal.scss */
+#region-content .node-page-extended .field-name-field-main-sections .field-name-field-sec-nav-elment > .field-items > .field-item .field-name-field-sec-nav-image {
+  width: auto;
+}
+/* line 97, ../sass/rebild-alpha-default-normal.scss */
+#region-content .node-page-extended .field-name-field-main-sections .field-name-field-sec-nav-elment > .field-items > .field-item h3 {
+  padding-left: 117px;
+}
+/* line 100, ../sass/rebild-alpha-default-normal.scss */
+#region-content .node-page-extended .field-name-field-main-sections .field-name-field-sec-nav-elment > .field-items > .field-item .field-name-field-sec-nav-body {
+  padding-left: 117px;
+}
+/* line 103, ../sass/rebild-alpha-default-normal.scss */
+#region-content .node-page-extended .field-name-field-main-sections .field-name-field-sec-nav-elment > .field-items > .field-item .read-more {
+  padding-left: 117px;
+}
+
+/*------------------------------------------------------------------
   Blocks
 -------------------------------------------------------------------*/
 /* Calendar - sidebar */
-/* line 88, ../sass/rebild-alpha-default-normal.scss */
+/* line 121, ../sass/rebild-alpha-default-normal.scss */
 .view-id-calendar_sidebar .view-content .rebild-calendar .calendar_right {
   max-width: 160px;
 }
 
 /* Calendar - frontpage */
-/* line 98, ../sass/rebild-alpha-default-normal.scss */
+/* line 131, ../sass/rebild-alpha-default-normal.scss */
 .view-id-calendar_frontpage .rebild-calendar .calendar_right {
   width: auto;
   float: none;
 }
 
 /* WCAG */
-/* line 106, ../sass/rebild-alpha-default-normal.scss */
+/* line 139, ../sass/rebild-alpha-default-normal.scss */
 .wcag-block {
   font-size: 1em;
   margin: 0 10px 0 0;
@@ -150,53 +175,53 @@ Landingpage
 }
 
 /* Search */
-/* line 114, ../sass/rebild-alpha-default-normal.scss */
+/* line 147, ../sass/rebild-alpha-default-normal.scss */
 #region-header-first .block-ci-search {
   background: url("../img/et_sundt_liv.png") no-repeat 9px 14px;
 }
 
 /* Search Autocomplete */
-/* line 121, ../sass/rebild-alpha-default-normal.scss */
+/* line 154, ../sass/rebild-alpha-default-normal.scss */
 .not-front .ac_results {
   display: inherit;
   width: 464px !important;
 }
 
 /* Share buttons */
-/* line 131, ../sass/rebild-alpha-default-normal.scss */
+/* line 164, ../sass/rebild-alpha-default-normal.scss */
 #region-content .node-share .share_wrapper .share_this {
   margin-right: 15px;
   margin-bottom: 2px;
 }
 
 /* 5 shortcuts - frontpage */
-/* line 144, ../sass/rebild-alpha-default-normal.scss */
+/* line 177, ../sass/rebild-alpha-default-normal.scss */
 #region-postscript-first .block-block .content ul li {
   margin-bottom: 1.1em;
 }
 
 /* Announcement (Din kommune informerer) */
-/* line 154, ../sass/rebild-alpha-default-normal.scss */
+/* line 187, ../sass/rebild-alpha-default-normal.scss */
 .block-din-kommune-informerer .announcement-front {
   padding: 22px 0;
 }
-/* line 156, ../sass/rebild-alpha-default-normal.scss */
+/* line 189, ../sass/rebild-alpha-default-normal.scss */
 .block-din-kommune-informerer .announcement-front .week-number {
   height: 63px;
   width: 25%;
   padding-top: 0;
 }
-/* line 161, ../sass/rebild-alpha-default-normal.scss */
+/* line 194, ../sass/rebild-alpha-default-normal.scss */
 .block-din-kommune-informerer .announcement-front .body {
   height: 63px;
   width: 75%;
 }
-/* line 164, ../sass/rebild-alpha-default-normal.scss */
+/* line 197, ../sass/rebild-alpha-default-normal.scss */
 .block-din-kommune-informerer .announcement-front .body h2 {
   font-size: 1.33333em;
   margin-bottom: 10px;
 }
-/* line 168, ../sass/rebild-alpha-default-normal.scss */
+/* line 201, ../sass/rebild-alpha-default-normal.scss */
 .block-din-kommune-informerer .announcement-front .body p {
   font-size: 1em;
 }

@@ -107,7 +107,7 @@ function rebild_page_extended_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Accordion',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(
       0 => 'field_main_accordion',
     ),
@@ -134,7 +134,7 @@ function rebild_page_extended_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Billedgalleri',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
       0 => 'field_main_image_gallery',
     ),
@@ -161,7 +161,7 @@ function rebild_page_extended_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'GIS-kort',
-    'weight' => '7',
+    'weight' => '9',
     'children' => array(
       0 => 'field_main_gis_map',
     ),
@@ -188,12 +188,9 @@ function rebild_page_extended_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Navigationsliste',
-    'weight' => '9',
+    'weight' => '11',
     'children' => array(
-      0 => 'field_sec_nav_image',
-      1 => 'field_sec_nav_body',
-      2 => 'field_sec_nav_title',
-      3 => 'field_sec_nav_elment',
+      0 => 'field_sec_nav_elment',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -218,7 +215,7 @@ function rebild_page_extended_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'PDF-liste',
-    'weight' => '8',
+    'weight' => '10',
     'children' => array(
       0 => 'field_sec_pdf_file',
     ),
@@ -245,7 +242,7 @@ function rebild_page_extended_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Selvbetjening',
-    'weight' => '5',
+    'weight' => '6',
     'children' => array(
       0 => 'field_main_selfservice',
     ),
@@ -292,6 +289,34 @@ function rebild_page_extended_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_sec_txt_vid|field_collection_item|field_main_sections|form';
+  $field_group->group_name = 'group_sec_txt_vid';
+  $field_group->entity_type = 'field_collection_item';
+  $field_group->bundle = 'field_main_sections';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Tekst og video',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_sec_txt_vid_body',
+      1 => 'field_sec_txt_vid_video',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_sec_txt_vid|field_collection_item|field_main_sections|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_sec_txt|field_collection_item|field_main_sections|form';
   $field_group->group_name = 'group_sec_txt';
   $field_group->entity_type = 'field_collection_item';
@@ -316,6 +341,33 @@ function rebild_page_extended_field_group_info() {
     ),
   );
   $export['group_sec_txt|field_collection_item|field_main_sections|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_sec_vid|field_collection_item|field_main_sections|form';
+  $field_group->group_name = 'group_sec_vid';
+  $field_group->entity_type = 'field_collection_item';
+  $field_group->bundle = 'field_main_sections';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Video',
+    'weight' => '8',
+    'children' => array(
+      0 => 'field_sec_vid_video',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_sec_vid|field_collection_item|field_main_sections|form'] = $field_group;
 
   return $export;
 }

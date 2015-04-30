@@ -59,7 +59,7 @@ function rebild_page_extended_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'field_collection_item',
@@ -171,7 +171,7 @@ function rebild_page_extended_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 14,
       ),
     ),
     'entity_type' => 'field_collection_item',
@@ -212,7 +212,7 @@ function rebild_page_extended_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_view',
-        'weight' => 13,
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'field_collection_item',
@@ -239,10 +239,9 @@ function rebild_page_extended_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'file',
         'settings' => array(),
-        'type' => 'file_default',
-        'weight' => 9,
+        'type' => 'hidden',
+        'weight' => 12,
       ),
     ),
     'entity_type' => 'field_collection_item',
@@ -386,7 +385,7 @@ function rebild_page_extended_field_default_field_instances() {
         'module' => 'fancybox',
         'settings' => array(
           'image_link_style' => 'galleri_stor',
-          'image_style' => 'nyhed_oversigt',
+          'image_style' => 'section_text',
         ),
         'type' => 'fancybox_image',
         'weight' => 1,
@@ -450,6 +449,90 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'field_collection_item-field_main_sections-field_sec_txt_vid_body'
+  $field_instances['field_collection_item-field_main_sections-field_sec_txt_vid_body'] = array(
+    'bundle' => 'field_main_sections',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 10,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_sec_txt_vid_body',
+    'label' => 'Brødtekst',
+    'required' => 0,
+    'settings' => array(
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 15,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_main_sections-field_sec_txt_vid_video'
+  $field_instances['field_collection_item-field_main_sections-field_sec_txt_vid_video'] = array(
+    'bundle' => 'field_main_sections',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'youtube',
+        'settings' => array(
+          'colorbox' => array(
+            'gallery' => 0,
+            'parameters' => array(
+              'autohide' => 1,
+              'autoplay' => 0,
+              'controls' => 0,
+              'height' => 360,
+              'iv_load_policy' => 0,
+              'showinfo' => 1,
+              'width' => 640,
+            ),
+          ),
+          'image_link' => 'colorbox',
+          'image_style' => 'video_thumbnail',
+        ),
+        'type' => 'youtube_thumbnail',
+        'weight' => 8,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_sec_txt_vid_video',
+    'label' => 'Video',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'youtube',
+      'settings' => array(),
+      'type' => 'youtube',
+      'weight' => 14,
+    ),
+  );
+
   // Exported field_instance: 'field_collection_item-field_main_sections-field_sec_type'
   $field_instances['field_collection_item-field_main_sections-field_sec_type'] = array(
     'bundle' => 'field_main_sections',
@@ -461,7 +544,7 @@ function rebild_page_extended_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 13,
       ),
     ),
     'entity_type' => 'field_collection_item',
@@ -482,6 +565,46 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'field_collection_item-field_main_sections-field_sec_vid_video'
+  $field_instances['field_collection_item-field_main_sections-field_sec_vid_video'] = array(
+    'bundle' => 'field_main_sections',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'youtube',
+        'settings' => array(
+          'youtube_autohide' => 1,
+          'youtube_autoplay' => 0,
+          'youtube_controls' => 0,
+          'youtube_height' => '',
+          'youtube_iv_load_policy' => 0,
+          'youtube_showinfo' => 1,
+          'youtube_size' => 'responsive',
+          'youtube_width' => '',
+        ),
+        'type' => 'youtube_video',
+        'weight' => 11,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_sec_vid_video',
+    'label' => 'Video',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'youtube',
+      'settings' => array(),
+      'type' => 'youtube',
+      'weight' => 12,
+    ),
+  );
+
   // Exported field_instance: 'field_collection_item-field_sec_nav_elment-field_sec_nav_body'
   $field_instances['field_collection_item-field_sec_nav_elment-field_sec_nav_body'] = array(
     'bundle' => 'field_sec_nav_elment',
@@ -491,9 +614,21 @@ function rebild_page_extended_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
+        'module' => 'smart_trim',
+        'settings' => array(
+          'more_link' => 0,
+          'more_text' => 'Read more',
+          'summary_handler' => 'full',
+          'trim_length' => 135,
+          'trim_link' => 0,
+          'trim_options' => array(
+            'text' => 'text',
+          ),
+          'trim_preserve_tags' => '',
+          'trim_suffix' => '...',
+          'trim_type' => 'chars',
+        ),
+        'type' => 'smart_trim_format',
         'weight' => 2,
       ),
     ),
@@ -531,7 +666,7 @@ function rebild_page_extended_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => 'nyhed_oversigt',
+          'image_style' => 'section_navigation',
         ),
         'type' => 'image',
         'weight' => 0,
@@ -579,14 +714,18 @@ function rebild_page_extended_field_default_field_instances() {
         ),
         'manualcrop_crop_info' => 1,
         'manualcrop_default_crop_area' => 1,
-        'manualcrop_enable' => 0,
+        'manualcrop_enable' => 1,
         'manualcrop_inline_crop' => 0,
         'manualcrop_instant_crop' => FALSE,
         'manualcrop_instant_preview' => 1,
-        'manualcrop_keyboard' => 1,
+        'manualcrop_keyboard' => 0,
         'manualcrop_maximize_default_crop_area' => 0,
-        'manualcrop_require_cropping' => array(),
-        'manualcrop_styles_list' => array(),
+        'manualcrop_require_cropping' => array(
+          'section_navigation' => 'section_navigation',
+        ),
+        'manualcrop_styles_list' => array(
+          'section_navigation' => 'section_navigation',
+        ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
       ),
@@ -631,9 +770,9 @@ function rebild_page_extended_field_default_field_instances() {
         'insert_plugin' => 'raw_url',
       ),
       'rel_remove' => 'default',
-      'title' => 'none',
+      'title' => 'value',
       'title_maxlength' => 128,
-      'title_value' => '',
+      'title_value' => 'Læs mere',
       'url' => 0,
       'user_register_form' => FALSE,
       'validate_url' => 1,
@@ -1090,6 +1229,7 @@ function rebild_page_extended_field_default_field_instances() {
   t('Tags');
   t('Titel');
   t('Type');
+  t('Video');
 
   return $field_instances;
 }

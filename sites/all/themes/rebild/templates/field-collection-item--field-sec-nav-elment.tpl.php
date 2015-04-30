@@ -31,13 +31,16 @@
 <div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <div class="content"<?php print $content_attributes; ?>>
     <?php
+	    hide($content['field_sec_nav_title']);
 	    hide($content['field_sec_nav_link']);
 	    $link_elem = $content['field_sec_nav_link'][0]['#element'];
 	  ?>
 	  <a href="<?php print $link_elem['url']; ?>" title="<?php print $link_elem['title']; ?>"<?php if(isset($link_elem['attributes']['target'])) print 'target="'.$link_elem['attributes']['target'].'"'; ?> class="nav-link">
-	  <?php
-      print render($content);
-    ?>
+		  <h3><?php print $content['field_sec_nav_title'][0]['#markup']; ?></h3>
+		  <?php
+	      print render($content);
+	    ?>
+	    <span class="read-more"><?php print $link_elem['title']; ?></span>
 	  </a>
   </div>
 </div>

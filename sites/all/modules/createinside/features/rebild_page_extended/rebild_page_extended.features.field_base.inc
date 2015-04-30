@@ -317,6 +317,59 @@ function rebild_page_extended_field_default_field_bases() {
     'type' => 'image',
   );
 
+  // Exported field_base: 'field_sec_txt_vid_body'
+  $field_bases['field_sec_txt_vid_body'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_sec_txt_vid_body',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_sec_txt_vid_video'
+  $field_bases['field_sec_txt_vid_video'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_sec_txt_vid_video',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(),
+    'indexes' => array(
+      'video_id' => array(
+        0 => 'video_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'youtube',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'youtube',
+  );
+
   // Exported field_base: 'field_sec_type'
   $field_bases['field_sec_type'] = array(
     'active' => 1,
@@ -339,17 +392,42 @@ function rebild_page_extended_field_default_field_bases() {
       'allowed_values' => array(
         'sec_txt' => 'Tekst',
         'sec_txt_img' => 'Tekst og billede',
+        'sec_txt_vid' => 'Tekst og video',
         'sec_acc' => 'Accordion',
         'sec_ses' => 'Selvbetjeningsløsninger',
+        'sec_gal' => 'Billedgalleri',
+        'sec_vidl' => 'Video',
         'sec_pdf' => 'PDF-liste',
         'sec_nav' => 'Navigationsliste',
-        'sec_gal' => 'Billedgalleri',
         'sec_gis' => 'GIS-kort',
       ),
       'allowed_values_function' => '',
     ),
     'translatable' => 0,
     'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_sec_vid_video'
+  $field_bases['field_sec_vid_video'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_sec_vid_video',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(),
+    'indexes' => array(
+      'video_id' => array(
+        0 => 'video_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'youtube',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'youtube',
   );
 
   return $field_bases;
