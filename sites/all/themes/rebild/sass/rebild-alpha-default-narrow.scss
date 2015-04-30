@@ -134,6 +134,40 @@ Landingpage
     }
   } 
 }
+
+/*------------------------------------------------------------------
+  Nodes
+-------------------------------------------------------------------*/
+
+/* Basic Page Extended */
+#region-content {
+	.node-page-extended {
+		
+		.field-name-field-main-sections {
+			/* Navigation List */
+			.field-name-field-sec-nav-elment {
+				> .field-items {
+					> .field-item {
+						.field-name-field-sec-nav-image {
+							width: 76px;
+						}
+						h3 {
+							padding-left: 88px;
+						}
+						.field-name-field-sec-nav-body {
+							padding-left: 88px;
+							margin-bottom: 6px;
+						}
+						.read-more {
+							padding-left: 88px;
+						}
+					}	
+				}
+			}
+		}
+	}
+}
+
 /*------------------------------------------------------------------
   Blocks
 -------------------------------------------------------------------*/

@@ -20,11 +20,12 @@
 
 @font-face {
 	font-family: 'Rebild';
-	src:url('../fonts/Rebild.eot');
-	src:url('../fonts/Rebild.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Rebild.svg#Rebild') format('svg'),
-		url('../fonts/Rebild.woff') format('woff'),
-		url('../fonts/Rebild.ttf') format('truetype');
+	src:url('../fonts/Rebild.eot?389so7');
+	src:url('../fonts/Rebild.eot?#iefix389so7') format('embedded-opentype'),
+		url('../fonts/Rebild.woff2?389so7') format('woff2'),
+		url('../fonts/Rebild.woff?389so7') format('woff'),
+		url('../fonts/Rebild.ttf?389so7') format('truetype'),
+		url('../fonts/Rebild.svg?389so7#Rebild') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -44,6 +45,10 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
+
+.icon-file-pdf:before {
+	content: "\e602";
+}
 
 .icon-pencil:before {
 	content: "\e905";
