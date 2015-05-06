@@ -34,12 +34,24 @@ $(function() {
 	 */
 	
 	// Borger DK accordions
-	$(".field-name-body").accordion({
-    header: "h2.mArticle",
-    autoHeight: false,
-    collapsible: true,
-    active: false
-	});	
+	// Old format
+	if($("h2.mArticle").length>0) {
+		$(".field-name-body").accordion({
+	    header: "h2.mArticle",
+	    autoHeight: false,
+	    collapsible: true,
+	    active: false
+		});	
+	}
+	// New format
+	else {
+		$(".field-name-body").accordion({
+	    header: "h3",
+	    autoHeight: false,
+	    collapsible: true,
+	    active: false
+		});	
+	}
 	// Agenda accordion
 	$(".view-agenda-accordion .views-row").accordion({
     header: ".views-field-field-agenda-item-caption",

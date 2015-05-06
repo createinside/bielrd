@@ -42,20 +42,6 @@ function os2web_borger_dk_uninstall() {
   if (db_table_exists('os2web_borger_dk_article_titles')) {
     db_query('DROP TABLE {os2web_borger_dk_article_titles}');
   }
-  
- // List custom content types added by this feature
-  $custom_ctypes = array(
-    'os2web_borger_dk_article',
-  );
-
-  // Go through each and unlock the content type
-  foreach ($custom_ctypes as $ctype) {
-    db_query("UPDATE {node_type} SET `custom` = 1, `locked` = 0 WHERE `type` = :ctype", array(':ctype' => $ctype));
-  }
-
-  // Clean Drupal cache; this is necessary for the "Delete" link to appear
-  // next to the content type created by the feature.
-  drupal_flush_all_caches();  
 }
 
 /**
@@ -67,7 +53,7 @@ function os2web_borger_dk_install() {
   // our new node-type.
   $data = field_info_instances('node', 'os2web_borger_dk_article');
   // Some of the fields are locked from from being changed.
-  $locked_os2web_types = array('field_os2web_borger_dk_borgerurl' => 1, 'field_termref_kle' => 2);
+  $locked_os2web_types = array('field_os2web_borger_dk_borgerurl' => 1, 'field_os2web_borger_dk_kle' => 2);
   if (!empty($data)) {
     $edit_field_names = array('title' => 'title');
     $display_field_names = array('title' => 'title');

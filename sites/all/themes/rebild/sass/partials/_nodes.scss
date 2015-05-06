@@ -235,7 +235,7 @@ Share nodes
 #region-content {
 	.node-os2web-borger-dk-article {
 		.field.field-name-body {
-			margin: 2em 0 2em 0;
+			margin: 0 0 1em 0;
 		}
 		.field-name-field-os2web-borger-dk-header {
 			margin-bottom: $spacing-std;
@@ -244,7 +244,8 @@ Share nodes
 		}
 		.microArticle {
 			position: relative;
-			h2.mArticle {
+			h2.mArticle,
+			> h3 {
 				background: #e6e6e6;
 				color: $text-color;
 				font-size: 1.08em;
@@ -255,20 +256,25 @@ Share nodes
 				cursor: pointer;
 				@include border-radius($border-radius-std);
 			}	
-			h2.mArticle:before {
+			h2.mArticle:before,
+			> h3:before {
 				@include icon-prepare();
 				content: "\e00f";	
 				margin-right: 0.5em;				
 			}
+			h2.mArticle.ui-state-active,
+			> h3.ui-state-active {
+				background-color: $color-blue;
+				color: #fff;	
+				&:before {
+					content: "\e010";	
+				}		
+			}	
 			div.mArticle {
 				padding: $spacing-std/2 $spacing-std;
 				margin: 0;		
 			}
 		}
-		h2.mArticle.ui-state-active {
-			background-color: $color-blue;
-			color: #fff;			
-		}	
 	}	
 }
 

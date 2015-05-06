@@ -42,7 +42,7 @@ function os2web_borger_dk_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_os2web_borger_dk_article';
-  $strongarm->value = '0';
+  $strongarm->value = '2';
   $export['comment_os2web_borger_dk_article'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -92,12 +92,6 @@ function os2web_borger_dk_strongarm() {
       'meeting_detail_view' => array(
         'custom_settings' => FALSE,
       ),
-      'diff_standard' => array(
-        'custom_settings' => FALSE,
-      ),
-      'revision' => array(
-        'custom_settings' => FALSE,
-      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -106,12 +100,6 @@ function os2web_borger_dk_strongarm() {
         ),
         'path' => array(
           'weight' => '13',
-        ),
-        'metatags' => array(
-          'weight' => '11',
-        ),
-        'redirect' => array(
-          'weight' => '19',
         ),
       ),
       'display' => array(),
@@ -131,7 +119,10 @@ function os2web_borger_dk_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_os2web_borger_dk_article';
   $strongarm->value = array(
-    0 => 'main-menu',
+    0 => 'borgerdkmenu2',
+    1 => 'os2web-main-menu',
+    2 => 'main-menu',
+    3 => 'os2web-menu-contentmenu',
   );
   $export['menu_options_os2web_borger_dk_article'] = $strongarm;
 
@@ -139,24 +130,21 @@ function os2web_borger_dk_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_os2web_borger_dk_article';
-  $strongarm->value = 'main-menu:0';
+  $strongarm->value = 'borgerdkmenu2:0';
   $export['menu_parent_os2web_borger_dk_article'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_os2web_borger_dk_article';
-  $strongarm->value = array(
-    0 => 'moderation',
-    1 => 'revision',
-  );
+  $strongarm->value = array();
   $export['node_options_os2web_borger_dk_article'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_os2web_borger_dk_article';
-  $strongarm->value = '0';
+  $strongarm->value = '1';
   $export['node_preview_os2web_borger_dk_article'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -165,186 +153,6 @@ function os2web_borger_dk_strongarm() {
   $strongarm->name = 'node_submitted_os2web_borger_dk_article';
   $strongarm->value = 0;
   $export['node_submitted_os2web_borger_dk_article'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'os2web_borger_dk_display';
-  $strongarm->value = array(
-    'title' => 'title',
-    'body' => 'body',
-    'field_billede' => 'field_billede',
-    'field_os2web_borger_dk_borgerurl' => 'field_os2web_borger_dk_borgerurl',
-    'field_os2web_borger_dk_byline' => 'field_os2web_borger_dk_byline',
-    'field_os2web_borger_dk_header' => 'field_os2web_borger_dk_header',
-    'field_os2web_borger_dk_legislati' => 'field_os2web_borger_dk_legislati',
-    'field_os2web_borger_dk_pagetitle' => 'field_os2web_borger_dk_pagetitle',
-    'field_os2web_borger_dk_post_text' => 'field_os2web_borger_dk_post_text',
-    'field_os2web_borger_dk_pre_text' => 'field_os2web_borger_dk_pre_text',
-    'field_os2web_borger_dk_recommend' => 'field_os2web_borger_dk_recommend',
-    'field_os2web_borger_dk_selfservi' => 'field_os2web_borger_dk_selfservi',
-    'field_os2web_borger_dk_shortlist' => 'field_os2web_borger_dk_shortlist',
-    'field_main_section' => 'field_main_section',
-    'field_main_tags' => 'field_main_tags',
-  );
-  $export['os2web_borger_dk_display'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'os2web_borger_dk_editable';
-  $strongarm->value = array(
-    'field_billede' => 'field_billede',
-    'field_os2web_borger_dk_post_text' => 'field_os2web_borger_dk_post_text',
-    'field_os2web_borger_dk_pre_text' => 'field_os2web_borger_dk_pre_text',
-    'field_main_section' => 'field_main_section',
-    'field_main_tags' => 'field_main_tags',
-    'title' => 0,
-    'body' => 0,
-    'field_os2web_borger_dk_byline' => 0,
-    'field_os2web_borger_dk_header' => 0,
-    'field_os2web_borger_dk_legislati' => 0,
-    'field_os2web_borger_dk_pagetitle' => 0,
-    'field_os2web_borger_dk_recommend' => 0,
-    'field_os2web_borger_dk_selfservi' => 0,
-    'field_os2web_borger_dk_shortlist' => 0,
-  );
-  $export['os2web_borger_dk_editable'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'os2web_borger_dk_municipality_active';
-  $strongarm->value = '840';
-  $export['os2web_borger_dk_municipality_active'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'os2web_borger_dk_municipality_list';
-  $strongarm->value = array(
-    0 => '--Not selected--',
-    165 => 'Albertslund',
-    201 => 'Allerød',
-    420 => 'Assens',
-    151 => 'Ballerup',
-    530 => 'Billund',
-    400 => 'Bornholm',
-    153 => 'Brøndby',
-    810 => 'Brønderslev',
-    155 => 'Dragør',
-    240 => 'Egedal',
-    561 => 'Esbjerg',
-    563 => 'Fanø',
-    710 => 'Favrskov',
-    320 => 'Faxe',
-    210 => 'Fredensborg',
-    607 => 'Fredericia',
-    147 => 'Frederiksberg',
-    813 => 'Frederikshavn',
-    250 => 'Frederikssund',
-    190 => 'Furesø',
-    430 => 'Faaborg-Midtfyn',
-    157 => 'Gentofte',
-    159 => 'Gladsaxe',
-    161 => 'Glostrup',
-    253 => 'Greve',
-    270 => 'Gribskov',
-    376 => 'Guldborgsund',
-    510 => 'Haderslev',
-    260 => 'Halsnæs',
-    766 => 'Hedensted',
-    217 => 'Helsingør',
-    163 => 'Herlev',
-    657 => 'Herning',
-    219 => 'Hillerød',
-    860 => 'Hjørring',
-    316 => 'Holbæk',
-    661 => 'Holstebro',
-    615 => 'Horsens',
-    167 => 'Hvidovre',
-    169 => 'Høje-Taastrup',
-    223 => 'Hørsholm',
-    756 => 'Ikast-Brande',
-    183 => 'Ishøj',
-    849 => 'Jammerbugt',
-    326 => 'Kalundborg',
-    440 => 'Kerteminde',
-    621 => 'Kolding',
-    101 => 'København',
-    259 => 'Køge',
-    482 => 'Langeland',
-    350 => 'Lejre',
-    665 => 'Lemvig',
-    360 => 'Lolland',
-    173 => 'Lyngby-Taarbæk',
-    825 => 'Læsø',
-    846 => 'Mariagerfjord',
-    410 => 'Middelfart',
-    773 => 'Morsø',
-    707 => 'Norddjurs',
-    480 => 'Nordfyns',
-    450 => 'Nyborg',
-    370 => 'Næstved',
-    727 => 'Odder',
-    461 => 'Odense',
-    306 => 'Odsherred',
-    730 => 'Randers',
-    840 => 'Rebild',
-    760 => 'Ringkøbing-Skjern',
-    329 => 'Ringsted',
-    265 => 'Roskilde',
-    230 => 'Rudersdal',
-    175 => 'Rødovre',
-    741 => 'Samsø',
-    740 => 'Silkeborg',
-    746 => 'Skanderborg',
-    779 => 'Skive',
-    330 => 'Slagelse',
-    269 => 'Solrød',
-    340 => 'Sorø',
-    336 => 'Stevns',
-    671 => 'Struer',
-    479 => 'Svendborg',
-    706 => 'Syddjurs',
-    540 => 'Sønderborg',
-    787 => 'Thisted',
-    550 => 'Tønder',
-    185 => 'Tårnby',
-    187 => 'Vallensbæk',
-    573 => 'Varde',
-    575 => 'Vejen',
-    630 => 'Vejle',
-    820 => 'Vesthimmerland',
-    791 => 'Viborg',
-    390 => 'Vordingborg',
-    492 => 'Ærø',
-    580 => 'Aabenraa',
-    851 => 'Aalborg',
-    751 => 'Aarhus',
-  );
-  $export['os2web_borger_dk_municipality_list'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'os2web_borger_dk_nightly_article_sync';
-  $strongarm->value = '3';
-  $export['os2web_borger_dk_nightly_article_sync'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'os2web_borger_dk_titles_search_auto_submit';
-  $strongarm->value = 0;
-  $export['os2web_borger_dk_titles_search_auto_submit'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_node_os2web_borger_dk_article_pattern';
-  $strongarm->value = '[node:menu-link:parents:join-path]/[node:title]';
-  $export['pathauto_node_os2web_borger_dk_article_pattern'] = $strongarm;
 
   return $export;
 }
