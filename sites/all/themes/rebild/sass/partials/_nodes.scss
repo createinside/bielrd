@@ -451,6 +451,11 @@ Share nodes
 						font-family: $font-family-std;
 						font-style: normal;
 					}
+					.print-agenda-item {
+						float: right;
+						font-style: normal;
+						text-decoration: underline;
+					}
 				}
 				p:last-child {
 					margin-bottom: 1.25em;

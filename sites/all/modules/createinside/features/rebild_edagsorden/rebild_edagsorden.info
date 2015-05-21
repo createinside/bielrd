@@ -153,4 +153,4 @@ features[views_view][] = agenda_accordion
 features[views_view][] = agenda_overview
 features_exclude[dependencies][field_collection_fieldset] = field_collection_fieldset
 features_exclude[field][taxonomy_term-edagsorden_committees-field_edagsorden_com_id] = taxonomy_term-edagsorden_committees-field_edagsorden_com_id
-mtime = 1417168603
+mtime = 1426249683

@@ -2,6 +2,7 @@ $ = jQuery;
 
 $(function() {
 
+	// Sticky Header
 	$('#section-header').waypoint('sticky', {
 		offset: -20
 	});
@@ -145,23 +146,26 @@ $(function() {
 		if($(this).hasClass('open')) {
 			$(this).html('<span class="icon-double-angle-up"></span> Luk alle punkter');
 			$('.ui-accordion-header').not('.ui-state-active').click();
-			/*
-			$('.ui-accordion-header').not('.ui-state-active').addClass('ui-state-active').addClass('ui-state-focus').attr("aria-expanded", true);
-			$('.ui-accordion-content').slideDown(0);
-			*/
 		}
 		// Collapse All
 		else {
 			$(this).html('<span class="icon-double-angle-down"></span> Udvid alle punkter');
 			$('.ui-accordion-header.ui-state-active').click();
-			//$(this).html('<span class="icon-double-angle-down"></span> Udvid alle punkter');
-			/*
-			$('.ui-accordion-header.ui-state-active').removeClass('ui-state-active').removeClass('ui-state-focus').attr("aria-expanded", false);
-			$('.ui-accordion-content').slideUp(0);	
-			*/
 		}
 		$(".view-agenda-accordion .views-row").accordion("option", {animated: true });
 		window.scrollTo(0,0);
+	});
+	
+	// Agenda Item Print
+	$(".print-agenda-item").click(function(e) {
+		e.preventDefault();
+		
+		$accordion = $(this).closest(".ui-accordion");
+		
+		$accordion.find(".ui-accordion-content").printMe({
+			"title": $accordion.find(".ui-accordion-header .field-content").html(),
+			"path": "/sites/all/themes/rebild/css/print-agenda.css"
+		});
 	});
 
 });

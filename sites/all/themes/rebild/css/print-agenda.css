@@ -1,13 +1,57 @@
 body {
-	background: white;
-	background-image: none;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 12px;
 }
-#page {
-	background: none;
-}
-.ui-accordion-content {
-	display: block !important;
-}
-.area-print-trigger {
+a.print-agenda-item {
 	display: none;
+}
+
+/* General Elements */
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	padding: 0;
+	margin: 1.5em 0 0.25em;
+}
+h1 {
+	font-size: 1.5em;
+	line-height: 1.5em;
+}
+h2 {
+	font-size: 1.35em;
+	line-height: 1.35em;
+}
+h3 {
+	font-size: 1.25em;
+	line-height: 1.25em;
+}
+p {
+	margin-bottom: 1.25em;
+	line-height: 1.25em;
+	word-wrap: break-word;
+}
+p:last-child {
+	margin-bottom: 0;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+
+/* Links */
+a {
+	color: #7f9dcd;
+}	
+
+/* Lists */
+ul, ol {
+	margin-bottom: 1.25em;
+	li {
+		
+	}
+}
+ul:last-child,
+ol:last-child {
+	margin-bottom: 0;
 }
