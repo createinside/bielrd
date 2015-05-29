@@ -427,7 +427,7 @@ function rebild_self_service_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
-  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -541,6 +541,16 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['fields']['field_self_service_pdf']['settings'] = array(
     'file_view_mode' => 'default',
   );
+  /* Felt: Global: Tilpasset tekst */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<p>Driller den digitale selvbetjening?<br />
+Ring til <strong>Den Digitale Hotline</strong> på telefon 70 20 00 00.<br />
+Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'selfservice-help';
   /* Sorteringskriterie: Ord i ordforråd: Navn */
   $handler->display->display_options['sorts']['name']['id'] = 'name';
   $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
@@ -739,6 +749,9 @@ function rebild_self_service_views_default_views() {
     t('.'),
     t('<span class="kategori-[tid]">[name]</span>'),
     t('<a href="[field_self_service_pdf]" target="_new">Download fil</a>'),
+    t('<p>Driller den digitale selvbetjening?<br />
+Ring til <strong>Den Digitale Hotline</strong> på telefon 70 20 00 00.<br />
+Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>'),
     t('Emner'),
     t('Alfabetisk'),
     t('EVA Field'),

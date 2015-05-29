@@ -593,6 +593,11 @@
 					margin-top: 1em;
 					font-size: $font-size-small;
 				}
+				.selfservice-help {
+					border-top: 1px dotted $text-color;
+					margin-top: 1em;
+					padding-top: 1em;				
+				}
 			}
 		}
 	}

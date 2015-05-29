@@ -4777,39 +4777,52 @@ div.workbench-info-block a {
   margin-top: 1em;
   font-size: 0.91667em;
 }
+/* line 596, ../sass/partials/_views.scss */
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-grouping-content .accordion-content-level-2 .selfservice-help,
+#region-content .view-selfservice-items.view-display-id-alfabetisk .view-content .accordion-content-level-2 .selfservice-help,
+#region-content .view-selfservice-items.view-display-id-emner .view-grouping-content .accordion-content-level-2 .selfservice-help,
+#region-content .view-selfservice-items.view-display-id-emner .view-content .accordion-content-level-2 .selfservice-help,
+#region-content .view-selfservice-items.view-display-id-embedded .view-grouping-content .accordion-content-level-2 .selfservice-help,
+#region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2 .selfservice-help,
+#region-content .view-selfservice-items.view-display-id-embedded_ext .view-grouping-content .accordion-content-level-2 .selfservice-help,
+#region-content .view-selfservice-items.view-display-id-embedded_ext .view-content .accordion-content-level-2 .selfservice-help {
+  border-top: 1px dotted #474747;
+  margin-top: 1em;
+  padding-top: 1em;
+}
 
 /* Alphabetical list */
-/* line 604, ../sass/partials/_views.scss */
+/* line 609, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-alfabetisk .view-content > h3 {
   padding: 8px;
 }
 
 /* Embedded accordion */
-/* line 612, ../sass/partials/_views.scss */
+/* line 617, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-embedded,
 #region-content .view-selfservice-items.view-display-id-embedded_ext {
   margin: 30px 0 0 0;
 }
-/* line 615, ../sass/partials/_views.scss */
+/* line 620, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-embedded h2.title,
 #region-content .view-selfservice-items.view-display-id-embedded_ext h2.title {
   font-size: 1.08em;
   margin: 20px 0 10px;
 }
-/* line 620, ../sass/partials/_views.scss */
+/* line 625, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-embedded .view-content > h3,
 #region-content .view-selfservice-items.view-display-id-embedded_ext .view-content > h3 {
   background: #68a386;
   color: white;
   padding: 6px 8px;
 }
-/* line 625, ../sass/partials/_views.scss */
+/* line 630, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-embedded .view-content > h3.ui-state-active,
 #region-content .view-selfservice-items.view-display-id-embedded_ext .view-content > h3.ui-state-active {
   background: #a3a3a3;
   color: #474747;
 }
-/* line 629, ../sass/partials/_views.scss */
+/* line 634, ../sass/partials/_views.scss */
 #region-content .view-selfservice-items.view-display-id-embedded .view-content .accordion-content-level-2,
 #region-content .view-selfservice-items.view-display-id-embedded_ext .view-content .accordion-content-level-2 {
   padding: 10px 20px 20px;
@@ -4818,49 +4831,49 @@ div.workbench-info-block a {
 /**
  * AGENDAS
  */
-/* line 641, ../sass/partials/_views.scss */
+/* line 646, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .view-filters {
   margin: 20px 0;
 }
-/* line 643, ../sass/partials/_views.scss */
+/* line 648, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .view-filters label {
   margin: 0 0 10px 0;
 }
-/* line 646, ../sass/partials/_views.scss */
+/* line 651, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .view-filters .views-exposed-widget {
   position: relative;
 }
-/* line 648, ../sass/partials/_views.scss */
+/* line 653, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .view-filters .views-exposed-widget select {
   margin: 0;
   padding: 0;
 }
-/* line 652, ../sass/partials/_views.scss */
+/* line 657, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .view-filters .views-exposed-widget .customSelect {
   border: 1px solid #dbdbdb;
 }
-/* line 655, ../sass/partials/_views.scss */
+/* line 660, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .view-filters .views-exposed-widget .form-submit {
   background: #7f9dcd;
   border: none;
   margin: 24px 0 0 0;
   display: none;
 }
-/* line 661, ../sass/partials/_views.scss */
+/* line 666, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .view-filters .views-exposed-widget .ajax-progress {
   margin-top: 33px;
 }
-/* line 666, ../sass/partials/_views.scss */
+/* line 671, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview h3 {
   text-transform: capitalize;
   margin-top: 20px;
   margin-bottom: 0.5em;
 }
-/* line 671, ../sass/partials/_views.scss */
+/* line 676, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .views-row {
   margin-bottom: 0.5em;
 }
-/* line 673, ../sass/partials/_views.scss */
+/* line 678, ../sass/partials/_views.scss */
 #region-content .view-agenda-overview .views-row a {
   color: #7f9dcd;
 }
@@ -4868,37 +4881,37 @@ div.workbench-info-block a {
 /**
  * SEARCH RESULTS
  */
-/* line 682, ../sass/partials/_views.scss */
+/* line 687, ../sass/partials/_views.scss */
 #search-results-page h2 {
   padding-bottom: 1em;
 }
-/* line 685, ../sass/partials/_views.scss */
+/* line 690, ../sass/partials/_views.scss */
 #search-results-page .search-result {
   padding: 15px 10px;
   margin: 0;
 }
-/* line 691, ../sass/partials/_views.scss */
+/* line 696, ../sass/partials/_views.scss */
 #search-results-page .search-result h3 {
   margin: 0 0 10px 0;
 }
-/* line 693, ../sass/partials/_views.scss */
+/* line 698, ../sass/partials/_views.scss */
 #search-results-page .search-result h3 a {
   color: #7f9dcd;
 }
-/* line 697, ../sass/partials/_views.scss */
+/* line 702, ../sass/partials/_views.scss */
 #search-results-page .search-result .search-date {
   font-size: 0.91667em;
   margin: 0 0 10px;
 }
-/* line 701, ../sass/partials/_views.scss */
+/* line 706, ../sass/partials/_views.scss */
 #search-results-page .search-result .search-text {
   line-height: 1.25em;
 }
-/* line 705, ../sass/partials/_views.scss */
+/* line 710, ../sass/partials/_views.scss */
 #search-results-page .odd {
   background: #f6f6f6;
 }
-/* line 708, ../sass/partials/_views.scss */
+/* line 713, ../sass/partials/_views.scss */
 #search-results-page ul.pager {
   margin: 20px 0;
 }
@@ -4906,32 +4919,32 @@ div.workbench-info-block a {
 /**
  * OFFERINGS
  */
-/* line 718, ../sass/partials/_views.scss */
+/* line 723, ../sass/partials/_views.scss */
 #region-content .view-offerings h2 {
   margin: 20px 0;
 }
-/* line 721, ../sass/partials/_views.scss */
+/* line 726, ../sass/partials/_views.scss */
 #region-content .view-offerings .views-row {
   margin-bottom: 20px;
 }
 
-/* line 728, ../sass/partials/_views.scss */
+/* line 733, ../sass/partials/_views.scss */
 #region-content .view-id-messages {
   margin-top: 25px;
 }
-/* line 730, ../sass/partials/_views.scss */
+/* line 735, ../sass/partials/_views.scss */
 #region-content .view-id-messages .date-nav-wrapper {
   margin: 0;
   padding: 0;
 }
-/* line 733, ../sass/partials/_views.scss */
+/* line 738, ../sass/partials/_views.scss */
 #region-content .view-id-messages .date-nav-wrapper .date-nav {
   margin: 0;
   padding: 0;
   height: auto;
   min-height: inherit;
 }
-/* line 741, ../sass/partials/_views.scss */
+/* line 746, ../sass/partials/_views.scss */
 #region-content .view-id-messages .ui-accordion .ui-accordion-header {
   background: #e6e6e6;
   color: #474747;
@@ -4944,17 +4957,17 @@ div.workbench-info-block a {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 750, ../sass/partials/_views.scss */
+/* line 755, ../sass/partials/_views.scss */
 #region-content .view-id-messages .ui-accordion .ui-accordion-header a {
   color: #474747;
   padding: 0;
   margin: 0;
 }
-/* line 755, ../sass/partials/_views.scss */
+/* line 760, ../sass/partials/_views.scss */
 #region-content .view-id-messages .ui-accordion .ui-accordion-header a:hover {
   text-decoration: none;
 }
-/* line 758, ../sass/partials/_views.scss */
+/* line 763, ../sass/partials/_views.scss */
 #region-content .view-id-messages .ui-accordion .ui-accordion-header a:before {
   font-family: 'Rebild';
   speak: none;
@@ -4969,16 +4982,16 @@ div.workbench-info-block a {
   content: "\e00f";
   margin-right: 0.5em;
 }
-/* line 764, ../sass/partials/_views.scss */
+/* line 769, ../sass/partials/_views.scss */
 #region-content .view-id-messages .ui-accordion .ui-accordion-header.ui-state-active {
   background-color: #7f9dcd;
 }
-/* line 766, ../sass/partials/_views.scss */
+/* line 771, ../sass/partials/_views.scss */
 #region-content .view-id-messages .ui-accordion .ui-accordion-header.ui-state-active a,
 #region-content .view-id-messages .ui-accordion .ui-accordion-header.ui-state-active .field-item {
   color: white;
 }
-/* line 770, ../sass/partials/_views.scss */
+/* line 775, ../sass/partials/_views.scss */
 #region-content .view-id-messages .ui-accordion .ui-accordion-header.ui-state-active a:before {
   font-family: 'Rebild';
   speak: none;
@@ -4993,16 +5006,16 @@ div.workbench-info-block a {
   content: "\e010";
   margin-right: 0.5em;
 }
-/* line 776, ../sass/partials/_views.scss */
+/* line 781, ../sass/partials/_views.scss */
 #region-content .view-id-messages .ui-accordion .ui-accordion-content {
   padding: 10px 20px;
   margin: 0;
 }
-/* line 779, ../sass/partials/_views.scss */
+/* line 784, ../sass/partials/_views.scss */
 #region-content .view-id-messages .ui-accordion .ui-accordion-content p {
   margin-bottom: 20px;
 }
-/* line 784, ../sass/partials/_views.scss */
+/* line 789, ../sass/partials/_views.scss */
 #region-content .view-id-messages .view-empty {
   margin: 20px 0 0 0;
 }

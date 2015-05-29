@@ -10,48 +10,6 @@
 function rebild_self_service_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-self_service-field_main_allow_publishing'
-  $field_instances['node-self_service-field_main_allow_publishing'] = array(
-    'bundle' => 'self_service',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => 'Tillad at fagredaktører kan udgive indholdet uden normal godkendelsesprocedure.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_main_allow_publishing',
-    'label' => 'Tillad udgivelse uden godkendelse',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 1,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 13,
-    ),
-  );
-
   // Exported field_instance: 'node-self_service-field_main_body'
   $field_instances['node-self_service-field_main_body'] = array(
     'bundle' => 'self_service',
@@ -126,6 +84,7 @@ function rebild_self_service_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
+        'display_all_day' => 0,
         'increment' => 15,
         'input_format' => 'd/m/Y - H:i:s',
         'input_format_custom' => '',
@@ -311,7 +270,7 @@ function rebild_self_service_field_default_field_instances() {
   $field_instances['node-self_service-field_self_service_pdf'] = array(
     'bundle' => 'self_service',
     'deleted' => 0,
-    'description' => 'Upload en PDF eller tekstfil fil til denne selvbetjeningsløsning.',
+    'description' => 'Upload en PDF eller tekstfil til denne selvbetjeningsløsning.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -440,10 +399,8 @@ function rebild_self_service_field_default_field_instances() {
   t('Link');
   t('Sektion');
   t('Tags');
-  t('Tillad at fagredaktører kan udgive indholdet uden normal godkendelsesprocedure.');
-  t('Tillad udgivelse uden godkendelse');
   t('Type');
-  t('Upload en PDF eller tekstfil fil til denne selvbetjeningsløsning.');
+  t('Upload en PDF eller tekstfil til denne selvbetjeningsløsning.');
   t('Vælg en kategori til selvbetjeningsløsningen.');
   t('Vælg en type af selvbetjeningsløsning.');
   t('Vælg et eller flere tags der er med til at beskrive indholdet.');
