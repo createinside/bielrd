@@ -719,7 +719,7 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filterkriterie: Indhold: Selvbetjeningløsninger (field_main_selfservice) */
+  /* Filterkriterie: Felt: Selvbetjeningløsninger (field_main_selfservice) */
   $handler->display->display_options['filters']['field_main_selfservice_target_id']['id'] = 'field_main_selfservice_target_id';
   $handler->display->display_options['filters']['field_main_selfservice_target_id']['table'] = 'field_data_field_main_selfservice';
   $handler->display->display_options['filters']['field_main_selfservice_target_id']['field'] = 'field_main_selfservice_target_id';
@@ -733,6 +733,128 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>';
   $handler->display->display_options['entity_type'] = 'node';
   $handler->display->display_options['bundles'] = array(
     0 => 'page',
+  );
+  $handler->display->display_options['show_title'] = 0;
+
+  /* Display: EVA Field Paragraphs */
+  $handler = $view->new_display('entity_view', 'EVA Field Paragraphs', 'embedded_ext');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'title',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Forbindelse: Entity Reference: Refererende entity */
+  $handler->display->display_options['relationships']['reverse_field_main_selfservice_paragraphs_item']['id'] = 'reverse_field_main_selfservice_paragraphs_item';
+  $handler->display->display_options['relationships']['reverse_field_main_selfservice_paragraphs_item']['table'] = 'node';
+  $handler->display->display_options['relationships']['reverse_field_main_selfservice_paragraphs_item']['field'] = 'reverse_field_main_selfservice_paragraphs_item';
+  $handler->display->display_options['relationships']['reverse_field_main_selfservice_paragraphs_item']['label'] = 'Paragraph';
+  $handler->display->display_options['relationships']['reverse_field_main_selfservice_paragraphs_item']['required'] = TRUE;
+  /* Forbindelse: Entity Reference: Refereret entity */
+  $handler->display->display_options['relationships']['field_main_selfservice_target_id_1']['id'] = 'field_main_selfservice_target_id_1';
+  $handler->display->display_options['relationships']['field_main_selfservice_target_id_1']['table'] = 'field_data_field_main_selfservice';
+  $handler->display->display_options['relationships']['field_main_selfservice_target_id_1']['field'] = 'field_main_selfservice_target_id';
+  $handler->display->display_options['relationships']['field_main_selfservice_target_id_1']['label'] = 'Indholdselement';
+  $handler->display->display_options['relationships']['field_main_selfservice_target_id_1']['required'] = TRUE;
+  /* Forbindelse: Indhold: Type (field_self_service_type) */
+  $handler->display->display_options['relationships']['field_self_service_type_tid']['id'] = 'field_self_service_type_tid';
+  $handler->display->display_options['relationships']['field_self_service_type_tid']['table'] = 'field_data_field_self_service_type';
+  $handler->display->display_options['relationships']['field_self_service_type_tid']['field'] = 'field_self_service_type_tid';
+  $handler->display->display_options['relationships']['field_self_service_type_tid']['label'] = 'type';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Indhold: Overskrift */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['relationship'] = 'field_main_selfservice_target_id';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Felt: Indhold: Brødtekst */
+  $handler->display->display_options['fields']['field_main_body']['id'] = 'field_main_body';
+  $handler->display->display_options['fields']['field_main_body']['table'] = 'field_data_field_main_body';
+  $handler->display->display_options['fields']['field_main_body']['field'] = 'field_main_body';
+  $handler->display->display_options['fields']['field_main_body']['relationship'] = 'field_main_selfservice_target_id';
+  $handler->display->display_options['fields']['field_main_body']['label'] = '';
+  $handler->display->display_options['fields']['field_main_body']['element_label_colon'] = FALSE;
+  /* Felt: Ord i ordforråd: Beskrivelse af term */
+  $handler->display->display_options['fields']['description']['id'] = 'description';
+  $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['description']['field'] = 'description';
+  $handler->display->display_options['fields']['description']['relationship'] = 'field_self_service_type_tid';
+  $handler->display->display_options['fields']['description']['label'] = '';
+  $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['description']['hide_empty'] = TRUE;
+  /* Felt: Indhold: Link */
+  $handler->display->display_options['fields']['field_self_service_link']['id'] = 'field_self_service_link';
+  $handler->display->display_options['fields']['field_self_service_link']['table'] = 'field_data_field_self_service_link';
+  $handler->display->display_options['fields']['field_self_service_link']['field'] = 'field_self_service_link';
+  $handler->display->display_options['fields']['field_self_service_link']['relationship'] = 'field_main_selfservice_target_id';
+  $handler->display->display_options['fields']['field_self_service_link']['label'] = '';
+  $handler->display->display_options['fields']['field_self_service_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_self_service_link']['click_sort_column'] = 'url';
+  /* Felt: Indhold: Fil */
+  $handler->display->display_options['fields']['field_self_service_pdf']['id'] = 'field_self_service_pdf';
+  $handler->display->display_options['fields']['field_self_service_pdf']['table'] = 'field_data_field_self_service_pdf';
+  $handler->display->display_options['fields']['field_self_service_pdf']['field'] = 'field_self_service_pdf';
+  $handler->display->display_options['fields']['field_self_service_pdf']['relationship'] = 'field_main_selfservice_target_id';
+  $handler->display->display_options['fields']['field_self_service_pdf']['label'] = '';
+  $handler->display->display_options['fields']['field_self_service_pdf']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_self_service_pdf']['alter']['text'] = '<a href="[field_self_service_pdf]" target="_new">Download fil</a>';
+  $handler->display->display_options['fields']['field_self_service_pdf']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_self_service_pdf']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_self_service_pdf']['type'] = 'file_url_plain';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sorteringskriterie: Indhold: Overskrift */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
+  /* Sorteringskriterie: Ord i ordforråd: Navn */
+  $handler->display->display_options['sorts']['name']['id'] = 'name';
+  $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['name']['field'] = 'name';
+  $handler->display->display_options['sorts']['name']['relationship'] = 'field_self_service_type_tid';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Kontekstuelt filter: Paragraphs item: Paragraphs item ID */
+  $handler->display->display_options['arguments']['item_id']['id'] = 'item_id';
+  $handler->display->display_options['arguments']['item_id']['table'] = 'paragraphs_item';
+  $handler->display->display_options['arguments']['item_id']['field'] = 'item_id';
+  $handler->display->display_options['arguments']['item_id']['relationship'] = 'reverse_field_main_selfservice_paragraphs_item';
+  $handler->display->display_options['arguments']['item_id']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['item_id']['exception']['title'] = 'Alle';
+  $handler->display->display_options['arguments']['item_id']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['item_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['item_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['item_id']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filterkriterie: Felt: Selvbetjeningløsninger (field_main_selfservice) */
+  $handler->display->display_options['filters']['field_main_selfservice_target_id']['id'] = 'field_main_selfservice_target_id';
+  $handler->display->display_options['filters']['field_main_selfservice_target_id']['table'] = 'field_data_field_main_selfservice';
+  $handler->display->display_options['filters']['field_main_selfservice_target_id']['field'] = 'field_main_selfservice_target_id';
+  $handler->display->display_options['filters']['field_main_selfservice_target_id']['operator'] = 'not empty';
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['relationship'] = 'field_main_selfservice_target_id';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['entity_type'] = 'paragraphs_item';
+  $handler->display->display_options['bundles'] = array(
+    0 => 'selfservice',
   );
   $handler->display->display_options['show_title'] = 0;
   $translatables['selfservice_items'] = array(
@@ -758,6 +880,9 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>'),
     t('<h2 class="title">Selvbetjening:</h2>'),
     t('Selvbetjening'),
     t('Alle'),
+    t('EVA Field Paragraphs'),
+    t('Paragraph'),
+    t('Indholdselement'),
   );
   $export['selfservice_items'] = $view;
 

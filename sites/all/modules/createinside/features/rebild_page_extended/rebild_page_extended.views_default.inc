@@ -11,6 +11,97 @@ function rebild_page_extended_views_default_views() {
   $export = array();
 
   $view = new view();
+  $view->name = 'contact_content_sidebar';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'paragraphs_item';
+  $view->human_name = 'Contact - Content sidebar';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'mere';
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Udfør';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Gendan';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Sortér efter';
+  $handler->display->display_options['exposed_form']['options']['sort_asc_label'] = 'Stigende';
+  $handler->display->display_options['exposed_form']['options']['sort_desc_label'] = 'Faldende';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'entity';
+  /* Overskrift: Global: Ufiltreret tekst */
+  $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<a href="#contact-block-content" id="contact-block">Kontakt os</a>';
+  /* Forbindelse: Paragraphs item: Entity with the Kontakt (field_main_contact) */
+  $handler->display->display_options['relationships']['field_main_contact_node']['id'] = 'field_main_contact_node';
+  $handler->display->display_options['relationships']['field_main_contact_node']['table'] = 'paragraphs_item';
+  $handler->display->display_options['relationships']['field_main_contact_node']['field'] = 'field_main_contact_node';
+  $handler->display->display_options['relationships']['field_main_contact_node']['label'] = 'Indholdselement';
+  $handler->display->display_options['relationships']['field_main_contact_node']['required'] = TRUE;
+  /* Felt: Paragraphs item: Paragraphs item ID */
+  $handler->display->display_options['fields']['item_id']['id'] = 'item_id';
+  $handler->display->display_options['fields']['item_id']['table'] = 'paragraphs_item';
+  $handler->display->display_options['fields']['item_id']['field'] = 'item_id';
+  /* Kontekstuelt filter: Indhold: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['relationship'] = 'field_main_contact_node';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['exception']['title'] = 'Alle';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  /* Filterkriterie: Indhold: Kontakt (field_main_contact) */
+  $handler->display->display_options['filters']['field_main_contact_value']['id'] = 'field_main_contact_value';
+  $handler->display->display_options['filters']['field_main_contact_value']['table'] = 'field_data_field_main_contact';
+  $handler->display->display_options['filters']['field_main_contact_value']['field'] = 'field_main_contact_value';
+  $handler->display->display_options['filters']['field_main_contact_value']['relationship'] = 'field_main_contact_node';
+  $handler->display->display_options['filters']['field_main_contact_value']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_main_contact_value']['group'] = 1;
+  /* Filterkriterie: Paragraphs item: Bundle */
+  $handler->display->display_options['filters']['bundle']['id'] = 'bundle';
+  $handler->display->display_options['filters']['bundle']['table'] = 'paragraphs_item';
+  $handler->display->display_options['filters']['bundle']['field'] = 'bundle';
+  $handler->display->display_options['filters']['bundle']['value'] = array(
+    'contact' => 'contact',
+  );
+  $handler->display->display_options['filters']['bundle']['group'] = 1;
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $handler->display->display_options['block_description'] = 'Contact - Node block';
+  $translatables['contact_content_sidebar'] = array(
+    t('Master'),
+    t('mere'),
+    t('Udfør'),
+    t('Gendan'),
+    t('Sortér efter'),
+    t('Stigende'),
+    t('Faldende'),
+    t('<a href="#contact-block-content" id="contact-block">Kontakt os</a>'),
+    t('Indholdselement'),
+    t('Paragraphs item ID'),
+    t('.'),
+    t(','),
+    t('Alle'),
+    t('Block'),
+    t('Contact - Node block'),
+  );
+  $export['contact_content_sidebar'] = $view;
+
+  $view = new view();
   $view->name = 'section_pdf_list';
   $view->description = '';
   $view->tag = 'default';
