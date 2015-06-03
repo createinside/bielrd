@@ -14,7 +14,7 @@ function rebild_page_extended_views_default_views() {
   $view->name = 'section_pdf_list';
   $view->description = '';
   $view->tag = 'default';
-  $view->base_table = 'field_collection_item';
+  $view->base_table = 'paragraphs_item';
   $view->human_name = 'Section: PDF List';
   $view->core = 7;
   $view->api_version = '3.0';
@@ -24,7 +24,7 @@ function rebild_page_extended_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
-  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -43,7 +43,7 @@ function rebild_page_extended_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['last'] = 'sidste »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Forbindelse: Field collection item: PDF (field_sec_pdf_file:fid) */
+  /* Forbindelse: Paragraphs item: PDF (field_sec_pdf_file:fid) */
   $handler->display->display_options['relationships']['field_sec_pdf_file_fid']['id'] = 'field_sec_pdf_file_fid';
   $handler->display->display_options['relationships']['field_sec_pdf_file_fid']['table'] = 'field_data_field_sec_pdf_file';
   $handler->display->display_options['relationships']['field_sec_pdf_file_fid']['field'] = 'field_sec_pdf_file_fid';
@@ -85,9 +85,9 @@ function rebild_page_extended_views_default_views() {
 <div class="file-name">[download]</div>
 <div class="file-meta">PDF: [filesize]</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Kontekstuelt filter: Field collection item: Field collection item ID */
+  /* Kontekstuelt filter: Paragraphs item: Paragraphs item ID */
   $handler->display->display_options['arguments']['item_id']['id'] = 'item_id';
-  $handler->display->display_options['arguments']['item_id']['table'] = 'field_collection_item';
+  $handler->display->display_options['arguments']['item_id']['table'] = 'paragraphs_item';
   $handler->display->display_options['arguments']['item_id']['field'] = 'item_id';
   $handler->display->display_options['arguments']['item_id']['default_action'] = 'not found';
   $handler->display->display_options['arguments']['item_id']['exception']['title'] = 'Alle';
@@ -98,9 +98,9 @@ function rebild_page_extended_views_default_views() {
 
   /* Display: EVA Field */
   $handler = $view->new_display('entity_view', 'EVA Field', 'entity_view_1');
-  $handler->display->display_options['entity_type'] = 'field_collection_item';
+  $handler->display->display_options['entity_type'] = 'paragraphs_item';
   $handler->display->display_options['bundles'] = array(
-    0 => 'field_main_sections',
+    0 => 'pdf_list',
   );
   $translatables['section_pdf_list'] = array(
     t('Master'),

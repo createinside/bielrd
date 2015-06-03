@@ -59,6 +59,11 @@ function media_browser_ux_form_alter(&$form, &$form_state) {
 			
 	// File entity upload
 	if($form['#form_id']=='file_entity_add_upload') {
+		
+		// Hide advanced fields
+		if(isset($form['redirect'])) {
+			$form['redirect']['#access'] = FALSE;		
+		}
 		// Hide title field
 		if(isset($form['field_file_image_title_text'])) {
 			$form['field_file_image_title_text']['#access'] = FALSE;
@@ -67,16 +72,16 @@ function media_browser_ux_form_alter(&$form, &$form_state) {
 		
 	// File entity edit
 	if($form['#form_id']=="file_entity_edit") {
+				
+		// Hide advanced fields
+		$form['user']['#access'] = FALSE;
 		$form['destination']['#access'] = FALSE;		
+		$form['additional_settings']['#access'] = FALSE;		
+		
+		// Show preview file
 		$form['preview'] = file_view_file($form['preview']['#file'], 'teaser');
 		
-		/*
-		// Clone Alt text to Title text
-		if(isset($form['field_file_image_title_text'])) {
-		$form['field_file_image_title_text']["#prefix"] = "<p><a href='#' class='copy-alt-text'>Klon tekst <span class='icon-arrow-down'></span></a></p>";
-		}
-		*/
-		
+		// Hide title field
 		if(isset($form['field_file_image_title_text'])) {
 			$form['field_file_image_title_text']['#access'] = FALSE;
 		}
@@ -84,17 +89,15 @@ function media_browser_ux_form_alter(&$form, &$form_state) {
 	
 	// File entity edit multiple
 	if(strpos($form['#form_id'], 'media_edit_')!==FALSE) {
+		
+		// Hide advanced fields
 		$form['destination']['#access'] = FALSE;		
 		$form['redirect']['#access'] = FALSE;		
+
+		// Show preview file
 		$form['preview'] = file_view_file($form['preview']['#file'], 'teaser');	
-		
-		/*
-		// Clone Alt text to Title text
-		if(isset($form['field_file_image_title_text'])) {
-			$form['field_file_image_title_text']["#prefix"] = "<p><a href='#' class='copy-alt-text'>Klon tekst <span class='icon-arrow-down'></span></a></p>";
-		}	
-		*/
-		
+
+		// Hide title field		
 		if(isset($form['field_file_image_title_text'])) {
 			$form['field_file_image_title_text']['#access'] = FALSE;
 		}

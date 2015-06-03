@@ -10,30 +10,42 @@
 function rebild_page_extended_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_main_sections'
-  $field_bases['field_main_sections'] = array(
+  // Exported field_base: 'field_main_contact'
+  $field_bases['field_main_contact'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_main_sections',
+    'field_name' => 'field_main_contact',
     'field_permissions' => array(
       'type' => 0,
     ),
     'foreign keys' => array(),
-    'indexes' => array(
-      'revision_id' => array(
-        0 => 'revision_id',
-      ),
-    ),
+    'indexes' => array(),
     'locked' => 0,
-    'module' => 'field_collection',
-    'settings' => array(
-      'hide_blank_items' => 1,
-      'path' => '',
-    ),
+    'module' => 'paragraphs',
+    'settings' => array(),
     'translatable' => 0,
-    'type' => 'field_collection',
+    'type' => 'paragraphs',
+  );
+
+  // Exported field_base: 'field_main_paragraphs'
+  $field_bases['field_main_paragraphs'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_main_paragraphs',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'paragraphs',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'paragraphs',
   );
 
   // Exported field_base: 'field_sec_nav_body'
@@ -347,87 +359,42 @@ function rebild_page_extended_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_sec_txt_vid_video'
-  $field_bases['field_sec_txt_vid_video'] = array(
+  // Exported field_base: 'field_sec_txt_vid_url'
+  $field_bases['field_sec_txt_vid_url'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_sec_txt_vid_video',
+    'field_name' => 'field_sec_txt_vid_url',
     'field_permissions' => array(
       'type' => 0,
     ),
     'foreign keys' => array(),
-    'indexes' => array(
-      'video_id' => array(
-        0 => 'video_id',
-      ),
-    ),
+    'indexes' => array(),
     'locked' => 0,
-    'module' => 'youtube',
+    'module' => 'video_embed_field',
     'settings' => array(),
     'translatable' => 0,
-    'type' => 'youtube',
+    'type' => 'video_embed_field',
   );
 
-  // Exported field_base: 'field_sec_type'
-  $field_bases['field_sec_type'] = array(
+  // Exported field_base: 'field_sec_vid_url'
+  $field_bases['field_sec_vid_url'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_sec_type',
+    'field_name' => 'field_sec_vid_url',
     'field_permissions' => array(
       'type' => 0,
     ),
     'foreign keys' => array(),
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
+    'indexes' => array(),
     'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        'sec_txt' => 'Tekst',
-        'sec_txt_img' => 'Tekst og billede',
-        'sec_txt_vid' => 'Tekst og video',
-        'sec_acc' => 'Accordion',
-        'sec_ses' => 'Selvbetjeningsløsninger',
-        'sec_gal' => 'Billedgalleri',
-        'sec_vidl' => 'Video',
-        'sec_pdf' => 'PDF-liste',
-        'sec_nav' => 'Navigationsliste',
-        'sec_gis' => 'GIS-kort',
-      ),
-      'allowed_values_function' => '',
-    ),
-    'translatable' => 0,
-    'type' => 'list_text',
-  );
-
-  // Exported field_base: 'field_sec_vid_video'
-  $field_bases['field_sec_vid_video'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_sec_vid_video',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
-    'foreign keys' => array(),
-    'indexes' => array(
-      'video_id' => array(
-        0 => 'video_id',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'youtube',
+    'module' => 'video_embed_field',
     'settings' => array(),
     'translatable' => 0,
-    'type' => 'youtube',
+    'type' => 'video_embed_field',
   );
 
   return $field_bases;
