@@ -109,7 +109,7 @@ Share nodes
 		.field-name-field-main-factbox {
 			background: $bg-node-box;
 			padding: $spacing-std/2;
-			margin: 0 0 $spacing-std/2 0;
+			margin: 0 0 $spacing-std 0;
 			@include border-radius(3px);
 		}
 		.field-body {
@@ -176,13 +176,14 @@ Share nodes
 		.print-link {
 			display: none;
 		}
-		.field-name-field-main-sections {
+		.field-name-field-main-paragraphs {
 			.field:last-child {
 				margin: 0;
 			}
 			> .field-items > .field-item {
 				padding: 0 0 20px;
 				margin: 0;
+				overflow: hidden;
 				&:last-child {
 					padding: 0;
 				}
@@ -199,20 +200,37 @@ Share nodes
 			/* Text and Image */
 			.field-name-field-sec-txt-img-image {
 				float: left;
-				margin: 0 12px 8px 0;
+				width: 40%;
+				max-width: 145px;
+				margin: 2px 12px 8px 0;
+			}
+			.field-name-field-sec-txt-img-body {
+				.field-item > *:first-child {
+					padding-top: 0;
+					margin-top: 0;
+				}
 			}
 			/* Text and Video */
-			.field-name-field-sec-txt-vid-video {
+			.field-name-field-sec-txt-vid-url {
 				float: left;
-				margin: 0 12px 8px 0;
+				width: 40%;
+				max-width: 145px;
+				margin: 2px 12px 8px 0;
 				position: relative;
-				.youtube-field-player {
+				.youtube-field-player,
+				.cboxElement {
 					&:before {
 						content: url("/sites/all/themes/rebild/img/youtube-play.png");
 						position: absolute;
-						top: 21px;
-						left: 45px;
+						top: 50%;
+					  left: 50%;
+					  margin-left: -25px;
+					  margin-top: -19px;
 					}
+				}
+				.field-item > *:first-child {
+					padding-top: 0;
+					margin-top: 0;
 				}
 			}
 			/* PDF List */
@@ -259,7 +277,7 @@ Share nodes
 						}
 						.field-name-field-sec-nav-image {
 							position: absolute;
-							top: 0;
+							top: 1px;
 							left: 0;
 							margin-bottom: 0;
 							width: 76px;
@@ -269,6 +287,7 @@ Share nodes
 							padding-top: 0;
 							line-height: $line-height-std;
 							padding-left: 88px;
+							padding-bottom: 0.7em;
 							margin: 0;
 							font-weight: bold;
 						}
@@ -675,21 +694,27 @@ Share nodes
 	Kontakt sidebar
 -------------------------------------------------------------------*/
 #region-content-sidebar {
-	#kontaktlink {
+	#kontaktlink,
+	#contact-block {
 		display: inline-block;
 		color: white;
 		text-transform: uppercase;
 		font-size: $font-size-std;
 		text-align: center;
-		width: 98px;
+		width: 100%;
 		line-height: 1.35em;
 		background-color: $color-purple;
 		padding: 14px 20px;
+		@include box-sizing(border-box);
 		@include background-image(linear-gradient($color-purple, #79648c));
 		@include border-radius($border-radius-std);		
+		&:hover {
+			text-decoration: none;
+		}
 	}
-	#kontaktdiv {
-		display: none;		
+	#kontaktdiv,
+	#contact-block-content {
+		display: none;
 	}
 }
 .fancybox-skin {
@@ -702,10 +727,15 @@ Share nodes
 	width: 100%;
 }
 #fancybox-inner {
-	#kontaktdiv {
+	#kontaktdiv,
+	#contact-block-content {
 		padding: 20px;
 		overflow: hidden;
-		width: 400px;
+		line-height: $line-height-std;
+		font-size: $font-size-std;
+		a {
+			color: $color-blue;
+		}
 		.field {
 			margin-bottom: 10px;
 		}
@@ -724,7 +754,7 @@ Share nodes
 /*------------------------------------------------------------------
 	Page Extended
 -------------------------------------------------------------------*/
-.field-collection-item-field-main-sections {
+.paragraphs-items-field-main-paragraphs {
 	.field-collection-container {
 		border-bottom: 0;
 		margin-bottom: 0;
@@ -739,4 +769,22 @@ Share nodes
 			}
 		}
 	}
+}
+.player {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 0;
+	height: 0;
+	overflow: hidden;
+}
+.player iframe,  
+.player embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+#cboxContent .player {
+	position: inherit;
 }

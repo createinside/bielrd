@@ -8,13 +8,13 @@
 -------------------------------------------------------------------*/
 @font-face {
   font-family: 'Rebild';
-  src: url("../fonts/Rebild.eot");
-  src: url("../fonts/Rebild.eot?#iefix") format("embedded-opentype"), url("../fonts/Rebild.svg#Rebild") format("svg"), url("../fonts/Rebild.woff") format("woff"), url("../fonts/Rebild.ttf") format("truetype");
+  src: url("../fonts/Rebild.eot?389so7");
+  src: url("../fonts/Rebild.eot?#iefix389so7") format("embedded-opentype"), url("../fonts/Rebild.woff2?389so7") format("woff2"), url("../fonts/Rebild.woff?389so7") format("woff"), url("../fonts/Rebild.ttf?389so7") format("truetype"), url("../fonts/Rebild.svg?389so7#Rebild") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
-/* line 33, ../../rebild/sass/partials/_fonts.scss */
+/* line 34, ../../rebild/sass/partials/_fonts.scss */
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'Rebild';
   speak: none;
@@ -37,207 +37,212 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-/* line 48, ../../rebild/sass/partials/_fonts.scss */
+/* line 49, ../../rebild/sass/partials/_fonts.scss */
+.icon-file-pdf:before {
+  content: "\e602";
+}
+
+/* line 53, ../../rebild/sass/partials/_fonts.scss */
 .icon-pencil:before {
   content: "\e905";
 }
 
-/* line 52, ../../rebild/sass/partials/_fonts.scss */
+/* line 57, ../../rebild/sass/partials/_fonts.scss */
 .icon-folder:before {
   content: "\e92f";
 }
 
-/* line 56, ../../rebild/sass/partials/_fonts.scss */
+/* line 61, ../../rebild/sass/partials/_fonts.scss */
 .icon-folder-open:before {
   content: "\e930";
 }
 
-/* line 60, ../../rebild/sass/partials/_fonts.scss */
+/* line 65, ../../rebild/sass/partials/_fonts.scss */
 .icon-folder-plus:before {
   content: "\e931";
 }
 
-/* line 64, ../../rebild/sass/partials/_fonts.scss */
+/* line 69, ../../rebild/sass/partials/_fonts.scss */
 .icon-bin:before {
   content: "\e9ac";
 }
 
-/* line 68, ../../rebild/sass/partials/_fonts.scss */
+/* line 73, ../../rebild/sass/partials/_fonts.scss */
 .icon-mega-phone:before {
   content: "\e601";
 }
 
-/* line 72, ../../rebild/sass/partials/_fonts.scss */
+/* line 77, ../../rebild/sass/partials/_fonts.scss */
 .icon-mobil_logo:before {
   content: "\e007";
 }
 
-/* line 76, ../../rebild/sass/partials/_fonts.scss */
+/* line 81, ../../rebild/sass/partials/_fonts.scss */
 .icon-printer:before {
   content: "\e011";
 }
 
-/* line 80, ../../rebild/sass/partials/_fonts.scss */
+/* line 85, ../../rebild/sass/partials/_fonts.scss */
 .icon-volume:before {
   content: "\e012";
 }
 
-/* line 84, ../../rebild/sass/partials/_fonts.scss */
+/* line 89, ../../rebild/sass/partials/_fonts.scss */
 .icon-money:before {
   content: "\f0d6";
 }
 
-/* line 88, ../../rebild/sass/partials/_fonts.scss */
+/* line 93, ../../rebild/sass/partials/_fonts.scss */
 .icon-search:before {
   content: "\e013";
 }
 
-/* line 92, ../../rebild/sass/partials/_fonts.scss */
+/* line 97, ../../rebild/sass/partials/_fonts.scss */
 .icon-plus2:before {
   content: "\e00f";
 }
 
-/* line 96, ../../rebild/sass/partials/_fonts.scss */
+/* line 101, ../../rebild/sass/partials/_fonts.scss */
 .icon-minus2:before {
   content: "\e010";
 }
 
-/* line 100, ../../rebild/sass/partials/_fonts.scss */
+/* line 105, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-down2:before {
   content: "\e003";
 }
 
-/* line 104, ../../rebild/sass/partials/_fonts.scss */
+/* line 109, ../../rebild/sass/partials/_fonts.scss */
 .icon-bottom_logo:before {
   content: "\e009";
 }
 
-/* line 108, ../../rebild/sass/partials/_fonts.scss */
+/* line 113, ../../rebild/sass/partials/_fonts.scss */
 .icon-phone:before {
   content: "\f095";
 }
 
-/* line 112, ../../rebild/sass/partials/_fonts.scss */
+/* line 117, ../../rebild/sass/partials/_fonts.scss */
 .icon-envelope:before {
   content: "\f003";
 }
 
-/* line 116, ../../rebild/sass/partials/_fonts.scss */
+/* line 121, ../../rebild/sass/partials/_fonts.scss */
 .icon-home:before {
   content: "\e005";
 }
 
-/* line 120, ../../rebild/sass/partials/_fonts.scss */
+/* line 125, ../../rebild/sass/partials/_fonts.scss */
 .icon-double-angle-right:before {
   content: "\f101";
 }
 
-/* line 124, ../../rebild/sass/partials/_fonts.scss */
+/* line 129, ../../rebild/sass/partials/_fonts.scss */
 .icon-double-angle-left:before {
   content: "\f100";
 }
 
-/* line 128, ../../rebild/sass/partials/_fonts.scss */
+/* line 133, ../../rebild/sass/partials/_fonts.scss */
 .icon-double-angle-down:before {
   content: "\f103";
 }
 
-/* line 132, ../../rebild/sass/partials/_fonts.scss */
+/* line 137, ../../rebild/sass/partials/_fonts.scss */
 .icon-double-angle-up:before {
   content: "\f102";
 }
 
-/* line 136, ../../rebild/sass/partials/_fonts.scss */
+/* line 141, ../../rebild/sass/partials/_fonts.scss */
 .icon-images:before {
   content: "\e00e";
 }
 
-/* line 140, ../../rebild/sass/partials/_fonts.scss */
+/* line 145, ../../rebild/sass/partials/_fonts.scss */
 .icon-menu:before {
   content: "\e000";
 }
 
-/* line 144, ../../rebild/sass/partials/_fonts.scss */
+/* line 149, ../../rebild/sass/partials/_fonts.scss */
 .icon-pil2:before {
   content: "\e014";
 }
 
-/* line 148, ../../rebild/sass/partials/_fonts.scss */
+/* line 153, ../../rebild/sass/partials/_fonts.scss */
 .icon-angle-right:before {
   content: "\e006";
 }
 
-/* line 152, ../../rebild/sass/partials/_fonts.scss */
+/* line 157, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-left2:before {
   content: "\e004";
 }
 
-/* line 156, ../../rebild/sass/partials/_fonts.scss */
+/* line 161, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-up2:before {
   content: "\e002";
 }
 
-/* line 160, ../../rebild/sass/partials/_fonts.scss */
+/* line 165, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-right2:before {
   content: "\e001";
 }
 
-/* line 164, ../../rebild/sass/partials/_fonts.scss */
+/* line 169, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-up:before {
   content: "\f062";
 }
 
-/* line 168, ../../rebild/sass/partials/_fonts.scss */
+/* line 173, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-down:before {
   content: "\f063";
 }
 
-/* line 172, ../../rebild/sass/partials/_fonts.scss */
+/* line 177, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-right:before {
   content: "\f061";
 }
 
-/* line 176, ../../rebild/sass/partials/_fonts.scss */
+/* line 181, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-left:before {
   content: "\f060";
 }
 
-/* line 180, ../../rebild/sass/partials/_fonts.scss */
+/* line 185, ../../rebild/sass/partials/_fonts.scss */
 .icon-close:before {
   content: "\e008";
 }
 
-/* line 184, ../../rebild/sass/partials/_fonts.scss */
+/* line 189, ../../rebild/sass/partials/_fonts.scss */
 .icon-plus:before {
   content: "\e00a";
 }
 
-/* line 188, ../../rebild/sass/partials/_fonts.scss */
+/* line 193, ../../rebild/sass/partials/_fonts.scss */
 .icon-minus:before {
   content: "\e00c";
 }
 
-/* line 192, ../../rebild/sass/partials/_fonts.scss */
+/* line 197, ../../rebild/sass/partials/_fonts.scss */
 .icon-compass:before {
   content: "\e00d";
 }
 
-/* line 196, ../../rebild/sass/partials/_fonts.scss */
+/* line 201, ../../rebild/sass/partials/_fonts.scss */
 .icon-reorder:before {
   content: "\f0c9";
 }
 
-/* line 200, ../../rebild/sass/partials/_fonts.scss */
+/* line 205, ../../rebild/sass/partials/_fonts.scss */
 .icon-rss:before {
   content: "\f09f";
 }
 
-/* line 204, ../../rebild/sass/partials/_fonts.scss */
+/* line 209, ../../rebild/sass/partials/_fonts.scss */
 .icon-facebook:before {
   content: "\f09a";
 }
 
-/* line 208, ../../rebild/sass/partials/_fonts.scss */
+/* line 213, ../../rebild/sass/partials/_fonts.scss */
 .icon-og_bliv_her2:before {
   content: "\e600";
 }
@@ -380,12 +385,11 @@ User profile
 /* line 81, ../sass/custom.scss */
 .page-admin input[type="file"], .page-node-add input[type="file"], .page-node-edit input[type="file"], .page-node input[type="file"] {
   background-color: white;
+  border: 1px solid #bebfb9;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
-  box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  /* 	@include box-shadow(rgba(black, 0.85) 0 0 3px); */
   border: 0;
   margin-right: 20px;
 }
@@ -395,9 +399,7 @@ User profile
   margin-left: 0;
   margin-right: 0;
   background-color: white;
-  -moz-box-shadow: rgba(0, 0, 0, 0.1) -1px -1px 0px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) -1px -1px 0px;
-  box-shadow: rgba(0, 0, 0, 0.1) -1px -1px 0px;
+  /* 	@include box-shadow(rgba(black, 0.1) -1px -1px 0px); */
 }
 /* line 92, ../sass/custom.scss */
 .page-admin #page .tabs-secondary ul.secondary, .page-node-add #page .tabs-secondary ul.secondary, .page-node-edit #page .tabs-secondary ul.secondary, .page-node #page .tabs-secondary ul.secondary {
@@ -411,65 +413,63 @@ User profile
 /* line 101, ../sass/custom.scss */
 .page-admin #page table, .page-node-add #page table, .page-node-edit #page table, .page-node #page table {
   background-color: white;
+  border: 1px solid #bebfb9;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
-  box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
-  border: hidden;
+  /* 	@include box-shadow(rgba(black, 0.85) 0 0 3px); */
   border-collapse: separate;
   font-size: 1em;
 }
-/* line 106, ../sass/custom.scss */
+/* line 105, ../sass/custom.scss */
 .page-admin #page table .odd, .page-node-add #page table .odd, .page-node-edit #page table .odd, .page-node #page table .odd {
   border-bottom: 1px solid #ebebeb;
 }
-/* line 109, ../sass/custom.scss */
+/* line 108, ../sass/custom.scss */
 .page-admin #page table .views-row-last, .page-node-add #page table .views-row-last, .page-node-edit #page table .views-row-last, .page-node #page table .views-row-last {
   border-bottom: 0;
 }
-/* line 112, ../sass/custom.scss */
+/* line 111, ../sass/custom.scss */
 .page-admin #page table .views-field.views-field-title, .page-admin #page table .views-field.views-field-type, .page-admin #page table .views-field.views-field-status, .page-admin #page table .views-field.views-field-state, .page-admin #page table .views-field.views-field-moderation-actions, .page-admin #page table .views-field.views-field-name, .page-admin #page table .views-field.views-field-changed, .page-node-add #page table .views-field.views-field-title, .page-node-add #page table .views-field.views-field-type, .page-node-add #page table .views-field.views-field-status, .page-node-add #page table .views-field.views-field-state, .page-node-add #page table .views-field.views-field-moderation-actions, .page-node-add #page table .views-field.views-field-name, .page-node-add #page table .views-field.views-field-changed, .page-node-edit #page table .views-field.views-field-title, .page-node-edit #page table .views-field.views-field-type, .page-node-edit #page table .views-field.views-field-status, .page-node-edit #page table .views-field.views-field-state, .page-node-edit #page table .views-field.views-field-moderation-actions, .page-node-edit #page table .views-field.views-field-name, .page-node-edit #page table .views-field.views-field-changed, .page-node #page table .views-field.views-field-title, .page-node #page table .views-field.views-field-type, .page-node #page table .views-field.views-field-status, .page-node #page table .views-field.views-field-state, .page-node #page table .views-field.views-field-moderation-actions, .page-node #page table .views-field.views-field-name, .page-node #page table .views-field.views-field-changed {
   border-right: 1px solid #ebebeb;
 }
-/* line 116, ../sass/custom.scss */
+/* line 115, ../sass/custom.scss */
 .page-admin #page table thead tr, .page-node-add #page table thead tr, .page-node-edit #page table thead tr, .page-node #page table thead tr {
   height: 40px;
 }
-/* line 120, ../sass/custom.scss */
+/* line 119, ../sass/custom.scss */
 .page-admin #page table th, .page-node-add #page table th, .page-node-edit #page table th, .page-node #page table th {
   border: none;
   padding: 0 10px 0 10px;
   background-color: #dddddd;
 }
-/* line 124, ../sass/custom.scss */
+/* line 123, ../sass/custom.scss */
 .page-admin #page table th a, .page-node-add #page table th a, .page-node-edit #page table th a, .page-node #page table th a {
   color: #000;
   font-size: 1em;
 }
-/* line 129, ../sass/custom.scss */
+/* line 128, ../sass/custom.scss */
 .page-admin #page table tr, .page-node-add #page table tr, .page-node-edit #page table tr, .page-node #page table tr {
   border: none;
 }
-/* line 131, ../sass/custom.scss */
+/* line 130, ../sass/custom.scss */
 .page-admin #page table tr .last-child, .page-node-add #page table tr .last-child, .page-node-edit #page table tr .last-child, .page-node #page table tr .last-child {
   border: none;
 }
-/* line 135, ../sass/custom.scss */
+/* line 134, ../sass/custom.scss */
 .page-admin #page table td, .page-node-add #page table td, .page-node-edit #page table td, .page-node #page table td {
   border: none;
 }
-/* line 140, ../sass/custom.scss */
+/* line 139, ../sass/custom.scss */
 .page-admin #page fieldset .fieldset-legend, .page-node-add #page fieldset .fieldset-legend, .page-node-edit #page fieldset .fieldset-legend, .page-node #page fieldset .fieldset-legend {
   position: relative;
   padding-left: 15px;
 }
-/* line 149, ../sass/custom.scss */
+/* line 148, ../sass/custom.scss */
 .page-admin .form-item-metatags-description-value .statustegn, .page-node-add .form-item-metatags-description-value .statustegn, .page-node-edit .form-item-metatags-description-value .statustegn, .page-node .form-item-metatags-description-value .statustegn {
   color: #666;
 }
-/* line 152, ../sass/custom.scss */
+/* line 151, ../sass/custom.scss */
 .page-admin .form-item-metatags-description-value .grippie, .page-node-add .form-item-metatags-description-value .grippie, .page-node-edit .form-item-metatags-description-value .grippie, .page-node .form-item-metatags-description-value .grippie {
   display: none;
 }
@@ -479,7 +479,7 @@ User profile
 	Opret indhold 
 
 -------------------------------------------------------------------*/
-/* line 163, ../sass/custom.scss */
+/* line 162, ../sass/custom.scss */
 .page-node-add #page, .page-node-edit #page, .page-node #page, .page-user #page, .page-file #page, .page-block #page {
   font-family: Verdana, Arial, sans-serif;
   font-size: 12px;
@@ -492,18 +492,18 @@ User profile
   /* Horizontal tabs */
   /* Vertical tabs */
 }
-/* line 167, ../sass/custom.scss */
+/* line 166, ../sass/custom.scss */
 .page-node-add #page label, .page-node-edit #page label, .page-node #page label, .page-user #page label, .page-file #page label, .page-block #page label {
   font-size: 1.33333em;
   font-weight: normal;
   margin-bottom: 10px;
 }
-/* line 172, ../sass/custom.scss */
+/* line 171, ../sass/custom.scss */
 .page-node-add #page label.option, .page-node-edit #page label.option, .page-node #page label.option, .page-user #page label.option, .page-file #page label.option, .page-block #page label.option {
   font-size: 1em;
   font-weight: bold;
 }
-/* line 176, ../sass/custom.scss */
+/* line 175, ../sass/custom.scss */
 .page-node-add #page .customised-select, .page-node-edit #page .customised-select, .page-node #page .customised-select, .page-user #page .customised-select, .page-file #page .customised-select, .page-block #page .customised-select {
   background: url("../images/dropdown.png");
   background-repeat: no-repeat;
@@ -511,78 +511,82 @@ User profile
   height: 20px;
   padding: 1px 0 0 6px;
 }
-/* line 184, ../sass/custom.scss */
+/* line 183, ../sass/custom.scss */
 .page-node-add #page .link-field-column label, .page-node-edit #page .link-field-column label, .page-node #page .link-field-column label, .page-user #page .link-field-column label, .page-file #page .link-field-column label, .page-block #page .link-field-column label {
   font-size: 1em;
   font-weight: bold;
 }
-/* line 190, ../sass/custom.scss */
+/* line 188, ../sass/custom.scss */
+.page-node-add #page .link-attributes, .page-node-edit #page .link-attributes, .page-node #page .link-attributes, .page-user #page .link-attributes, .page-file #page .link-attributes, .page-block #page .link-attributes {
+  margin: 5px 0 10px;
+}
+/* line 195, ../sass/custom.scss */
 .page-node-add #page input[type="radio"], .page-node-edit #page input[type="radio"], .page-node #page input[type="radio"], .page-user #page input[type="radio"], .page-file #page input[type="radio"], .page-block #page input[type="radio"] {
   margin-left: 20px;
 }
-/* line 193, ../sass/custom.scss */
-.page-node-add #page .form-text.required, .page-node-edit #page .form-text.required, .page-node #page .form-text.required, .page-user #page .form-text.required, .page-file #page .form-text.required, .page-block #page .form-text.required {
-  width: 99%;
-  padding: 0 0 0 1%;
+/* line 198, ../sass/custom.scss */
+.page-node-add #page .form-text, .page-node-edit #page .form-text, .page-node #page .form-text, .page-user #page .form-text, .page-file #page .form-text, .page-block #page .form-text {
+  width: 100%;
+  padding: 0 0 0 0;
   min-height: 30px;
   border: none;
   background-color: white;
+  border: 1px solid #bebfb9;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
-  box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  /* 	@include box-shadow(rgba(black, 0.85) 0 0 3px); */
   font-size: 13px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
-/* line 201, ../sass/custom.scss */
+/* line 207, ../sass/custom.scss */
 .page-node-add #page .form-item-title, .page-node-edit #page .form-item-title, .page-node #page .form-item-title, .page-user #page .form-item-title, .page-file #page .form-item-title, .page-block #page .form-item-title {
   background: url("../images/dot.png") repeat-x bottom;
   padding-bottom: 30px;
   margin: 0;
 }
-/* line 205, ../sass/custom.scss */
+/* line 211, ../sass/custom.scss */
 .page-node-add #page .form-item-title .general_field_styling, .page-node-edit #page .form-item-title .general_field_styling, .page-node #page .form-item-title .general_field_styling, .page-user #page .form-item-title .general_field_styling, .page-file #page .form-item-title .general_field_styling, .page-block #page .form-item-title .general_field_styling {
   padding: 0 0 0 1%;
   background: none;
 }
-/* line 210, ../sass/custom.scss */
+/* line 216, ../sass/custom.scss */
 .page-node-add #page .form-text, .page-node-edit #page .form-text, .page-node #page .form-text, .page-user #page .form-text, .page-file #page .form-text, .page-block #page .form-text {
   background-color: white;
+  border: 1px solid #bebfb9;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
-  box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  /* 	@include box-shadow(rgba(black, 0.85) 0 0 3px); */
   height: 30px;
   padding: 0 0 0 1%;
   font-size: 13px;
-  border: 0;
+  /* 			border: 0; */
 }
-/* line 217, ../sass/custom.scss */
+/* line 223, ../sass/custom.scss */
 .page-node-add #page .date-clear, .page-node-edit #page .date-clear, .page-node #page .date-clear, .page-user #page .date-clear, .page-file #page .date-clear, .page-block #page .date-clear {
   background-color: white;
+  border: 1px solid #bebfb9;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
-  box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  /* 	@include box-shadow(rgba(black, 0.85) 0 0 3px); */
   font-size: 13px;
   border: 0;
   height: 26px;
   padding-left: 1%;
 }
-/* line 224, ../sass/custom.scss */
+/* line 230, ../sass/custom.scss */
 .page-node-add #page .date-padding, .page-node-edit #page .date-padding, .page-node #page .date-padding, .page-user #page .date-padding, .page-file #page .date-padding, .page-block #page .date-padding {
   padding: 0;
 }
-/* line 228, ../sass/custom.scss */
+/* line 234, ../sass/custom.scss */
 .page-node-add #page .description, .page-node-edit #page .description, .page-node #page .description, .page-user #page .description, .page-file #page .description, .page-block #page .description {
-  font-size: 1em;
+  font-size: 0.91667em;
 }
-/* line 231, ../sass/custom.scss */
+/* line 237, ../sass/custom.scss */
 .page-node-add #page .button.launcher, .page-node-add #page .field-add-more-submit, .page-node-add #page .form-submit, .page-node-edit #page .button.launcher, .page-node-edit #page .field-add-more-submit, .page-node-edit #page .form-submit, .page-node #page .button.launcher, .page-node #page .field-add-more-submit, .page-node #page .form-submit, .page-user #page .button.launcher, .page-user #page .field-add-more-submit, .page-user #page .form-submit, .page-file #page .button.launcher, .page-file #page .field-add-more-submit, .page-file #page .form-submit, .page-block #page .button.launcher, .page-block #page .field-add-more-submit, .page-block #page .form-submit {
   background-color: #7f9dcd;
   color: #fff;
@@ -596,31 +600,31 @@ User profile
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 244, ../sass/custom.scss */
+/* line 250, ../sass/custom.scss */
 .page-node-add #page #edit-actions, .page-node-edit #page #edit-actions, .page-node #page #edit-actions, .page-user #page #edit-actions, .page-file #page #edit-actions, .page-block #page #edit-actions {
   background: none;
 }
-/* line 247, ../sass/custom.scss */
+/* line 253, ../sass/custom.scss */
 .page-node-add #page .general_field_styling, .page-node-edit #page .general_field_styling, .page-node #page .general_field_styling, .page-user #page .general_field_styling, .page-file #page .general_field_styling, .page-block #page .general_field_styling {
   background: url("../images/dot.png") repeat-x bottom;
   padding: 30px 0;
 }
-/* line 252, ../sass/custom.scss */
+/* line 258, ../sass/custom.scss */
 .page-node-add #page textarea, .page-node-edit #page textarea, .page-node #page textarea, .page-user #page textarea, .page-file #page textarea, .page-block #page textarea {
   width: 100%;
   padding-left: 1%;
 }
-/* line 258, ../sass/custom.scss */
+/* line 264, ../sass/custom.scss */
 .page-node-add #page input.form-autocomplete, .page-node-edit #page input.form-autocomplete, .page-node #page input.form-autocomplete, .page-user #page input.form-autocomplete, .page-file #page input.form-autocomplete, .page-block #page input.form-autocomplete {
   background-position: 100% 10px;
   /* LTR */
 }
-/* line 261, ../sass/custom.scss */
+/* line 267, ../sass/custom.scss */
 .page-node-add #page input.throbbing, .page-node-edit #page input.throbbing, .page-node #page input.throbbing, .page-user #page input.throbbing, .page-file #page input.throbbing, .page-block #page input.throbbing {
   background-position: 100% -11px;
   /* LTR */
 }
-/* line 265, ../sass/custom.scss */
+/* line 271, ../sass/custom.scss */
 .page-node-add #page .field-multiple-table, .page-node-edit #page .field-multiple-table, .page-node #page .field-multiple-table, .page-user #page .field-multiple-table, .page-file #page .field-multiple-table, .page-block #page .field-multiple-table {
   border-radius: 0;
   -o-border-radius: 0;
@@ -631,112 +635,127 @@ User profile
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
 }
-/* line 274, ../sass/custom.scss */
+/* line 280, ../sass/custom.scss */
 .page-node-add #page .field-multiple-table th, .page-node-edit #page .field-multiple-table th, .page-node #page .field-multiple-table th, .page-user #page .field-multiple-table th, .page-file #page .field-multiple-table th, .page-block #page .field-multiple-table th {
-  background: none;
-  padding: 0;
+  /* background: none; */
   text-transform: none;
 }
-/* line 279, ../sass/custom.scss */
-.page-node-add #page .field-multiple-table .field-multiple-drag, .page-node-edit #page .field-multiple-table .field-multiple-drag, .page-node #page .field-multiple-table .field-multiple-drag, .page-user #page .field-multiple-table .field-multiple-drag, .page-file #page .field-multiple-table .field-multiple-drag, .page-block #page .field-multiple-table .field-multiple-drag {
-  border-right: 3px solid #dddddd;
+/* line 283, ../sass/custom.scss */
+.page-node-add #page .field-multiple-table th label, .page-node-edit #page .field-multiple-table th label, .page-node #page .field-multiple-table th label, .page-user #page .field-multiple-table th label, .page-file #page .field-multiple-table th label, .page-block #page .field-multiple-table th label {
+  margin: 0;
+  padding: 0;
 }
-/* line 282, ../sass/custom.scss */
+/* line 288, ../sass/custom.scss */
+.page-node-add #page .field-multiple-table .field-multiple-drag, .page-node-edit #page .field-multiple-table .field-multiple-drag, .page-node #page .field-multiple-table .field-multiple-drag, .page-user #page .field-multiple-table .field-multiple-drag, .page-file #page .field-multiple-table .field-multiple-drag, .page-block #page .field-multiple-table .field-multiple-drag {
+  border-right: 1px solid #dddddd;
+}
+/* line 290, ../sass/custom.scss */
+.page-node-add #page .field-multiple-table .field-multiple-drag a, .page-node-edit #page .field-multiple-table .field-multiple-drag a, .page-node #page .field-multiple-table .field-multiple-drag a, .page-user #page .field-multiple-table .field-multiple-drag a, .page-file #page .field-multiple-table .field-multiple-drag a, .page-block #page .field-multiple-table .field-multiple-drag a {
+  display: block;
+  float: none;
+  padding: 0;
+  margin-left: 0;
+}
+/* line 297, ../sass/custom.scss */
 .page-node-add #page .field-multiple-table tr, .page-node-edit #page .field-multiple-table tr, .page-node #page .field-multiple-table tr, .page-user #page .field-multiple-table tr, .page-file #page .field-multiple-table tr, .page-block #page .field-multiple-table tr {
-  background: none;
+  /* background: none; */
   border-bottom: 20px solid #fff;
   border-right: 0;
   border-left: 0;
   border-top: 0;
 }
-/* line 289, ../sass/custom.scss */
+/* line 304, ../sass/custom.scss */
 .page-node-add #page .field-multiple-table .field-name-field-accordion-title, .page-node-edit #page .field-multiple-table .field-name-field-accordion-title, .page-node #page .field-multiple-table .field-name-field-accordion-title, .page-user #page .field-multiple-table .field-name-field-accordion-title, .page-file #page .field-multiple-table .field-name-field-accordion-title, .page-block #page .field-multiple-table .field-name-field-accordion-title {
   margin-bottom: 10px;
 }
-/* line 295, ../sass/custom.scss */
+/* line 310, ../sass/custom.scss */
 .page-node-add #page fieldset, .page-node-edit #page fieldset, .page-node #page fieldset, .page-user #page fieldset, .page-file #page fieldset, .page-block #page fieldset {
   border: 0;
   padding: 10px 0 0 0;
 }
-/* line 298, ../sass/custom.scss */
+/* line 313, ../sass/custom.scss */
 .page-node-add #page fieldset .fieldset-wrapper, .page-node-edit #page fieldset .fieldset-wrapper, .page-node #page fieldset .fieldset-wrapper, .page-user #page fieldset .fieldset-wrapper, .page-file #page fieldset .fieldset-wrapper, .page-block #page fieldset .fieldset-wrapper {
   padding: 0;
 }
-/* line 301, ../sass/custom.scss */
+/* line 316, ../sass/custom.scss */
 .page-node-add #page fieldset label, .page-node-edit #page fieldset label, .page-node #page fieldset label, .page-user #page fieldset label, .page-file #page fieldset label, .page-block #page fieldset label {
   font-size: 1em;
   font-weight: bold;
 }
-/* line 305, ../sass/custom.scss */
+/* line 320, ../sass/custom.scss */
 .page-node-add #page fieldset .fieldset-legend, .page-node-edit #page fieldset .fieldset-legend, .page-node #page fieldset .fieldset-legend, .page-user #page fieldset .fieldset-legend, .page-file #page fieldset .fieldset-legend, .page-block #page fieldset .fieldset-legend {
   padding: 0;
   text-transform: none;
   font-weight: normal;
   font-size: 1.33333em;
 }
-/* line 313, ../sass/custom.scss */
+/* line 328, ../sass/custom.scss */
 .page-node-add #page .field-type-datestamp .fieldset-legend, .page-node-edit #page .field-type-datestamp .fieldset-legend, .page-node #page .field-type-datestamp .fieldset-legend, .page-user #page .field-type-datestamp .fieldset-legend, .page-file #page .field-type-datestamp .fieldset-legend, .page-block #page .field-type-datestamp .fieldset-legend {
   padding: 0;
   text-transform: none;
   font-weight: normal;
   font-size: 1.33333em;
 }
-/* line 321, ../sass/custom.scss */
+/* line 336, ../sass/custom.scss */
 .page-node-add #page .field-group-fieldset, .page-node-edit #page .field-group-fieldset, .page-node #page .field-group-fieldset, .page-user #page .field-group-fieldset, .page-file #page .field-group-fieldset, .page-block #page .field-group-fieldset {
   margin: 30px 0 0 0;
   background: url("../images/dot.png") repeat-x bottom;
   padding-bottom: 30px;
 }
-/* line 325, ../sass/custom.scss */
+/* line 340, ../sass/custom.scss */
 .page-node-add #page .field-group-fieldset .fieldset-legend, .page-node-edit #page .field-group-fieldset .fieldset-legend, .page-node #page .field-group-fieldset .fieldset-legend, .page-user #page .field-group-fieldset .fieldset-legend, .page-file #page .field-group-fieldset .fieldset-legend, .page-block #page .field-group-fieldset .fieldset-legend {
   padding: 0;
   text-transform: none;
   font-size: 1.33333em;
   font-weight: normal;
 }
-/* line 331, ../sass/custom.scss */
+/* line 345, ../sass/custom.scss */
+.page-node-add #page .field-group-fieldset .fieldset-legend a, .page-node-edit #page .field-group-fieldset .fieldset-legend a, .page-node #page .field-group-fieldset .fieldset-legend a, .page-user #page .field-group-fieldset .fieldset-legend a, .page-file #page .field-group-fieldset .fieldset-legend a, .page-block #page .field-group-fieldset .fieldset-legend a {
+  padding-left: 20px;
+}
+/* line 349, ../sass/custom.scss */
 .page-node-add #page .field-group-fieldset .fieldset-wrapper, .page-node-edit #page .field-group-fieldset .fieldset-wrapper, .page-node #page .field-group-fieldset .fieldset-wrapper, .page-user #page .field-group-fieldset .fieldset-wrapper, .page-file #page .field-group-fieldset .fieldset-wrapper, .page-block #page .field-group-fieldset .fieldset-wrapper {
   padding-left: 20px;
 }
-/* line 333, ../sass/custom.scss */
+/* line 351, ../sass/custom.scss */
 .page-node-add #page .field-group-fieldset .fieldset-wrapper .general_field_styling, .page-node-edit #page .field-group-fieldset .fieldset-wrapper .general_field_styling, .page-node #page .field-group-fieldset .fieldset-wrapper .general_field_styling, .page-user #page .field-group-fieldset .fieldset-wrapper .general_field_styling, .page-file #page .field-group-fieldset .fieldset-wrapper .general_field_styling, .page-block #page .field-group-fieldset .fieldset-wrapper .general_field_styling {
   background: none;
   padding: 15px 0;
 }
-/* line 337, ../sass/custom.scss */
+/* line 355, ../sass/custom.scss */
 .page-node-add #page .field-group-fieldset .fieldset-wrapper .general_field_styling .media-widget .form-item, .page-node-edit #page .field-group-fieldset .fieldset-wrapper .general_field_styling .media-widget .form-item, .page-node #page .field-group-fieldset .fieldset-wrapper .general_field_styling .media-widget .form-item, .page-user #page .field-group-fieldset .fieldset-wrapper .general_field_styling .media-widget .form-item, .page-file #page .field-group-fieldset .fieldset-wrapper .general_field_styling .media-widget .form-item, .page-block #page .field-group-fieldset .fieldset-wrapper .general_field_styling .media-widget .form-item {
   padding-bottom: 5px;
 }
-/* line 342, ../sass/custom.scss */
+/* line 360, ../sass/custom.scss */
 .page-node-add #page .field-group-fieldset .fieldset-wrapper label, .page-node-edit #page .field-group-fieldset .fieldset-wrapper label, .page-node #page .field-group-fieldset .fieldset-wrapper label, .page-user #page .field-group-fieldset .fieldset-wrapper label, .page-file #page .field-group-fieldset .fieldset-wrapper label, .page-block #page .field-group-fieldset .fieldset-wrapper label {
   font-size: 1em;
   font-weight: bold;
 }
-/* line 346, ../sass/custom.scss */
+/* line 364, ../sass/custom.scss */
 .page-node-add #page .field-group-fieldset .fieldset-wrapper .form-item, .page-node-edit #page .field-group-fieldset .fieldset-wrapper .form-item, .page-node #page .field-group-fieldset .fieldset-wrapper .form-item, .page-user #page .field-group-fieldset .fieldset-wrapper .form-item, .page-file #page .field-group-fieldset .fieldset-wrapper .form-item, .page-block #page .field-group-fieldset .fieldset-wrapper .form-item {
   margin: 0;
   padding: 0;
 }
-/* line 353, ../sass/custom.scss */
+/* line 371, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper, .page-node-edit #page .field-group-htabs-wrapper, .page-node #page .field-group-htabs-wrapper, .page-user #page .field-group-htabs-wrapper, .page-file #page .field-group-htabs-wrapper, .page-block #page .field-group-htabs-wrapper {
   padding: 30px 0;
 }
-/* line 355, ../sass/custom.scss */
+/* line 373, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .general_field_styling, .page-node-edit #page .field-group-htabs-wrapper .general_field_styling, .page-node #page .field-group-htabs-wrapper .general_field_styling, .page-user #page .field-group-htabs-wrapper .general_field_styling, .page-file #page .field-group-htabs-wrapper .general_field_styling, .page-block #page .field-group-htabs-wrapper .general_field_styling {
   background: none;
   padding: 0;
 }
-/* line 359, ../sass/custom.scss */
+/* line 377, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs, .page-node #page .field-group-htabs-wrapper .horizontal-tabs, .page-user #page .field-group-htabs-wrapper .horizontal-tabs, .page-file #page .field-group-htabs-wrapper .horizontal-tabs, .page-block #page .field-group-htabs-wrapper .horizontal-tabs {
   border: 0;
 }
-/* line 361, ../sass/custom.scss */
+/* line 379, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list, .page-block #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list {
   border-right: 0;
   border-bottom: 1px solid #d8d8d8;
   background-color: transparent;
 }
-/* line 365, ../sass/custom.scss */
+/* line 383, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li, .page-block #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li {
   -moz-border-radius: 8px 8px 0 0;
   -webkit-border-top-left-radius: 8px;
@@ -748,22 +767,22 @@ User profile
   margin-top: 10px;
   outline: 0;
 }
-/* line 375, ../sass/custom.scss */
+/* line 393, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a, .page-block #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a {
   color: #000;
   font-weight: normal;
   outline: 0;
 }
-/* line 379, ../sass/custom.scss */
+/* line 397, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a strong, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a strong, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a strong, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a strong, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a strong, .page-block #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a strong {
   font-weight: normal;
 }
-/* line 383, ../sass/custom.scss */
+/* line 401, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a:hover, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a:hover, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a:hover, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a:hover, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a:hover, .page-block #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a:hover {
   background-color: transparent;
   outline: 0;
 }
-/* line 389, ../sass/custom.scss */
+/* line 407, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list .selected, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list .selected, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list .selected, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list .selected, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list .selected, .page-block #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list .selected {
   background-color: #fff;
   border-top: 1px solid #eeeeee;
@@ -772,32 +791,31 @@ User profile
   border-right: 1px solid #eeeeee;
   padding: 0 18px 2px;
 }
-/* line 398, ../sass/custom.scss */
+/* line 416, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .field-group-fieldset, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .field-group-fieldset, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .field-group-fieldset, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .field-group-fieldset, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .field-group-fieldset, .page-block #page .field-group-htabs-wrapper .horizontal-tabs .field-group-fieldset {
   background: none;
 }
-/* line 404, ../sass/custom.scss */
+/* line 422, ../sass/custom.scss */
 .page-node-add #page .vertical-tabs, .page-node-edit #page .vertical-tabs, .page-node #page .vertical-tabs, .page-user #page .vertical-tabs, .page-file #page .vertical-tabs, .page-block #page .vertical-tabs {
   margin-top: 30px;
 }
-/* line 406, ../sass/custom.scss */
+/* line 424, ../sass/custom.scss */
 .page-node-add #page .vertical-tabs .general_field_styling, .page-node-edit #page .vertical-tabs .general_field_styling, .page-node #page .vertical-tabs .general_field_styling, .page-user #page .vertical-tabs .general_field_styling, .page-file #page .vertical-tabs .general_field_styling, .page-block #page .vertical-tabs .general_field_styling {
   background: none;
   padding: 0;
 }
-/* line 410, ../sass/custom.scss */
+/* line 428, ../sass/custom.scss */
 .page-node-add #page .vertical-tabs .form-text, .page-node-edit #page .vertical-tabs .form-text, .page-node #page .vertical-tabs .form-text, .page-user #page .vertical-tabs .form-text, .page-file #page .vertical-tabs .form-text, .page-block #page .vertical-tabs .form-text {
   background-color: white;
+  border: 1px solid #bebfb9;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
-  box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  /* 	@include box-shadow(rgba(black, 0.85) 0 0 3px); */
   height: 30px;
   border: none;
 }
-/* line 415, ../sass/custom.scss */
+/* line 433, ../sass/custom.scss */
 .page-node-add #page .vertical-tabs .vertical-tab-button-error, .page-node-edit #page .vertical-tabs .vertical-tab-button-error, .page-node #page .vertical-tabs .vertical-tab-button-error, .page-user #page .vertical-tabs .vertical-tab-button-error, .page-file #page .vertical-tabs .vertical-tab-button-error, .page-block #page .vertical-tabs .vertical-tab-button-error {
   border: 2px solid red;
 }
@@ -807,22 +825,22 @@ User profile
 	Workbench
 
 -------------------------------------------------------------------*/
-/* line 429, ../sass/custom.scss */
+/* line 447, ../sass/custom.scss */
 .page-admin-workbench #page {
   min-width: 960px;
 }
-/* line 432, ../sass/custom.scss */
+/* line 450, ../sass/custom.scss */
 .page-admin-workbench #page .tabs-secondary .min-profil {
   float: right;
   width: 28%;
 }
-/* line 435, ../sass/custom.scss */
+/* line 453, ../sass/custom.scss */
 .page-admin-workbench #page .tabs-secondary .min-profil li {
   float: left;
   display: block;
   margin-right: 10px;
 }
-/* line 439, ../sass/custom.scss */
+/* line 457, ../sass/custom.scss */
 .page-admin-workbench #page .tabs-secondary .min-profil li a {
   background-color: #ddd;
   color: #000;
@@ -830,28 +848,27 @@ User profile
   border-radius: 7px;
   padding: 2px 10px;
 }
-/* line 451, ../sass/custom.scss */
+/* line 469, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .left {
   float: left;
   min-width: 67%;
   margin-right: 40px;
 }
-/* line 457, ../sass/custom.scss */
+/* line 475, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right {
   float: right;
   width: 28%;
 }
-/* line 460, ../sass/custom.scss */
+/* line 478, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content {
   background-color: white;
+  border: 1px solid #bebfb9;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
-  box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  /* 	@include box-shadow(rgba(black, 0.85) 0 0 3px); */
 }
-/* line 462, ../sass/custom.scss */
+/* line 480, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content h4 {
   padding: 10px;
   border-bottom: 1px solid #bcbdbd;
@@ -863,48 +880,47 @@ User profile
   text-transform: uppercase;
   vertical-align: middle;
 }
-/* line 473, ../sass/custom.scss */
+/* line 491, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-picture {
   padding: 10px 10px 0 10px;
 }
-/* line 476, ../sass/custom.scss */
+/* line 494, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-field-user-jobtitel {
   padding: 0 10px 0 10px;
   font-style: italic;
   margin: 10px 0;
 }
-/* line 481, ../sass/custom.scss */
+/* line 499, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-field-user-tlf, .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-mail {
   padding: 0 10px 0 10px;
 }
-/* line 484, ../sass/custom.scss */
+/* line 502, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-mail {
   padding-bottom: 10px;
 }
-/* line 487, ../sass/custom.scss */
+/* line 505, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content p {
   margin: 0;
 }
-/* line 494, ../sass/custom.scss */
+/* line 512, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle .needs_attention {
   float: left;
   width: 67%;
   margin-right: 40px;
 }
-/* line 499, ../sass/custom.scss */
+/* line 517, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle #block-block-16 {
   float: right;
   background-color: white;
+  border: 1px solid #bebfb9;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
-  box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  /* 	@include box-shadow(rgba(black, 0.85) 0 0 3px); */
   width: 28%;
   margin-top: 68px;
 }
-/* line 504, ../sass/custom.scss */
+/* line 522, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle #block-block-16 h2 {
   padding: 10px;
   border-bottom: 1px solid #bcbdbd;
@@ -916,15 +932,15 @@ User profile
   text-transform: uppercase;
   vertical-align: middle;
 }
-/* line 515, ../sass/custom.scss */
+/* line 533, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle #block-block-16 .content {
   padding: 10px;
 }
-/* line 518, ../sass/custom.scss */
+/* line 536, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle #block-block-16 p {
   margin: 0;
 }
-/* line 524, ../sass/custom.scss */
+/* line 542, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_bottom .all_recent_content, .page-admin-workbench #page #min_profil_side .min_profil_bottom .content_without_moderation {
   float: left;
   width: 100%;
@@ -935,28 +951,28 @@ User profile
 	WYSIWYG editor
 
 -------------------------------------------------------------------*/
-/* line 545, ../sass/custom.scss */
+/* line 563, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mce_removeformat {
   display: none;
 }
-/* line 548, ../sass/custom.scss */
+/* line 566, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mce_pasteword {
   display: none;
 }
-/* line 551, ../sass/custom.scss */
+/* line 569, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mce_paste {
   display: none;
 }
-/* line 554, ../sass/custom.scss */
+/* line 572, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mceFirst {
   background: #f6f6f6;
 }
-/* line 557, ../sass/custom.scss */
+/* line 575, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mceIframeContainer.mceFirst.mceLast {
   border-top: 1px solid #d8d8d8;
   border-bottom: 1px solid #d8d8d8;
 }
-/* line 561, ../sass/custom.scss */
+/* line 579, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mceListBox {
   border-radius: 0;
   -o-border-radius: 0;
@@ -967,7 +983,7 @@ User profile
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
 }
-/* line 575, ../sass/custom.scss */
+/* line 593, ../sass/custom.scss */
 .page-node #page .filter-wrapper label {
   font-size: 12px;
   font-weight: bold;
@@ -978,7 +994,7 @@ User profile
 	Breadcrumbs
 	
 -------------------------------------------------------------------*/
-/* line 591, ../sass/custom.scss */
+/* line 609, ../sass/custom.scss */
 #branding .breadcrumb {
   font-size: 0.91667em;
   line-height: 1.5;
@@ -988,14 +1004,14 @@ User profile
   margin-left: 5px;
   text-shadow: white 1px 1px 1px;
 }
-/* line 599, ../sass/custom.scss */
+/* line 617, ../sass/custom.scss */
 #branding .breadcrumb a, #branding .breadcrumb strong {
   color: #474747;
   text-decoration: none;
   position: relative;
   top: -1px;
 }
-/* line 605, ../sass/custom.scss */
+/* line 623, ../sass/custom.scss */
 #branding .breadcrumb span {
   font-size: 1.25em;
 }
@@ -1005,7 +1021,7 @@ User profile
 	Views 
 	
 -------------------------------------------------------------------*/
-/* line 616, ../sass/custom.scss */
+/* line 634, ../sass/custom.scss */
 .views-exposed-form .form-item {
   padding: 0;
 }
@@ -1015,7 +1031,7 @@ User profile
 	Media module
 	
 -------------------------------------------------------------------*/
-/* line 627, ../sass/custom.scss */
+/* line 645, ../sass/custom.scss */
 .page-media .form-submit, .page-media a.button {
   background-color: #7f9dcd;
   color: #fff;
@@ -1029,20 +1045,27 @@ User profile
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 640, ../sass/custom.scss */
+/* line 658, ../sass/custom.scss */
 .page-media input[type="file"] {
   background-color: white;
+  border: 1px solid #bebfb9;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
-  box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  /* 	@include box-shadow(rgba(black, 0.85) 0 0 3px); */
   border: 0;
   margin-right: 20px;
 }
 
-/* line 648, ../sass/custom.scss */
+/* line 666, ../sass/custom.scss */
+.page-node .media-widget .preview {
+  margin: 0;
+}
+/* line 668, ../sass/custom.scss */
+.page-node .media-widget .preview > div {
+  margin-right: 15px;
+}
+/* line 672, ../sass/custom.scss */
 .page-node .media-widget .button {
   background-color: #7f9dcd;
   color: #fff;
@@ -1055,9 +1078,10 @@ User profile
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
+  display: inline-block;
 }
 
-/* line 666, ../sass/custom.scss */
+/* line 691, ../sass/custom.scss */
 #file-entity-edit .chzn-choices input[type="text"], #file-entity-edit .chzn-drop input[type="text"], #file-entity-edit--2 .chzn-choices input[type="text"], #file-entity-edit--2 .chzn-drop input[type="text"] {
   border-radius: 0;
   -webkit-border-radius: none;
@@ -1069,22 +1093,21 @@ User profile
   -moz-box-shadow: transparent 0 0 0;
   box-shadow: transparent 0 0 0;
 }
-/* line 678, ../sass/custom.scss */
+/* line 703, ../sass/custom.scss */
 #file-entity-edit input[type="text"], #file-entity-edit--2 input[type="text"] {
   width: 50%;
   padding: 0 0 0 1%;
   min-height: 30px;
   border: none;
   background-color: white;
+  border: 1px solid #bebfb9;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
-  box-shadow: rgba(0, 0, 0, 0.85) 0 0 3px;
+  /* 	@include box-shadow(rgba(black, 0.85) 0 0 3px); */
   font-size: 13px;
 }
-/* line 686, ../sass/custom.scss */
+/* line 711, ../sass/custom.scss */
 #file-entity-edit input[type="submit"], #file-entity-edit--2 input[type="submit"] {
   background-color: #7f9dcd;
   color: #fff;
@@ -1098,7 +1121,7 @@ User profile
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 699, ../sass/custom.scss */
+/* line 724, ../sass/custom.scss */
 #file-entity-edit .button-no, #file-entity-edit--2 .button-no {
   background-color: #7f9dcd;
   color: #fff;
@@ -1113,12 +1136,12 @@ User profile
   border-radius: 3px;
 }
 
-/* line 714, ../sass/custom.scss */
+/* line 739, ../sass/custom.scss */
 .media-modal-frame .page-file {
   background-color: #fff;
 }
 
-/* line 719, ../sass/custom.scss */
+/* line 744, ../sass/custom.scss */
 #media-browser-page #branding {
   background: #fff;
 }
@@ -1128,15 +1151,15 @@ User profile
 	BEAN
 	
 -------------------------------------------------------------------*/
-/* line 731, ../sass/custom.scss */
+/* line 756, ../sass/custom.scss */
 .page-block #bean-form .form-item-is-new-revision, .page-block #bean-form .form-item-default-revision, .page-block #bean-form .form-item-view-mode {
   display: none;
 }
-/* line 735, ../sass/custom.scss */
+/* line 760, ../sass/custom.scss */
 .page-block #bean-form #edit-log-wrapper .form-item {
   display: none;
 }
-/* line 740, ../sass/custom.scss */
+/* line 765, ../sass/custom.scss */
 .page-block #bean-form .form-item-default-revision input, .page-block #bean-form .form-item-default-revision label {
   display: none;
 }
@@ -1146,7 +1169,80 @@ User profile
 	User profile
 	
 -------------------------------------------------------------------*/
-/* line 755, ../sass/custom.scss */
+/* line 780, ../sass/custom.scss */
 .page-user #page #user-profile-form .fieldset-wrapper {
   padding-top: 30px;
+}
+
+/*------------------------------------------------------------------
+
+	Node Edit
+	
+-------------------------------------------------------------------*/
+/* line 794, ../sass/custom.scss */
+.page-node-edit #page .field-multiple-table,
+.page-node-add #page .field-multiple-table {
+  /* Style secondary buttons */
+}
+/* line 796, ../sass/custom.scss */
+.page-node-edit #page .field-multiple-table tr.draggable > td,
+.page-node-add #page .field-multiple-table tr.draggable > td {
+  padding: 15px 25px;
+  /* Section Type Headline */
+}
+/* line 799, ../sass/custom.scss */
+.page-node-edit #page .field-multiple-table tr.draggable > td > .form-wrapper:first-child,
+.page-node-edit #page .field-multiple-table tr.draggable > td > .ajax-new-content > .form-wrapper:first-child,
+.page-node-add #page .field-multiple-table tr.draggable > td > .form-wrapper:first-child,
+.page-node-add #page .field-multiple-table tr.draggable > td > .ajax-new-content > .form-wrapper:first-child {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+/* line 803, ../sass/custom.scss */
+.page-node-edit #page .field-multiple-table tr.draggable > td > .form-wrapper:first-child em,
+.page-node-edit #page .field-multiple-table tr.draggable > td > .ajax-new-content > .form-wrapper:first-child em,
+.page-node-add #page .field-multiple-table tr.draggable > td > .form-wrapper:first-child em,
+.page-node-add #page .field-multiple-table tr.draggable > td > .ajax-new-content > .form-wrapper:first-child em {
+  font-weight: bold;
+  font-style: normal;
+}
+/* line 809, ../sass/custom.scss */
+.page-node-edit #page .field-multiple-table tr.draggable > td.field-multiple-drag,
+.page-node-add #page .field-multiple-table tr.draggable > td.field-multiple-drag {
+  padding: 15px 5px;
+}
+/* line 812, ../sass/custom.scss */
+.page-node-edit #page .field-multiple-table tr.draggable div[class^="field-type-"],
+.page-node-add #page .field-multiple-table tr.draggable div[class^="field-type-"] {
+  margin-bottom: 15px;
+}
+/* line 815, ../sass/custom.scss */
+.page-node-edit #page .field-multiple-table tr.draggable .form-actions,
+.page-node-add #page .field-multiple-table tr.draggable .form-actions {
+  margin-bottom: 0;
+}
+/* line 819, ../sass/custom.scss */
+.page-node-edit #page .field-multiple-table input.field-add-more-submit,
+.page-node-add #page .field-multiple-table input.field-add-more-submit {
+  margin: 15px 0 15px;
+}
+/* line 823, ../sass/custom.scss */
+.page-node-edit #page .field-multiple-table input.field-add-more-submit,
+.page-node-edit #page .field-multiple-table input.remove,
+.page-node-edit #page .field-multiple-table a.button.edit,
+.page-node-edit #page .field-multiple-table a.button.browse,
+.page-node-edit #page .field-multiple-table #field-main-accordion-values input[type=submit],
+.page-node-edit #page .field-multiple-table .field-name-field-sec-nav-elment input[type=submit],
+.page-node-add #page .field-multiple-table input.field-add-more-submit,
+.page-node-add #page .field-multiple-table input.remove,
+.page-node-add #page .field-multiple-table a.button.edit,
+.page-node-add #page .field-multiple-table a.button.browse,
+.page-node-add #page .field-multiple-table #field-main-accordion-values input[type=submit],
+.page-node-add #page .field-multiple-table .field-name-field-sec-nav-elment input[type=submit] {
+  background: #bbb;
+}
+/* line 832, ../sass/custom.scss */
+.page-node-edit #page .form-item-field-main-paragraphs-add-more-type,
+.page-node-add #page .form-item-field-main-paragraphs-add-more-type {
+  margin: 25px 0 0;
 }

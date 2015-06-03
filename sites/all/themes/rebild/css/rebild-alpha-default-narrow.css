@@ -201,24 +201,24 @@ Landingpage
 -------------------------------------------------------------------*/
 /* Basic Page Extended */
 /* line 146, ../sass/rebild-alpha-default-narrow.scss */
-#region-content .node-page-extended .field-name-field-main-sections {
+#region-content .node-page-extended .field-name-field-main-paragraphs {
   /* Navigation List */
 }
 /* line 151, ../sass/rebild-alpha-default-narrow.scss */
-#region-content .node-page-extended .field-name-field-main-sections .field-name-field-sec-nav-elment > .field-items > .field-item .field-name-field-sec-nav-image {
+#region-content .node-page-extended .field-name-field-main-paragraphs .field-name-field-sec-nav-elment > .field-items > .field-item .field-name-field-sec-nav-image {
   width: 76px;
 }
 /* line 154, ../sass/rebild-alpha-default-narrow.scss */
-#region-content .node-page-extended .field-name-field-main-sections .field-name-field-sec-nav-elment > .field-items > .field-item h3 {
+#region-content .node-page-extended .field-name-field-main-paragraphs .field-name-field-sec-nav-elment > .field-items > .field-item h3 {
   padding-left: 88px;
 }
 /* line 157, ../sass/rebild-alpha-default-narrow.scss */
-#region-content .node-page-extended .field-name-field-main-sections .field-name-field-sec-nav-elment > .field-items > .field-item .field-name-field-sec-nav-body {
+#region-content .node-page-extended .field-name-field-main-paragraphs .field-name-field-sec-nav-elment > .field-items > .field-item .field-name-field-sec-nav-body {
   padding-left: 88px;
   margin-bottom: 6px;
 }
 /* line 161, ../sass/rebild-alpha-default-narrow.scss */
-#region-content .node-page-extended .field-name-field-main-sections .field-name-field-sec-nav-elment > .field-items > .field-item .read-more {
+#region-content .node-page-extended .field-name-field-main-paragraphs .field-name-field-sec-nav-elment > .field-items > .field-item .read-more {
   padding-left: 88px;
 }
 

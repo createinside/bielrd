@@ -100,7 +100,6 @@ User profile
 					
 		table  {
 			@include grid-box-workbench(white);
-			border:hidden;
 			border-collapse: separate;
 			font-size: $font-size-std;
 			.odd {
@@ -186,17 +185,24 @@ User profile
 				font-weight: bold;
 			}
 		}
+		.link-attributes {
+			margin: 5px 0 10px;
+		}
+		.field-suffix {
+			
+		}
 		/* Input felter */
 		input[type="radio"] {
 			margin-left: 20px;
 		}
-		.form-text.required {
-			width: 99%;
-			padding:0 0 0 1%;
+		.form-text {
+			width: 100%;
+			padding:0 0 0 0;
 			min-height: 30px;
 			border: none;
 			@include grid-box-workbench(white);
 			font-size: 13px;
+			@include box-sizing(border-box);
 		}
 		.form-item-title {
 			background: url("../images/dot.png") repeat-x bottom;
@@ -212,7 +218,7 @@ User profile
 			height: 30px;
 			padding: 0 0 0 1%;
 			font-size: 13px;
-			border: 0;
+			/* 			border: 0; */
 		}
 		.date-clear {
 			@include grid-box-workbench(white);
@@ -226,7 +232,7 @@ User profile
 		}
 		
 		.description {
-			font-size: $font-size-std;
+			font-size: $font-size-small;
 		}
 		.button.launcher, .field-add-more-submit, .form-submit {
 			background-color: $color-blue;
@@ -272,15 +278,24 @@ User profile
 			-webkit-box-shadow:none;
 			-moz-box-shadow:none;
 			th {
-				background: none;
-				padding: 0;
+				/* background: none; */
 				text-transform: none;
+				label {
+					margin: 0;
+					padding: 0;
+				}
 			}
 			.field-multiple-drag {
-				border-right: 3px solid #dddddd;
+				border-right: 1px solid #dddddd;
+				a {
+					display: block;
+					float: none;
+					padding: 0;
+					margin-left: 0;
+				}
 			}
 			tr {
-				background: none;
+				/* background: none; */
 				border-bottom: 20px solid #fff;
 				border-right: 0;
 				border-left:0;
@@ -326,7 +341,10 @@ User profile
 				padding: 0;
 				text-transform: none;
 				font-size: $font-size-large;
-				font-weight: normal;				
+				font-weight: normal;	
+				a {
+					padding-left: 20px;
+				}			
 			}
 			.fieldset-wrapper {
 				padding-left: 20px;
@@ -645,6 +663,12 @@ User profile
 }
 .page-node {
 	.media-widget {
+		.preview {
+			margin: 0;
+			> div {
+				margin-right: 15px;
+			}
+		}
 		.button {
 			background-color: $color-blue;
 			color: #fff;
@@ -657,6 +681,7 @@ User profile
 			-ms-border-radius: 3px;
 			-o-border-radius: 3px;
 			border-radius: 3px;
+			display: inline-block;
 		}		
 	}
 
@@ -757,4 +782,54 @@ User profile
 			}
 		}
 	}	
+}
+
+/*------------------------------------------------------------------
+
+	Node Edit
+	
+-------------------------------------------------------------------*/
+.page-node-edit #page,
+.page-node-add #page {
+	.field-multiple-table {
+		tr.draggable {
+			> td {
+				padding: 15px 25px;
+				/* Section Type Headline */
+				> .form-wrapper:first-child,
+				> .ajax-new-content > .form-wrapper:first-child {
+					margin-top: 5px;
+					margin-bottom: 15px;
+					em {
+						font-weight: bold;
+						font-style: normal;
+					}
+				}
+			}
+			> td.field-multiple-drag {
+				padding: 15px 5px;
+			}
+			div[class^="field-type-"] {
+				margin-bottom: 15px;
+			}
+			.form-actions {
+				margin-bottom: 0;
+			}
+		}
+		input.field-add-more-submit {
+			margin: 15px 0 15px;
+		}
+		/* Style secondary buttons */
+		input.field-add-more-submit,
+		input.remove,
+		a.button.edit,
+		a.button.browse,
+		#field-main-accordion-values input[type=submit],
+		.field-name-field-sec-nav-elment input[type=submit] {
+			background: #bbb;
+		}
+	}
+	.form-item-field-main-paragraphs-add-more-type {
+		margin: 25px 0 0;
+	}
 }

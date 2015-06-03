@@ -1147,7 +1147,7 @@ Share nodes
 #region-content .node-page-extended .field-name-field-main-factbox {
   background: #e9e6e6;
   padding: 10px;
-  margin: 0 0 10px 0;
+  margin: 0 0 20px 0;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -1257,7 +1257,7 @@ Share nodes
   display: none;
 }
 /* line 179, ../sass/partials/_nodes.scss */
-#region-content .node-page-extended .field-name-field-main-sections {
+#region-content .node-page-extended .field-name-field-main-paragraphs {
   /* Reset field margin */
   /* Text and Image */
   /* Text and Video */
@@ -1265,80 +1265,98 @@ Share nodes
   /* Navigation List */
 }
 /* line 180, ../sass/partials/_nodes.scss */
-#region-content .node-page-extended .field-name-field-main-sections .field:last-child {
+#region-content .node-page-extended .field-name-field-main-paragraphs .field:last-child {
   margin: 0;
 }
 /* line 183, ../sass/partials/_nodes.scss */
-#region-content .node-page-extended .field-name-field-main-sections > .field-items > .field-item {
+#region-content .node-page-extended .field-name-field-main-paragraphs > .field-items > .field-item {
   padding: 0 0 20px;
   margin: 0;
+  overflow: hidden;
 }
-/* line 186, ../sass/partials/_nodes.scss */
-#region-content .node-page-extended .field-name-field-main-sections > .field-items > .field-item:last-child {
+/* line 187, ../sass/partials/_nodes.scss */
+#region-content .node-page-extended .field-name-field-main-paragraphs > .field-items > .field-item:last-child {
   padding: 0;
 }
-/* line 191, ../sass/partials/_nodes.scss */
-#region-content .node-page-extended .field-name-field-main-sections .field-name-field-main-accordion,
-#region-content .node-page-extended .field-name-field-main-sections .field-name-field-main-image-gallery,
-#region-content .node-page-extended .field-name-field-main-sections .view-selfservice-items.view-display-id-embedded_ext {
+/* line 192, ../sass/partials/_nodes.scss */
+#region-content .node-page-extended .field-name-field-main-paragraphs .field-name-field-main-accordion,
+#region-content .node-page-extended .field-name-field-main-paragraphs .field-name-field-main-image-gallery,
+#region-content .node-page-extended .field-name-field-main-paragraphs .view-selfservice-items.view-display-id-embedded_ext {
   margin: 0;
 }
-/* line 195, ../sass/partials/_nodes.scss */
-#region-content .node-page-extended .field-name-field-main-sections .field-name-field-main-accordion .view-content,
-#region-content .node-page-extended .field-name-field-main-sections .field-name-field-main-image-gallery .view-content,
-#region-content .node-page-extended .field-name-field-main-sections .view-selfservice-items.view-display-id-embedded_ext .view-content {
+/* line 196, ../sass/partials/_nodes.scss */
+#region-content .node-page-extended .field-name-field-main-paragraphs .field-name-field-main-accordion .view-content,
+#region-content .node-page-extended .field-name-field-main-paragraphs .field-name-field-main-image-gallery .view-content,
+#region-content .node-page-extended .field-name-field-main-paragraphs .view-selfservice-items.view-display-id-embedded_ext .view-content {
   margin: 0;
 }
-/* line 200, ../sass/partials/_nodes.scss */
-#region-content .node-page-extended .field-name-field-main-sections .field-name-field-sec-txt-img-image {
+/* line 201, ../sass/partials/_nodes.scss */
+#region-content .node-page-extended .field-name-field-main-paragraphs .field-name-field-sec-txt-img-image {
   float: left;
-  margin: 0 12px 8px 0;
+  width: 40%;
+  max-width: 145px;
+  margin: 2px 12px 8px 0;
 }
-/* line 205, ../sass/partials/_nodes.scss */
-#region-content .node-page-extended .field-name-field-main-sections .field-name-field-sec-txt-vid-video {
+/* line 208, ../sass/partials/_nodes.scss */
+#region-content .node-page-extended .field-name-field-main-paragraphs .field-name-field-sec-txt-img-body .field-item > *:first-child {
+  padding-top: 0;
+  margin-top: 0;
+}
+/* line 214, ../sass/partials/_nodes.scss */
+#region-content .node-page-extended .field-name-field-main-paragraphs .field-name-field-sec-txt-vid-url {
   float: left;
-  margin: 0 12px 8px 0;
+  width: 40%;
+  max-width: 145px;
+  margin: 2px 12px 8px 0;
   position: relative;
 }
-/* line 210, ../sass/partials/_nodes.scss */
-#region-content .node-page-extended .field-name-field-main-sections .field-name-field-sec-txt-vid-video .youtube-field-player:before {
+/* line 222, ../sass/partials/_nodes.scss */
+#region-content .node-page-extended .field-name-field-main-paragraphs .field-name-field-sec-txt-vid-url .youtube-field-player:before,
+#region-content .node-page-extended .field-name-field-main-paragraphs .field-name-field-sec-txt-vid-url .cboxElement:before {
   content: url("/sites/all/themes/rebild/img/youtube-play.png");
   position: absolute;
-  top: 21px;
-  left: 45px;
+  top: 50%;
+  left: 50%;
+  margin-left: -25px;
+  margin-top: -19px;
 }
-/* line 220, ../sass/partials/_nodes.scss */
-#region-content .node-page-extended .field-name-field-main-sections .view-section-pdf-list .views-row {
+/* line 231, ../sass/partials/_nodes.scss */
+#region-content .node-page-extended .field-name-field-main-paragraphs .field-name-field-sec-txt-vid-url .field-item > *:first-child {
+  padding-top: 0;
+  margin-top: 0;
+}
+/* line 238, ../sass/partials/_nodes.scss */
+#region-content .node-page-extended .field-name-field-main-paragraphs .view-section-pdf-list .views-row {
   margin-bottom: 13px;
 }
-/* line 222, ../sass/partials/_nodes.scss */
-#region-content .node-page-extended .field-name-field-main-sections .view-section-pdf-list .views-row .file-icon {
+/* line 240, ../sass/partials/_nodes.scss */
+#region-content .node-page-extended .field-name-field-main-paragraphs .view-section-pdf-list .views-row .file-icon {
   float: left;
   font-size: 2.45em;
   color: #e14045;
   margin: 0 5px 0 0;
 }
-/* line 229, ../sass/partials/_nodes.scss */
-#region-content .node-page-extended .field-name-field-main-sections .view-section-pdf-list .views-row .file-name a {
+/* line 247, ../sass/partials/_nodes.scss */
+#region-content .node-page-extended .field-name-field-main-paragraphs .view-section-pdf-list .views-row .file-name a {
   color: #e14045;
 }
-/* line 233, ../sass/partials/_nodes.scss */
-#region-content .node-page-extended .field-name-field-main-sections .view-section-pdf-list .views-row .file-meta {
+/* line 251, ../sass/partials/_nodes.scss */
+#region-content .node-page-extended .field-name-field-main-paragraphs .view-section-pdf-list .views-row .file-meta {
   text-transform: uppercase;
   font-style: italic;
 }
-/* line 238, ../sass/partials/_nodes.scss */
-#region-content .node-page-extended .field-name-field-main-sections .view-section-pdf-list .views-row-last {
+/* line 256, ../sass/partials/_nodes.scss */
+#region-content .node-page-extended .field-name-field-main-paragraphs .view-section-pdf-list .views-row-last {
   margin-bottom: 0;
 }
-/* line 245, ../sass/partials/_nodes.scss */
-#region-content .node-page-extended .field-name-field-main-sections .field-name-field-sec-nav-elment > .field-items > .field-item {
+/* line 263, ../sass/partials/_nodes.scss */
+#region-content .node-page-extended .field-name-field-main-paragraphs .field-name-field-sec-nav-elment > .field-items > .field-item {
   margin-bottom: 15px;
   position: relative;
   min-height: 90px;
 }
-/* line 249, ../sass/partials/_nodes.scss */
-#region-content .node-page-extended .field-name-field-main-sections .field-name-field-sec-nav-elment > .field-items > .field-item a.nav-link {
+/* line 267, ../sass/partials/_nodes.scss */
+#region-content .node-page-extended .field-name-field-main-paragraphs .field-name-field-sec-nav-elment > .field-items > .field-item a.nav-link {
   display: block;
   min-height: 80px;
   text-decoration: none;
@@ -1352,50 +1370,51 @@ Share nodes
   -webkit-transition-duration: 250ms;
   transition-duration: 250ms;
 }
-/* line 257, ../sass/partials/_nodes.scss */
-#region-content .node-page-extended .field-name-field-main-sections .field-name-field-sec-nav-elment > .field-items > .field-item a.nav-link:hover {
+/* line 275, ../sass/partials/_nodes.scss */
+#region-content .node-page-extended .field-name-field-main-paragraphs .field-name-field-sec-nav-elment > .field-items > .field-item a.nav-link:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
   opacity: 0.75;
 }
-/* line 260, ../sass/partials/_nodes.scss */
-#region-content .node-page-extended .field-name-field-main-sections .field-name-field-sec-nav-elment > .field-items > .field-item .field-name-field-sec-nav-image {
+/* line 278, ../sass/partials/_nodes.scss */
+#region-content .node-page-extended .field-name-field-main-paragraphs .field-name-field-sec-nav-elment > .field-items > .field-item .field-name-field-sec-nav-image {
   position: absolute;
-  top: 0;
+  top: 1px;
   left: 0;
   margin-bottom: 0;
   width: 76px;
 }
-/* line 267, ../sass/partials/_nodes.scss */
-#region-content .node-page-extended .field-name-field-main-sections .field-name-field-sec-nav-elment > .field-items > .field-item h3 {
+/* line 285, ../sass/partials/_nodes.scss */
+#region-content .node-page-extended .field-name-field-main-paragraphs .field-name-field-sec-nav-elment > .field-items > .field-item h3 {
   font-size: 1.08em;
   padding-top: 0;
   line-height: 1.25em;
   padding-left: 88px;
+  padding-bottom: 0.7em;
   margin: 0;
   font-weight: bold;
 }
-/* line 275, ../sass/partials/_nodes.scss */
-#region-content .node-page-extended .field-name-field-main-sections .field-name-field-sec-nav-elment > .field-items > .field-item .field-name-field-sec-nav-body {
+/* line 294, ../sass/partials/_nodes.scss */
+#region-content .node-page-extended .field-name-field-main-paragraphs .field-name-field-sec-nav-elment > .field-items > .field-item .field-name-field-sec-nav-body {
   padding-left: 88px;
   margin-bottom: 6px;
   word-break: normal;
   word-wrap: normal;
 }
-/* line 281, ../sass/partials/_nodes.scss */
-#region-content .node-page-extended .field-name-field-main-sections .field-name-field-sec-nav-elment > .field-items > .field-item .read-more {
+/* line 300, ../sass/partials/_nodes.scss */
+#region-content .node-page-extended .field-name-field-main-paragraphs .field-name-field-sec-nav-elment > .field-items > .field-item .read-more {
   display: block;
   padding-left: 88px;
   color: #7f9dcd;
 }
-/* line 287, ../sass/partials/_nodes.scss */
-#region-content .node-page-extended .field-name-field-main-sections .field-name-field-sec-nav-elment > .field-items > .field-item:last-child {
+/* line 306, ../sass/partials/_nodes.scss */
+#region-content .node-page-extended .field-name-field-main-paragraphs .field-name-field-sec-nav-elment > .field-items > .field-item:last-child {
   margin-bottom: 0;
 }
 
 /*------------------------------------------------------------------
 	Accordions
 -------------------------------------------------------------------*/
-/* line 305, ../sass/partials/_nodes.scss */
+/* line 324, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion,
 #region-content .node-page-extended .ui-accordion,
 #region-content .node-news-article .ui-accordion,
@@ -1403,7 +1422,7 @@ Share nodes
 #region-content .node-os2web-borger-dk-article .ui-accordion {
   margin: 20px 0;
 }
-/* line 307, ../sass/partials/_nodes.scss */
+/* line 326, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header,
 #region-content .node-page-extended .ui-accordion .ui-accordion-header,
 #region-content .node-news-article .ui-accordion .ui-accordion-header,
@@ -1420,7 +1439,7 @@ Share nodes
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 316, ../sass/partials/_nodes.scss */
+/* line 335, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header > a,
 #region-content .node-page .ui-accordion .ui-accordion-header .field-item,
 #region-content .node-page-extended .ui-accordion .ui-accordion-header > a,
@@ -1435,7 +1454,7 @@ Share nodes
   padding: 0;
   margin: 0;
 }
-/* line 322, ../sass/partials/_nodes.scss */
+/* line 341, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header > a:hover,
 #region-content .node-page .ui-accordion .ui-accordion-header .field-item:hover,
 #region-content .node-page-extended .ui-accordion .ui-accordion-header > a:hover,
@@ -1448,7 +1467,7 @@ Share nodes
 #region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header .field-item:hover {
   text-decoration: none;
 }
-/* line 326, ../sass/partials/_nodes.scss */
+/* line 345, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header > a .field-content:before,
 #region-content .node-page .ui-accordion .ui-accordion-header .field-item:before,
 #region-content .node-page-extended .ui-accordion .ui-accordion-header > a .field-content:before,
@@ -1472,7 +1491,7 @@ Share nodes
   content: "\e00f";
   margin-right: 0.5em;
 }
-/* line 333, ../sass/partials/_nodes.scss */
+/* line 352, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active,
 #region-content .node-page-extended .ui-accordion .ui-accordion-header.ui-state-active,
 #region-content .node-news-article .ui-accordion .ui-accordion-header.ui-state-active,
@@ -1480,7 +1499,7 @@ Share nodes
 #region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header.ui-state-active {
   background-color: #7f9dcd;
 }
-/* line 335, ../sass/partials/_nodes.scss */
+/* line 354, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active a,
 #region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active .field-item,
 #region-content .node-page-extended .ui-accordion .ui-accordion-header.ui-state-active a,
@@ -1493,7 +1512,7 @@ Share nodes
 #region-content .node-os2web-borger-dk-article .ui-accordion .ui-accordion-header.ui-state-active .field-item {
   color: white;
 }
-/* line 339, ../sass/partials/_nodes.scss */
+/* line 358, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active a .field-content:before,
 #region-content .node-page .ui-accordion .ui-accordion-header.ui-state-active .field-item:before,
 #region-content .node-page-extended .ui-accordion .ui-accordion-header.ui-state-active a .field-content:before,
@@ -1517,7 +1536,7 @@ Share nodes
   content: "\e010";
   margin-right: 0.5em;
 }
-/* line 346, ../sass/partials/_nodes.scss */
+/* line 365, ../sass/partials/_nodes.scss */
 #region-content .node-page .ui-accordion .ui-accordion-content,
 #region-content .node-page-extended .ui-accordion .ui-accordion-content,
 #region-content .node-news-article .ui-accordion .ui-accordion-content,
@@ -1526,7 +1545,7 @@ Share nodes
   padding: 10px 20px 20px;
   margin: 0;
 }
-/* line 353, ../sass/partials/_nodes.scss */
+/* line 372, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion {
   margin: 0;
 }
@@ -1535,21 +1554,21 @@ Share nodes
 	Borger dk
 -------------------------------------------------------------------*/
 /* Accordion */
-/* line 366, ../sass/partials/_nodes.scss */
+/* line 385, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .field.field-name-body {
   margin: 2em 0 2em 0;
 }
-/* line 369, ../sass/partials/_nodes.scss */
+/* line 388, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .field-name-field-os2web-borger-dk-header {
   margin-bottom: 20px;
   font-size: 1.33333em;
   line-height: 1.25em;
 }
-/* line 374, ../sass/partials/_nodes.scss */
+/* line 393, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle {
   position: relative;
 }
-/* line 376, ../sass/partials/_nodes.scss */
+/* line 395, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle h2.mArticle {
   background: #e6e6e6;
   color: #474747;
@@ -1563,7 +1582,7 @@ Share nodes
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 387, ../sass/partials/_nodes.scss */
+/* line 406, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle h2.mArticle:before {
   font-family: 'Rebild';
   speak: none;
@@ -1578,12 +1597,12 @@ Share nodes
   content: "\e00f";
   margin-right: 0.5em;
 }
-/* line 392, ../sass/partials/_nodes.scss */
+/* line 411, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article .microArticle div.mArticle {
   padding: 10px 20px;
   margin: 0;
 }
-/* line 397, ../sass/partials/_nodes.scss */
+/* line 416, ../sass/partials/_nodes.scss */
 #region-content .node-os2web-borger-dk-article h2.mArticle.ui-state-active {
   background-color: #7f9dcd;
   color: #fff;
@@ -1592,46 +1611,46 @@ Share nodes
 /*------------------------------------------------------------------
 	Agendas
 -------------------------------------------------------------------*/
-/* line 409, ../sass/partials/_nodes.scss */
+/* line 428, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .view-agenda-accordion {
   position: relative;
 }
-/* line 411, ../sass/partials/_nodes.scss */
+/* line 430, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .view-agenda-accordion .toggle-expand-all {
   text-decoration: none;
   position: absolute;
   top: -26px;
   right: 5px;
 }
-/* line 416, ../sass/partials/_nodes.scss */
+/* line 435, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .view-agenda-accordion .toggle-expand-all:hover {
   text-decoration: none;
 }
-/* line 422, ../sass/partials/_nodes.scss */
+/* line 441, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content {
   padding: 10px 20px 20px;
 }
-/* line 424, ../sass/partials/_nodes.scss */
+/* line 443, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content .views-label {
   font-weight: bold;
 }
-/* line 427, ../sass/partials/_nodes.scss */
+/* line 446, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content ul {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-/* line 430, ../sass/partials/_nodes.scss */
+/* line 449, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content ul li {
   margin: 0;
 }
-/* line 434, ../sass/partials/_nodes.scss */
+/* line 453, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content p.item-intro {
   line-height: 1.5em;
   position: relative;
   font-style: italic;
   margin-bottom: 1em;
 }
-/* line 439, ../sass/partials/_nodes.scss */
+/* line 458, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content p.item-intro .area-print-trigger {
   position: absolute;
   top: 0;
@@ -1647,82 +1666,82 @@ Share nodes
   font-family: Verdana, Arial, sans-serif;
   font-style: normal;
 }
-/* line 454, ../sass/partials/_nodes.scss */
+/* line 473, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content p.item-intro .print-agenda-item {
   float: right;
   font-style: normal;
   text-decoration: underline;
 }
-/* line 460, ../sass/partials/_nodes.scss */
+/* line 479, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content p:last-child {
   margin-bottom: 1.25em;
 }
-/* line 463, ../sass/partials/_nodes.scss */
+/* line 482, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content h3 {
   font-size: 1.2em;
   line-height: 1.2em;
   padding-top: 0.5em;
   padding-bottom: 0.25em;
 }
-/* line 469, ../sass/partials/_nodes.scss */
+/* line 488, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content div.item-resume,
 #region-content .node-agenda .ui-accordion .ui-accordion-content div.item-decision {
   background: #e6e6e6;
   margin: 0 0 10px;
   padding: 10px;
 }
-/* line 474, ../sass/partials/_nodes.scss */
+/* line 493, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content div.item-resume p:last-child,
 #region-content .node-agenda .ui-accordion .ui-accordion-content div.item-decision p:last-child {
   margin-bottom: 0;
 }
-/* line 480, ../sass/partials/_nodes.scss */
+/* line 499, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content div.item-setting table,
 #region-content .node-agenda .ui-accordion .ui-accordion-content div.item-decision table {
   margin: 0;
   border: none;
 }
-/* line 483, ../sass/partials/_nodes.scss */
+/* line 502, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content div.item-setting table tr,
 #region-content .node-agenda .ui-accordion .ui-accordion-content div.item-decision table tr {
   border: none;
 }
-/* line 485, ../sass/partials/_nodes.scss */
+/* line 504, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion .ui-accordion-content div.item-setting table tr td,
 #region-content .node-agenda .ui-accordion .ui-accordion-content div.item-decision table tr td {
   border: none;
 }
-/* line 495, ../sass/partials/_nodes.scss */
+/* line 514, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .ui-accordion.closed-item .ui-accordion-content div.bilag {
   display: none;
 }
-/* line 500, ../sass/partials/_nodes.scss */
+/* line 519, ../sass/partials/_nodes.scss */
 #region-content .node-agenda .field-label {
   margin: 0;
 }
-/* line 503, ../sass/partials/_nodes.scss */
+/* line 522, ../sass/partials/_nodes.scss */
 #region-content .node-agenda table {
   width: 100%;
   max-width: 100%;
   margin: 0 0 1.25em 0;
 }
-/* line 508, ../sass/partials/_nodes.scss */
+/* line 527, ../sass/partials/_nodes.scss */
 #region-content .node-agenda table tr td {
   padding: 5px;
   border: 1px solid black;
 }
-/* line 512, ../sass/partials/_nodes.scss */
+/* line 531, ../sass/partials/_nodes.scss */
 #region-content .node-agenda table tr td.indstillingat {
   width: 1%;
   padding: 0 5px 1.25em 20px;
 }
-/* line 516, ../sass/partials/_nodes.scss */
+/* line 535, ../sass/partials/_nodes.scss */
 #region-content .node-agenda table tr td.indstillinglinje {
   width: 99%;
   padding: 0 0 1.25em;
 }
 
-/* line 527, ../sass/partials/_nodes.scss */
+/* line 546, ../sass/partials/_nodes.scss */
 #region-content .node-offering .field-name-field-offering-link a {
   display: inline-block;
   color: white;
@@ -1741,7 +1760,7 @@ Share nodes
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 538, ../sass/partials/_nodes.scss */
+/* line 557, ../sass/partials/_nodes.scss */
 #region-content .node-offering .field-name-field-offering-link a:after {
   font-family: 'Rebild';
   speak: none;
@@ -1770,7 +1789,7 @@ Share nodes
 /*------------------------------------------------------------------
 	Calendar
 -------------------------------------------------------------------*/
-/* line 559, ../sass/partials/_nodes.scss */
+/* line 578, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info {
   padding: 10px;
   margin-bottom: 20px;
@@ -1779,40 +1798,40 @@ Share nodes
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 563, ../sass/partials/_nodes.scss */
+/* line 582, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .fieldset-legend {
   position: absolute;
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 15px;
 }
-/* line 569, ../sass/partials/_nodes.scss */
+/* line 588, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .fieldset-wrapper {
   margin-top: 40px;
 }
-/* line 572, ../sass/partials/_nodes.scss */
+/* line 591, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact {
   margin-bottom: 20px;
 }
-/* line 574, ../sass/partials/_nodes.scss */
+/* line 593, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact .fieldset-legend {
   position: relative;
   margin-top: 0;
   text-transform: none;
 }
-/* line 579, ../sass/partials/_nodes.scss */
+/* line 598, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact .fieldset-wrapper {
   margin-top: 0;
 }
-/* line 582, ../sass/partials/_nodes.scss */
+/* line 601, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact .field {
   margin-bottom: 0;
 }
-/* line 586, ../sass/partials/_nodes.scss */
+/* line 605, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .group-calendar-info .group-calendar-contact .field-name-field-calender-email a {
   color: #474747;
 }
-/* line 594, ../sass/partials/_nodes.scss */
+/* line 613, ../sass/partials/_nodes.scss */
 #region-content .node-calendar-post .field-name-field-calendar-ticket-link a {
   background-image: url("../img/bestil_billet.png");
   background-repeat: no-repeat;
@@ -1825,7 +1844,7 @@ Share nodes
 /*------------------------------------------------------------------
 	Cloned page
 -------------------------------------------------------------------*/
-/* line 613, ../sass/partials/_nodes.scss */
+/* line 632, ../sass/partials/_nodes.scss */
 #region-content .field-name-field-cloned-page #region-content-sidebar ul {
   margin-left: 0;
 }
@@ -1833,7 +1852,7 @@ Share nodes
 /*------------------------------------------------------------------
 	Share node
 -------------------------------------------------------------------*/
-/* line 623, ../sass/partials/_nodes.scss */
+/* line 642, ../sass/partials/_nodes.scss */
 #region-content .node-share {
   background: #f6f6f6;
   border-radius: 0 0 3px 3px;
@@ -1843,23 +1862,23 @@ Share nodes
   padding-top: 5px;
   position: relative;
 }
-/* line 631, ../sass/partials/_nodes.scss */
+/* line 650, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper {
   padding: 5px 20px 5px 20px;
 }
-/* line 633, ../sass/partials/_nodes.scss */
+/* line 652, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .share_this {
   margin-bottom: 10px;
 }
-/* line 637, ../sass/partials/_nodes.scss */
+/* line 656, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .facebook-share #u_0_6 {
   display: none;
 }
-/* line 642, ../sass/partials/_nodes.scss */
+/* line 661, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .email-share .print_mail {
   margin-left: 0;
 }
-/* line 644, ../sass/partials/_nodes.scss */
+/* line 663, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .email-share .print_mail a {
   display: block;
   background: url("../img/send_email.png");
@@ -1868,19 +1887,19 @@ Share nodes
   height: 20px;
   text-indent: -999em;
 }
-/* line 654, ../sass/partials/_nodes.scss */
+/* line 673, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .to_the_top {
   position: absolute;
   top: 10px;
   right: 20px;
 }
-/* line 658, ../sass/partials/_nodes.scss */
+/* line 677, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .to_the_top .go-top {
   color: #6b6b6b;
   font-size: 0.8em;
   font-style: italic;
 }
-/* line 663, ../sass/partials/_nodes.scss */
+/* line 682, ../sass/partials/_nodes.scss */
 #region-content .node-share .share_wrapper .to_the_top .go-top:after {
   font-family: 'Rebild';
   speak: none;
@@ -1900,17 +1919,21 @@ Share nodes
 /*------------------------------------------------------------------
 	Kontakt sidebar
 -------------------------------------------------------------------*/
-/* line 678, ../sass/partials/_nodes.scss */
-#region-content-sidebar #kontaktlink {
+/* line 697, ../sass/partials/_nodes.scss */
+#region-content-sidebar #kontaktlink,
+#region-content-sidebar #contact-block {
   display: inline-block;
   color: white;
   text-transform: uppercase;
   font-size: 1em;
   text-align: center;
-  width: 98px;
+  width: 100%;
   line-height: 1.35em;
   background-color: #937ea7;
   padding: 14px 20px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzkzN2VhNyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzc5NjQ4YyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #937ea7), color-stop(100%, #79648c));
@@ -1921,44 +1944,60 @@ Share nodes
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 691, ../sass/partials/_nodes.scss */
-#region-content-sidebar #kontaktdiv {
+/* line 711, ../sass/partials/_nodes.scss */
+#region-content-sidebar #kontaktlink:hover,
+#region-content-sidebar #contact-block:hover {
+  text-decoration: none;
+}
+/* line 715, ../sass/partials/_nodes.scss */
+#region-content-sidebar #kontaktdiv,
+#region-content-sidebar #contact-block-content {
   display: none;
 }
 
-/* line 695, ../sass/partials/_nodes.scss */
+/* line 720, ../sass/partials/_nodes.scss */
 .fancybox-skin {
   background: #fff;
 }
 
-/* line 698, ../sass/partials/_nodes.scss */
+/* line 723, ../sass/partials/_nodes.scss */
 #fancybox-outer {
   border-radius: 3px;
 }
 
-/* line 701, ../sass/partials/_nodes.scss */
+/* line 726, ../sass/partials/_nodes.scss */
 #fancybox-wrap {
   width: 100%;
 }
 
-/* line 705, ../sass/partials/_nodes.scss */
-#fancybox-inner #kontaktdiv {
+/* line 730, ../sass/partials/_nodes.scss */
+#fancybox-inner #kontaktdiv,
+#fancybox-inner #contact-block-content {
   padding: 20px;
   overflow: hidden;
-  width: 400px;
+  line-height: 1.25em;
+  font-size: 1em;
 }
-/* line 709, ../sass/partials/_nodes.scss */
-#fancybox-inner #kontaktdiv .field {
+/* line 736, ../sass/partials/_nodes.scss */
+#fancybox-inner #kontaktdiv a,
+#fancybox-inner #contact-block-content a {
+  color: #7f9dcd;
+}
+/* line 739, ../sass/partials/_nodes.scss */
+#fancybox-inner #kontaktdiv .field,
+#fancybox-inner #contact-block-content .field {
   margin-bottom: 10px;
 }
-/* line 712, ../sass/partials/_nodes.scss */
-#fancybox-inner #kontaktdiv .field-name-field-con-center {
+/* line 742, ../sass/partials/_nodes.scss */
+#fancybox-inner #kontaktdiv .field-name-field-con-center,
+#fancybox-inner #contact-block-content .field-name-field-con-center {
   font-weight: bold;
   font-size: 1.5em;
   margin-bottom: 5px;
 }
-/* line 717, ../sass/partials/_nodes.scss */
-#fancybox-inner #kontaktdiv .field-name-field-con-name {
+/* line 747, ../sass/partials/_nodes.scss */
+#fancybox-inner #kontaktdiv .field-name-field-con-name,
+#fancybox-inner #contact-block-content .field-name-field-con-name {
   font-weight: bold;
   margin-bottom: 0;
 }
@@ -1966,20 +2005,44 @@ Share nodes
 /*------------------------------------------------------------------
 	Page Extended
 -------------------------------------------------------------------*/
-/* line 728, ../sass/partials/_nodes.scss */
-.field-collection-item-field-main-sections .field-collection-container {
+/* line 758, ../sass/partials/_nodes.scss */
+.paragraphs-items-field-main-paragraphs .field-collection-container {
   border-bottom: 0;
   margin-bottom: 0;
 }
-/* line 732, ../sass/partials/_nodes.scss */
-.field-collection-item-field-main-sections .field-collection-container .field-items .field-item {
+/* line 762, ../sass/partials/_nodes.scss */
+.paragraphs-items-field-main-paragraphs .field-collection-container .field-items .field-item {
   margin-bottom: 0;
 }
-/* line 734, ../sass/partials/_nodes.scss */
-.field-collection-item-field-main-sections .field-collection-container .field-items .field-item .field-collection-view {
+/* line 764, ../sass/partials/_nodes.scss */
+.paragraphs-items-field-main-paragraphs .field-collection-container .field-items .field-item .field-collection-view {
   padding: 0;
   margin: 0;
   border-bottom: 0;
+}
+
+/* line 773, ../sass/partials/_nodes.scss */
+.player {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 780, ../sass/partials/_nodes.scss */
+.player iframe,
+.player embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 788, ../sass/partials/_nodes.scss */
+#cboxContent .player {
+  position: inherit;
 }
 
 /*------------------------------------------------------------------

@@ -182,9 +182,18 @@ $(document).ready(function() {
 
 // fancybox - kontakt
 $(document).ready(function() {
+
+	// Old contact block (page)
 	$("#kontaktlink").fancybox({
     autoDimensions: false,
     width: 300,
     height: 500
+	});
+	
+	// New contact block (page_extended)
+	$("#contact-block").fancybox({				
+    autoDimensions: false,
+    width: 300,
+    height: 520
 	});
 });
