@@ -78,7 +78,3 @@ fieldset.vertical-tabs-pane fieldset legend {
 * html .vertical-tabs .form-textarea-wrapper {
   width: 95%; /* IE6 */
 }
-
-.vertical-tab-button-error a {
-  border: 1px solid #FC6F5D;
-}
