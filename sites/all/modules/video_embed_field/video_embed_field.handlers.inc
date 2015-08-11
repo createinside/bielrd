@@ -146,7 +146,7 @@ function _video_embed_field_get_youtube_id($url) {
       $id = substr($url, $pos);
     }
   }
-  return $id;
+  return check_plain($id);
 }
 
 /**
@@ -224,7 +224,7 @@ function video_embed_field_handle_youtube_thumbnail($url) {
   // Regular video.
   elseif ($id) {
     $info['id'] = $id;
-    $info['url'] = 'https://i.ytimg.com/vi/' . $id . '/default.jpg';
+    $info['url'] = 'http://img.youtube.com/vi/' . $id . '/0.jpg';
   }
   return $info;
 }
@@ -243,17 +243,11 @@ function video_embed_field_handle_youtube_data($url) {
   $id = _video_embed_field_get_youtube_id($url);
 
   if ($id) {
-
-    $options['v'] = 3;
-    $options['key'] = 'AIzaSyCjChZawHTxpFNWZgCqzo9bUPRZ6Xhbiis';
-    $options['part'] = 'snippet';
-    $options['id'] = $id;
-
-    $response = drupal_http_request(url('https://www.googleapis.com/youtube/v3/videos', array('query' => $options)));
-        
+    $response = drupal_http_request('http://gdata.youtube.com/feeds/api/videos/' . $id . '?v=2&alt=json');
     if (!isset($response->error)) {
       $data = json_decode($response->data);
-      return _video_embed_field_clean_up_youtube_data($data->items);
+      $data = isset($data->entry) ? (array) $data->entry : (array) $data->feed;
+      return _video_embed_field_clean_up_youtube_data($data);
     }
   }
 

@@ -241,16 +241,13 @@ function video_embed_field_field_presave($entity_type, $entity, $field, $instanc
       file_prepare_directory($dirname, FILE_CREATE_DIRECTORY | FILE_MODIFY_PERMISSIONS);
 
       $response = drupal_http_request($thumb_url);
-			/*
       if (!isset($response->error)) {
-        $file = file_save_data($response->data, $local_path, FILE_EXISTS_REPLACE);
+        file_save_data($response->data, $local_path, FILE_EXISTS_REPLACE);
       }
       else {
         @copy($thumb_url, $local_path);
       }
-			*/ 
-		  @copy($thumb_url, $local_path);
-      
+
       $items[$delta]['thumbnail_path'] = $local_path;
       // Delete any image derivatives at the original image path.
       image_path_flush($local_path);
@@ -457,7 +454,7 @@ function video_embed_field_field_formatter_view($entity_type, $entity, $field, $
     if (isset($item['description']) && $item['description'] && $settings['description'] && $instance['settings']['description_field']) {
       $description = array(
         '#prefix' => '<div class="video-embed-description">',
-        '#markup' => $item['description'],
+        '#markup' => check_plain($item['description']),
         '#suffix' => '</div>',
       );
       $alt = $item['description'];
