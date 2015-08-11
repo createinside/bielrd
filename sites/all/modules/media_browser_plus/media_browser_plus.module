@@ -84,8 +84,8 @@ function media_browser_plus_menu() {
  * Implements hook_menu_alter().
  */
 function media_browser_plus_menu_alter(&$items) {
-  // If enabled replace the default file browser by mbp.
-  if (variable_get('media_browser_plus_thumbnails_as_default_browser', TRUE) && isset($items['admin/content/file/mbp'])) {
+  // If enabled and possible replace the default file browser by mbp.
+  if (variable_get('media_browser_plus_thumbnails_as_default_browser', TRUE) && isset($items['admin/content/file/mbp']) && isset($items['admin/content/file'])) {
     $items['admin/content/file/list'] = $items['admin/content/file'];
 
     $file_title = $items['admin/content/file']['title'];
@@ -458,7 +458,17 @@ function media_browser_plus_construct_dir_path($term = NULL) {
  * @return bool
  *   TRUE on success.
  */
-function media_browser_plus_move_file($tid, $file, $replace = FILE_EXISTS_RENAME, $save = TRUE) {
+function media_browser_plus_move_file($tid, $file, $replace = NULL, $save = TRUE) {
+
+  // See which file replace handling has to be used.
+  if (is_null($replace)) {
+    $replace = FILE_EXISTS_RENAME;
+    // See if the file entity provides the file_replace property to indicate how
+    // this has to be handled.
+    if (isset($file->file_replace) && in_array($file->file_replace, array(FILE_EXISTS_REPLACE, FILE_EXISTS_RENAME, FILE_EXISTS_ERROR))) {
+      $replace = $file->file_replace;
+    }
+  }
 
   // Ensure the new location is stored in the file entity.
   $file->field_folder[LANGUAGE_NONE] = array(array('tid' => $tid));
@@ -539,7 +549,7 @@ function media_browser_plus_taxonomy_term_presave($term) {
       }
       // A subfolder term is always child of the root folder. Condition ensures
       // we don't interfere while installing the module.
-      if ($root_folder && (!isset($parent) || (empty($parent) && $term->tid != $root_folder->tid))) {
+      if ($root_folder && (empty($term->tid) || $term->tid != $root_folder->tid) && empty($parent)) {
         $term->parent = array($root_folder->tid);
       }
       // Actions if this is an existing term.

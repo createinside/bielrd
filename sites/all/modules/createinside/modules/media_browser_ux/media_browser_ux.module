@@ -49,14 +49,14 @@ function media_browser_ux_library() {
  * Implements hook_form_alter().
  */
 function media_browser_ux_form_alter(&$form, &$form_state) {
-	
+										
 	// Node edit form
 	if($form['#form_id']=='page_node_form') {
 		if(isset($form['field_main_image'])) {
 			$form['field_main_image']['und'][0]['#process'][] = 'media_browser_ux_element_process'; 
 		}
 	}
-			
+	
 	// File entity upload
 	if($form['#form_id']=='file_entity_add_upload') {
 		
@@ -64,42 +64,91 @@ function media_browser_ux_form_alter(&$form, &$form_state) {
 		if(isset($form['redirect'])) {
 			$form['redirect']['#access'] = FALSE;		
 		}
-		// Hide title field
+		// Hide image title field
 		if(isset($form['field_file_image_title_text'])) {
 			$form['field_file_image_title_text']['#access'] = FALSE;
+		}	
+		
+		// Folder field from step 1
+		if(isset($form['field_folder'])) {
+			if($form['#step']==1) {
+				$form['field_folder']['#access'] = FALSE;
+			}
+			// Reset default folder
+			$form['field_folder']['und']['#default_value'] = NULL;
+			$form['field_folder']['und']['#required'] = TRUE;
+			// Remove first option (Root folder)
+			$root_folder = media_browser_plus_get_media_root_folder();
+			unset($form['field_folder']['und']['#options'][$root_folder->tid]);
+		}
+	}
+	
+	// File entity upload
+	if($form['#form_id']=='file_entity_add_upload_multiple') {	
+		if(isset($form['field_folder'])) {
+			// Remove first option (Root folder)
+			$root_folder = media_browser_plus_get_media_root_folder();
+			unset($form['field_folder']['#options'][$root_folder->tid]);
 		}	
 	}
 		
 	// File entity edit
 	if($form['#form_id']=="file_entity_edit") {
-				
+		
+						
 		// Hide advanced fields
 		$form['user']['#access'] = FALSE;
 		$form['destination']['#access'] = FALSE;		
+		$form['redirect']['#access'] = FALSE;		
 		$form['additional_settings']['#access'] = FALSE;		
 		
 		// Show preview file
 		$form['preview'] = file_view_file($form['preview']['#file'], 'teaser');
 		
-		// Hide title field
+		// Hide image title field
 		if(isset($form['field_file_image_title_text'])) {
 			$form['field_file_image_title_text']['#access'] = FALSE;
 		}
+		
+		if(isset($form['field_folder'])) {
+			// Remove first option (Root folder)
+			$root_folder = media_browser_plus_get_media_root_folder();
+			unset($form['field_folder']['und']['#options'][$root_folder->tid]);
+		}
+		
+		// If the file is edited inside a node => disable replace file function
+		if(arg(0)=='media') {
+			$form['replace_upload']['#access'] = FALSE;
+		}
+		else {
+			// Add submit handler to replace files
+			$form["#submit"][] = "media_browser_ux_file_replace_submit";
+			$form['actions']['submit']['#submit'][] = "media_browser_ux_file_replace_submit"; 
+		}
+
 	}
 	
 	// File entity edit multiple
 	if(strpos($form['#form_id'], 'media_edit_')!==FALSE) {
-		
+				
 		// Hide advanced fields
+		$form['user']['#access'] = FALSE;
 		$form['destination']['#access'] = FALSE;		
 		$form['redirect']['#access'] = FALSE;		
+		$form['additional_settings']['#access'] = FALSE;		
 
 		// Show preview file
 		$form['preview'] = file_view_file($form['preview']['#file'], 'teaser');	
 
-		// Hide title field		
+		// Hide image title field		
 		if(isset($form['field_file_image_title_text'])) {
 			$form['field_file_image_title_text']['#access'] = FALSE;
+		}
+		
+		if(isset($form['field_folder'])) {
+			// Remove first option (Root folder)
+			$root_folder = media_browser_plus_get_media_root_folder();
+			//unset($form['field_folder']['und']['#options'][$root_folder->tid]);
 		}
 	}
 
@@ -154,6 +203,21 @@ function media_browser_ux_form_alter(&$form, &$form_state) {
 }
 
 /**
+ * Edit file: Additional form submit handler
+ */
+function media_browser_ux_file_replace_submit(&$form, &$form_state) {
+	// Force clear cache if replacement file is detected
+  if (isset($form_state['values']['replace_upload'])) {
+		_drupal_flush_css_js();
+		registry_rebuild();
+	  drupal_clear_css_cache();
+	  drupal_clear_js_cache();
+	  system_rebuild_theme_data();
+		drupal_theme_rebuild();
+	}
+}
+
+/**
  * Implements hook_menu_alter().
  */
 function media_browser_ux_menu_alter(&$items) {
@@ -190,6 +254,14 @@ function media_browser_ux_menu_local_tasks_alter(&$data, $router_item, $root_pat
  * Implements hook_module_implements_alter().
  */
 function media_browser_ux_module_implements_alter(&$implementations, $hook) {
+	
+	// Change the order of hook_form_alter() implementation. Move media_browser_ux to the end.
+	if($hook == "form_alter" && is_array($implementations)) {
+		if(isset($implementations['media_browser_ux'])) {
+			unset($implementations['media_browser_ux']);
+			$implementations = array_merge($implementations, array('media_browser_ux' => FALSE));		
+		}
+	}
 	
   // Remove media_browser_plus implementation of hook_taxonomy_term_delete().
 	if($hook == "taxonomy_term_delete" && is_array($implementations)) {

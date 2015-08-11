@@ -39,7 +39,7 @@ function rebild_page_extended_field_default_field_instances() {
     ),
     'entity_type' => 'field_collection_item',
     'field_name' => 'field_sec_nav_body',
-    'label' => 'Brødtekst',
+    'label' => 'Appetitvækker',
     'required' => 1,
     'settings' => array(
       'linkit' => array(
@@ -292,6 +292,49 @@ function rebild_page_extended_field_default_field_instances() {
       'settings' => array(),
       'type' => 'paragraphs_embed',
       'weight' => 12,
+    ),
+  );
+
+  // Exported field_instance: 'node-page_extended-field_main_factbox'
+  $field_instances['node-page_extended-field_main_factbox'] = array(
+    'bundle' => 'page_extended',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_main_factbox',
+    'label' => 'Faktaboks',
+    'required' => 0,
+    'settings' => array(
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 9,
     ),
   );
 
@@ -1669,7 +1712,7 @@ function rebild_page_extended_field_default_field_instances() {
     ),
     'entity_type' => 'paragraphs_item',
     'field_name' => 'field_main_factbox',
-    'label' => 'Faktaboks',
+    'label' => 'Tekst',
     'required' => 0,
     'settings' => array(
       'linkit' => array(
@@ -1686,7 +1729,7 @@ function rebild_page_extended_field_default_field_instances() {
         'rows' => 2,
       ),
       'type' => 'text_textarea',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -1843,14 +1886,18 @@ function rebild_page_extended_field_default_field_instances() {
         ),
         'manualcrop_crop_info' => 1,
         'manualcrop_default_crop_area' => 1,
-        'manualcrop_enable' => 0,
+        'manualcrop_enable' => 1,
         'manualcrop_inline_crop' => 0,
         'manualcrop_instant_crop' => FALSE,
         'manualcrop_instant_preview' => 1,
         'manualcrop_keyboard' => 1,
         'manualcrop_maximize_default_crop_area' => 0,
-        'manualcrop_require_cropping' => array(),
-        'manualcrop_styles_list' => array(),
+        'manualcrop_require_cropping' => array(
+          'section_navigation' => 'section_navigation',
+        ),
+        'manualcrop_styles_list' => array(
+          'section_navigation' => 'section_navigation',
+        ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
       ),
@@ -2002,9 +2049,9 @@ function rebild_page_extended_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Accordion');
   t('Adresse');
+  t('Appetitvækker');
   t('Billede');
   t('Billeder');
-  t('Brødtekst');
   t('Center');
   t('Eksterne links');
   t('Email');

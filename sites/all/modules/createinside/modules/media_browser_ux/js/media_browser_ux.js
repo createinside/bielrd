@@ -7,7 +7,7 @@ $(function() {
 	 *
 	 * Checkbox inside draggable elements
 	 */
-	$(".vbo-select.form-checkbox").live("change", function() {
+	$(".vbo-select.form-checkbox, .form-radio").live("change", function(e) {
 		if($(this).is(":checked")) {
 			$(this).closest(".ui-draggable").addClass("selected");
 		}
@@ -15,13 +15,25 @@ $(function() {
 			$(this).closest(".ui-draggable").removeClass("selected");
 		}
 	});
+
+	/**
+	 * Change Event
+	 *
+	 * Radios button inside draggable elements
+	 */	
+	$(".views-field-media-browser-plus-preview").live("click", function() {
+		$(this).siblings(".views-field-views-bulk-operations").find(".form-radio", this).attr('checked', true);
+		$(".ui-draggable").removeClass('selected');
+		$(this).closest(".ui-draggable").addClass("selected");
+	});
 		
 	/**
 	 * Click Event
 	 *
-	 * Makes the links inside draggable elements clickable
+	 * Makes the links inside draggable elements clickable (Instead of selecting the whole row)
 	 */
-	//$('.doc-actions a, .doc-user a, .media-thumbnail a, .doc-use a').unbind();
+	 
+	// File action links
 	$('.doc-actions a, .doc-user a, .doc-use a').click(function(e) { 
 		e.preventDefault();
 		var href = $(this).attr('href');
@@ -39,14 +51,13 @@ $(function() {
 	
 	Drupal.behaviors.media_browser_ux = {
     attach: function (context) {
-	  	//$('.doc-actions a, .doc-user a, .media-thumbnail a, .doc-use a').unbind();
 			$('.doc-actions a, .doc-user a, .doc-use a').click(function(e) { 
 				e.preventDefault();
 				var href = $(this).attr('href');
 		    window.location.href = href; 
 				return false;
 			});	
-			$('.media-thumbnail a, ').click(function(e) {
+			$('.media-thumbnail a').click(function(e) {
 				e.preventDefault();
 				var href = $(this).attr('href');
 				window.open(
@@ -54,6 +65,15 @@ $(function() {
 				  '_blank'
 				);
 			});
+			// Focus searchfield in views exposed filters
+			if($("#edit-filename").length!=0) {
+				if($("#edit-filename").val()) {
+					$("#edit-filename").focus();
+					var tmpStr = $("#edit-filename").val();
+					$("#edit-filename").val('');
+					$("#edit-filename").val(tmpStr);
+				}
+			}
 	  }
 	}	
 
@@ -73,21 +93,6 @@ $(function() {
 			Drupal.media.popups.mediaBrowser(mediaLinkit, settings);
 		};
 	}
-	
-	/**
-	 * File Edit - Dynamically populate Alt and Title fileds
-	 */
-		$(".copy-alt-text").click(function(e) {
-			
-			e.preventDefault();
-			
-			$altInput = $(this).closest('.group_image_descriptions').find('.field-name-field-file-image-alt-text input');
-			$titleInput = $(this).closest('.group_image_descriptions').find('.field-name-field-file-image-title-text input');
-												
-			$titleInput.val(
-				$altInput.val()
-			);
-		});
 	
 });
 

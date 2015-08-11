@@ -246,7 +246,7 @@
     // Register actions
     for (var action in this.options.actions) {
       if (this[action + 'Files']) {
-        $('.mbp-action-' + action).bind('click.mbp',function(e) {
+        $('.mbp-action-' + action, this.element).bind('click.mbp',function(e) {
 	        e.preventDefault();
           var action = $(this).attr('class').replace(plugin.options.mbpActionRegexp, '$1');
           plugin[action + 'Files']();

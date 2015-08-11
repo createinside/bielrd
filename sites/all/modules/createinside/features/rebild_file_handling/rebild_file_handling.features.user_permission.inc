@@ -28,16 +28,6 @@ function rebild_file_handling_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: 'delete any application files'.
-  $permissions['delete any application files'] = array(
-    'name' => 'delete any application files',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'file_entity',
-  );
-
   // Exported permission: 'delete any audio files'.
   $permissions['delete any audio files'] = array(
     'name' => 'delete any audio files',
@@ -73,17 +63,6 @@ function rebild_file_handling_user_default_permissions() {
     'name' => 'delete any video files',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'file_entity',
-  );
-
-  // Exported permission: 'delete own application files'.
-  $permissions['delete own application files'] = array(
-    'name' => 'delete own application files',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'fagredaktør' => 'fagredaktør',
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'file_entity',
@@ -133,16 +112,6 @@ function rebild_file_handling_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: 'download any application files'.
-  $permissions['download any application files'] = array(
-    'name' => 'download any application files',
-    'roles' => array(
-      'fagredaktør' => 'fagredaktør',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'file_entity',
-  );
-
   // Exported permission: 'download any audio files'.
   $permissions['download any audio files'] = array(
     'name' => 'download any audio files',
@@ -157,6 +126,8 @@ function rebild_file_handling_user_default_permissions() {
   $permissions['download any document files'] = array(
     'name' => 'download any document files',
     'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
       'fagredaktør' => 'fagredaktør',
       'kommunikation' => 'kommunikation',
     ),
@@ -176,17 +147,6 @@ function rebild_file_handling_user_default_permissions() {
   // Exported permission: 'download any video files'.
   $permissions['download any video files'] = array(
     'name' => 'download any video files',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'fagredaktør' => 'fagredaktør',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'file_entity',
-  );
-
-  // Exported permission: 'download own application files'.
-  $permissions['download own application files'] = array(
-    'name' => 'download own application files',
     'roles' => array(
       'administrator' => 'administrator',
       'fagredaktør' => 'fagredaktør',
@@ -239,17 +199,6 @@ function rebild_file_handling_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: 'edit any application files'.
-  $permissions['edit any application files'] = array(
-    'name' => 'edit any application files',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'fagredaktør' => 'fagredaktør',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'file_entity',
-  );
-
   // Exported permission: 'edit any audio files'.
   $permissions['edit any audio files'] = array(
     'name' => 'edit any audio files',
@@ -286,17 +235,6 @@ function rebild_file_handling_user_default_permissions() {
   // Exported permission: 'edit any video files'.
   $permissions['edit any video files'] = array(
     'name' => 'edit any video files',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'fagredaktør' => 'fagredaktør',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'file_entity',
-  );
-
-  // Exported permission: 'edit own application files'.
-  $permissions['edit own application files'] = array(
-    'name' => 'edit own application files',
     'roles' => array(
       'administrator' => 'administrator',
       'fagredaktør' => 'fagredaktør',

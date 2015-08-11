@@ -118,6 +118,7 @@ function rebild_page_extended_views_default_views() {
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['disable_sql_rewrite'] = TRUE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Udfør';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Gendan';
@@ -149,6 +150,15 @@ function rebild_page_extended_views_default_views() {
   $handler->display->display_options['fields']['filename']['exclude'] = TRUE;
   $handler->display->display_options['fields']['filename']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['filename']['link_to_file'] = FALSE;
+  /* Felt: Fil: Sti */
+  $handler->display->display_options['fields']['uri']['id'] = 'uri';
+  $handler->display->display_options['fields']['uri']['table'] = 'file_managed';
+  $handler->display->display_options['fields']['uri']['field'] = 'uri';
+  $handler->display->display_options['fields']['uri']['relationship'] = 'field_sec_pdf_file_fid';
+  $handler->display->display_options['fields']['uri']['label'] = '';
+  $handler->display->display_options['fields']['uri']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['uri']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['uri']['file_download_path'] = TRUE;
   /* Felt: Fil: Download link */
   $handler->display->display_options['fields']['download']['id'] = 'download';
   $handler->display->display_options['fields']['download']['table'] = 'file_managed';
@@ -172,9 +182,11 @@ function rebild_page_extended_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="file-icon"><span class="icon-file-pdf"></span></div>
-<div class="file-name">[download]</div>
-<div class="file-meta">PDF: [filesize]</div>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="[uri]">
+<div class="file-icon"><span class="icon-file-pdf"></span></div>
+<div class="file-name">[filename]</div>
+<div class="file-meta">PDF: [filesize]</div>
+</a>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Kontekstuelt filter: Paragraphs item: Paragraphs item ID */
   $handler->display->display_options['arguments']['item_id']['id'] = 'item_id';
@@ -210,9 +222,11 @@ function rebild_page_extended_views_default_views() {
     t('sidste »'),
     t('Fil'),
     t('[filename]'),
-    t('<div class="file-icon"><span class="icon-file-pdf"></span></div>
-<div class="file-name">[download]</div>
-<div class="file-meta">PDF: [filesize]</div>'),
+    t('<a href="[uri]">
+<div class="file-icon"><span class="icon-file-pdf"></span></div>
+<div class="file-name">[filename]</div>
+<div class="file-meta">PDF: [filesize]</div>
+</a>'),
     t('Alle'),
     t('EVA Field'),
   );
