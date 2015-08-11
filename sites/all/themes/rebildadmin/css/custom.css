@@ -1231,13 +1231,13 @@ User profile
 .page-node-edit #page .field-multiple-table input.remove,
 .page-node-edit #page .field-multiple-table a.button.edit,
 .page-node-edit #page .field-multiple-table a.button.browse,
-.page-node-edit #page .field-multiple-table #field-main-accordion-values input[type=submit],
+.page-node-edit #page .field-multiple-table table[id*='field-main-accordion-values'] input[type=submit],
 .page-node-edit #page .field-multiple-table .field-name-field-sec-nav-elment input[type=submit],
 .page-node-add #page .field-multiple-table input.field-add-more-submit,
 .page-node-add #page .field-multiple-table input.remove,
 .page-node-add #page .field-multiple-table a.button.edit,
 .page-node-add #page .field-multiple-table a.button.browse,
-.page-node-add #page .field-multiple-table #field-main-accordion-values input[type=submit],
+.page-node-add #page .field-multiple-table table[id*='field-main-accordion-values'] input[type=submit],
 .page-node-add #page .field-multiple-table .field-name-field-sec-nav-elment input[type=submit] {
   background: #bbb;
 }

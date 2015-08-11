@@ -167,6 +167,9 @@ Share nodes
 #colorbox {
 	max-height: 360px;
 }
+#cboxOverlay {
+	background: rgb(102, 102, 102);
+}
 
 /*------------------------------------------------------------------
 	Basic Page Extended
@@ -237,16 +240,24 @@ Share nodes
 			.view-section-pdf-list {
 				.views-row {
 					margin-bottom: 13px;
+					a {
+						color: #e14045;
+						text-decoration: none;
+						display: block;
+						.file-meta {
+							color: $text-color;
+						}
+					}
+					a:hover {
+						.file-name {
+							text-decoration: underline;
+						}
+					}
 					.file-icon {
 						float: left;
 						font-size: 2.45em;
 						color: #e14045;
 						margin: 0 5px 0 0;
-					}
-					.file-name {
-						a {
-							color: #e14045;
-						}
 					}
 					.file-meta {
 						text-transform: uppercase;

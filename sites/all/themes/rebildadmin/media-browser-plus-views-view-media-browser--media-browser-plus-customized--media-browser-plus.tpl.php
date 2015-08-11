@@ -21,6 +21,7 @@
 		  <td class="mbp-toolbar-folders">
 			  <?php 
 				   
+				   // Render folder operation links
 				   $current_folder = $view->exposed_raw_input['mbp_current_folder'];
 				   
 				   print l("Opret", 'admin/media_browser_ux/add_folder/'.$current_folder, array('attributes' => array('class' => 'add-folder button')));
@@ -28,7 +29,10 @@
 			  ?>
 			</td>
 		  <td class="mbp-toolbar-files">
-  				<?php print $view->footer['media_browser_plus_views_handler_area_actions']->render(); ?>
+  				<?php
+	  				// Render file operation links 
+	  				print $view->footer['media_browser_plus_views_handler_area_actions']->render(); 
+	  			?>
 		  </td>
 	  </tr>
     <tr>
