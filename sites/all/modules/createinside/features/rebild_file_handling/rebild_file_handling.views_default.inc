@@ -142,6 +142,13 @@ function rebild_file_handling_views_default_views() {
     7 => 0,
   );
   $handler->display->display_options['filters']['type']['expose']['reduce'] = TRUE;
+  /* Filterkriterie: Fil: Mappe (field_folder) */
+  $handler->display->display_options['filters']['field_folder_tid']['id'] = 'field_folder_tid';
+  $handler->display->display_options['filters']['field_folder_tid']['table'] = 'field_data_field_folder';
+  $handler->display->display_options['filters']['field_folder_tid']['field'] = 'field_folder_tid';
+  $handler->display->display_options['filters']['field_folder_tid']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_folder_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_folder_tid']['vocabulary'] = 'media_folders';
 
   /* Display: Media browser */
   $handler = $view->new_display('media_browser', 'Media browser', 'media_browser_thumbnails');

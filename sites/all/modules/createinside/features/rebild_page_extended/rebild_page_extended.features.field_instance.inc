@@ -295,49 +295,6 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page_extended-field_main_factbox'
-  $field_instances['node-page_extended-field_main_factbox'] = array(
-    'bundle' => 'page_extended',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_main_factbox',
-    'label' => 'Faktaboks',
-    'required' => 0,
-    'settings' => array(
-      'linkit' => array(
-        'enable' => 0,
-        'insert_plugin' => '',
-      ),
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 9,
-    ),
-  );
-
   // Exported field_instance: 'node-page_extended-field_main_image'
   $field_instances['node-page_extended-field_main_image'] = array(
     'bundle' => 'page_extended',
@@ -2055,7 +2012,6 @@ function rebild_page_extended_field_default_field_instances() {
   t('Center');
   t('Eksterne links');
   t('Email');
-  t('Faktaboks');
   t('Funktion/Titel');
   t('GIS Kort');
   t('Interne links');
