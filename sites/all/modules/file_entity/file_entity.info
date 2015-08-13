@@ -10,6 +10,7 @@ files[] = views/views_handler_argument_file_type.inc
 files[] = views/views_handler_field_file_rendered.inc
 files[] = views/views_handler_field_file_type.inc
 files[] = views/views_handler_filter_file_type.inc
+files[] = views/views_handler_filter_schema_type.inc
 files[] = views/views_handler_field_file_filename.inc
 files[] = views/views_handler_field_file_link.inc
 files[] = views/views_handler_field_file_link_edit.inc
@@ -18,15 +19,15 @@ files[] = views/views_handler_field_file_link_download.inc
 files[] = views/views_handler_field_file_link_usage.inc
 files[] = views/views_plugin_row_file_rss.inc
 files[] = views/views_plugin_row_file_view.inc
-files[] = tests/file_entity.test
-configure = admin/structure/file-types
+files[] = file_entity.test
+configure = admin/config/media/file-settings
 
 ; We have to add a fake version so Git checkouts do not fail Media dependencies
 version = 7.x-2.x-dev
 
-; Information added by drupal.org packaging script on 2013-08-11
-version = "7.x-2.0-alpha1"
+; Information added by Drupal.org packaging script on 2014-10-04
+version = "7.x-2.0-beta1"
 core = "7.x"
 project = "file_entity"
-datestamp = "1376258218"
+datestamp = "1412420930"
 

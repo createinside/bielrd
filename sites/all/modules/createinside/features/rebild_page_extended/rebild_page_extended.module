@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Udvidet Standardside feature.
+ */
+
+include_once 'rebild_page_extended.features.inc';

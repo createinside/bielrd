@@ -168,7 +168,7 @@ $options = array(
 	\'type\' => \'button\',
 	\'custom_css\' => drupal_get_path(\'theme\',\'rebild\').\'/css/print-agenda.css\'
 );
-print area_print_form($options);
+// print area_print_form($options);
 
 $static++;
 ?>';
@@ -180,7 +180,7 @@ $static++;
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<p class="item-intro">
-[php]
+<a href="#" class="print-agenda-item">Print</a>
 [field_agenda_item_case_nr]
 [field_agenda_item_com]
 </p>
@@ -251,7 +251,7 @@ $static++;
     t('[field_agenda_item_docs] '),
     t('<p><em>Ingen bilag.</p></em>'),
     t('<p class="item-intro">
-[php]
+<a href="#" class="print-agenda-item">Print</a>
 [field_agenda_item_case_nr]
 [field_agenda_item_com]
 </p>

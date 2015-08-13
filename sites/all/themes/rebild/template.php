@@ -170,17 +170,14 @@ function rebild_preprocess_field(&$variables, $hook) {
 
 function rebild_picture($variables) {
 
+	// Set alt and title attributes
 	if(isset($variables['field_file_image_alt_text']['und'][0]['value'])) {
 		$variables["alt"] = $variables['field_file_image_alt_text']['und'][0]['value'];
-	}
-	if(isset($variables['field_file_image_title_text']['und'][0]['value']) && $variables['field_file_image_title_text']['und'][0]['value']!=null) {
-		$variables["title"] = $variables['field_file_image_title_text']['und'][0]['value'];
-	}
-	else {
-		$variables["title"] = "";
+		// Title attribute equals value of alt attribute
+		$variables["title"] = $variables['field_file_image_alt_text']['und'][0]['value'];
 	}
 	
-	  // Make sure that width and height are proper values
+	// Make sure that width and height are proper values
   // If they exists we'll output them
   // @see http://www.w3.org/community/respimg/2012/06/18/florians-compromise/
   if (isset($variables['width']) && empty($variables['width'])) {

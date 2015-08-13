@@ -2,6 +2,7 @@ $ = jQuery;
 
 $(function() {
 
+	// Sticky Header
 	$('#section-header').waypoint('sticky', {
 		offset: -20
 	});
@@ -74,7 +75,7 @@ $(function() {
     active: false
 	});
 	// Selfservice accordion - Alphabetical list level 1 + Embedded list level 1
-	$(".view-selfservice-items.view-display-id-alfabetisk, .view-selfservice-items.view-display-id-embedded").accordion({
+	$(".view-selfservice-items.view-display-id-alfabetisk, .view-selfservice-items.view-display-id-embedded, .view-selfservice-items.view-display-id-embedded_ext").accordion({
     header: "h3",
     autoHeight: false,
     collapsible: true,
@@ -157,23 +158,26 @@ $(function() {
 		if($(this).hasClass('open')) {
 			$(this).html('<span class="icon-double-angle-up"></span> Luk alle punkter');
 			$('.ui-accordion-header').not('.ui-state-active').click();
-			/*
-			$('.ui-accordion-header').not('.ui-state-active').addClass('ui-state-active').addClass('ui-state-focus').attr("aria-expanded", true);
-			$('.ui-accordion-content').slideDown(0);
-			*/
 		}
 		// Collapse All
 		else {
 			$(this).html('<span class="icon-double-angle-down"></span> Udvid alle punkter');
 			$('.ui-accordion-header.ui-state-active').click();
-			//$(this).html('<span class="icon-double-angle-down"></span> Udvid alle punkter');
-			/*
-			$('.ui-accordion-header.ui-state-active').removeClass('ui-state-active').removeClass('ui-state-focus').attr("aria-expanded", false);
-			$('.ui-accordion-content').slideUp(0);	
-			*/
 		}
 		$(".view-agenda-accordion .views-row").accordion("option", {animated: true });
 		window.scrollTo(0,0);
+	});
+	
+	// Agenda Item Print
+	$(".print-agenda-item").click(function(e) {
+		e.preventDefault();
+		
+		$accordion = $(this).closest(".ui-accordion");
+		
+		$accordion.find(".ui-accordion-content").printMe({
+			"title": $accordion.find(".ui-accordion-header .field-content").html(),
+			"path": "/sites/all/themes/rebild/css/print-agenda.css"
+		});
 	});
 
 });
@@ -190,9 +194,18 @@ $(document).ready(function() {
 
 // fancybox - kontakt
 $(document).ready(function() {
+
+	// Old contact block (page)
 	$("#kontaktlink").fancybox({
     autoDimensions: false,
     width: 300,
     height: 500
+	});
+	
+	// New contact block (page_extended)
+	$("#contact-block").fancybox({				
+    autoDimensions: false,
+    width: 300,
+    height: 520
 	});
 });

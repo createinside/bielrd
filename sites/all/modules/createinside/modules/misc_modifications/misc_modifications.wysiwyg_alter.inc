@@ -16,25 +16,13 @@ function misc_modifications_element_info_alter(&$type) {
 }
 // hook_process_format
 function misc_modifications_process_format($element) {
-	// array af de felter som skal have restriktioner
-	$fields = array(
-		'field_main_body',
-		'body',
-		'field_agenda_item_content',
-		'field_consultation_disclaimer',
-		'field_main_factbox',
-		'field_accordion_text',
-
-	);
 
 	$element = filter_process_format($element);
 
-	// Skjul de hjælpetekster fra wysiwyg editor, der hører til de ovenstående definerede felter. 
-	if (isset($element['#field_name']) && in_array($element['#field_name'], $fields)){
+	// Hide help text and guidelines from text fields with filters activated
+	$element['format']['guidelines'] = FALSE;
+	$element['format']['help'] = FALSE;
 
-		$element['format']['guidelines'] = FALSE;
-		$element['format']['help'] = FALSE;
-	}
 	return $element;
 }
 

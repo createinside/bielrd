@@ -15,5 +15,36 @@ $(document).ready(function(){
     slider: false // True Use counter slider   
 
   });
-
-})
+  
+	/**
+	 * Clean Up Empty Fieldsets
+	 */
+	
+/*
+	function cleanUpFieldsets() {
+			
+		$(".field-name-field-main-sections fieldset").not(".ajax-new-content fieldset").each(function(){
+		  var fieldset = $(this);
+		  
+		  fieldset.show();
+		  
+		  var wrapper = fieldset.find(".fieldset-wrapper");
+		  if(wrapper.height() == 0){
+		    fieldset.hide();
+		  }
+		  else{
+		    fieldset.show();
+		  }
+		});
+	}
+	
+	cleanUpFieldsets();  
+	
+	Drupal.behaviors.cleanUpFieldsets = {
+    attach: function (context, settings) {
+	  	cleanUpFieldsets();
+	  }
+	}
+*/
+	
+});

@@ -23,8 +23,8 @@ function rebild_layout_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'rebild' => array(
-        'region' => 'sidebar_first',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'rebild',
         'weight' => -55,
       ),

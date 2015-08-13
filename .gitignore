@@ -19,6 +19,14 @@ sites/all/themes/rebild/.sass-cache/*
 sites/all/themes/rebild/.sass-cache/*/*
 .sass-cache/
 
+# Ignore compiled css-files
+sites/all/themes/rebild/css/global.css
+sites/all/themes/rebild/css/rebild-alpha-default-narrow.css
+sites/all/themes/rebild/css/rebild-alpha-default-normal.css
+sites/all/themes/rebild/css/rebild-alpha-default-wide.css
+sites/all/themes/rebild/css/rebild-alpha-default.css
+sites/all/themes/rebild/css/wysiwyg.css
+
 # Ignore .DS_store files.
 .DS_Store
 
