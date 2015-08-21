@@ -51,7 +51,14 @@
 		em {
 			font-style: italic;
 		}
-		
+		sup {
+	    vertical-align: super;
+	    font-size: smaller;
+		}
+		sub {
+			vertical-align: sub;
+			font-size: smaller;
+		}
 		/* Links */
 		a {
 			color: $link-color;

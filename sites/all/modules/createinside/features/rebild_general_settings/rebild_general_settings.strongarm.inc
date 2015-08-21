@@ -169,7 +169,7 @@ function rebild_general_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'clone_use_node_type_name';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['clone_use_node_type_name'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -317,26 +317,6 @@ function rebild_general_settings_strongarm() {
   $strongarm->name = 'imce_settings_thumb_method';
   $strongarm->value = 'scale_and_crop';
   $export['imce_settings_thumb_method'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'media__wysiwyg_allowed_types';
-  $strongarm->value = array(
-    0 => 'document',
-  );
-  $export['media__wysiwyg_allowed_types'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'media__wysiwyg_browser_plugins';
-  $strongarm->value = array(
-    0 => 'upload',
-    1 => 'media_default--media_browser_1',
-    2 => 'media_default--media_browser_my_files',
-  );
-  $export['media__wysiwyg_browser_plugins'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

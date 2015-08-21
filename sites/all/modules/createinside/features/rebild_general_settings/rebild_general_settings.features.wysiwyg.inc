@@ -30,6 +30,8 @@ function rebild_general_settings_wysiwyg_default_profiles() {
           'redo' => 1,
           'unlink' => 1,
           'formatselect' => 1,
+          'sup' => 1,
+          'sub' => 1,
         ),
         'paste' => array(
           'pasteword' => 1,
@@ -55,7 +57,7 @@ function rebild_general_settings_wysiwyg_default_profiles() {
       'css_setting' => 'self',
       'css_path' => 'sites/all/themes/rebild/css/wysiwyg.css',
       'css_classes' => '',
-      'buttonorder' => 'bold,italic,bullist,numlist,undo,redo,linkit,unlink,formatselect,pasteword,imce',
+      'buttonorder' => 'bold,italic,sup,sub,bullist,numlist,undo,redo,linkit,unlink,formatselect,pasteword,imce',
     ),
     'rdf_mapping' => array(),
   );

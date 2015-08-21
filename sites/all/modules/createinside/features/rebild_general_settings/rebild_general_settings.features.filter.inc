@@ -16,7 +16,7 @@ function rebild_general_settings_filter_default_formats() {
     'name' => 'Filtered HTML',
     'cache' => 1,
     'status' => 1,
-    'weight' => 0,
+    'weight' => -10,
     'filters' => array(
       'filter_url' => array(
         'weight' => 0,
@@ -29,7 +29,7 @@ function rebild_general_settings_filter_default_formats() {
         'weight' => 1,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <p> <h1> <h2> <h3> <h4> <br> <br />',
+          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <p> <h1> <h2> <h3> <h4> <br> <br /> <sup> <sub>',
           'filter_html_help' => 0,
           'filter_html_nofollow' => 0,
         ),
@@ -58,7 +58,7 @@ function rebild_general_settings_filter_default_formats() {
     'name' => 'Full HTML',
     'cache' => 1,
     'status' => 1,
-    'weight' => 1,
+    'weight' => -9,
     'filters' => array(
       'filter_url' => array(
         'weight' => 0,

@@ -36,11 +36,8 @@ function rebild_general_settings_metatag_export_default() {
       'title' => array(
         'value' => '[site:name]',
       ),
-      'canonical' => array(
-        'value' => '[site:url]',
-      ),
-      'shortlink' => array(
-        'value' => '[site:url]',
+      'description' => array(
+        'value' => 'Velkommen til Rebild Kommunes hjemmeside. Se åbningstider og kontaktoplysninger. Brug vores selvbetjening. Et sundt liv i en sund kommune er vores vision.',
       ),
     ),
   );
