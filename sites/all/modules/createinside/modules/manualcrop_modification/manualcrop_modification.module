@@ -1,32 +1,33 @@
 <?php
 
 /**
- * tilføjer en ekstra validation function til page_node_form som 
- * tjekker om brugeren har cropped det uploadede billede og laver en kopi af 
- * originalbilledet hvis dette er tilfældet.
- */
-
-
-
-/**
- * Implements Manualcrop_modification_form_alter().
- * tilføjer en ekstra validation function ved de indholdstyper hvor det er påkrævet at croppe billedet.  
+ * Implements hook_form_alter().
+ *
+ * Implements a validation function on image fields with required croppings. 
  */
 function manualcrop_modification_form_alter(&$form, &$form_state, $form_id){
 	$indholdstyper = node_type_get_types();
 	$manualcrop_moderation = FALSE;
 	$form_state['required_count'] = 0;	
-	/* Vi kører en løkke der finder frem til alle machine names på indholdstyperne, og herefter laver vi en form alter. */
+								
+	/* This form alter applies to node forms on all content types */
 	foreach(element_children($indholdstyper) as $key) {
 		if ($form_id == ($indholdstyper[$key]->type . '_node_form' )) {	
+																		
+			// Main Image
 			if(isset($form['field_main_image'])){
+				
+				// Only proceed if manualcrop is enabled on the field
 				if (isset($form_state['field']['field_main_image']['und']['instance']['widget']['settings']['manualcrop_require_cropping']) && $form_state['field']['field_main_image']['und']['instance']['widget']['settings']['manualcrop_enable'] == 1){
+					
+					// Check each image style to see if it is required
 					foreach ($form_state['field']['field_main_image']['und']['instance']['widget']['settings']['manualcrop_require_cropping'] as $key){
 						if(! $key == 0){
 							$manualcrop_moderation = TRUE;
 							$form_state['required_count'] = $form_state['required_count'] + 1; 
 						}
 					}
+					// Attach a validation funtion if one or more image style croppings are required
 					if($manualcrop_moderation == TRUE){
 						$form['#validate'][] = 'manualcrop_modification_validate';
 					}
@@ -37,12 +38,14 @@ function manualcrop_modification_form_alter(&$form, &$form_state, $form_id){
 }
 
 /**
- * definere manualcrop_modification_validate functionen
+ * Manualcrop Modification: Validate
  */
-function manualcrop_modification_validate($form, &$form_state){
-	if(($form['field_main_image']['und'][0]['#file'] != FALSE)){ //tjekker om der er oploaded et billede
+function manualcrop_modification_validate(&$form, &$form_state){
+	
+	// Main Image
+	if(($form['field_main_image']['und'][0]['#file'] != FALSE)){
 		
-		//tjekker om billedet er blevet cropped
+		// Check to see how many different croppings have been made, if any at all
 		$file_fid = $form['field_main_image']['und'][0]['#file']->fid; 
 		$query = db_query("SELECT fid 
 			FROM {manualcrop} mc 
@@ -50,8 +53,10 @@ function manualcrop_modification_validate($form, &$form_state){
 			mc.fid = :file_fid
 		
 			", array( ':file_fid' => $file_fid))->rowcount();
+			
+		// If the number of croppings made doesn't match the number of croppings required => Trow an error
 		if ($query < $form_state['required_count']) { 
-			form_set_error('image', t('Du skal beskære dit billede. Vælg redigér media og klik på "beskær".'));
+			form_set_error('field_main_image', 'Du skal beskære dit billede. Vælg "Redigér" ud for billedet og klik på "Beskær".');
 		}
 	}
 }
@@ -66,4 +71,3 @@ function manualcrop_modification_views_api() {
     'template path' => drupal_get_path('module', 'manualcrop_modification'),
   );
 }
-

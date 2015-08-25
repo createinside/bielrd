@@ -63,21 +63,23 @@ function rebild_page_extended_image_default_styles() {
     'name' => 'section_text',
     'label' => 'section_text',
     'effects' => array(
-      10 => array(
-        'label' => 'Skalér',
-        'help' => 'Skalering bevarer billedets højde-bredde-forhold. Hvis kun den ene dimension angives vil den anden blive beregnet.',
-        'effect callback' => 'image_scale_effect',
-        'dimensions callback' => 'image_scale_dimensions',
-        'form callback' => 'image_scale_form',
-        'summary theme' => 'image_scale_summary',
-        'module' => 'image',
-        'name' => 'image_scale',
+      9 => array(
+        'label' => 'Manual Crop: Crop and scale',
+        'help' => 'Crop and scale a user-selected area, respecting the ratio of the destination width and height.',
+        'effect callback' => 'manualcrop_crop_and_scale_effect',
+        'form callback' => 'manualcrop_crop_and_scale_form',
+        'summary theme' => 'manualcrop_crop_and_scale_summary',
+        'module' => 'manualcrop',
+        'name' => 'manualcrop_crop_and_scale',
         'data' => array(
           'width' => 145,
-          'height' => '',
+          'height' => 82,
           'upscale' => 0,
+          'respectminimum' => 1,
+          'onlyscaleifcrop' => 0,
+          'style_name' => 'section_text',
         ),
-        'weight' => 1,
+        'weight' => 0,
       ),
     ),
   );
@@ -87,7 +89,7 @@ function rebild_page_extended_image_default_styles() {
     'name' => 'video_thumbnail',
     'label' => 'video_thumbnail',
     'effects' => array(
-      9 => array(
+      10 => array(
         'label' => 'Skalér og beskær',
         'help' => 'Skalering og beskæring bevarer billedets højde-bredde-forhold og beskærer derefter den største dimension. Det er nyttigt til at generere kvadratiske thumbnails uden at forvrænge billedet.',
         'effect callback' => 'image_scale_and_crop_effect',
@@ -98,7 +100,7 @@ function rebild_page_extended_image_default_styles() {
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 145,
-          'height' => 81,
+          'height' => 82,
         ),
         'weight' => 1,
       ),

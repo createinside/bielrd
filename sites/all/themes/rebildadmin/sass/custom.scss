@@ -197,12 +197,15 @@ User profile
 		}
 		.form-text {
 			width: 100%;
-			padding:0 0 0 0;
+			padding:0 0 0 1%;
 			min-height: 30px;
-			border: none;
-			@include grid-box-workbench(white);
 			font-size: 13px;
+			@include grid-box-workbench(white);
 			@include box-sizing(border-box);
+		}
+		.form-textarea {
+			@include grid-box-workbench(white);
+			@include box-sizing(border-box);		
 		}
 		.form-item-title {
 			background: url("../images/dot.png") repeat-x bottom;
@@ -212,13 +215,6 @@ User profile
 				padding: 0 0 0 1%;
 				background: none;
 			}
-		}
-		.form-text {
-			@include grid-box-workbench(white);
-			height: 30px;
-			padding: 0 0 0 1%;
-			font-size: 13px;
-			/* 			border: 0; */
 		}
 		.date-clear {
 			@include grid-box-workbench(white);
@@ -322,6 +318,9 @@ User profile
 				text-transform: none;
 				font-weight: normal;
 				font-size: $font-size-large;
+				a {
+					padding-left: 20px;
+				}		
 			}
 		}
 		.field-type-datestamp {
@@ -341,10 +340,7 @@ User profile
 				padding: 0;
 				text-transform: none;
 				font-size: $font-size-large;
-				font-weight: normal;	
-				a {
-					padding-left: 20px;
-				}			
+				font-weight: normal;			
 			}
 			.fieldset-wrapper {
 				padding-left: 20px;
@@ -428,7 +424,6 @@ User profile
 			.form-text {
 				@include grid-box-workbench(white);
 				height: 30px;
-				border: none;
 			}
 			.vertical-tab-button-error {
 				border: 2px solid red;
