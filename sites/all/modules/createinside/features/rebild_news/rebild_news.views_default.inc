@@ -39,7 +39,7 @@ function rebild_news_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Overskrift: Global: Unfiltered text */
+  /* Overskrift: Global: Ufiltreret tekst */
   $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
@@ -196,7 +196,7 @@ function rebild_news_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'news_article' => 'news_article',
   );
-  /* Filterkriterie: Felt: Sektion (field_main_section) */
+  /* Filterkriterie: Indhold: Sektion (field_main_section) */
   $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
   $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
   $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';
@@ -225,7 +225,7 @@ function rebild_news_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'news_article' => 'news_article',
   );
-  /* Filterkriterie: Felt: Sektion (field_main_section) */
+  /* Filterkriterie: Indhold: Sektion (field_main_section) */
   $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
   $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
   $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';
@@ -254,7 +254,7 @@ function rebild_news_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'news_article' => 'news_article',
   );
-  /* Filterkriterie: Felt: Sektion (field_main_section) */
+  /* Filterkriterie: Indhold: Sektion (field_main_section) */
   $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
   $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
   $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';
@@ -283,7 +283,7 @@ function rebild_news_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'news_article' => 'news_article',
   );
-  /* Filterkriterie: Felt: Sektion (field_main_section) */
+  /* Filterkriterie: Indhold: Sektion (field_main_section) */
   $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
   $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
   $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';

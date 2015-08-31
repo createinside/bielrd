@@ -23,6 +23,7 @@ function rebild_featured_user_default_permissions() {
   $permissions['create featured_article content'] = array(
     'name' => 'create featured_article content',
     'roles' => array(
+      'business' => 'business',
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'node',
@@ -41,6 +42,7 @@ function rebild_featured_user_default_permissions() {
   $permissions['delete own featured_article content'] = array(
     'name' => 'delete own featured_article content',
     'roles' => array(
+      'business' => 'business',
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'node',
@@ -50,6 +52,7 @@ function rebild_featured_user_default_permissions() {
   $permissions['edit any featured_article content'] = array(
     'name' => 'edit any featured_article content',
     'roles' => array(
+      'business' => 'business',
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'node',
@@ -59,6 +62,7 @@ function rebild_featured_user_default_permissions() {
   $permissions['edit own featured_article content'] = array(
     'name' => 'edit own featured_article content',
     'roles' => array(
+      'business' => 'business',
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'node',
