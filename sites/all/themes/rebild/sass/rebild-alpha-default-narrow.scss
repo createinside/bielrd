@@ -162,16 +162,23 @@ Blocks
 				bottom: 0;
 				z-index: 2;
 				@include opacity(0.9);
-				@include transform(translateY(113px));
+				@include transform(translateY(105px));
 				@include transition-duration(250ms);
 				@include transition-timing-function(ease-in-out);
 				.featured-title {
 					font-size: 1.25em;
 					margin-bottom: 10px;
+					height: 2.25em;
+					line-height: 2.25em;
+					div {
+						display: inline-block;
+						vertical-align: middle;
+						line-height: $line-height-std;
+					}
 				}
 				a {
-					height: 133px;
-					padding: 10px 15px;
+					height: 143px;
+					padding: 5px 12px;
 				}
 			}
 		}
