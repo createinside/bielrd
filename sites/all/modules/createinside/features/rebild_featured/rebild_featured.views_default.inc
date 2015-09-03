@@ -283,6 +283,7 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['path'] = '[field_featured_link]';
+  $handler->display->display_options['fields']['title']['element_type'] = 'div';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'featured-title';
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
@@ -307,7 +308,7 @@ function rebild_featured_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="[field_featured_link]">
-<div class="featured-title">[title]</div>
+<div class="featured-title"><div>[title]</div></div>
 <div class="featured-summary">[field_featured_summary]</div>
 </a>';
   $handler->display->display_options['fields']['nothing']['alter']['path'] = '[field_featured_link]';
@@ -437,7 +438,7 @@ function rebild_featured_views_default_views() {
     t('Erhverv'),
     t('Business Rebild'),
     t('<a href="[field_featured_link]">
-<div class="featured-title">[title]</div>
+<div class="featured-title"><div>[title]</div></div>
 <div class="featured-summary">[field_featured_summary]</div>
 </a>'),
     t('Politik'),
