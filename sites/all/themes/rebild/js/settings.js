@@ -30,6 +30,12 @@ $(function() {
 		$("#search-dropd-wrapper input[type=text]").focus();
 	});
 	
+	// Match Height
+	$(".business-theme .region-preface-first .block, .business-theme .region-preface-second .block").matchHeight({
+		byRow: false,
+		property: 'line-height'
+	});
+	
 	/**
 	 * ACCORDIONS
 	 */

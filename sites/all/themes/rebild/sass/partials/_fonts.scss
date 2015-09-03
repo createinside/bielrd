@@ -46,6 +46,10 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
 
+.icon-mail:before {
+	content: "\e603";
+}
+
 .icon-file-pdf:before {
 	content: "\e602";
 }

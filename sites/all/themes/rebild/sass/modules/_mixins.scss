@@ -2,14 +2,13 @@
 
 [MIXINS]
 
-Blocks
-Backend
-
 -------------------------------------------------------------------*/
 
-/*------------------------------------------------------------------
-	Blocks
--------------------------------------------------------------------*/
+/*
+========================================================================== 
+	Blocks / Grid
+========================================================================== 
+*/
 // Også anvendt i backend temaet.
 @mixin grid-box($color) {
 	background-color: $color;
@@ -17,23 +16,10 @@ Backend
 	@include box-shadow(rgba(black, 0.15) 0 0 3px);
 }
 
-/*------------------------------------------------------------------
-	Input
--------------------------------------------------------------------*/
-@mixin placeholder {
-  &::-webkit-input-placeholder {@content}
-  &:-moz-placeholder           {@content}
-  &::-moz-placeholder          {@content}
-  &:-ms-input-placeholder      {@content}  
-}
-
-/*------------------------------------------------------------------
-	Backend
--------------------------------------------------------------------*/
 // Også anvendt i backend temaet.
 @mixin grid-box-page-admin($color) {
 	background-color: $color;
-	/* 	@include box-shadow(rgba(black, 0.1) -1px -1px 0px); */
+	/* @include box-shadow(rgba(black, 0.1) -1px -1px 0px); */
 }
 
 // Også anvendt i backend temaet.
@@ -41,14 +27,39 @@ Backend
 	background-color: $color;
 	border: 1px solid #bebfb9;
 	@include border-radius($border-radius-std);
-/* 	@include box-shadow(rgba(black, 0.85) 0 0 3px); */
+	/* @include box-shadow(rgba(black, 0.85) 0 0 3px); */
 }
 
-/*------------------------------------------------------------------
-	Nodes
--------------------------------------------------------------------*/
 // Calendar fieldgroup
 @mixin grid-box-no-shadow($color) {
 	background-color: $color;
 	@include border-radius($border-radius-std);
+}
+
+/*
+========================================================================== 
+	Forms
+========================================================================== 
+*/
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}  
+}
+
+/*
+========================================================================== 
+	Text
+========================================================================== 
+*/
+@mixin font-smoothing($value: antialiased) {
+  @if $value == antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
 }

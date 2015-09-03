@@ -43,7 +43,7 @@ function rebild_calendar_views_default_views() {
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-  /* Sidefod: Global: Unfiltered text */
+  /* Sidefod: Global: Ufiltreret tekst */
   $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
@@ -104,7 +104,7 @@ function rebild_calendar_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Felt: Felt: Sektion */
+  /* Felt: Indhold: Sektion */
   $handler->display->display_options['fields']['field_main_section']['id'] = 'field_main_section';
   $handler->display->display_options['fields']['field_main_section']['table'] = 'field_data_field_main_section';
   $handler->display->display_options['fields']['field_main_section']['field'] = 'field_main_section';
@@ -160,7 +160,7 @@ function rebild_calendar_views_default_views() {
   $handler->display->display_options['filters']['field_calendar_date_value']['field'] = 'field_calendar_date_value';
   $handler->display->display_options['filters']['field_calendar_date_value']['operator'] = '>';
   $handler->display->display_options['filters']['field_calendar_date_value']['default_date'] = 'now';
-  /* Filterkriterie: Felt: Sektion (field_main_section) */
+  /* Filterkriterie: Indhold: Sektion (field_main_section) */
   $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
   $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
   $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';
@@ -223,7 +223,7 @@ function rebild_calendar_views_default_views() {
   $handler->display->display_options['filters']['field_calendar_date_value']['field'] = 'field_calendar_date_value';
   $handler->display->display_options['filters']['field_calendar_date_value']['operator'] = '>';
   $handler->display->display_options['filters']['field_calendar_date_value']['default_date'] = 'yesterday';
-  /* Filterkriterie: Felt: Sektion (field_main_section) */
+  /* Filterkriterie: Indhold: Sektion (field_main_section) */
   $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
   $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
   $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';
@@ -257,7 +257,7 @@ function rebild_calendar_views_default_views() {
   $handler->display->display_options['filters']['field_calendar_date_value']['field'] = 'field_calendar_date_value';
   $handler->display->display_options['filters']['field_calendar_date_value']['operator'] = '>';
   $handler->display->display_options['filters']['field_calendar_date_value']['default_date'] = 'yesterday';
-  /* Filterkriterie: Felt: Sektion (field_main_section) */
+  /* Filterkriterie: Indhold: Sektion (field_main_section) */
   $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
   $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
   $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';
@@ -269,6 +269,98 @@ function rebild_calendar_views_default_views() {
 
   /* Display: Erhverv */
   $handler = $view->new_display('block', 'Erhverv', 'block_3');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Kalender';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Indhold: Overskrift */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['max_length'] = '60';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Felt: Dato i måneden */
+  $handler->display->display_options['fields']['field_calendar_date']['id'] = 'field_calendar_date';
+  $handler->display->display_options['fields']['field_calendar_date']['table'] = 'field_data_field_calendar_date';
+  $handler->display->display_options['fields']['field_calendar_date']['field'] = 'field_calendar_date';
+  $handler->display->display_options['fields']['field_calendar_date']['ui_name'] = 'Dato i måneden';
+  $handler->display->display_options['fields']['field_calendar_date']['label'] = '';
+  $handler->display->display_options['fields']['field_calendar_date']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_calendar_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_calendar_date']['settings'] = array(
+    'format_type' => 'date',
+    'fromto' => 'value',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Felt: Dag i måneden */
+  $handler->display->display_options['fields']['field_calendar_date_1']['id'] = 'field_calendar_date_1';
+  $handler->display->display_options['fields']['field_calendar_date_1']['table'] = 'field_data_field_calendar_date';
+  $handler->display->display_options['fields']['field_calendar_date_1']['field'] = 'field_calendar_date';
+  $handler->display->display_options['fields']['field_calendar_date_1']['ui_name'] = 'Dag i måneden';
+  $handler->display->display_options['fields']['field_calendar_date_1']['label'] = '';
+  $handler->display->display_options['fields']['field_calendar_date_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_calendar_date_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_calendar_date_1']['settings'] = array(
+    'format_type' => 'day',
+    'fromto' => 'value',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Felt: Måned */
+  $handler->display->display_options['fields']['field_calendar_date_2']['id'] = 'field_calendar_date_2';
+  $handler->display->display_options['fields']['field_calendar_date_2']['table'] = 'field_data_field_calendar_date';
+  $handler->display->display_options['fields']['field_calendar_date_2']['field'] = 'field_calendar_date';
+  $handler->display->display_options['fields']['field_calendar_date_2']['ui_name'] = 'Måned';
+  $handler->display->display_options['fields']['field_calendar_date_2']['label'] = '';
+  $handler->display->display_options['fields']['field_calendar_date_2']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_calendar_date_2']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_calendar_date_2']['settings'] = array(
+    'format_type' => 'month',
+    'fromto' => 'value',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Felt: Indhold: Sektion */
+  $handler->display->display_options['fields']['field_main_section']['id'] = 'field_main_section';
+  $handler->display->display_options['fields']['field_main_section']['table'] = 'field_data_field_main_section';
+  $handler->display->display_options['fields']['field_main_section']['field'] = 'field_main_section';
+  $handler->display->display_options['fields']['field_main_section']['label'] = '';
+  $handler->display->display_options['fields']['field_main_section']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_main_section']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_main_section']['type'] = 'taxonomy_term_reference_plain';
+  /* Felt: Samlet udtræk */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Samlet udtræk';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="calendar_left">
+<div class="calendar_day">[field_calendar_date_1]</div>
+<div class="calendar_date">[field_calendar_date]</div>
+<div class="calendar_month">[field_calendar_date_2]</div>
+</div>
+<div class="calendar_right">
+<div class="calendar_title">[title]</div>
+</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Felt: Global: View resultattæller */
+  $handler->display->display_options['fields']['counter']['id'] = 'counter';
+  $handler->display->display_options['fields']['counter']['table'] = 'views';
+  $handler->display->display_options['fields']['counter']['field'] = 'counter';
+  $handler->display->display_options['fields']['counter']['label'] = '';
+  $handler->display->display_options['fields']['counter']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['counter']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['counter']['counter_start'] = '1';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filterkriterie: Indhold: Udgivet */
@@ -291,7 +383,7 @@ function rebild_calendar_views_default_views() {
   $handler->display->display_options['filters']['field_calendar_date_value']['field'] = 'field_calendar_date_value';
   $handler->display->display_options['filters']['field_calendar_date_value']['operator'] = '>';
   $handler->display->display_options['filters']['field_calendar_date_value']['default_date'] = 'yesterday';
-  /* Filterkriterie: Felt: Sektion (field_main_section) */
+  /* Filterkriterie: Indhold: Sektion (field_main_section) */
   $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
   $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
   $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';
@@ -300,6 +392,7 @@ function rebild_calendar_views_default_views() {
   );
   $handler->display->display_options['filters']['field_main_section_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_main_section_tid']['vocabulary'] = 'rebild_sections';
+  $handler->display->display_options['block_description'] = 'Calendar - Business';
 
   /* Display: Politik */
   $handler = $view->new_display('block', 'Politik', 'block_4');
@@ -325,7 +418,7 @@ function rebild_calendar_views_default_views() {
   $handler->display->display_options['filters']['field_calendar_date_value']['field'] = 'field_calendar_date_value';
   $handler->display->display_options['filters']['field_calendar_date_value']['operator'] = '>';
   $handler->display->display_options['filters']['field_calendar_date_value']['default_date'] = 'yesterday';
-  /* Filterkriterie: Felt: Sektion (field_main_section) */
+  /* Filterkriterie: Indhold: Sektion (field_main_section) */
   $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
   $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
   $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';
@@ -358,6 +451,16 @@ function rebild_calendar_views_default_views() {
     t('Bo i rebild'),
     t('Borger'),
     t('Erhverv'),
+    t('Kalender'),
+    t('<div class="calendar_left">
+<div class="calendar_day">[field_calendar_date_1]</div>
+<div class="calendar_date">[field_calendar_date]</div>
+<div class="calendar_month">[field_calendar_date_2]</div>
+</div>
+<div class="calendar_right">
+<div class="calendar_title">[title]</div>
+</div>'),
+    t('Calendar - Business'),
     t('Politik'),
   );
   $export['calendar_frontpage'] = $view;
@@ -549,7 +652,7 @@ function rebild_calendar_views_default_views() {
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-  /* Sidefod: Global: Unfiltered text */
+  /* Sidefod: Global: Ufiltreret tekst */
   $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
@@ -610,7 +713,7 @@ function rebild_calendar_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Felt: Felt: Sektion */
+  /* Felt: Indhold: Sektion */
   $handler->display->display_options['fields']['field_main_section']['id'] = 'field_main_section';
   $handler->display->display_options['fields']['field_main_section']['table'] = 'field_data_field_main_section';
   $handler->display->display_options['fields']['field_main_section']['field'] = 'field_main_section';
@@ -693,7 +796,7 @@ function rebild_calendar_views_default_views() {
   $handler->display->display_options['filters']['field_calendar_date_value']['field'] = 'field_calendar_date_value';
   $handler->display->display_options['filters']['field_calendar_date_value']['operator'] = '>';
   $handler->display->display_options['filters']['field_calendar_date_value']['default_date'] = 'now';
-  /* Filterkriterie: Felt: Sektion (field_main_section) */
+  /* Filterkriterie: Indhold: Sektion (field_main_section) */
   $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
   $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
   $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';

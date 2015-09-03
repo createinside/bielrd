@@ -155,7 +155,7 @@ function rebild_layout_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Kontekstuelt filter: Felt: Tags (field_main_tags) */
+  /* Kontekstuelt filter: Indhold: Tags (field_main_tags) */
   $handler->display->display_options['arguments']['field_main_tags_tid']['id'] = 'field_main_tags_tid';
   $handler->display->display_options['arguments']['field_main_tags_tid']['table'] = 'field_data_field_main_tags';
   $handler->display->display_options['arguments']['field_main_tags_tid']['field'] = 'field_main_tags_tid';

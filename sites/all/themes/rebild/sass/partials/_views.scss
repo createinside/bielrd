@@ -174,6 +174,9 @@
 				}
 			}
 		}
+		.rebild-calendar:last-child {
+			margin: 0;
+		}
 	}
 	.view-footer {
 		background-color: #f6f6f6;
@@ -339,7 +342,6 @@
 /* News Articles - Frontpage/Landing pages */
 #block-views-news-articles-block,
 #block-views-news-articles-block-1,
-#block-views-news-articles-block-2,
 #block-views-news-articles-block-3,
 #block-views-news-articles-block-4 {
 	.view {

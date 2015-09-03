@@ -44,6 +44,26 @@ function rebild_css_alter(&$css) {
 }
 
 /**
+ * Implements theme_delta_blocks_page_title().
+ */
+function rebild_delta_blocks_page_title($variables) {
+	
+	// Change markup for the business section title
+	if(current_path()=='erhverv') {
+		$variables['page_title'] = '<span>Business</span> Rebild';
+	}
+  if ($variables['page_title'] !== '') {
+    $attributes['id'] = 'page-title';
+    $attributes['class'][] = 'title';
+
+    if ($variables['page_title_hidden']) {
+      $attributes['class'][] = 'element-invisible';
+    }
+    return '<h1' . drupal_attributes($attributes) . '>' . $variables['page_title'] . '</h1>';
+  }
+}
+
+/**
  * Preprocess HTML 
  *
  * Implements hook_preprocess_html
