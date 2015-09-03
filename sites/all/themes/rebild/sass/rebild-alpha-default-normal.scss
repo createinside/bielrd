@@ -84,14 +84,21 @@ Landingpage
 			width: 300px;
 			margin: 0;
 			.text-wrapper {
-				@include transform(translateY(112px));
+				@include transform(translateY(105px));
 				.featured-title {
 					font-size: $font-size-large;
-					margin-bottom: 15px;
+					margin-bottom: 16px;
+					height: 2.25em;
+					line-height: 2.25em;
+					div {
+						display: inline-block;
+						vertical-align: middle;
+						line-height: $line-height-std;
+					}
 				}
 				a {
-					height: 133px;
-					padding: 15px 20px;
+					height: 150px;
+					padding: 8px 20px;
 				}
 			}
 		}
