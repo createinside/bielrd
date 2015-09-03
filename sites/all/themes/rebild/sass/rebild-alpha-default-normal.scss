@@ -77,6 +77,30 @@ Landingpage
     }
   } 
 }
+/* Focus */
+.business-theme.not-front {
+	.view-id-rebild_frontpage {
+		.views-row {
+			width: 300px;
+			margin: 0;
+			.text-wrapper {
+				@include transform(translateY(112px));
+				.featured-title {
+					font-size: $font-size-large;
+					margin-bottom: 15px;
+				}
+				a {
+					height: 133px;
+					padding: 15px 20px;
+				}
+			}
+		}
+		.views-row-2 {
+			margin: 0 20px;
+		}
+	}
+}
+
 
 /*------------------------------------------------------------------
   Nodes

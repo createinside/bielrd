@@ -228,7 +228,8 @@ Nodes
 	}
 	
 /* Main Menu - Level 3 */
-#region-content {
+#region-content,
+#region-preface-first {
 	.block-menu-block {
 		.content {
 		ul {
@@ -260,7 +261,7 @@ Nodes
 					background: $top-menu-bg-color;
 					text-decoration: none;
 					display: inline-block;
-					padding: 8px 4px;
+					padding: 8px 8px;
 				}
 			}
 		}

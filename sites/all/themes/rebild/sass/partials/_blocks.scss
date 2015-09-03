@@ -141,7 +141,8 @@
 		.block {
 			text-align: left;
 			.block-title {
-				font-size: $font-size-large;					
+				font-size: $font-size-large;		
+				line-height: $line-height-std;			
 				@include text-shadow(none);
 			}
 			.content {
@@ -444,6 +445,9 @@
   padding: $spacing-std;
   color: white;
   line-height: $line-height-std;
+  .block-title {
+	  line-height: $line-height-std;
+  }
   .content {
     h2 {
 	    margin-bottom: 0.5em;
