@@ -594,9 +594,48 @@ function rebild_calendar_views_default_views() {
   $handler->display->display_options['filters']['field_calendar_date_value']['expose']['identifier'] = 'field_calendar_date_value';
   $handler->display->display_options['filters']['field_calendar_date_value']['default_date'] = 'yesterday';
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
+  /* Display: Alle */
+  $handler = $view->new_display('page', 'Alle', 'page');
   $handler->display->display_options['path'] = 'view/arrangementer';
+
+  /* Display: Erhverv */
+  $handler = $view->new_display('page', 'Erhverv', 'page_1');
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filterkriterie: Indhold: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'calendar_post' => 'calendar_post',
+  );
+  /* Filterkriterie: Indhold: Dato -  startdato (field_calendar_date) */
+  $handler->display->display_options['filters']['field_calendar_date_value']['id'] = 'field_calendar_date_value';
+  $handler->display->display_options['filters']['field_calendar_date_value']['table'] = 'field_data_field_calendar_date';
+  $handler->display->display_options['filters']['field_calendar_date_value']['field'] = 'field_calendar_date_value';
+  $handler->display->display_options['filters']['field_calendar_date_value']['operator'] = '>';
+  $handler->display->display_options['filters']['field_calendar_date_value']['expose']['operator_id'] = 'field_calendar_date_value_op';
+  $handler->display->display_options['filters']['field_calendar_date_value']['expose']['label'] = 'Dato -  startdato (field_calendar_date)';
+  $handler->display->display_options['filters']['field_calendar_date_value']['expose']['operator'] = 'field_calendar_date_value_op';
+  $handler->display->display_options['filters']['field_calendar_date_value']['expose']['identifier'] = 'field_calendar_date_value';
+  $handler->display->display_options['filters']['field_calendar_date_value']['default_date'] = 'yesterday';
+  /* Filterkriterie: Indhold: Sektion (field_main_section) */
+  $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
+  $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
+  $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';
+  $handler->display->display_options['filters']['field_main_section_tid']['value'] = array(
+    3 => '3',
+  );
+  $handler->display->display_options['filters']['field_main_section_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_main_section_tid']['vocabulary'] = 'rebild_sections';
+  $handler->display->display_options['path'] = 'view/erhverv/arrangementer';
   $translatables['calendar_overview'] = array(
     t('Master'),
     t('Alle arrangementer'),
@@ -615,7 +654,8 @@ function rebild_calendar_views_default_views() {
     t('sidste »'),
     t('<strong>Dato:</strong> [field_calendar_date]. [field_calendar_date_1]  [field_calendar_date_2]'),
     t('Dato -  startdato (field_calendar_date)'),
-    t('Page'),
+    t('Alle'),
+    t('Erhverv'),
   );
   $export['calendar_overview'] = $view;
 
