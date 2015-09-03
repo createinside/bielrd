@@ -103,6 +103,38 @@ function rebild_layout_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'business_temporary';
+  $context->description = '';
+  $context->tag = '';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'erhverv' => 'erhverv',
+        'erhverv/*' => 'erhverv/*',
+      ),
+    ),
+    'user' => array(
+      'values' => array(
+        'anonymous user' => 'anonymous user',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'context_redirect' => array(
+      'redirect_path' => 'node/4972',
+      'enable_message' => 0,
+      'redirect_message' => '',
+      'qsa' => 0,
+      'redirect_type' => '307',
+      'admin_key' => '',
+    ),
+  );
+  $context->condition_mode = 1;
+  $export['business_temporary'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'rebild_subpage';
   $context->description = 'Places the title block in the title region';
   $context->tag = 'theme';
