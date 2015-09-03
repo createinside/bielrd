@@ -32,12 +32,6 @@ function rebild_layout_context_default_contexts() {
           'region' => 'preface_first',
           'weight' => '-10',
         ),
-        'block-39' => array(
-          'module' => 'block',
-          'delta' => '39',
-          'region' => 'preface_second',
-          'weight' => '-10',
-        ),
         'views-news_articles-block_2' => array(
           'module' => 'views',
           'delta' => 'news_articles-block_2',
@@ -48,12 +42,6 @@ function rebild_layout_context_default_contexts() {
           'module' => 'views',
           'delta' => 'calendar_frontpage-block_3',
           'region' => 'postscript_second',
-          'weight' => '-10',
-        ),
-        'block-40' => array(
-          'module' => 'block',
-          'delta' => '40',
-          'region' => 'postface',
           'weight' => '-10',
         ),
       ),
@@ -79,6 +67,14 @@ function rebild_layout_context_default_contexts() {
   $context->description = '';
   $context->tag = 'theme';
   $context->conditions = array(
+    'entity_field' => array(
+      'values' => array(
+        'entity_type' => 'a:15:{s:4:"node";s:4:"node";s:4:"bean";i:0;s:7:"comment";i:0;s:10:"entityform";i:0;s:15:"entityform_type";i:0;s:21:"field_collection_item";i:0;s:15:"paragraphs_item";i:0;s:8:"redirect";i:0;s:4:"file";i:0;s:13:"taxonomy_term";i:0;s:19:"taxonomy_vocabulary";i:0;s:4:"user";i:0;s:15:"wysiwyg_profile";i:0;s:12:"rules_config";i:0;s:9:"menu_link";i:0;}',
+        'field_name' => 'field_main_section',
+        'field_value' => '3',
+        'field_empty' => 0,
+      ),
+    ),
     'path' => array(
       'values' => array(
         'erhverv/*' => 'erhverv/*',
