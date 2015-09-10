@@ -46,10 +46,10 @@ function rebild_page_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'page';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_ho_tabs';
   $field_group->data = array(
     'label' => 'Avancerede indstillinger',
-    'weight' => '10',
+    'weight' => '26',
     'children' => array(
       0 => 'field_main_protected',
       1 => 'field_main_allow_publishing',
@@ -78,7 +78,7 @@ function rebild_page_field_group_info() {
   $field_group->parent_name = 'group_ho_tabs';
   $field_group->data = array(
     'label' => 'Dagsordener',
-    'weight' => '23',
+    'weight' => '24',
     'children' => array(
       0 => 'field_agenda_view_com',
     ),
@@ -343,15 +343,16 @@ function rebild_page_field_group_info() {
     'children' => array(
       0 => 'group_agendas_view',
       1 => 'group_accordion',
-      2 => 'group_billedegalleri',
-      3 => 'group_blocks',
-      4 => 'group_contact',
-      5 => 'group_faktaboks',
-      6 => 'group_foraeldelsesdato',
-      7 => 'group_gis_kort',
-      8 => 'group_oversigt',
-      9 => 'group_selfservices',
-      10 => 'group_youtube',
+      2 => 'group_advanced',
+      3 => 'group_billedegalleri',
+      4 => 'group_blocks',
+      5 => 'group_contact',
+      6 => 'group_faktaboks',
+      7 => 'group_foraeldelsesdato',
+      8 => 'group_gis_kort',
+      9 => 'group_oversigt',
+      10 => 'group_selfservices',
+      11 => 'group_youtube',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -374,7 +375,7 @@ function rebild_page_field_group_info() {
   $field_group->parent_name = 'group_ho_tabs';
   $field_group->data = array(
     'label' => 'Oversigt',
-    'weight' => '24',
+    'weight' => '25',
     'children' => array(
       0 => 'field_main_block',
       1 => 'field_main_view',
@@ -430,7 +431,7 @@ function rebild_page_field_group_info() {
   $field_group->parent_name = 'group_ho_tabs';
   $field_group->data = array(
     'label' => 'Youtube',
-    'weight' => '25',
+    'weight' => '23',
     'children' => array(
       0 => 'field_main_youtube_link',
     ),

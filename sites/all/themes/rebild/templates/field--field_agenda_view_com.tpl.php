@@ -49,10 +49,16 @@
   <?php if (!$label_hidden): ?>
     <div class="field-label"<?php print $title_attributes; ?>><?php print $label ?>:&nbsp;</div>
   <?php endif; ?>
+  <?php 
+	  $com_ids = ""; 
+	  $i=0;
+		foreach ($items as $delta => $item):
+			if($i!=0) $com_ids .= " ";
+			$com_ids .= render($item);
+			$i++;
+		endforeach;
+	?>
   <div class="field-items"<?php print $content_attributes; ?>>
-    <?php foreach ($items as $delta => $item): ?>
-    	<?php $com_id = render($item); ?>
-    	<?php print views_embed_view("agenda_overview", "embedded_page", $com_id); ?>
-    <?php endforeach; ?>
+	 	<?php print views_embed_view("agenda_overview", "embedded_page", $com_ids); ?>
   </div>
 </div>

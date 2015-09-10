@@ -304,13 +304,21 @@ $static++;
     ),
   );
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Overskrift: Global: Tekstområde */
-  $handler->display->display_options['header']['area']['id'] = 'area';
-  $handler->display->display_options['header']['area']['table'] = 'views';
-  $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h2>Mødedatoer, dagsordener og referater fra %1</h2>';
-  $handler->display->display_options['header']['area']['format'] = 'filtered_html';
-  $handler->display->display_options['header']['area']['tokenize'] = TRUE;
+  /* Overskrift: Global: PHP */
+  $handler->display->display_options['header']['php']['id'] = 'php';
+  $handler->display->display_options['header']['php']['table'] = 'views';
+  $handler->display->display_options['header']['php']['field'] = 'php';
+  $handler->display->display_options['header']['php']['php_output'] = '<?php
+if(isset($view->args[0])) {
+// Find main term
+$args = explode(" ", $view->args[0]);
+$main_tid = $args[0];
+$main_term = taxonomy_term_load($main_tid);
+// Set page title
+$view->set_title($main_term->name);
+}
+?>
+<h2>Mødedatoer, dagsordener og referater fra <?php print $main_term->name; ?></h2>';
   /* Opførsel ved ingen resultater: Global: Tekstområde */
   $handler->display->display_options['empty']['area']['id'] = 'area';
   $handler->display->display_options['empty']['area']['table'] = 'views';
@@ -371,7 +379,7 @@ $static++;
   $handler->display->display_options['arguments']['field_agenda_committee_tid']['id'] = 'field_agenda_committee_tid';
   $handler->display->display_options['arguments']['field_agenda_committee_tid']['table'] = 'field_data_field_agenda_committee';
   $handler->display->display_options['arguments']['field_agenda_committee_tid']['field'] = 'field_agenda_committee_tid';
-  $handler->display->display_options['arguments']['field_agenda_committee_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_agenda_committee_tid']['default_action'] = 'empty';
   $handler->display->display_options['arguments']['field_agenda_committee_tid']['exception']['title'] = 'Alle';
   $handler->display->display_options['arguments']['field_agenda_committee_tid']['title_enable'] = TRUE;
   $handler->display->display_options['arguments']['field_agenda_committee_tid']['title'] = '%1';
@@ -385,8 +393,10 @@ $static++;
   $handler->display->display_options['arguments']['field_agenda_committee_tid']['validate_options']['vocabularies'] = array(
     'edagsorden_committees' => 'edagsorden_committees',
   );
+  $handler->display->display_options['arguments']['field_agenda_committee_tid']['validate_options']['type'] = 'tids';
   $handler->display->display_options['arguments']['field_agenda_committee_tid']['validate_options']['transform'] = TRUE;
   $handler->display->display_options['arguments']['field_agenda_committee_tid']['validate']['fail'] = 'empty';
+  $handler->display->display_options['arguments']['field_agenda_committee_tid']['break_phrase'] = TRUE;
   /* Filterkriterie: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -445,7 +455,6 @@ $static++;
     t('Sortér efter'),
     t('Stigende'),
     t('Faldende'),
-    t('<h2>Mødedatoer, dagsordener og referater fra %1</h2>'),
     t('<p>Ingen dagsordener.</p>'),
     t(' - [field_agenda_date]'),
     t('Alle'),
