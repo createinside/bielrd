@@ -1,7 +1,15 @@
 <article<?php print $attributes; ?>>	
-  <?php print $user_picture; 
-	  $indhold = menu_get_object();
-	  $user = user_is_logged_in();  ?>
+  <?php 
+	  print $user_picture; 
+	  $indhold = menu_get_object(); 
+	  $protected = FALSE;
+	  // Check to see if content is protected
+	  if(isset($indhold->field_main_protected[LANGUAGE_NONE])) {
+			if($indhold->field_main_protected['und'][0]['value']==1) {
+				$protected = TRUE;
+			}	  
+		}
+	?>
   <?php if ($display_submitted): ?>
   <footer class="submitted"><?php print $date; ?> -- <?php print $name; ?></footer>
   <?php endif; ?>  
@@ -11,23 +19,23 @@
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
-      // Print banner image and summary if they exist
       if(isset($content['field_main_image'])) hide($content['field_main_image']);
       if(isset($content['field_main_summary'])) hide($content['field_main_summary']);
-      //if(isset($content['field_main_image'])) print render($content['field_main_image']);     
 
-      if ($indhold->field_main_protected['und'][0]['value'] == 1) { 
-      	if($user == 1){ 
-      		if(isset($content['field_main_image'])) print render($content['field_main_image']); 
-      		if(isset($content['field_main_summary'])) print render($content['field_main_summary']); 
-      	}
+     	// Banner Image and Summary
+      if (!$protected) { 
+    		if(isset($content['field_main_image'])) print render($content['field_main_image']); 
+    		if(isset($content['field_main_summary'])) print render($content['field_main_summary']); 
       }
-	  if ($indhold->field_main_protected['und'][0]['value'] == 0) {
-	  	if(isset($content['field_main_image'])) print render($content['field_main_image']);     
-	  	if(isset($content['field_main_summary'])) print render($content['field_main_summary']);
-	  }
-       if(isset($content['field_os2web_borger_dk_header'])) print render($content['field_os2web_borger_dk_header']);
-      // Kontakt fields
+		  else {
+			  if(user_is_logged_in()) {
+			  	if(isset($content['field_main_image'])) print render($content['field_main_image']);     
+			  	if(isset($content['field_main_summary'])) print render($content['field_main_summary']);
+			  }
+		  }
+
+      if(isset($content['field_os2web_borger_dk_header'])) print render($content['field_os2web_borger_dk_header']);
+      // Hide contact fields
       if(isset($content['field_con_address'])) hide($content['field_con_address']);
       if(isset($content['field_con_name'])) hide($content['field_con_name']);
       if(isset($content['field_con_title'])) hide($content['field_con_title']);
@@ -37,7 +45,7 @@
       if(isset($content['field_con_center'])) hide($content['field_con_center']);
       if(isset($content['field_con_opening_hours'])) hide($content['field_con_opening_hours']);
       if(isset($content['field_con_phone_hours'])) hide($content['field_con_phone_hours']);
-      // Check if any kontakt field is set
+      // Check if contact fields exist
       if(isset($content['field_con_address']) || isset($content['field_con_name']) || isset($content['field_con_title']) || isset($content['field_con_phone']) || isset($content['field_con_email']) || isset($content['field_con_link']) || isset($content['field_con_center']) || isset($content['field_con_opening_hours']) || isset($content['field_con_phone_hours'])) {
 	      $kontakt = 1;
       }
@@ -47,19 +55,20 @@
 		?>
    	<div id='content-main'<?php if(!empty($region['content_sidebar'])) print " class='has-sidebar'"; ?>>
 		<?php
-	
-		if ($indhold->field_main_protected['und'][0]['value'] == 1) {
-			if(!user_is_logged_in() ){
+		// Protected content
+		if($protected) {
+			if(!user_is_logged_in()){
 				print "<p>Du skal anvende brugernavn og adgangskode for at logge ind. Hvis du har mistet din adgangskode, kan du oprette en ny via nedenstående link.</p><p>" . l('Opret ny adgangskode', 'user/password')."</p>";
-			    print drupal_render(drupal_get_form('user_login')); 
+				print drupal_render(drupal_get_form('user_login')); 
 			}
-		else {
+			else {
 				print render($content);
-			}			
 			}
+		}
+		// Unprotected content
 		else {
-				print render($content);
-			}		      
+			print render($content);
+		}		      
     ?>        				
 		</div>
 	
