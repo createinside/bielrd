@@ -58,64 +58,9 @@ function misc_modifications_form_alter(&$form, &$form_state, $form_id) {
 	/* Page Extended Node Form*/
 	if($form_id=='page_extended_node_form') {
 		
-		// Remove all field groups in sections
-		//unset($form['field_main_sections']['und'][0]['#fieldgroups']);
-		
 		// Alter submit string
 		$form['field_main_sections']['und']['add_more']['#value'] = 'Tilføj sektion';	
 	}	
-}
-
-function misc_modifications_field_group_build_pre_render_alter(&$element) {
-	
-	if($element['#bundle']=='field_main_sections') {
-		/*
-		// Group: Text
-		$element['group_sec_txt']['#states'] = array(
-		  'visible' => array(
-		    '#edit-field-main-sections-und-'.$element['#delta'].'-field-sec-type-und' => array('value' => 'sec_txt'),
-		  ),
-		);
-		$element['group_sec_txt']['#id'] = 'sec-txt-'.$element['#delta'];
-		
-		// Group: Text and Image
-		$element['group_sec_txt_img']['#states'] = array(
-		  'visible' => array(
-		    '#edit-field-main-sections-und-'.$element['#delta'].'-field-sec-type-und' => array('value' => 'sec_txt_img'),
-		  ),
-		);
-		$element['group_sec_txt_img']['#id'] = 'sec-txt-img-'.$element['#delta'];
-		
-		// Group: Accordion
-		$element['group_sec_acc']['#states'] = array(
-		  'visible' => array(
-		    '#edit-field-main-sections-und-'.$element['#delta'].'-field-sec-type-und' => array('value' => 'sec_acc'),
-		  ),
-		);
-		$element['group_sec_acc']['#id'] = 'sec-acc-'.$element['#delta'];
-		
-		// Group: Selfservice
-		$element['group_sec_ses']['#states'] = array(
-		  'visible' => array(
-		    '#edit-field-main-sections-und-'.$element['#delta'].'-field-sec-type-und' => array('value' => 'sec_ses'),
-		  ),
-		);
-		$element['group_sec_ses']['#id'] = 'sec-ses-'.$element['#delta'];
-		*/
-	}
-}
-
-function misc_modifications_field_widget_form_alter(&$element, &$form_state, $context) {
-
-	if($element['#bundle'] == 'field_main_sections' && $element['#field_name'] == 'field_sec_type') {
-		if($element['#default_value'][0]!='') {
-			$element['#disabled'] = TRUE;
-		}
-	}
-	
-	if($element['#bundle'] == 'field_main_sections' && !empty($element['#fieldgroups'])) {
-		unset($element['#fieldgroups']);
-	}
 }
 
 ?>
