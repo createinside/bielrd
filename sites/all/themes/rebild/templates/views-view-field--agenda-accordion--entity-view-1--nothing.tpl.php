@@ -23,7 +23,9 @@
  */
 ?>
 <?php 
-$root_id = $row->field_field_agenda_root_id[0]["raw"]["value"];
-$output = str_replace("[root_id]", $root_id, $output);
+if(isset($row->field_field_agenda_root_id[0])) {
+	$root_id = $row->field_field_agenda_root_id[0]["raw"]["value"];
+	$output = str_replace("[root_id]", $root_id, $output);
+}
 print $output; 
 ?>
