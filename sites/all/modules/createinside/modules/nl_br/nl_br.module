@@ -102,8 +102,8 @@ function nl_br_export_access($node)
 	$nodeType = $node->type;
 
 	// if the node is of type Business Rebild Newsletter (nl_br)
-	// and the current user has the role Administrator (3)
-	if($nodeType == "nl_br" && user_has_role("3")) {
+	// and the current user has the role Administrator (3) or Nyhedsbrev (9)
+	if($nodeType == "nl_br" && (user_has_role("3") || user_has_role("9"))) {
 		return TRUE;
 	}
 
@@ -127,8 +127,8 @@ function nl_br_preview_access($node) {
 	$nodeType = $node->type;
 
 	// if the node is of type Business Rebild Newsletter (nl_br)
-	// and the current user has the role Administrator (3)
-	if($nodeType == "nl_br" && user_has_role("3")) {
+	// and the current user has the role Administrator (3) or Nyhedsbrev (9)
+	if($nodeType == "nl_br" && (user_has_role("3") || user_has_role("9"))) {
 		return TRUE;
 	}
 
