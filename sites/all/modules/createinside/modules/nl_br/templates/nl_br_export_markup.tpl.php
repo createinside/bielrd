@@ -152,8 +152,11 @@
 								<table bgcolor="#282828" border="0" cellpadding="0" cellspacing="0" width="100%" style="font-size: 0px;">
 									<tbody>
 										<tr>
+											<td width="30" height="15" colspan="4">&nbsp;</td>>
+										</tr>
+										<tr>
 											<td width="30" height="15">&nbsp;</td>
-											<td width="270" height="50" valign="middle" align="right" style="font-family: Arial, sans-serif; font-size: 20px; text-align: left;">
+											<td width="270" valign="middle" align="left" style="font-family: Arial, sans-serif; font-size: 20px; text-align: left;">
 												<a style="text-decoration: none;" target="_blank" href="http://rebild.dk/erhverv"><span style="color:#d9620c ;">BUSINESS </span><span style="color:#ffffff;">REBILD</span></a>
 											</td>
 											<td width="270" valign="middle" align="right" style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #ffffff; text-align: right;">
@@ -162,6 +165,9 @@
 												<a href="https://www.linkedin.com/company/business-rebild" style="color: #ffffff;text-decoration: none;">LinkedIn</a>
 											</td>
 											<td width="30" height="15">&nbsp;</td>
+										</tr>
+										<tr>
+											<td width="600" height="15" colspan="4">&nbsp;</td>
 										</tr>
 									</tbody>
 								</table>
