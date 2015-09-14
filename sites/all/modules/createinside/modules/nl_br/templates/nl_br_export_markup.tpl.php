@@ -116,7 +116,6 @@
 			text-align:center;
 		}
 
-
 	</style>
 </head>
 <body style="margin:0px; padding:0px; background:#b7b7b7;">
@@ -152,7 +151,7 @@
 								<table bgcolor="#282828" border="0" cellpadding="0" cellspacing="0" width="100%" style="font-size: 0px;">
 									<tbody>
 										<tr>
-											<td width="30" height="15" colspan="4">&nbsp;</td>>
+											<td width="30" height="15" colspan="4">&nbsp;</td>
 										</tr>
 										<tr>
 											<td width="30" height="15">&nbsp;</td>
