@@ -1,3 +1,4 @@
 name = Business Rebild Newsletter
 core = 7.x
 package = Create Inside
+dependencies[] = view_mode_templates
