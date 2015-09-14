@@ -1,0 +1,243 @@
+<?php
+
+/**
+ * Define URL's for the Business Rebild Newsletter
+ * Implements hook_menu().
+ * @return mixed
+ */
+function nl_br_menu()
+{
+	$items['node/%node/nl_br_export'] = array(
+		'title' => 'Eksporter',
+		'type' => MENU_LOCAL_TASK,
+		'page callback' => 'nl_br_export_page',
+		'page arguments' => array(1),
+		'access callback' => 'nl_br_export_access',
+		'access arguments' => array(1),
+ 	);
+
+	$items['node/%node/nl_br_preview'] = array(
+		'title' => 'Preview',
+		'type' => MENU_LOCAL_TASK,
+		'page callback' => 'nl_br_preview_page',
+		'page arguments' => array(1),
+		'access callback' => 'nl_br_preview_access',
+		'access arguments' => array(1),
+	);
+
+	return $items;
+}
+
+/**
+ * Define admin paths
+ * Implements hook_admin_paths().
+ * @return array
+ */
+function nl_br_admin_paths()
+{
+	$paths = array(
+		'node/*/nl_br_export' => TRUE,
+	);
+	return $paths;
+}
+
+/**
+ * Implements hook_theme().
+ * @param $existing
+ * @param $type
+ * @param $theme
+ * @param $path
+ * @return array
+ */
+function nl_br_theme($existing, $type, $theme, $path)
+{
+	return array(
+		'nl_br_export_markup' => array(
+			'template' => 'templates/nl_br_export_markup',
+		),
+	);
+}
+
+/**
+ * Implements hook_view_mode_templates().
+ */
+function nl_br_view_mode_templates()
+{
+	return array(
+		'paragraphs_item__nl_br_sec_1__full',
+		'paragraphs_item__nl_br_sec_2__full',
+		'paragraphs_item__nl_br_sec_3__full',
+		'paragraphs_item__nl_br_sec_4__full',
+		'paragraphs_item__nl_br_sec_5__full',
+		'paragraphs_item__nl_br_sec_6__full',
+		'paragraphs_item__nl_br_sec_7__full',
+	);
+}
+
+/**
+ * Business Rebild Newsletter export page
+ * @param $node
+ * @return array|mixed
+ */
+function nl_br_export_page($node)
+{
+	$nl_br_markup = nl_br_generate_markup($node);
+	$nl_br_subject = $node->field_nl_br_subject['und'][0]['value'];
+
+	$nl_br = array(
+		'markup' => $nl_br_markup,
+		'subject' => $nl_br_subject,
+	);
+
+	return drupal_get_form('nl_br_export_form', $nl_br);
+}
+
+/**
+ * Business Rebild Newsletter export access
+ * @param $node
+ * @return bool
+ */
+function nl_br_export_access($node)
+{
+	$nodeType = $node->type;
+
+	// if the node is of type Business Rebild Newsletter (nl_br)
+	// and the current user has the role Administrator (3)
+	if($nodeType == "nl_br" && user_has_role("3")) {
+		return TRUE;
+	}
+
+	return FALSE;
+}
+
+/**
+ * Business Rebild Newsletter preview page
+ * @param $node
+ */
+function nl_br_preview_page($node) {
+	print nl_br_generate_markup($node);
+}
+
+/**
+ * Business Rebild Newsletter prewview access
+ * @param $node
+ * @return bool
+ */
+function nl_br_preview_access($node) {
+	$nodeType = $node->type;
+
+	// if the node is of type Business Rebild Newsletter (nl_br)
+	// and the current user has the role Administrator (3)
+	if($nodeType == "nl_br" && user_has_role("3")) {
+		return TRUE;
+	}
+
+	return FALSE;
+}
+
+/**
+ * Business Rebild Newsletter export form
+ */
+function nl_br_export_form($form, &$form_state, $nl_br)
+{
+
+	$form = array();
+
+	//$form['#action'] = url('$url', array('external' => true));
+
+	$form['submit'] = array(
+		'#type' => 'submit',
+		'#value' => t('Export to Mailpeople'),
+	);
+
+	$form['nl_br_subject'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Newsletter subject'),
+		'#default_value' => $nl_br['subject'],
+		'#size' => 60,
+		'#disabled' => TRUE,
+	);
+
+	$form['nl_br_markup'] = array(
+		'#type' => 'textarea',
+		'#title' => t('Newsletter markup'),
+		'#default_value' => $nl_br['markup'],
+		'#disabled' => TRUE,
+		'#rows' => 30,
+	);
+
+	return $form;
+}
+
+/**
+ * Business Rebild Newsletter export form submit
+ */
+function nl_br_export_form_submit($form, &$form_state)
+{
+	$url = 'http://mailpeople.dk/emailmarketer/mailpeople_api/rebild_create_campaign.php?userid=108&token=11bf5ba0ea5c7c9674ab7cfa93e13cc736815531';
+	$markup = $form_state['values']['nl_br_markup'];
+	$subject = $form_state['values']['nl_br_subject'];
+
+	$fields = array(
+		'markup' => urlencode($markup),
+		'subject' => urlencode($subject),
+	);
+
+	$fields_string = '';
+	foreach($fields as $key => $value) {
+		$fields_string .= $key . '=' . $value . '&';
+	}
+	rtrim($fields_string, '&');
+
+	//open connection
+	$ch = curl_init();
+
+	//set the url, number of POST vars, POST data
+	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_POST, count($fields));
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+	//execute post
+	$result = curl_exec($ch);
+
+	//close connection
+	curl_close($ch);
+
+	drupal_set_message($result);
+}
+
+/**
+ * Generate markup for the newsletter email
+ * @param $node
+ * @return mixed|string
+ * @throws Exception
+ */
+function nl_br_generate_markup($node) {
+	$variables = array();
+	$sections = array();
+
+	$i = 0;
+	$sectionsLeft = TRUE;
+	while($sectionsLeft) {
+		if(isset($node->field_nl_br_sections['und'][$i])) {
+			$paragraph_id = $node->field_nl_br_sections['und'][$i]['value'];
+			$entities = entity_load('paragraphs_item', array($paragraph_id));
+			$paragraph = entity_view('paragraphs_item', $entities, 'full');
+
+			$sections[$i] = render($paragraph);
+
+			$sectionsLeft = TRUE;
+		} else {
+			$sectionsLeft = FALSE;
+		}
+		$i++;
+	}
+
+	$variables['sections'] = $sections;
+
+	$markup = theme('nl_br_export_markup', $variables);
+	$markup = check_markup($markup, 'html_email');
+
+	return $markup;
+}
