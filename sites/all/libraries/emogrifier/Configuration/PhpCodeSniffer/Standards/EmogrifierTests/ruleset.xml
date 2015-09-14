@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ruleset name="PPW Coding Standard">
-    <description>This is the coding standard user for the Emogrifier code (without the unit tests).
+    <description>This is the coding standard user for the Emogrifier unit tests.
         This standard has been tested with to work with PHP_CodeSniffer >= 1.4.5.
     </description>
 
@@ -25,8 +25,7 @@
     <rule ref="Generic.Functions.CallTimePassByReference"/>
     <rule ref="Generic.Functions.FunctionCallArgumentSpacing"/>
     <rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie"/>
-    <!-- Enable this rule when the cyclomatic complexity of all methods is sufficiently low. -->
-    <!--<rule ref="Generic.Metrics.CyclomaticComplexity"/>-->
+    <rule ref="Generic.Metrics.CyclomaticComplexity"/>
     <rule ref="Generic.Metrics.NestingLevel"/>
     <rule ref="Generic.NamingConventions.ConstructorName"/>
     <rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
@@ -96,9 +95,9 @@
     <rule ref="Squiz.Operators.IncrementDecrementUsage"/>
     <rule ref="Squiz.Operators.ValidLogicalOperators"/>
     <rule ref="Squiz.PHP.CommentedOutCode">
-        <properties>
-            <property name="maxPercentage" value="70"/>
-        </properties>
+    <properties>
+        <property name="maxPercentage" value="70"/>
+    </properties>
     </rule>
     <rule ref="Squiz.PHP.DisallowMultipleAssignments"/>
     <rule ref="Squiz.PHP.DisallowSizeFunctionsInLoops"/>
@@ -126,8 +125,6 @@
     <rule ref="TYPO3SniffPool.Classes.LowercaseClassKeywords"/>
     <rule ref="TYPO3SniffPool.Commenting.ClassDocComment"/>
     <rule ref="TYPO3SniffPool.Commenting.DoubleSlashCommentsInNewLine"/>
-    <!-- Enable this rule when all functions have proper documentation comments. -->
-    <!--<rule ref="TYPO3SniffPool.Commenting.FunctionDocComment"/>-->
     <rule ref="TYPO3SniffPool.Commenting.NoAuthorAnnotationInFunctionDocComment"/>
     <rule ref="TYPO3SniffPool.Commenting.SpaceAfterDoubleSlash"/>
     <rule ref="TYPO3SniffPool.ControlStructures.DisallowEachInLoopCondition"/>
