@@ -150,14 +150,16 @@
 					<table bgcolor="#282828" border="0" cellpadding="0" cellspacing="0" width="100%" style="font-size: 0px;">
 						<tbody>
 							<tr>
-								<td width="300" height="50" valign="middle" align="right" style="font-family: Arial, sans-serif; font-size: 20px; text-align: left;">
-									<a style="text-decoration: none;" target="_blank" href="http://rebild.dk/erhverv">&nbsp;&nbsp;&nbsp;<span style="color:#d9620c ;">BUSINESS </span><span style="color:#ffffff;">REBILD</span></a>
+								<td width="30" height="15">&nbsp;</td>
+								<td width="270" height="50" valign="middle" align="right" style="font-family: Arial, sans-serif; font-size: 20px; text-align: left;">
+									<a style="text-decoration: none;" target="_blank" href="http://rebild.dk/erhverv"><span style="color:#d9620c ;">BUSINESS </span><span style="color:#ffffff;">REBILD</span></a>
 								</td>
-								<td width="300" valign="middle" align="right" style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #ffffff; text-align: right;">
+								<td width="270" valign="middle" align="right" style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #ffffff; text-align: right;">
 									<a href="http://rebild.dk/nyheder" style="color: #ffffff;text-decoration: none;">Aktuelt</a> &nbsp;|&nbsp;
 									<a href="http://rebild.dk/kontakt" style="color: #ffffff;text-decoration: none;">Kontakt</a> &nbsp;|&nbsp;
-									<a href="https://www.linkedin.com/company/business-rebild" style="color: #ffffff;text-decoration: none;">LinkedIn</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="https://www.linkedin.com/company/business-rebild" style="color: #ffffff;text-decoration: none;">LinkedIn</a>
 								</td>
+								<td width="30" height="15">&nbsp;</td>
 							</tr>
 						</tbody>
 					</table>
@@ -179,7 +181,7 @@
 							</tr>
 							<tr>
 								<td>&nbsp;</td>
-								<td width="72" style="font-family: Arial, sans-serif; font-size: 18px; color: #282828; text-align: center;"><img width="72" border="0" alt="" style="display:block; border:none; outline:none; text-decoration:none;" src="<?php print $base_url."/".drupal_get_path("module", "nl_br"); ?>/img/logo.png"></td>
+								<td align="center" width="72" style="font-family: Arial, sans-serif; font-size: 18px; color: #282828; text-align: center;"><img width="72" border="0" alt="" style="display:block; border:none; outline:none; text-decoration:none;" src="<?php print $base_url."/".drupal_get_path("module", "nl_br"); ?>/img/logo.png"></td>
 								<td>&nbsp;</td>
 							</tr>
 							<tr>
