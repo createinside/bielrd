@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Business Rebild Nyhedsbrev feature.
+ */
+
+include_once 'rebild_nl_br.features.inc';
