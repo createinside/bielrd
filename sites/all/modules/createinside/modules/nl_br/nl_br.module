@@ -101,9 +101,12 @@ function nl_br_export_access($node)
 {
 	$nodeType = $node->type;
 
+	$roleNyhedsbrev = user_role_load_by_name("nyhedsbrev")->rid;
+	$roleAdministrator = user_role_load_by_name("administrator")->rid;
+
 	// if the node is of type Business Rebild Newsletter (nl_br)
-	// and the current user has the role Administrator (3) or Nyhedsbrev (9)
-	if($nodeType == "nl_br" && (user_has_role("3") || user_has_role("9"))) {
+	// and the current user has the role Administrator or Nyhedsbrev
+	if($nodeType == "nl_br" && (user_has_role($roleAdministrator) || user_has_role($roleNyhedsbrev))) {
 		return TRUE;
 	}
 
@@ -126,9 +129,12 @@ function nl_br_preview_page($node) {
 function nl_br_preview_access($node) {
 	$nodeType = $node->type;
 
+	$roleNyhedsbrev = user_role_load_by_name("nyhedsbrev")->rid;
+	$roleAdministrator = user_role_load_by_name("administrator")->rid;
+
 	// if the node is of type Business Rebild Newsletter (nl_br)
-	// and the current user has the role Administrator (3) or Nyhedsbrev (9)
-	if($nodeType == "nl_br" && (user_has_role("3") || user_has_role("9"))) {
+	// and the current user has the role Administrator or Nyhedsbrev
+	if($nodeType == "nl_br" && (user_has_role($roleAdministrator) || user_has_role($roleNyhedsbrev))) {
 		return TRUE;
 	}
 
