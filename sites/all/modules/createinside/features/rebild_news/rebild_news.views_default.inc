@@ -39,7 +39,7 @@ function rebild_news_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Overskrift: Global: Unfiltered text */
+  /* Overskrift: Global: Ufiltreret tekst */
   $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
@@ -109,6 +109,32 @@ function rebild_news_views_default_views() {
 
   /* Display: Forside */
   $handler = $view->new_display('block', 'Forside', 'block');
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filterkriterie: Indhold: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'news_article' => 'news_article',
+  );
+  /* Filterkriterie: Indhold: Sektion (field_main_section) */
+  $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
+  $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
+  $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';
+  $handler->display->display_options['filters']['field_main_section_tid']['operator'] = 'not';
+  $handler->display->display_options['filters']['field_main_section_tid']['value'] = array(
+    3 => '3',
+  );
+  $handler->display->display_options['filters']['field_main_section_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_main_section_tid']['vocabulary'] = 'rebild_sections';
   $handler->display->display_options['block_description'] = 'Nyheder - forside';
 
   /* Display: Nyhedsside */
@@ -176,7 +202,125 @@ function rebild_news_views_default_views() {
   $handler->display->display_options['fields']['field_main_summary']['alter']['html'] = TRUE;
   $handler->display->display_options['fields']['field_main_summary']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_main_summary']['element_wrapper_class'] = 'news-summary';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filterkriterie: Indhold: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'news_article' => 'news_article',
+  );
+  /* Filterkriterie: Indhold: Sektion (field_main_section) */
+  $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
+  $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
+  $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';
+  $handler->display->display_options['filters']['field_main_section_tid']['operator'] = 'not';
+  $handler->display->display_options['filters']['field_main_section_tid']['value'] = array(
+    3 => '3',
+  );
+  $handler->display->display_options['filters']['field_main_section_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_main_section_tid']['vocabulary'] = 'rebild_sections';
   $handler->display->display_options['path'] = 'view/nyheder';
+
+  /* Display: Nyhedsside - Erhverv */
+  $handler = $view->new_display('page', 'Nyhedsside - Erhverv', 'business');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Antal elementer';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Alle -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Forskydning';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« første';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ forrige';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'næste ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'sidste »';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Indhold: Overskrift */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['max_length'] = '30';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'news-title';
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  /* Felt: Indhold: Billede */
+  $handler->display->display_options['fields']['field_main_image']['id'] = 'field_main_image';
+  $handler->display->display_options['fields']['field_main_image']['table'] = 'field_data_field_main_image';
+  $handler->display->display_options['fields']['field_main_image']['field'] = 'field_main_image';
+  $handler->display->display_options['fields']['field_main_image']['label'] = '';
+  $handler->display->display_options['fields']['field_main_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_main_image']['element_wrapper_class'] = 'news-image';
+  $handler->display->display_options['fields']['field_main_image']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_main_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_main_image']['type'] = 'picture';
+  $handler->display->display_options['fields']['field_main_image']['settings'] = array(
+    'picture_group' => 'nyhed_oversigt',
+    'fallback_image_style' => '',
+    'image_link' => 'content',
+  );
+  /* Felt: Indhold: Oprettelsesdato */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = 'Dato';
+  $handler->display->display_options['fields']['created']['element_label_type'] = 'strong';
+  $handler->display->display_options['fields']['created']['element_wrapper_class'] = 'news-date';
+  $handler->display->display_options['fields']['created']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['created']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['created']['custom_date_format'] = 'd. F Y';
+  /* Felt: Indhold: Resumé */
+  $handler->display->display_options['fields']['field_main_summary']['id'] = 'field_main_summary';
+  $handler->display->display_options['fields']['field_main_summary']['table'] = 'field_data_field_main_summary';
+  $handler->display->display_options['fields']['field_main_summary']['field'] = 'field_main_summary';
+  $handler->display->display_options['fields']['field_main_summary']['label'] = '';
+  $handler->display->display_options['fields']['field_main_summary']['alter']['max_length'] = '400';
+  $handler->display->display_options['fields']['field_main_summary']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['field_main_summary']['alter']['html'] = TRUE;
+  $handler->display->display_options['fields']['field_main_summary']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_main_summary']['element_wrapper_class'] = 'news-summary';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filterkriterie: Indhold: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'news_article' => 'news_article',
+  );
+  /* Filterkriterie: Indhold: Sektion (field_main_section) */
+  $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
+  $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
+  $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';
+  $handler->display->display_options['filters']['field_main_section_tid']['value'] = array(
+    3 => '3',
+  );
+  $handler->display->display_options['filters']['field_main_section_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_main_section_tid']['vocabulary'] = 'rebild_sections';
+  $handler->display->display_options['path'] = 'view/erhverv/nyheder';
 
   /* Display: Borger landing */
   $handler = $view->new_display('block', 'Borger landing', 'block_1');
@@ -196,7 +340,7 @@ function rebild_news_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'news_article' => 'news_article',
   );
-  /* Filterkriterie: Felt: Sektion (field_main_section) */
+  /* Filterkriterie: Indhold: Sektion (field_main_section) */
   $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
   $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
   $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';
@@ -209,6 +353,63 @@ function rebild_news_views_default_views() {
 
   /* Display: Erhverv landing */
   $handler = $view->new_display('block', 'Erhverv landing', 'block_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Aktuelt';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Overskrift: Global: Ufiltreret tekst */
+  $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<span class="news_view_all"><a href="/nyheder">Se alle nyheder</a></span>';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Indhold: Billede */
+  $handler->display->display_options['fields']['field_main_image']['id'] = 'field_main_image';
+  $handler->display->display_options['fields']['field_main_image']['table'] = 'field_data_field_main_image';
+  $handler->display->display_options['fields']['field_main_image']['field'] = 'field_main_image';
+  $handler->display->display_options['fields']['field_main_image']['label'] = '';
+  $handler->display->display_options['fields']['field_main_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_main_image']['element_wrapper_class'] = 'news-image';
+  $handler->display->display_options['fields']['field_main_image']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_main_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_main_image']['type'] = 'picture';
+  $handler->display->display_options['fields']['field_main_image']['settings'] = array(
+    'picture_group' => 'nyhed_oversigt',
+    'fallback_image_style' => '',
+    'image_link' => 'content',
+  );
+  /* Felt: Indhold: Oprettelsesdato */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = '';
+  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created']['element_wrapper_class'] = 'news-date';
+  $handler->display->display_options['fields']['created']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['created']['date_format'] = 'short';
+  /* Felt: Indhold: Overskrift */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['max_length'] = '30';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'news-title';
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  /* Felt: Indhold: Resumé */
+  $handler->display->display_options['fields']['field_main_summary']['id'] = 'field_main_summary';
+  $handler->display->display_options['fields']['field_main_summary']['table'] = 'field_data_field_main_summary';
+  $handler->display->display_options['fields']['field_main_summary']['field'] = 'field_main_summary';
+  $handler->display->display_options['fields']['field_main_summary']['label'] = '';
+  $handler->display->display_options['fields']['field_main_summary']['alter']['max_length'] = '100';
+  $handler->display->display_options['fields']['field_main_summary']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['field_main_summary']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_main_summary']['element_wrapper_class'] = 'news-summary';
+  $handler->display->display_options['fields']['field_main_summary']['element_default_classes'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filterkriterie: Indhold: Udgivet */
@@ -225,7 +426,7 @@ function rebild_news_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'news_article' => 'news_article',
   );
-  /* Filterkriterie: Felt: Sektion (field_main_section) */
+  /* Filterkriterie: Indhold: Sektion (field_main_section) */
   $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
   $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
   $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';
@@ -254,7 +455,7 @@ function rebild_news_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'news_article' => 'news_article',
   );
-  /* Filterkriterie: Felt: Sektion (field_main_section) */
+  /* Filterkriterie: Indhold: Sektion (field_main_section) */
   $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
   $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
   $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';
@@ -283,7 +484,7 @@ function rebild_news_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'news_article' => 'news_article',
   );
-  /* Filterkriterie: Felt: Sektion (field_main_section) */
+  /* Filterkriterie: Indhold: Sektion (field_main_section) */
   $handler->display->display_options['filters']['field_main_section_tid']['id'] = 'field_main_section_tid';
   $handler->display->display_options['filters']['field_main_section_tid']['table'] = 'field_data_field_main_section';
   $handler->display->display_options['filters']['field_main_section_tid']['field'] = 'field_main_section_tid';
@@ -315,9 +516,11 @@ function rebild_news_views_default_views() {
     t('næste ›'),
     t('sidste »'),
     t('Dato'),
+    t('Nyhedsside - Erhverv'),
     t('Borger landing'),
     t('Nyheder - borger'),
     t('Erhverv landing'),
+    t('Aktuelt'),
     t('Nyheder - erhverv'),
     t('Politik landing'),
     t('Nyheder - politik'),

@@ -69,7 +69,7 @@ function rebild_page_field_default_field_bases() {
   // Exported field_base: 'field_agenda_view_com'
   $field_bases['field_agenda_view_com'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_agenda_view_com',
@@ -433,8 +433,15 @@ function rebild_page_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_main_accordion',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
     'foreign keys' => array(),
-    'indexes' => array(),
+    'indexes' => array(
+      'revision_id' => array(
+        0 => 'revision_id',
+      ),
+    ),
     'locked' => 0,
     'module' => 'field_collection',
     'settings' => array(
@@ -763,6 +770,9 @@ function rebild_page_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_main_links_internal',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
     'foreign keys' => array(
       'node' => array(
         'columns' => array(

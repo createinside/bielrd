@@ -167,7 +167,6 @@ function rebild_featured_image_default_styles() {
         'label' => 'Crop and scale manually',
         'help' => 'Crop and scale a user-selected area, respecting the ratio of the destination width and height.',
         'effect callback' => 'manualcrop_crop_and_scale_effect',
-        'dimensions callback' => 'image_resize_dimensions',
         'form callback' => 'manualcrop_crop_and_scale_form',
         'summary theme' => 'manualcrop_crop_and_scale_summary',
         'module' => 'manualcrop',
@@ -180,9 +179,11 @@ function rebild_featured_image_default_styles() {
           'onlyscaleifcrop' => 0,
           'style_name' => 'blok',
         ),
+        'dimensions callback' => 'image_resize_dimensions',
         'weight' => 0,
       ),
     ),
+    'label' => 'blok',
   );
 
   // Exported image style: blok_mobile.
@@ -219,6 +220,7 @@ function rebild_featured_image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'blok_mobile',
   );
 
   // Exported image style: blok_narrow.
@@ -255,6 +257,7 @@ function rebild_featured_image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'blok_narrow',
   );
 
   return $styles;

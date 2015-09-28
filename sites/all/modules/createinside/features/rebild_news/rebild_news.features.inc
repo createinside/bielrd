@@ -43,7 +43,6 @@ function rebild_news_image_default_styles() {
         'label' => 'Crop and scale manually',
         'help' => 'Crop and scale a user-selected area, respecting the ratio of the destination width and height.',
         'effect callback' => 'manualcrop_crop_and_scale_effect',
-        'dimensions callback' => 'image_resize_dimensions',
         'form callback' => 'manualcrop_crop_and_scale_form',
         'summary theme' => 'manualcrop_crop_and_scale_summary',
         'module' => 'manualcrop',
@@ -56,9 +55,11 @@ function rebild_news_image_default_styles() {
           'onlyscaleifcrop' => 0,
           'style_name' => 'nyhed_forside',
         ),
+        'dimensions callback' => 'image_resize_dimensions',
         'weight' => 0,
       ),
     ),
+    'label' => 'nyhed_forside',
   );
 
   // Exported image style: nyhed_forside_mobile.
@@ -95,6 +96,7 @@ function rebild_news_image_default_styles() {
         'weight' => 2,
       ),
     ),
+    'label' => 'nyhed_forside_mobile',
   );
 
   // Exported image style: nyhed_forside_narrow.
@@ -131,6 +133,7 @@ function rebild_news_image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'nyhed_forside_narrow',
   );
 
   // Exported image style: nyhed_oversigt.
@@ -141,7 +144,6 @@ function rebild_news_image_default_styles() {
         'label' => 'Crop and scale manually',
         'help' => 'Crop and scale a user-selected area, respecting the ratio of the destination width and height.',
         'effect callback' => 'manualcrop_crop_and_scale_effect',
-        'dimensions callback' => 'image_resize_dimensions',
         'form callback' => 'manualcrop_crop_and_scale_form',
         'summary theme' => 'manualcrop_crop_and_scale_summary',
         'module' => 'manualcrop',
@@ -154,9 +156,11 @@ function rebild_news_image_default_styles() {
           'onlyscaleifcrop' => 0,
           'style_name' => 'nyhed_oversigt',
         ),
+        'dimensions callback' => 'image_resize_dimensions',
         'weight' => 0,
       ),
     ),
+    'label' => 'nyhed_oversigt',
   );
 
   return $styles;

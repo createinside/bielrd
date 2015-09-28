@@ -13,6 +13,8 @@ General
 Menus
 Frontpage
 Landingpage
+Nodes
+Blocks
 
 -------------------------------------------------------------------*/
 
@@ -93,6 +95,21 @@ Landingpage
 	left: -180px;
 }
 
+/* Main Menu - Level 3 */
+#region-content,
+#region-preface-first {
+	.block-menu-block {
+		.content {
+		ul {
+			li {
+				width: 47%;
+				padding-right: 3%;
+			}
+		}
+		}
+	}
+}
+
 /*------------------------------------------------------------------
 	Frontpage
 -------------------------------------------------------------------*/
@@ -133,6 +150,50 @@ Landingpage
       width: 227px;
     }
   } 
+}
+/* Focus */
+.business-theme.not-front {
+	.view-id-rebild_frontpage {
+		.views-row {
+			width: 220px;
+			margin: 0;
+			.text-wrapper {
+				position: absolute;
+				bottom: 0;
+				z-index: 2;
+				@include opacity(0.9);
+				@include transform(translateY(105px));
+				@include transition-duration(250ms);
+				@include transition-timing-function(ease-in-out);
+				.featured-title {
+					font-size: 1.25em;
+					margin-bottom: 10px;
+					height: 2.25em;
+					line-height: 2.25em;
+					div {
+						display: inline-block;
+						vertical-align: middle;
+						line-height: $line-height-std;
+					}
+				}
+				a {
+					height: 143px;
+					padding: 5px 12px;
+				}
+			}
+		}
+		.views-row-2 {
+			margin: 0 20px;
+		}
+		.views-row:hover {
+			img {
+				opacity: 0.75;
+			}
+			.text-wrapper {
+				@include transform(translateY(0));
+			}
+		}
+	}
 }
 
 /*------------------------------------------------------------------

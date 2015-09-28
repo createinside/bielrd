@@ -33,3 +33,6 @@ sites/all/themes/rebild/css/wysiwyg.css
 # Ignore apc.php & phpinfo.php
 apc.php
 phpinfo.php
+
+# Ignore PhpStorm config folder
+.idea

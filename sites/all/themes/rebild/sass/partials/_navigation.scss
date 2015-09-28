@@ -50,11 +50,13 @@ Pager
 	Main Menu - Level 3
 -------------------------------------------------------------------*/
 
-#region-content {
+#region-content,
+#region-preface-first {
 	.block-menu-block {
 		.content {
 			@include grid-box($bg-color-alt);
 			padding: $spacing-std;
+			padding-bottom: 0;
 			overflow: hidden;
 			ul {
 				overflow: hidden;

@@ -56,7 +56,7 @@ function manualcrop_modification_validate(&$form, &$form_state){
 			
 		// If the number of croppings made doesn't match the number of croppings required => Trow an error
 		if ($query < $form_state['required_count']) { 
-			form_set_error('field_main_image', 'Du skal beskære dit billede. Vælg "Redigér" ud for billedet og klik på "Beskær".');
+			//form_set_error('field_main_image', 'Du skal beskære dit billede. Vælg "Redigér" ud for billedet og klik på "Beskær".');
 		}
 	}
 }

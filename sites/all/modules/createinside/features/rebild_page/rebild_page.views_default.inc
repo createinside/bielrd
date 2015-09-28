@@ -41,13 +41,12 @@ function rebild_page_views_default_views() {
   $handler->display->display_options['style_options']['row-start-open'] = 'none';
   $handler->display->display_options['style_options']['autoheight'] = 0;
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Forbindelse: Indhold (historiske data): Accordion (field_main_accordion) */
+  /* Forbindelse: Handler mangler eller er i stykker */
   $handler->display->display_options['relationships']['field_main_accordion_value']['id'] = 'field_main_accordion_value';
   $handler->display->display_options['relationships']['field_main_accordion_value']['table'] = 'field_revision_field_main_accordion';
   $handler->display->display_options['relationships']['field_main_accordion_value']['field'] = 'field_main_accordion_value';
   $handler->display->display_options['relationships']['field_main_accordion_value']['label'] = 'accordion';
   $handler->display->display_options['relationships']['field_main_accordion_value']['required'] = TRUE;
-  $handler->display->display_options['relationships']['field_main_accordion_value']['delta'] = '-1';
   /* Felt: Field collection item: Overskrift */
   $handler->display->display_options['fields']['field_accordion_title']['id'] = 'field_accordion_title';
   $handler->display->display_options['fields']['field_accordion_title']['table'] = 'field_data_field_accordion_title';
@@ -271,7 +270,7 @@ function rebild_page_views_default_views() {
   $handler->display->display_options['filters']['filename']['expose']['label'] = 'Filnavn';
   $handler->display->display_options['filters']['filename']['expose']['operator'] = 'filename_op';
   $handler->display->display_options['filters']['filename']['expose']['identifier'] = 'filename';
-  /* Filterkriterie: Felt: Tags (field_main_tags) */
+  /* Filterkriterie: Indhold: Tags (field_main_tags) */
   $handler->display->display_options['filters']['field_main_tags_tid']['id'] = 'field_main_tags_tid';
   $handler->display->display_options['filters']['field_main_tags_tid']['table'] = 'field_data_field_main_tags';
   $handler->display->display_options['filters']['field_main_tags_tid']['field'] = 'field_main_tags_tid';
@@ -352,7 +351,7 @@ function rebild_page_views_default_views() {
   $handler->display->display_options['filters']['filename']['expose']['label'] = 'Filnavn';
   $handler->display->display_options['filters']['filename']['expose']['operator'] = 'filename_op';
   $handler->display->display_options['filters']['filename']['expose']['identifier'] = 'filename';
-  /* Filterkriterie: Felt: Tags (field_main_tags) */
+  /* Filterkriterie: Indhold: Tags (field_main_tags) */
   $handler->display->display_options['filters']['field_main_tags_tid']['id'] = 'field_main_tags_tid';
   $handler->display->display_options['filters']['field_main_tags_tid']['table'] = 'field_data_field_main_tags';
   $handler->display->display_options['filters']['field_main_tags_tid']['field'] = 'field_main_tags_tid';

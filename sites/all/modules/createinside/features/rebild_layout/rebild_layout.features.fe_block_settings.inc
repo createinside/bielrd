@@ -41,7 +41,6 @@ function rebild_layout_default_fe_block_settings() {
     'module' => 'block',
     'node_types' => array(),
     'pages' => 'borger
-erhverv
 politik
 bo-i-rebild',
     'roles' => array(),
@@ -64,7 +63,8 @@ bo-i-rebild',
     'machine_name' => 'rebild_footer_contact',
     'module' => 'block',
     'node_types' => array(),
-    'pages' => '',
+    'pages' => 'erhverv
+erhverv/*',
     'roles' => array(),
     'themes' => array(
       'rebild' => array(
@@ -85,7 +85,8 @@ bo-i-rebild',
     'machine_name' => 'rebild_footer_contact_2',
     'module' => 'block',
     'node_types' => array(),
-    'pages' => '',
+    'pages' => 'erhverv
+erhverv/*',
     'roles' => array(),
     'themes' => array(
       'rebild' => array(
@@ -106,7 +107,8 @@ bo-i-rebild',
     'machine_name' => 'rebild_footer_logo',
     'module' => 'block',
     'node_types' => array(),
-    'pages' => '',
+    'pages' => 'erhverv
+erhverv/*',
     'roles' => array(),
     'themes' => array(
       'rebild' => array(
@@ -127,14 +129,14 @@ bo-i-rebild',
     'delta' => 16,
     'module' => 'menu_block',
     'node_types' => array(),
-    'pages' => '',
+    'pages' => 'erhverv',
     'roles' => array(),
     'themes' => array(
       'rebild' => array(
         'region' => 'content',
         'status' => 1,
         'theme' => 'rebild',
-        'weight' => -60,
+        'weight' => -72,
       ),
     ),
     'title' => '<none>',

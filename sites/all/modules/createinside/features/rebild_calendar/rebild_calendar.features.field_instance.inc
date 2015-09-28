@@ -152,6 +152,7 @@ function rebild_calendar_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
+        'display_all_day' => 0,
         'increment' => 15,
         'input_format' => 'd/m/Y - H:i:s',
         'input_format_custom' => '',
@@ -205,6 +206,7 @@ function rebild_calendar_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
+        'display_all_day' => 0,
         'increment' => 15,
         'input_format' => 'd/m/Y - H:i:s',
         'input_format_custom' => '',
@@ -830,19 +832,13 @@ function rebild_calendar_field_default_field_instances() {
         'manualcrop_inline_crop' => FALSE,
         'manualcrop_instant_crop' => FALSE,
         'manualcrop_instant_preview' => 1,
+        'manualcrop_keyboard' => TRUE,
+        'manualcrop_maximize_default_crop_area' => FALSE,
         'manualcrop_require_cropping' => array(
-          'blok' => 0,
           'indhold_top' => 'indhold_top',
-          'inline_bottom' => 0,
-          'inline_top' => 0,
-          'nyhed_forside' => 0,
         ),
         'manualcrop_styles_list' => array(
-          'blok' => 0,
           'indhold_top' => 'indhold_top',
-          'inline_bottom' => 0,
-          'inline_top' => 0,
-          'nyhed_forside' => 0,
         ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
@@ -887,6 +883,7 @@ function rebild_calendar_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
+        'display_all_day' => 0,
         'increment' => 15,
         'input_format' => 'd/m/Y - H:i:s',
         'input_format_custom' => '',

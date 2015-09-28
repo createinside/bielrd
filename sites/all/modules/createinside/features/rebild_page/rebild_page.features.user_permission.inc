@@ -521,7 +521,7 @@ function rebild_page_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
     ),
-    'module' => 'media',
+    'module' => 'media_bulk_upload',
   );
 
   // Exported permission: 'view field_agenda_view_com'.
