@@ -159,8 +159,8 @@
 												<a style="text-decoration: none;" target="_blank" href="http://rebild.dk/erhverv"><span style="color:#d9620c ;">BUSINESS </span><span style="color:#ffffff;">REBILD</span></a>
 											</td>
 											<td width="270" valign="middle" align="right" style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #ffffff; text-align: right;">
-												<a href="http://rebild.dk/nyheder" style="color: #ffffff;text-decoration: none;">Aktuelt</a> &nbsp;|&nbsp;
-												<a href="http://rebild.dk/kontakt" style="color: #ffffff;text-decoration: none;">Kontakt</a> &nbsp;|&nbsp;
+												<a href="http://rebild.dk/erhverv/nyheder" style="color: #ffffff;text-decoration: none;">Aktuelt</a> &nbsp;|&nbsp;
+												<a href="http://rebild.dk/erhverv/velkommen-til-business-rebild/kontakt-business-rebild" style="color: #ffffff;text-decoration: none;">Kontakt</a> &nbsp;|&nbsp;
 												<a href="https://www.linkedin.com/company/business-rebild" style="color: #ffffff;text-decoration: none;">LinkedIn</a>
 											</td>
 											<td width="30" height="15">&nbsp;</td>
@@ -206,7 +206,7 @@
 									<tr>
 										<td width="600" style="font-family: Arial, sans-serif; font-size: 11px; line-height: 14px; color: #282828; text-align: center;">
 											<p>
-												&Oslash;nsker du at afmelde %%emailaddress%% fra denne liste - <a shref="%%unsubscribelink%%" style="text-decoration: underline; color: #282828">klik her</a>.
+												&Oslash;nsker du at afmelde %%emailaddress%% fra denne liste - <a href="%%unsubscribelink%%" style="text-decoration: underline; color: #282828">klik her</a>.
 
 												<br>
 												<br>Copyright &copy; <?php echo date('Y') ?> Business Rebild
