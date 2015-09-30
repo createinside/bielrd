@@ -162,7 +162,6 @@ function rebild_news_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['max_length'] = '30';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['title']['element_type'] = 'h3';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'news-title';
@@ -255,7 +254,6 @@ function rebild_news_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['max_length'] = '30';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['title']['element_type'] = 'h3';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'news-title';
@@ -354,7 +352,7 @@ function rebild_news_views_default_views() {
   /* Display: Erhverv landing */
   $handler = $view->new_display('block', 'Erhverv landing', 'block_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Aktuelt';
+  $handler->display->display_options['title'] = 'Nyheder';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '3';
@@ -364,7 +362,7 @@ function rebild_news_views_default_views() {
   $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
-  $handler->display->display_options['header']['area_text_custom']['content'] = '<span class="news_view_all"><a href="/nyheder">Se alle nyheder</a></span>';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<span class="news_view_all"><a href="/erhverv/nyheder">Se alle nyheder</a></span>';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Felt: Indhold: Billede */
   $handler->display->display_options['fields']['field_main_image']['id'] = 'field_main_image';
@@ -520,7 +518,7 @@ function rebild_news_views_default_views() {
     t('Borger landing'),
     t('Nyheder - borger'),
     t('Erhverv landing'),
-    t('Aktuelt'),
+    t('<span class="news_view_all"><a href="/erhverv/nyheder">Se alle nyheder</a></span>'),
     t('Nyheder - erhverv'),
     t('Politik landing'),
     t('Nyheder - politik'),
