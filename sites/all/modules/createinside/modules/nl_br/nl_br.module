@@ -142,6 +142,17 @@ function nl_br_preview_access($node) {
 }
 
 /**
+ * Add JS to the node view page
+ *
+ * Implements hook_node_view().
+ */
+function nl_br_node_view($node, $view_mode, $langcode) {
+	if($node->type=='nl_br') {
+		drupal_add_js(drupal_get_path('module', 'nl_br').'/js/nl_br_local_tasks.js');
+	}
+}
+
+/**
  * Business Rebild Newsletter export form
  */
 function nl_br_export_form($form, &$form_state, $nl_br)
