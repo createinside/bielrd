@@ -53,6 +53,7 @@ function rebild_general_settings_strongarm() {
     'featured_article' => 'featured_article',
     'article' => 'article',
     'os2web_borger_dk_article' => 'os2web_borger_dk_article',
+    'nl_br' => 'nl_br',
     'agenda' => 'agenda',
     'consultation' => 'consultation',
     'cloned_page' => 'cloned_page',
@@ -62,6 +63,7 @@ function rebild_general_settings_strongarm() {
     'page' => 'page',
     'subscription_email' => 'subscription_email',
     'offering' => 'offering',
+    'page_extended' => 'page_extended',
     'webform' => 'webform',
     'calendar_post' => 0,
   );
