@@ -7,6 +7,35 @@
 include_once 'rebild_workflow.features.inc';
 
 /**
+ * Implements hook_workbench_moderation_states_next_alter().
+ */
+function rebild_workflow_workbench_moderation_states_next_alter(&$states, $current_state, $context) {
+
+	// Specific publishing workflow for the 'business' role
+	// Allow the users of that role to publish content under specific conditions
+	
+	// Don't apply on node edit form, becase we need to check data on the saved node
+	if(arg(0)=='node' && arg(2)=='edit') {
+		return;
+	}
+	// Check if the current user has the 'business' role.
+	if (!in_array('business', $context['account']->roles)) {
+		return;
+	}
+	// Only apply for specific content types 
+	if(!in_array($context['node']->type, array('news_article', 'calendar_post'))) {
+		return;
+	}
+	// Only apply if content belongs to business section
+	$term_business = taxonomy_get_term_by_name('erhverv', 'rebild_sections');
+	$term_business_tid = key($term_business);
+	if(isset($context['node']->field_main_section['und']) && $context['node']->field_main_section['und'][0]['tid']==$term_business_tid) {
+			// Allow publishing
+			$states['published'] = t('Published');				
+	}
+}
+
+/**
  * Implements hook_user_cancel_methods_alter().
  */
 function rebild_workflow_user_cancel_methods_alter(&$methods) {
