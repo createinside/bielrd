@@ -23,7 +23,7 @@ function rebild_workflow_workbench_moderation_states_next_alter(&$states, $curre
 		return;
 	}
 	// Only apply for specific content types 
-	if(!in_array($context['node']->type, array('news_article', 'calendar_post'))) {
+	if(!in_array($context['node']->type, array('news_article', 'calendar_post', 'featured_article'))) {
 		return;
 	}
 	// Only apply if content belongs to business section
