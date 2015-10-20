@@ -69,6 +69,26 @@ function rebild_delta_blocks_page_title($variables) {
  * Implements hook_preprocess_html
  */
 function rebild_preprocess_html(&$variables) {
+	
+	// Facebook Tracking Code (Temporary campaign)
+	$fb_paths = array(
+		'erhverv/mauris-blandit-aliquet-elit',
+		'erhverv/start-virksomhed',
+		'kalender/ivaerksaetteraften-2015',
+		'erhverv/start-virksomhed/raadgivning-hos-ivaerksaetterkonsulent',
+		'erhverv/start-virksomhed/vaeksthusprogrammer'		
+	);
+	if(in_array(drupal_get_path_alias(), $fb_paths)) {
+    drupal_add_js(path_to_theme() . '/js/fb_tracker.js', 
+    	array(
+		    'group' => JS_THEME,
+		    'preprocess' => TRUE,
+		    'scope' => 'footer',
+		    'weight' => '999',
+	    )
+    );		
+	}
+	
   // Adds Swipebox CSS + JS
   drupal_add_css('sites/all/libraries/swipebox/source/swipebox.css');
   drupal_add_js('sites/all/libraries/swipebox/source/jquery.swipebox.min.js');
