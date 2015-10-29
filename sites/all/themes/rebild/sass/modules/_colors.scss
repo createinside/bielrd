@@ -13,6 +13,8 @@ Button colors
 	Main colors
 -------------------------------------------------------------------*/
 
+$color-white: #ffffff;
+
 $color-green: #68a386;
 $color-purple: #937ea7;
 $color-yellow: #c9bd7e;
@@ -28,7 +30,7 @@ $color-green-dark: #00473e;
 // Også anvendt i backend temaet.
 $text-color: #474747;
 $text-color-header: $color-green-dark;
-$text-color-footer: #6b6b6b; 
+$text-color-footer: #6b6b6b;
 
 // Også anvendt i backend temaet.
 $link-color: #474747;
@@ -67,3 +69,13 @@ $bg-color-selfservice: $color-green;
 
 $button-bg-color: $color-yellow;
 $tab-bg-color: #FFFFFF;
+
+/*------------------------------------------------------------------
+	Social media colors
+-------------------------------------------------------------------*/
+$color-facebook: #3b5998;
+$color-twitter: #00aced;
+$color-google-plus: #dd4b39;
+$color-linkedin: #007bb6;
+$color-youtube: #bb0000;
+$color-instagram: #517fa4;
