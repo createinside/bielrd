@@ -17,8 +17,6 @@ Drupal.linkit.editorDialog.tinymce = {
     var linkitCache = Drupal.linkit.getLinkitCache(),
         editor = linkitCache.editor, element, link;
 
-    editor.selection.moveToBookmark(editor.windowManager.bookmark);
-
     // Restore the selection if the browser is IE.
     if (tinymce.isIE) {
       editor.selection.moveToBookmark(editor.windowManager.bookmark);
@@ -49,16 +47,9 @@ Drupal.linkit.editorDialog.tinymce = {
    *   The link object.
    */
   insertLink : function(data) {
-    
     var linkitCache = Drupal.linkit.getLinkitCache(),
         editor = linkitCache.editor,
         element = editor.dom.getParent(editor.selection.getNode(), 'A');
-        
-    editor.selection.moveToBookmark(editor.windowManager.bookmark);
-
-    editor.selection.moveToBookmark(editor.windowManager.bookmark);
-
-    editor.selection.moveToBookmark(editor.windowManager.bookmark);
 
     // Restore the selection if the browser is IE.
     if (tinymce.isIE) {
@@ -67,17 +58,8 @@ Drupal.linkit.editorDialog.tinymce = {
 
     // Set undo begin point.
     editor.execCommand("mceBeginUndoLevel");
-        
-    /* OBS */
-    if(data.attributes.anchor!="") {
-    	path = data.path.split("#")[0];
-	    data.attributes.href = path+"#punkt"+data.attributes.anchor;
-    }
-    else {
-	    data.attributes.href = data.path;
-		}
-		/* /OBS */
-			
+    data.attributes.href = data.path;
+
     // No link element selected, create a new anchor element.
     if (element == null) {
       // If there is no selection, lets inser a new element.
