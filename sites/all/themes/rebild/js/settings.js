@@ -24,8 +24,35 @@ $(function() {
 			$socialMedia.append('<li style="background: ' + colorRight + '" class="social-media-fill-color social-media-fill-color-right"></li>');
 
 			var $profilesTriggers = $services.find('.social-media-profiles-trigger');
+			var $profiles = $services.find('.social-media-profiles');
+			$profiles.append('<div class="triangle"></div>');
 
+			var triangleOffsetLeft;
+			var triggerWidth;
+			var triggerOffsetLeft;
+			var $thisProfiles;
+			var $thisProfilesTriangle;
+			var $thisProfilesTrigger;
+			var moveTriangle = function() {
+				$profiles.each(function() {
+					if($(this).hasClass('active')) {
+						$thisProfiles = $(this);
+						$thisProfilesTriangle = $thisProfiles.find('.triangle');
+						$thisProfilesTrigger = $thisProfiles.prev();
+
+						triggerWidth = $thisProfilesTrigger.width();
+						triggerOffsetLeft = $thisProfilesTrigger.position().left;
+						triangleOffsetLeft = triggerOffsetLeft + (triggerWidth / 2);
+						$thisProfilesTriangle.css({
+							'left': triangleOffsetLeft + 'px'
+						})
+					}
+				});
+			}
+
+			// when clicking on social media trigger
 			$profilesTriggers.click(function(event) {
+				// stop the click event from iterating through the DOM
 				event.stopPropagation();
 				if($(this).hasClass('active')) {
 					$(this).removeClass('active');
@@ -35,6 +62,7 @@ $(function() {
 					$profilesTriggers.next().removeClass('active');
 					$(this).addClass('active');
 					$(this).next().addClass('active');
+					moveTriangle();
 				}
 			});
 
@@ -42,6 +70,10 @@ $(function() {
         $profilesTriggers.removeClass('active');
 				$profilesTriggers.next().removeClass('active');
       });
+
+			$(window).resize(function() {
+				moveTriangle();
+			}).resize();
 		}
 
 	});
