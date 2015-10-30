@@ -36,7 +36,7 @@
 <li class="social-media-service social-media-service-<?php echo $socialMediaTypeMachineName; ?> <?php echo $socialMediaTypeMachineName; ?>">
   <?php
     if(count($socialMediaProfiles) == 1) {
-      echo '<a class="social-media-profile" href="'.$socialMediaProfiles[0]['url'].'">';
+      echo '<a target="_blank" class="social-media-profile" href="'.$socialMediaProfiles[0]['url'].'">';
         echo '<span class="social-media-service-icon social-media-service-icon-first-level icon-'.$socialMediaTypeMachineName.'"></span>';
         echo '<span class="social-media-service-name">'.$socialMediaType.'</span>';
       echo '</a>';
@@ -48,7 +48,7 @@
       echo '<ul class="social-media-profiles">';
       foreach($socialMediaProfiles as $socialMediaProfile) {
         echo '<li>';
-          echo '<a class="social-media-profile" href="'.$socialMediaProfile['url'].'">';
+          echo '<a target="_blank" class="social-media-profile" href="'.$socialMediaProfile['url'].'">';
             echo '<span class="social-media-service-icon icon-'.$socialMediaTypeMachineName.'"></span>';
             echo $socialMediaProfile['title'];
           echo '</a>';
