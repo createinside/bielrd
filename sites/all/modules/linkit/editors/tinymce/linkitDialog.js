@@ -58,7 +58,16 @@ Drupal.linkit.editorDialog.tinymce = {
 
     // Set undo begin point.
     editor.execCommand("mceBeginUndoLevel");
-    data.attributes.href = data.path;
+    /* HACK start */
+    // data.attributes.href = data.path;
+    if(data.attributes.anchor!="") {
+    	path = data.path.split("#")[0];
+	    data.attributes.href = path+"#punkt"+data.attributes.anchor;
+    }
+    else {
+	    data.attributes.href = data.path;
+		}
+		/* HACK end */
 
     // No link element selected, create a new anchor element.
     if (element == null) {
