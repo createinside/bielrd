@@ -1,11 +1,11 @@
-<?php 
+<?php
 /**
 * Fjerner de advancerede indstillinger ved metatags, og gør felter obligatoriske.
 **/
 
 // hook_metatag_info_alter
 function misc_modifications_metatag_info_alter(&$info) {
-	
+
 		unset($info['tags']['abstract']);
 		unset($info['tags']['keywords']);
 		unset($info['groups']['advanced']);
@@ -33,12 +33,12 @@ function misc_modifications_entity_info_alter(&$info) {
 
 	// This array holds all the entitiy machince names where meta tags should be disabled
 	$entities = array("user", "file", "taxonomy_term");
-	$content_types = array("featured_article", "self_service", "simplenews");
-	
+	$content_types = array("announcement", "featured_article", "self_service", "simplenews");
+
 	foreach($entities as $entity) {
 	  $info[$entity]['metatags'] = FALSE;
 	}
-	
+
 	foreach($content_types as $content_type) {
 		$info["node"]["bundles"][$content_type]["metatags"] = FALSE;
 	}

@@ -25,6 +25,7 @@ function rebild_announcement_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 2,
@@ -235,7 +236,11 @@ function rebild_announcement_field_default_field_instances() {
   // Exported field_instance: 'node-announcement-field_main_section'
   $field_instances['node-announcement-field_main_section'] = array(
     'bundle' => 'announcement',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'tid' => 1,
+      ),
+    ),
     'deleted' => 0,
     'description' => 'Vælg hvilken sektion indholdet hører til.',
     'display' => array(
@@ -273,7 +278,11 @@ function rebild_announcement_field_default_field_instances() {
   // Exported field_instance: 'node-announcement-field_main_tags'
   $field_instances['node-announcement-field_main_tags'] = array(
     'bundle' => 'announcement',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'tid' => 132,
+      ),
+    ),
     'deleted' => 0,
     'description' => 'Vælg et eller flere tags der er med til at beskrive indholdet.',
     'display' => array(
