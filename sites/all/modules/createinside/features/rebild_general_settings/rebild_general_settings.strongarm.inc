@@ -57,7 +57,6 @@ function rebild_general_settings_strongarm() {
     'agenda' => 'agenda',
     'consultation' => 'consultation',
     'cloned_page' => 'cloned_page',
-    'announcement' => 'announcement',
     'news_article' => 'news_article',
     'self_service' => 'self_service',
     'page' => 'page',
@@ -66,6 +65,7 @@ function rebild_general_settings_strongarm() {
     'page_extended' => 'page_extended',
     'webform' => 'webform',
     'calendar_post' => 0,
+    'announcement' => 0,
   );
   $export['clone_omitted'] = $strongarm;
 
