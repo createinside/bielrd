@@ -163,5 +163,96 @@ function rebild_page_extended_strongarm() {
   $strongarm->value = 0;
   $export['node_submitted_page_extended'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_expand_fieldset_page_extended';
+  $strongarm->value = '0';
+  $export['scheduler_expand_fieldset_page_extended'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_publish_enable_page_extended';
+  $strongarm->value = 1;
+  $export['scheduler_publish_enable_page_extended'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_publish_moderation_state_page_extended';
+  $strongarm->value = 'published';
+  $export['scheduler_publish_moderation_state_page_extended'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_publish_past_date_page_extended';
+  $strongarm->value = 'error';
+  $export['scheduler_publish_past_date_page_extended'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_publish_required_page_extended';
+  $strongarm->value = 0;
+  $export['scheduler_publish_required_page_extended'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_publish_revision_page_extended';
+  $strongarm->value = 1;
+  $export['scheduler_publish_revision_page_extended'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_publish_touch_page_extended';
+  $strongarm->value = 1;
+  $export['scheduler_publish_touch_page_extended'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_unpublish_default_time_page_extended';
+  $strongarm->value = '';
+  $export['scheduler_unpublish_default_time_page_extended'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_unpublish_enable_page_extended';
+  $strongarm->value = 1;
+  $export['scheduler_unpublish_enable_page_extended'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_unpublish_moderation_state_page_extended';
+  $strongarm->value = 'draft';
+  $export['scheduler_unpublish_moderation_state_page_extended'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_unpublish_required_page_extended';
+  $strongarm->value = 0;
+  $export['scheduler_unpublish_required_page_extended'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_unpublish_revision_page_extended';
+  $strongarm->value = 0;
+  $export['scheduler_unpublish_revision_page_extended'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_use_vertical_tabs_page_extended';
+  $strongarm->value = '1';
+  $export['scheduler_use_vertical_tabs_page_extended'] = $strongarm;
+
   return $export;
 }
