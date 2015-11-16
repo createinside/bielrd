@@ -73,6 +73,7 @@ function rebild_featured_user_default_permissions() {
     'name' => 'manipulate all queues',
     'roles' => array(
       'administrator' => 'administrator',
+      'business' => 'business',
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'nodequeue',
@@ -83,6 +84,7 @@ function rebild_featured_user_default_permissions() {
     'name' => 'manipulate queues',
     'roles' => array(
       'administrator' => 'administrator',
+      'business' => 'business',
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'nodequeue',
