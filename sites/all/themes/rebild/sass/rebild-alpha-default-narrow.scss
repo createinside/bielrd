@@ -1,8 +1,8 @@
 /* This file will hold styles that are loaded using the same media query as the narrow grid. */
 /* If you are using the default media queries provided by Omega, these styles will also
- *  apply to the normal and widescreen layouts. You may override these styles in the normal 
+ *  apply to the normal and widescreen layouts. You may override these styles in the normal
  *  and widescreen CSS files as appropriate. */
- 
+
 @import "base";
 
 /*------------------------------------------------------------------
@@ -38,6 +38,8 @@ Blocks
 	height: 113px;
 }
 .logo-img {
+  padding-bottom: 15px;
+  
 	img {
 		height: 57px;
 		opacity: 1;
@@ -51,7 +53,7 @@ Blocks
 	position: fixed;
 	top: 0;
 	width: 100%;
-	transition: top 0.25s ease-in-out, height 0.25s ease-in-out;	
+	transition: top 0.25s ease-in-out, height 0.25s ease-in-out;
 }
 #section-header.stuck {
 	position: fixed;
@@ -82,7 +84,7 @@ Blocks
 #region-menu {
 	ul.ultimenu {
 		> li {
-			padding: 0 12px;			
+			padding: 0 12px;
 		}
 		> li.last > a:after {
 			right: 15px;
@@ -129,7 +131,7 @@ Blocks
 		.block-news-articles-block {
 			height: 430px;
 			.views-row {
-				
+
 			}
 		}
 		.block-block {
@@ -149,7 +151,7 @@ Blocks
       height: 361px;
       width: 227px;
     }
-  } 
+  }
 }
 /* Focus */
 .business-theme.not-front {
@@ -203,7 +205,7 @@ Blocks
 /* Basic Page Extended */
 #region-content {
 	.node-page-extended {
-		
+
 		.field-name-field-main-paragraphs {
 			/* Navigation List */
 			.field-name-field-sec-nav-elment {
@@ -222,7 +224,7 @@ Blocks
 						.read-more {
 							padding-left: 88px;
 						}
-					}	
+					}
 				}
 			}
 		}
@@ -250,16 +252,16 @@ Blocks
 			padding-top: 215px;
 		}
 		.custom_block.dagtilbud {
-			background-image: url('../img/fremtidens_dagtilbud.png');			
+			background-image: url('../img/fremtidens_dagtilbud.png');
 			padding-top: 215px;
 		}
 		.custom_block.skolereform {
-			background-image: url('../img/skolereform.png');			
-			padding-top: 215px;			
+			background-image: url('../img/skolereform.png');
+			padding-top: 215px;
 		}
 		.custom_block.handicapservice {
-			background-image: url('../img/handicapservice.png');			
-			padding-top: 215px;			
+			background-image: url('../img/handicapservice.png');
+			padding-top: 215px;
 		}
 	}
 }
@@ -304,9 +306,9 @@ Blocks
 	.ac_results {
 		margin-top: 11px;
 		display: inherit;
-		width: 298px !important;	
-		@include box-shadow(rgba(black, 0.4) 0 0 3px);	
-	}	
+		width: 298px !important;
+		@include box-shadow(rgba(black, 0.4) 0 0 3px);
+	}
 }
 
 /* Share buttons */
