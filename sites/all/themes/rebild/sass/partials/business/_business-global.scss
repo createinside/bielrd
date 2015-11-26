@@ -204,6 +204,13 @@ $orange: #da662b;
 	Nodes
 ==========================================================================
 */
+// Hide node share (including to the top-link) on english business pages
+.business-en-theme {
+	.node-share {
+		display: none;
+	}
+}
+
 .business-theme.page-node {
 	#region-content {
 		#block-system-main {
