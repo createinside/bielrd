@@ -137,9 +137,10 @@ function rebild_menu_link(array $variables) {
   if ($element['#below']) {
     $sub_menu = drupal_render($element['#below']);
   }
-  if($element['#original_link']['menu_name']=="main-menu" && $element['#original_link']['depth']>1) {
+  if(($element['#original_link']['menu_name'] == "main-menu" || $element['#original_link']['menu_name'] == "menu-main-menu-en")
+		&& $element['#original_link']['depth']>1) {
 	  $element['#localized_options']["html"] = TRUE;
-  	$output = l('<span class=" icon-double-angle-right"></span> '.$element['#title'], $element['#href'], $element['#localized_options']);
+  	$output = l('<span class="icon-double-angle-right"></span> '.$element['#title'], $element['#href'], $element['#localized_options']);
 	}
 	else {
   	$output = l($element['#title'], $element['#href'], $element['#localized_options']);
