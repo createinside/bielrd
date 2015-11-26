@@ -1,0 +1,20 @@
+#block-br-language-switcher-language-switcher {
+  border-right: 0;
+
+  #region-title & {
+    position: absolute;
+    right: -20px;
+    top: 8px;
+  }
+
+  .content {
+
+    a {
+      display: block;
+
+      img {
+        width: 25px;
+      }
+    }
+  }
+}
