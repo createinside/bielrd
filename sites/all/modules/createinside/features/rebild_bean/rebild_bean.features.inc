@@ -47,6 +47,7 @@ function rebild_bean_image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'front_block',
   );
 
   return $styles;

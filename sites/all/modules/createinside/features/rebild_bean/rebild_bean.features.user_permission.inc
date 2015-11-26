@@ -215,6 +215,8 @@ function rebild_bean_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+      'fagredaktør' => 'fagredaktør',
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'bean',
