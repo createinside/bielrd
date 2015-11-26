@@ -4,7 +4,7 @@
 
 -------------------------------------------------------------------*/
 
-
+.business-frontpage-info,
 #region-content {
 	.content {
 		/* Text */
@@ -63,7 +63,7 @@
 		a {
 			color: $link-color;
 			text-decoration: none;
-		}	
+		}
 		a:hover {
 			text-decoration: underline;
 		}
@@ -71,7 +71,7 @@
 		ul, ol {
 			margin-bottom: 1.25em;
 			li {
-				
+
 			}
 		}
 		ul:last-child,
@@ -81,12 +81,12 @@
 		#content-main {
 			ul {
 				li {
-					list-style: disc;					
+					list-style: disc;
 				}
 			}
 			ol {
 				li {
-					list-style: decimal;					
+					list-style: decimal;
 				}
 			}
 			#region-content-sidebar {
@@ -104,7 +104,7 @@
 				}
 			}
 		}
-	}	
+	}
 }
 
 /* Contextual links */
