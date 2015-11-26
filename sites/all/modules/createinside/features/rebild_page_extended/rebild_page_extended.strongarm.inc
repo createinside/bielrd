@@ -129,6 +129,7 @@ function rebild_page_extended_strongarm() {
   $strongarm->name = 'menu_options_page_extended';
   $strongarm->value = array(
     0 => 'main-menu',
+    1 => 'menu-main-menu-en',
   );
   $export['menu_options_page_extended'] = $strongarm;
 
