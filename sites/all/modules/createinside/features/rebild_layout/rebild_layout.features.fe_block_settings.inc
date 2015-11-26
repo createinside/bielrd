@@ -49,7 +49,7 @@ bo-i-rebild',
         'region' => 'sidebar_first',
         'status' => 1,
         'theme' => 'rebild',
-        'weight' => -49,
+        'weight' => -57,
       ),
     ),
     'title' => 'Kontakt Rebild Kommune',
@@ -64,7 +64,9 @@ bo-i-rebild',
     'module' => 'block',
     'node_types' => array(),
     'pages' => 'erhverv
-erhverv/*',
+erhverv/*
+business
+business/*',
     'roles' => array(),
     'themes' => array(
       'rebild' => array(
@@ -86,7 +88,9 @@ erhverv/*',
     'module' => 'block',
     'node_types' => array(),
     'pages' => 'erhverv
-erhverv/*',
+erhverv/*
+business
+business/*',
     'roles' => array(),
     'themes' => array(
       'rebild' => array(
@@ -108,7 +112,9 @@ erhverv/*',
     'module' => 'block',
     'node_types' => array(),
     'pages' => 'erhverv
-erhverv/*',
+erhverv/*
+business
+business/*',
     'roles' => array(),
     'themes' => array(
       'rebild' => array(
@@ -136,7 +142,7 @@ erhverv/*',
         'region' => 'content',
         'status' => 1,
         'theme' => 'rebild',
-        'weight' => -72,
+        'weight' => -82,
       ),
     ),
     'title' => '<none>',

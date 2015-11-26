@@ -317,6 +317,13 @@ function rebild_layout_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Læs mere';
+
+  /* Display: Block (EN) */
+  $handler = $view->new_display('block', 'Block (EN)', 'block_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Læs mere';
   $translatables['content_sidebar_relevant_content'] = array(
     t('Master'),
     t('Læs mere'),
@@ -330,6 +337,7 @@ function rebild_layout_views_default_views() {
 <div>[field_main_links_internal]</div>'),
     t('Alle'),
     t('Block'),
+    t('Block (EN)'),
   );
   $export['content_sidebar_relevant_content'] = $view;
 

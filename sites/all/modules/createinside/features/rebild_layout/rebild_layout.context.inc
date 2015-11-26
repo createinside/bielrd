@@ -26,6 +26,12 @@ function rebild_layout_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'br_language_switcher-language_switcher' => array(
+          'module' => 'br_language_switcher',
+          'delta' => 'language_switcher',
+          'region' => 'title',
+          'weight' => '-10',
+        ),
         'menu_block-16' => array(
           'module' => 'menu_block',
           'delta' => '16',
@@ -89,7 +95,7 @@ function rebild_layout_context_default_contexts() {
       'class' => 'business-theme',
     ),
   );
-  $context->condition_mode = 0;
+  $context->condition_mode = 1;
 
   // Translatables
   // Included for use with string extractors like potx.
