@@ -67,6 +67,13 @@ function rebild_bean_user_default_permissions() {
     'module' => 'bean',
   );
 
+  // Exported permission: 'create any contact bean'.
+  $permissions['create any contact bean'] = array(
+    'name' => 'create any contact bean',
+    'roles' => array(),
+    'module' => 'bean',
+  );
+
   // Exported permission: 'create any forsideblokke bean'.
   $permissions['create any forsideblokke bean'] = array(
     'name' => 'create any forsideblokke bean',
@@ -107,6 +114,15 @@ function rebild_bean_user_default_permissions() {
     'module' => 'bean',
   );
 
+  // Exported permission: 'delete any contact bean'.
+  $permissions['delete any contact bean'] = array(
+    'name' => 'delete any contact bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'bean',
+  );
+
   // Exported permission: 'delete any forsideblokke bean'.
   $permissions['delete any forsideblokke bean'] = array(
     'name' => 'delete any forsideblokke bean',
@@ -142,6 +158,15 @@ function rebild_bean_user_default_permissions() {
     'name' => 'edit any blok_lav_format bean',
     'roles' => array(
       'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'edit any contact bean'.
+  $permissions['edit any contact bean'] = array(
+    'name' => 'edit any contact bean',
+    'roles' => array(
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'bean',
@@ -194,6 +219,16 @@ function rebild_bean_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'view any contact bean'.
+  $permissions['view any contact bean'] = array(
+    'name' => 'view any contact bean',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'bean',
   );
