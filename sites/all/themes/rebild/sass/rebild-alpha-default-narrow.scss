@@ -39,7 +39,11 @@ Blocks
 }
 .logo-img {
   padding-bottom: 15px;
-  
+
+	.business-en-theme & {
+		padding-top: 27px;
+	}
+
 	img {
 		height: 57px;
 		opacity: 1;
