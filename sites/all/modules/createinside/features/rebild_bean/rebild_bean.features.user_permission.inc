@@ -70,7 +70,10 @@ function rebild_bean_user_default_permissions() {
   // Exported permission: 'create any contact bean'.
   $permissions['create any contact bean'] = array(
     'name' => 'create any contact bean',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
+    ),
     'module' => 'bean',
   );
 
@@ -119,6 +122,7 @@ function rebild_bean_user_default_permissions() {
     'name' => 'delete any contact bean',
     'roles' => array(
       'administrator' => 'administrator',
+      'kommunikation' => 'kommunikation',
     ),
     'module' => 'bean',
   );
@@ -167,6 +171,7 @@ function rebild_bean_user_default_permissions() {
   $permissions['edit any contact bean'] = array(
     'name' => 'edit any contact bean',
     'roles' => array(
+      'administrator' => 'administrator',
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'bean',
