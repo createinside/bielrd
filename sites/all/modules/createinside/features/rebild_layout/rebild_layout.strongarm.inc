@@ -770,6 +770,7 @@ function rebild_layout_strongarm() {
     10 => 14,
     11 => 15,
     12 => 16,
+    13 => 17,
   );
   $export['menu_block_ids'] = $strongarm;
 

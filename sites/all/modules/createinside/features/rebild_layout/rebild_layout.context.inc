@@ -26,6 +26,12 @@ function rebild_layout_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'br_language_switcher-language_switcher' => array(
+          'module' => 'br_language_switcher',
+          'delta' => 'language_switcher',
+          'region' => 'title',
+          'weight' => '-10',
+        ),
         'menu_block-16' => array(
           'module' => 'menu_block',
           'delta' => '16',
@@ -63,6 +69,44 @@ function rebild_layout_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'business_frontpage_en';
+  $context->description = '';
+  $context->tag = 'theme';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'business' => 'business',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'br_language_switcher-language_switcher' => array(
+          'module' => 'br_language_switcher',
+          'delta' => 'language_switcher',
+          'region' => 'title',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+    'delta' => array(
+      'delta_template' => 'business_frontpage',
+    ),
+    'theme_html' => array(
+      'class' => 'business-theme business-en-theme',
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('theme');
+  $export['business_frontpage_en'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'business_subpage';
   $context->description = '';
   $context->tag = 'theme';
@@ -89,12 +133,40 @@ function rebild_layout_context_default_contexts() {
       'class' => 'business-theme',
     ),
   );
-  $context->condition_mode = 0;
+  $context->condition_mode = 1;
 
   // Translatables
   // Included for use with string extractors like potx.
   t('theme');
   $export['business_subpage'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'business_subpage_en';
+  $context->description = '';
+  $context->tag = 'theme';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'business/*' => 'business/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'delta' => array(
+      'delta_template' => 'business_primary',
+    ),
+    'theme_html' => array(
+      'class' => 'business-theme business-en-theme',
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('theme');
+  $export['business_subpage_en'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */

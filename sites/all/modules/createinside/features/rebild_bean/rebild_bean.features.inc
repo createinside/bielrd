@@ -11,6 +11,9 @@ function rebild_bean_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "bean_admin_ui" && $api == "bean") {
     return array("version" => "5");
   }
+  if ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => "1");
+  }
 }
 
 /**
@@ -47,6 +50,7 @@ function rebild_bean_image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'front_block',
   );
 
   return $styles;
