@@ -83,4 +83,4 @@ features[user_permission][] = view bean page
 features[user_permission][] = view bean revisions
 features[variable][] = field_bundle_settings_bean__contact
 features[views_view][] = frontpage_blocks
-mtime = 1448556028
+mtime = 1448610484
