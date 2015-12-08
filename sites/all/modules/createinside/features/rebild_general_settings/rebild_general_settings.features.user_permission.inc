@@ -27,6 +27,7 @@ function rebild_general_settings_user_default_permissions() {
     'name' => 'access contextual links',
     'roles' => array(
       'administrator' => 'administrator',
+      'blokadministrator' => 'blokadministrator',
       'kommunikation' => 'kommunikation',
       'konfigurator' => 'konfigurator',
     ),
