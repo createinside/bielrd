@@ -15,6 +15,7 @@ function rebild_bean_user_default_permissions() {
     'name' => 'access bean overview',
     'roles' => array(
       'administrator' => 'administrator',
+      'blokadministrator' => 'blokadministrator',
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'bean',
@@ -45,6 +46,17 @@ function rebild_bean_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'bean',
+  );
+
+  // Exported permission: 'administer blocks'.
+  $permissions['administer blocks'] = array(
+    'name' => 'administer blocks',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'blokadministrator' => 'blokadministrator',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'block',
   );
 
   // Exported permission: 'create any blok_hoej_format bean'.
@@ -172,6 +184,7 @@ function rebild_bean_user_default_permissions() {
     'name' => 'edit any contact bean',
     'roles' => array(
       'administrator' => 'administrator',
+      'blokadministrator' => 'blokadministrator',
       'kommunikation' => 'kommunikation',
     ),
     'module' => 'bean',
@@ -234,6 +247,7 @@ function rebild_bean_user_default_permissions() {
     'roles' => array(
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+      'blokadministrator' => 'blokadministrator',
     ),
     'module' => 'bean',
   );
