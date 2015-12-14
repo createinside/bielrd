@@ -1,6 +1,9 @@
 #block-br-language-switcher-language-switcher {
   border-right: 0;
 
+  // Remove to display language switcher:
+  display: none;
+
   #region-title & {
     position: absolute;
     right: -20px;
