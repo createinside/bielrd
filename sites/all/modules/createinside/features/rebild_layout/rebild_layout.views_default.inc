@@ -88,6 +88,12 @@ function rebild_layout_views_default_views() {
   $handler->display->display_options['filters']['nid']['field'] = 'nid';
   $handler->display->display_options['filters']['nid']['operator'] = '!=';
   $handler->display->display_options['filters']['nid']['value']['value'] = '543';
+  /* Filterkriterie: Indhold: Nid */
+  $handler->display->display_options['filters']['nid_1']['id'] = 'nid_1';
+  $handler->display->display_options['filters']['nid_1']['table'] = 'node';
+  $handler->display->display_options['filters']['nid_1']['field'] = 'nid';
+  $handler->display->display_options['filters']['nid_1']['operator'] = '!=';
+  $handler->display->display_options['filters']['nid_1']['value']['value'] = '4429';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
@@ -199,12 +205,18 @@ function rebild_layout_views_default_views() {
     'cloned_page' => 'cloned_page',
     'page' => 'page',
   );
-  /* Filterkriterie: Indhold: Overskrift */
-  $handler->display->display_options['filters']['title']['id'] = 'title';
-  $handler->display->display_options['filters']['title']['table'] = 'node';
-  $handler->display->display_options['filters']['title']['field'] = 'title';
-  $handler->display->display_options['filters']['title']['operator'] = 'not';
-  $handler->display->display_options['filters']['title']['value'] = '404 - siden findes ikke';
+  /* Filterkriterie: Indhold: Nid */
+  $handler->display->display_options['filters']['nid']['id'] = 'nid';
+  $handler->display->display_options['filters']['nid']['table'] = 'node';
+  $handler->display->display_options['filters']['nid']['field'] = 'nid';
+  $handler->display->display_options['filters']['nid']['operator'] = '!=';
+  $handler->display->display_options['filters']['nid']['value']['value'] = '543';
+  /* Filterkriterie: Indhold: Nid */
+  $handler->display->display_options['filters']['nid_1']['id'] = 'nid_1';
+  $handler->display->display_options['filters']['nid_1']['table'] = 'node';
+  $handler->display->display_options['filters']['nid_1']['field'] = 'nid';
+  $handler->display->display_options['filters']['nid_1']['operator'] = '!=';
+  $handler->display->display_options['filters']['nid_1']['value']['value'] = '4429';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
