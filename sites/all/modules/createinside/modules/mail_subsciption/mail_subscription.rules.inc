@@ -69,7 +69,7 @@ function mail_subscription_send($node) {
 		$json_string['to'][] = $tilmelding->field_sub_email_email;
 		$json_string['sub']['%fornavn%'][] = $tilmelding->field_sub_name_value;
 	}
-	$url = 'http://sendgrid.com/';
+	$url = 'https://api.sendgrid.com/';
 	$subuser = variable_get('mail_sendgrid_sub_username');
 	$subpass = variable_get('mail_sendgrid_sub_key');
 
