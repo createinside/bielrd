@@ -283,7 +283,7 @@ function apachesolr_search_page_settings_form($form, &$form_state, $search_page 
     '#type' => 'textfield',
     '#required' => TRUE,
     '#maxlength' => 255,
-    '#description' => 'You can use %value to place the search term in the title',
+    '#description' => t('You can use %value to put the value of % in the path into the title and %terms to put the search terms into the title. Please note if you have several active search modules, this refers to the title of the tab instead of that of the page.'),
     '#default_value' => !empty($search_page['page_title']) ? $search_page['page_title'] : '',
   );
 
@@ -474,6 +474,12 @@ function apachesolr_search_page_settings_form_validate($form, &$form_state) {
   }
   elseif (count(explode('%', $form_state['values']['search_path'])) > 2) {
     form_set_error('search_path', t('Only one % placeholder is allowed.'));
+  }
+  // Make sure we cannot get duplicate search page paths
+  foreach (apachesolr_search_load_all_search_pages() as $search_page) {
+    if ($form_state['values']['search_path'] == $search_page['search_path'] && $form_state['values']['page_id'] != $search_page['page_id']) {
+      form_set_error('search_path', t('The search path must be unique. This path is already in use by another search page.'));
+    }
   }
 }
 

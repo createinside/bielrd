@@ -185,6 +185,18 @@ function apachesolr_environment_edit_form(array $form, array &$form_state, array
     '#options' => array(APACHESOLR_READ_WRITE => t('Read and write (normal)'), APACHESOLR_READ_ONLY => t('Read only')),
     '#description' => t('<em>Read only</em> stops this site from sending updates to this search environment. Useful for development sites.'),
   );
+  $form['conf']['apachesolr_direct_commit'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Commit changes after the index process has submitted them'),
+    '#description' => t('Commits the updates to solr. Uses soft commits where possible'),
+    '#default_value' => isset($environment['conf']['apachesolr_direct_commit']) ? $environment['conf']['apachesolr_direct_commit'] : false,
+  );
+  $form['conf']['apachesolr_soft_commit'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Commit changes to memory.'),
+    '#description' => t(' Reduces the load on your disk. Also known as Soft Commits, recommended for Solr 4.'),
+    '#default_value' => isset($environment['conf']['apachesolr_soft_commit']) ? $environment['conf']['apachesolr_soft_commit'] : false,
+  );
   $form['actions'] = array(
     '#type' => 'actions',
   );
@@ -511,6 +523,13 @@ function apachesolr_settings(array $form, array &$form_state) {
     '#default_value' => variable_get('apachesolr_failure', 'apachesolr:show_error'),
   );
 
+  $form['advanced']['apachesolr_watchdog_successes'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Log successful Apache Solr Search actions'),
+    '#description' => t('Watchdog will log successful adds and indexes.'),
+    '#default_value' => variable_get('apachesolr_watchdog_successes', TRUE),
+  );
+
   return system_settings_form($form);
 }
 
@@ -758,10 +777,9 @@ function apachesolr_config_files_overview(array $environment = array()) {
     foreach ($items as $item_id => $item) {
       // Do not list directories. Always a bool
       if (isset($item->bool)) {
-        break;
+        continue;
       }
       // Get data from the files.
-      $name =  $item->attributes();
       $name = ((string)$item->attributes()) ? (string)$item->attributes() : t('No name found');
       $files[$item_id]['name'] = l($name, 'admin/reports/apachesolr/' . $env_id . '/conf/' . $name);
 
@@ -966,7 +984,7 @@ function apachesolr_index_action_form_cron_submit(array $form, array &$form_stat
     $form_state['redirect'] = 'admin/config/search/apachesolr';
   }
   apachesolr_cron($env_id);
-  drupal_set_message(t('Apachesolr cron succesfully executed'));
+  drupal_set_message(t('Apachesolr cron successfully executed'));
 }
 
 /**
@@ -1084,8 +1102,12 @@ function apachesolr_index_action_form_delete_confirm_submit(array $form, array &
   }
   // Rebuild our tracking table.
   module_load_include('inc', 'apachesolr', 'apachesolr.index');
-  apachesolr_index_delete_index($env_id);
-  drupal_set_message(t('The index has been deleted.'));
+  if (apachesolr_index_delete_index($env_id)) {
+    drupal_set_message(t('The index has been deleted.'));
+  }
+  else {
+    drupal_set_message(t('An error occured while trying to delete the index.'), 'error');
+  }
 }
 
 /**
@@ -1193,6 +1215,7 @@ function apachesolr_index_batch_index_entities($env_id, $total_limit = NULL, &$c
   if ($context['finished']) {
     $context['results']['count'] = $context['sandbox']['progress'];
     $context['results']['submitted'] = $context['sandbox']['submitted'];
+    $context['results']['env_id'] = $env_id;
   }
 }
 
@@ -1214,6 +1237,13 @@ function apachesolr_index_batch_index_finished($success, array $results, array $
     $message .= format_plural($results['submitted'], '1 document successfully sent to Solr.', '@count documents successfully sent to Solr.');
   }
   if ($success) {
+    // Directly process those documents if direct commit was enabled.
+    $direct_commit = apachesolr_environment_variable_get($results['env_id'], 'apachesolr_direct_commit', FALSE);
+    if ($direct_commit) {
+      // Get the $solr object
+      $solr = apachesolr_get_solr($results['env_id']);
+      $solr->commit();
+    }
     $type = 'status';
   }
   else {
