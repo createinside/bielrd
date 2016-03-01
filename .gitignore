@@ -12,6 +12,7 @@ sites/all/modules/devel/
 
 # Ignore single files.
 .DS_Store
+Icon?
 
 # Ignore SASS cache.
 sites/all/themes/rebild/.sass-cache/
