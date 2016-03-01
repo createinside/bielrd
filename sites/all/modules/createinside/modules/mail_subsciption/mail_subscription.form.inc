@@ -349,7 +349,7 @@ function mail_subscription_admin_send_form() {
 
 /**
  *  Send submit function - wrap node data in html and send the email with SendGrid SMTP API.
- *  http://sendgrid.com/docs/API_Reference/SMTP_API/index.html
+ *  https://api.sendgrid.com/docs/API_Reference/SMTP_API/index.html
  *	TODO: Batch send mass emails. JSON string cannot exceed 1000 subscribers.
  **/
 function mail_subscription_admin_send_form_submit($form, $form_state) {
@@ -380,7 +380,7 @@ function mail_subscription_admin_send_form_submit($form, $form_state) {
 		$json_string['to'][] = $tilmelding->field_sub_email_email;
 		$json_string['sub']['%fornavn%'][] = $tilmelding->field_sub_name_value;
 	}
-	$url = 'http://sendgrid.com/';
+	$url = 'https://api.sendgrid.com/';
 	$subuser = variable_get('mail_sendgrid_sub_username');
 	$subpass = variable_get('mail_sendgrid_sub_key');
 

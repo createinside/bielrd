@@ -5,16 +5,16 @@
  * This file is empty by default because the base theme chain (Alpha & Omega) provides
  * all the basic functionality. However, in case you wish to customize the output that Drupal
  * generates through Alpha & Omega this file is a good place to do so.
- * 
+ *
  * Alpha comes with a neat solution for keeping this file as clean as possible while the code
  * for your subtheme grows. Please read the README.txt in the /preprocess and /process subfolders
  * for more information on this topic.
  */
- 
- 
+
+
 /**
  * Respond.js
- * 
+ *
  * Making Respond.js work as intended
  */
 function rebild_css_alter(&$css) {
@@ -25,7 +25,7 @@ function rebild_css_alter(&$css) {
           $css[$key]['browsers']['IE'] = TRUE;
       }
   }
-	
+
 	// Disabl jQuery UI CSS files
   $disabled_drupal_css = array(
     // Remove jquery.ui css files.
@@ -47,9 +47,9 @@ function rebild_css_alter(&$css) {
  * Implements theme_delta_blocks_page_title().
  */
 function rebild_delta_blocks_page_title($variables) {
-	
+
 	// Change markup for the business section title
-	if(current_path()=='erhverv') {
+	if(current_path()=='erhverv' || current_path()=='business') {
 		$variables['page_title'] = '<span>Business</span> Rebild';
 	}
   if ($variables['page_title'] !== '') {
@@ -64,15 +64,35 @@ function rebild_delta_blocks_page_title($variables) {
 }
 
 /**
- * Preprocess HTML 
+ * Preprocess HTML
  *
  * Implements hook_preprocess_html
  */
 function rebild_preprocess_html(&$variables) {
+
+	// Facebook Tracking Code (Temporary campaign)
+	$fb_paths = array(
+		'erhverv/mauris-blandit-aliquet-elit',
+		'erhverv/start-virksomhed',
+		'kalender/ivaerksaetteraften-2015',
+		'erhverv/start-virksomhed/raadgivning-hos-ivaerksaetterkonsulent',
+		'erhverv/start-virksomhed/vaeksthusprogrammer'
+	);
+	if(in_array(drupal_get_path_alias(), $fb_paths)) {
+    drupal_add_js(path_to_theme() . '/js/fb_tracker.js',
+    	array(
+		    'group' => JS_THEME,
+		    'preprocess' => TRUE,
+		    'scope' => 'footer',
+		    'weight' => '999',
+	    )
+    );
+	}
+
   // Adds Swipebox CSS + JS
   drupal_add_css('sites/all/libraries/swipebox/source/swipebox.css');
   drupal_add_js('sites/all/libraries/swipebox/source/jquery.swipebox.min.js');
-  
+
   // Get a list of all the regions for this theme
   foreach (system_region_list($GLOBALS['theme']) as $region_key => $region_name) {
 
@@ -85,7 +105,7 @@ function rebild_preprocess_html(&$variables) {
     }
   }
 }
- 
+
 /**
  * Implements hook_ultimenu_link
  *
@@ -113,13 +133,14 @@ function rebild_menu_link(array $variables) {
 
  	$element = $variables['element'];
   $sub_menu = '';
-    
+
   if ($element['#below']) {
     $sub_menu = drupal_render($element['#below']);
   }
-  if($element['#original_link']['menu_name']=="main-menu" && $element['#original_link']['depth']>1) {
+  if(($element['#original_link']['menu_name'] == "main-menu" || $element['#original_link']['menu_name'] == "menu-main-menu-en")
+		&& $element['#original_link']['depth']>1) {
 	  $element['#localized_options']["html"] = TRUE;
-  	$output = l('<span class=" icon-double-angle-right"></span> '.$element['#title'], $element['#href'], $element['#localized_options']);
+  	$output = l('<span class="icon-double-angle-right"></span> '.$element['#title'], $element['#href'], $element['#localized_options']);
 	}
 	else {
   	$output = l($element['#title'], $element['#href'], $element['#localized_options']);
@@ -128,12 +149,12 @@ function rebild_menu_link(array $variables) {
 }
 
 /**
- * Breadcrumbs 
+ * Breadcrumbs
  *
  * Customizes the breadcrumbs structure
  */
 function rebild_breadcrumb($variables) {
-	
+
 	$breadcrumb = $variables['breadcrumb'];
 
   if (!empty($breadcrumb)) {
@@ -183,7 +204,7 @@ function rebild_preprocess_field(&$variables, $hook) {
   		$variables["items"][0]["#markup"] = "<iframe width='100%' height='400px' src='".$variables["items"][0]["#markup"]."'> </iframe>";
   	}
   	else {
-	  	$variables["items"][0]["#markup"] = "<a href='".$variables["items"][0]["#markup"]."'>Se kort her</a>";	
+	  	$variables["items"][0]["#markup"] = "<a href='".$variables["items"][0]["#markup"]."'>Se kort her</a>";
   	}
   }
 }
@@ -196,7 +217,7 @@ function rebild_picture($variables) {
 		// Title attribute equals value of alt attribute
 		$variables["title"] = $variables['field_file_image_alt_text']['und'][0]['value'];
 	}
-	
+
 	// Make sure that width and height are proper values
   // If they exists we'll output them
   // @see http://www.w3.org/community/respimg/2012/06/18/florians-compromise/
@@ -293,14 +314,14 @@ function rebild_preprocess_search_results(&$variables) {
 }
 
 function rebild_page_alter(&$page) {
-	
+
 	$node = menu_get_object();
 	// Breadcrumb: Agenda nodes
 	if(!empty($node)) {
 		if($node->type=="agenda") {
-		
+
 			$committee = field_get_items('node', $node, 'field_agenda_committee');
-							
+
 			$breadcrumb = drupal_get_breadcrumb();
 			$breadcrumb[] = l('Politik', 'politik');
 			$breadcrumb[] = l('Dagsordener og referater', 'politik/dagsordener-og-referater');
@@ -314,11 +335,11 @@ function rebild_page_alter(&$page) {
 			drupal_set_breadcrumb($breadcrumb);
 		}
 	}
-	
+
 }
 
-function rebild_date_all_day_label() { 
-	return ''; 
+function rebild_date_all_day_label() {
+	return '';
 }
 
 /**

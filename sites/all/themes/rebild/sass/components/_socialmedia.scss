@@ -1,0 +1,229 @@
+#zone-pre-footer-wrapper {
+  //overflow-x: hidden;
+}
+
+// the list containing all the services
+ul.social-media {
+  @extend %clearfix;
+  @extend %unselectable;
+
+  display: block;
+  font-size: 13px;
+  margin-left: -10px;
+  margin-right: -10px;
+  position: relative;
+  text-align: center;
+
+  @include bp(narrow) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+  .social-media-fill-color {
+    display: none;
+    height: 55px;
+    position: absolute;
+    z-index: 1;
+    width: 1000px;
+
+    &.social-media-fill-color-left {
+      left: 1px;
+      margin-left: -1000px;
+    }
+
+    &.social-media-fill-color-right {
+      right: 1px;
+      margin-right: -1000px;
+    }
+
+    @include bp(narrow) {
+      display: block;
+    }
+  }
+
+  // each social media service
+  li.social-media-service {
+    display: block;
+    float: left;
+    z-index: 2;
+
+    @include bp(normal) {
+      position: relative;
+    }
+
+    span.social-media-profiles-trigger,
+    & > a {
+      display: block;
+      color: $color-white;
+      line-height: 55px;
+      text-transform: uppercase;
+    }
+
+    a {
+      color: $color-white;
+      display: block;
+      line-height: 55px;
+      text-decoration: none;
+    }
+  }
+
+
+    .social-media-profiles-trigger {
+      cursor: pointer;
+    }
+
+    .social-media-profiles-trigger,
+    .social-media-profile {
+      transition: background 0.2s ease;
+
+      .facebook & {
+        background: $color-facebook;
+        &.active,
+        &:hover {
+          background: darken($color-facebook, 10%);
+        }
+      }
+      .twitter & {
+        background: $color-twitter;
+        &.active,
+        &:hover {
+          background: darken($color-twitter, 10%);
+        }
+      }
+      .youtube & {
+        background: $color-youtube;
+        &.active,
+        &:hover {
+          background: darken($color-youtube, 10%);
+        }
+      }
+      .linkedin & {
+        background: $color-linkedin;
+        &.active,
+        &:hover {
+          background: darken($color-linkedin, 10%);
+        }
+      }
+      .google-plus & {
+        background: $color-google-plus;
+        &.active,
+        &:hover {
+          background: darken($color-google-plus, 10%);
+        }
+      }
+      .instagram & {
+        background: $color-instagram;
+        &.active,
+        &:hover {
+          background: darken($color-instagram, 10%);
+        }
+      }
+    }
+
+      .social-media-service-icon {
+        position: relative;
+        font-size: 1.2em;
+        top: 0.2em;
+
+        .social-media-profiles & {
+          margin-right: 5px;
+        }
+
+        &.icon-facebook {
+          font-size: 1.6em;
+        }
+
+        &.icon-youtube {
+          font-size: 1.6em;
+        }
+
+        &.social-media-service-icon-first-level {
+          font-size: 1.6em;
+          top: 0.25em;
+
+          &.icon-facebook {
+            font-size: 2em;
+          }
+
+          &.icon-youtube {
+            font-size: 2em;
+          }
+        }
+
+
+      }
+
+      .social-media-service-name {
+        display: none;
+
+        @include bp(normal) {
+          display: inline;
+          padding-left: 10px;
+        }
+      }
+
+    ul.social-media-profiles {
+      bottom: 60px;
+      left: 10px;
+      right: 10px;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      transition: opacity 0.5s ease;
+
+      @include bp(narrow) {
+        left: 0;
+        right: 0;
+      }
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      // &:after {
+      .triangle {
+        border-style: solid;
+        border-width: 3px 5px 0 5px;
+        border-color: #007bff transparent transparent transparent;
+        bottom: -3px;
+        content: "";
+        display: block;
+        height: 0;
+        left: 50%;
+        margin-left: -15px;
+        position: absolute;
+        width: 0;
+
+        @include bp(narrow) {
+          margin-left: -5px;
+        }
+
+        .facebook & {
+          border-top-color: $color-facebook;
+        }
+        .twitter & {
+          border-top-color: $color-twitter;
+        }
+        .youtube & {
+          border-top-color: $color-youtube;
+        }
+        .linkedin & {
+          border-top-color: $color-linkedin;
+        }
+        .google-plus & {
+          border-top-color: $color-google-plus;
+        }
+        .instagram & {
+          border-top-color: $color-instagram;
+        }
+      }
+
+
+
+      li {
+        display: block;
+        margin-top: 1px;
+      }
+    }

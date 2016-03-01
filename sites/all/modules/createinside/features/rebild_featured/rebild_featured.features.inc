@@ -81,6 +81,29 @@ function rebild_featured_fe_nodequeue_export_fields() {
     'count' => 0,
   );
 
+  // Exported nodequeues: business_queue_en
+  $nodequeues['business_queue_en'] = array(
+    'name' => 'business_queue_en',
+    'title' => 'Erhverv (EN)',
+    'subqueue_title' => '',
+    'size' => 0,
+    'link' => '',
+    'link_remove' => '',
+    'owner' => 'nodequeue',
+    'show_in_ui' => 1,
+    'show_in_tab' => 1,
+    'show_in_links' => 0,
+    'reference' => 0,
+    'reverse' => 0,
+    'i18n' => 0,
+    'subqueues' => 1,
+    'types' => array(
+      0 => 'featured_article',
+    ),
+    'roles' => array(),
+    'count' => 0,
+  );
+
   // Exported nodequeues: erhverv_queue
   $nodequeues['erhverv_queue'] = array(
     'name' => 'erhverv_queue',

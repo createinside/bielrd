@@ -53,17 +53,19 @@ function rebild_general_settings_strongarm() {
     'featured_article' => 'featured_article',
     'article' => 'article',
     'os2web_borger_dk_article' => 'os2web_borger_dk_article',
+    'nl_br' => 'nl_br',
     'agenda' => 'agenda',
     'consultation' => 'consultation',
     'cloned_page' => 'cloned_page',
-    'announcement' => 'announcement',
     'news_article' => 'news_article',
     'self_service' => 'self_service',
     'page' => 'page',
     'subscription_email' => 'subscription_email',
     'offering' => 'offering',
+    'page_extended' => 'page_extended',
     'webform' => 'webform',
     'calendar_post' => 0,
+    'announcement' => 0,
   );
   $export['clone_omitted'] = $strongarm;
 
@@ -78,7 +80,7 @@ function rebild_general_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'clone_reset_announcement';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['clone_reset_announcement'] = $strongarm;
 
   $strongarm = new stdClass();

@@ -427,7 +427,8 @@
 }
 
 /* News Overview */
-.view-id-news_articles.view-display-id-page_1 {
+.view-id-news_articles.view-display-id-page_1,
+.view-id-news_articles.view-display-id-business {
   .views-row {
     padding-bottom: $spacing-std;
     margin-bottom: $spacing-std;
@@ -438,7 +439,7 @@
       margin-bottom: $spacing-std/1.5;
       font-size: 1.08em;
       a {
-        color: $text-color;
+	      line-height: $line-height-std;
       }
     }
     .news-image {
@@ -448,9 +449,6 @@
     }
     .news-date {
       margin-bottom: $spacing-std/2;
-    }
-    .news-summary {
-      
     }
   }
 }

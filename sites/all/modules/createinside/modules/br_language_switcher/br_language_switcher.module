@@ -1,0 +1,69 @@
+<?php
+
+/**
+ * Defines block for Business Rebild language switcher.
+ *
+ * Implements hook_block_info().
+ */
+function br_language_switcher_block_info() {
+  $blocks = array();
+
+  $blocks['language_switcher'] = array(
+    'info' => t('Business Rebild language switcher'),
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function br_language_switcher_block_view($delta = '') {
+  switch ($delta) {
+    case 'language_switcher':
+      $block['subject'] = t('');
+      $block['content'] = _language_switcher_contents();
+      break;
+  }
+  return $block;
+}
+
+/**
+ * Custom function to assemble rederable array for block content
+ *
+ * @return
+ *   returns a renderable array of block content.
+ *
+ * @see br_language_switcher_block_view()
+ */
+function _language_switcher_contents() {
+  $block = array();
+
+  $variables = array();
+  $contexts = context_active_contexts();
+
+  if(isset($contexts['business_subpage_en']) || isset($contexts['business_frontpage_en'])) {
+    $variables['language'] = 'en';
+  } else if(isset($contexts['business_subpage']) || isset($contexts['business_frontpage'])) {
+    $variables['language'] = 'da';
+  }
+
+  $block['language_switcher'] = array(
+    '#type' => 'markup',
+    '#markup' => theme('br_language_switcher', $variables),
+    '#suffix' => '',
+  );
+
+  return $block;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function br_language_switcher_theme($existing, $type, $theme, $path) {
+  return array(
+    'br_language_switcher' => array(
+      'template' => 'templates/br_language_switcher',
+    ),
+  );
+}

@@ -5,3 +5,17 @@
  */
 
 include_once 'rebild_search.features.inc';
+
+/**
+ * Implements hook_apachesolr_exclude().
+ */
+function rebild_search_apachesolr_exclude($entity_id, $entity_type, $row, $env_id) {
+  
+  // Exclude specific nodes from index
+  $nid_exc = array(543, 4429);
+  
+  if ($entity_type == 'node' && in_array($entity_id, $nid_exc)) {
+    return TRUE;
+  }
+  return FALSE;
+}
