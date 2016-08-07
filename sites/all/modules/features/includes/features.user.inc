@@ -50,12 +50,12 @@ function user_permission_features_export_options() {
   $modules = array();
   $module_info = system_get_info('module');
   foreach (module_implements('permission') as $module) {
-    $modules[$module_info[$module]['name']] = $module;
+    $modules[$module] = $module_info[$module]['name'];
   }
   ksort($modules);
 
   $options = array();
-  foreach ($modules as $display_name => $module) {
+  foreach ($modules as $module => $display_name) {
     if ($permissions = module_invoke($module, 'permission')) {
       foreach ($permissions as $perm => $perm_item) {
         // Export vocabulary permissions using the machine name, instead of
@@ -138,6 +138,7 @@ function user_permission_features_rebuild($module) {
     $permissions_by_role = _user_features_get_permissions(FALSE);
     foreach ($defaults as $permission) {
       $perm = $permission['name'];
+      _user_features_change_term_permission($perm, 'machine_name');
       if (empty($modules[$perm])) {
         $args = array('!name' => $perm, '!module' => $module,);
         $msg = t('Warning in features rebuild of !module. No module defines permission "!name".', $args);
@@ -146,7 +147,6 @@ function user_permission_features_rebuild($module) {
       }
       // Export vocabulary permissions using the machine name, instead of
       // vocabulary id.
-      _user_features_change_term_permission($perm, 'machine_name');
       foreach ($roles as $role) {
         if (in_array($role, $permission['roles'])) {
           $permissions_by_role[$role][$perm] = TRUE;
