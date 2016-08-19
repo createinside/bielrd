@@ -30,23 +30,34 @@
 
 <div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 	
+  <?php
+  if (isset($content['field_bean_link'][0]['#element']['url']) || isset($content['field_bean_intern_link'])) {
+    print '<a href="';
+    if (isset($content['field_bean_link'][0]['#element']['url'])) { 
+      print $content['field_bean_link'][0]['#element']['url']; 
+    } 
+    else if (isset($content['field_bean_intern_link'])) { 
+      print '/node/' . $content['field_bean_intern_link']['#items'][0]['target_id']; 
+    }
+    print '">';  
+  }
+  ?>
   <div class="content"<?php print $content_attributes; ?>>
-    <?php   if (isset($content['field_bean_link'][0]['#element']['url']) || isset($content['field_bean_intern_link'])) {?>
-    	<a href="<?php if (isset($content['field_bean_link'][0]['#element']['url'])) { print $content['field_bean_link'][0]['#element']['url']; } else if (isset($content['field_bean_intern_link'])) { print '/node/' . $content['field_bean_intern_link']['#items'][0]['target_id']; }   	 ?>">
-	  <?php  print render($content['field_billede']); ?>
-      </a> 
-    <?php }
-     else {
-	     print render($content['field_billede']);
-    } ?>
-    	<?php if(isset($content['field_image'])) { print render($content['field_image']); } ?>
-      
-      <div id="bean-content"><h2><?php if (isset($content['field_bean_link'][0]['#element']['url']) || isset($content['field_bean_intern_link'])) {?><a href="<?php if (isset($content['field_bean_link'][0]['#element']['url'])) { print $content['field_bean_link'][0]['#element']['url']; } else if (isset($content['field_bean_intern_link'])) { print '/node/' . $content['field_bean_intern_link']['#items'][0]['target_id']; }   	 ?>"> <?php print $title; ?> </a><?php } else {print $title; } ?></h2>
-           
+    <?php 
+      print render($content['field_image']);
+    ?>      
+    <?php if(isset($content['field_bean_tekstlinie']) || $bean->title != '') { ?>
+    <div id="bean-content">
+      <?php if($bean->title != '') print '<strong>' . $title . '</strong>'; ?>         
       <?php if(isset($content['field_bean_tekstlinie'])) { print render($content['field_bean_tekstlinie']); } 
-      print render($content['field_bean_short_text']); 
-    ?>
-      </div>
+        print render($content['field_bean_short_text']); 
+      ?>
+    </div>
+    <?php } ?>    
   </div>
-
+  <?php 
+  if (isset($content['field_bean_link'][0]['#element']['url']) || isset($content['field_bean_intern_link'])) { 
+  ?>
+  </a>
+  <?php } ?>
 </div>
