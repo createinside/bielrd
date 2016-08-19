@@ -177,7 +177,7 @@ function rebild_bean_field_default_field_instances() {
         'browser_plugins' => array(
           'media_browser_plus_customized--media_browser_my_files' => 0,
           'media_browser_plus_customized--media_browser_thumbnails' => 'media_browser_plus_customized--media_browser_thumbnails',
-          'upload' => 0,
+          'upload' => 'upload',
         ),
         'manualcrop_crop_info' => 1,
         'manualcrop_default_crop_area' => 1,
@@ -344,7 +344,7 @@ function rebild_bean_field_default_field_instances() {
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '720x100',
+      'min_resolution' => '',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -364,7 +364,7 @@ function rebild_bean_field_default_field_instances() {
         'browser_plugins' => array(
           'media_browser_plus_customized--media_browser_my_files' => 0,
           'media_browser_plus_customized--media_browser_thumbnails' => 'media_browser_plus_customized--media_browser_thumbnails',
-          'upload' => 0,
+          'upload' => 'upload',
         ),
         'manualcrop_crop_info' => 1,
         'manualcrop_default_crop_area' => 1,
