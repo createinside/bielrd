@@ -46,7 +46,7 @@ function misc_modifications_form_alter(&$form, &$form_state, $form_id) {
 	/* Ændringer ved bean oprettelse/edit */
 	if ($form_id == 'bean_form') {
 		$form['label']['#description'] = "Etiketten vises kun i den administrative brugergrænseflade.";
-		$form['title']['#required'] = TRUE;
+		$form['title']['#required'] = FALSE;
 		$form['title']['#description'] = 'Blokkens overskrift.';
 		unset($form['redirect']);
 		$form['field_billede']['#weight'] = 2;

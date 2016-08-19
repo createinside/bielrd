@@ -707,7 +707,7 @@
 	}
 }
 
-/* Bean - Høj format block */
+/* Bean - Høj/Lav format block */
 .html {
 	#page {
 		.bean-blok-hoej-format, .bean-blok-lav-format {
@@ -715,6 +715,11 @@
 			color: $text-color;
 			background-repeat: no-repeat;
 			background-position: center top;
+			position: relative;
+			overflow: hidden;
+			.field-item {
+  			overflow: hidden;
+			}
 			img {
 				border-top-left-radius: 3px;
 				border-top-right-radius: 3px;
@@ -739,14 +744,39 @@
 					}
 				}
 			}
-		}
-		.bean-blok-lav-format {
-			img {
-				float: right;
-				border-radius: 3px;
+			a {
+  			color: $text-color;
+  			text-decoration: none;
+  			display: block;
+  			overflow: hidden;
+  			
+  			&:hover {
+    			text-decoration: none;
+  			}
 			}
-			#bean-content {
-				position: absolute;
+		}
+		.bean-blok-hoej-format {
+      img {
+        float: left;
+      }  		
+    }
+		.bean-blok-lav-format {
+  		#bean-content {
+    		position: absolute;
+    		top: 0;
+    		left: 0;
+    		strong {
+    		  font-size: 1.3em;
+    		  line-height: $line-height-std;
+    		  margin-bottom: 5px;
+    		  display: block;
+    		}
+  		}
+			.field-name-field-image {
+        float: right;
+			}
+			.field-name-field-bean-tekstlinie {
+  			font-size: 1.3em;
 			}
 		}
 	}
