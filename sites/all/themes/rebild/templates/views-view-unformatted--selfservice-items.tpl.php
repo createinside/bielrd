@@ -6,8 +6,6 @@
  *
  * @ingroup views_templates
  */
- dpm($title);
-
 ?>
 <?php if (!empty($title)): ?>
   <h3><?php print $title; ?></h3>
