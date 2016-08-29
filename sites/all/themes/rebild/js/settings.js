@@ -161,7 +161,7 @@ $(function() {
     active: false
 	});
 	// Selfservice accordion - Alphabetical list level 1 + Embedded list level 1
-	$(".view-selfservice-items.view-display-id-alfabetisk, .view-selfservice-items.view-display-id-embedded, .view-selfservice-items.view-display-id-embedded_ext").accordion({
+	$(".view-selfservice-items.view-display-id-alfabetisk, .view-selfservice-items.view-display-id-embedded, .view-selfservice-items.view-display-id-embedded_ext, .view-selfservice-items-paragraphs").accordion({
     header: "h3",
     autoHeight: false,
     collapsible: true,

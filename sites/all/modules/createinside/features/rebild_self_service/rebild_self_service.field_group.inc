@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function rebild_self_service_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -36,7 +36,7 @@ function rebild_self_service_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_advanced|node|self_service|form'] = $field_group;
+  $field_groups['group_advanced|node|self_service|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -66,7 +66,12 @@ kommunikationsafdelingen.',
       'formatter' => 'open',
     ),
   );
-  $export['group_categories|node|self_service|form'] = $field_group;
+  $field_groups['group_categories|node|self_service|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Avancerede indstillinger');
+  t('Kategorisering');
+
+  return $field_groups;
 }
