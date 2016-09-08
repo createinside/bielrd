@@ -53,5 +53,29 @@ function rebild_bean_image_default_styles() {
     'label' => 'front_block',
   );
 
+  // Exported image style: sidebar.
+  $styles['sidebar'] = array(
+    'name' => 'sidebar',
+    'label' => 'sidebar',
+    'effects' => array(
+      11 => array(
+        'label' => 'Skalér',
+        'help' => 'Skalering bevarer billedets højde-bredde-forhold. Hvis kun den ene dimension angives vil den anden blive beregnet.',
+        'effect callback' => 'image_scale_effect',
+        'dimensions callback' => 'image_scale_dimensions',
+        'form callback' => 'image_scale_form',
+        'summary theme' => 'image_scale_summary',
+        'module' => 'image',
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 720,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   return $styles;
 }

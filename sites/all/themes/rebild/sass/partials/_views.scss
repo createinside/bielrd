@@ -516,7 +516,8 @@
 	.view-selfservice-items.view-display-id-alfabetisk,
 	.view-selfservice-items.view-display-id-emner,
 	.view-selfservice-items.view-display-id-embedded,
-	.view-selfservice-items.view-display-id-embedded_ext {
+	.view-selfservice-items.view-display-id-embedded_ext,
+	.view-selfservice-items-paragraphs.view-display-id-entity_view_1  {
 		.view-grouping-content,
 		.view-content {
 			padding: 0;
@@ -615,7 +616,8 @@
 /* Embedded accordion */
 #region-content {
 	.view-selfservice-items.view-display-id-embedded,
-	.view-selfservice-items.view-display-id-embedded_ext {
+	.view-selfservice-items.view-display-id-embedded_ext,
+	.view-selfservice-items-paragraphs.view-display-id-entity_view_1 {
 		margin: 30px 0 0 0;
 		h2.title {
 			font-size: 1.08em;
