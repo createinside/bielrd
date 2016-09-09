@@ -69,6 +69,9 @@ function rebild_delta_blocks_page_title($variables) {
  * Implements hook_preprocess_html
  */
 function rebild_preprocess_html(&$variables) {
+  
+  // Add jQuery UI
+  drupal_add_library('system', 'ui');
 
 	// Facebook Tracking Code (Temporary campaign)
 	$fb_paths = array(
