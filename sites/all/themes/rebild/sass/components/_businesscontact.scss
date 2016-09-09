@@ -6,7 +6,7 @@
     float: left;
     width: 40%;
     max-width: 145px;
-    margin: 2px 12px 10px 0;
+    margin: 2px 12px 0 0;
 
     @include bp(narrow) {
       float: none;
@@ -17,11 +17,12 @@
     @include bp(normal) {
       float: left;
       width: 40%;
-      margin: 2px 12px 20px 0;
+      margin: 2px 12px 0 0;
     }
   }
 }
 
   .field-name-field-contact-employees > .field-items > .field-item {
     padding-bottom: 20px;
+    @include clearfix();
   }
