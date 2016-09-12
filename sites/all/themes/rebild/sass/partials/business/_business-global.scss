@@ -292,7 +292,8 @@ $orange: #da662b;
 				}
 			}
 			/* Selfservice */
-			.view-selfservice-items {
+			.view-selfservice-items,
+			.view-selfservice-items-paragraphs {
 				.ui-accordion-header {
 					background: $color-green;
 				}

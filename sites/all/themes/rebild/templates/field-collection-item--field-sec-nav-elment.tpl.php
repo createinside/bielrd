@@ -34,13 +34,22 @@
 	    hide($content['field_sec_nav_title']);
 	    hide($content['field_sec_nav_link']);
 	    $link_elem = $content['field_sec_nav_link'][0]['#element'];
+	    
+	    // Change link label on english business pages
+	    $current_path = request_path();
+      if(drupal_match_path($current_path, 'business/*')) {
+        $link_title = 'Read more';
+      }
+      else {
+        $link_title = $link_elem['title'];
+      }
 	  ?>
-	  <a href="<?php print $link_elem['url']; ?>" title="<?php print $link_elem['title']; ?>"<?php if(isset($link_elem['attributes']['target'])) print 'target="'.$link_elem['attributes']['target'].'"'; ?> class="nav-link">
+	  <a href="<?php print $link_elem['url']; ?>" title="<?php print $link_title; ?>"<?php if(isset($link_elem['attributes']['target'])) print 'target="'.$link_elem['attributes']['target'].'"'; ?> class="nav-link">
 		  <h3><?php print $content['field_sec_nav_title'][0]['#markup']; ?></h3>
 		  <?php
 	      print render($content);
 	    ?>
-	    <span class="read-more"><?php print $link_elem['title']; ?></span>
+	    <span class="read-more"><?php print $link_title; ?></span>
 	  </a>
   </div>
 </div>

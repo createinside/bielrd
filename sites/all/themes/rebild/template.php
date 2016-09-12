@@ -198,6 +198,7 @@ function rebild_preprocess_node(&$variables) {
  * Implements hook_preprocess_field
  */
 function rebild_preprocess_field(&$variables, $hook) {
+  
 	$element = $variables['element'];
 
 	// GIS KORT
