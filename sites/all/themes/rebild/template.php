@@ -72,6 +72,7 @@ function rebild_preprocess_html(&$variables) {
   
   // Add jQuery UI
   drupal_add_library('system', 'ui');
+  drupal_add_library('system', 'ui.accordion');
 
 	// Facebook Tracking Code (Temporary campaign)
 	$fb_paths = array(
