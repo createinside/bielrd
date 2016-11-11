@@ -18,6 +18,7 @@
 
 #region-sidebar-first{
     .block-views{
+        position: relative;
         .view-rebildporten-content-list{
             background-color: $bg-news-block;
             @include box-shadow(rgba(black, 0.15) 0 0 3px);
