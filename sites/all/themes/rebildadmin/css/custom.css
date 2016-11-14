@@ -38,213 +38,248 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
 /* line 49, ../../rebild/sass/partials/_fonts.scss */
-.icon-file-pdf:before {
-  content: "\e602";
+.icon-instagram:before {
+  content: "\e900";
 }
 
-/* line 53, ../../rebild/sass/partials/_fonts.scss */
-.icon-pencil:before {
-  content: "\e905";
+/* line 52, ../../rebild/sass/partials/_fonts.scss */
+.icon-youtube:before {
+  content: "\e901";
 }
 
-/* line 57, ../../rebild/sass/partials/_fonts.scss */
-.icon-folder:before {
-  content: "\e92f";
+/* line 55, ../../rebild/sass/partials/_fonts.scss */
+.icon-google-plus:before {
+  content: "\e902";
+}
+
+/* line 58, ../../rebild/sass/partials/_fonts.scss */
+.icon-facebook2:before {
+  content: "\e903";
 }
 
 /* line 61, ../../rebild/sass/partials/_fonts.scss */
-.icon-folder-open:before {
-  content: "\e930";
+.icon-linkedin:before {
+  content: "\e904";
 }
 
-/* line 65, ../../rebild/sass/partials/_fonts.scss */
-.icon-folder-plus:before {
-  content: "\e931";
+/* line 64, ../../rebild/sass/partials/_fonts.scss */
+.icon-twitter:before {
+  content: "\e906";
 }
 
-/* line 69, ../../rebild/sass/partials/_fonts.scss */
-.icon-bin:before {
-  content: "\e9ac";
-}
-
-/* line 73, ../../rebild/sass/partials/_fonts.scss */
-.icon-mega-phone:before {
-  content: "\e601";
-}
-
-/* line 77, ../../rebild/sass/partials/_fonts.scss */
+/* line 67, ../../rebild/sass/partials/_fonts.scss */
 .icon-mobil_logo:before {
   content: "\e007";
 }
 
-/* line 81, ../../rebild/sass/partials/_fonts.scss */
+/* line 70, ../../rebild/sass/partials/_fonts.scss */
 .icon-printer:before {
   content: "\e011";
 }
 
-/* line 85, ../../rebild/sass/partials/_fonts.scss */
+/* line 73, ../../rebild/sass/partials/_fonts.scss */
 .icon-volume:before {
   content: "\e012";
 }
 
-/* line 89, ../../rebild/sass/partials/_fonts.scss */
+/* line 76, ../../rebild/sass/partials/_fonts.scss */
 .icon-money:before {
   content: "\f0d6";
 }
 
-/* line 93, ../../rebild/sass/partials/_fonts.scss */
+/* line 79, ../../rebild/sass/partials/_fonts.scss */
 .icon-search:before {
   content: "\e013";
 }
 
-/* line 97, ../../rebild/sass/partials/_fonts.scss */
+/* line 82, ../../rebild/sass/partials/_fonts.scss */
 .icon-plus2:before {
   content: "\e00f";
 }
 
-/* line 101, ../../rebild/sass/partials/_fonts.scss */
+/* line 85, ../../rebild/sass/partials/_fonts.scss */
 .icon-minus2:before {
   content: "\e010";
 }
 
-/* line 105, ../../rebild/sass/partials/_fonts.scss */
+/* line 88, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-down2:before {
   content: "\e003";
 }
 
-/* line 109, ../../rebild/sass/partials/_fonts.scss */
+/* line 91, ../../rebild/sass/partials/_fonts.scss */
 .icon-bottom_logo:before {
   content: "\e009";
 }
 
-/* line 113, ../../rebild/sass/partials/_fonts.scss */
+/* line 94, ../../rebild/sass/partials/_fonts.scss */
 .icon-phone:before {
   content: "\f095";
 }
 
-/* line 117, ../../rebild/sass/partials/_fonts.scss */
+/* line 97, ../../rebild/sass/partials/_fonts.scss */
 .icon-envelope:before {
   content: "\f003";
 }
 
-/* line 121, ../../rebild/sass/partials/_fonts.scss */
+/* line 100, ../../rebild/sass/partials/_fonts.scss */
 .icon-home:before {
   content: "\e005";
 }
 
-/* line 125, ../../rebild/sass/partials/_fonts.scss */
+/* line 103, ../../rebild/sass/partials/_fonts.scss */
 .icon-double-angle-right:before {
   content: "\f101";
 }
 
-/* line 129, ../../rebild/sass/partials/_fonts.scss */
+/* line 106, ../../rebild/sass/partials/_fonts.scss */
 .icon-double-angle-left:before {
   content: "\f100";
 }
 
-/* line 133, ../../rebild/sass/partials/_fonts.scss */
+/* line 109, ../../rebild/sass/partials/_fonts.scss */
 .icon-double-angle-down:before {
   content: "\f103";
 }
 
-/* line 137, ../../rebild/sass/partials/_fonts.scss */
+/* line 112, ../../rebild/sass/partials/_fonts.scss */
 .icon-double-angle-up:before {
   content: "\f102";
 }
 
-/* line 141, ../../rebild/sass/partials/_fonts.scss */
+/* line 115, ../../rebild/sass/partials/_fonts.scss */
 .icon-images:before {
   content: "\e00e";
 }
 
-/* line 145, ../../rebild/sass/partials/_fonts.scss */
+/* line 118, ../../rebild/sass/partials/_fonts.scss */
 .icon-menu:before {
   content: "\e000";
 }
 
-/* line 149, ../../rebild/sass/partials/_fonts.scss */
+/* line 121, ../../rebild/sass/partials/_fonts.scss */
 .icon-pil2:before {
   content: "\e014";
 }
 
-/* line 153, ../../rebild/sass/partials/_fonts.scss */
+/* line 124, ../../rebild/sass/partials/_fonts.scss */
 .icon-angle-right:before {
   content: "\e006";
 }
 
-/* line 157, ../../rebild/sass/partials/_fonts.scss */
+/* line 127, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-left2:before {
   content: "\e004";
 }
 
-/* line 161, ../../rebild/sass/partials/_fonts.scss */
+/* line 130, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-up2:before {
   content: "\e002";
 }
 
-/* line 165, ../../rebild/sass/partials/_fonts.scss */
+/* line 133, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-right2:before {
   content: "\e001";
 }
 
-/* line 169, ../../rebild/sass/partials/_fonts.scss */
+/* line 136, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-up:before {
   content: "\f062";
 }
 
-/* line 173, ../../rebild/sass/partials/_fonts.scss */
+/* line 139, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-down:before {
   content: "\f063";
 }
 
-/* line 177, ../../rebild/sass/partials/_fonts.scss */
+/* line 142, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-right:before {
   content: "\f061";
 }
 
-/* line 181, ../../rebild/sass/partials/_fonts.scss */
+/* line 145, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-left:before {
   content: "\f060";
 }
 
-/* line 185, ../../rebild/sass/partials/_fonts.scss */
+/* line 148, ../../rebild/sass/partials/_fonts.scss */
 .icon-close:before {
   content: "\e008";
 }
 
-/* line 189, ../../rebild/sass/partials/_fonts.scss */
+/* line 151, ../../rebild/sass/partials/_fonts.scss */
 .icon-plus:before {
   content: "\e00a";
 }
 
-/* line 193, ../../rebild/sass/partials/_fonts.scss */
+/* line 154, ../../rebild/sass/partials/_fonts.scss */
 .icon-minus:before {
   content: "\e00c";
 }
 
-/* line 197, ../../rebild/sass/partials/_fonts.scss */
+/* line 157, ../../rebild/sass/partials/_fonts.scss */
 .icon-compass:before {
   content: "\e00d";
 }
 
-/* line 201, ../../rebild/sass/partials/_fonts.scss */
+/* line 160, ../../rebild/sass/partials/_fonts.scss */
 .icon-reorder:before {
   content: "\f0c9";
 }
 
-/* line 205, ../../rebild/sass/partials/_fonts.scss */
+/* line 163, ../../rebild/sass/partials/_fonts.scss */
 .icon-rss:before {
   content: "\f09f";
 }
 
-/* line 209, ../../rebild/sass/partials/_fonts.scss */
+/* line 166, ../../rebild/sass/partials/_fonts.scss */
 .icon-facebook:before {
   content: "\f09a";
 }
 
-/* line 213, ../../rebild/sass/partials/_fonts.scss */
+/* line 169, ../../rebild/sass/partials/_fonts.scss */
 .icon-og_bliv_her2:before {
   content: "\e600";
+}
+
+/* line 172, ../../rebild/sass/partials/_fonts.scss */
+.icon-mail:before {
+  content: "\e603";
+}
+
+/* line 175, ../../rebild/sass/partials/_fonts.scss */
+.icon-file-pdf:before {
+  content: "\e602";
+}
+
+/* line 178, ../../rebild/sass/partials/_fonts.scss */
+.icon-pencil:before {
+  content: "\e905";
+}
+
+/* line 181, ../../rebild/sass/partials/_fonts.scss */
+.icon-folder:before {
+  content: "\e92f";
+}
+
+/* line 184, ../../rebild/sass/partials/_fonts.scss */
+.icon-folder-open:before {
+  content: "\e930";
+}
+
+/* line 187, ../../rebild/sass/partials/_fonts.scss */
+.icon-folder-plus:before {
+  content: "\e931";
+}
+
+/* line 190, ../../rebild/sass/partials/_fonts.scss */
+.icon-bin:before {
+  content: "\e9ac";
+}
+
+/* line 193, ../../rebild/sass/partials/_fonts.scss */
+.icon-mega-phone:before {
+  content: "\e601";
 }
 
 /* Variables from main theme */
@@ -271,6 +306,9 @@ Button colors
 	Button colors
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
+	Social media colors
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
 
 [VARIABLES]
 
@@ -289,22 +327,27 @@ Layout
 
 [MIXINS]
 
-Blocks
-Backend
-
 -------------------------------------------------------------------*/
-/*------------------------------------------------------------------
-	Blocks
--------------------------------------------------------------------*/
-/*------------------------------------------------------------------
-	Input
--------------------------------------------------------------------*/
-/*------------------------------------------------------------------
-	Backend
--------------------------------------------------------------------*/
-/*------------------------------------------------------------------
-	Nodes
--------------------------------------------------------------------*/
+/*
+==========================================================================
+	Blocks / Grid
+==========================================================================
+*/
+/*
+==========================================================================
+	Forms
+==========================================================================
+*/
+/*
+==========================================================================
+	Text
+==========================================================================
+*/
+/*
+==========================================================================
+	Utilities
+==========================================================================
+*/
 /*------------------------------------------------------------------
 
 [CUSTOM]
@@ -316,6 +359,7 @@ Breadcrumbs
 Views
 Media module
 User profile
+Rebildporten newsletter
 
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
@@ -323,13 +367,13 @@ User profile
 	General backend styling
 
 -------------------------------------------------------------------*/
-/* line 32, ../sass/custom.scss */
+/* line 33, ../sass/custom.scss */
 .page-file-edit {
   background-color: #fff;
   background-image: none;
 }
 
-/* line 36, ../sass/custom.scss */
+/* line 37, ../sass/custom.scss */
 .page-admin, .page-node-add, .page-node-edit, .page-node {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U4ZThlOCIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjZThlOGU4Ii8+PHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiNkNGQ0ZDQiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlOGU4ZTgiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
   background-size: 100%;
@@ -343,15 +387,15 @@ User profile
   -webkit-text-size-adjust: none;
   /* Metatag */
 }
-/* line 42, ../sass/custom.scss */
+/* line 43, ../sass/custom.scss */
 .page-admin a, .page-node-add a, .page-node-edit a, .page-node a {
   color: #7f9dcd;
 }
-/* line 45, ../sass/custom.scss */
+/* line 46, ../sass/custom.scss */
 .page-admin #branding, .page-node-add #branding, .page-node-edit #branding, .page-node #branding {
   background: transparent url("../../rebild/img/noise_bg_repeat.png") repeat;
 }
-/* line 48, ../sass/custom.scss */
+/* line 49, ../sass/custom.scss */
 .page-admin #branding #side_titel .page-title, .page-node-add #branding #side_titel .page-title, .page-node-edit #branding #side_titel .page-title, .page-node #branding #side_titel .page-title {
   float: none;
   font-size: 1.5em;
@@ -361,115 +405,115 @@ User profile
   margin-left: 5px;
   text-shadow: white 1px 1px 1px;
 }
-/* line 58, ../sass/custom.scss */
+/* line 59, ../sass/custom.scss */
 .page-admin #branding ul.primary, .page-node-add #branding ul.primary, .page-node-edit #branding ul.primary, .page-node #branding ul.primary {
   float: none;
 }
-/* line 61, ../sass/custom.scss */
+/* line 62, ../sass/custom.scss */
 .page-admin #branding ul.primary .active a, .page-node-add #branding ul.primary .active a, .page-node-edit #branding ul.primary .active a, .page-node #branding ul.primary .active a {
   background-color: #fff;
   font-weight: normal;
   position: relative;
   z-index: 100;
 }
-/* line 69, ../sass/custom.scss */
+/* line 70, ../sass/custom.scss */
 .page-admin #branding ul.primary li a, .page-node-add #branding ul.primary li a, .page-node-edit #branding ul.primary li a, .page-node #branding ul.primary li a {
   padding: 0 18px 3px;
   font-weight: normal;
   background-color: #dddddd;
 }
-/* line 77, ../sass/custom.scss */
+/* line 78, ../sass/custom.scss */
 .page-admin #branding .add-or-remove-shortcuts, .page-node-add #branding .add-or-remove-shortcuts, .page-node-edit #branding .add-or-remove-shortcuts, .page-node #branding .add-or-remove-shortcuts {
   display: none;
 }
-/* line 81, ../sass/custom.scss */
+/* line 82, ../sass/custom.scss */
 .page-admin input[type="file"], .page-node-add input[type="file"], .page-node-edit input[type="file"], .page-node input[type="file"] {
   background-color: white;
   border: 1px solid #bebfb9;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  /* 	@include box-shadow(rgba(black, 0.85) 0 0 3px); */
+  /* @include box-shadow(rgba(black, 0.85) 0 0 3px); */
   border: 0;
   margin-right: 20px;
 }
-/* line 86, ../sass/custom.scss */
+/* line 87, ../sass/custom.scss */
 .page-admin #page, .page-node-add #page, .page-node-edit #page, .page-node #page {
   padding: 20px 40px 40px 40px;
   margin-left: 0;
   margin-right: 0;
   background-color: white;
-  /* 	@include box-shadow(rgba(black, 0.1) -1px -1px 0px); */
+  /* @include box-shadow(rgba(black, 0.1) -1px -1px 0px); */
 }
-/* line 92, ../sass/custom.scss */
+/* line 93, ../sass/custom.scss */
 .page-admin #page .tabs-secondary ul.secondary, .page-node-add #page .tabs-secondary ul.secondary, .page-node-edit #page .tabs-secondary ul.secondary, .page-node #page .tabs-secondary ul.secondary {
   float: left;
 }
-/* line 96, ../sass/custom.scss */
+/* line 97, ../sass/custom.scss */
 .page-admin #page h3, .page-admin #page h2, .page-node-add #page h3, .page-node-add #page h2, .page-node-edit #page h3, .page-node-edit #page h2, .page-node #page h3, .page-node #page h2 {
   font-weight: normal;
   font-size: 1.33333em;
 }
-/* line 101, ../sass/custom.scss */
+/* line 102, ../sass/custom.scss */
 .page-admin #page table, .page-node-add #page table, .page-node-edit #page table, .page-node #page table {
   background-color: white;
   border: 1px solid #bebfb9;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  /* 	@include box-shadow(rgba(black, 0.85) 0 0 3px); */
+  /* @include box-shadow(rgba(black, 0.85) 0 0 3px); */
   border-collapse: separate;
   font-size: 1em;
 }
-/* line 105, ../sass/custom.scss */
+/* line 106, ../sass/custom.scss */
 .page-admin #page table .odd, .page-node-add #page table .odd, .page-node-edit #page table .odd, .page-node #page table .odd {
   border-bottom: 1px solid #ebebeb;
 }
-/* line 108, ../sass/custom.scss */
+/* line 109, ../sass/custom.scss */
 .page-admin #page table .views-row-last, .page-node-add #page table .views-row-last, .page-node-edit #page table .views-row-last, .page-node #page table .views-row-last {
   border-bottom: 0;
 }
-/* line 111, ../sass/custom.scss */
+/* line 112, ../sass/custom.scss */
 .page-admin #page table .views-field.views-field-title, .page-admin #page table .views-field.views-field-type, .page-admin #page table .views-field.views-field-status, .page-admin #page table .views-field.views-field-state, .page-admin #page table .views-field.views-field-moderation-actions, .page-admin #page table .views-field.views-field-name, .page-admin #page table .views-field.views-field-changed, .page-node-add #page table .views-field.views-field-title, .page-node-add #page table .views-field.views-field-type, .page-node-add #page table .views-field.views-field-status, .page-node-add #page table .views-field.views-field-state, .page-node-add #page table .views-field.views-field-moderation-actions, .page-node-add #page table .views-field.views-field-name, .page-node-add #page table .views-field.views-field-changed, .page-node-edit #page table .views-field.views-field-title, .page-node-edit #page table .views-field.views-field-type, .page-node-edit #page table .views-field.views-field-status, .page-node-edit #page table .views-field.views-field-state, .page-node-edit #page table .views-field.views-field-moderation-actions, .page-node-edit #page table .views-field.views-field-name, .page-node-edit #page table .views-field.views-field-changed, .page-node #page table .views-field.views-field-title, .page-node #page table .views-field.views-field-type, .page-node #page table .views-field.views-field-status, .page-node #page table .views-field.views-field-state, .page-node #page table .views-field.views-field-moderation-actions, .page-node #page table .views-field.views-field-name, .page-node #page table .views-field.views-field-changed {
   border-right: 1px solid #ebebeb;
 }
-/* line 115, ../sass/custom.scss */
+/* line 116, ../sass/custom.scss */
 .page-admin #page table thead tr, .page-node-add #page table thead tr, .page-node-edit #page table thead tr, .page-node #page table thead tr {
   height: 40px;
 }
-/* line 119, ../sass/custom.scss */
+/* line 120, ../sass/custom.scss */
 .page-admin #page table th, .page-node-add #page table th, .page-node-edit #page table th, .page-node #page table th {
   border: none;
   padding: 0 10px 0 10px;
   background-color: #dddddd;
 }
-/* line 123, ../sass/custom.scss */
+/* line 124, ../sass/custom.scss */
 .page-admin #page table th a, .page-node-add #page table th a, .page-node-edit #page table th a, .page-node #page table th a {
   color: #000;
   font-size: 1em;
 }
-/* line 128, ../sass/custom.scss */
+/* line 129, ../sass/custom.scss */
 .page-admin #page table tr, .page-node-add #page table tr, .page-node-edit #page table tr, .page-node #page table tr {
   border: none;
 }
-/* line 130, ../sass/custom.scss */
+/* line 131, ../sass/custom.scss */
 .page-admin #page table tr .last-child, .page-node-add #page table tr .last-child, .page-node-edit #page table tr .last-child, .page-node #page table tr .last-child {
   border: none;
 }
-/* line 134, ../sass/custom.scss */
+/* line 135, ../sass/custom.scss */
 .page-admin #page table td, .page-node-add #page table td, .page-node-edit #page table td, .page-node #page table td {
   border: none;
 }
-/* line 139, ../sass/custom.scss */
+/* line 140, ../sass/custom.scss */
 .page-admin #page fieldset .fieldset-legend, .page-node-add #page fieldset .fieldset-legend, .page-node-edit #page fieldset .fieldset-legend, .page-node #page fieldset .fieldset-legend {
   position: relative;
   padding-left: 15px;
 }
-/* line 148, ../sass/custom.scss */
+/* line 149, ../sass/custom.scss */
 .page-admin .form-item-metatags-description-value .statustegn, .page-node-add .form-item-metatags-description-value .statustegn, .page-node-edit .form-item-metatags-description-value .statustegn, .page-node .form-item-metatags-description-value .statustegn {
   color: #666;
 }
-/* line 151, ../sass/custom.scss */
+/* line 152, ../sass/custom.scss */
 .page-admin .form-item-metatags-description-value .grippie, .page-node-add .form-item-metatags-description-value .grippie, .page-node-edit .form-item-metatags-description-value .grippie, .page-node .form-item-metatags-description-value .grippie {
   display: none;
 }
@@ -479,7 +523,7 @@ User profile
 	Opret indhold 
 
 -------------------------------------------------------------------*/
-/* line 162, ../sass/custom.scss */
+/* line 163, ../sass/custom.scss */
 .page-node-add #page, .page-node-edit #page, .page-node #page, .page-user #page, .page-file #page, .page-block #page {
   font-family: Verdana, Arial, sans-serif;
   font-size: 12px;
@@ -492,18 +536,18 @@ User profile
   /* Horizontal tabs */
   /* Vertical tabs */
 }
-/* line 166, ../sass/custom.scss */
+/* line 167, ../sass/custom.scss */
 .page-node-add #page label, .page-node-edit #page label, .page-node #page label, .page-user #page label, .page-file #page label, .page-block #page label {
   font-size: 1.33333em;
   font-weight: normal;
   margin-bottom: 10px;
 }
-/* line 171, ../sass/custom.scss */
+/* line 172, ../sass/custom.scss */
 .page-node-add #page label.option, .page-node-edit #page label.option, .page-node #page label.option, .page-user #page label.option, .page-file #page label.option, .page-block #page label.option {
   font-size: 1em;
   font-weight: bold;
 }
-/* line 175, ../sass/custom.scss */
+/* line 176, ../sass/custom.scss */
 .page-node-add #page .customised-select, .page-node-edit #page .customised-select, .page-node #page .customised-select, .page-user #page .customised-select, .page-file #page .customised-select, .page-block #page .customised-select {
   background: url("../images/dropdown.png");
   background-repeat: no-repeat;
@@ -511,20 +555,20 @@ User profile
   height: 20px;
   padding: 1px 0 0 6px;
 }
-/* line 183, ../sass/custom.scss */
+/* line 184, ../sass/custom.scss */
 .page-node-add #page .link-field-column label, .page-node-edit #page .link-field-column label, .page-node #page .link-field-column label, .page-user #page .link-field-column label, .page-file #page .link-field-column label, .page-block #page .link-field-column label {
   font-size: 1em;
   font-weight: bold;
 }
-/* line 188, ../sass/custom.scss */
+/* line 189, ../sass/custom.scss */
 .page-node-add #page .link-attributes, .page-node-edit #page .link-attributes, .page-node #page .link-attributes, .page-user #page .link-attributes, .page-file #page .link-attributes, .page-block #page .link-attributes {
   margin: 5px 0 10px;
 }
-/* line 195, ../sass/custom.scss */
+/* line 196, ../sass/custom.scss */
 .page-node-add #page input[type="radio"], .page-node-edit #page input[type="radio"], .page-node #page input[type="radio"], .page-user #page input[type="radio"], .page-file #page input[type="radio"], .page-block #page input[type="radio"] {
   margin-left: 20px;
 }
-/* line 198, ../sass/custom.scss */
+/* line 199, ../sass/custom.scss */
 .page-node-add #page .form-text, .page-node-edit #page .form-text, .page-node #page .form-text, .page-user #page .form-text, .page-file #page .form-text, .page-block #page .form-text {
   width: 100%;
   padding: 0 0 0 1%;
@@ -535,56 +579,56 @@ User profile
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  /* 	@include box-shadow(rgba(black, 0.85) 0 0 3px); */
+  /* @include box-shadow(rgba(black, 0.85) 0 0 3px); */
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 206, ../sass/custom.scss */
+/* line 207, ../sass/custom.scss */
 .page-node-add #page .form-textarea, .page-node-edit #page .form-textarea, .page-node #page .form-textarea, .page-user #page .form-textarea, .page-file #page .form-textarea, .page-block #page .form-textarea {
   background-color: white;
   border: 1px solid #bebfb9;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  /* 	@include box-shadow(rgba(black, 0.85) 0 0 3px); */
+  /* @include box-shadow(rgba(black, 0.85) 0 0 3px); */
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 210, ../sass/custom.scss */
+/* line 211, ../sass/custom.scss */
 .page-node-add #page .form-item-title, .page-node-edit #page .form-item-title, .page-node #page .form-item-title, .page-user #page .form-item-title, .page-file #page .form-item-title, .page-block #page .form-item-title {
   background: url("../images/dot.png") repeat-x bottom;
   padding-bottom: 30px;
   margin: 0;
 }
-/* line 214, ../sass/custom.scss */
+/* line 215, ../sass/custom.scss */
 .page-node-add #page .form-item-title .general_field_styling, .page-node-edit #page .form-item-title .general_field_styling, .page-node #page .form-item-title .general_field_styling, .page-user #page .form-item-title .general_field_styling, .page-file #page .form-item-title .general_field_styling, .page-block #page .form-item-title .general_field_styling {
   padding: 0 0 0 1%;
   background: none;
 }
-/* line 219, ../sass/custom.scss */
+/* line 220, ../sass/custom.scss */
 .page-node-add #page .date-clear, .page-node-edit #page .date-clear, .page-node #page .date-clear, .page-user #page .date-clear, .page-file #page .date-clear, .page-block #page .date-clear {
   background-color: white;
   border: 1px solid #bebfb9;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  /* 	@include box-shadow(rgba(black, 0.85) 0 0 3px); */
+  /* @include box-shadow(rgba(black, 0.85) 0 0 3px); */
   font-size: 13px;
   border: 0;
   height: 26px;
   padding-left: 1%;
 }
-/* line 226, ../sass/custom.scss */
+/* line 227, ../sass/custom.scss */
 .page-node-add #page .date-padding, .page-node-edit #page .date-padding, .page-node #page .date-padding, .page-user #page .date-padding, .page-file #page .date-padding, .page-block #page .date-padding {
   padding: 0;
 }
-/* line 230, ../sass/custom.scss */
+/* line 231, ../sass/custom.scss */
 .page-node-add #page .description, .page-node-edit #page .description, .page-node #page .description, .page-user #page .description, .page-file #page .description, .page-block #page .description {
   font-size: 0.91667em;
 }
-/* line 233, ../sass/custom.scss */
+/* line 234, ../sass/custom.scss */
 .page-node-add #page .button.launcher, .page-node-add #page .field-add-more-submit, .page-node-add #page .form-submit, .page-node-edit #page .button.launcher, .page-node-edit #page .field-add-more-submit, .page-node-edit #page .form-submit, .page-node #page .button.launcher, .page-node #page .field-add-more-submit, .page-node #page .form-submit, .page-user #page .button.launcher, .page-user #page .field-add-more-submit, .page-user #page .form-submit, .page-file #page .button.launcher, .page-file #page .field-add-more-submit, .page-file #page .form-submit, .page-block #page .button.launcher, .page-block #page .field-add-more-submit, .page-block #page .form-submit {
   background-color: #7f9dcd;
   color: #fff;
@@ -598,31 +642,31 @@ User profile
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 246, ../sass/custom.scss */
+/* line 247, ../sass/custom.scss */
 .page-node-add #page #edit-actions, .page-node-edit #page #edit-actions, .page-node #page #edit-actions, .page-user #page #edit-actions, .page-file #page #edit-actions, .page-block #page #edit-actions {
   background: none;
 }
-/* line 249, ../sass/custom.scss */
+/* line 250, ../sass/custom.scss */
 .page-node-add #page .general_field_styling, .page-node-edit #page .general_field_styling, .page-node #page .general_field_styling, .page-user #page .general_field_styling, .page-file #page .general_field_styling, .page-block #page .general_field_styling {
   background: url("../images/dot.png") repeat-x bottom;
   padding: 30px 0;
 }
-/* line 254, ../sass/custom.scss */
+/* line 255, ../sass/custom.scss */
 .page-node-add #page textarea, .page-node-edit #page textarea, .page-node #page textarea, .page-user #page textarea, .page-file #page textarea, .page-block #page textarea {
   width: 100%;
   padding-left: 1%;
 }
-/* line 260, ../sass/custom.scss */
+/* line 261, ../sass/custom.scss */
 .page-node-add #page input.form-autocomplete, .page-node-edit #page input.form-autocomplete, .page-node #page input.form-autocomplete, .page-user #page input.form-autocomplete, .page-file #page input.form-autocomplete, .page-block #page input.form-autocomplete {
   background-position: 100% 10px;
   /* LTR */
 }
-/* line 263, ../sass/custom.scss */
+/* line 264, ../sass/custom.scss */
 .page-node-add #page input.throbbing, .page-node-edit #page input.throbbing, .page-node #page input.throbbing, .page-user #page input.throbbing, .page-file #page input.throbbing, .page-block #page input.throbbing {
   background-position: 100% -11px;
   /* LTR */
 }
-/* line 267, ../sass/custom.scss */
+/* line 268, ../sass/custom.scss */
 .page-node-add #page .field-multiple-table, .page-node-edit #page .field-multiple-table, .page-node #page .field-multiple-table, .page-user #page .field-multiple-table, .page-file #page .field-multiple-table, .page-block #page .field-multiple-table {
   border-radius: 0;
   -o-border-radius: 0;
@@ -633,28 +677,28 @@ User profile
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
 }
-/* line 276, ../sass/custom.scss */
+/* line 277, ../sass/custom.scss */
 .page-node-add #page .field-multiple-table th, .page-node-edit #page .field-multiple-table th, .page-node #page .field-multiple-table th, .page-user #page .field-multiple-table th, .page-file #page .field-multiple-table th, .page-block #page .field-multiple-table th {
   /* background: none; */
   text-transform: none;
 }
-/* line 279, ../sass/custom.scss */
+/* line 280, ../sass/custom.scss */
 .page-node-add #page .field-multiple-table th label, .page-node-edit #page .field-multiple-table th label, .page-node #page .field-multiple-table th label, .page-user #page .field-multiple-table th label, .page-file #page .field-multiple-table th label, .page-block #page .field-multiple-table th label {
   margin: 0;
   padding: 0;
 }
-/* line 284, ../sass/custom.scss */
+/* line 285, ../sass/custom.scss */
 .page-node-add #page .field-multiple-table .field-multiple-drag, .page-node-edit #page .field-multiple-table .field-multiple-drag, .page-node #page .field-multiple-table .field-multiple-drag, .page-user #page .field-multiple-table .field-multiple-drag, .page-file #page .field-multiple-table .field-multiple-drag, .page-block #page .field-multiple-table .field-multiple-drag {
   border-right: 1px solid #dddddd;
 }
-/* line 286, ../sass/custom.scss */
+/* line 287, ../sass/custom.scss */
 .page-node-add #page .field-multiple-table .field-multiple-drag a, .page-node-edit #page .field-multiple-table .field-multiple-drag a, .page-node #page .field-multiple-table .field-multiple-drag a, .page-user #page .field-multiple-table .field-multiple-drag a, .page-file #page .field-multiple-table .field-multiple-drag a, .page-block #page .field-multiple-table .field-multiple-drag a {
   display: block;
   float: none;
   padding: 0;
   margin-left: 0;
 }
-/* line 293, ../sass/custom.scss */
+/* line 294, ../sass/custom.scss */
 .page-node-add #page .field-multiple-table tr, .page-node-edit #page .field-multiple-table tr, .page-node #page .field-multiple-table tr, .page-user #page .field-multiple-table tr, .page-file #page .field-multiple-table tr, .page-block #page .field-multiple-table tr {
   /* background: none; */
   border-bottom: 20px solid #fff;
@@ -662,98 +706,98 @@ User profile
   border-left: 0;
   border-top: 0;
 }
-/* line 300, ../sass/custom.scss */
+/* line 301, ../sass/custom.scss */
 .page-node-add #page .field-multiple-table .field-name-field-accordion-title, .page-node-edit #page .field-multiple-table .field-name-field-accordion-title, .page-node #page .field-multiple-table .field-name-field-accordion-title, .page-user #page .field-multiple-table .field-name-field-accordion-title, .page-file #page .field-multiple-table .field-name-field-accordion-title, .page-block #page .field-multiple-table .field-name-field-accordion-title {
   margin-bottom: 10px;
 }
-/* line 306, ../sass/custom.scss */
+/* line 307, ../sass/custom.scss */
 .page-node-add #page fieldset, .page-node-edit #page fieldset, .page-node #page fieldset, .page-user #page fieldset, .page-file #page fieldset, .page-block #page fieldset {
   border: 0;
   padding: 10px 0 0 0;
 }
-/* line 309, ../sass/custom.scss */
+/* line 310, ../sass/custom.scss */
 .page-node-add #page fieldset .fieldset-wrapper, .page-node-edit #page fieldset .fieldset-wrapper, .page-node #page fieldset .fieldset-wrapper, .page-user #page fieldset .fieldset-wrapper, .page-file #page fieldset .fieldset-wrapper, .page-block #page fieldset .fieldset-wrapper {
   padding: 0;
 }
-/* line 312, ../sass/custom.scss */
+/* line 313, ../sass/custom.scss */
 .page-node-add #page fieldset label, .page-node-edit #page fieldset label, .page-node #page fieldset label, .page-user #page fieldset label, .page-file #page fieldset label, .page-block #page fieldset label {
   font-size: 1em;
   font-weight: bold;
 }
-/* line 316, ../sass/custom.scss */
+/* line 317, ../sass/custom.scss */
 .page-node-add #page fieldset .fieldset-legend, .page-node-edit #page fieldset .fieldset-legend, .page-node #page fieldset .fieldset-legend, .page-user #page fieldset .fieldset-legend, .page-file #page fieldset .fieldset-legend, .page-block #page fieldset .fieldset-legend {
   padding: 0;
   text-transform: none;
   font-weight: normal;
   font-size: 1.33333em;
 }
-/* line 321, ../sass/custom.scss */
+/* line 322, ../sass/custom.scss */
 .page-node-add #page fieldset .fieldset-legend a, .page-node-edit #page fieldset .fieldset-legend a, .page-node #page fieldset .fieldset-legend a, .page-user #page fieldset .fieldset-legend a, .page-file #page fieldset .fieldset-legend a, .page-block #page fieldset .fieldset-legend a {
   padding-left: 20px;
 }
-/* line 327, ../sass/custom.scss */
+/* line 328, ../sass/custom.scss */
 .page-node-add #page .field-type-datestamp .fieldset-legend, .page-node-edit #page .field-type-datestamp .fieldset-legend, .page-node #page .field-type-datestamp .fieldset-legend, .page-user #page .field-type-datestamp .fieldset-legend, .page-file #page .field-type-datestamp .fieldset-legend, .page-block #page .field-type-datestamp .fieldset-legend {
   padding: 0;
   text-transform: none;
   font-weight: normal;
   font-size: 1.33333em;
 }
-/* line 335, ../sass/custom.scss */
+/* line 336, ../sass/custom.scss */
 .page-node-add #page .field-group-fieldset, .page-node-edit #page .field-group-fieldset, .page-node #page .field-group-fieldset, .page-user #page .field-group-fieldset, .page-file #page .field-group-fieldset, .page-block #page .field-group-fieldset {
   margin: 30px 0 0 0;
   background: url("../images/dot.png") repeat-x bottom;
   padding-bottom: 30px;
 }
-/* line 339, ../sass/custom.scss */
+/* line 340, ../sass/custom.scss */
 .page-node-add #page .field-group-fieldset .fieldset-legend, .page-node-edit #page .field-group-fieldset .fieldset-legend, .page-node #page .field-group-fieldset .fieldset-legend, .page-user #page .field-group-fieldset .fieldset-legend, .page-file #page .field-group-fieldset .fieldset-legend, .page-block #page .field-group-fieldset .fieldset-legend {
   padding: 0;
   text-transform: none;
   font-size: 1.33333em;
   font-weight: normal;
 }
-/* line 345, ../sass/custom.scss */
+/* line 346, ../sass/custom.scss */
 .page-node-add #page .field-group-fieldset .fieldset-wrapper, .page-node-edit #page .field-group-fieldset .fieldset-wrapper, .page-node #page .field-group-fieldset .fieldset-wrapper, .page-user #page .field-group-fieldset .fieldset-wrapper, .page-file #page .field-group-fieldset .fieldset-wrapper, .page-block #page .field-group-fieldset .fieldset-wrapper {
   padding-left: 20px;
 }
-/* line 347, ../sass/custom.scss */
+/* line 348, ../sass/custom.scss */
 .page-node-add #page .field-group-fieldset .fieldset-wrapper .general_field_styling, .page-node-edit #page .field-group-fieldset .fieldset-wrapper .general_field_styling, .page-node #page .field-group-fieldset .fieldset-wrapper .general_field_styling, .page-user #page .field-group-fieldset .fieldset-wrapper .general_field_styling, .page-file #page .field-group-fieldset .fieldset-wrapper .general_field_styling, .page-block #page .field-group-fieldset .fieldset-wrapper .general_field_styling {
   background: none;
   padding: 15px 0;
 }
-/* line 351, ../sass/custom.scss */
+/* line 352, ../sass/custom.scss */
 .page-node-add #page .field-group-fieldset .fieldset-wrapper .general_field_styling .media-widget .form-item, .page-node-edit #page .field-group-fieldset .fieldset-wrapper .general_field_styling .media-widget .form-item, .page-node #page .field-group-fieldset .fieldset-wrapper .general_field_styling .media-widget .form-item, .page-user #page .field-group-fieldset .fieldset-wrapper .general_field_styling .media-widget .form-item, .page-file #page .field-group-fieldset .fieldset-wrapper .general_field_styling .media-widget .form-item, .page-block #page .field-group-fieldset .fieldset-wrapper .general_field_styling .media-widget .form-item {
   padding-bottom: 5px;
 }
-/* line 356, ../sass/custom.scss */
+/* line 357, ../sass/custom.scss */
 .page-node-add #page .field-group-fieldset .fieldset-wrapper label, .page-node-edit #page .field-group-fieldset .fieldset-wrapper label, .page-node #page .field-group-fieldset .fieldset-wrapper label, .page-user #page .field-group-fieldset .fieldset-wrapper label, .page-file #page .field-group-fieldset .fieldset-wrapper label, .page-block #page .field-group-fieldset .fieldset-wrapper label {
   font-size: 1em;
   font-weight: bold;
 }
-/* line 360, ../sass/custom.scss */
+/* line 361, ../sass/custom.scss */
 .page-node-add #page .field-group-fieldset .fieldset-wrapper .form-item, .page-node-edit #page .field-group-fieldset .fieldset-wrapper .form-item, .page-node #page .field-group-fieldset .fieldset-wrapper .form-item, .page-user #page .field-group-fieldset .fieldset-wrapper .form-item, .page-file #page .field-group-fieldset .fieldset-wrapper .form-item, .page-block #page .field-group-fieldset .fieldset-wrapper .form-item {
   margin: 0;
   padding: 0;
 }
-/* line 367, ../sass/custom.scss */
+/* line 368, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper, .page-node-edit #page .field-group-htabs-wrapper, .page-node #page .field-group-htabs-wrapper, .page-user #page .field-group-htabs-wrapper, .page-file #page .field-group-htabs-wrapper, .page-block #page .field-group-htabs-wrapper {
   padding: 30px 0;
 }
-/* line 369, ../sass/custom.scss */
+/* line 370, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .general_field_styling, .page-node-edit #page .field-group-htabs-wrapper .general_field_styling, .page-node #page .field-group-htabs-wrapper .general_field_styling, .page-user #page .field-group-htabs-wrapper .general_field_styling, .page-file #page .field-group-htabs-wrapper .general_field_styling, .page-block #page .field-group-htabs-wrapper .general_field_styling {
   background: none;
   padding: 0;
 }
-/* line 373, ../sass/custom.scss */
+/* line 374, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs, .page-node #page .field-group-htabs-wrapper .horizontal-tabs, .page-user #page .field-group-htabs-wrapper .horizontal-tabs, .page-file #page .field-group-htabs-wrapper .horizontal-tabs, .page-block #page .field-group-htabs-wrapper .horizontal-tabs {
   border: 0;
 }
-/* line 375, ../sass/custom.scss */
+/* line 376, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list, .page-block #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list {
   border-right: 0;
   border-bottom: 1px solid #d8d8d8;
   background-color: transparent;
 }
-/* line 379, ../sass/custom.scss */
+/* line 380, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li, .page-block #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li {
   -moz-border-radius: 8px 8px 0 0;
   -webkit-border-top-left-radius: 8px;
@@ -765,22 +809,22 @@ User profile
   margin-top: 10px;
   outline: 0;
 }
-/* line 389, ../sass/custom.scss */
+/* line 390, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a, .page-block #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a {
   color: #000;
   font-weight: normal;
   outline: 0;
 }
-/* line 393, ../sass/custom.scss */
+/* line 394, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a strong, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a strong, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a strong, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a strong, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a strong, .page-block #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a strong {
   font-weight: normal;
 }
-/* line 397, ../sass/custom.scss */
+/* line 398, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a:hover, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a:hover, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a:hover, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a:hover, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a:hover, .page-block #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a:hover {
   background-color: transparent;
   outline: 0;
 }
-/* line 403, ../sass/custom.scss */
+/* line 404, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list .selected, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list .selected, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list .selected, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list .selected, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list .selected, .page-block #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list .selected {
   background-color: #fff;
   border-top: 1px solid #eeeeee;
@@ -789,30 +833,30 @@ User profile
   border-right: 1px solid #eeeeee;
   padding: 0 18px 2px;
 }
-/* line 412, ../sass/custom.scss */
+/* line 413, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .field-group-fieldset, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .field-group-fieldset, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .field-group-fieldset, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .field-group-fieldset, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .field-group-fieldset, .page-block #page .field-group-htabs-wrapper .horizontal-tabs .field-group-fieldset {
   background: none;
 }
-/* line 418, ../sass/custom.scss */
+/* line 419, ../sass/custom.scss */
 .page-node-add #page .vertical-tabs, .page-node-edit #page .vertical-tabs, .page-node #page .vertical-tabs, .page-user #page .vertical-tabs, .page-file #page .vertical-tabs, .page-block #page .vertical-tabs {
   margin-top: 30px;
 }
-/* line 420, ../sass/custom.scss */
+/* line 421, ../sass/custom.scss */
 .page-node-add #page .vertical-tabs .general_field_styling, .page-node-edit #page .vertical-tabs .general_field_styling, .page-node #page .vertical-tabs .general_field_styling, .page-user #page .vertical-tabs .general_field_styling, .page-file #page .vertical-tabs .general_field_styling, .page-block #page .vertical-tabs .general_field_styling {
   background: none;
   padding: 0;
 }
-/* line 424, ../sass/custom.scss */
+/* line 425, ../sass/custom.scss */
 .page-node-add #page .vertical-tabs .form-text, .page-node-edit #page .vertical-tabs .form-text, .page-node #page .vertical-tabs .form-text, .page-user #page .vertical-tabs .form-text, .page-file #page .vertical-tabs .form-text, .page-block #page .vertical-tabs .form-text {
   background-color: white;
   border: 1px solid #bebfb9;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  /* 	@include box-shadow(rgba(black, 0.85) 0 0 3px); */
+  /* @include box-shadow(rgba(black, 0.85) 0 0 3px); */
   height: 30px;
 }
-/* line 428, ../sass/custom.scss */
+/* line 429, ../sass/custom.scss */
 .page-node-add #page .vertical-tabs .vertical-tab-button-error, .page-node-edit #page .vertical-tabs .vertical-tab-button-error, .page-node #page .vertical-tabs .vertical-tab-button-error, .page-user #page .vertical-tabs .vertical-tab-button-error, .page-file #page .vertical-tabs .vertical-tab-button-error, .page-block #page .vertical-tabs .vertical-tab-button-error {
   border: 2px solid red;
 }
@@ -822,22 +866,22 @@ User profile
 	Workbench
 
 -------------------------------------------------------------------*/
-/* line 442, ../sass/custom.scss */
+/* line 443, ../sass/custom.scss */
 .page-admin-workbench #page {
   min-width: 960px;
 }
-/* line 445, ../sass/custom.scss */
+/* line 446, ../sass/custom.scss */
 .page-admin-workbench #page .tabs-secondary .min-profil {
   float: right;
   width: 28%;
 }
-/* line 448, ../sass/custom.scss */
+/* line 449, ../sass/custom.scss */
 .page-admin-workbench #page .tabs-secondary .min-profil li {
   float: left;
   display: block;
   margin-right: 10px;
 }
-/* line 452, ../sass/custom.scss */
+/* line 453, ../sass/custom.scss */
 .page-admin-workbench #page .tabs-secondary .min-profil li a {
   background-color: #ddd;
   color: #000;
@@ -845,27 +889,27 @@ User profile
   border-radius: 7px;
   padding: 2px 10px;
 }
-/* line 464, ../sass/custom.scss */
+/* line 465, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .left {
   float: left;
   min-width: 67%;
   margin-right: 40px;
 }
-/* line 470, ../sass/custom.scss */
+/* line 471, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right {
   float: right;
   width: 28%;
 }
-/* line 473, ../sass/custom.scss */
+/* line 474, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content {
   background-color: white;
   border: 1px solid #bebfb9;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  /* 	@include box-shadow(rgba(black, 0.85) 0 0 3px); */
+  /* @include box-shadow(rgba(black, 0.85) 0 0 3px); */
 }
-/* line 475, ../sass/custom.scss */
+/* line 476, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content h4 {
   padding: 10px;
   border-bottom: 1px solid #bcbdbd;
@@ -877,35 +921,35 @@ User profile
   text-transform: uppercase;
   vertical-align: middle;
 }
-/* line 486, ../sass/custom.scss */
+/* line 487, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-picture {
   padding: 10px 10px 0 10px;
 }
-/* line 489, ../sass/custom.scss */
+/* line 490, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-field-user-jobtitel {
   padding: 0 10px 0 10px;
   font-style: italic;
   margin: 10px 0;
 }
-/* line 494, ../sass/custom.scss */
+/* line 495, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-field-user-tlf, .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-mail {
   padding: 0 10px 0 10px;
 }
-/* line 497, ../sass/custom.scss */
+/* line 498, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-mail {
   padding-bottom: 10px;
 }
-/* line 500, ../sass/custom.scss */
+/* line 501, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content p {
   margin: 0;
 }
-/* line 507, ../sass/custom.scss */
+/* line 508, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle .needs_attention {
   float: left;
   width: 67%;
   margin-right: 40px;
 }
-/* line 512, ../sass/custom.scss */
+/* line 513, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle #block-block-16 {
   float: right;
   background-color: white;
@@ -913,11 +957,11 @@ User profile
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  /* 	@include box-shadow(rgba(black, 0.85) 0 0 3px); */
+  /* @include box-shadow(rgba(black, 0.85) 0 0 3px); */
   width: 28%;
   margin-top: 68px;
 }
-/* line 517, ../sass/custom.scss */
+/* line 518, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle #block-block-16 h2 {
   padding: 10px;
   border-bottom: 1px solid #bcbdbd;
@@ -929,15 +973,15 @@ User profile
   text-transform: uppercase;
   vertical-align: middle;
 }
-/* line 528, ../sass/custom.scss */
+/* line 529, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle #block-block-16 .content {
   padding: 10px;
 }
-/* line 531, ../sass/custom.scss */
+/* line 532, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle #block-block-16 p {
   margin: 0;
 }
-/* line 537, ../sass/custom.scss */
+/* line 538, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_bottom .all_recent_content, .page-admin-workbench #page #min_profil_side .min_profil_bottom .content_without_moderation {
   float: left;
   width: 100%;
@@ -948,28 +992,28 @@ User profile
 	WYSIWYG editor
 
 -------------------------------------------------------------------*/
-/* line 558, ../sass/custom.scss */
+/* line 559, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mce_removeformat {
   display: none;
 }
-/* line 561, ../sass/custom.scss */
+/* line 562, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mce_pasteword {
   display: none;
 }
-/* line 564, ../sass/custom.scss */
+/* line 565, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mce_paste {
   display: none;
 }
-/* line 567, ../sass/custom.scss */
+/* line 568, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mceFirst {
   background: #f6f6f6;
 }
-/* line 570, ../sass/custom.scss */
+/* line 571, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mceIframeContainer.mceFirst.mceLast {
   border-top: 1px solid #d8d8d8;
   border-bottom: 1px solid #d8d8d8;
 }
-/* line 574, ../sass/custom.scss */
+/* line 575, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mceListBox {
   border-radius: 0;
   -o-border-radius: 0;
@@ -980,7 +1024,7 @@ User profile
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
 }
-/* line 588, ../sass/custom.scss */
+/* line 589, ../sass/custom.scss */
 .page-node #page .filter-wrapper label {
   font-size: 12px;
   font-weight: bold;
@@ -991,7 +1035,7 @@ User profile
 	Breadcrumbs
 	
 -------------------------------------------------------------------*/
-/* line 604, ../sass/custom.scss */
+/* line 605, ../sass/custom.scss */
 #branding .breadcrumb {
   font-size: 0.91667em;
   line-height: 1.5;
@@ -1001,14 +1045,14 @@ User profile
   margin-left: 5px;
   text-shadow: white 1px 1px 1px;
 }
-/* line 612, ../sass/custom.scss */
+/* line 613, ../sass/custom.scss */
 #branding .breadcrumb a, #branding .breadcrumb strong {
   color: #474747;
   text-decoration: none;
   position: relative;
   top: -1px;
 }
-/* line 618, ../sass/custom.scss */
+/* line 619, ../sass/custom.scss */
 #branding .breadcrumb span {
   font-size: 1.25em;
 }
@@ -1018,7 +1062,7 @@ User profile
 	Views 
 	
 -------------------------------------------------------------------*/
-/* line 629, ../sass/custom.scss */
+/* line 630, ../sass/custom.scss */
 .views-exposed-form .form-item {
   padding: 0;
 }
@@ -1028,7 +1072,7 @@ User profile
 	Media module
 	
 -------------------------------------------------------------------*/
-/* line 640, ../sass/custom.scss */
+/* line 641, ../sass/custom.scss */
 .page-media .form-submit, .page-media a.button {
   background-color: #7f9dcd;
   color: #fff;
@@ -1042,27 +1086,27 @@ User profile
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 653, ../sass/custom.scss */
+/* line 654, ../sass/custom.scss */
 .page-media input[type="file"] {
   background-color: white;
   border: 1px solid #bebfb9;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  /* 	@include box-shadow(rgba(black, 0.85) 0 0 3px); */
+  /* @include box-shadow(rgba(black, 0.85) 0 0 3px); */
   border: 0;
   margin-right: 20px;
 }
 
-/* line 661, ../sass/custom.scss */
+/* line 662, ../sass/custom.scss */
 .page-node .media-widget .preview {
   margin: 0;
 }
-/* line 663, ../sass/custom.scss */
+/* line 664, ../sass/custom.scss */
 .page-node .media-widget .preview > div {
   margin-right: 15px;
 }
-/* line 667, ../sass/custom.scss */
+/* line 668, ../sass/custom.scss */
 .page-node .media-widget .button {
   background-color: #7f9dcd;
   color: #fff;
@@ -1078,7 +1122,7 @@ User profile
   display: inline-block;
 }
 
-/* line 686, ../sass/custom.scss */
+/* line 687, ../sass/custom.scss */
 #file-entity-edit .chzn-choices input[type="text"], #file-entity-edit .chzn-drop input[type="text"], #file-entity-edit--2 .chzn-choices input[type="text"], #file-entity-edit--2 .chzn-drop input[type="text"] {
   border-radius: 0;
   -webkit-border-radius: none;
@@ -1090,7 +1134,7 @@ User profile
   -moz-box-shadow: transparent 0 0 0;
   box-shadow: transparent 0 0 0;
 }
-/* line 698, ../sass/custom.scss */
+/* line 699, ../sass/custom.scss */
 #file-entity-edit input[type="text"], #file-entity-edit--2 input[type="text"] {
   width: 50%;
   padding: 0 0 0 1%;
@@ -1101,10 +1145,10 @@ User profile
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  /* 	@include box-shadow(rgba(black, 0.85) 0 0 3px); */
+  /* @include box-shadow(rgba(black, 0.85) 0 0 3px); */
   font-size: 13px;
 }
-/* line 706, ../sass/custom.scss */
+/* line 707, ../sass/custom.scss */
 #file-entity-edit input[type="submit"], #file-entity-edit--2 input[type="submit"] {
   background-color: #7f9dcd;
   color: #fff;
@@ -1118,7 +1162,7 @@ User profile
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 719, ../sass/custom.scss */
+/* line 720, ../sass/custom.scss */
 #file-entity-edit .button-no, #file-entity-edit--2 .button-no {
   background-color: #7f9dcd;
   color: #fff;
@@ -1133,12 +1177,12 @@ User profile
   border-radius: 3px;
 }
 
-/* line 734, ../sass/custom.scss */
+/* line 735, ../sass/custom.scss */
 .media-modal-frame .page-file {
   background-color: #fff;
 }
 
-/* line 739, ../sass/custom.scss */
+/* line 740, ../sass/custom.scss */
 #media-browser-page #branding {
   background: #fff;
 }
@@ -1148,15 +1192,15 @@ User profile
 	BEAN
 	
 -------------------------------------------------------------------*/
-/* line 751, ../sass/custom.scss */
+/* line 752, ../sass/custom.scss */
 .page-block #bean-form .form-item-is-new-revision, .page-block #bean-form .form-item-default-revision, .page-block #bean-form .form-item-view-mode {
   display: none;
 }
-/* line 755, ../sass/custom.scss */
+/* line 756, ../sass/custom.scss */
 .page-block #bean-form #edit-log-wrapper .form-item {
   display: none;
 }
-/* line 760, ../sass/custom.scss */
+/* line 761, ../sass/custom.scss */
 .page-block #bean-form .form-item-default-revision input, .page-block #bean-form .form-item-default-revision label {
   display: none;
 }
@@ -1166,7 +1210,7 @@ User profile
 	User profile
 	
 -------------------------------------------------------------------*/
-/* line 775, ../sass/custom.scss */
+/* line 776, ../sass/custom.scss */
 .page-user #page #user-profile-form .fieldset-wrapper {
   padding-top: 30px;
 }
@@ -1176,18 +1220,18 @@ User profile
 	Node Edit
 	
 -------------------------------------------------------------------*/
-/* line 789, ../sass/custom.scss */
+/* line 790, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table,
 .page-node-add #page .field-multiple-table {
   /* Style secondary buttons */
 }
-/* line 791, ../sass/custom.scss */
+/* line 792, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table tr.draggable > td,
 .page-node-add #page .field-multiple-table tr.draggable > td {
   padding: 15px 25px;
   /* Section Type Headline */
 }
-/* line 794, ../sass/custom.scss */
+/* line 795, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table tr.draggable > td > .form-wrapper:first-child,
 .page-node-edit #page .field-multiple-table tr.draggable > td > .ajax-new-content > .form-wrapper:first-child,
 .page-node-add #page .field-multiple-table tr.draggable > td > .form-wrapper:first-child,
@@ -1195,7 +1239,7 @@ User profile
   margin-top: 5px;
   margin-bottom: 15px;
 }
-/* line 798, ../sass/custom.scss */
+/* line 799, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table tr.draggable > td > .form-wrapper:first-child em,
 .page-node-edit #page .field-multiple-table tr.draggable > td > .ajax-new-content > .form-wrapper:first-child em,
 .page-node-add #page .field-multiple-table tr.draggable > td > .form-wrapper:first-child em,
@@ -1203,27 +1247,27 @@ User profile
   font-weight: bold;
   font-style: normal;
 }
-/* line 804, ../sass/custom.scss */
+/* line 805, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table tr.draggable > td.field-multiple-drag,
 .page-node-add #page .field-multiple-table tr.draggable > td.field-multiple-drag {
   padding: 15px 5px;
 }
-/* line 807, ../sass/custom.scss */
+/* line 808, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table tr.draggable div[class^="field-type-"],
 .page-node-add #page .field-multiple-table tr.draggable div[class^="field-type-"] {
   margin-bottom: 15px;
 }
-/* line 810, ../sass/custom.scss */
+/* line 811, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table tr.draggable .form-actions,
 .page-node-add #page .field-multiple-table tr.draggable .form-actions {
   margin-bottom: 0;
 }
-/* line 814, ../sass/custom.scss */
+/* line 815, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table input.field-add-more-submit,
 .page-node-add #page .field-multiple-table input.field-add-more-submit {
   margin: 15px 0 15px;
 }
-/* line 818, ../sass/custom.scss */
+/* line 819, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table input.field-add-more-submit,
 .page-node-edit #page .field-multiple-table input.remove,
 .page-node-edit #page .field-multiple-table a.button.edit,
@@ -1238,8 +1282,65 @@ User profile
 .page-node-add #page .field-multiple-table .field-name-field-sec-nav-elment input[type=submit] {
   background: #bbb;
 }
-/* line 827, ../sass/custom.scss */
+/* line 828, ../sass/custom.scss */
 .page-node-edit #page .form-item-field-main-paragraphs-add-more-type,
 .page-node-add #page .form-item-field-main-paragraphs-add-more-type {
   margin: 25px 0 0;
+}
+
+/*------------------------------------------------------------------
+
+	Rebildporten newsletter
+	
+-------------------------------------------------------------------*/
+/* line 841, ../sass/custom.scss */
+.page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-header ul.action-links {
+  margin-bottom: 2em;
+}
+/* line 843, ../sass/custom.scss */
+.page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-header ul.action-links li {
+  background-color: #7f9dcd;
+  color: #fff;
+  background-image: none;
+  border: none;
+  font-size: 1em;
+  padding: 8px 35px 8px 35px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  margin: 0;
+}
+/* line 856, ../sass/custom.scss */
+.page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-header ul.action-links li a {
+  color: #ffffff;
+  background: none;
+  padding: 0;
+}
+/* line 863, ../sass/custom.scss */
+.page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-header .fieldset-legend {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 868, ../sass/custom.scss */
+.page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-filters {
+  margin-bottom: 2em;
+}
+/* line 870, ../sass/custom.scss */
+.page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-filters .views-submit-button, .page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-filters .views-reset-button {
+  padding-top: 0;
+  padding-right: 0;
+  position: relative;
+  height: 43px;
+}
+/* line 875, ../sass/custom.scss */
+.page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-filters .views-submit-button input, .page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-filters .views-reset-button input {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+}
+/* line 881, ../sass/custom.scss */
+.page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-filters .views-submit-button {
+  padding-right: 7em;
 }
