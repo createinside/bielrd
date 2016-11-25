@@ -238,7 +238,7 @@ echo $this_day;
 								?>
 								<!-- </CONTENT> -->
 								<!-- <FOOTER> -->
-								<table bgcolor="#000000" border="0" cellpadding="0" cellspacing="0" width="100%" style="font-size: 0px;">
+								<table bgcolor="#ef5125" border="0" cellpadding="0" cellspacing="0" width="100%" style="font-size: 0px;">
 									<tbody>
                                         <tr>
 											<td width="250" height="25">&nbsp;</td>
