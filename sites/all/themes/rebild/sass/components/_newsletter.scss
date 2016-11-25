@@ -1,0 +1,76 @@
+.node-type-nl-rp, .node-type-nl-br {
+    #region-content{
+        .node{
+            .field-item{
+                td{
+                    vertical-align: top;
+                    .field{
+                        margin-bottom: 0;
+                        a{
+                            color: #ffffff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#region-sidebar-first{
+    .block-views{
+        position: relative;
+        .view-rebildporten-content-list{
+            background-color: $bg-news-block;
+            @include box-shadow(rgba(black, 0.15) 0 0 3px);
+            @include border-radius(3px);
+            .view-header {
+                .news_view_all {
+                    position: absolute;
+                    top: 0;
+                    text-transform: uppercase;
+                    right: 0;
+                    left: auto;
+                    padding-top: 2px;
+                    a {
+                        text-shadow: white 1px 1px 1px;
+                        font-size: 0.8em;
+                        color: #474747;
+                        text-decoration: none;
+                    }
+                    
+                }
+            }
+            .view-content {
+                padding: 0 $spacing-std/2 $spacing-std/2;
+                line-height: $line-height-std;
+            }
+            .views-row {
+                position: relative;
+                padding: 1em;
+                .views-field-title {
+                    height: $line-height-std;
+                    a {
+                        color: $text-color;
+                        text-decoration: none;
+                        font-size: 1.1em;
+                    }
+                }
+                .views-field-created {
+                    font-style: italic;
+                    font-size: $font-size-small;
+                    margin-bottom: 3px;
+                    margin-top: 3px;
+                    height: $line-height-std;
+                    color: $text-color-footer;
+                }
+            }
+            .views-row-first { 
+                padding: $spacing-std $spacing-std/2; 
+                .news-title {
+                    font-weight: bold;
+                }
+            }
+            .views-row-even { background-color: white; }
+        }
+    }
+}

@@ -55,6 +55,7 @@ features[user_permission][] = clone node
 features[user_permission][] = clone own nodes
 features[user_permission][] = flush caches
 features[user_role][] = administrator
+features[user_role][] = business
 features[user_role][] = fagredaktør
 features[user_role][] = kommunikation
 features[user_role][] = konfigurator

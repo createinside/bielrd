@@ -7,25 +7,42 @@
  */
 function nl_br_menu()
 {
-	$items['node/%node/nl_br_export'] = array(
+	$items['node/%node/nl_br_preview'] = array(
+		'title' => 'Preview (nyt vindue)',
+		'type' => MENU_LOCAL_TASK,
+		'page callback' => 'nl_br_preview_page',
+		'page arguments' => array(1),
+		'access callback' => 'nl_br_preview_access',
+		'access arguments' => array(1),
+        'weight' => '1',
+	);
+    
+    $items['node/%node/nl_br_export'] = array(
 		'title' => 'Eksporter',
 		'type' => MENU_LOCAL_TASK,
 		'page callback' => 'nl_br_export_page',
 		'page arguments' => array(1),
 		'access callback' => 'nl_br_export_access',
 		'access arguments' => array(1),
+        'weight' => '2',
  	);
-
-	$items['node/%node/nl_br_preview'] = array(
-		'title' => 'Preview',
-		'type' => MENU_LOCAL_TASK,
-		'page callback' => 'nl_br_preview_page',
-		'page arguments' => array(1),
-		'access callback' => 'nl_br_preview_access',
-		'access arguments' => array(1),
-	);
+    
+    $items['node/%node/mailpeople'] = array(
+        'title' => 'Gå til mailpeople',
+        'page callback' => 'nl_br_redirect',
+        'page arguments' => array('node', 1),
+        'access callback' => 'nl_br_preview_access',
+        'access arguments' => array(1),
+        'type' => MENU_LOCAL_TASK,
+        'weight' => '2',
+      );
 
 	return $items;
+}
+
+function nl_br_redirect($node) {
+  $url = "http://mailpeople.dk/emailmarketer/admin/index.php?Page=Newsletters&Action=Manage";
+  drupal_goto($url, array('external' => TRUE));
 }
 
 /**
@@ -42,6 +59,16 @@ function nl_br_admin_paths()
 }
 
 /**
+ * Implements hook_entity_info_alter().
+ */
+function nl_br_entity_info_alter(&$entity_info) {
+  $entity_info['paragraphs_item']['view modes']['rp'] = array(
+    'label' => t('Rebildporten'),
+    'custom settings' => TRUE,
+  );
+}
+
+/**
  * Implements hook_theme().
  * @param $existing
  * @param $type
@@ -54,6 +81,9 @@ function nl_br_theme($existing, $type, $theme, $path)
 	return array(
 		'nl_br_export_markup' => array(
 			'template' => 'templates/nl_br_export_markup',
+		),
+		'nl_rp_export_markup' => array(
+			'template' => 'templates/nl_rp_export_markup',
 		),
 	);
 }
@@ -71,6 +101,13 @@ function nl_br_view_mode_templates()
 		'paragraphs_item__nl_br_sec_5__full',
 		'paragraphs_item__nl_br_sec_6__full',
 		'paragraphs_item__nl_br_sec_7__full',
+		'paragraphs_item__nl_br_sec_1__rp',
+		'paragraphs_item__nl_br_sec_2__rp',
+		'paragraphs_item__nl_br_sec_3__rp',
+		'paragraphs_item__nl_br_sec_4__rp',
+		'paragraphs_item__nl_br_sec_5__rp',
+		'paragraphs_item__nl_br_sec_6__rp',
+		'paragraphs_item__nl_br_sec_7__rp',
 	);
 }
 
@@ -88,7 +125,7 @@ function nl_br_export_page($node)
 		'markup' => $nl_br_markup,
 		'subject' => $nl_br_subject,
 	);
-
+    
 	return drupal_get_form('nl_br_export_form', $nl_br);
 }
 
@@ -99,14 +136,16 @@ function nl_br_export_page($node)
  */
 function nl_br_export_access($node)
 {
+    return TRUE;
 	$nodeType = $node->type;
 
-	$roleNyhedsbrev = user_role_load_by_name("nyhedsbrev")->rid;
+	$roleNyhedsbrev = user_role_load_by_name("Business Rebild - nyhedsbrev")->rid;
+	$roleNyhedsbrevRp = user_role_load_by_name("Rebildporten - nyhedsbrev")->rid;
 	$roleAdministrator = user_role_load_by_name("administrator")->rid;
 
 	// if the node is of type Business Rebild Newsletter (nl_br)
 	// and the current user has the role Administrator or Nyhedsbrev
-	if($nodeType == "nl_br" && (user_has_role($roleAdministrator) || user_has_role($roleNyhedsbrev))) {
+	if($nodeType == "nl_br" && (user_has_role($roleAdministrator) || user_has_role($roleNyhedsbrev) || user_has_role($roleNyhedsbrevRp))) {
 		return TRUE;
 	}
 
@@ -127,14 +166,16 @@ function nl_br_preview_page($node) {
  * @return bool
  */
 function nl_br_preview_access($node) {
-	$nodeType = $node->type;
-
-	$roleNyhedsbrev = user_role_load_by_name("nyhedsbrev")->rid;
+	return TRUE;
+    $nodeType = $node->type;
+    
+	$roleNyhedsbrev = user_role_load_by_name("Business Rebild - nyhedsbrev")->rid;
+	$roleNyhedsbrevRp = user_role_load_by_name("Rebildporten - nyhedsbrev")->rid;
 	$roleAdministrator = user_role_load_by_name("administrator")->rid;
 
 	// if the node is of type Business Rebild Newsletter (nl_br)
 	// and the current user has the role Administrator or Nyhedsbrev
-	if($nodeType == "nl_br" && (user_has_role($roleAdministrator) || user_has_role($roleNyhedsbrev))) {
+	if($nodeType == "nl_br" && (user_has_role($roleAdministrator) || user_has_role($roleNyhedsbrev) || user_has_role($roleNyhedsbrevRp))) {
 		return TRUE;
 	}
 
@@ -147,7 +188,7 @@ function nl_br_preview_access($node) {
  * Implements hook_node_view().
  */
 function nl_br_node_view($node, $view_mode, $langcode) {
-	if($node->type=='nl_br') {
+	if($node->type=='nl_br' || $node->type=='nl_rp') {
 		drupal_add_js(drupal_get_path('module', 'nl_br').'/js/nl_br_local_tasks.js');
 	}
 }
@@ -231,16 +272,27 @@ function nl_br_export_form_submit($form, &$form_state)
  * @throws Exception
  */
 function nl_br_generate_markup($node) {
+	
 	$variables = array();
 	$sections = array();
-
+	
+	// Content type specific templates
+	if($node->type == 'nl_br') {
+		$theme = 'nl_br_export_markup';
+		$view_mode = 'full';
+	}
+	else if($node->type == 'nl_rp') {
+		$theme = 'nl_rp_export_markup';
+		$view_mode = 'rp';
+	}	
+	
 	$i = 0;
 	$sectionsLeft = TRUE;
 	while($sectionsLeft) {
 		if(isset($node->field_nl_br_sections['und'][$i])) {
 			$paragraph_id = $node->field_nl_br_sections['und'][$i]['value'];
 			$entities = entity_load('paragraphs_item', array($paragraph_id));
-			$paragraph = entity_view('paragraphs_item', $entities, 'full');
+			$paragraph = entity_view('paragraphs_item', $entities, $view_mode);
 
 			$sections[$i] = render($paragraph);
 
@@ -253,7 +305,7 @@ function nl_br_generate_markup($node) {
 
 	$variables['sections'] = $sections;
 
-	$markup = theme('nl_br_export_markup', $variables);
+	$markup = theme($theme, $variables);
 	$markup = check_markup($markup, 'html_email');
 
 	return $markup;
