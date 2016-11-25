@@ -12,30 +12,30 @@ function nl_br_menu()
 		'type' => MENU_LOCAL_TASK,
 		'page callback' => 'nl_br_preview_page',
 		'page arguments' => array(1),
-		'access callback' => 'nl_br_preview_access',
+		'access callback' => 'nl_br_export_access',
 		'access arguments' => array(1),
-        'weight' => '1',
+    'weight' => '1',
 	);
     
-    $items['node/%node/nl_br_export'] = array(
+  $items['node/%node/nl_br_export'] = array(
 		'title' => 'Eksporter',
 		'type' => MENU_LOCAL_TASK,
 		'page callback' => 'nl_br_export_page',
 		'page arguments' => array(1),
 		'access callback' => 'nl_br_export_access',
 		'access arguments' => array(1),
-        'weight' => '2',
+    'weight' => '2',
  	);
     
-    $items['node/%node/mailpeople'] = array(
-        'title' => 'Gå til mailpeople',
-        'page callback' => 'nl_br_redirect',
-        'page arguments' => array('node', 1),
-        'access callback' => 'nl_br_preview_access',
-        'access arguments' => array(1),
-        'type' => MENU_LOCAL_TASK,
-        'weight' => '2',
-      );
+  $items['node/%node/mailpeople'] = array(
+    'title' => 'Gå til mailpeople',
+    'page callback' => 'nl_br_redirect',
+    'page arguments' => array('node', 1),
+    'access callback' => 'nl_br_export_access',
+    'access arguments' => array(1),
+    'type' => MENU_LOCAL_TASK,
+    'weight' => '2',
+  );
 
 	return $items;
 }
@@ -136,19 +136,21 @@ function nl_br_export_page($node)
  */
 function nl_br_export_access($node)
 {
-    return TRUE;
 	$nodeType = $node->type;
 
 	$roleNyhedsbrev = user_role_load_by_name("Business Rebild - nyhedsbrev")->rid;
 	$roleNyhedsbrevRp = user_role_load_by_name("Rebildporten - nyhedsbrev")->rid;
 	$roleAdministrator = user_role_load_by_name("administrator")->rid;
 
-	// if the node is of type Business Rebild Newsletter (nl_br)
-	// and the current user has the role Administrator or Nyhedsbrev
-	if($nodeType == "nl_br" && (user_has_role($roleAdministrator) || user_has_role($roleNyhedsbrev) || user_has_role($roleNyhedsbrevRp))) {
+	if($roleAdministrator) {
 		return TRUE;
 	}
-
+	if($nodeType == "nl_br" && user_has_role($roleNyhedsbrev)) {
+		return TRUE;
+	}
+	if($nodeType == "nl_rp" && user_has_role($roleNyhedsbrevRp)) {
+		return TRUE;
+	}
 	return FALSE;
 }
 
@@ -158,28 +160,6 @@ function nl_br_export_access($node)
  */
 function nl_br_preview_page($node) {
 	print nl_br_generate_markup($node);
-}
-
-/**
- * Business Rebild Newsletter prewview access
- * @param $node
- * @return bool
- */
-function nl_br_preview_access($node) {
-	return TRUE;
-    $nodeType = $node->type;
-    
-	$roleNyhedsbrev = user_role_load_by_name("Business Rebild - nyhedsbrev")->rid;
-	$roleNyhedsbrevRp = user_role_load_by_name("Rebildporten - nyhedsbrev")->rid;
-	$roleAdministrator = user_role_load_by_name("administrator")->rid;
-
-	// if the node is of type Business Rebild Newsletter (nl_br)
-	// and the current user has the role Administrator or Nyhedsbrev
-	if($nodeType == "nl_br" && (user_has_role($roleAdministrator) || user_has_role($roleNyhedsbrev) || user_has_role($roleNyhedsbrevRp))) {
-		return TRUE;
-	}
-
-	return FALSE;
 }
 
 /**
