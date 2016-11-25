@@ -19,6 +19,7 @@ Breadcrumbs
 Views
 Media module
 User profile
+Rebildporten newsletter
 
 -------------------------------------------------------------------*/
 
@@ -828,3 +829,70 @@ User profile
 		margin: 25px 0 0;
 	}
 }
+
+/*------------------------------------------------------------------
+
+	Rebildporten newsletter
+	
+-------------------------------------------------------------------*/
+.page-admin-br-nyhedsbreve{
+    .view-rebildporten-content-list{
+        .view-header{
+            ul.action-links{
+                margin-bottom: 2em;
+                li{
+                    background-color: #7f9dcd;
+                    color: #fff;
+                    background-image: none;
+                    border: none;
+                    font-size: 1em;
+                    padding: 8px 35px 8px 35px;
+                    -webkit-border-radius: 3px;
+                    -moz-border-radius: 3px;
+                    -ms-border-radius: 3px;
+                    -o-border-radius: 3px;
+                    border-radius: 3px;
+                    margin: 0;
+                    a{
+                        color: #ffffff;
+                        background: none;
+                        padding: 0;
+                    }
+                }
+            }
+            .fieldset-legend{
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        }
+        .view-filters{
+            margin-bottom: 2em;
+            .views-submit-button, .views-reset-button{
+                padding-top: 0;
+                padding-right: 0;
+                position: relative;
+                height: 43px;
+                input{
+                    position: absolute;
+                    bottom: 0;
+                    margin: 0;
+                }
+            }
+            .views-submit-button{
+                padding-right: 7em;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -13,31 +13,37 @@ function rebild_general_settings_user_default_roles() {
   // Exported role: administrator.
   $roles['administrator'] = array(
     'name' => 'administrator',
-    'weight' => 5,
+    'weight' => 7,
+  );
+
+  // Exported role: business.
+  $roles['business'] = array(
+    'name' => 'business',
+    'weight' => 4,
   );
 
   // Exported role: fagredaktør.
   $roles['fagredaktør'] = array(
     'name' => 'fagredaktør',
-    'weight' => 2,
+    'weight' => 3,
   );
 
   // Exported role: kommunikation.
   $roles['kommunikation'] = array(
     'name' => 'kommunikation',
-    'weight' => 3,
+    'weight' => 5,
   );
 
   // Exported role: konfigurator.
   $roles['konfigurator'] = array(
     'name' => 'konfigurator',
-    'weight' => 4,
+    'weight' => 6,
   );
 
   // Exported role: politiker.
   $roles['politiker'] = array(
     'name' => 'politiker',
-    'weight' => 6,
+    'weight' => 2,
   );
 
   return $roles;
