@@ -134,15 +134,15 @@ function nl_br_export_page($node)
  * @param $node
  * @return bool
  */
-function nl_br_export_access($node)
-{
+function nl_br_export_access($node) {	
+
 	$nodeType = $node->type;
 
 	$roleNyhedsbrev = user_role_load_by_name("Business Rebild - nyhedsbrev")->rid;
 	$roleNyhedsbrevRp = user_role_load_by_name("Rebildporten - nyhedsbrev")->rid;
 	$roleAdministrator = user_role_load_by_name("administrator")->rid;
 
-	if($roleAdministrator) {
+	if(($nodeType == "nl_br" || $nodeType == "nl_rp") && user_has_role($roleAdministrator)) {
 		return TRUE;
 	}
 	if($nodeType == "nl_br" && user_has_role($roleNyhedsbrev)) {
