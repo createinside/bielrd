@@ -79,7 +79,8 @@
 		?>
   </h3>
   <?php print render($title_suffix); ?>
-  <div class="search-date"><?php print format_date($result["node"]->created, "custom", "d. F Y"); ?></div>
+  <?php dpm($result); ?>
+  <div class="search-date"><?php print format_date($result["node"]->changed, "custom", "d. F Y"); ?></div>
   <?php if ($snippet): ?>
     <div class="search-text"<?php print $content_attributes; ?>><?php print $snippet; ?></div>
   <?php endif; ?>
