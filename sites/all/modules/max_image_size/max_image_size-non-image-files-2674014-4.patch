@@ -1,0 +1,28 @@
+From cfbc4c3d380bf1f22f6117fcd6bc471c94626dd3 Mon Sep 17 00:00:00 2001
+From: Rick J <rick@activeservice.co.uk>
+Date: Sat, 5 Mar 2016 12:03:48 +0000
+Subject: [PATCH] Issue 2674014 by Rick J: Fixed inclusion of non-image files
+
+---
+ max_image_size.module | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/max_image_size.module b/max_image_size.module
+index b400d60..844c992 100644
+--- a/max_image_size.module
++++ b/max_image_size.module
+@@ -378,9 +378,11 @@ function max_image_size_get_unknown_fids() {
+                 ->distinct();
+ 
+   // Pull all fids from the file_managed table that aren't in the process table.
++  // select only non-temporary image files.
+   $query = db_select('file_managed', 'm')
+             ->fields('m', array('fid'))
+             ->condition('m.status', FILE_STATUS_PERMANENT)
++            ->condition('m.type', 'image')
+             ->condition('m.fid', $subquery, 'NOT IN');
+ 
+   // ...And restrict to those greater than the specified filesize.
+-- 
+1.9.1
+
