@@ -66,7 +66,8 @@ function max_image_size_system_settings_form() {
   );
 
   // Add a little information about the number of images that will be resized.
-  $pending = count(max_image_size_get_unprocessed_images());
+  // $pending = count(max_image_size_get_unprocessed_images());
+  $pending = 0;
   $form['oversized_images'] = array(
     '#type' => 'item',
     '#title' => t('Pending images'),

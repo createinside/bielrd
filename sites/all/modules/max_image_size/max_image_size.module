@@ -109,12 +109,14 @@ function max_image_size_help($path, $arg) {
  */
 function max_image_size_resize_callback($fid) {
 
+	/*
   $file = file_load($fid);
   if (max_image_size_resize_file($file)) {
 
     // Call file_save so that metadata information gets updated.
     file_save($file);
   }
+	*/
 }
 
 /**
@@ -378,9 +380,11 @@ function max_image_size_get_unknown_fids() {
                 ->distinct();
 
   // Pull all fids from the file_managed table that aren't in the process table.
+  // select only non-temporary image files.
   $query = db_select('file_managed', 'm')
             ->fields('m', array('fid'))
             ->condition('m.status', FILE_STATUS_PERMANENT)
+            ->condition('m.type', 'image')
             ->condition('m.fid', $subquery, 'NOT IN');
 
   // ...And restrict to those greater than the specified filesize.

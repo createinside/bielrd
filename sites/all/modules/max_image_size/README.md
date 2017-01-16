@@ -10,7 +10,7 @@ work on already uploaded files and imported content.
 
 ## Related
 
-These modules will allow you to adjust the site of the displayed image while
+These modules will allow you to adjust the size of the displayed image while
 leaving the original untouched:
 
  * [Image Resize Filter](https://www.drupal.org/project/image_resize_filter)
