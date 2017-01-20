@@ -464,13 +464,13 @@ Rebildporten newsletter
 			.min_profil_top {
 				.left {
 					float: left;
-					min-width: 67%;
-					margin-right: 40px;
-					
+					width: 75%;
+					padding-right: 40px;
+					box-sizing: border-box;	
 				}
 				.right {
-					float: right;
-					width: 28%;
+					float: left;
+					width: 25%;
 					.view-content {
 						@include grid-box-workbench(white);
 						h4 {
@@ -507,14 +507,16 @@ Rebildporten newsletter
 			.min_profil_middle {
 				.needs_attention {
 					float: left;
-					width: 67%;
-					margin-right: 40px;	
+					width: 75%;
+					padding-right: 40px;
+					box-sizing: border-box;	
 				}
 				#block-block-16 {
-					float: right;
+					float: left;
+					width: 25%;
+					margin-top: 69px;
+					box-sizing: border-box;
 					@include grid-box-workbench(white);
-					width: 28%;
-					margin-top: 68px;
 					h2 {
 						padding: 10px;
 						border-bottom: 1px solid #bcbdbd;
