@@ -91,6 +91,7 @@ function rebild_workflow_user_default_permissions() {
   $permissions['create files'] = array(
     'name' => 'create files',
     'roles' => array(
+      'Rebildporten - nyhedsbrev' => 'Rebildporten - nyhedsbrev',
       'administrator' => 'administrator',
       'fagredaktør' => 'fagredaktør',
       'kommunikation' => 'kommunikation',
@@ -295,6 +296,7 @@ function rebild_workflow_user_default_permissions() {
   $permissions['view own files'] = array(
     'name' => 'view own files',
     'roles' => array(
+      'Rebildporten - nyhedsbrev' => 'Rebildporten - nyhedsbrev',
       'administrator' => 'administrator',
       'fagredaktør' => 'fagredaktør',
       'kommunikation' => 'kommunikation',
@@ -306,6 +308,7 @@ function rebild_workflow_user_default_permissions() {
   $permissions['view own private files'] = array(
     'name' => 'view own private files',
     'roles' => array(
+      'Rebildporten - nyhedsbrev' => 'Rebildporten - nyhedsbrev',
       'administrator' => 'administrator',
       'fagredaktør' => 'fagredaktør',
       'kommunikation' => 'kommunikation',

@@ -892,13 +892,14 @@ Rebildporten newsletter
 /* line 465, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .left {
   float: left;
-  min-width: 67%;
-  margin-right: 40px;
+  width: 75%;
+  padding-right: 40px;
+  box-sizing: border-box;
 }
 /* line 471, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right {
-  float: right;
-  width: 28%;
+  float: left;
+  width: 25%;
 }
 /* line 474, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content {
@@ -946,22 +947,24 @@ Rebildporten newsletter
 /* line 508, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle .needs_attention {
   float: left;
-  width: 67%;
-  margin-right: 40px;
+  width: 75%;
+  padding-right: 40px;
+  box-sizing: border-box;
 }
-/* line 513, ../sass/custom.scss */
+/* line 514, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle #block-block-16 {
-  float: right;
+  float: left;
+  width: 25%;
+  margin-top: 69px;
+  box-sizing: border-box;
   background-color: white;
   border: 1px solid #bebfb9;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   /* @include box-shadow(rgba(black, 0.85) 0 0 3px); */
-  width: 28%;
-  margin-top: 68px;
 }
-/* line 518, ../sass/custom.scss */
+/* line 520, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle #block-block-16 h2 {
   padding: 10px;
   border-bottom: 1px solid #bcbdbd;
@@ -973,15 +976,15 @@ Rebildporten newsletter
   text-transform: uppercase;
   vertical-align: middle;
 }
-/* line 529, ../sass/custom.scss */
+/* line 531, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle #block-block-16 .content {
   padding: 10px;
 }
-/* line 532, ../sass/custom.scss */
+/* line 534, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle #block-block-16 p {
   margin: 0;
 }
-/* line 538, ../sass/custom.scss */
+/* line 540, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_bottom .all_recent_content, .page-admin-workbench #page #min_profil_side .min_profil_bottom .content_without_moderation {
   float: left;
   width: 100%;
@@ -992,28 +995,28 @@ Rebildporten newsletter
 	WYSIWYG editor
 
 -------------------------------------------------------------------*/
-/* line 559, ../sass/custom.scss */
+/* line 561, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mce_removeformat {
   display: none;
 }
-/* line 562, ../sass/custom.scss */
+/* line 564, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mce_pasteword {
   display: none;
 }
-/* line 565, ../sass/custom.scss */
+/* line 567, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mce_paste {
   display: none;
 }
-/* line 568, ../sass/custom.scss */
+/* line 570, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mceFirst {
   background: #f6f6f6;
 }
-/* line 571, ../sass/custom.scss */
+/* line 573, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mceIframeContainer.mceFirst.mceLast {
   border-top: 1px solid #d8d8d8;
   border-bottom: 1px solid #d8d8d8;
 }
-/* line 575, ../sass/custom.scss */
+/* line 577, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mceListBox {
   border-radius: 0;
   -o-border-radius: 0;
@@ -1024,7 +1027,7 @@ Rebildporten newsletter
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
 }
-/* line 589, ../sass/custom.scss */
+/* line 591, ../sass/custom.scss */
 .page-node #page .filter-wrapper label {
   font-size: 12px;
   font-weight: bold;
@@ -1035,7 +1038,7 @@ Rebildporten newsletter
 	Breadcrumbs
 	
 -------------------------------------------------------------------*/
-/* line 605, ../sass/custom.scss */
+/* line 607, ../sass/custom.scss */
 #branding .breadcrumb {
   font-size: 0.91667em;
   line-height: 1.5;
@@ -1045,14 +1048,14 @@ Rebildporten newsletter
   margin-left: 5px;
   text-shadow: white 1px 1px 1px;
 }
-/* line 613, ../sass/custom.scss */
+/* line 615, ../sass/custom.scss */
 #branding .breadcrumb a, #branding .breadcrumb strong {
   color: #474747;
   text-decoration: none;
   position: relative;
   top: -1px;
 }
-/* line 619, ../sass/custom.scss */
+/* line 621, ../sass/custom.scss */
 #branding .breadcrumb span {
   font-size: 1.25em;
 }
@@ -1062,7 +1065,7 @@ Rebildporten newsletter
 	Views 
 	
 -------------------------------------------------------------------*/
-/* line 630, ../sass/custom.scss */
+/* line 632, ../sass/custom.scss */
 .views-exposed-form .form-item {
   padding: 0;
 }
@@ -1072,7 +1075,7 @@ Rebildporten newsletter
 	Media module
 	
 -------------------------------------------------------------------*/
-/* line 641, ../sass/custom.scss */
+/* line 643, ../sass/custom.scss */
 .page-media .form-submit, .page-media a.button {
   background-color: #7f9dcd;
   color: #fff;
@@ -1086,7 +1089,7 @@ Rebildporten newsletter
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 654, ../sass/custom.scss */
+/* line 656, ../sass/custom.scss */
 .page-media input[type="file"] {
   background-color: white;
   border: 1px solid #bebfb9;
@@ -1098,15 +1101,15 @@ Rebildporten newsletter
   margin-right: 20px;
 }
 
-/* line 662, ../sass/custom.scss */
+/* line 664, ../sass/custom.scss */
 .page-node .media-widget .preview {
   margin: 0;
 }
-/* line 664, ../sass/custom.scss */
+/* line 666, ../sass/custom.scss */
 .page-node .media-widget .preview > div {
   margin-right: 15px;
 }
-/* line 668, ../sass/custom.scss */
+/* line 670, ../sass/custom.scss */
 .page-node .media-widget .button {
   background-color: #7f9dcd;
   color: #fff;
@@ -1122,7 +1125,7 @@ Rebildporten newsletter
   display: inline-block;
 }
 
-/* line 687, ../sass/custom.scss */
+/* line 689, ../sass/custom.scss */
 #file-entity-edit .chzn-choices input[type="text"], #file-entity-edit .chzn-drop input[type="text"], #file-entity-edit--2 .chzn-choices input[type="text"], #file-entity-edit--2 .chzn-drop input[type="text"] {
   border-radius: 0;
   -webkit-border-radius: none;
@@ -1134,7 +1137,7 @@ Rebildporten newsletter
   -moz-box-shadow: transparent 0 0 0;
   box-shadow: transparent 0 0 0;
 }
-/* line 699, ../sass/custom.scss */
+/* line 701, ../sass/custom.scss */
 #file-entity-edit input[type="text"], #file-entity-edit--2 input[type="text"] {
   width: 50%;
   padding: 0 0 0 1%;
@@ -1148,7 +1151,7 @@ Rebildporten newsletter
   /* @include box-shadow(rgba(black, 0.85) 0 0 3px); */
   font-size: 13px;
 }
-/* line 707, ../sass/custom.scss */
+/* line 709, ../sass/custom.scss */
 #file-entity-edit input[type="submit"], #file-entity-edit--2 input[type="submit"] {
   background-color: #7f9dcd;
   color: #fff;
@@ -1162,7 +1165,7 @@ Rebildporten newsletter
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 720, ../sass/custom.scss */
+/* line 722, ../sass/custom.scss */
 #file-entity-edit .button-no, #file-entity-edit--2 .button-no {
   background-color: #7f9dcd;
   color: #fff;
@@ -1177,12 +1180,12 @@ Rebildporten newsletter
   border-radius: 3px;
 }
 
-/* line 735, ../sass/custom.scss */
+/* line 737, ../sass/custom.scss */
 .media-modal-frame .page-file {
   background-color: #fff;
 }
 
-/* line 740, ../sass/custom.scss */
+/* line 742, ../sass/custom.scss */
 #media-browser-page #branding {
   background: #fff;
 }
@@ -1192,15 +1195,15 @@ Rebildporten newsletter
 	BEAN
 	
 -------------------------------------------------------------------*/
-/* line 752, ../sass/custom.scss */
+/* line 754, ../sass/custom.scss */
 .page-block #bean-form .form-item-is-new-revision, .page-block #bean-form .form-item-default-revision, .page-block #bean-form .form-item-view-mode {
   display: none;
 }
-/* line 756, ../sass/custom.scss */
+/* line 758, ../sass/custom.scss */
 .page-block #bean-form #edit-log-wrapper .form-item {
   display: none;
 }
-/* line 761, ../sass/custom.scss */
+/* line 763, ../sass/custom.scss */
 .page-block #bean-form .form-item-default-revision input, .page-block #bean-form .form-item-default-revision label {
   display: none;
 }
@@ -1210,7 +1213,7 @@ Rebildporten newsletter
 	User profile
 	
 -------------------------------------------------------------------*/
-/* line 776, ../sass/custom.scss */
+/* line 778, ../sass/custom.scss */
 .page-user #page #user-profile-form .fieldset-wrapper {
   padding-top: 30px;
 }
@@ -1220,18 +1223,18 @@ Rebildporten newsletter
 	Node Edit
 	
 -------------------------------------------------------------------*/
-/* line 790, ../sass/custom.scss */
+/* line 792, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table,
 .page-node-add #page .field-multiple-table {
   /* Style secondary buttons */
 }
-/* line 792, ../sass/custom.scss */
+/* line 794, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table tr.draggable > td,
 .page-node-add #page .field-multiple-table tr.draggable > td {
   padding: 15px 25px;
   /* Section Type Headline */
 }
-/* line 795, ../sass/custom.scss */
+/* line 797, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table tr.draggable > td > .form-wrapper:first-child,
 .page-node-edit #page .field-multiple-table tr.draggable > td > .ajax-new-content > .form-wrapper:first-child,
 .page-node-add #page .field-multiple-table tr.draggable > td > .form-wrapper:first-child,
@@ -1239,7 +1242,7 @@ Rebildporten newsletter
   margin-top: 5px;
   margin-bottom: 15px;
 }
-/* line 799, ../sass/custom.scss */
+/* line 801, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table tr.draggable > td > .form-wrapper:first-child em,
 .page-node-edit #page .field-multiple-table tr.draggable > td > .ajax-new-content > .form-wrapper:first-child em,
 .page-node-add #page .field-multiple-table tr.draggable > td > .form-wrapper:first-child em,
@@ -1247,27 +1250,27 @@ Rebildporten newsletter
   font-weight: bold;
   font-style: normal;
 }
-/* line 805, ../sass/custom.scss */
+/* line 807, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table tr.draggable > td.field-multiple-drag,
 .page-node-add #page .field-multiple-table tr.draggable > td.field-multiple-drag {
   padding: 15px 5px;
 }
-/* line 808, ../sass/custom.scss */
+/* line 810, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table tr.draggable div[class^="field-type-"],
 .page-node-add #page .field-multiple-table tr.draggable div[class^="field-type-"] {
   margin-bottom: 15px;
 }
-/* line 811, ../sass/custom.scss */
+/* line 813, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table tr.draggable .form-actions,
 .page-node-add #page .field-multiple-table tr.draggable .form-actions {
   margin-bottom: 0;
 }
-/* line 815, ../sass/custom.scss */
+/* line 817, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table input.field-add-more-submit,
 .page-node-add #page .field-multiple-table input.field-add-more-submit {
   margin: 15px 0 15px;
 }
-/* line 819, ../sass/custom.scss */
+/* line 821, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table input.field-add-more-submit,
 .page-node-edit #page .field-multiple-table input.remove,
 .page-node-edit #page .field-multiple-table a.button.edit,
@@ -1282,7 +1285,7 @@ Rebildporten newsletter
 .page-node-add #page .field-multiple-table .field-name-field-sec-nav-elment input[type=submit] {
   background: #bbb;
 }
-/* line 828, ../sass/custom.scss */
+/* line 830, ../sass/custom.scss */
 .page-node-edit #page .form-item-field-main-paragraphs-add-more-type,
 .page-node-add #page .form-item-field-main-paragraphs-add-more-type {
   margin: 25px 0 0;
@@ -1293,11 +1296,11 @@ Rebildporten newsletter
 	Rebildporten newsletter
 	
 -------------------------------------------------------------------*/
-/* line 841, ../sass/custom.scss */
+/* line 843, ../sass/custom.scss */
 .page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-header ul.action-links {
   margin-bottom: 2em;
 }
-/* line 843, ../sass/custom.scss */
+/* line 845, ../sass/custom.scss */
 .page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-header ul.action-links li {
   background-color: #7f9dcd;
   color: #fff;
@@ -1312,35 +1315,35 @@ Rebildporten newsletter
   border-radius: 3px;
   margin: 0;
 }
-/* line 856, ../sass/custom.scss */
+/* line 858, ../sass/custom.scss */
 .page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-header ul.action-links li a {
   color: #ffffff;
   background: none;
   padding: 0;
 }
-/* line 863, ../sass/custom.scss */
+/* line 865, ../sass/custom.scss */
 .page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-header .fieldset-legend {
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 868, ../sass/custom.scss */
+/* line 870, ../sass/custom.scss */
 .page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-filters {
   margin-bottom: 2em;
 }
-/* line 870, ../sass/custom.scss */
+/* line 872, ../sass/custom.scss */
 .page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-filters .views-submit-button, .page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-filters .views-reset-button {
   padding-top: 0;
   padding-right: 0;
   position: relative;
   height: 43px;
 }
-/* line 875, ../sass/custom.scss */
+/* line 877, ../sass/custom.scss */
 .page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-filters .views-submit-button input, .page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-filters .views-reset-button input {
   position: absolute;
   bottom: 0;
   margin: 0;
 }
-/* line 881, ../sass/custom.scss */
+/* line 883, ../sass/custom.scss */
 .page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-filters .views-submit-button {
   padding-right: 7em;
 }
