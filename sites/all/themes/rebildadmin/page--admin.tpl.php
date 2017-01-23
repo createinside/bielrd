@@ -45,7 +45,7 @@ $bruger = user_load($user->uid, $reset = FALSE);
 			<?php print render($page['content']['system_main']['workbench_recent_content']); ?>
 			
 			<?php //Print kontakt block defineret i template.php
-				print $worbench_contact_block; ?>				
+				// print $worbench_contact_block; ?>				
 		</div>
 		<div class="min_profil_bottom">
 			<?php print render($page['content']['system_main']['workbench_recent_content2']); ?>	
