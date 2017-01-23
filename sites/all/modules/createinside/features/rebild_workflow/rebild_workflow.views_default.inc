@@ -37,14 +37,14 @@ function rebild_workflow_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Indhold: Overskrift */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Indhold: Forældelsesdato */
+  /* Field: Content: Forældelsesdato */
   $handler->display->display_options['fields']['field_main_outdated']['id'] = 'field_main_outdated';
   $handler->display->display_options['fields']['field_main_outdated']['table'] = 'field_data_field_main_outdated';
   $handler->display->display_options['fields']['field_main_outdated']['field'] = 'field_main_outdated';
@@ -57,7 +57,7 @@ function rebild_workflow_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Masse-handlinger: Indhold */
+  /* Field: Bulk operations: Content */
   $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
   $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'node';
   $handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
@@ -67,16 +67,16 @@ function rebild_workflow_views_default_views() {
   $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['enable_select_all_pages'] = 1;
   $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['force_single'] = 0;
   $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['entity_load_capacity'] = '10';
-  /* Sort criterion: Indhold: Forældelsesdato (field_main_outdated) */
+  /* Sort criterion: Content: Forældelsesdato (field_main_outdated) */
   $handler->display->display_options['sorts']['field_main_outdated_value']['id'] = 'field_main_outdated_value';
   $handler->display->display_options['sorts']['field_main_outdated_value']['table'] = 'field_data_field_main_outdated';
   $handler->display->display_options['sorts']['field_main_outdated_value']['field'] = 'field_main_outdated_value';
-  /* Filter criterion: Indhold: Forældelsesdato (field_main_outdated) */
+  /* Filter criterion: Content: Forældelsesdato (field_main_outdated) */
   $handler->display->display_options['filters']['field_main_outdated_value']['id'] = 'field_main_outdated_value';
   $handler->display->display_options['filters']['field_main_outdated_value']['table'] = 'field_data_field_main_outdated';
   $handler->display->display_options['filters']['field_main_outdated_value']['field'] = 'field_main_outdated_value';
   $handler->display->display_options['filters']['field_main_outdated_value']['operator'] = 'not empty';
-  /* Filter criterion: Indhold: Forældelsesdato (field_main_outdated) */
+  /* Filter criterion: Content: Forældelsesdato (field_main_outdated) */
   $handler->display->display_options['filters']['field_main_outdated_value_1']['id'] = 'field_main_outdated_value_1';
   $handler->display->display_options['filters']['field_main_outdated_value_1']['table'] = 'field_data_field_main_outdated';
   $handler->display->display_options['filters']['field_main_outdated_value_1']['field'] = 'field_main_outdated_value';
