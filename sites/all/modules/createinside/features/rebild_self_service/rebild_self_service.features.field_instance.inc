@@ -10,7 +10,7 @@
 function rebild_self_service_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-self_service-field_main_allow_publishing'
+  // Exported field_instance: 'node-self_service-field_main_allow_publishing'.
   $field_instances['node-self_service-field_main_allow_publishing'] = array(
     'bundle' => 'self_service',
     'default_value' => array(
@@ -52,7 +52,7 @@ function rebild_self_service_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-self_service-field_main_body'
+  // Exported field_instance: 'node-self_service-field_main_body'.
   $field_instances['node-self_service-field_main_body'] = array(
     'bundle' => 'self_service',
     'default_value' => NULL,
@@ -92,7 +92,7 @@ function rebild_self_service_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-self_service-field_main_outdated'
+  // Exported field_instance: 'node-self_service-field_main_outdated'.
   $field_instances['node-self_service-field_main_outdated'] = array(
     'bundle' => 'self_service',
     'deleted' => 0,
@@ -139,7 +139,7 @@ function rebild_self_service_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-self_service-field_main_section'
+  // Exported field_instance: 'node-self_service-field_main_section'.
   $field_instances['node-self_service-field_main_section'] = array(
     'bundle' => 'self_service',
     'default_value' => NULL,
@@ -177,7 +177,7 @@ function rebild_self_service_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-self_service-field_main_tags'
+  // Exported field_instance: 'node-self_service-field_main_tags'.
   $field_instances['node-self_service-field_main_tags'] = array(
     'bundle' => 'self_service',
     'default_value' => NULL,
@@ -215,7 +215,7 @@ function rebild_self_service_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-self_service-field_self_service_category'
+  // Exported field_instance: 'node-self_service-field_self_service_category'.
   $field_instances['node-self_service-field_self_service_category'] = array(
     'bundle' => 'self_service',
     'default_value' => NULL,
@@ -254,7 +254,7 @@ function rebild_self_service_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-self_service-field_self_service_link'
+  // Exported field_instance: 'node-self_service-field_self_service_link'.
   $field_instances['node-self_service-field_self_service_link'] = array(
     'bundle' => 'self_service',
     'default_value' => NULL,
@@ -308,7 +308,7 @@ function rebild_self_service_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-self_service-field_self_service_pdf'
+  // Exported field_instance: 'node-self_service-field_self_service_pdf'.
   $field_instances['node-self_service-field_self_service_pdf'] = array(
     'bundle' => 'self_service',
     'deleted' => 0,
@@ -394,7 +394,7 @@ function rebild_self_service_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-self_service-field_self_service_type'
+  // Exported field_instance: 'node-self_service-field_self_service_type'.
   $field_instances['node-self_service-field_self_service_type'] = array(
     'bundle' => 'self_service',
     'default_value' => NULL,

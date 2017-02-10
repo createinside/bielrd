@@ -43,20 +43,20 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['style_options']['text'] = 'Skift';
   $handler->display->display_options['style_options']['choose'] = '- Vælg -';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Sidefod: Global: Tekstområde */
+  /* Footer: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['content'] = '<a href="/selvbetjening">Mere selvbetjening</a>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
-  /* Felt: Indhold: Overskrift */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Felt: Indhold: Nid */
+  /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
@@ -65,16 +65,16 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['nid']['alter']['text'] = 'selvbetjening#loesning-[nid]';
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Sorteringskriterie: Indholdsstatistik: Totale visninger */
+  /* Sort criterion: Content statistics: Total views */
   $handler->display->display_options['sorts']['totalcount']['id'] = 'totalcount';
   $handler->display->display_options['sorts']['totalcount']['table'] = 'node_counter';
   $handler->display->display_options['sorts']['totalcount']['field'] = 'totalcount';
   $handler->display->display_options['sorts']['totalcount']['order'] = 'DESC';
-  /* Sorteringskriterie: Indhold: Overskrift */
+  /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
-  /* Kontekstuelt filter: Indhold: Tags (field_main_tags) */
+  /* Contextual filter: Content: Tags (field_main_tags) */
   $handler->display->display_options['arguments']['field_main_tags_tid']['id'] = 'field_main_tags_tid';
   $handler->display->display_options['arguments']['field_main_tags_tid']['table'] = 'field_data_field_main_tags';
   $handler->display->display_options['arguments']['field_main_tags_tid']['field'] = 'field_main_tags_tid';
@@ -91,7 +91,7 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['arguments']['field_main_tags_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_main_tags_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_main_tags_tid']['summary_options']['items_per_page'] = '25';
-  /* Kontekstuelt filter: Indhold: Nid */
+  /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -102,14 +102,14 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['nid']['not'] = TRUE;
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'self_service' => 'self_service',
   );
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -118,13 +118,13 @@ function rebild_self_service_views_default_views() {
   /* Display: Sidebar */
   $handler = $view->new_display('block', 'Sidebar', 'block_1');
   $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Sidefod: Global: Tekstområde */
+  /* Footer: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['content'] = '<p class="arrow-link"><a href="/selvbetjening">Mere selvbetjening</a></p>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
-  /* Sidefod: Global: View-område */
+  /* Footer: Global: View area */
   $handler->display->display_options['footer']['view']['id'] = 'view';
   $handler->display->display_options['footer']['view']['table'] = 'views';
   $handler->display->display_options['footer']['view']['field'] = 'view';
@@ -146,7 +146,7 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Indhold: Nid */
+  /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
@@ -154,7 +154,7 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['alter']['text'] = 'selvbetjening#loesning-[nid]';
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Felt: Indhold: Overskrift */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -178,6 +178,7 @@ function rebild_self_service_views_default_views() {
     t('selvbetjening#loesning-[nid]'),
     t('Alle'),
     t('Sidebar'),
+    t('more'),
     t('<p class="arrow-link"><a href="/selvbetjening">Mere selvbetjening</a></p>'),
     t('Selvbetjening - sidebar'),
     t('Sidebar bottom'),
@@ -212,7 +213,7 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Overskrift: Global: Tekstområde */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -220,20 +221,20 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<h2>Brug <strong>selvbetjening</strong> og spring køen over</h2>
 <p>Betjen dig selv 24 timer i døgnet alle ugens syv dage, når det passer dig.</p>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
-  /* Sidefod: Global: Tekstområde */
+  /* Footer: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['empty'] = TRUE;
   $handler->display->display_options['footer']['area']['content'] = '<p class="arrow-link"><a href="/selvbetjening">Mere selvbetjening</a></p>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
-  /* Felt: Indhold: Overskrift */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Felt: Indhold: Nid */
+  /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
@@ -242,18 +243,18 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['nid']['alter']['text'] = 'selvbetjening#loesning-[nid]';
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Sorteringskriterie: Indhold: Overskrift */
+  /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'self_service' => 'self_service',
   );
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -262,7 +263,7 @@ function rebild_self_service_views_default_views() {
   /* Display: Forsideblok */
   $handler = $view->new_display('block', 'Forsideblok', 'block');
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Overskrift: Global: Tekstområde */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -270,31 +271,31 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<h2>Brug <strong>selvbetjening</strong> og spring køen over</h2>
 <p>Betjen dig selv 24 timer i døgnet alle ugens syv dage, når det passer dig.</p>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
-  /* Overskrift: Global: View-område */
+  /* Header: Global: View area */
   $handler->display->display_options['header']['view']['id'] = 'view';
   $handler->display->display_options['header']['view']['table'] = 'views';
   $handler->display->display_options['header']['view']['field'] = 'view';
   $handler->display->display_options['header']['view']['view_to_insert'] = 'selfservice_frontpage:block_1';
-  /* Overskrift: Global: Tekstområde */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area_1']['id'] = 'area_1';
   $handler->display->display_options['header']['area_1']['table'] = 'views';
   $handler->display->display_options['header']['area_1']['field'] = 'area';
   $handler->display->display_options['header']['area_1']['content'] = '<p class="separator">- eller -</p>';
   $handler->display->display_options['header']['area_1']['format'] = 'full_html';
-  /* Overskrift: Global: View-område */
+  /* Header: Global: View area */
   $handler->display->display_options['header']['view_1']['id'] = 'view_1';
   $handler->display->display_options['header']['view_1']['table'] = 'views';
   $handler->display->display_options['header']['view_1']['field'] = 'view';
   $handler->display->display_options['header']['view_1']['view_to_insert'] = 'selfservice_frontpage:block_2';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Indhold: Nid */
+  /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Felt: Indhold: Overskrift */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -304,11 +305,11 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sorteringskriterie: Global: Tilfældig */
+  /* Sort criterion: Global: Random */
   $handler->display->display_options['sorts']['random']['id'] = 'random';
   $handler->display->display_options['sorts']['random']['table'] = 'views';
   $handler->display->display_options['sorts']['random']['field'] = 'random';
-  /* Sorteringskriterie: Indhold: Overskrift */
+  /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
@@ -353,21 +354,21 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Forbindelse: Indhold: Kategori (field_self_service_category) */
+  /* Relationship: Content: Kategori (field_self_service_category) */
   $handler->display->display_options['relationships']['field_self_service_category_tid']['id'] = 'field_self_service_category_tid';
   $handler->display->display_options['relationships']['field_self_service_category_tid']['table'] = 'field_data_field_self_service_category';
   $handler->display->display_options['relationships']['field_self_service_category_tid']['field'] = 'field_self_service_category_tid';
   $handler->display->display_options['relationships']['field_self_service_category_tid']['label'] = 'kategori';
   $handler->display->display_options['relationships']['field_self_service_category_tid']['required'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Ord i ordforråd: Navn */
+  /* Field: Taxonomy term: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['relationship'] = 'field_self_service_category_tid';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
-  /* Felt: Ord i ordforråd: Term ID */
+  /* Field: Taxonomy term: Term ID */
   $handler->display->display_options['fields']['tid']['id'] = 'tid';
   $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['tid']['field'] = 'tid';
@@ -376,7 +377,7 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['tid']['separator'] = '';
-  /* Felt: Global: Tilpasset tekst */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -385,7 +386,7 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['fields']['nothing']['alter']['text'] = 'selvbetjening#kategori-[tid]';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sorteringskriterie: Ord i ordforråd: Navn */
+  /* Sort criterion: Taxonomy term: Name */
   $handler->display->display_options['sorts']['name']['id'] = 'name';
   $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['sorts']['name']['field'] = 'name';
@@ -403,6 +404,7 @@ function rebild_self_service_views_default_views() {
     t('<p class="arrow-link"><a href="/selvbetjening">Mere selvbetjening</a></p>'),
     t('selvbetjening#loesning-[nid]'),
     t('Forsideblok'),
+    t('more'),
     t('<p class="separator">- eller -</p>'),
     t('Selfbetjening - forside'),
     t('Selvbetjeningsløsninger'),
@@ -453,28 +455,28 @@ function rebild_self_service_views_default_views() {
   );
   $handler->display->display_options['style_options']['row_class'] = 'loesning-[nid]';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Overskrift: Global: Tekstområde */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  /* Forbindelse: Indhold: Kategori (field_self_service_category) */
+  /* Relationship: Content: Kategori (field_self_service_category) */
   $handler->display->display_options['relationships']['field_self_service_category_tid']['id'] = 'field_self_service_category_tid';
   $handler->display->display_options['relationships']['field_self_service_category_tid']['table'] = 'field_data_field_self_service_category';
   $handler->display->display_options['relationships']['field_self_service_category_tid']['field'] = 'field_self_service_category_tid';
   $handler->display->display_options['relationships']['field_self_service_category_tid']['label'] = 'category';
-  /* Forbindelse: Indhold: Type (field_self_service_type) */
+  /* Relationship: Content: Type (field_self_service_type) */
   $handler->display->display_options['relationships']['field_self_service_type_tid']['id'] = 'field_self_service_type_tid';
   $handler->display->display_options['relationships']['field_self_service_type_tid']['table'] = 'field_data_field_self_service_type';
   $handler->display->display_options['relationships']['field_self_service_type_tid']['field'] = 'field_self_service_type_tid';
   $handler->display->display_options['relationships']['field_self_service_type_tid']['label'] = 'type';
-  /* Felt: Indhold: Nid */
+  /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Felt: Indhold: Overskrift */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -486,13 +488,13 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Felt: Indhold: Brødtekst */
+  /* Field: Content: Brødtekst */
   $handler->display->display_options['fields']['field_main_body']['id'] = 'field_main_body';
   $handler->display->display_options['fields']['field_main_body']['table'] = 'field_data_field_main_body';
   $handler->display->display_options['fields']['field_main_body']['field'] = 'field_main_body';
   $handler->display->display_options['fields']['field_main_body']['label'] = '';
   $handler->display->display_options['fields']['field_main_body']['element_label_colon'] = FALSE;
-  /* Felt: Ord i ordforråd: Beskrivelse af term */
+  /* Field: Taxonomy term: Term description */
   $handler->display->display_options['fields']['description']['id'] = 'description';
   $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['description']['field'] = 'description';
@@ -500,14 +502,14 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['fields']['description']['label'] = '';
   $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['description']['hide_empty'] = TRUE;
-  /* Felt: Indhold: Link */
+  /* Field: Content: Link */
   $handler->display->display_options['fields']['field_self_service_link']['id'] = 'field_self_service_link';
   $handler->display->display_options['fields']['field_self_service_link']['table'] = 'field_data_field_self_service_link';
   $handler->display->display_options['fields']['field_self_service_link']['field'] = 'field_self_service_link';
   $handler->display->display_options['fields']['field_self_service_link']['label'] = '';
   $handler->display->display_options['fields']['field_self_service_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_self_service_link']['click_sort_column'] = 'url';
-  /* Felt: Ord i ordforråd: Term ID */
+  /* Field: Taxonomy term: Term ID */
   $handler->display->display_options['fields']['tid']['id'] = 'tid';
   $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['tid']['field'] = 'tid';
@@ -516,7 +518,7 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['tid']['separator'] = '';
-  /* Felt: Ord i ordforråd: Navn */
+  /* Field: Taxonomy term: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['name']['field'] = 'name';
@@ -526,7 +528,7 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['fields']['name']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['text'] = '<span class="kategori-[tid]">[name]</span>';
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
-  /* Felt: Indhold: Fil */
+  /* Field: Content: Fil */
   $handler->display->display_options['fields']['field_self_service_pdf']['id'] = 'field_self_service_pdf';
   $handler->display->display_options['fields']['field_self_service_pdf']['table'] = 'field_data_field_self_service_pdf';
   $handler->display->display_options['fields']['field_self_service_pdf']['field'] = 'field_self_service_pdf';
@@ -541,7 +543,7 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['fields']['field_self_service_pdf']['settings'] = array(
     'file_view_mode' => 'default',
   );
-  /* Felt: Global: Tilpasset tekst */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -549,26 +551,26 @@ function rebild_self_service_views_default_views() {
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<br />
 <p>Driller den digitale selvbetjening?<br />
 Ring til <strong>Den Digitale Hotline</strong> på telefon 70 20 00 00.<br />
-Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>';
+Man.-tors.: 8.00-20.00, fre.: 8.00-16.00, søn.: 16.00-20.00</p>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'selfservice-help';
-  /* Sorteringskriterie: Ord i ordforråd: Navn */
+  /* Sort criterion: Taxonomy term: Name */
   $handler->display->display_options['sorts']['name']['id'] = 'name';
   $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['sorts']['name']['field'] = 'name';
   $handler->display->display_options['sorts']['name']['relationship'] = 'field_self_service_category_tid';
-  /* Sorteringskriterie: Indhold: Overskrift */
+  /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'self_service' => 'self_service',
   );
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -577,12 +579,12 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>';
   /* Display: Emner */
   $handler = $view->new_display('page', 'Emner', 'emner');
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sorteringskriterie: Ord i ordforråd: Navn */
+  /* Sort criterion: Taxonomy term: Name */
   $handler->display->display_options['sorts']['name']['id'] = 'name';
   $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['sorts']['name']['field'] = 'name';
   $handler->display->display_options['sorts']['name']['relationship'] = 'field_self_service_category_tid';
-  /* Sorteringskriterie: Indhold: Overskrift */
+  /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
@@ -605,11 +607,11 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sorteringskriterie: Indhold: Overskrift */
+  /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
-  /* Sorteringskriterie: Ord i ordforråd: Navn */
+  /* Sort criterion: Taxonomy term: Name */
   $handler->display->display_options['sorts']['name']['id'] = 'name';
   $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['sorts']['name']['field'] = 'name';
@@ -633,26 +635,26 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Overskrift: Global: Tekstområde */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['content'] = '<h2 class="title">Selvbetjening:</h2>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Forbindelse: Entity Reference: Refereret entity */
+  /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_main_selfservice_target_id']['id'] = 'field_main_selfservice_target_id';
   $handler->display->display_options['relationships']['field_main_selfservice_target_id']['table'] = 'field_data_field_main_selfservice';
   $handler->display->display_options['relationships']['field_main_selfservice_target_id']['field'] = 'field_main_selfservice_target_id';
   $handler->display->display_options['relationships']['field_main_selfservice_target_id']['label'] = 'Selvbetjening';
-  /* Forbindelse: Indhold: Type (field_self_service_type) */
+  /* Relationship: Content: Type (field_self_service_type) */
   $handler->display->display_options['relationships']['field_self_service_type_tid']['id'] = 'field_self_service_type_tid';
   $handler->display->display_options['relationships']['field_self_service_type_tid']['table'] = 'field_data_field_self_service_type';
   $handler->display->display_options['relationships']['field_self_service_type_tid']['field'] = 'field_self_service_type_tid';
   $handler->display->display_options['relationships']['field_self_service_type_tid']['relationship'] = 'field_main_selfservice_target_id';
   $handler->display->display_options['relationships']['field_self_service_type_tid']['label'] = 'type';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Indhold: Overskrift */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -663,14 +665,14 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>';
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Felt: Indhold: Brødtekst */
+  /* Field: Content: Brødtekst */
   $handler->display->display_options['fields']['field_main_body']['id'] = 'field_main_body';
   $handler->display->display_options['fields']['field_main_body']['table'] = 'field_data_field_main_body';
   $handler->display->display_options['fields']['field_main_body']['field'] = 'field_main_body';
   $handler->display->display_options['fields']['field_main_body']['relationship'] = 'field_main_selfservice_target_id';
   $handler->display->display_options['fields']['field_main_body']['label'] = '';
   $handler->display->display_options['fields']['field_main_body']['element_label_colon'] = FALSE;
-  /* Felt: Ord i ordforråd: Beskrivelse af term */
+  /* Field: Taxonomy term: Term description */
   $handler->display->display_options['fields']['description']['id'] = 'description';
   $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['description']['field'] = 'description';
@@ -678,7 +680,7 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>';
   $handler->display->display_options['fields']['description']['label'] = '';
   $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['description']['hide_empty'] = TRUE;
-  /* Felt: Indhold: Link */
+  /* Field: Content: Link */
   $handler->display->display_options['fields']['field_self_service_link']['id'] = 'field_self_service_link';
   $handler->display->display_options['fields']['field_self_service_link']['table'] = 'field_data_field_self_service_link';
   $handler->display->display_options['fields']['field_self_service_link']['field'] = 'field_self_service_link';
@@ -686,7 +688,7 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>';
   $handler->display->display_options['fields']['field_self_service_link']['label'] = '';
   $handler->display->display_options['fields']['field_self_service_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_self_service_link']['click_sort_column'] = 'url';
-  /* Felt: Indhold: Fil */
+  /* Field: Content: Fil */
   $handler->display->display_options['fields']['field_self_service_pdf']['id'] = 'field_self_service_pdf';
   $handler->display->display_options['fields']['field_self_service_pdf']['table'] = 'field_data_field_self_service_pdf';
   $handler->display->display_options['fields']['field_self_service_pdf']['field'] = 'field_self_service_pdf';
@@ -697,7 +699,7 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>';
   $handler->display->display_options['fields']['field_self_service_pdf']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_self_service_pdf']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_self_service_pdf']['type'] = 'file_url_plain';
-  /* Felt: Global: Tilpasset tekst */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -705,21 +707,21 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<br />
 <p>Driller den digitale selvbetjening?<br />
 Ring til <strong>Den Digitale Hotline</strong> på telefon 70 20 00 00.<br />
-Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>';
+Man.-tors.: 8.00-20.00, fre.: 8.00-16.00, søn.: 16.00-20.00</p>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'selfservice-help';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sorteringskriterie: Indhold: Overskrift */
+  /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
-  /* Sorteringskriterie: Ord i ordforråd: Navn */
+  /* Sort criterion: Taxonomy term: Name */
   $handler->display->display_options['sorts']['name']['id'] = 'name';
   $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['sorts']['name']['field'] = 'name';
   $handler->display->display_options['sorts']['name']['relationship'] = 'field_self_service_category_tid';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Kontekstuelt filter: Indhold: Nid */
+  /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -731,12 +733,12 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filterkriterie: Felt: Selvbetjeningløsninger (field_main_selfservice) */
+  /* Filter criterion: Field: Selvbetjeningløsninger (field_main_selfservice) */
   $handler->display->display_options['filters']['field_main_selfservice_target_id']['id'] = 'field_main_selfservice_target_id';
   $handler->display->display_options['filters']['field_main_selfservice_target_id']['table'] = 'field_data_field_main_selfservice';
   $handler->display->display_options['filters']['field_main_selfservice_target_id']['field'] = 'field_main_selfservice_target_id';
   $handler->display->display_options['filters']['field_main_selfservice_target_id']['operator'] = 'not empty';
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -764,8 +766,9 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>';
     t('<br />
 <p>Driller den digitale selvbetjening?<br />
 Ring til <strong>Den Digitale Hotline</strong> på telefon 70 20 00 00.<br />
-Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>'),
+Man.-tors.: 8.00-20.00, fre.: 8.00-16.00, søn.: 16.00-20.00</p>'),
     t('Emner'),
+    t('more'),
     t('Alfabetisk'),
     t('EVA Field'),
     t('<h2 class="title">Selvbetjening:</h2>'),
@@ -801,19 +804,19 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>'),
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Forbindelse: Entity Reference: Refereret entity */
+  /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_main_selfservice_target_id']['id'] = 'field_main_selfservice_target_id';
   $handler->display->display_options['relationships']['field_main_selfservice_target_id']['table'] = 'field_data_field_main_selfservice';
   $handler->display->display_options['relationships']['field_main_selfservice_target_id']['field'] = 'field_main_selfservice_target_id';
   $handler->display->display_options['relationships']['field_main_selfservice_target_id']['label'] = 'Selfservice';
   $handler->display->display_options['relationships']['field_main_selfservice_target_id']['required'] = TRUE;
-  /* Forbindelse: Indhold: Type (field_self_service_type) */
+  /* Relationship: Content: Type (field_self_service_type) */
   $handler->display->display_options['relationships']['field_self_service_type_tid']['id'] = 'field_self_service_type_tid';
   $handler->display->display_options['relationships']['field_self_service_type_tid']['table'] = 'field_data_field_self_service_type';
   $handler->display->display_options['relationships']['field_self_service_type_tid']['field'] = 'field_self_service_type_tid';
   $handler->display->display_options['relationships']['field_self_service_type_tid']['relationship'] = 'field_main_selfservice_target_id';
   $handler->display->display_options['relationships']['field_self_service_type_tid']['label'] = 'Type';
-  /* Felt: Indhold: Overskrift */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -822,14 +825,14 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>'),
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Felt: Indhold: Brødtekst */
+  /* Field: Content: Brødtekst */
   $handler->display->display_options['fields']['field_main_body']['id'] = 'field_main_body';
   $handler->display->display_options['fields']['field_main_body']['table'] = 'field_data_field_main_body';
   $handler->display->display_options['fields']['field_main_body']['field'] = 'field_main_body';
   $handler->display->display_options['fields']['field_main_body']['relationship'] = 'field_main_selfservice_target_id';
   $handler->display->display_options['fields']['field_main_body']['label'] = '';
   $handler->display->display_options['fields']['field_main_body']['element_label_colon'] = FALSE;
-  /* Felt: Ord i ordforråd: Beskrivelse af term */
+  /* Field: Taxonomy term: Term description */
   $handler->display->display_options['fields']['description']['id'] = 'description';
   $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['description']['field'] = 'description';
@@ -837,7 +840,7 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>'),
   $handler->display->display_options['fields']['description']['label'] = '';
   $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['description']['hide_empty'] = TRUE;
-  /* Felt: Indhold: Link */
+  /* Field: Content: Link */
   $handler->display->display_options['fields']['field_self_service_link']['id'] = 'field_self_service_link';
   $handler->display->display_options['fields']['field_self_service_link']['table'] = 'field_data_field_self_service_link';
   $handler->display->display_options['fields']['field_self_service_link']['field'] = 'field_self_service_link';
@@ -845,7 +848,7 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>'),
   $handler->display->display_options['fields']['field_self_service_link']['label'] = '';
   $handler->display->display_options['fields']['field_self_service_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_self_service_link']['click_sort_column'] = 'url';
-  /* Felt: Indhold: Fil */
+  /* Field: Content: Fil */
   $handler->display->display_options['fields']['field_self_service_pdf']['id'] = 'field_self_service_pdf';
   $handler->display->display_options['fields']['field_self_service_pdf']['table'] = 'field_data_field_self_service_pdf';
   $handler->display->display_options['fields']['field_self_service_pdf']['field'] = 'field_self_service_pdf';
@@ -856,7 +859,7 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>'),
   $handler->display->display_options['fields']['field_self_service_pdf']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_self_service_pdf']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_self_service_pdf']['type'] = 'file_url_plain';
-  /* Felt: Global: Tilpasset tekst */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -864,11 +867,11 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>'),
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<br />
 <p>Driller den digitale selvbetjening?<br />
 Ring til <strong>Den Digitale Hotline</strong> på telefon 70 20 00 00.<br />
-Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>';
+Man.-tors.: 8.00-20.00, fre.: 8.00-16.00, søn.: 16.00-20.00</p>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'selfservice-help';
   $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
-  /* Kontekstuelt filter: Paragraphs item Versioner: Paragraphs item ID */
+  /* Contextual filter: Paragraphs item Revisions: Paragraphs item ID */
   $handler->display->display_options['arguments']['item_id']['id'] = 'item_id';
   $handler->display->display_options['arguments']['item_id']['table'] = 'paragraphs_item_revision';
   $handler->display->display_options['arguments']['item_id']['field'] = 'item_id';
@@ -878,7 +881,7 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>';
   $handler->display->display_options['arguments']['item_id']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['item_id']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['item_id']['summary_options']['items_per_page'] = '25';
-  /* Filterkriterie: Paragraphs item: Bundle */
+  /* Filter criterion: Paragraphs item: Bundle */
   $handler->display->display_options['filters']['bundle']['id'] = 'bundle';
   $handler->display->display_options['filters']['bundle']['table'] = 'paragraphs_item';
   $handler->display->display_options['filters']['bundle']['field'] = 'bundle';
@@ -906,9 +909,10 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>';
     t('<br />
 <p>Driller den digitale selvbetjening?<br />
 Ring til <strong>Den Digitale Hotline</strong> på telefon 70 20 00 00.<br />
-Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>'),
+Man.-tors.: 8.00-20.00, fre.: 8.00-16.00, søn.: 16.00-20.00</p>'),
     t('Alle'),
     t('EVA Field'),
+    t('more'),
   );
   $export['selfservice_items_paragraphs'] = $view;
 
@@ -945,20 +949,20 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>'),
   $handler->display->display_options['style_options']['text'] = 'Skift';
   $handler->display->display_options['style_options']['choose'] = '- Vælg -';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Sidefod: Global: Tekstområde */
+  /* Footer: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['content'] = '<a href="/selvbetjening">Mere selvbetjening</a>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
-  /* Felt: Indhold: Overskrift */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Felt: Indhold: Nid */
+  /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
@@ -967,16 +971,16 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>'),
   $handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['nid']['alter']['text'] = 'selvbetjening#loesning-[nid]';
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Sorteringskriterie: Indholdsstatistik: Totale visninger */
+  /* Sort criterion: Content statistics: Total views */
   $handler->display->display_options['sorts']['totalcount']['id'] = 'totalcount';
   $handler->display->display_options['sorts']['totalcount']['table'] = 'node_counter';
   $handler->display->display_options['sorts']['totalcount']['field'] = 'totalcount';
   $handler->display->display_options['sorts']['totalcount']['order'] = 'DESC';
-  /* Sorteringskriterie: Indhold: Overskrift */
+  /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
-  /* Kontekstuelt filter: Indhold: Sektion (field_main_section) */
+  /* Contextual filter: Content: Sektion (field_main_section) */
   $handler->display->display_options['arguments']['field_main_section_tid']['id'] = 'field_main_section_tid';
   $handler->display->display_options['arguments']['field_main_section_tid']['table'] = 'field_data_field_main_section';
   $handler->display->display_options['arguments']['field_main_section_tid']['field'] = 'field_main_section_tid';
@@ -994,14 +998,14 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>'),
   );
   $handler->display->display_options['arguments']['field_main_section_tid']['validate_options']['type'] = 'convert';
   $handler->display->display_options['arguments']['field_main_section_tid']['validate_options']['transform'] = TRUE;
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'self_service' => 'self_service',
   );
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -1010,13 +1014,13 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>'),
   /* Display: Sidebar */
   $handler = $view->new_display('block', 'Sidebar', 'block_1');
   $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Sidefod: Global: Tekstområde */
+  /* Footer: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['content'] = '<p class="arrow-link"><a href="/selvbetjening">Mere selvbetjening</a></p>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
-  /* Sidefod: Global: View-område */
+  /* Footer: Global: View area */
   $handler->display->display_options['footer']['view']['id'] = 'view';
   $handler->display->display_options['footer']['view']['table'] = 'views';
   $handler->display->display_options['footer']['view']['field'] = 'view';
@@ -1038,14 +1042,14 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>'),
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Indhold: Overskrift */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Felt: Indhold: Nid */
+  /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
@@ -1069,6 +1073,7 @@ Man-tors: 9.00-21.00, fre: 9.00-17.00, søn: 17.00-21.00.</p>'),
     t('selvbetjening#loesning-[nid]'),
     t('Alle'),
     t('Sidebar'),
+    t('more'),
     t('<p class="arrow-link"><a href="/selvbetjening">Mere selvbetjening</a></p>'),
     t('Selvbetjening - landing'),
     t('Sidebar bottom'),
