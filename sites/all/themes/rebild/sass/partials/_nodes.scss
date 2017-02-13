@@ -46,10 +46,16 @@ Share nodes
 			color: $color-blue;
 		}
 		.field-name-field-main-gis-map {
+			
 			.field-label:before {
 				@include icon-prepare();
 				content: "\e00d";	
 				margin-right: 0.5em;
+			}
+			
+			a {
+				display: inline-block;
+				margin-top: 10px;
 			}
 		}
 		#content-main {
@@ -112,9 +118,7 @@ Share nodes
 			margin: 0 0 $spacing-std 0;
 			@include border-radius(3px);
 		}
-		.field-body {
-			
-		}
+
 		.field-name-field-main-youtube-link {			
 			iframe {
 				width: 100%;
@@ -166,10 +170,18 @@ Share nodes
 /* Colorbox */
 #colorbox {
 	max-height: 360px;
+	
+	#cboxLoadedContent {
+		overflow: hidden !important;
+	}
+	#gis-map-frame {
+		height: 100%;
+	}
 }
 #cboxOverlay {
 	background: rgb(102, 102, 102);
 }
+
 
 /*------------------------------------------------------------------
 	Basic Page Extended

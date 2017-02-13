@@ -10,7 +10,7 @@
 function rebild_page_extended_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_main_contact'
+  // Exported field_base: 'field_main_contact'.
   $field_bases['field_main_contact'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -20,7 +20,6 @@ function rebild_page_extended_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 2,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'paragraphs',
@@ -29,7 +28,7 @@ function rebild_page_extended_field_default_field_bases() {
     'type' => 'paragraphs',
   );
 
-  // Exported field_base: 'field_main_paragraphs'
+  // Exported field_base: 'field_main_paragraphs'.
   $field_bases['field_main_paragraphs'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -39,7 +38,6 @@ function rebild_page_extended_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'paragraphs',
@@ -48,7 +46,7 @@ function rebild_page_extended_field_default_field_bases() {
     'type' => 'paragraphs',
   );
 
-  // Exported field_base: 'field_sec_nav_body'
+  // Exported field_base: 'field_sec_nav_body'.
   $field_bases['field_sec_nav_body'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -57,14 +55,6 @@ function rebild_page_extended_field_default_field_bases() {
     'field_name' => 'field_sec_nav_body',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
     ),
     'indexes' => array(
       'format' => array(
@@ -78,7 +68,7 @@ function rebild_page_extended_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_sec_nav_elment'
+  // Exported field_base: 'field_sec_nav_elment'.
   $field_bases['field_sec_nav_elment'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -88,23 +78,26 @@ function rebild_page_extended_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(
       'revision_id' => array(
         0 => 'revision_id',
+      ),
+      'value' => array(
+        0 => 'value',
       ),
     ),
     'locked' => 0,
     'module' => 'field_collection',
     'settings' => array(
       'hide_blank_items' => 1,
+      'hide_initial_item' => FALSE,
       'path' => '',
     ),
     'translatable' => 0,
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_sec_nav_image'
+  // Exported field_base: 'field_sec_nav_image'.
   $field_bases['field_sec_nav_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -113,14 +106,6 @@ function rebild_page_extended_field_default_field_bases() {
     'field_name' => 'field_sec_nav_image',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'fid' => array(
-        'columns' => array(
-          'fid' => 'fid',
-        ),
-        'table' => 'file_managed',
-      ),
     ),
     'indexes' => array(
       'fid' => array(
@@ -137,7 +122,7 @@ function rebild_page_extended_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_sec_nav_link'
+  // Exported field_base: 'field_sec_nav_link'.
   $field_bases['field_sec_nav_link'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -147,7 +132,6 @@ function rebild_page_extended_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -170,7 +154,7 @@ function rebild_page_extended_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_sec_nav_title'
+  // Exported field_base: 'field_sec_nav_title'.
   $field_bases['field_sec_nav_title'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -179,14 +163,6 @@ function rebild_page_extended_field_default_field_bases() {
     'field_name' => 'field_sec_nav_title',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
     ),
     'indexes' => array(
       'format' => array(
@@ -202,7 +178,7 @@ function rebild_page_extended_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_sec_pdf_file'
+  // Exported field_base: 'field_sec_pdf_file'.
   $field_bases['field_sec_pdf_file'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -211,14 +187,6 @@ function rebild_page_extended_field_default_field_bases() {
     'field_name' => 'field_sec_pdf_file',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'fid' => array(
-        'columns' => array(
-          'fid' => 'fid',
-        ),
-        'table' => 'file_managed',
-      ),
     ),
     'indexes' => array(
       'fid' => array(
@@ -236,7 +204,7 @@ function rebild_page_extended_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_sec_txt_body'
+  // Exported field_base: 'field_sec_txt_body'.
   $field_bases['field_sec_txt_body'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -246,14 +214,6 @@ function rebild_page_extended_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -266,7 +226,7 @@ function rebild_page_extended_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_sec_txt_img_body'
+  // Exported field_base: 'field_sec_txt_img_body'.
   $field_bases['field_sec_txt_img_body'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -276,14 +236,6 @@ function rebild_page_extended_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -296,7 +248,7 @@ function rebild_page_extended_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_sec_txt_img_image'
+  // Exported field_base: 'field_sec_txt_img_image'.
   $field_bases['field_sec_txt_img_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -305,14 +257,6 @@ function rebild_page_extended_field_default_field_bases() {
     'field_name' => 'field_sec_txt_img_image',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'fid' => array(
-        'columns' => array(
-          'fid' => 'fid',
-        ),
-        'table' => 'file_managed',
-      ),
     ),
     'indexes' => array(
       'fid' => array(
@@ -329,7 +273,7 @@ function rebild_page_extended_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_sec_txt_vid_body'
+  // Exported field_base: 'field_sec_txt_vid_body'.
   $field_bases['field_sec_txt_vid_body'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -338,14 +282,6 @@ function rebild_page_extended_field_default_field_bases() {
     'field_name' => 'field_sec_txt_vid_body',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
     ),
     'indexes' => array(
       'format' => array(
@@ -359,7 +295,7 @@ function rebild_page_extended_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_sec_txt_vid_url'
+  // Exported field_base: 'field_sec_txt_vid_url'.
   $field_bases['field_sec_txt_vid_url'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -369,7 +305,6 @@ function rebild_page_extended_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'video_embed_field',
@@ -378,7 +313,7 @@ function rebild_page_extended_field_default_field_bases() {
     'type' => 'video_embed_field',
   );
 
-  // Exported field_base: 'field_sec_vid_url'
+  // Exported field_base: 'field_sec_vid_url'.
   $field_bases['field_sec_vid_url'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -388,7 +323,6 @@ function rebild_page_extended_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'video_embed_field',

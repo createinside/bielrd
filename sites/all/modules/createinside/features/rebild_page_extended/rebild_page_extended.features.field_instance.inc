@@ -10,7 +10,8 @@
 function rebild_page_extended_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'field_collection_item-field_sec_nav_elment-field_sec_nav_body'
+  // Exported field_instance:
+  // 'field_collection_item-field_sec_nav_elment-field_sec_nav_body'.
   $field_instances['field_collection_item-field_sec_nav_elment-field_sec_nav_body'] = array(
     'bundle' => 'field_sec_nav_elment',
     'default_value' => NULL,
@@ -60,7 +61,8 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_sec_nav_elment-field_sec_nav_image'
+  // Exported field_instance:
+  // 'field_collection_item-field_sec_nav_elment-field_sec_nav_image'.
   $field_instances['field_collection_item-field_sec_nav_elment-field_sec_nav_image'] = array(
     'bundle' => 'field_sec_nav_elment',
     'deleted' => 0,
@@ -139,7 +141,8 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_sec_nav_elment-field_sec_nav_link'
+  // Exported field_instance:
+  // 'field_collection_item-field_sec_nav_elment-field_sec_nav_link'.
   $field_instances['field_collection_item-field_sec_nav_elment-field_sec_nav_link'] = array(
     'bundle' => 'field_sec_nav_elment',
     'default_value' => NULL,
@@ -191,7 +194,8 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_sec_nav_elment-field_sec_nav_title'
+  // Exported field_instance:
+  // 'field_collection_item-field_sec_nav_elment-field_sec_nav_title'.
   $field_instances['field_collection_item-field_sec_nav_elment-field_sec_nav_title'] = array(
     'bundle' => 'field_sec_nav_elment',
     'default_value' => NULL,
@@ -229,7 +233,7 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page_extended-field_main_contact'
+  // Exported field_instance: 'node-page_extended-field_main_contact'.
   $field_instances['node-page_extended-field_main_contact'] = array(
     'bundle' => 'page_extended',
     'default_value' => NULL,
@@ -295,7 +299,7 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page_extended-field_main_image'
+  // Exported field_instance: 'node-page_extended-field_main_image'.
   $field_instances['node-page_extended-field_main_image'] = array(
     'bundle' => 'page_extended',
     'deleted' => 0,
@@ -377,7 +381,7 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page_extended-field_main_links_external'
+  // Exported field_instance: 'node-page_extended-field_main_links_external'.
   $field_instances['node-page_extended-field_main_links_external'] = array(
     'bundle' => 'page_extended',
     'default_value' => NULL,
@@ -434,7 +438,7 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page_extended-field_main_links_internal'
+  // Exported field_instance: 'node-page_extended-field_main_links_internal'.
   $field_instances['node-page_extended-field_main_links_internal'] = array(
     'bundle' => 'page_extended',
     'default_value' => NULL,
@@ -472,7 +476,7 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page_extended-field_main_paragraphs'
+  // Exported field_instance: 'node-page_extended-field_main_paragraphs'.
   $field_instances['node-page_extended-field_main_paragraphs'] = array(
     'bundle' => 'page_extended',
     'default_value' => NULL,
@@ -541,7 +545,7 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page_extended-field_main_section'
+  // Exported field_instance: 'node-page_extended-field_main_section'.
   $field_instances['node-page_extended-field_main_section'] = array(
     'bundle' => 'page_extended',
     'default_value' => NULL,
@@ -579,7 +583,7 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page_extended-field_main_summary'
+  // Exported field_instance: 'node-page_extended-field_main_summary'.
   $field_instances['node-page_extended-field_main_summary'] = array(
     'bundle' => 'page_extended',
     'default_value' => NULL,
@@ -623,7 +627,7 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page_extended-field_main_tags'
+  // Exported field_instance: 'node-page_extended-field_main_tags'.
   $field_instances['node-page_extended-field_main_tags'] = array(
     'bundle' => 'page_extended',
     'default_value' => NULL,
@@ -661,7 +665,7 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-accordion-field_main_accordion'
+  // Exported field_instance: 'paragraphs_item-accordion-field_main_accordion'.
   $field_instances['paragraphs_item-accordion-field_main_accordion'] = array(
     'bundle' => 'accordion',
     'default_value' => NULL,
@@ -687,6 +691,12 @@ function rebild_page_extended_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'rp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'entity_type' => 'paragraphs_item',
     'field_name' => 'field_main_accordion',
@@ -704,7 +714,7 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-contact-field_con_address'
+  // Exported field_instance: 'paragraphs_item-contact-field_con_address'.
   $field_instances['paragraphs_item-contact-field_con_address'] = array(
     'bundle' => 'contact',
     'default_value' => NULL,
@@ -719,6 +729,12 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 6,
       ),
       'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rp' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -748,7 +764,7 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-contact-field_con_center'
+  // Exported field_instance: 'paragraphs_item-contact-field_con_center'.
   $field_instances['paragraphs_item-contact-field_con_center'] = array(
     'bundle' => 'contact',
     'default_value' => NULL,
@@ -763,6 +779,12 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 0,
       ),
       'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rp' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -787,7 +809,7 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-contact-field_con_email'
+  // Exported field_instance: 'paragraphs_item-contact-field_con_email'.
   $field_instances['paragraphs_item-contact-field_con_email'] = array(
     'bundle' => 'contact',
     'default_value' => NULL,
@@ -802,6 +824,12 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 4,
       ),
       'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rp' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -826,7 +854,7 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-contact-field_con_link'
+  // Exported field_instance: 'paragraphs_item-contact-field_con_link'.
   $field_instances['paragraphs_item-contact-field_con_link'] = array(
     'bundle' => 'contact',
     'default_value' => NULL,
@@ -841,6 +869,12 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 5,
       ),
       'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rp' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -884,7 +918,7 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-contact-field_con_name'
+  // Exported field_instance: 'paragraphs_item-contact-field_con_name'.
   $field_instances['paragraphs_item-contact-field_con_name'] = array(
     'bundle' => 'contact',
     'default_value' => NULL,
@@ -899,6 +933,12 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 1,
       ),
       'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rp' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -928,7 +968,7 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-contact-field_con_opening_hours'
+  // Exported field_instance: 'paragraphs_item-contact-field_con_opening_hours'.
   $field_instances['paragraphs_item-contact-field_con_opening_hours'] = array(
     'bundle' => 'contact',
     'default_value' => NULL,
@@ -967,6 +1007,12 @@ function rebild_page_extended_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'rp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'entity_type' => 'paragraphs_item',
     'field_name' => 'field_con_opening_hours',
@@ -984,7 +1030,7 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-contact-field_con_phone'
+  // Exported field_instance: 'paragraphs_item-contact-field_con_phone'.
   $field_instances['paragraphs_item-contact-field_con_phone'] = array(
     'bundle' => 'contact',
     'deleted' => 0,
@@ -998,6 +1044,12 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 3,
       ),
       'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rp' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1264,7 +1316,7 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-contact-field_con_phone_hours'
+  // Exported field_instance: 'paragraphs_item-contact-field_con_phone_hours'.
   $field_instances['paragraphs_item-contact-field_con_phone_hours'] = array(
     'bundle' => 'contact',
     'default_value' => NULL,
@@ -1303,6 +1355,12 @@ function rebild_page_extended_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'rp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'entity_type' => 'paragraphs_item',
     'field_name' => 'field_con_phone_hours',
@@ -1320,7 +1378,7 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-contact-field_con_title'
+  // Exported field_instance: 'paragraphs_item-contact-field_con_title'.
   $field_instances['paragraphs_item-contact-field_con_title'] = array(
     'bundle' => 'contact',
     'default_value' => NULL,
@@ -1335,6 +1393,12 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 2,
       ),
       'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rp' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1364,7 +1428,7 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-gis_map-field_main_gis_map'
+  // Exported field_instance: 'paragraphs_item-gis_map-field_main_gis_map'.
   $field_instances['paragraphs_item-gis_map-field_main_gis_map'] = array(
     'bundle' => 'gis_map',
     'default_value' => NULL,
@@ -1379,6 +1443,12 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 0,
       ),
       'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rp' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1408,7 +1478,56 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-image_gallery-field_main_image_gallery'
+  // Exported field_instance: 'paragraphs_item-gis_map-field_main_gis_overlay'.
+  $field_instances['paragraphs_item-gis_map-field_main_gis_overlay'] = array(
+    'bundle' => 'gis_map',
+    'default_value' => array(
+      0 => array(
+        'value' => 1,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Vælg hvis kortet skal kunne åbnes i et nyt vindue.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_main_gis_overlay',
+    'label' => 'Åbn i nyt vindue',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-image_gallery-field_main_image_gallery'.
   $field_instances['paragraphs_item-image_gallery-field_main_image_gallery'] = array(
     'bundle' => 'image_gallery',
     'deleted' => 0,
@@ -1425,6 +1544,12 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 0,
       ),
       'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rp' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1489,7 +1614,8 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-navigation_list-field_sec_nav_elment'
+  // Exported field_instance:
+  // 'paragraphs_item-navigation_list-field_sec_nav_elment'.
   $field_instances['paragraphs_item-navigation_list-field_sec_nav_elment'] = array(
     'bundle' => 'navigation_list',
     'default_value' => NULL,
@@ -1515,6 +1641,12 @@ function rebild_page_extended_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'rp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'entity_type' => 'paragraphs_item',
     'field_name' => 'field_sec_nav_elment',
@@ -1532,7 +1664,7 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-pdf_list-field_sec_pdf_file'
+  // Exported field_instance: 'paragraphs_item-pdf_list-field_sec_pdf_file'.
   $field_instances['paragraphs_item-pdf_list-field_sec_pdf_file'] = array(
     'bundle' => 'pdf_list',
     'deleted' => 0,
@@ -1545,6 +1677,12 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 0,
       ),
       'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rp' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1605,7 +1743,8 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-selfservice-field_main_selfservice'
+  // Exported field_instance:
+  // 'paragraphs_item-selfservice-field_main_selfservice'.
   $field_instances['paragraphs_item-selfservice-field_main_selfservice'] = array(
     'bundle' => 'selfservice',
     'default_value' => NULL,
@@ -1619,6 +1758,12 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 0,
       ),
       'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rp' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1645,7 +1790,7 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-text-field_main_factbox'
+  // Exported field_instance: 'paragraphs_item-text-field_main_factbox'.
   $field_instances['paragraphs_item-text-field_main_factbox'] = array(
     'bundle' => 'text',
     'default_value' => NULL,
@@ -1660,6 +1805,12 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 0,
       ),
       'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rp' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1689,7 +1840,7 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-text-field_sec_txt_body'
+  // Exported field_instance: 'paragraphs_item-text-field_sec_txt_body'.
   $field_instances['paragraphs_item-text-field_sec_txt_body'] = array(
     'bundle' => 'text',
     'default_value' => NULL,
@@ -1704,6 +1855,12 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 1,
       ),
       'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rp' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1733,7 +1890,8 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-text_image-field_sec_txt_img_body'
+  // Exported field_instance:
+  // 'paragraphs_item-text_image-field_sec_txt_img_body'.
   $field_instances['paragraphs_item-text_image-field_sec_txt_img_body'] = array(
     'bundle' => 'text_image',
     'default_value' => NULL,
@@ -1748,6 +1906,12 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 1,
       ),
       'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rp' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1777,7 +1941,8 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-text_image-field_sec_txt_img_image'
+  // Exported field_instance:
+  // 'paragraphs_item-text_image-field_sec_txt_img_image'.
   $field_instances['paragraphs_item-text_image-field_sec_txt_img_image'] = array(
     'bundle' => 'text_image',
     'deleted' => 0,
@@ -1794,6 +1959,12 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 0,
       ),
       'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rp' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1859,7 +2030,8 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-text_video-field_sec_txt_vid_body'
+  // Exported field_instance:
+  // 'paragraphs_item-text_video-field_sec_txt_vid_body'.
   $field_instances['paragraphs_item-text_video-field_sec_txt_vid_body'] = array(
     'bundle' => 'text_video',
     'default_value' => NULL,
@@ -1874,6 +2046,12 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 2,
       ),
       'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rp' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1903,7 +2081,8 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-text_video-field_sec_txt_vid_url'
+  // Exported field_instance:
+  // 'paragraphs_item-text_video-field_sec_txt_vid_url'.
   $field_instances['paragraphs_item-text_video-field_sec_txt_vid_url'] = array(
     'bundle' => 'text_video',
     'default_value' => NULL,
@@ -1923,6 +2102,12 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 1,
       ),
       'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rp' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1951,7 +2136,7 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-video-field_sec_vid_url'
+  // Exported field_instance: 'paragraphs_item-video-field_sec_vid_url'.
   $field_instances['paragraphs_item-video-field_sec_vid_url'] = array(
     'bundle' => 'video',
     'default_value' => NULL,
@@ -1970,6 +2155,12 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 1,
       ),
       'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rp' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -2028,7 +2219,9 @@ function rebild_page_extended_field_default_field_instances() {
   t('Titel');
   t('Video');
   t('Vælg et eller flere tags som beskriver dette indhold.');
+  t('Vælg hvis kortet skal kunne åbnes i et nyt vindue.');
   t('Website');
+  t('Åbn i nyt vindue');
   t('Åbningstider');
 
   return $field_instances;

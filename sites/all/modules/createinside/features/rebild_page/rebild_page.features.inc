@@ -43,16 +43,8 @@ function rebild_page_image_default_styles() {
 
   // Exported image style: galleri_lille.
   $styles['galleri_lille'] = array(
-    'name' => 'galleri_lille',
     'effects' => array(
       4 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 82,
@@ -66,16 +58,8 @@ function rebild_page_image_default_styles() {
 
   // Exported image style: galleri_stor.
   $styles['galleri_stor'] = array(
-    'name' => 'galleri_stor',
     'effects' => array(
       5 => array(
-        'label' => 'Scale',
-        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
-        'effect callback' => 'image_scale_effect',
-        'dimensions callback' => 'image_scale_dimensions',
-        'form callback' => 'image_scale_form',
-        'summary theme' => 'image_scale_summary',
-        'module' => 'image',
         'name' => 'image_scale',
         'data' => array(
           'width' => 1024,
@@ -90,15 +74,8 @@ function rebild_page_image_default_styles() {
 
   // Exported image style: indhold_top.
   $styles['indhold_top'] = array(
-    'name' => 'indhold_top',
     'effects' => array(
       39 => array(
-        'label' => 'Crop and scale manually',
-        'help' => 'Crop and scale a user-selected area, respecting the ratio of the destination width and height.',
-        'effect callback' => 'manualcrop_crop_and_scale_effect',
-        'form callback' => 'manualcrop_crop_and_scale_form',
-        'summary theme' => 'manualcrop_crop_and_scale_summary',
-        'module' => 'manualcrop',
         'name' => 'manualcrop_crop_and_scale',
         'data' => array(
           'width' => 600,
@@ -108,7 +85,6 @@ function rebild_page_image_default_styles() {
           'onlyscaleifcrop' => 0,
           'style_name' => 'indhold_top',
         ),
-        'dimensions callback' => 'image_resize_dimensions',
         'weight' => 0,
       ),
     ),
@@ -117,15 +93,8 @@ function rebild_page_image_default_styles() {
 
   // Exported image style: indhold_top_mobile.
   $styles['indhold_top_mobile'] = array(
-    'name' => 'indhold_top_mobile',
     'effects' => array(
       42 => array(
-        'label' => 'Reuse a Manual Crop selection',
-        'help' => 'Reuse a crop selection from another Manual Crop enabled image style.',
-        'effect callback' => 'manualcrop_reuse_effect',
-        'form callback' => 'manualcrop_reuse_form',
-        'summary theme' => 'manualcrop_reuse_summary',
-        'module' => 'manualcrop',
         'name' => 'manualcrop_reuse',
         'data' => array(
           'reusestyle' => 'indhold_top',
@@ -134,13 +103,6 @@ function rebild_page_image_default_styles() {
         'weight' => 0,
       ),
       43 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 680,
@@ -154,15 +116,8 @@ function rebild_page_image_default_styles() {
 
   // Exported image style: indhold_top_narrow.
   $styles['indhold_top_narrow'] = array(
-    'name' => 'indhold_top_narrow',
     'effects' => array(
       44 => array(
-        'label' => 'Reuse a Manual Crop selection',
-        'help' => 'Reuse a crop selection from another Manual Crop enabled image style.',
-        'effect callback' => 'manualcrop_reuse_effect',
-        'form callback' => 'manualcrop_reuse_form',
-        'summary theme' => 'manualcrop_reuse_summary',
-        'module' => 'manualcrop',
         'name' => 'manualcrop_reuse',
         'data' => array(
           'reusestyle' => 'indhold_top',
@@ -171,13 +126,6 @@ function rebild_page_image_default_styles() {
         'weight' => 0,
       ),
       12 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 435,
@@ -191,15 +139,8 @@ function rebild_page_image_default_styles() {
 
   // Exported image style: inline_bottom.
   $styles['inline_bottom'] = array(
-    'name' => 'inline_bottom',
     'effects' => array(
       4 => array(
-        'label' => 'Crop and scale manually',
-        'help' => 'Crop and scale a user-selected area, respecting the ratio of the destination width and height.',
-        'effect callback' => 'manualcrop_crop_and_scale_effect',
-        'form callback' => 'manualcrop_crop_and_scale_form',
-        'summary theme' => 'manualcrop_crop_and_scale_summary',
-        'module' => 'manualcrop',
         'name' => 'manualcrop_crop_and_scale',
         'data' => array(
           'width' => 160,
@@ -209,7 +150,6 @@ function rebild_page_image_default_styles() {
           'onlyscaleifcrop' => 0,
           'style_name' => 'inline_bottom',
         ),
-        'dimensions callback' => 'image_resize_dimensions',
         'weight' => 0,
       ),
     ),
@@ -218,15 +158,8 @@ function rebild_page_image_default_styles() {
 
   // Exported image style: inline_top.
   $styles['inline_top'] = array(
-    'name' => 'inline_top',
     'effects' => array(
       3 => array(
-        'label' => 'Crop and scale manually',
-        'help' => 'Crop and scale a user-selected area, respecting the ratio of the destination width and height.',
-        'effect callback' => 'manualcrop_crop_and_scale_effect',
-        'form callback' => 'manualcrop_crop_and_scale_form',
-        'summary theme' => 'manualcrop_crop_and_scale_summary',
-        'module' => 'manualcrop',
         'name' => 'manualcrop_crop_and_scale',
         'data' => array(
           'width' => 425,
@@ -236,7 +169,6 @@ function rebild_page_image_default_styles() {
           'onlyscaleifcrop' => 0,
           'style_name' => 'inline_top',
         ),
-        'dimensions callback' => 'image_resize_dimensions',
         'weight' => 0,
       ),
     ),
@@ -260,5 +192,6 @@ function rebild_page_node_info() {
       'help' => '',
     ),
   );
+  drupal_alter('node_info', $items);
   return $items;
 }
