@@ -18,7 +18,7 @@ Share nodes
 -------------------------------------------------------------------*/
 
 /* Google Docs - Valgstatistik */
-.page-node-2525 { 
+.page-node-2525 {
 	#region-content {
 		.node {
 			display:none;
@@ -46,13 +46,13 @@ Share nodes
 			color: $color-blue;
 		}
 		.field-name-field-main-gis-map {
-			
+
 			.field-label:before {
 				@include icon-prepare();
-				content: "\e00d";	
+				content: "\e00d";
 				margin-right: 0.5em;
 			}
-			
+
 			a {
 				display: inline-block;
 				margin-top: 10px;
@@ -119,7 +119,7 @@ Share nodes
 			@include border-radius(3px);
 		}
 
-		.field-name-field-main-youtube-link {			
+		.field-name-field-main-youtube-link {
 			iframe {
 				width: 100%;
 			}
@@ -141,15 +141,15 @@ Share nodes
 					float: left;
 					margin-bottom: $spacing-std;
 					text-align: center;
-				}			
+				}
 			}
 			.field-label {
 				margin-bottom: 1.25em;
 				font-size: 1.08em;
 			}
-			.field-label:before {			
+			.field-label:before {
 				@include icon-prepare();
-				content: "\e00e";	
+				content: "\e00e";
 				margin-right: 0.5em;
 				font-size: 1.5em;
 				position: relative;
@@ -163,14 +163,14 @@ Share nodes
 .fancybox-title-float-wrap {
 	margin-bottom: -55px;
 	.child {
-		white-space: normal;	
-	}	
+		white-space: normal;
+	}
 }
 
 /* Colorbox */
 #colorbox {
 	max-height: 360px;
-	
+
 	#cboxLoadedContent {
 		overflow: hidden !important;
 	}
@@ -325,7 +325,7 @@ Share nodes
 							padding-left: 88px;
 							color: $color-blue;
 						}
-					}	
+					}
 					> .field-item:last-child {
 						margin-bottom: 0;
 					}
@@ -341,7 +341,7 @@ Share nodes
 
 /*------------------------------------------------------------------
 	Accordions
--------------------------------------------------------------------*/	
+-------------------------------------------------------------------*/
 #region-content {
 	.node-page,
 	.node-page-extended,
@@ -372,28 +372,28 @@ Share nodes
 				> a .field-content:before,
 				.field-item:before {
 					@include icon-prepare();
-					content: "\e00f";	
+					content: "\e00f";
 					margin-right: 0.5em;
-				}	
+				}
 			}
 				.ui-accordion-header.ui-state-active {
 					background-color: $color-blue;
-					a, 
+					a,
 					.field-item {
 						color: white;
 					}
 					a .field-content:before,
-					.field-item:before {			
+					.field-item:before {
 						@include icon-prepare();
-						content: "\e010";	
+						content: "\e010";
 						margin-right: 0.5em;
 					}
 				}
 			.ui-accordion-content {
 				padding: $spacing-std/2 $spacing-std $spacing-std;
 				margin: 0;
-			}			
-		}	
+			}
+		}
 	}
 	.node-agenda {
 		.ui-accordion {
@@ -404,7 +404,7 @@ Share nodes
 
 /*------------------------------------------------------------------
 	Borger dk
--------------------------------------------------------------------*/	
+-------------------------------------------------------------------*/
 
 /* Accordion */
 #region-content {
@@ -430,32 +430,32 @@ Share nodes
 				font-weight: bold;
 				cursor: pointer;
 				@include border-radius($border-radius-std);
-			}	
+			}
 			h2.mArticle:before,
 			> h3:before {
 				@include icon-prepare();
-				content: "\e00f";	
-				margin-right: 0.5em;				
+				content: "\e00f";
+				margin-right: 0.5em;
 			}
 			h2.mArticle.ui-state-active,
 			> h3.ui-state-active {
 				background-color: $color-blue;
-				color: #fff;	
+				color: #fff;
 				&:before {
-					content: "\e010";	
-				}		
-			}	
+					content: "\e010";
+				}
+			}
 			div.mArticle {
 				padding: $spacing-std/2 $spacing-std;
-				margin: 0;		
+				margin: 0;
 			}
 		}
-	}	
+	}
 }
 
 /*------------------------------------------------------------------
 	Agendas
--------------------------------------------------------------------*/	
+-------------------------------------------------------------------*/
 #region-content {
 	.node-agenda {
 		.view-agenda-accordion {
@@ -468,7 +468,7 @@ Share nodes
 				&:hover {
 					text-decoration: none;
 				}
-			}			
+			}
 		}
 		.ui-accordion {
 			.ui-accordion-content {
@@ -585,11 +585,11 @@ Share nodes
 			padding: 14px 20px;
 			margin-top: $spacing-std;
 			@include background-image(linear-gradient($color-purple, #79648c));
-			@include border-radius($border-radius-std);			
+			@include border-radius($border-radius-std);
 		}
 		.field-name-field-offering-link a:after {
 			@include icon-prepare();
-			content: "\f061";	
+			content: "\f061";
 			color: $color-purple;
 			background: white;
 			display: inline-block;
@@ -608,10 +608,10 @@ Share nodes
 -------------------------------------------------------------------*/
 #region-content {
 	.node-calendar-post {
-		.group-calendar-info {		
+		.group-calendar-info {
 			padding: 10px;
 			margin-bottom: $spacing-std;
-			@include grid-box-no-shadow(#e6e6e6);	
+			@include grid-box-no-shadow(#e6e6e6);
 			.fieldset-legend {
 				position: absolute;
 				text-transform: uppercase;
@@ -639,7 +639,7 @@ Share nodes
 						color: #474747;
 					}
 				}
-				
+
 			}
 		}
 		.field-name-field-calendar-ticket-link {
@@ -650,7 +650,7 @@ Share nodes
 				width: 213px;
 				text-indent: -999em;
 				display: block;
-				
+
 			}
 		}
 	}
@@ -665,8 +665,8 @@ Share nodes
 			ul {
 				margin-left: 0;
 			}
-		}	
-	}	
+		}
+	}
 }
 /*------------------------------------------------------------------
 	Share node
@@ -720,7 +720,7 @@ Share nodes
 				}
 			}
 		}
-		
+
 	}
 }
 /*------------------------------------------------------------------
@@ -740,7 +740,7 @@ Share nodes
 		padding: 14px 20px;
 		@include box-sizing(border-box);
 		@include background-image(linear-gradient($color-purple, #79648c));
-		@include border-radius($border-radius-std);		
+		@include border-radius($border-radius-std);
 		&:hover {
 			text-decoration: none;
 		}
@@ -810,7 +810,7 @@ Share nodes
 	height: 0;
 	overflow: hidden;
 }
-.player iframe,  
+.player iframe,
 .player embed {
 	position: absolute;
 	top: 0;
@@ -820,4 +820,42 @@ Share nodes
 }
 #cboxContent .player {
 	position: inherit;
+}
+
+/*------------------------------------------------------------------
+	Jobs
+-------------------------------------------------------------------*/
+#region-content {
+	.node-job {
+
+    .field-name-field-job-app-url {
+      margin: 2em 0 2em;
+      a {
+        display: inline-block;
+        color: white;
+        text-transform: uppercase;
+        font-size: $font-size-std;
+        line-height: 1.35em;
+        background-color: $color-purple;
+        padding: 14px 20px;
+        @include background-image(linear-gradient($color-purple, #79648c));
+        @include border-radius($border-radius-std);
+      }
+      a:after {
+        @include icon-prepare();
+        content: "\f061";
+        color: $color-purple;
+        background: white;
+        display: inline-block;
+        padding: 0.4em 0.4em;
+        margin: 0 0 0 10px;
+        position: relative;
+        font-size: 0.75em;
+        @include border-radius(2px);
+      }
+      a:hover {
+        text-decoration: none;
+      }
+    }
+  }
 }

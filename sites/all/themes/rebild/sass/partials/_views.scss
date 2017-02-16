@@ -33,7 +33,7 @@
 			a {
 				display: block;
 				padding: $spacing-std/2 $spacing-std $spacing-std*2.4;
-				line-height: $line-height-std;				
+				line-height: $line-height-std;
 			}
 			a:hover {
 				text-decoration: none;
@@ -125,7 +125,7 @@
 			font-size: 0.9em;
 		}
 	}
-	
+
 }
 /* Calendar - sidebar */
 .view-id-calendar_sidebar {
@@ -133,7 +133,7 @@
 		padding: $spacing-std;
 		.rebild-calendar {
 			min-height:60px;
-			margin: 0 0 $spacing-std 0; 			
+			margin: 0 0 $spacing-std 0;
 			.calendar_left {
 				width: 60px;
 				float: left;
@@ -146,10 +146,10 @@
 					line-height: $line-height-std;
 					background: $color-blue;
 					color: white;
-					margin: 0 0 $spacing-std/4;		
+					margin: 0 0 $spacing-std/4;
 					padding: 0.2em 0.5em;
 					@include text-shadow(none);
-					@include border-radius(3px 3px 0 0);				
+					@include border-radius(3px 3px 0 0);
 				}
 				.calendar_date {
 					font-size: 1.25em;
@@ -157,7 +157,7 @@
 				.calendar_month {
 					text-transform: uppercase;
 					font-size: 0.7em;
-				}			
+				}
 			}
 			.calendar_right {
 				float: left;
@@ -169,7 +169,7 @@
 				.calendar_title {
 					a {
 						color: $text-color;
-						text-decoration: none;												
+						text-decoration: none;
 					}
 				}
 			}
@@ -186,14 +186,14 @@
 			display: block;
 			a {
 				text-decoration: none;
-				color: $text-color; 
+				color: $text-color;
 				text-transform: uppercase;
 				font-size: 0.8em;
 
 			}
 			a:after {
 				@include icon-prepare();
-				content: "\f061";	
+				content: "\f061";
 				color: #FFFFFF;
 				background: #474747;
 				display: inline-block;
@@ -207,7 +207,7 @@
 				@include border-radius(2px);
 			}
 		}
-	}		
+	}
 }
 
 /* Calendar - frontpage */
@@ -216,11 +216,11 @@
 		margin-bottom: $spacing-std;
 	}
 }
-.view-id-calendar_frontpage {	
+.view-id-calendar_frontpage {
 	.rebild-calendar {
-		float: left; 
+		float: left;
 		width: 100%;
-		margin: 0 0 $spacing-std 0; 			
+		margin: 0 0 $spacing-std 0;
 		.calendar_left {
 			width: 60px;
 			float: left;
@@ -233,10 +233,10 @@
 				line-height: $line-height-std;
 				background: $color-blue;
 				color: white;
-				margin: 0 0 $spacing-std/4;		
+				margin: 0 0 $spacing-std/4;
 				padding: 0.2em 0.5em;
 				@include text-shadow(none);
-				@include border-radius(3px 3px 0 0);				
+				@include border-radius(3px 3px 0 0);
 			}
 			.calendar_date {
 				font-size: 1.25em;
@@ -244,7 +244,7 @@
 			.calendar_month {
 				text-transform: uppercase;
 				font-size: 0.7em;
-			}			
+			}
 		}
 		.calendar_right {
 			.calendar_section {
@@ -257,7 +257,7 @@
 				a {
 					color: $text-color;
 					text-decoration: none;
-					
+
 				}
 				a:hover {
 					text-decoration: underline;
@@ -270,24 +270,24 @@
 			.calendar_day {
 				background: $color-green;
 			}
-		}			
+		}
 	}
 	.sektion-Politik {
 		.calendar_left {
 			.calendar_day {
 				background: $color-purple;
 			}
-		}			
+		}
 	}
 	.sektion-Erhverv {
 		.calendar_left {
 			.calendar_day {
 				background: $color-blue;
 			}
-		}			
+		}
 	}
 	.rebild-calendar:last-child {
-		margin: 0 0 0 0; 			
+		margin: 0 0 0 0;
 	}
 	.calendar_view_all {
 		position: absolute;
@@ -303,7 +303,7 @@
 		}
 		a:after {
 				@include icon-prepare();
-				content: "\f061";	
+				content: "\f061";
 				color: #FFFFFF;
 				background: #474747;
 				display: inline-block;
@@ -315,7 +315,7 @@
 				position: relative;
 				top: -1px;
 				@include border-radius(2px);
-		}		
+		}
 	}
 }
 /* Calendar - Landing pages */
@@ -330,7 +330,7 @@
 			a {
 				word-break: break-word;
 			}
-		}		
+		}
 	}
 }
 
@@ -345,7 +345,7 @@
 #block-views-news-articles-block-3,
 #block-views-news-articles-block-4 {
 	.view {
-	@include box-shadow(rgba(black, 0.15) 0 0 3px);		
+	@include box-shadow(rgba(black, 0.15) 0 0 3px);
 	}
 	.view-header {
 		.news_view_all {
@@ -363,7 +363,7 @@
 			}
 			a:after {
 				@include icon-prepare();
-				content: "\f061";	
+				content: "\f061";
 				color: #FFFFFF;
 				background: #474747;
 				display: inline-block;
@@ -408,14 +408,14 @@
 	.views-row:after {
 		font-style: normal;
 		font-size: 1.33em;
-		position: absolute; 
+		position: absolute;
 		right: 3%;
 		top: 33%;
 		@include icon-prepare();
-		content: "\e001";		
+		content: "\e001";
 	}
-	.views-row-first { 
-		padding: $spacing-std $spacing-std/2; 
+	.views-row-first {
+		padding: $spacing-std $spacing-std/2;
 		.news-title {
 			font-weight: bold;
 		}
@@ -456,7 +456,7 @@
 /**
  * SELF SERVICE ACCORDION
  */
- 
+
 /* Display navigation */
 #quicktabs-self_service_views ul.quicktabs-tabs {
 	font-size: $font-size-small;
@@ -496,7 +496,7 @@
 			}
 				> .ui-accordion-header:before {
 					@include icon-prepare();
-					content: "\e00f";	
+					content: "\e00f";
 					margin-right: 0.5em;
 				}
 			> .ui-accordion-header.ui-state-active {
@@ -505,8 +505,8 @@
 			}
 			> .ui-accordion-header.ui-state-active:before {
 				@include icon-prepare();
-				content: "\e010";	
-				margin-right: 0.5em;			
+				content: "\e010";
+				margin-right: 0.5em;
 			}
 		}
 	}
@@ -525,11 +525,11 @@
 			> h3 {
 				color: $text-color;
 				padding: 8px 18px;
-				margin: 0 0 5px 0;		
+				margin: 0 0 5px 0;
 			}
 				>h3:before {
 					@include icon-prepare();
-					content: "\e00f";	
+					content: "\e00f";
 					margin-right: 0.5em;
 				}
 			> h3.ui-state-active {
@@ -537,7 +537,7 @@
 			}
 				>h3.ui-state-active:before {
 					@include icon-prepare();
-					content: "\e010";	
+					content: "\e010";
 					margin-right: 0.5em;
 				}
 			.accordion-content-level-2 {
@@ -556,13 +556,13 @@
 					background-color: $color-purple;
 					padding: 14px 20px;
 					@include background-image(linear-gradient($color-purple, #79648c));
-					@include border-radius($border-radius-std);			
+					@include border-radius($border-radius-std);
 				}
 				.views-field-field-self-service-link a:after,
 				.views-field-link a:after,
 				.views-field-field-self-service-pdf a:after {
 					@include icon-prepare();
-					content: "\f061";	
+					content: "\f061";
 					color: $color-purple;
 					background: white;
 					display: inline-block;
@@ -575,7 +575,7 @@
 				.views-field-field-main-body {
 					a {
 						color: $color-green;
-					}	
+					}
 					ul {
 						margin-left: 40px;
 						margin-bottom: 1em;
@@ -597,7 +597,7 @@
 				.selfservice-help {
 					border-top: 1px dotted $text-color;
 					margin-top: 1em;
-					padding-top: 1em;				
+					padding-top: 1em;
 				}
 			}
 		}
@@ -609,7 +609,7 @@
 		.view-content {
 			> h3 {
 				padding: 8px;
-			}	
+			}
 		}
 	}
 }
@@ -637,7 +637,7 @@
 				padding: $spacing-std/2 $spacing-std $spacing-std;
 			}
 		}
-	}	
+	}
 }
 
 /**
@@ -693,7 +693,7 @@
     padding: 15px 10px;
     margin: 0;
     h2 {
-      
+
     }
     h3 {
       margin: 0 0 10px 0;
@@ -706,7 +706,7 @@
       margin: 0 0 10px;
     }
     .search-text {
-     line-height: 1.25em; 
+     line-height: 1.25em;
     }
   }
   .odd {
@@ -764,19 +764,19 @@
 				}
 				a:before {
 					@include icon-prepare();
-					content: "\e00f";	
+					content: "\e00f";
 					margin-right: 0.5em;
-				}	
+				}
 			}
 			.ui-accordion-header.ui-state-active {
 				background-color: $color-blue;
-				a, 
+				a,
 				.field-item {
 					color: white;
 				}
-				a:before {			
+				a:before {
 					@include icon-prepare();
-					content: "\e010";	
+					content: "\e010";
 					margin-right: 0.5em;
 				}
 			}
@@ -786,10 +786,29 @@
 				p {
 					margin-bottom: $spacing-std;
 				}
-			}			
-		}	
+			}
+		}
 		.view-empty {
 			margin: $spacing-std 0 0 0;
-		}	
+		}
 	}
+}
+
+/* Job List */
+#region-content .view-rebild-job-list {
+
+  .views-row {
+    margin-bottom: 1em;
+  }
+  .views-field-title {
+    a {
+      color: $color-blue;
+    }
+  }
+  .views-field-field-job-deadline {
+    font-size: $font-size-small;
+  }
+  h3 {
+    margin: 1.75em 0 .5em;
+  }
 }
