@@ -169,11 +169,15 @@ Share nodes
 
 /* Colorbox */
 #colorbox {
-	max-height: 360px;
+  background: white;
+  @include border-radius(0);
 
 	#cboxLoadedContent {
 		overflow: hidden !important;
 	}
+  #cboxContent {
+    margin-bottom: 0;
+  }
 	#gis-map-frame {
 		height: 100%;
 	}

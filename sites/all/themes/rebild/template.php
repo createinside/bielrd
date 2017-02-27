@@ -202,26 +202,31 @@ function rebild_preprocess_field(&$variables, $hook) {
 
   $element = $variables['element'];
 
-  // GIS KORT.
-  if ($element['#field_name'] == 'field_main_gis_map') {
+  switch($element['#field_name']) {
+    case 'field_main_gis_map':
+      $entity_type = $element['#entity_type'];
+      $overlay = $element['#object']->field_main_gis_overlay['und'][0]['value'];
+      $url = $variables["items"][0]["#markup"];
+      $browser = browscap_get_browser();
 
-    $entity_type = $element['#entity_type'];
-    $overlay = $element['#object']->field_main_gis_overlay['und'][0]['value'];
-    $url = $variables["items"][0]["#markup"];
-    $browser = browscap_get_browser();
+      // Hide GIS map on mobile devices.
+      if ($browser["ismobiledevice"] == "false") {
+        $variables["items"][0]["#markup"] = "<iframe id='gis-map-frame' width='100%' height='400px' src='" . $url . "' > </iframe>";
 
-    // Hide GIS map on mobile devices.
-    if ($browser["ismobiledevice"] == "false") {
-      $variables["items"][0]["#markup"] = "<iframe id='gis-map-frame' width='100%' height='400px' src='" . $url . "' > </iframe>";
-
-      // Check if overlay should be enabled.
-      if ($overlay) {
-        $variables["items"][0]["#markup"] .= "<a href='?width=1024&height=768&inline=true#gis-map-frame' class='colorbox-inline'>Se større kort</a>";
+        // Check if overlay should be enabled.
+        if ($overlay) {
+          $variables["items"][0]["#markup"] .= "<a href='?width=90%25&height=90%25&inline=true#gis-map-frame' class='colorbox-inline'>Se større kort</a>";
+        }
       }
-    }
-    else {
-      $variables["items"][0]["#markup"] = "<a href='" . $url . "'>Se kort her</a>";
-    }
+      else {
+        $variables["items"][0]["#markup"] = "<a href='" . $url . "'>Se kort her</a>";
+      }
+    break;
+    case 'field_job_app_url':
+      $variables['items'][0]['#element']['attributes']['class'] = 'colorbox-load';
+      $url = $variables['items'][0]['#element']['url'];
+      $variables['items'][0]['#element']['url'] = $url . '&width=1200&height=90%25&iframe=true';
+    break;
   }
 }
 
