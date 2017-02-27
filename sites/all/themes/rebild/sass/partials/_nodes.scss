@@ -170,6 +170,8 @@ Share nodes
 /* Colorbox */
 #colorbox {
   background: white;
+  max-height: 365px;
+  @include box-shadow(none);
   @include border-radius(0);
 
 	#cboxLoadedContent {
