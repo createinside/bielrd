@@ -1,0 +1,59 @@
+<?php
+/**
+ * @file
+ * Code for the Jobs feature.
+ */
+
+include_once 'rebild_job.features.inc';
+
+/**
+ * Implements hook_menu().
+ */
+function rebild_job_menu() {
+  $items['job-redirect'] = array(
+    'page callback' => 'rebild_job_handle_redirects',
+    'access callback' => TRUE,
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function rebild_job_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'feeds_tamper' && $plugin_type == 'plugins') {
+    return 'custom_plugins/';
+  }
+}
+
+/**
+ * Handle redirects.
+ */
+function rebild_job_handle_redirects() {
+  if(isset($_GET['job_id'])) {
+    $job_id = $_GET['job_id'];
+    $node_id = rebild_job_get_node_path($job_id);
+    if(isset($node_id)) {
+      drupal_goto("node/" . $node_id);
+    }
+  }
+}
+
+/**
+ * Get node path.
+ */
+function rebild_job_get_node_path($job_id) {
+  $query = new EntityFieldQuery();
+  $query
+    ->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'job')
+    ->fieldCondition('field_job_id', 'value', $job_id);
+  $result = $query->execute();
+  if (isset($result['node'])) {
+    $job_ids = array_keys($result['node']);
+    return $job_ids[0];
+  }
+  else {
+    return NULL;
+  }
+}

@@ -10,21 +10,13 @@
 function rebild_page_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_accordion_text'
+  // Exported field_base: 'field_accordion_text'.
   $field_bases['field_accordion_text'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_accordion_text',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -37,21 +29,13 @@ function rebild_page_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_accordion_title'
+  // Exported field_base: 'field_accordion_title'.
   $field_bases['field_accordion_title'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_accordion_title',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -66,7 +50,7 @@ function rebild_page_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_agenda_view_com'
+  // Exported field_base: 'field_agenda_view_com'.
   $field_bases['field_agenda_view_com'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -75,14 +59,6 @@ function rebild_page_field_default_field_bases() {
     'field_name' => 'field_agenda_view_com',
     'field_permissions' => array(
       'type' => 2,
-    ),
-    'foreign keys' => array(
-      'taxonomy_term_data' => array(
-        'columns' => array(
-          'target_id' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
     ),
     'indexes' => array(
       'target_id' => array(
@@ -112,7 +88,7 @@ function rebild_page_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_con_address'
+  // Exported field_base: 'field_con_address'.
   $field_bases['field_con_address'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -121,14 +97,6 @@ function rebild_page_field_default_field_bases() {
     'field_name' => 'field_con_address',
     'field_permissions' => array(
       'type' => 2,
-    ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
     ),
     'indexes' => array(
       'format' => array(
@@ -142,7 +110,7 @@ function rebild_page_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_con_center'
+  // Exported field_base: 'field_con_center'.
   $field_bases['field_con_center'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -151,14 +119,6 @@ function rebild_page_field_default_field_bases() {
     'field_name' => 'field_con_center',
     'field_permissions' => array(
       'type' => 2,
-    ),
-    'foreign keys' => array(
-      'tid' => array(
-        'columns' => array(
-          'tid' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
     ),
     'indexes' => array(
       'tid' => array(
@@ -179,7 +139,7 @@ function rebild_page_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_con_email'
+  // Exported field_base: 'field_con_email'.
   $field_bases['field_con_email'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -189,7 +149,6 @@ function rebild_page_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 2,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'email',
@@ -198,7 +157,7 @@ function rebild_page_field_default_field_bases() {
     'type' => 'email',
   );
 
-  // Exported field_base: 'field_con_link'
+  // Exported field_base: 'field_con_link'.
   $field_bases['field_con_link'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -208,7 +167,6 @@ function rebild_page_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 2,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -231,7 +189,7 @@ function rebild_page_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_con_name'
+  // Exported field_base: 'field_con_name'.
   $field_bases['field_con_name'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -240,14 +198,6 @@ function rebild_page_field_default_field_bases() {
     'field_name' => 'field_con_name',
     'field_permissions' => array(
       'type' => 2,
-    ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
     ),
     'indexes' => array(
       'format' => array(
@@ -263,7 +213,7 @@ function rebild_page_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_con_opening_hours'
+  // Exported field_base: 'field_con_opening_hours'.
   $field_bases['field_con_opening_hours'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -273,7 +223,6 @@ function rebild_page_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 2,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'office_hours',
@@ -289,7 +238,7 @@ function rebild_page_field_default_field_bases() {
     'type' => 'office_hours',
   );
 
-  // Exported field_base: 'field_con_phone'
+  // Exported field_base: 'field_con_phone'.
   $field_bases['field_con_phone'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -299,7 +248,6 @@ function rebild_page_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 2,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'cck_phone',
@@ -310,7 +258,7 @@ function rebild_page_field_default_field_bases() {
     'type' => 'phone_number',
   );
 
-  // Exported field_base: 'field_con_phone_hours'
+  // Exported field_base: 'field_con_phone_hours'.
   $field_bases['field_con_phone_hours'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -320,7 +268,6 @@ function rebild_page_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 2,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'office_hours',
@@ -336,7 +283,7 @@ function rebild_page_field_default_field_bases() {
     'type' => 'office_hours',
   );
 
-  // Exported field_base: 'field_con_title'
+  // Exported field_base: 'field_con_title'.
   $field_bases['field_con_title'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -346,14 +293,6 @@ function rebild_page_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 2,
     ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -368,21 +307,13 @@ function rebild_page_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_file_image_alt_text'
+  // Exported field_base: 'field_file_image_alt_text'.
   $field_bases['field_file_image_alt_text'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_file_image_alt_text',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -397,21 +328,13 @@ function rebild_page_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_file_image_title_text'
+  // Exported field_base: 'field_file_image_title_text'.
   $field_bases['field_file_image_title_text'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_file_image_title_text',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -426,7 +349,7 @@ function rebild_page_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_main_accordion'
+  // Exported field_base: 'field_main_accordion'.
   $field_bases['field_main_accordion'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -436,23 +359,26 @@ function rebild_page_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(
       'revision_id' => array(
         0 => 'revision_id',
+      ),
+      'value' => array(
+        0 => 'value',
       ),
     ),
     'locked' => 0,
     'module' => 'field_collection',
     'settings' => array(
       'hide_blank_items' => 1,
+      'hide_initial_item' => FALSE,
       'path' => '',
     ),
     'translatable' => 0,
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_main_allow_publishing'
+  // Exported field_base: 'field_main_allow_publishing'.
   $field_bases['field_main_allow_publishing'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -462,7 +388,6 @@ function rebild_page_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 2,
     ),
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -481,7 +406,7 @@ function rebild_page_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_main_block'
+  // Exported field_base: 'field_main_block'.
   $field_bases['field_main_block'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -490,14 +415,6 @@ function rebild_page_field_default_field_bases() {
     'field_name' => 'field_main_block',
     'field_permissions' => array(
       'type' => 2,
-    ),
-    'foreign keys' => array(
-      'bid' => array(
-        'columns' => array(
-          'bid' => 'bid',
-        ),
-        'table' => 'block',
-      ),
     ),
     'indexes' => array(
       'bid' => array(
@@ -574,7 +491,7 @@ function rebild_page_field_default_field_bases() {
     'type' => 'blockreference',
   );
 
-  // Exported field_base: 'field_main_body'
+  // Exported field_base: 'field_main_body'.
   $field_bases['field_main_body'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -584,14 +501,6 @@ function rebild_page_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -604,7 +513,7 @@ function rebild_page_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_main_factbox'
+  // Exported field_base: 'field_main_factbox'.
   $field_bases['field_main_factbox'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -614,14 +523,6 @@ function rebild_page_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -634,7 +535,7 @@ function rebild_page_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_main_gis_map'
+  // Exported field_base: 'field_main_gis_map'.
   $field_bases['field_main_gis_map'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -644,14 +545,6 @@ function rebild_page_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -664,7 +557,35 @@ function rebild_page_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_main_image'
+  // Exported field_base: 'field_main_gis_overlay'.
+  $field_bases['field_main_gis_overlay'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_main_gis_overlay',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => '',
+        1 => '',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
+  );
+
+  // Exported field_base: 'field_main_image'.
   $field_bases['field_main_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -674,14 +595,6 @@ function rebild_page_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(
-      'fid' => array(
-        'columns' => array(
-          'fid' => 'fid',
-        ),
-        'table' => 'file_managed',
-      ),
-    ),
     'indexes' => array(
       'fid' => array(
         0 => 'fid',
@@ -697,7 +610,7 @@ function rebild_page_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_main_image_gallery'
+  // Exported field_base: 'field_main_image_gallery'.
   $field_bases['field_main_image_gallery'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -707,14 +620,6 @@ function rebild_page_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(
-      'fid' => array(
-        'columns' => array(
-          'fid' => 'fid',
-        ),
-        'table' => 'file_managed',
-      ),
-    ),
     'indexes' => array(
       'fid' => array(
         0 => 'fid',
@@ -730,7 +635,7 @@ function rebild_page_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_main_links_external'
+  // Exported field_base: 'field_main_links_external'.
   $field_bases['field_main_links_external'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -740,7 +645,6 @@ function rebild_page_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -763,7 +667,7 @@ function rebild_page_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_main_links_internal'
+  // Exported field_base: 'field_main_links_internal'.
   $field_bases['field_main_links_internal'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -772,14 +676,6 @@ function rebild_page_field_default_field_bases() {
     'field_name' => 'field_main_links_internal',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'node' => array(
-        'columns' => array(
-          'target_id' => 'nid',
-        ),
-        'table' => 'node',
-      ),
     ),
     'indexes' => array(
       'target_id' => array(
@@ -808,7 +704,7 @@ function rebild_page_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_main_outdated'
+  // Exported field_base: 'field_main_outdated'.
   $field_bases['field_main_outdated'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -818,7 +714,6 @@ function rebild_page_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'date',
@@ -841,7 +736,7 @@ function rebild_page_field_default_field_bases() {
     'type' => 'datestamp',
   );
 
-  // Exported field_base: 'field_main_protected'
+  // Exported field_base: 'field_main_protected'.
   $field_bases['field_main_protected'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -851,7 +746,6 @@ function rebild_page_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 2,
     ),
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -870,7 +764,7 @@ function rebild_page_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_main_section'
+  // Exported field_base: 'field_main_section'.
   $field_bases['field_main_section'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -879,14 +773,6 @@ function rebild_page_field_default_field_bases() {
     'field_name' => 'field_main_section',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'tid' => array(
-        'columns' => array(
-          'tid' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
     ),
     'indexes' => array(
       'tid' => array(
@@ -907,7 +793,7 @@ function rebild_page_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_main_selfservice'
+  // Exported field_base: 'field_main_selfservice'.
   $field_bases['field_main_selfservice'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -916,14 +802,6 @@ function rebild_page_field_default_field_bases() {
     'field_name' => 'field_main_selfservice',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'node' => array(
-        'columns' => array(
-          'target_id' => 'nid',
-        ),
-        'table' => 'node',
-      ),
     ),
     'indexes' => array(
       'target_id' => array(
@@ -955,7 +833,7 @@ function rebild_page_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_main_summary'
+  // Exported field_base: 'field_main_summary'.
   $field_bases['field_main_summary'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -964,14 +842,6 @@ function rebild_page_field_default_field_bases() {
     'field_name' => 'field_main_summary',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
     ),
     'indexes' => array(
       'format' => array(
@@ -985,7 +855,7 @@ function rebild_page_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_main_tags'
+  // Exported field_base: 'field_main_tags'.
   $field_bases['field_main_tags'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -994,14 +864,6 @@ function rebild_page_field_default_field_bases() {
     'field_name' => 'field_main_tags',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'tid' => array(
-        'columns' => array(
-          'tid' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
     ),
     'indexes' => array(
       'tid' => array(
@@ -1022,7 +884,7 @@ function rebild_page_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_main_view'
+  // Exported field_base: 'field_main_view'.
   $field_bases['field_main_view'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1032,7 +894,6 @@ function rebild_page_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 2,
     ),
-    'foreign keys' => array(),
     'indexes' => array(
       'view_id' => array(
         0 => 'view_id',
@@ -1179,7 +1040,7 @@ function rebild_page_field_default_field_bases() {
     'type' => 'viewreference',
   );
 
-  // Exported field_base: 'field_main_youtube_link'
+  // Exported field_base: 'field_main_youtube_link'.
   $field_bases['field_main_youtube_link'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -1189,7 +1050,6 @@ function rebild_page_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(
       'video_id' => array(
         0 => 'video_id',

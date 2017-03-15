@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function rebild_page_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -36,7 +36,7 @@ function rebild_page_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_accordion|node|page|form'] = $field_group;
+  $field_groups['group_accordion|node|page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -65,7 +65,7 @@ function rebild_page_field_group_info() {
       'formatter' => 'collapsed',
     ),
   );
-  $export['group_advanced|node|page|form'] = $field_group;
+  $field_groups['group_advanced|node|page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -92,7 +92,7 @@ function rebild_page_field_group_info() {
       ),
     ),
   );
-  $export['group_agendas_view|node|page|form'] = $field_group;
+  $field_groups['group_agendas_view|node|page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -120,7 +120,7 @@ function rebild_page_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_billedegalleri|node|page|form'] = $field_group;
+  $field_groups['group_billedegalleri|node|page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -149,7 +149,7 @@ function rebild_page_field_group_info() {
       'formatter' => 'collapsible',
     ),
   );
-  $export['group_blocks|node|page|form'] = $field_group;
+  $field_groups['group_blocks|node|page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -178,7 +178,7 @@ function rebild_page_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_categories|node|page|form'] = $field_group;
+  $field_groups['group_categories|node|page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -207,7 +207,7 @@ function rebild_page_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_contact_hours|node|page|form'] = $field_group;
+  $field_groups['group_contact_hours|node|page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -242,7 +242,7 @@ function rebild_page_field_group_info() {
       'formatter' => 'collapsible',
     ),
   );
-  $export['group_contact|node|page|form'] = $field_group;
+  $field_groups['group_contact|node|page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -270,7 +270,7 @@ function rebild_page_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_faktaboks|node|page|form'] = $field_group;
+  $field_groups['group_faktaboks|node|page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -298,7 +298,7 @@ function rebild_page_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_foraeldelsesdato|node|page|form'] = $field_group;
+  $field_groups['group_foraeldelsesdato|node|page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -314,6 +314,7 @@ function rebild_page_field_group_info() {
     'weight' => '22',
     'children' => array(
       0 => 'field_main_gis_map',
+      1 => 'field_main_gis_overlay',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -326,7 +327,7 @@ function rebild_page_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_gis_kort|node|page|form'] = $field_group;
+  $field_groups['group_gis_kort|node|page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -341,9 +342,9 @@ function rebild_page_field_group_info() {
     'label' => 'Ikke obligatoriske felter',
     'weight' => '6',
     'children' => array(
-      0 => 'group_agendas_view',
-      1 => 'group_accordion',
-      2 => 'group_advanced',
+      0 => 'group_accordion',
+      1 => 'group_advanced',
+      2 => 'group_agendas_view',
       3 => 'group_billedegalleri',
       4 => 'group_blocks',
       5 => 'group_contact',
@@ -362,7 +363,7 @@ function rebild_page_field_group_info() {
       ),
     ),
   );
-  $export['group_ho_tabs|node|page|form'] = $field_group;
+  $field_groups['group_ho_tabs|node|page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -390,7 +391,7 @@ function rebild_page_field_group_info() {
       ),
     ),
   );
-  $export['group_oversigt|node|page|form'] = $field_group;
+  $field_groups['group_oversigt|node|page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -418,7 +419,7 @@ function rebild_page_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_selfservices|node|page|form'] = $field_group;
+  $field_groups['group_selfservices|node|page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -446,7 +447,25 @@ function rebild_page_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_youtube|node|page|form'] = $field_group;
+  $field_groups['group_youtube|node|page|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Accordion');
+  t('Avancerede indstillinger');
+  t('Billedegalleri');
+  t('Dagsordener');
+  t('Faktaboks');
+  t('Forældelsesdato');
+  t('GIS-kort');
+  t('Ikke obligatoriske felter');
+  t('Kategorisering');
+  t('Kontakt');
+  t('Links');
+  t('Oversigt');
+  t('Selvbetjening');
+  t('Youtube');
+  t('Åbnings- og telefontider');
+
+  return $field_groups;
 }

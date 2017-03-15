@@ -10,7 +10,8 @@
 function rebild_page_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'field_collection_item-field_main_accordion-field_accordion_text'
+  // Exported field_instance:
+  // 'field_collection_item-field_main_accordion-field_accordion_text'.
   $field_instances['field_collection_item-field_main_accordion-field_accordion_text'] = array(
     'bundle' => 'field_main_accordion',
     'default_value' => NULL,
@@ -44,7 +45,8 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_main_accordion-field_accordion_title'
+  // Exported field_instance:
+  // 'field_collection_item-field_main_accordion-field_accordion_title'.
   $field_instances['field_collection_item-field_main_accordion-field_accordion_title'] = array(
     'bundle' => 'field_main_accordion',
     'default_value' => NULL,
@@ -78,7 +80,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'file-image-field_file_image_alt_text'
+  // Exported field_instance: 'file-image-field_file_image_alt_text'.
   $field_instances['file-image-field_file_image_alt_text'] = array(
     'bundle' => 'image',
     'default_value' => NULL,
@@ -179,7 +181,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'file-image-field_file_image_title_text'
+  // Exported field_instance: 'file-image-field_file_image_title_text'.
   $field_instances['file-image-field_file_image_title_text'] = array(
     'bundle' => 'image',
     'default_value' => NULL,
@@ -254,7 +256,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_agenda_view_com'
+  // Exported field_instance: 'node-page-field_agenda_view_com'.
   $field_instances['node-page-field_agenda_view_com'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -301,7 +303,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_con_address'
+  // Exported field_instance: 'node-page-field_con_address'.
   $field_instances['node-page-field_con_address'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -341,7 +343,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_con_center'
+  // Exported field_instance: 'node-page-field_con_center'.
   $field_instances['node-page-field_con_center'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -380,7 +382,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_con_email'
+  // Exported field_instance: 'node-page-field_con_email'.
   $field_instances['node-page-field_con_email'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -419,7 +421,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_con_link'
+  // Exported field_instance: 'node-page-field_con_link'.
   $field_instances['node-page-field_con_link'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -473,7 +475,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_con_name'
+  // Exported field_instance: 'node-page-field_con_name'.
   $field_instances['node-page-field_con_name'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -513,7 +515,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_con_opening_hours'
+  // Exported field_instance: 'node-page-field_con_opening_hours'.
   $field_instances['node-page-field_con_opening_hours'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -569,7 +571,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_con_phone'
+  // Exported field_instance: 'node-page-field_con_phone'.
   $field_instances['node-page-field_con_phone'] = array(
     'bundle' => 'page',
     'deleted' => 0,
@@ -849,7 +851,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_con_phone_hours'
+  // Exported field_instance: 'node-page-field_con_phone_hours'.
   $field_instances['node-page-field_con_phone_hours'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -905,7 +907,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_con_title'
+  // Exported field_instance: 'node-page-field_con_title'.
   $field_instances['node-page-field_con_title'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -945,7 +947,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_main_accordion'
+  // Exported field_instance: 'node-page-field_main_accordion'.
   $field_instances['node-page-field_main_accordion'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -984,7 +986,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_main_allow_publishing'
+  // Exported field_instance: 'node-page-field_main_allow_publishing'.
   $field_instances['node-page-field_main_allow_publishing'] = array(
     'bundle' => 'page',
     'default_value' => array(
@@ -999,7 +1001,7 @@ function rebild_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 28,
+        'weight' => 29,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1026,7 +1028,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_main_block'
+  // Exported field_instance: 'node-page-field_main_block'.
   $field_instances['node-page-field_main_block'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -1065,7 +1067,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_main_body'
+  // Exported field_instance: 'node-page-field_main_body'.
   $field_instances['node-page-field_main_body'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -1105,7 +1107,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_main_factbox'
+  // Exported field_instance: 'node-page-field_main_factbox'.
   $field_instances['node-page-field_main_factbox'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -1145,7 +1147,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_main_gis_map'
+  // Exported field_instance: 'node-page-field_main_gis_map'.
   $field_instances['node-page-field_main_gis_map'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -1185,7 +1187,49 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_main_image'
+  // Exported field_instance: 'node-page-field_main_gis_overlay'.
+  $field_instances['node-page-field_main_gis_overlay'] = array(
+    'bundle' => 'page',
+    'default_value' => array(
+      0 => array(
+        'value' => 1,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Vælg hvis kortet skal kunne åbnes i et nyt vindue.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_main_gis_overlay',
+    'label' => 'Åbn i nyt vindue',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance: 'node-page-field_main_image'.
   $field_instances['node-page-field_main_image'] = array(
     'bundle' => 'page',
     'deleted' => 0,
@@ -1267,7 +1311,7 @@ function rebild_page_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-page-field_main_image_gallery'
+  // Exported field_instance: 'node-page-field_main_image_gallery'.
   $field_instances['node-page-field_main_image_gallery'] = array(
     'bundle' => 'page',
     'deleted' => 0,
@@ -1343,7 +1387,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_main_links_external'
+  // Exported field_instance: 'node-page-field_main_links_external'.
   $field_instances['node-page-field_main_links_external'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -1354,7 +1398,7 @@ function rebild_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 25,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1396,7 +1440,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_main_links_internal'
+  // Exported field_instance: 'node-page-field_main_links_internal'.
   $field_instances['node-page-field_main_links_internal'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -1407,7 +1451,7 @@ function rebild_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 24,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1434,7 +1478,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_main_outdated'
+  // Exported field_instance: 'node-page-field_main_outdated'.
   $field_instances['node-page-field_main_outdated'] = array(
     'bundle' => 'page',
     'deleted' => 0,
@@ -1444,7 +1488,7 @@ function rebild_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 23,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1481,7 +1525,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_main_protected'
+  // Exported field_instance: 'node-page-field_main_protected'.
   $field_instances['node-page-field_main_protected'] = array(
     'bundle' => 'page',
     'default_value' => array(
@@ -1496,7 +1540,7 @@ function rebild_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 28,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1523,7 +1567,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_main_section'
+  // Exported field_instance: 'node-page-field_main_section'.
   $field_instances['node-page-field_main_section'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -1534,7 +1578,7 @@ function rebild_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 26,
+        'weight' => 27,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1561,7 +1605,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_main_selfservice'
+  // Exported field_instance: 'node-page-field_main_selfservice'.
   $field_instances['node-page-field_main_selfservice'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -1572,7 +1616,7 @@ function rebild_page_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 22,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1601,7 +1645,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_main_summary'
+  // Exported field_instance: 'node-page-field_main_summary'.
   $field_instances['node-page-field_main_summary'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -1641,7 +1685,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_main_tags'
+  // Exported field_instance: 'node-page-field_main_tags'.
   $field_instances['node-page-field_main_tags'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -1652,7 +1696,7 @@ function rebild_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 26,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1679,7 +1723,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_main_view'
+  // Exported field_instance: 'node-page-field_main_view'.
   $field_instances['node-page-field_main_view'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -1716,7 +1760,7 @@ function rebild_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_main_youtube_link'
+  // Exported field_instance: 'node-page-field_main_youtube_link'.
   $field_instances['node-page-field_main_youtube_link'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -1812,8 +1856,10 @@ function rebild_page_field_default_field_instances() {
   t('Vælg et eller flere tags der er med til at beskrive indholdet.');
   t('Vælg hvilken sektion indholdet hører til.');
   t('Vælg hvilket udvalg du ønsker at vise dagsordener og referater fra.');
+  t('Vælg hvis kortet skal kunne åbnes i et nyt vindue.');
   t('Website');
   t('Youtube link');
+  t('Åbn i nyt vindue');
   t('Åbningstider');
 
   return $field_instances;
