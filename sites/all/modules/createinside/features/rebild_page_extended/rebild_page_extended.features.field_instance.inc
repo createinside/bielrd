@@ -541,7 +541,7 @@ function rebild_page_extended_field_default_field_instances() {
       'module' => 'paragraphs',
       'settings' => array(),
       'type' => 'paragraphs_embed',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 
@@ -662,6 +662,43 @@ function rebild_page_extended_field_default_field_instances() {
       ),
       'type' => 'options_select',
       'weight' => 12,
+    ),
+  );
+
+  // Exported field_instance: 'node-page_extended-field_main_view'.
+  $field_instances['node-page_extended-field_main_view'] = array(
+    'bundle' => 'page_extended',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'viewreference',
+        'settings' => array(),
+        'type' => 'viewreference_default',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_main_view',
+    'label' => 'Oversigt',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'viewreference',
+      'settings' => array(),
+      'type' => 'viewreference_select',
+      'weight' => 8,
     ),
   );
 
@@ -2206,6 +2243,7 @@ function rebild_page_extended_field_default_field_instances() {
   t('Link');
   t('Navigationselement');
   t('Navn');
+  t('Oversigt');
   t('PDF');
   t('Resumé');
   t('Sektion');

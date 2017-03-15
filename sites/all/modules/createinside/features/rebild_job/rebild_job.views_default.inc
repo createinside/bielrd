@@ -51,7 +51,7 @@ function rebild_job_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Felt: Node: Ansøgningsfrist */
+  /* Felt: Indhold: Ansøgningsfrist */
   $handler->display->display_options['fields']['field_job_deadline']['id'] = 'field_job_deadline';
   $handler->display->display_options['fields']['field_job_deadline']['table'] = 'field_data_field_job_deadline';
   $handler->display->display_options['fields']['field_job_deadline']['field'] = 'field_job_deadline';
@@ -65,7 +65,7 @@ function rebild_job_views_default_views() {
     'multiple_to' => '',
     'show_remaining_days' => 0,
   );
-  /* Felt: Node: Kategori */
+  /* Felt: Indhold: Kategori */
   $handler->display->display_options['fields']['field_job_category']['id'] = 'field_job_category';
   $handler->display->display_options['fields']['field_job_category']['table'] = 'field_data_field_job_category';
   $handler->display->display_options['fields']['field_job_category']['field'] = 'field_job_category';
@@ -75,7 +75,7 @@ function rebild_job_views_default_views() {
   $handler->display->display_options['fields']['field_job_category']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_job_category']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_job_category']['delta_offset'] = '0';
-  /* Sorteringskriterie: Node: Ansøgningsfrist (field_job_deadline) */
+  /* Sorteringskriterie: Indhold: Ansøgningsfrist (field_job_deadline) */
   $handler->display->display_options['sorts']['field_job_deadline_value']['id'] = 'field_job_deadline_value';
   $handler->display->display_options['sorts']['field_job_deadline_value']['table'] = 'field_data_field_job_deadline';
   $handler->display->display_options['sorts']['field_job_deadline_value']['field'] = 'field_job_deadline_value';
@@ -98,9 +98,9 @@ function rebild_job_views_default_views() {
     'job' => 'job',
   );
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'jobs';
+  /* Display: Blok */
+  $handler = $view->new_display('block', 'Blok', 'block_1');
+  $handler->display->display_options['block_description'] = 'Job list';
   $translatables['rebild_job_list'] = array(
     t('Master'),
     t('Jobs'),
@@ -111,7 +111,8 @@ function rebild_job_views_default_views() {
     t('Stigende'),
     t('Faldende'),
     t('Ansøgningsfrist'),
-    t('Page'),
+    t('Blok'),
+    t('Job list'),
   );
   $export['rebild_job_list'] = $view;
 
