@@ -47,7 +47,7 @@ function rebild_page_extended_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'page_extended';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_main_sidebar';
   $field_group->data = array(
     'label' => 'Læs mere',
     'weight' => '9',
@@ -109,8 +109,7 @@ function rebild_page_extended_field_group_info() {
     'label' => 'Sidebar',
     'weight' => '9',
     'children' => array(
-      0 => 'field_main_factbox',
-      1 => 'group_main_links',
+      0 => 'group_main_links',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
