@@ -7,6 +7,15 @@
 include_once 'rebild_job.features.inc';
 
 /**
+ * Implements hook_cron().
+ */
+function rebild_job_cron() {
+  $name = 'signatur_job_importer';
+  $source = feeds_source($name);
+  $source->import();
+}
+
+/**
  * Implements hook_menu().
  */
 function rebild_job_menu() {
