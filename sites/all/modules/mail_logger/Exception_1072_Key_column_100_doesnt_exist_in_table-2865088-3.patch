@@ -1,0 +1,13 @@
+diff --git a/mail_logger.install b/mail_logger.install
+index b15a270..a4fe497 100644
+--- a/mail_logger.install
++++ b/mail_logger.install
+@@ -80,7 +80,7 @@ function mail_logger_schema() {
+     'primary key'     => array('mlid'),
+     'indexes'         => array(
+       'mailto'          => array(array('mailto', 200)),
+-      'mailfrom'        => array('mailfrom', 100),
++      'mailfrom'        => array(array('mailfrom', 100)),
+       'subject'         => array(array('subject', 20)),
+       'date_sent'       => array('date_sent'),
+       'language'        => array('language'),
