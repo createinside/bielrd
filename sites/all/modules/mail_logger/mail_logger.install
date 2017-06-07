@@ -80,7 +80,7 @@ function mail_logger_schema() {
     'primary key'     => array('mlid'),
     'indexes'         => array(
       'mailto'          => array(array('mailto', 200)),
-      'mailfrom'        => array('mailfrom', 100),
+      'mailfrom'        => array(array('mailfrom', 100)),
       'subject'         => array(array('subject', 20)),
       'date_sent'       => array('date_sent'),
       'language'        => array('language'),
