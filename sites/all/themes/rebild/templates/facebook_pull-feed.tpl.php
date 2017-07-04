@@ -32,7 +32,7 @@ $i = 0;
       <?php
       $message = nl2br($item->message, false);
       if (isset($item->message)) {
-        print truncate_utf8($message, 50, FALSE, TRUE);
+        print truncate_utf8($message, 55, FALSE, TRUE);
       }
       ?>
     </div>
