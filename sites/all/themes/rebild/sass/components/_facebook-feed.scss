@@ -1,0 +1,121 @@
+.block-facebook-pull .content {
+  padding: $spacing-std/2;
+  box-sizing: border-box;
+  @include grid-box(white);
+
+  @include bp(narrow) {
+    height: 394px;
+  }
+  @include bp(normal) {
+    height: 453px;
+  }
+
+  li.item {
+    position: relative;
+    padding: 1em;
+
+    @include bp(normal) {
+      padding: 1.2em 1em;
+    }
+
+    &:nth-child(2) {
+      background-color: $bg-news-block;
+    }
+
+    a {
+      display: block;
+      color: $text-color;
+      text-decoration: none;;
+    }
+  }
+  .facebook-feed-author {
+    line-height: 1.1em;
+    margin-bottom: .75em;
+    font-size: $font-size-small;
+    @include clearfix();
+
+    .facebook-feed-picture {
+      float: left;
+      margin: 0 5px 0 0;
+      img {
+        width: 25px;
+      }
+    }
+    .facebook-feed-from {
+      display: block;
+      a {
+        color: $text-color;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+    .facebook-feed-time {
+      display: block;
+      font-style: italic;
+      color: $grey-light;
+    }
+  }
+  .facebook-feed-message {
+    font-weight: bold;
+    margin-bottom: .75em;
+    font-size: $font-size-std;
+    line-height: $line-height-std;
+    position: relative;
+    padding-right: 2em;
+
+    @include bp(narrow) {
+      padding-right: 1.5em;
+      font-size: $font-size-small;
+    }
+    @include bp(normal) {
+      padding-right: 2em;
+      font-size: $font-size-std;
+    }
+
+    &:after {
+      font-style: normal;
+  		font-size: 1.33em;
+  		position: absolute;
+  		right: 0;
+  		top: 0;
+  		@include icon-prepare();
+  		content: "\e001";
+    }
+  }
+  .facebook-feed-feedback {
+    font-size: $font-size-small;
+
+    .icon-thumbs-up {
+      background: #4e91fb;
+      color: white;
+      margin-right: 3px;
+      padding: 3px;
+      @include border-radius(1em);
+    }
+  }
+  .facebook-feed-footer {
+    padding: 2em $spacing-std/2 1em;
+    margin-top: 1em;
+    line-height: 1.5em;
+    border-top: 1px solid $grey-lighter;
+    @include clearfix();
+
+    a {
+      display: block;
+      color: $text-color;
+      text-decoration: none;;
+      @include clearfix();
+    }
+    .icon-brand {
+      font-size: 4em;
+      float: left;
+      margin: 0 15px 0 0;
+    }
+    strong {
+      display: block;
+      padding-top: .5em;
+    }
+  }
+}
