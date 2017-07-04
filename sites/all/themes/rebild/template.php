@@ -215,7 +215,7 @@ function rebild_preprocess_field(&$variables, $hook) {
 
         // Check if overlay should be enabled.
         if ($overlay) {
-          $variables["items"][0]["#markup"] .= "<a href='?width=90%25&height=90%25&inline=true#gis-map-frame' class='colorbox-inline'>Se større kort</a>";
+          $variables["items"][0]["#markup"] .= "<a href='?width=90%25&height=90%25&inline=true#gis-map-frame' class='colorbox-inline'><span class='icon-enlarge'></span> Se større kort</a>";
         }
       }
       else {
