@@ -7,7 +7,11 @@ $i = 0;
   <?php if(isset($item->message) && $i < $limit): ?>
 
   <?php
-  if(isset($item->object_id)) {
+  if(isset($item->id)) {
+    $param = str_replace("_", "/posts/", $item->id);
+    $link = "https://www.facebook.com/" . $param;
+  }
+  elseif(isset($item->object_id)) {
     $link = "https://www.facebook.com/rebildkommune/posts/" . $item->object_id;
   }
   else {
