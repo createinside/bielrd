@@ -23,23 +23,16 @@ $i = 0;
   <a href="<?php print $link ?>" target="_blank">
   <?php if (isset($item->from)): ?>
     <div class="facebook-feed-author">
-      <span class="facebook-feed-picture"><img alt="<?php echo $item->from->name; ?>" src="//graph.facebook.com/<?php echo $item->from->id; ?>/picture" /></span>
+      <span class="facebook-feed-picture"><img alt="<?php echo $item->from->name; ?>" src="https://graph.facebook.com/<?php echo $item->from->id; ?>/picture" /></span>
       <span class="facebook-feed-from"><?php echo $item->from->name; ?></span>
       <span class="facebook-feed-time"><?php echo t('!time ago.', array('!time' => format_interval(time() - strtotime($item->created_time)))); ?></span>
     </div>
   <?php endif; ?>
     <div class="facebook-feed-message">
       <?php
+      $message = nl2br($item->message, false);
       if (isset($item->message)) {
-        print strip_tags(views_trim_text(
-          array(
-            'max_length' => 50,
-            'word_boundary' => FALSE,
-            'ellipsis' => TRUE,
-            'html' => TRUE,
-          ),
-          $item->message
-        ));
+        print truncate_utf8($message, 50, FALSE, TRUE);
       }
       ?>
     </div>
