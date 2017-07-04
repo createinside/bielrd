@@ -1,7 +1,7 @@
 /* This file will hold styles that are loaded using the same media query as the normal grid. */
 /* If you are using the default media queries provided by Omega, these styles will also
  *  apply to the widescreen layout unless they are overridden by the widescreen styles. */
- 
+
 @import "base";
 
 /*------------------------------------------------------------------
@@ -75,7 +75,7 @@ Landingpage
 			height: 375px;
       width: 310px;
     }
-  } 
+  }
 }
 /* Focus */
 .business-theme.not-front {
@@ -116,7 +116,7 @@ Landingpage
 /* Basic Page Extended */
 #region-content {
 	.node-page-extended {
-		
+
 		.field-name-field-main-paragraphs {
 			/* Navigation List */
 			.field-name-field-sec-nav-elment {
@@ -134,7 +134,7 @@ Landingpage
 						.read-more {
 							padding-left: 117px;
 						}
-					}	
+					}
 				}
 			}
 		}
@@ -184,8 +184,8 @@ Landingpage
 .not-front {
 	.ac_results {
 		display: inherit;
-		width: 464px !important;		
-	}	
+		width: 464px !important;
+	}
 }
 
 /* Share buttons */
