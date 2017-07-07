@@ -30,9 +30,10 @@ $i = 0;
   <?php endif; ?>
     <div class="facebook-feed-message">
       <?php
-      $message = nl2br($item->message, false);
+      $message = str_replace("\n\n","\n", $item->message);
+      $message = nl2br($message, false);
       if (isset($item->message)) {
-        print truncate_utf8($message, 55, FALSE, TRUE);
+        print truncate_utf8($message, 50, FALSE, TRUE);
       }
       ?>
     </div>
