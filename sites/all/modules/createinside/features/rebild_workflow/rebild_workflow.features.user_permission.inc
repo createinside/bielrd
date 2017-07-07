@@ -160,6 +160,8 @@ function rebild_workflow_user_default_permissions() {
     'name' => 'execute media_browser_plus_download_action',
     'roles' => array(
       'administrator' => 'administrator',
+      'fagredaktør' => 'fagredaktør',
+      'kommunikation' => 'kommunikation',
     ),
     'module' => 'actions_permissions',
   );
@@ -574,6 +576,17 @@ function rebild_workflow_user_default_permissions() {
       'konfigurator' => 'konfigurator',
     ),
     'module' => 'workbench_moderation',
+  );
+
+  // Exported permission: 'view any unpublished content'.
+  $permissions['view any unpublished content'] = array(
+    'name' => 'view any unpublished content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'fagredaktør' => 'fagredaktør',
+      'kommunikation' => 'kommunikation',
+    ),
+    'module' => 'view_unpublished',
   );
 
   // Exported permission: 'view files'.
