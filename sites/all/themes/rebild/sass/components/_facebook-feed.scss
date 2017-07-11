@@ -62,7 +62,6 @@
   }
   .facebook-feed-message {
     font-weight: bold;
-    margin-bottom: .75em;
     font-size: $font-size-std;
     line-height: $line-height-std;
     position: relative;
@@ -89,6 +88,7 @@
   }
   .facebook-feed-feedback {
     font-size: $font-size-small;
+    margin-top: .75em;
 
     .icon-thumbs-up {
       background: #4e91fb;
