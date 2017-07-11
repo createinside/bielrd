@@ -2,7 +2,6 @@
 <?php
 $limit = 3;
 $i = 0;
-dpm($items);
 ?>
 <?php foreach ($items as $item): ?>
   <?php if(isset($item->message) && $i < $limit): ?>
