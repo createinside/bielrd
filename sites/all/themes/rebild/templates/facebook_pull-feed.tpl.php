@@ -2,6 +2,7 @@
 <?php
 $limit = 3;
 $i = 0;
+dpm($items);
 ?>
 <?php foreach ($items as $item): ?>
   <?php if(isset($item->message) && $i < $limit): ?>
@@ -21,13 +22,11 @@ $i = 0;
 
   <li class="item">
   <a href="<?php print $link ?>" target="_blank">
-  <?php if (isset($item->from)): ?>
     <div class="facebook-feed-author">
-      <span class="facebook-feed-picture"><img alt="<?php echo $item->from->name; ?>" src="https://graph.facebook.com/<?php echo $item->from->id; ?>/picture" /></span>
-      <span class="facebook-feed-from"><?php echo $item->from->name; ?></span>
+      <span class="facebook-feed-picture"><img alt="<?php echo $item->from->name; ?>" src="/<?php print drupal_get_path('theme', 'rebild'); ?>/img/rebild-fb.png" /></span>
+      <span class="facebook-feed-from">Rebild Kommune</span>
       <span class="facebook-feed-time"><?php echo t('!time ago.', array('!time' => format_interval(time() - strtotime($item->created_time)))); ?></span>
     </div>
-  <?php endif; ?>
     <div class="facebook-feed-message">
       <?php
       $message = str_replace("\n\n","\n", $item->message);
@@ -37,10 +36,12 @@ $i = 0;
       }
       ?>
     </div>
+    <?php if (isset($item->likes) || isset($item->comments)) : ?>
     <div class="facebook-feed-feedback">
       <?php if (isset($item->likes)) { ?><span class="facebook-feed-likes"><span class="icon-thumbs-up"></span><?php echo count($item->likes->data); ?></span><?php } ?>
       <?php if (isset($item->comments)) { ?><span class="facebook-feed-comments">&middot;	<?php echo count($item->comments->data) . ' ' . t('comments'); ?></span><?php } ?>
     </div>
+    <?php endif; ?>
   </a>
   </li>
   <?php $i++; ?>
@@ -48,7 +49,7 @@ $i = 0;
 <?php endforeach; ?>
 </ul>
 <div class="facebook-feed-footer">
-  <a href="//facebook.com/profile.php?id=<?php echo $item->from->id; ?>" target="_blank">
+  <a href="https://www.facebook.com/rebildkommune" target="_blank">
   <span class="icon-brand"></span>
   <p>
     <strong>Følg os på Facebook</strong>
