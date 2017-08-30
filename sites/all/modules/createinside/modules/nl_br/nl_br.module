@@ -16,7 +16,7 @@ function nl_br_menu()
 		'access arguments' => array(1),
     'weight' => '1',
 	);
-    
+
   $items['node/%node/nl_br_export'] = array(
 		'title' => 'Eksporter',
 		'type' => MENU_LOCAL_TASK,
@@ -26,7 +26,7 @@ function nl_br_menu()
 		'access arguments' => array(1),
     'weight' => '2',
  	);
-    
+
   $items['node/%node/mailpeople'] = array(
     'title' => 'Gå til mailpeople',
     'page callback' => 'nl_br_redirect',
@@ -125,7 +125,7 @@ function nl_br_export_page($node)
 		'markup' => $nl_br_markup,
 		'subject' => $nl_br_subject,
 	);
-    
+
 	return drupal_get_form('nl_br_export_form', $nl_br);
 }
 
@@ -134,7 +134,7 @@ function nl_br_export_page($node)
  * @param $node
  * @return bool
  */
-function nl_br_export_access($node) {	
+function nl_br_export_access($node) {
 
 	$nodeType = $node->type;
 
@@ -227,6 +227,10 @@ function nl_br_export_form_submit($form, &$form_state)
 	}
 	rtrim($fields_string, '&');
 
+  // Get Mailpeople credentials
+  $mp_pass = variable_get('mp_password', '');
+  $mp_user = variable_get('mp_username', '');
+
 	//open connection
 	$ch = curl_init();
 
@@ -235,6 +239,7 @@ function nl_br_export_form_submit($form, &$form_state)
 	curl_setopt($ch, CURLOPT_POST, count($fields));
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($ch, CURLOPT_USERPWD, "$mp_user:$mp_pass");
 
 	//execute post
 	$result = curl_exec($ch);
@@ -252,10 +257,10 @@ function nl_br_export_form_submit($form, &$form_state)
  * @throws Exception
  */
 function nl_br_generate_markup($node) {
-	
+
 	$variables = array();
 	$sections = array();
-	
+
 	// Content type specific templates
 	if($node->type == 'nl_br') {
 		$theme = 'nl_br_export_markup';
@@ -264,8 +269,8 @@ function nl_br_generate_markup($node) {
 	else if($node->type == 'nl_rp') {
 		$theme = 'nl_rp_export_markup';
 		$view_mode = 'rp';
-	}	
-	
+	}
+
 	$i = 0;
 	$sectionsLeft = TRUE;
 	while($sectionsLeft) {
