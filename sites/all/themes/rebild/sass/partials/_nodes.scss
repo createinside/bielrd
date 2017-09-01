@@ -382,22 +382,29 @@ Share nodes
 					margin-right: 0.5em;
 				}
 			}
-				.ui-accordion-header.ui-state-active {
-					background-color: $color-blue;
-					a,
-					.field-item {
-						color: white;
-					}
-					a .field-content:before,
-					.field-item:before {
-						@include icon-prepare();
-						content: "\e010";
-						margin-right: 0.5em;
-					}
+			.ui-accordion-header.ui-state-active {
+				background-color: $color-blue;
+				a,
+				.field-item {
+					color: white;
 				}
+				a .field-content:before,
+				.field-item:before {
+					@include icon-prepare();
+					content: "\e010";
+					margin-right: 0.5em;
+				}
+			}
 			.ui-accordion-content {
 				padding: $spacing-std/2 $spacing-std $spacing-std;
 				margin: 0;
+
+        .field-name-field-accordion-image {
+          float: left;
+          width: 40%;
+          max-width: 145px;
+          margin: 2px 12px 8px 0;
+        }
 			}
 		}
 	}

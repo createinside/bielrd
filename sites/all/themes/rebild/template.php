@@ -227,6 +227,22 @@ function rebild_preprocess_field(&$variables, $hook) {
       $url = $variables['items'][0]['#element']['url'];
       $variables['items'][0]['#element']['url'] = $url . '&width=1200&height=90%25&iframe=true';
     break;
+    case 'field_accordion_image':
+      if(isset($element['#object']->field_accordion_overlay['und'][0]['value'])) {
+        // Disable overlay
+        if($element['#object']->field_accordion_overlay['und'][0]['value'] == 0) {
+          unset($variables['items'][0]['#path']);
+        }
+      }
+    break;
+    case 'field_sec_txt_img_image':
+      if(isset($element['#object']->field_sec_txt_img_overlay['und'][0]['value'])) {
+        // Disable overlay
+        if($element['#object']->field_sec_txt_img_overlay['und'][0]['value'] == 0) {
+          unset($variables['items'][0]['#path']);
+        }
+      }
+    break;
   }
 }
 
@@ -338,7 +354,7 @@ function rebild_preprocess_search_results(&$variables) {
 }
 
 /**
- *
+ * Implements hook_page_alter().
  */
 function rebild_page_alter(&$page) {
 
