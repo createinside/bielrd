@@ -1974,7 +1974,7 @@ function rebild_page_extended_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -2064,6 +2064,55 @@ function rebild_page_extended_field_default_field_instances() {
       ),
       'type' => 'media_generic',
       'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-text_image-field_sec_txt_img_overlay'.
+  $field_instances['paragraphs_item-text_image-field_sec_txt_img_overlay'] = array(
+    'bundle' => 'text_image',
+    'default_value' => array(
+      0 => array(
+        'value' => 1,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_sec_txt_img_overlay',
+    'label' => 'Vis billede i overlay',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 1,
     ),
   );
 
@@ -2256,6 +2305,7 @@ function rebild_page_extended_field_default_field_instances() {
   t('Tilknyt dette indhold til en sektion.');
   t('Titel');
   t('Video');
+  t('Vis billede i overlay');
   t('Vælg et eller flere tags som beskriver dette indhold.');
   t('Vælg hvis kortet skal kunne åbnes i et nyt vindue.');
   t('Website');
