@@ -10,6 +10,59 @@
 function rebild_page_field_default_field_bases() {
   $field_bases = array();
 
+  // Exported field_base: 'field_accordion_image'.
+  $field_bases['field_accordion_image'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_accordion_image',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'image',
+    'settings' => array(
+      'default_image' => 0,
+      'uri_scheme' => 'public',
+    ),
+    'translatable' => 0,
+    'type' => 'image',
+  );
+
+  // Exported field_base: 'field_accordion_overlay'.
+  $field_bases['field_accordion_overlay'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_accordion_overlay',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => '',
+        1 => '',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
+  );
+
   // Exported field_base: 'field_accordion_text'.
   $field_bases['field_accordion_text'] = array(
     'active' => 1,
@@ -228,6 +281,8 @@ function rebild_page_field_default_field_bases() {
     'module' => 'office_hours',
     'settings' => array(
       'cardinality' => 1,
+      'comment' => 0,
+      'date_first_day' => 0,
       'granularity' => 30,
       'hoursformat' => 0,
       'limitend' => '',
@@ -273,6 +328,8 @@ function rebild_page_field_default_field_bases() {
     'module' => 'office_hours',
     'settings' => array(
       'cardinality' => 1,
+      'comment' => 0,
+      'date_first_day' => 0,
       'granularity' => 30,
       'hoursformat' => 0,
       'limitend' => '',
@@ -931,6 +988,7 @@ function rebild_page_field_default_field_bases() {
         'calendar_overview:page' => 'calendar_overview:page',
         'calendar_overview:page_1' => 0,
         'calendar_sidebar:block' => 0,
+        'calendar_xml:page' => 0,
         'comments_recent:block' => 0,
         'comments_recent:page' => 0,
         'contact_content_sidebar:block' => 0,
@@ -938,6 +996,7 @@ function rebild_page_field_default_field_bases() {
         'content_sidebar_most_read:block' => 0,
         'content_sidebar_read_also:block' => 0,
         'content_sidebar_relevant_content:block' => 0,
+        'content_sidebar_relevant_content:block_1' => 0,
         'content_sidebar_relevant_content_cloned_pages:block' => 0,
         'entity_reference_cloned_pages:entityreference_1' => 0,
         'entity_reference_main_links_internal:entityreference_1' => 0,
@@ -947,7 +1006,7 @@ function rebild_page_field_default_field_bases() {
         'feeds_log:page_1' => 0,
         'feeds_log:page_2' => 0,
         'feeds_log:page_3' => 0,
-        'files:page' => 0,
+        'files_admin:page' => 0,
         'fix_udgivelse:page' => 0,
         'frontpage:feed' => 0,
         'frontpage:page' => 0,
@@ -982,6 +1041,8 @@ function rebild_page_field_default_field_bases() {
         'nodequeue_4:page' => 0,
         'nodequeue_5:block' => 0,
         'nodequeue_5:page' => 0,
+        'nodequeue_6:block' => 0,
+        'nodequeue_6:page' => 0,
         'nodes_not_assigned_to_menu:page' => 0,
         'offerings:block_1' => 'offerings:block_1',
         'popular:block' => 0,
@@ -993,6 +1054,10 @@ function rebild_page_field_default_field_bases() {
         'rebild_frontpage:page_2' => 0,
         'rebild_frontpage:page_3' => 0,
         'rebild_frontpage:page_4' => 0,
+        'rebild_frontpage:page_5' => 0,
+        'rebild_job_list:block_1' => 'rebild_job_list:block_1',
+        'rebildporten_content_list:block_1' => 0,
+        'rebildporten_content_list:page' => 0,
         'redirects:page_admin' => 0,
         'redirects:page_user' => 0,
         'section_pdf_list:entity_view_1' => 0,
@@ -1004,6 +1069,7 @@ function rebild_page_field_default_field_bases() {
         'selfservice_items:alfabetisk' => 'selfservice_items:alfabetisk',
         'selfservice_items:embedded' => 0,
         'selfservice_items:emner' => 'selfservice_items:emner',
+        'selfservice_items_paragraphs:entity_view_1' => 0,
         'selfservice_landing:block_1' => 0,
         'selfservice_landing:block_2' => 0,
         'subscription_news:block_2' => 0,
@@ -1013,6 +1079,7 @@ function rebild_page_field_default_field_bases() {
         'taxonomy_term:feed' => 0,
         'taxonomy_term:page' => 0,
         'temp:page_1' => 0,
+        'test:page_1' => 0,
         'tracker:page' => 0,
         'user_entityforms:entityforms_admin_page' => 0,
         'workbench_current_user:block_1' => 0,
