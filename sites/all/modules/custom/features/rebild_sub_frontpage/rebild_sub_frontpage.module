@@ -1,0 +1,21 @@
+<?php
+/**
+ * @file
+ * Code for the Rebild Subsite Forside feature.
+ */
+
+include_once 'rebild_sub_frontpage.features.inc';
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function rebild_sub_frontpage_entity_info_alter(&$entity_info) {
+  $entity_info['paragraphs_item']['view modes']['two_cols'] = array(
+    'label' => t('Two columns'),
+    'custom settings' => TRUE,
+  );
+  $entity_info['paragraphs_item']['view modes']['three_cols'] = array(
+    'label' => t('Three columns'),
+    'custom settings' => TRUE,
+  );
+}
