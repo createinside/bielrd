@@ -1,0 +1,16 @@
+/* Base colors */
+$color-base: #b63433;
+$color-base-light: lighten($color-base, 10%);
+$color-base-dark: darken($color-base, 10%);
+
+/* General colors */
+$color-gray: #474747;
+$color-gray-light: #e4e4e4;
+
+$color-beige: #d4d3d3;
+
+/* Text Colors */
+$text-color: #000000;
+$text-color-head: $color-gray;
+$text-color-light: $color-gray;
+$link-color: $color-base;

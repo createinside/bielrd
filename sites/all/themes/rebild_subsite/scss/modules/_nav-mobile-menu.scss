@@ -1,0 +1,33 @@
+.region-mobile-footer .mobile-menu-wrapper {
+  display: none;
+}
+
+.mm-menu {
+
+  background: white;
+  border-right: 1px solid $color-gray-light;
+
+  svg {
+    display: none;
+  }
+
+  ul.menu li {
+    margin: 0;
+  }
+}
+
+.mm-listview > li > a {
+  padding: $space-base * 0.75 $space-base;
+}
+
+.mm-listview>li:not(.mm-divider):after {
+  left: 0;
+}
+
+.mm-title {
+  font-family: $font-fam-head;
+  font-weight: 700;
+}
+
+.mm-menu .mm-navbar a, .mm-menu .mm-navbar>* {
+}

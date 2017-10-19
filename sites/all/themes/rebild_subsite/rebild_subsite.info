@@ -1,0 +1,23 @@
+name = Rebild Subsite
+description = A responsive theme for D7.
+core = 7.x
+
+stylesheets[all][] = bower_components/jQuery.mmenu/dist/jquery.mmenu.all.css
+stylesheets[all][] = css/styles.css
+
+scripts[] = bower_components/jQuery.mmenu/dist/jquery.mmenu.all.js
+scripts[] = js/mobile-menu.js
+scripts[] = js/accordion.js
+scripts[] = js/search-toggle.js
+
+regions[header_first] = Header first
+regions[header_second] = Header second
+regions[menu] = Menu
+regions[highlighted] = Highlighted
+regions[breadcrumbs] = Breadcrumbs
+regions[help] = Help
+regions[content] = Content
+regions[sidebar_first] = Sidebar first
+regions[postface] = Postface
+regions[footer] = Footer
+regions[mobile_footer] = Mobile Footer

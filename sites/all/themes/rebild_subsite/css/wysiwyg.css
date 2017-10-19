@@ -1,0 +1,364 @@
+/* Base */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Roboto:400,700");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Breakpoints */
+/* Base */
+/* Base colors */
+/* General colors */
+/* Text Colors */
+/* Google Fonts */
+/* Font Sizes */
+/* Font Families */
+/* Line Height */
+/* Spacing */
+/* Base */
+body {
+  background-color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  @media (min-width: 768px) {
+    body {
+      font-size: 14px; } }
+  @media (min-width: 1024px) {
+    body {
+      font-size: 17px; } }
+
+/* Headlines */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
+  margin: 1.5em 0 0.5em 0;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+  color: #474747; }
+  h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+    margin-top: 0; }
+
+h1 {
+  font-size: 2.05882em;
+  line-height: 1.2em;
+  word-wrap: break-word;
+  margin-bottom: 20px; }
+
+h1#page-title {
+  margin-top: 0; }
+
+h2 {
+  font-size: 1.47059em; }
+
+h3 {
+  font-size: 1.29412em; }
+
+h4 {
+  font-size: 1em; }
+
+h5 {
+  font-size: 0.88235em; }
+
+h6 {
+  font-size: 0.76471em; }
+
+p {
+  margin: 0 0 1.25em 0;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #000000; }
+
+p:last-child {
+  margin: 0; }
+
+a {
+  color: #b63433;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+strong {
+  font-weight: 700; }
+
+em {
+  font-style: italic; }
+
+hr {
+  display: block;
+  border: none;
+  height: 1px;
+  background: #e4e4e4;
+  padding: 0;
+  margin: 20px 0; }
+
+/* Lists */
+ul, ol {
+  margin: 0 0 1.5em;
+  padding: 0 0 0 30px;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #000000; }
+  ul li, ol li {
+    list-style-position: outside;
+    margin: 0 0 5px 0; }
+
+ul li {
+  list-style: disc; }
+
+ol li {
+  list-style: decimal; }
+
+/* Tables */
+table {
+  width: 100%;
+  line-height: 1.5em; }
+  table th {
+    text-align: left;
+    padding: 0.5em 0.25em;
+    font-weight: 700; }
+  table tr {
+    border-bottom: 1px solid #d4d3d3; }
+  table td {
+    padding: 0.75em 0.25em; }
+
+/* Pagination */
+ul.pager {
+  margin: 3em 0;
+  text-align: center; }
+  ul.pager li {
+    display: inline-block;
+    margin: 0 0.25em; }
+
+/* Messages */
+#messages .messages {
+  margin: 0 0 20px 0; }
+
+/* Mixins */
+/* Buttons */
+a.button,
+a.btn {
+  color: white;
+  display: inline-block;
+  background-color: #b63433;
+  padding: 0.85em 2.5em;
+  border: none;
+  cursor: pointer;
+  opacity: 1;
+  line-height: 1;
+  text-decoration: none;
+  text-align: center;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 250ms;
+  -moz-transition-duration: 250ms;
+  transition-duration: 250ms; }
+  a.button:hover,
+  a.btn:hover {
+    opacity: 0.75; }
+
+input[type=submit] {
+  font-size: 1em;
+  color: white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  display: inline-block;
+  background-color: #b63433;
+  padding: 0.85em 2em;
+  border: none;
+  cursor: pointer;
+  opacity: 1;
+  line-height: 1;
+  text-align: center;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 250ms;
+  -moz-transition-duration: 250ms;
+  transition-duration: 250ms; }
+  input[type=submit]:hover {
+    opacity: 0.75; }
+
+/* General form styling */
+form .form-item,
+form .text-format-wrapper,
+form .fieldset-wrapper {
+  margin: 1.5em 0 1.5em; }
+  form .form-item label, form .form-item legend,
+  form .text-format-wrapper label,
+  form .text-format-wrapper legend,
+  form .fieldset-wrapper label,
+  form .fieldset-wrapper legend {
+    font-weight: 700;
+    margin: 0 0 .5em;
+    cursor: pointer; }
+  form .form-item label.option,
+  form .text-format-wrapper label.option,
+  form .fieldset-wrapper label.option {
+    font-weight: normal;
+    margin: 0;
+    font-size: 0.88235em; }
+  form .form-item .description,
+  form .form-item .counter,
+  form .form-item .fieldset-description,
+  form .text-format-wrapper .description,
+  form .text-format-wrapper .counter,
+  form .text-format-wrapper .fieldset-description,
+  form .fieldset-wrapper .description,
+  form .fieldset-wrapper .counter,
+  form .fieldset-wrapper .fieldset-description {
+    margin-top: .5em;
+    line-height: 1.5em;
+    font-size: 0.88235em;
+    color: #474747; }
+  form .form-item .filter-wrapper,
+  form .text-format-wrapper .filter-wrapper,
+  form .fieldset-wrapper .filter-wrapper {
+    padding: 0; }
+  form .form-item .wysiwyg-toggle-wrapper,
+  form .text-format-wrapper .wysiwyg-toggle-wrapper,
+  form .fieldset-wrapper .wysiwyg-toggle-wrapper {
+    font-size: 0.88235em;
+    margin: .5em 0; }
+
+form .form-type-checkbox .description {
+  margin-left: 0; }
+
+form .form-type-checkbox label.option {
+  font-size: 1em; }
+
+form .select-wrapper {
+  background: none;
+  border: 1px solid #d7d7d7;
+  display: inline-block;
+  position: relative;
+  -webkit-transition: border-color 250ms;
+  -moz-transition: border-color 250ms;
+  transition: border-color 250ms; }
+  form .select-wrapper svg {
+    width: .6em;
+    height: .6em;
+    position: absolute;
+    z-index: 1;
+    right: 1.25em;
+    top: 50%;
+    margin-top: -.3em;
+    fill: #474747; }
+  form .select-wrapper select {
+    border-radius: 0;
+    font-size: 0.88235em;
+    font-family: "Roboto", sans-serif;
+    color: #474747;
+    border: none;
+    background: none;
+    padding: .75em 2.75em .75em 1.25em;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none; }
+    form .select-wrapper select:focus {
+      border-color: #000000; }
+
+form input, form textarea, form select {
+  max-width: 100%;
+  box-sizing: border-box; }
+  form input:focus, form textarea:focus, form select:focus {
+    outline: none; }
+
+form input[type=text],
+form input[type=email],
+form input[type=password] {
+  padding: .75em 1.25em;
+  border: 1px solid #d7d7d7;
+  font-size: 0.88235em;
+  font-family: "Roboto", sans-serif;
+  border-radius: 0;
+  -webkit-transition: border-color 250ms;
+  -moz-transition: border-color 250ms;
+  transition: border-color 250ms;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none; }
+  form input[type=text]:focus,
+  form input[type=email]:focus,
+  form input[type=password]:focus {
+    border-color: #000000; }
+
+form textarea {
+  padding: .75em 1em;
+  border: 1px solid #d7d7d7;
+  font-size: 0.88235em;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 0;
+  -webkit-transition: border-color 250ms;
+  -moz-transition: border-color 250ms;
+  transition: border-color 250ms;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none; }
+  form textarea:focus {
+    border-color: #000000; }
+
+.base-color {
+  color: #b63433; }

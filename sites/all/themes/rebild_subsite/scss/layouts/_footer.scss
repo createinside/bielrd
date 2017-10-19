@@ -1,0 +1,57 @@
+#footer-wrapper {
+  background: $color-gray;
+  padding: $space-base*2 $space-base;
+
+  @include bp-narrow {
+    padding: $space-base*3 $space-base;
+
+  }
+
+  #footer {
+    margin: auto;
+
+    @include bp-narrow {
+      width: 640px;
+    }
+
+    @include bp-normal {
+      width: 960px;
+    }
+
+  }
+
+  .region-footer {
+
+    @include bp-narrow {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: $space-base;
+      box-sizing: border-box;
+    }
+
+    &.contains-one {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &.contains-two {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &.contains-three {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .block {
+      margin-bottom: $space-base;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include bp-narrow {
+        margin-bottom: 0;
+      }
+    }
+
+  }
+}

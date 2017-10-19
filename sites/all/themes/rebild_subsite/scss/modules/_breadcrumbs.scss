@@ -1,0 +1,40 @@
+#breadcrumbs-wrapper {
+  background: $color-gray-light;
+  padding: $space-base;
+  font-size: $font-size-smaller;
+  box-shadow: -0 5px 10px rgba(black, .05) inset;
+
+  @include bp-narrow {
+    padding: $space-base*1.25 $space-base;
+  }
+
+  .breadcrumb {
+    padding: 0;
+    @include clearfix();
+
+    > div {
+      line-height: $line-height-medium;
+    }
+
+    .breadcrumb-item {
+      float: left;
+      margin: 0;
+    }
+
+    .breadcrumb-sep {
+      float: left;
+      margin: 0 $space-base*0.5;
+      vertical-align: middle;
+    }
+    a {
+      color: $text-color;
+    }
+    svg {
+      height: 1em;
+      width: 1em;
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 0.15em;
+    }
+  }
+}

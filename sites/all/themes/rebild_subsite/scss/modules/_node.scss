@@ -1,0 +1,196 @@
+.node-type-page-extended {
+
+  .field-name-field-main-image {
+    margin-bottom: $space-base;
+
+    img {
+      width: 100%;
+      max-width: 640px;
+    }
+  }
+
+  .field-name-field-main-summary {
+    font-weight: bold;
+    margin-bottom: $space-base;
+    padding-bottom: $space-base;
+    position: relative;
+    line-height: $line-height-base;
+
+    &:after {
+      content: "";
+      height: 3px;
+      width: $space-base*3;
+      background-color: $color-base;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  .field-name-field-main-factbox {
+    padding: $space-base;
+    background: $color-base;
+    margin: 0 0 $space-base*0.5 0;
+
+    @include bp-narrow {
+      float: right;
+      width: 33%;
+      margin: 0 0 $space-base*0.5 $space-base*0.5;
+    }
+
+    p {
+      color: white;
+    }
+  }
+
+  /* Paragraphs */
+  .field-name-field-main-paragraphs {
+
+    > .field-items > .field-item {
+      margin-bottom: $space-base;
+    }
+  }
+
+  .paragraphs-item-text-image,
+  .paragraphs-item-text-video {
+
+    .field-name-field-sec-txt-img-image,
+    .field-name-field-sec-txt-vid-url {
+      float: left;
+      margin: 0 $space-base $space-base*0.5 0;
+    }
+  }
+
+  /* Text and Video */
+  .field-name-field-sec-txt-vid-url {
+    position: relative;
+    .youtube-field-player,
+    .cboxElement {
+      &:before {
+        content: url("/sites/all/themes/rebild/img/youtube-play.png");
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -25px;
+        margin-top: -19px;
+      }
+    }
+  }
+
+  /* Navigation List */
+  .field-name-field-sec-nav-elment {
+    > .field-items {
+      > .field-item {
+        margin-bottom: 15px;
+        position: relative;
+        min-height: 90px;
+        a.nav-link {
+          display: block;
+          min-height: 80px;
+          text-decoration: none;
+          color: $text-color;
+        }
+        a.nav-link:hover {
+          opacity: .75;
+        }
+        .field-name-field-sec-nav-image {
+          position: absolute;
+          top: 1px;
+          left: 0;
+          margin-bottom: 0;
+        }
+        h3 {
+          font-size: 1.08em;
+          padding-top: 0;
+          padding-left: 125px;
+          padding-bottom: 0.7em;
+          margin: 0;
+          font-weight: bold;
+        }
+        .field-name-field-sec-nav-body {
+          padding-left: 125px;
+          margin-bottom: 10px;
+          word-break: normal;
+          word-wrap: normal;
+        }
+        .read-more {
+          display: block;
+          padding-left: 125px;
+          color: $link-color;
+        }
+      }
+      > .field-item:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  /* Video */
+  .field-name-field-sec-vid-url {
+    .player {
+    	position: relative;
+    	padding-bottom: 56.25%;
+    	padding-top: 0;
+    	height: 0;
+    	overflow: hidden;
+    }
+    .player iframe,
+    .player embed {
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 100%;
+    }
+    #cboxContent .player {
+    	position: inherit;
+    }
+  }
+
+  /* PDF List */
+  .view-section-pdf-list {
+    .views-row {
+      margin-bottom: 13px;
+      a {
+        color: $color-base;
+        text-decoration: none;
+        display: block;
+        .file-meta {
+          color: $text-color;
+        }
+      }
+      a:hover {
+        .file-name {
+          text-decoration: underline;
+        }
+      }
+      .file-icon {
+        float: left;
+        font-size: 2.45em;
+        color: $color-base;
+        margin: 0 5px 0 0;
+      }
+      .file-meta {
+        text-transform: uppercase;
+        font-style: italic;
+      }
+    }
+    .views-row-last {
+      margin-bottom: 0;
+    }
+  }
+
+  /* Node Image Gallery */
+  .field-name-field-main-image-gallery {
+    .field-items {
+      background: $color-gray-light;
+      padding: $space-base $space-base $space-base * 0.5;
+      overflow: hidden;
+      .field-item {
+        display: inline-block;
+        margin: 0 $space-base * 0.5 $space-base * 0.5 0;
+      }
+    }
+  }
+
+}

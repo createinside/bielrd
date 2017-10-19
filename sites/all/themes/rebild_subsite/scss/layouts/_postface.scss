@@ -1,0 +1,18 @@
+#postface-wrapper {
+  background: white;
+  padding: $space-base*2 $space-base;
+
+  #postface {
+    margin: auto;
+
+    @include bp-narrow {
+      width: 640px;
+    }
+
+    @include bp-normal {
+      width: 960px;
+    }
+
+  }
+
+}

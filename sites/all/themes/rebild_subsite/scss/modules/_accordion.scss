@@ -1,0 +1,28 @@
+.field-name-field-main-accordion {
+
+  > .field-items > .field-item {
+    margin-bottom: $space-base*0.5;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .ui-accordion-header {
+    background: $color-gray-light;
+    padding: $space-base;
+    outline: none;
+    margin: 0;
+    font-weight: bold;
+    color: $text-color-head;
+
+    &.ui-state-active {
+      background: $color-base;
+      color: white;
+    }
+  }
+
+  .ui-accordion-content {
+    padding: $space-base;
+  }
+}

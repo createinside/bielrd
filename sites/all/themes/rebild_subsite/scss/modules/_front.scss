@@ -1,0 +1,141 @@
+body.front {
+  background: #eaeaea;
+
+  #page-title {
+    text-align: center;
+    position: relative;
+    padding-bottom: $space-base;
+
+    &:after {
+      content: "";
+      height: 3px;
+      width: $space-base*3;
+      background-color: $color-base;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -$space-base*1.5;
+    }
+  }
+}
+
+// Outro
+.view-outro-front {
+
+  img {
+    margin: 0 $space-base $space-base*0.5;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include bp-narrow {
+      margin: 0 $space-base;
+    }
+  }
+}
+
+.node-front-page {
+
+  // Intro
+  .field-name-field-front-intro {
+    text-align: center;
+    margin-bottom: $space-base*2;
+  }
+
+  .field-name-field-front-paragraphs {
+
+    > .field-items > .field-item {
+      margin-bottom: $space-base;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .field-name-field-foucs-two-blocks {
+
+    > .field-items {
+
+      @include bp-extra-narrow {
+        display: grid;
+        grid-template-columns: repeat(2, 3fr);
+        grid-gap: $space-base;
+      }
+
+      > .field-item {
+        background: white;
+        margin-bottom: $space-base;
+        @include clearfix();
+
+        @include bp-extra-narrow {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .field-name-field-focus-three-blocks {
+
+    > .field-items {
+
+      @include bp-extra-narrow {
+        display: grid;
+        grid-template-columns: repeat(3, 3fr);
+        grid-gap: $space-base;
+      }
+
+      > .field-item {
+        background: white;
+        margin-bottom: $space-base;
+        @include clearfix();
+
+        @include bp-extra-narrow {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .paragraphs-item-focus {
+    background: white;
+
+    &:hover {
+      .field-name-field-focus-image img {
+        opacity: .75;
+      }
+    }
+
+    .focus-link {
+      text-decoration: none;
+    }
+
+    .field-name-field-focus-image {
+      line-height: 0;
+
+      img {
+        opacity: 1;
+        backface-visibility: hidden;
+        width: 100%;
+        @include transition(opacity 250ms);
+      }
+    }
+
+    .field-name-field-focus-label {
+      color: #999999;
+      padding: $space-base*1.5 $space-base 0;
+      line-height: $line-height-small;
+    }
+
+    .field-name-field-focus-text {
+      font-size: $font-size-medium;
+      line-height: $line-height-small;
+      font-family: $font-fam-head;
+      font-weight: bold;
+      color: $color-gray;
+      padding: $space-base*0.25 $space-base $space-base*1.5;
+    }
+
+  }
+}
