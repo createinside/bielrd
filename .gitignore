@@ -8,9 +8,10 @@ sites/*/files
 sites/*/private
 
 # Ignore paths that contain development only content.
-sites/all/modules/devel/
+sites/all/modules/devel
 sites/all/modules/stage_file_proxy
 sites/all/modules/maillog
+sites/all/modules/browsersync
 
 # Ignore single files.
 .DS_Store
