@@ -545,44 +545,6 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page_extended-field_main_section'.
-  $field_instances['node-page_extended-field_main_section'] = array(
-    'bundle' => 'page_extended',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Tilknyt dette indhold til en sektion.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_main_section',
-    'label' => 'Sektion',
-    'required' => 1,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => 1,
-      ),
-      'type' => 'options_select',
-      'weight' => 11,
-    ),
-  );
-
   // Exported field_instance: 'node-page_extended-field_main_summary'.
   $field_instances['node-page_extended-field_main_summary'] = array(
     'bundle' => 'page_extended',
@@ -624,44 +586,6 @@ function rebild_page_extended_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 2,
-    ),
-  );
-
-  // Exported field_instance: 'node-page_extended-field_main_tags'.
-  $field_instances['node-page_extended-field_main_tags'] = array(
-    'bundle' => 'page_extended',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Vælg et eller flere tags som beskriver dette indhold.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_main_tags',
-    'label' => 'Tags',
-    'required' => 1,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => 1,
-      ),
-      'type' => 'options_select',
-      'weight' => 12,
     ),
   );
 
@@ -2295,18 +2219,14 @@ function rebild_page_extended_field_default_field_instances() {
   t('Oversigt');
   t('PDF');
   t('Resumé');
-  t('Sektion');
   t('Sektioner');
   t('Selvbetjeningløsninger');
-  t('Tags');
   t('Tekst');
   t('Telefonnummer');
   t('Telefontider');
-  t('Tilknyt dette indhold til en sektion.');
   t('Titel');
   t('Video');
   t('Vis billede i overlay');
-  t('Vælg et eller flere tags som beskriver dette indhold.');
   t('Vælg hvis kortet skal kunne åbnes i et nyt vindue.');
   t('Website');
   t('Åbn i nyt vindue');
