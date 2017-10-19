@@ -1,0 +1,7 @@
+name = Rebild Social Share
+package = Rebild
+core = 7.x
+version = 7.x-1.0
+description = Social share links.
+
+dependencies[] = print
