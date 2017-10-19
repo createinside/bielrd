@@ -1,0 +1,73 @@
+<?php
+
+/**
+ * Implements hook_block_info().
+ */
+function rebild_social_share_block_info() {
+
+  $blocks = array();
+
+  $blocks['share_links'] = array(
+    'info' => t('Social sharing links'),
+  );
+  $blocks['print_link'] = array(
+    'info' => t('Print link'),
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function rebild_social_share_block_view($delta='') {
+  $block = array();
+
+  switch($delta) {
+  	case 'share_links' :
+    	$block['content'] = rebild_social_share_links();
+    break;
+    case 'print_link' :
+    	$block['content'] = rebild_social_share_print_button();
+    break;
+  }
+  return $block;
+}
+
+/**
+ * Block View: Social Share Links
+ */
+function rebild_social_share_links() {
+
+	$current_url = "http://".$_SERVER['HTTP_HOST'] . request_uri();
+	$current_title = drupal_get_title();
+
+  $facebook_link = "<a target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=".$current_url."'>" . rebild_subsite_icon_display('facebook-with-circle'). "</a>";
+  $twitter_link = "<a target='_blank' href='https://twitter.com/intent/tweet?text=" . $current_title . ": ".$current_url."'>" . rebild_subsite_icon_display('twitter-with-circle'). "</a>";
+	$linkedin_link = "<a target='_blank' href='https://www.linkedin.com/shareArticle?mini=true&url=".$current_url."&title=".$current_title."'><span class='icon-linkedin'></span>" . rebild_subsite_icon_display('linkedin-with-circle'). "</a>";
+
+	$output = "";
+	$output .= "<span class='share-label'>".t('Share')."</span>";
+	$output .= "<ul class='share-list'>";
+  $output .= "<li class='fb-link'>".$facebook_link."</li>";
+  $output .= "<li class='tw-link'>".$twitter_link."</li>";
+	$output .= "<li class='li-link'>".$linkedin_link."</li>";
+	$output .= "</ul>";
+
+	return $output;
+}
+
+/**
+ * Block View: Print link
+ */
+function rebild_social_share_print_button() {
+
+	// // Print
+  $current_uri = request_uri();
+	$print_link = '<a href="/print' . $current_uri . '" target="_blank" class="print-link">' . rebild_subsite_icon_display('printer') . "</a>";
+
+	$output = "";
+  $output .= "<span class='print-label'>".t('Print')."</span>";
+	$output .= $print_link;
+
+	return $output;
+}

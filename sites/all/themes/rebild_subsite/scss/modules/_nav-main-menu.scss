@@ -1,0 +1,92 @@
+.region-menu .menu-name-main-menu.menu-level-1 {
+  padding: $space-base*1.5 0;
+
+  ul.menu {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    li {
+      list-style: none;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      font-size: 1.05em;
+    }
+    a {
+      color: $text-color;
+      margin: 0 20px;
+    }
+
+    li.active-trail {
+
+      a {
+        color: $color-base;
+      }
+    }
+  }
+}
+
+.region-sidebar-first .menu-name-main-menu.menu-level-2 {
+
+  > ul.menu {
+    margin: 0;
+    padding: 0;
+
+    > li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      border-bottom: 1px solid $color-gray-light;
+      line-height: $line-height-small;
+
+      > a {
+        font-weight: bold;
+        color: $color-gray;
+        padding: $space-base $space-base * 1.5 $space-base $space-base;
+        display: block;
+      }
+      > a.active {
+        color: $color-base;
+      }
+      svg {
+        width: $font-size-small;
+        height: $font-size-small;
+        position: absolute;
+        top: $space-base * 1.25;
+        right: $space-base * 0.65;
+        fill: $color-gray;
+      }
+    }
+
+    > li.active-trail {
+      background: $color-gray-light;
+    }
+
+    > li:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  > ul.menu > li > ul.menu {
+
+    margin: 0 0 $space-base $space-base*1.5;
+    padding: 0;
+
+    > li {
+      list-style: none;
+      margin: 0 0 $space-base*0.5;
+      padding: 0;
+      font-size: $font-size-small;
+      line-height: $line-height-small;
+
+      > a {
+        color: $color-gray;
+      }
+      > a.active-trail {
+        color: $color-base;
+      }
+    }
+  }
+}

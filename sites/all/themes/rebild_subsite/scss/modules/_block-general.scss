@@ -1,0 +1,63 @@
+#sidebar-first {
+
+  .block {
+    margin-bottom: $space-base;
+
+    @include bp-narrow {
+      margin-bottom: $space-base * 2;
+    }
+  }
+
+  .block-block {
+    background: $color-base;
+
+    > h2 {
+      color: white;
+      padding: $space-base;
+      background: $color-base-dark;
+      margin: 0;
+    }
+
+    > .content {
+
+      color: white;
+      padding: $space-base*1.25 $space-base;
+
+      p {
+        color: white;
+      }
+
+      a {
+        color: white;
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+  }
+
+  .block-block.light-color {
+
+    background: white;
+
+    > h2 {
+      padding: 0 0 $space-base*1.25;
+      background: none;
+      color: $text-color-light;
+      border-bottom: 1px solid $color-gray-light;
+    }
+
+    > .content {
+
+      color: $text-color;
+      padding: $space-base*1.25 0;
+
+      p {
+        color: $text-color;
+      }
+    }
+  }
+}

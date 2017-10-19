@@ -1,0 +1,35 @@
+
+#search-form {
+
+  & ~ h2 {
+    margin-bottom: $space-base;
+  }
+
+  .form-item-keys {
+
+    margin-bottom: $space-base;
+
+    label {
+      display: block;
+    }
+  }
+
+  #edit-advanced {
+    margin: $space-base 0 0 0;
+  }
+
+  #edit-submit {
+    margin-top: $space-base*0.5;
+    padding-top: .75em;
+    padding-bottom: .75em;
+
+    @include bp-narrow {
+      margin-top: 0;
+    }
+  }
+}
+
+
+ol.search-results {
+  margin-bottom: $space-base*2;
+}

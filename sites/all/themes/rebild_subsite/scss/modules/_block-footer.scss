@@ -1,0 +1,30 @@
+#footer {
+
+  .block {
+    font-size: $font-size-small;
+
+    color: #999999;
+
+    h2 {
+      color: #999999;
+    }
+
+    p {
+      color: #999999;
+    }
+
+    a {
+      color: white;
+    }
+
+    img {
+      //margin: auto;
+      display: block;
+
+      @include bp-narrow {
+        margin: 0;
+        display: inline;
+      }
+    }
+  }
+}

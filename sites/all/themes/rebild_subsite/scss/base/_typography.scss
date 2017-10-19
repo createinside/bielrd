@@ -1,0 +1,25 @@
+/* Font Sizes */
+$font-size-base-px: 17;
+$font-size-base: 1em;
+
+$font-size-smallest: (10/$font-size-base-px)*1em;
+$font-size-smaller: (13/$font-size-base-px)*1em;
+$font-size-small: (15/$font-size-base-px)*1em;
+$font-size-medium: (22/$font-size-base-px)*1em;
+$font-size-large: (25/$font-size-base-px)*1em;
+$font-size-larger: (35/$font-size-base-px)*1em;
+$font-size-largest: (48/$font-size-base-px)*1em;
+
+/* Font Families */
+$font-fam-base: 'Roboto', sans-serif;
+$font-fam-alt: 'Playfair Display', serif;
+$font-fam-head: 'Playfair Display', serif;
+
+/* Line Height */
+$line-height-base: 1.50em;
+$line-height-small: 1.25em;
+$line-height-medium: 1.35em;
+$line-height-large: 1.75em;
+
+/* Spacing */
+$space-base: 20px;

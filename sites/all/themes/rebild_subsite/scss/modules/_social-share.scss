@@ -1,0 +1,51 @@
+#block-rebild-social-share-share-links {
+
+  line-height: $line-height-medium;
+  @include clearfix();
+
+  .share-label {
+    float: left;
+  }
+
+  .share-list {
+    margin: 0;
+    padding: 0;
+    float: left;
+
+    li {
+      float: left;
+      list-style: none;
+      margin: -.5em 0 0 $space-base*0.35;
+      padding: 0;
+      @include transition(opacity 250ms);
+
+      &:hover {
+        opacity: .75;
+      }
+    }
+
+    svg {
+      width: 2em;
+      height: 2em;
+    }
+
+    .fb-link {
+      svg {
+        fill: #3b5998;
+      }
+    }
+
+    .tw-link {
+      svg {
+        fill: #1da1f2;
+      }
+    }
+
+    .li-link {
+      svg {
+        fill: #0077b5;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,26 @@
+#block-rebild-social-share-print-link {
+
+  line-height: $line-height-medium;
+  @include clearfix();
+
+  .print-label {
+    float: left;
+    margin-right: $space-base*0.35;
+  }
+
+  a.print-link {
+    color: $text-color;
+    margin: -.5em 0 0 0;
+    display: inline-block;
+    @include transition(opacity 250ms);
+
+    &:hover {
+      opacity: .75;
+    }
+  }
+
+  svg {
+    width: 2em;
+    height: 2em;
+  }
+}
