@@ -14,6 +14,13 @@ function rebild_sub_frontpage_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function rebild_sub_frontpage_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
+
+/**
  * Implements hook_image_default_styles().
  */
 function rebild_sub_frontpage_image_default_styles() {
@@ -110,6 +117,11 @@ function rebild_sub_frontpage_paragraphs_info() {
     'focus' => array(
       'name' => 'Fokusblok',
       'bundle' => 'focus',
+      'locked' => '1',
+    ),
+    'focus_three' => array(
+      'name' => 'Fokus (3 kolonner)',
+      'bundle' => 'focus_three',
       'locked' => '1',
     ),
     'focus_two' => array(

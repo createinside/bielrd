@@ -194,6 +194,24 @@ function rebild_sub_frontpage_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_focus_three_blocks'.
+  $field_bases['field_focus_three_blocks'] = array(
+    'active' => 1,
+    'cardinality' => 3,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_focus_three_blocks',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'paragraphs',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'paragraphs',
+  );
+
   // Exported field_base: 'field_foucs_two_blocks'.
   $field_bases['field_foucs_two_blocks'] = array(
     'active' => 1,

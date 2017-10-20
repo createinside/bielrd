@@ -34,21 +34,3 @@ function rebild_page_ctools_plugin_api($module = NULL, $api = NULL) {
 function rebild_page_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
-
-/**
- * Implements hook_node_info().
- */
-function rebild_page_node_info() {
-  $items = array(
-    'page' => array(
-      'name' => t('Standardside'),
-      'base' => 'node_content',
-      'description' => t('Brug standardsider til  indhold, som fx. en "Om Rebild Kommune" side.'),
-      'has_title' => '1',
-      'title_label' => t('Overskrift'),
-      'help' => '',
-    ),
-  );
-  drupal_alter('node_info', $items);
-  return $items;
-}

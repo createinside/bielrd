@@ -1,0 +1,17 @@
+name = Rebild Subsite Formatting
+core = 7.x
+package = Rebild Subsite
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = filter
+dependencies[] = imce
+dependencies[] = imce_wysiwyg
+dependencies[] = strongarm
+dependencies[] = wysiwyg
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[filter][] = full_html
+features[variable][] = imce_profiles
+features[variable][] = imce_roles_profiles
+features[wysiwyg][] = full_html
+project path = sites/all/modules/custom/features
