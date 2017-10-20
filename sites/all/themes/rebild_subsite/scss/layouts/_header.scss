@@ -21,19 +21,28 @@
 #header > .section {
 
   padding: $space-base 0 $space-base*0.75;
-  display: grid;
-  grid-template-columns: 2fr 2fr;
 
   @include bp-narrow {
     padding: $space-base*2 0;
-
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    display: -ms-grid;
+    -ms-grid-template-columns: 50% 50%;
   }
 
   .region-header-first {
-
+    @include bp-narrow {
+      -ms-grid-row: 1;
+      -ms-grid-column: 1;
+    }
   }
 
   .region-header-second {
+    @include bp-narrow {
+      -ms-grid-row: 1;
+      -ms-grid-column: 2;
+    }
+
     text-align: right;
     line-height: $line-height-medium;
 
