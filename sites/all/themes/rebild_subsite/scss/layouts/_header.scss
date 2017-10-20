@@ -27,7 +27,7 @@
     display: grid;
     grid-template-columns: 2fr 2fr;
     display: -ms-grid;
-    -ms-grid-template-columns: 50% 50%;
+    -ms-grid-columns: 50% 50%;
   }
 
   .region-header-first {
