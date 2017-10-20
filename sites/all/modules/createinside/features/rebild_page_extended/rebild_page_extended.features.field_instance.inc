@@ -865,11 +865,11 @@ function rebild_page_extended_field_default_field_instances() {
       'allowed_bundles' => array(
         'accordion' => 'accordion',
         'contact' => -1,
-        'gis_map' => -1,
+        'gis_map' => 'gis_map',
         'image_gallery' => 'image_gallery',
         'navigation_list' => 'navigation_list',
         'pdf_list' => 'pdf_list',
-        'selfservice' => -1,
+        'selfservice' => 'selfservice',
         'text' => 'text',
         'text_image' => 'text_image',
         'text_video' => 'text_video',
@@ -899,6 +899,44 @@ function rebild_page_extended_field_default_field_instances() {
       'settings' => array(),
       'type' => 'paragraphs_embed',
       'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-page_extended-field_main_section'.
+  $field_instances['node-page_extended-field_main_section'] = array(
+    'bundle' => 'page_extended',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Tilknyt dette indhold til en sektion.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_main_section',
+    'label' => 'Sektion',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => 1,
+      ),
+      'type' => 'options_select',
+      'weight' => 11,
     ),
   );
 
@@ -943,6 +981,44 @@ function rebild_page_extended_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-page_extended-field_main_tags'.
+  $field_instances['node-page_extended-field_main_tags'] = array(
+    'bundle' => 'page_extended',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Vælg et eller flere tags som beskriver dette indhold.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_main_tags',
+    'label' => 'Tags',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => 1,
+      ),
+      'type' => 'options_select',
+      'weight' => 12,
     ),
   );
 
@@ -1015,18 +1091,6 @@ function rebild_page_extended_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'three_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'two_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
     ),
     'entity_type' => 'paragraphs_item',
     'field_name' => 'field_main_accordion',
@@ -1065,18 +1129,6 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 0,
       ),
       'rp' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'three_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'two_cols' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1132,18 +1184,6 @@ function rebild_page_extended_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'three_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'two_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
     ),
     'entity_type' => 'paragraphs_item',
     'field_name' => 'field_con_center',
@@ -1189,18 +1229,6 @@ function rebild_page_extended_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'three_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'two_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
     ),
     'entity_type' => 'paragraphs_item',
     'field_name' => 'field_con_email',
@@ -1241,18 +1269,6 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 0,
       ),
       'rp' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'three_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'two_cols' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1317,18 +1333,6 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 0,
       ),
       'rp' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'three_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'two_cols' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1403,18 +1407,6 @@ function rebild_page_extended_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'three_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'two_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
     ),
     'entity_type' => 'paragraphs_item',
     'field_name' => 'field_con_opening_hours',
@@ -1452,18 +1444,6 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 0,
       ),
       'rp' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'three_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'two_cols' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1775,18 +1755,6 @@ function rebild_page_extended_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'three_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'two_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
     ),
     'entity_type' => 'paragraphs_item',
     'field_name' => 'field_con_phone_hours',
@@ -1825,18 +1793,6 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 0,
       ),
       'rp' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'three_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'two_cols' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1887,18 +1843,6 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 0,
       ),
       'rp' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'three_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'two_cols' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1957,18 +1901,6 @@ function rebild_page_extended_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'three_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'two_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
     ),
     'entity_type' => 'paragraphs_item',
     'field_name' => 'field_main_gis_overlay',
@@ -2012,18 +1944,6 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 0,
       ),
       'rp' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'three_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'two_cols' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -2121,18 +2041,6 @@ function rebild_page_extended_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'three_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'two_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
     ),
     'entity_type' => 'paragraphs_item',
     'field_name' => 'field_sec_nav_elment',
@@ -2169,18 +2077,6 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 0,
       ),
       'rp' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'three_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'two_cols' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -2267,18 +2163,6 @@ function rebild_page_extended_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'three_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'two_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
     ),
     'entity_type' => 'paragraphs_item',
     'field_name' => 'field_main_selfservice',
@@ -2321,18 +2205,6 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 0,
       ),
       'rp' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'three_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'two_cols' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -2383,18 +2255,6 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 0,
       ),
       'rp' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'three_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'two_cols' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -2451,18 +2311,6 @@ function rebild_page_extended_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'three_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'two_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
     ),
     'entity_type' => 'paragraphs_item',
     'field_name' => 'field_sec_txt_img_body',
@@ -2511,18 +2359,6 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 0,
       ),
       'rp' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'three_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'two_cols' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -2618,18 +2454,6 @@ function rebild_page_extended_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'three_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'two_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
     ),
     'entity_type' => 'paragraphs_item',
     'field_name' => 'field_sec_txt_img_overlay',
@@ -2671,18 +2495,6 @@ function rebild_page_extended_field_default_field_instances() {
         'weight' => 0,
       ),
       'rp' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'three_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'two_cols' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -2744,18 +2556,6 @@ function rebild_page_extended_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'three_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'two_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
     ),
     'entity_type' => 'paragraphs_item',
     'field_name' => 'field_sec_txt_vid_url',
@@ -2809,18 +2609,6 @@ function rebild_page_extended_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'three_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'two_cols' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
     ),
     'entity_type' => 'paragraphs_item',
     'field_name' => 'field_sec_vid_url',
@@ -2867,16 +2655,20 @@ function rebild_page_extended_field_default_field_instances() {
   t('Overskrift');
   t('PDF');
   t('Resumé');
+  t('Sektion');
   t('Sektioner');
   t('Selvbetjeningløsninger');
+  t('Tags');
   t('Tekst');
   t('Telefonnummer');
   t('Telefontider');
+  t('Tilknyt dette indhold til en sektion.');
   t('Titel');
   t('Title tekst');
   t('Title text is used in the tool tip when a user hovers their mouse over the image. Adding title text makes it easier to understand the context of an image and improves usability.');
   t('Video');
   t('Vis billede i overlay');
+  t('Vælg et eller flere tags som beskriver dette indhold.');
   t('Vælg hvis kortet skal kunne åbnes i et nyt vindue.');
   t('Website');
   t('Åbn i nyt vindue');

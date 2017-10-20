@@ -13,6 +13,35 @@ function rebild_page_extended_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_main_categories|node|page_extended|form';
+  $field_group->group_name = 'group_main_categories';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'page_extended';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Kategorisering',
+    'weight' => '11',
+    'children' => array(
+      0 => 'field_main_section',
+      1 => 'field_main_tags',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Kategorisering',
+      'instance_settings' => array(
+        'required_fields' => 0,
+        'classes' => '',
+        'description' => '',
+      ),
+      'formatter' => 'collapsible',
+    ),
+  );
+  $field_groups['group_main_categories|node|page_extended|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_main_links|node|page_extended|form';
   $field_group->group_name = 'group_main_links';
   $field_group->entity_type = 'node';
@@ -126,6 +155,7 @@ function rebild_page_extended_field_group_info() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Faktaboks');
+  t('Kategorisering');
   t('Læs mere');
   t('Sekundære elementer');
   t('Sidebar');
