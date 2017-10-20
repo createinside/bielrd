@@ -15,7 +15,7 @@ function rebild_page_user_default_permissions() {
     'name' => 'administer nodes',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -25,8 +25,7 @@ function rebild_page_user_default_permissions() {
     'name' => 'administer redirects',
     'roles' => array(
       'administrator' => 'administrator',
-      'fagredaktør' => 'fagredaktør',
-      'kommunikation' => 'kommunikation',
+      'editor' => 'editor',
     ),
     'module' => 'redirect',
   );
@@ -34,21 +33,8 @@ function rebild_page_user_default_permissions() {
   // Exported permission: 'bypass file access'.
   $permissions['bypass file access'] = array(
     'name' => 'bypass file access',
-    'roles' => array(
-      'fagredaktør' => 'fagredaktør',
-      'kommunikation' => 'kommunikation',
-    ),
+    'roles' => array(),
     'module' => 'file_entity',
-  );
-
-  // Exported permission: 'create field_agenda_view_com'.
-  $permissions['create field_agenda_view_com'] = array(
-    'name' => 'create field_agenda_view_com',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'field_permissions',
   );
 
   // Exported permission: 'create field_con_address'.
@@ -56,7 +42,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'create field_con_address',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -66,7 +51,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'create field_con_center',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -76,7 +60,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'create field_con_email',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -86,7 +69,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'create field_con_link',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -96,7 +78,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'create field_con_name',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -106,7 +87,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'create field_con_opening_hours',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -116,7 +96,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'create field_con_phone',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -126,7 +105,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'create field_con_phone_hours',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -136,37 +114,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'create field_con_title',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'field_permissions',
-  );
-
-  // Exported permission: 'create field_main_allow_publishing'.
-  $permissions['create field_main_allow_publishing'] = array(
-    'name' => 'create field_main_allow_publishing',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'field_permissions',
-  );
-
-  // Exported permission: 'create field_main_block'.
-  $permissions['create field_main_block'] = array(
-    'name' => 'create field_main_block',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'field_permissions',
-  );
-
-  // Exported permission: 'create field_main_protected'.
-  $permissions['create field_main_protected'] = array(
-    'name' => 'create field_main_protected',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -176,60 +123,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'create field_main_view',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'field_permissions',
-  );
-
-  // Exported permission: 'create page content'.
-  $permissions['create page content'] = array(
-    'name' => 'create page content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'fagredaktør' => 'fagredaktør',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'delete any page content'.
-  $permissions['delete any page content'] = array(
-    'name' => 'delete any page content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'delete own page content'.
-  $permissions['delete own page content'] = array(
-    'name' => 'delete own page content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'fagredaktør' => 'fagredaktør',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'edit any page content'.
-  $permissions['edit any page content'] = array(
-    'name' => 'edit any page content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'fagredaktør' => 'fagredaktør',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'edit field_agenda_view_com'.
-  $permissions['edit field_agenda_view_com'] = array(
-    'name' => 'edit field_agenda_view_com',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -239,7 +132,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'edit field_con_address',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -249,7 +141,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'edit field_con_center',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -259,7 +150,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'edit field_con_email',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -269,7 +159,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'edit field_con_link',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -279,7 +168,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'edit field_con_name',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -289,7 +177,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'edit field_con_opening_hours',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -299,7 +186,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'edit field_con_phone',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -309,7 +195,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'edit field_con_phone_hours',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -319,37 +204,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'edit field_con_title',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'field_permissions',
-  );
-
-  // Exported permission: 'edit field_main_allow_publishing'.
-  $permissions['edit field_main_allow_publishing'] = array(
-    'name' => 'edit field_main_allow_publishing',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'field_permissions',
-  );
-
-  // Exported permission: 'edit field_main_block'.
-  $permissions['edit field_main_block'] = array(
-    'name' => 'edit field_main_block',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'field_permissions',
-  );
-
-  // Exported permission: 'edit field_main_protected'.
-  $permissions['edit field_main_protected'] = array(
-    'name' => 'edit field_main_protected',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -359,17 +213,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'edit field_main_view',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'field_permissions',
-  );
-
-  // Exported permission: 'edit own field_agenda_view_com'.
-  $permissions['edit own field_agenda_view_com'] = array(
-    'name' => 'edit own field_agenda_view_com',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -379,7 +222,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'edit own field_con_address',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -389,7 +231,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'edit own field_con_center',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -399,7 +240,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'edit own field_con_email',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -409,7 +249,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'edit own field_con_link',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -419,7 +258,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'edit own field_con_name',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -429,7 +267,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'edit own field_con_opening_hours',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -439,7 +276,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'edit own field_con_phone',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -449,7 +285,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'edit own field_con_phone_hours',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -459,37 +294,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'edit own field_con_title',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'field_permissions',
-  );
-
-  // Exported permission: 'edit own field_main_allow_publishing'.
-  $permissions['edit own field_main_allow_publishing'] = array(
-    'name' => 'edit own field_main_allow_publishing',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'field_permissions',
-  );
-
-  // Exported permission: 'edit own field_main_block'.
-  $permissions['edit own field_main_block'] = array(
-    'name' => 'edit own field_main_block',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'field_permissions',
-  );
-
-  // Exported permission: 'edit own field_main_protected'.
-  $permissions['edit own field_main_protected'] = array(
-    'name' => 'edit own field_main_protected',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -499,20 +303,8 @@ function rebild_page_user_default_permissions() {
     'name' => 'edit own field_main_view',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
-  );
-
-  // Exported permission: 'edit own page content'.
-  $permissions['edit own page content'] = array(
-    'name' => 'edit own page content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'fagredaktør' => 'fagredaktør',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'node',
   );
 
   // Exported permission: 'import media'.
@@ -520,19 +312,9 @@ function rebild_page_user_default_permissions() {
     'name' => 'import media',
     'roles' => array(
       'administrator' => 'administrator',
-    ),
-    'module' => 'media_bulk_upload',
-  );
-
-  // Exported permission: 'view field_agenda_view_com'.
-  $permissions['view field_agenda_view_com'] = array(
-    'name' => 'view field_agenda_view_com',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
-    'module' => 'field_permissions',
+    'module' => 'media_bulk_upload',
   );
 
   // Exported permission: 'view field_con_address'.
@@ -586,9 +368,6 @@ function rebild_page_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
-      'fagredaktør' => 'fagredaktør',
-      'kommunikation' => 'kommunikation',
-      'konfigurator' => 'konfigurator',
     ),
     'module' => 'field_permissions',
   );
@@ -633,39 +412,6 @@ function rebild_page_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
-      'kommunikation' => 'kommunikation',
-      'konfigurator' => 'konfigurator',
-    ),
-    'module' => 'field_permissions',
-  );
-
-  // Exported permission: 'view field_main_allow_publishing'.
-  $permissions['view field_main_allow_publishing'] = array(
-    'name' => 'view field_main_allow_publishing',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'field_permissions',
-  );
-
-  // Exported permission: 'view field_main_block'.
-  $permissions['view field_main_block'] = array(
-    'name' => 'view field_main_block',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
-    ),
-    'module' => 'field_permissions',
-  );
-
-  // Exported permission: 'view field_main_protected'.
-  $permissions['view field_main_protected'] = array(
-    'name' => 'view field_main_protected',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -677,17 +423,6 @@ function rebild_page_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'field_permissions',
-  );
-
-  // Exported permission: 'view own field_agenda_view_com'.
-  $permissions['view own field_agenda_view_com'] = array(
-    'name' => 'view own field_agenda_view_com',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -697,7 +432,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'view own field_con_address',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -707,7 +441,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'view own field_con_center',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -717,7 +450,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'view own field_con_email',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -727,7 +459,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'view own field_con_link',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -737,7 +468,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'view own field_con_name',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -747,7 +477,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'view own field_con_opening_hours',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -757,7 +486,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'view own field_con_phone',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -767,7 +495,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'view own field_con_phone_hours',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -777,37 +504,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'view own field_con_title',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'field_permissions',
-  );
-
-  // Exported permission: 'view own field_main_allow_publishing'.
-  $permissions['view own field_main_allow_publishing'] = array(
-    'name' => 'view own field_main_allow_publishing',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'field_permissions',
-  );
-
-  // Exported permission: 'view own field_main_block'.
-  $permissions['view own field_main_block'] = array(
-    'name' => 'view own field_main_block',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
-    ),
-    'module' => 'field_permissions',
-  );
-
-  // Exported permission: 'view own field_main_protected'.
-  $permissions['view own field_main_protected'] = array(
-    'name' => 'view own field_main_protected',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
@@ -817,7 +513,6 @@ function rebild_page_user_default_permissions() {
     'name' => 'view own field_main_view',
     'roles' => array(
       'administrator' => 'administrator',
-      'kommunikation' => 'kommunikation',
     ),
     'module' => 'field_permissions',
   );
