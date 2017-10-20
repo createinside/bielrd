@@ -385,25 +385,22 @@ form textarea {
         width: 960px; } }
 
 #header > .section {
-  padding: 20px 0 15px; }
+  padding: 20px 0 15px;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  display: -ms-grid;
+  -ms-grid-columns: 50% 50%; }
   @media (min-width: 768px) {
     #header > .section {
-      padding: 40px 0;
-      display: grid;
-      grid-template-columns: 2fr 2fr;
-      display: -ms-grid;
-      -ms-grid-columns: 50% 50%; } }
-  @media (min-width: 768px) {
-    #header > .section .region-header-first {
-      -ms-grid-row: 1;
-      -ms-grid-column: 1; } }
+      padding: 40px 0; } }
+  #header > .section .region-header-first {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1; }
   #header > .section .region-header-second {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
     text-align: right;
     line-height: 1.35em; }
-    @media (min-width: 768px) {
-      #header > .section .region-header-second {
-        -ms-grid-row: 1;
-        -ms-grid-column: 2; } }
     #header > .section .region-header-second .block {
       display: inline-block; }
       #header > .section .region-header-second .block:first-child {
