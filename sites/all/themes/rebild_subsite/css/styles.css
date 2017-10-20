@@ -392,7 +392,7 @@ form textarea {
       display: grid;
       grid-template-columns: 2fr 2fr;
       display: -ms-grid;
-      -ms-grid-template-columns: 50% 50%; } }
+      -ms-grid-columns: 50% 50%; } }
   @media (min-width: 768px) {
     #header > .section .region-header-first {
       -ms-grid-row: 1;

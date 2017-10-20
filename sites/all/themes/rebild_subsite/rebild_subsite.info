@@ -5,6 +5,7 @@ core = 7.x
 stylesheets[all][] = bower_components/jQuery.mmenu/dist/jquery.mmenu.all.css
 stylesheets[all][] = css/styles.css
 
+scripts[] = bower_components/svgxuse/svgxuse.js
 scripts[] = bower_components/jQuery.mmenu/dist/jquery.mmenu.all.js
 scripts[] = js/mobile-menu.js
 scripts[] = js/accordion.js
