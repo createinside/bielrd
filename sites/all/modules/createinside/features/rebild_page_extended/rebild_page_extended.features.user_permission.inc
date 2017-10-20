@@ -15,7 +15,6 @@ function rebild_page_extended_user_default_permissions() {
     'name' => 'create page_extended content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -25,7 +24,6 @@ function rebild_page_extended_user_default_permissions() {
     'name' => 'delete any page_extended content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -35,7 +33,6 @@ function rebild_page_extended_user_default_permissions() {
     'name' => 'delete own page_extended content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -45,7 +42,6 @@ function rebild_page_extended_user_default_permissions() {
     'name' => 'edit any page_extended content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -55,7 +51,6 @@ function rebild_page_extended_user_default_permissions() {
     'name' => 'edit own page_extended content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
     ),
     'module' => 'node',
   );

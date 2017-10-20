@@ -32,6 +32,21 @@ function rebild_page_extended_views_api($module = NULL, $api = NULL) {
 function rebild_page_extended_image_default_styles() {
   $styles = array();
 
+  // Exported image style: galleri_lille.
+  $styles['galleri_lille'] = array(
+    'label' => 'galleri_lille',
+    'effects' => array(
+      7 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 82,
+          'height' => 70,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: section_navigation.
   $styles['section_navigation'] = array(
     'label' => 'section_navigation',

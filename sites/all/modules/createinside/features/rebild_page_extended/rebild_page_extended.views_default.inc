@@ -82,6 +82,24 @@ function rebild_page_extended_views_default_views() {
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['block_description'] = 'Contact - Node block';
+  $translatables['contact_content_sidebar'] = array(
+    t('Master'),
+    t('mere'),
+    t('Udfør'),
+    t('Gendan'),
+    t('Sortér efter'),
+    t('Stigende'),
+    t('Faldende'),
+    t('<a href="#contact-block-content" id="contact-block">Kontakt os</a>'),
+    t('Indholdselement'),
+    t('Paragraphs item ID'),
+    t('.'),
+    t(','),
+    t('Alle'),
+    t('Block'),
+    t('more'),
+    t('Contact - Node block'),
+  );
   $export['contact_content_sidebar'] = $view;
 
   $view = new view();
@@ -187,6 +205,32 @@ function rebild_page_extended_views_default_views() {
   $handler->display->display_options['entity_type'] = 'paragraphs_item';
   $handler->display->display_options['bundles'] = array(
     0 => 'pdf_list',
+  );
+  $translatables['section_pdf_list'] = array(
+    t('Master'),
+    t('mere'),
+    t('Udfør'),
+    t('Gendan'),
+    t('Sortér efter'),
+    t('Stigende'),
+    t('Faldende'),
+    t('Antal elementer'),
+    t('- Alle -'),
+    t('Forskydning'),
+    t('« første'),
+    t('‹ forrige'),
+    t('næste ›'),
+    t('sidste »'),
+    t('Fil'),
+    t('[filename]'),
+    t('<a href="[uri]">
+<div class="file-icon"><span class="icon-file-pdf"></span></div>
+<div class="file-name">[filename]</div>
+<div class="file-meta">PDF: [filesize]</div>
+</a>'),
+    t('Alle'),
+    t('EVA Field'),
+    t('more'),
   );
   $export['section_pdf_list'] = $view;
 

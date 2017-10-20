@@ -42,7 +42,7 @@ function rebild_page_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_page';
-  $strongarm->value = 0;
+  $strongarm->value = '0';
   $export['comment_page'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -151,7 +151,8 @@ node/*/edit',
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_page';
   $strongarm->value = array(
-    0 => 'status',
+    0 => 'moderation',
+    1 => 'revision',
   );
   $export['node_options_page'] = $strongarm;
 
@@ -159,7 +160,7 @@ node/*/edit',
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_page';
-  $strongarm->value = FALSE;
+  $strongarm->value = 0;
   $export['node_submitted_page'] = $strongarm;
 
   $strongarm = new stdClass();
