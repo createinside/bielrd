@@ -11,14 +11,6 @@ function rebild_sub_overrides_features_override_default_overrides() {
   // This code is only used for UI in features. Exported alters hooks do the magic.
   $overrides = array();
 
-  // Exported overrides for: field_base
-  $overrides["field_base.field_main_contact.field_main_contact"]["DELETED"] = TRUE;
-  $overrides["field_base.field_main_links_external.field_main_links_external"]["DELETED"] = TRUE;
-  $overrides["field_base.field_main_links_internal.field_main_links_internal"]["DELETED"] = TRUE;
-  $overrides["field_base.field_main_section.field_main_section"]["DELETED"] = TRUE;
-  $overrides["field_base.field_main_tags.field_main_tags"]["DELETED"] = TRUE;
-  $overrides["field_base.field_main_view.field_main_view"]["DELETED"] = TRUE;
-
   // Exported overrides for: field_instance
   $overrides["field_instance.node-page_extended-field_main_contact.node-page_extended-field_main_contact"]["DELETED"] = TRUE;
   $overrides["field_instance.node-page_extended-field_main_links_external.node-page_extended-field_main_links_external"]["DELETED"] = TRUE;

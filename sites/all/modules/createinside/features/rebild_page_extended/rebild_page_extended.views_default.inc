@@ -37,22 +37,22 @@ function rebild_page_extended_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'entity';
-  /* Overskrift: Global: Ufiltreret tekst */
+  /* Header: Global: Unfiltered text */
   $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['content'] = '<a href="#contact-block-content" id="contact-block">Kontakt os</a>';
-  /* Forbindelse: Paragraphs item: Entity with the Kontakt (field_main_contact) */
+  /* Relationship: Paragraphs item: Entity with the Kontakt (field_main_contact) */
   $handler->display->display_options['relationships']['field_main_contact_node']['id'] = 'field_main_contact_node';
   $handler->display->display_options['relationships']['field_main_contact_node']['table'] = 'paragraphs_item';
   $handler->display->display_options['relationships']['field_main_contact_node']['field'] = 'field_main_contact_node';
   $handler->display->display_options['relationships']['field_main_contact_node']['label'] = 'Indholdselement';
   $handler->display->display_options['relationships']['field_main_contact_node']['required'] = TRUE;
-  /* Felt: Paragraphs item: Paragraphs item ID */
+  /* Field: Paragraphs item: Paragraphs item ID */
   $handler->display->display_options['fields']['item_id']['id'] = 'item_id';
   $handler->display->display_options['fields']['item_id']['table'] = 'paragraphs_item';
   $handler->display->display_options['fields']['item_id']['field'] = 'item_id';
-  /* Kontekstuelt filter: Indhold: Nid */
+  /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -63,14 +63,14 @@ function rebild_page_extended_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
-  /* Filterkriterie: Indhold: Kontakt (field_main_contact) */
+  /* Filter criterion: Content: Kontakt (field_main_contact) */
   $handler->display->display_options['filters']['field_main_contact_value']['id'] = 'field_main_contact_value';
   $handler->display->display_options['filters']['field_main_contact_value']['table'] = 'field_data_field_main_contact';
   $handler->display->display_options['filters']['field_main_contact_value']['field'] = 'field_main_contact_value';
   $handler->display->display_options['filters']['field_main_contact_value']['relationship'] = 'field_main_contact_node';
   $handler->display->display_options['filters']['field_main_contact_value']['operator'] = 'not empty';
   $handler->display->display_options['filters']['field_main_contact_value']['group'] = 1;
-  /* Filterkriterie: Paragraphs item: Bundle */
+  /* Filter criterion: Paragraphs item: Bundle */
   $handler->display->display_options['filters']['bundle']['id'] = 'bundle';
   $handler->display->display_options['filters']['bundle']['table'] = 'paragraphs_item';
   $handler->display->display_options['filters']['bundle']['field'] = 'bundle';
@@ -97,6 +97,7 @@ function rebild_page_extended_views_default_views() {
     t(','),
     t('Alle'),
     t('Block'),
+    t('more'),
     t('Contact - Node block'),
   );
   $export['contact_content_sidebar'] = $view;
@@ -135,13 +136,13 @@ function rebild_page_extended_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['last'] = 'sidste »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Forbindelse: Paragraphs item: PDF (field_sec_pdf_file:fid) */
+  /* Relationship: Paragraphs item: PDF (field_sec_pdf_file:fid) */
   $handler->display->display_options['relationships']['field_sec_pdf_file_fid']['id'] = 'field_sec_pdf_file_fid';
   $handler->display->display_options['relationships']['field_sec_pdf_file_fid']['table'] = 'field_data_field_sec_pdf_file';
   $handler->display->display_options['relationships']['field_sec_pdf_file_fid']['field'] = 'field_sec_pdf_file_fid';
   $handler->display->display_options['relationships']['field_sec_pdf_file_fid']['label'] = 'Fil';
   $handler->display->display_options['relationships']['field_sec_pdf_file_fid']['required'] = TRUE;
-  /* Felt: Fil: Navn */
+  /* Field: File: Name */
   $handler->display->display_options['fields']['filename']['id'] = 'filename';
   $handler->display->display_options['fields']['filename']['table'] = 'file_managed';
   $handler->display->display_options['fields']['filename']['field'] = 'filename';
@@ -150,7 +151,7 @@ function rebild_page_extended_views_default_views() {
   $handler->display->display_options['fields']['filename']['exclude'] = TRUE;
   $handler->display->display_options['fields']['filename']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['filename']['link_to_file'] = FALSE;
-  /* Felt: Fil: Sti */
+  /* Field: File: Path */
   $handler->display->display_options['fields']['uri']['id'] = 'uri';
   $handler->display->display_options['fields']['uri']['table'] = 'file_managed';
   $handler->display->display_options['fields']['uri']['field'] = 'uri';
@@ -159,7 +160,7 @@ function rebild_page_extended_views_default_views() {
   $handler->display->display_options['fields']['uri']['exclude'] = TRUE;
   $handler->display->display_options['fields']['uri']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['uri']['file_download_path'] = TRUE;
-  /* Felt: Fil: Download link */
+  /* Field: File: Download link */
   $handler->display->display_options['fields']['download']['id'] = 'download';
   $handler->display->display_options['fields']['download']['table'] = 'file_managed';
   $handler->display->display_options['fields']['download']['field'] = 'download';
@@ -169,7 +170,7 @@ function rebild_page_extended_views_default_views() {
   $handler->display->display_options['fields']['download']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['download']['alter']['text'] = '[filename]';
   $handler->display->display_options['fields']['download']['element_label_colon'] = FALSE;
-  /* Felt: Fil: Størrelse */
+  /* Field: File: Size */
   $handler->display->display_options['fields']['filesize']['id'] = 'filesize';
   $handler->display->display_options['fields']['filesize']['table'] = 'file_managed';
   $handler->display->display_options['fields']['filesize']['field'] = 'filesize';
@@ -177,7 +178,7 @@ function rebild_page_extended_views_default_views() {
   $handler->display->display_options['fields']['filesize']['label'] = '';
   $handler->display->display_options['fields']['filesize']['exclude'] = TRUE;
   $handler->display->display_options['fields']['filesize']['element_label_colon'] = FALSE;
-  /* Felt: Global: Tilpasset tekst */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -188,7 +189,7 @@ function rebild_page_extended_views_default_views() {
 <div class="file-meta">PDF: [filesize]</div>
 </a>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Kontekstuelt filter: Paragraphs item: Paragraphs item ID */
+  /* Contextual filter: Paragraphs item: Paragraphs item ID */
   $handler->display->display_options['arguments']['item_id']['id'] = 'item_id';
   $handler->display->display_options['arguments']['item_id']['table'] = 'paragraphs_item';
   $handler->display->display_options['arguments']['item_id']['field'] = 'item_id';
@@ -229,6 +230,7 @@ function rebild_page_extended_views_default_views() {
 </a>'),
     t('Alle'),
     t('EVA Field'),
+    t('more'),
   );
   $export['section_pdf_list'] = $view;
 

@@ -5,30 +5,6 @@
  */
 
 /**
- * Implements hook_field_default_field_bases_alter().
- */
-function rebild_sub_overrides_field_default_field_bases_alter(&$data) {
-  if (isset($data['field_main_contact'])) {
-    unset($data['field_main_contact']);
-  }
-  if (isset($data['field_main_links_external'])) {
-    unset($data['field_main_links_external']);
-  }
-  if (isset($data['field_main_links_internal'])) {
-    unset($data['field_main_links_internal']);
-  }
-  if (isset($data['field_main_section'])) {
-    unset($data['field_main_section']);
-  }
-  if (isset($data['field_main_tags'])) {
-    unset($data['field_main_tags']);
-  }
-  if (isset($data['field_main_view'])) {
-    unset($data['field_main_view']);
-  }
-}
-
-/**
  * Implements hook_field_default_field_instances_alter().
  */
 function rebild_sub_overrides_field_default_field_instances_alter(&$data) {
