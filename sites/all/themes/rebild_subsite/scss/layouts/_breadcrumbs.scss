@@ -15,14 +15,27 @@
       display: grid;
       display: -ms-grid;
       grid-template-columns: 4fr 2fr;
+      -ms-grid-columns: 67% 33%;
     }
   }
 
+  .breadcrumb {
+    @include bp-narrow {
+      grid-column: 1;
+      grid-row: 1;
+      -ms-grid-column: 1;
+      -ms-grid-row: 1;
+    }
+  }
   .region-breadcrumbs {
-
     margin-top: $space-base;
 
     @include bp-narrow {
+      grid-column: 2;
+      grid-row: 1;
+      -ms-grid-column: 2;
+      -ms-grid-row: 1;
+
       margin-top: 0;
       text-align: right;
     }

@@ -62,6 +62,8 @@ body.front {
         display: grid;
         grid-template-columns: repeat(2, 3fr);
         grid-gap: $space-base;
+        display: -ms-grid;
+        -ms-grid-columns: 49% 2% 49%;
       }
 
       > .field-item {
@@ -71,6 +73,14 @@ body.front {
 
         @include bp-extra-narrow {
           margin-bottom: 0;
+          -ms-grid-row: 1;
+
+          &:nth-child(1) {
+            -ms-grid-column: 1;
+          }
+          &:nth-child(2) {
+            -ms-grid-column: 3;
+          }
         }
       }
     }
@@ -84,6 +94,8 @@ body.front {
         display: grid;
         grid-template-columns: repeat(3, 3fr);
         grid-gap: $space-base;
+        display: -ms-grid;
+        -ms-grid-columns: 32% 2% 32% 2% 32%;
       }
 
       > .field-item {
@@ -93,6 +105,17 @@ body.front {
 
         @include bp-extra-narrow {
           margin-bottom: 0;
+          -ms-grid-row: 1;
+
+          &:nth-child(1) {
+            -ms-grid-column: 1;
+          }
+          &:nth-child(2) {
+            -ms-grid-column: 3;
+          }
+          &:nth-child(3) {
+            -ms-grid-column: 5;
+          }
         }
       }
     }
