@@ -198,6 +198,15 @@ function rebild_sub_perm_user_default_permissions() {
     'module' => 'file_entity',
   );
 
+  // Exported permission: 'create front_page content'.
+  $permissions['create front_page content'] = array(
+    'name' => 'create front_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'create url aliases'.
   $permissions['create url aliases'] = array(
     'name' => 'create url aliases',
@@ -206,6 +215,24 @@ function rebild_sub_perm_user_default_permissions() {
       'subsite admin' => 'subsite admin',
     ),
     'module' => 'path',
+  );
+
+  // Exported permission: 'delete any front_page content'.
+  $permissions['delete any front_page content'] = array(
+    'name' => 'delete any front_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own front_page content'.
+  $permissions['delete own front_page content'] = array(
+    'name' => 'delete own front_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: 'delete revisions'.
@@ -225,6 +252,26 @@ function rebild_sub_perm_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'admin_menu',
+  );
+
+  // Exported permission: 'edit any front_page content'.
+  $permissions['edit any front_page content'] = array(
+    'name' => 'edit any front_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'subsite admin' => 'subsite admin',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own front_page content'.
+  $permissions['edit own front_page content'] = array(
+    'name' => 'edit own front_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'subsite admin' => 'subsite admin',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: 'flush caches'.
