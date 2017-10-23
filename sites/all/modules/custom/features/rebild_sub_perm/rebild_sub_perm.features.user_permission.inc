@@ -15,7 +15,7 @@ function rebild_sub_perm_user_default_permissions() {
     'name' => 'access administration menu',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
+      'subsite admin' => 'subsite admin',
     ),
     'module' => 'admin_menu',
   );
@@ -25,7 +25,7 @@ function rebild_sub_perm_user_default_permissions() {
     'name' => 'access administration pages',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
+      'subsite admin' => 'subsite admin',
     ),
     'module' => 'system',
   );
@@ -46,7 +46,7 @@ function rebild_sub_perm_user_default_permissions() {
     'name' => 'access content overview',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
+      'subsite admin' => 'subsite admin',
     ),
     'module' => 'node',
   );
@@ -56,7 +56,7 @@ function rebild_sub_perm_user_default_permissions() {
     'name' => 'access contextual links',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
+      'subsite admin' => 'subsite admin',
     ),
     'module' => 'contextual',
   );
@@ -67,7 +67,7 @@ function rebild_sub_perm_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
-      'editor' => 'editor',
+      'subsite admin' => 'subsite admin',
     ),
     'module' => 'media',
   );
@@ -86,7 +86,7 @@ function rebild_sub_perm_user_default_permissions() {
     'name' => 'access site in maintenance mode',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
+      'subsite admin' => 'subsite admin',
     ),
     'module' => 'system',
   );
@@ -96,7 +96,7 @@ function rebild_sub_perm_user_default_permissions() {
     'name' => 'access user profiles',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
+      'subsite admin' => 'subsite admin',
     ),
     'module' => 'user',
   );
@@ -106,7 +106,7 @@ function rebild_sub_perm_user_default_permissions() {
     'name' => 'administer blocks',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
+      'subsite admin' => 'subsite admin',
     ),
     'module' => 'block',
   );
@@ -126,7 +126,7 @@ function rebild_sub_perm_user_default_permissions() {
     'name' => 'administer nodes',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
+      'subsite admin' => 'subsite admin',
     ),
     'module' => 'node',
   );
@@ -136,7 +136,7 @@ function rebild_sub_perm_user_default_permissions() {
     'name' => 'administer redirects',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
+      'subsite admin' => 'subsite admin',
     ),
     'module' => 'redirect',
   );
@@ -146,7 +146,7 @@ function rebild_sub_perm_user_default_permissions() {
     'name' => 'administer site configuration',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
+      'subsite admin' => 'subsite admin',
     ),
     'module' => 'system',
   );
@@ -156,7 +156,7 @@ function rebild_sub_perm_user_default_permissions() {
     'name' => 'administer url aliases',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
+      'subsite admin' => 'subsite admin',
     ),
     'module' => 'path',
   );
@@ -166,7 +166,7 @@ function rebild_sub_perm_user_default_permissions() {
     'name' => 'administer users',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
+      'subsite admin' => 'subsite admin',
     ),
     'module' => 'user',
   );
@@ -203,7 +203,7 @@ function rebild_sub_perm_user_default_permissions() {
     'name' => 'create url aliases',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
+      'subsite admin' => 'subsite admin',
     ),
     'module' => 'path',
   );
@@ -213,7 +213,7 @@ function rebild_sub_perm_user_default_permissions() {
     'name' => 'delete revisions',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
+      'subsite admin' => 'subsite admin',
     ),
     'module' => 'node',
   );
@@ -251,7 +251,7 @@ function rebild_sub_perm_user_default_permissions() {
     'name' => 'revert revisions',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
+      'subsite admin' => 'subsite admin',
     ),
     'module' => 'node',
   );
@@ -263,7 +263,7 @@ function rebild_sub_perm_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
-      'editor' => 'editor',
+      'subsite admin' => 'subsite admin',
     ),
     'module' => 'search',
   );
@@ -285,7 +285,7 @@ function rebild_sub_perm_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
-      'editor' => 'editor',
+      'subsite admin' => 'subsite admin',
     ),
     'module' => 'filter',
   );
@@ -295,7 +295,7 @@ function rebild_sub_perm_user_default_permissions() {
     'name' => 'view own unpublished content',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
+      'subsite admin' => 'subsite admin',
     ),
     'module' => 'node',
   );
@@ -305,7 +305,7 @@ function rebild_sub_perm_user_default_permissions() {
     'name' => 'view revisions',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
+      'subsite admin' => 'subsite admin',
     ),
     'module' => 'node',
   );
@@ -315,7 +315,7 @@ function rebild_sub_perm_user_default_permissions() {
     'name' => 'view the administration theme',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
+      'subsite admin' => 'subsite admin',
     ),
     'module' => 'system',
   );
