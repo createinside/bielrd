@@ -9,7 +9,6 @@ sites/*/private
 
 # Ignore paths that contain development only content.
 sites/all/modules/devel
-sites/all/modules/stage_file_proxy
 sites/all/modules/maillog
 sites/all/modules/browsersync
 
@@ -38,3 +37,7 @@ phpinfo.php
 
 # Ignore PhpStorm config folder
 .idea
+
+# Deploy + Dev env
+deploy.php
+docker-compose.yml
