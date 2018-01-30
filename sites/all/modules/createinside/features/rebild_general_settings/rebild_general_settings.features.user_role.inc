@@ -13,7 +13,7 @@ function rebild_general_settings_user_default_roles() {
   // Exported role: administrator.
   $roles['administrator'] = array(
     'name' => 'administrator',
-    'weight' => 7,
+    'weight' => 10,
   );
 
   // Exported role: business.

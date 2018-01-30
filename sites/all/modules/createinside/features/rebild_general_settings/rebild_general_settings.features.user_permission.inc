@@ -14,6 +14,7 @@ function rebild_general_settings_user_default_permissions() {
   $permissions['access administration menu'] = array(
     'name' => 'access administration menu',
     'roles' => array(
+      'Rebildporten - nyhedsbrev' => 'Rebildporten - nyhedsbrev',
       'administrator' => 'administrator',
       'fagredaktør' => 'fagredaktør',
       'kommunikation' => 'kommunikation',
