@@ -10,6 +10,7 @@ sites/*/private
 # Ignore paths that contain development only content.
 sites/all/modules/maillog
 sites/all/modules/browsersync
+sites/all/modules/hacked
 
 # Ignore single files.
 .DS_Store
