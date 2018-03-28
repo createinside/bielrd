@@ -41,3 +41,5 @@ phpinfo.php
 # Deploy + Dev env
 deploy.php
 docker-compose.yml
+
+# Ignore sites.php
