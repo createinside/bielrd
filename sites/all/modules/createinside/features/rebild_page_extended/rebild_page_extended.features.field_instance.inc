@@ -2134,7 +2134,7 @@ function rebild_page_extended_field_default_field_instances() {
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '450x150',
+      'min_resolution' => '666x222',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
