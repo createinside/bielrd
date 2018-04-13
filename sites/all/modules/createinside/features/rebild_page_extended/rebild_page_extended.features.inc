@@ -54,8 +54,8 @@ function rebild_page_extended_image_default_styles() {
       7 => array(
         'name' => 'image_scale',
         'data' => array(
-          'width' => 450,
-          'height' => 300,
+          'width' => 666,
+          'height' => 444,
           'upscale' => 0,
         ),
         'weight' => 1,
