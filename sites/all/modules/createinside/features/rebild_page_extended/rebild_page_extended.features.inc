@@ -116,6 +116,107 @@ function rebild_page_extended_image_default_styles() {
     ),
   );
 
+// Exported image style: indhold_top.
+  $styles['indhold_top'] = array(
+    'effects' => array(
+      39 => array(
+        'name' => 'manualcrop_crop_and_scale',
+        'data' => array(
+          'width' => 600,
+          'height' => 190,
+          'upscale' => 0,
+          'respectminimum' => 1,
+          'onlyscaleifcrop' => 0,
+          'style_name' => 'indhold_top',
+        ),
+        'weight' => 0,
+      ),
+    ),
+    'label' => 'indhold_top',
+  );
+   // Exported image style: indhold_top_mobile.
+  $styles['indhold_top_mobile'] = array(
+    'effects' => array(
+      42 => array(
+        'name' => 'manualcrop_reuse',
+        'data' => array(
+          'reusestyle' => 'indhold_top',
+          'style_name' => 'indhold_top_mobil',
+        ),
+        'weight' => 0,
+      ),
+      43 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 680,
+          'height' => 190,
+        ),
+        'weight' => 2,
+      ),
+    ),
+    'label' => 'indhold_top_mobile',
+  );
+   // Exported image style: indhold_top_narrow.
+  $styles['indhold_top_narrow'] = array(
+    'effects' => array(
+      44 => array(
+        'name' => 'manualcrop_reuse',
+        'data' => array(
+          'reusestyle' => 'indhold_top',
+          'style_name' => 'indhold_top_narrow',
+        ),
+        'weight' => 0,
+      ),
+      12 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 435,
+          'height' => 138,
+        ),
+        'weight' => 1,
+      ),
+    ),
+    'label' => 'indhold_top_narrow',
+  );
+
+  // Exported image style: inline_bottom.
+  $styles['inline_bottom'] = array(
+    'effects' => array(
+      4 => array(
+        'name' => 'manualcrop_crop_and_scale',
+        'data' => array(
+          'width' => 160,
+          'height' => 75,
+          'upscale' => 0,
+          'respectminimum' => 1,
+          'onlyscaleifcrop' => 0,
+          'style_name' => 'inline_bottom',
+        ),
+        'weight' => 0,
+      ),
+    ),
+    'label' => 'inline_bottom',
+  );
+
+  // Exported image style: inline_top.
+  $styles['inline_top'] = array(
+    'effects' => array(
+      3 => array(
+        'name' => 'manualcrop_crop_and_scale',
+        'data' => array(
+          'width' => 425,
+          'height' => 150,
+          'upscale' => 0,
+          'respectminimum' => 1,
+          'onlyscaleifcrop' => 0,
+          'style_name' => 'inline_top',
+        ),
+        'weight' => 0,
+      ),
+    ),
+    'label' => 'inline_top',
+  );
+
   return $styles;
 }
 
