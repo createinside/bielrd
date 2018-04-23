@@ -2186,7 +2186,7 @@ function rebild_page_extended_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'fancybox',
         'settings' => array(
-          'image_link_style' => 'galleri_stor',
+          'image_link_style' => '',
           'image_style' => 'galleri_lille',
         ),
         'type' => 'fancybox_image',
@@ -2685,7 +2685,7 @@ function rebild_page_extended_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'fancybox',
         'settings' => array(
-          'image_link_style' => 'galleri_stor',
+          'image_link_style' => '',
           'image_style' => 'section_text',
         ),
         'type' => 'fancybox_image',

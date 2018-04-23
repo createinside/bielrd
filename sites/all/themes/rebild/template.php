@@ -202,7 +202,8 @@ function rebild_preprocess_field(&$variables, $hook) {
 
   $element = $variables['element'];
 
-  switch($element['#field_name']) {
+  switch ($element['#field_name']) {
+
     case 'field_main_gis_map':
       $entity_type = $element['#entity_type'];
       $overlay = $element['#object']->field_main_gis_overlay['und'][0]['value'];
@@ -221,33 +222,45 @@ function rebild_preprocess_field(&$variables, $hook) {
       else {
         $variables["items"][0]["#markup"] = "<a href='" . $url . "'>Se kort her</a>";
       }
-    break;
+      break;
+
     case 'field_job_app_url':
       $variables['items'][0]['#element']['attributes']['class'] = 'colorbox-load';
       $url = $variables['items'][0]['#element']['url'];
       $variables['items'][0]['#element']['url'] = $url . '&width=1200&height=90%25&iframe=true';
-    break;
+      break;
+
     case 'field_accordion_image':
-      if(isset($element['#object']->field_accordion_overlay['und'][0]['value'])) {
+      if (isset($element['#object']->field_accordion_overlay['und'][0]['value'])) {
         // Disable overlay
-        if($element['#object']->field_accordion_overlay['und'][0]['value'] == 0) {
+        if ($element['#object']->field_accordion_overlay['und'][0]['value'] == 0) {
           unset($variables['items'][0]['#path']);
         }
       }
-    break;
+      break;
+
     case 'field_sec_txt_img_image':
-      if(isset($element['#object']->field_sec_txt_img_overlay['und'][0]['value'])) {
+      if (isset($element['#object']->field_sec_txt_img_overlay['und'][0]['value'])) {
         // Disable overlay
-        if($element['#object']->field_sec_txt_img_overlay['und'][0]['value'] == 0) {
+        if ($element['#object']->field_sec_txt_img_overlay['und'][0]['value'] == 0) {
           unset($variables['items'][0]['#path']);
         }
       }
-    break;
+      break;
+
+    case 'field_sec_img_full':
+      if (isset($element['#object']->field_img_overlay['und'][0]['value'])) {
+        // Disable overlay
+        if ($element['#object']->field_img_overlay['und'][0]['value'] == 0) {
+          unset($variables['items'][0]['#path']);
+        }
+      }
+      break;
   }
 }
 
 /**
- *
+ * Implements hook_picture().
  */
 function rebild_picture($variables) {
 
