@@ -54,4 +54,6 @@
  * @see http://drupal.org/documentation/install/multi-site
  */
 
+$sites['beredskab.createinside.com'] = 'beredskab';
+$sites['beredskab.rebild.dev'] = 'beredskab';
 $sites['local.beredskab.rebild'] = 'beredskab';
