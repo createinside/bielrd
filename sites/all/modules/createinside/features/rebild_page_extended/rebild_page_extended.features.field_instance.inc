@@ -688,7 +688,7 @@ function rebild_page_extended_field_default_field_instances() {
       'default_image' => 0,
       'file_directory' => 'page_extended',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '5 MB',
+      'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '680x190',
       'title_field' => 0,
@@ -702,18 +702,15 @@ function rebild_page_extended_field_default_field_instances() {
           'public' => 'public',
         ),
         'allowed_types' => array(
+          'application' => 0,
           'audio' => 0,
           'document' => 0,
           'image' => 'image',
           'video' => 0,
         ),
         'browser_plugins' => array(
-          'media_browser_clone--media_browser_1' => 0,
-          'media_browser_clone--media_browser_my_files' => 0,
           'media_browser_plus_customized--media_browser_my_files' => 0,
           'media_browser_plus_customized--media_browser_thumbnails' => 0,
-          'media_default--media_browser_1' => 0,
-          'media_default--media_browser_my_files' => 0,
           'upload' => 'upload',
         ),
         'manualcrop_crop_info' => 1,
@@ -2082,6 +2079,66 @@ function rebild_page_extended_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'paragraphs_item-image_full-field_img_overlay'.
+  $field_instances['paragraphs_item-image_full-field_img_overlay'] = array(
+    'bundle' => 'image_full',
+    'default_value' => array(
+      0 => array(
+        'value' => 1,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'three_cols' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'two_cols' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_img_overlay',
+    'label' => 'Vis billede i overlay',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'paragraphs_item-image_full-field_sec_img_full'.
   $field_instances['paragraphs_item-image_full-field_sec_img_full'] = array(
     'bundle' => 'image_full',
@@ -2090,12 +2147,12 @@ function rebild_page_extended_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'image',
+        'module' => 'fancybox',
         'settings' => array(
-          'image_link' => '',
+          'image_link_style' => '',
           'image_style' => 'section_full',
         ),
-        'type' => 'image',
+        'type' => 'fancybox_image',
         'weight' => 0,
       ),
       'paragraphs_editor_preview' => array(
@@ -2134,7 +2191,7 @@ function rebild_page_extended_field_default_field_instances() {
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '666x222',
+      'min_resolution' => '666x444',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2159,19 +2216,23 @@ function rebild_page_extended_field_default_field_instances() {
         ),
         'manualcrop_crop_info' => 1,
         'manualcrop_default_crop_area' => 1,
-        'manualcrop_enable' => 0,
+        'manualcrop_enable' => 1,
         'manualcrop_inline_crop' => 0,
         'manualcrop_instant_crop' => FALSE,
         'manualcrop_instant_preview' => 1,
         'manualcrop_keyboard' => 1,
         'manualcrop_maximize_default_crop_area' => 0,
-        'manualcrop_require_cropping' => array(),
-        'manualcrop_styles_list' => array(),
+        'manualcrop_require_cropping' => array(
+          'section_full' => 'section_full',
+        ),
+        'manualcrop_styles_list' => array(
+          'section_full' => 'section_full',
+        ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
       ),
       'type' => 'media_generic',
-      'weight' => 31,
+      'weight' => 1,
     ),
   );
 
@@ -2186,7 +2247,7 @@ function rebild_page_extended_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'fancybox',
         'settings' => array(
-          'image_link_style' => 'galleri_stor',
+          'image_link_style' => '',
           'image_style' => 'galleri_lille',
         ),
         'type' => 'fancybox_image',
@@ -2685,7 +2746,7 @@ function rebild_page_extended_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'fancybox',
         'settings' => array(
-          'image_link_style' => 'galleri_stor',
+          'image_link_style' => '',
           'image_style' => 'section_text',
         ),
         'type' => 'fancybox_image',

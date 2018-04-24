@@ -159,6 +159,9 @@ Rebildporten newsletter
 	Opret indhold 
 
 -------------------------------------------------------------------*/
+.node-form .manualcrop-style-button-holder {
+	display: inline-block;
+}
 .page-node-add, .page-node-edit, .page-node, .page-user, .page-file, .page-block {
 	#page {
 		font-family: $font-family-std;
@@ -823,7 +826,8 @@ Rebildporten newsletter
 		a.button.edit,
 		a.button.browse,
 		table[id*='field-main-accordion-values'] input[type=submit],
-		.field-name-field-sec-nav-elment input[type=submit] {
+		.field-name-field-sec-nav-elment input[type=submit],
+		.manualcrop-style-button {
 			background: #bbb;
 		}
 	}

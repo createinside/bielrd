@@ -38,246 +38,300 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
 /* line 49, ../../rebild/sass/partials/_fonts.scss */
+.icon-brand:before {
+  content: "\e90e";
+  color: #3b5998;
+}
+
+/* line 53, ../../rebild/sass/partials/_fonts.scss */
 .icon-instagram:before {
   content: "\e900";
 }
 
-/* line 52, ../../rebild/sass/partials/_fonts.scss */
+/* line 56, ../../rebild/sass/partials/_fonts.scss */
 .icon-youtube:before {
   content: "\e901";
 }
 
-/* line 55, ../../rebild/sass/partials/_fonts.scss */
+/* line 59, ../../rebild/sass/partials/_fonts.scss */
 .icon-google-plus:before {
   content: "\e902";
 }
 
-/* line 58, ../../rebild/sass/partials/_fonts.scss */
+/* line 62, ../../rebild/sass/partials/_fonts.scss */
 .icon-facebook2:before {
   content: "\e903";
 }
 
-/* line 61, ../../rebild/sass/partials/_fonts.scss */
+/* line 65, ../../rebild/sass/partials/_fonts.scss */
 .icon-linkedin:before {
   content: "\e904";
 }
 
-/* line 64, ../../rebild/sass/partials/_fonts.scss */
+/* line 68, ../../rebild/sass/partials/_fonts.scss */
 .icon-twitter:before {
   content: "\e906";
 }
 
-/* line 67, ../../rebild/sass/partials/_fonts.scss */
+/* line 71, ../../rebild/sass/partials/_fonts.scss */
+.icon-english-flag .path1:before {
+  content: "\e908";
+  color: white;
+}
+
+/* line 75, ../../rebild/sass/partials/_fonts.scss */
+.icon-english-flag .path2:before {
+  content: "\e909";
+  margin-left: -1.1318359375em;
+  color: #d00f14;
+}
+
+/* line 80, ../../rebild/sass/partials/_fonts.scss */
+.icon-english-flag .path3:before {
+  content: "\e90a";
+  margin-left: -1.1318359375em;
+  color: #d00f14;
+}
+
+/* line 85, ../../rebild/sass/partials/_fonts.scss */
+.icon-english-flag .path4:before {
+  content: "\e90b";
+  margin-left: -1.1318359375em;
+  color: #00305b;
+}
+
+/* line 90, ../../rebild/sass/partials/_fonts.scss */
+.icon-danish-flag:before {
+  content: "\e907";
+  color: #d00f14;
+}
+
+/* line 94, ../../rebild/sass/partials/_fonts.scss */
 .icon-mobil_logo:before {
   content: "\e007";
 }
 
-/* line 70, ../../rebild/sass/partials/_fonts.scss */
+/* line 97, ../../rebild/sass/partials/_fonts.scss */
 .icon-printer:before {
   content: "\e011";
 }
 
-/* line 73, ../../rebild/sass/partials/_fonts.scss */
+/* line 100, ../../rebild/sass/partials/_fonts.scss */
 .icon-volume:before {
   content: "\e012";
 }
 
-/* line 76, ../../rebild/sass/partials/_fonts.scss */
+/* line 103, ../../rebild/sass/partials/_fonts.scss */
 .icon-money:before {
   content: "\f0d6";
 }
 
-/* line 79, ../../rebild/sass/partials/_fonts.scss */
+/* line 106, ../../rebild/sass/partials/_fonts.scss */
 .icon-search:before {
   content: "\e013";
 }
 
-/* line 82, ../../rebild/sass/partials/_fonts.scss */
+/* line 109, ../../rebild/sass/partials/_fonts.scss */
 .icon-plus2:before {
   content: "\e00f";
 }
 
-/* line 85, ../../rebild/sass/partials/_fonts.scss */
+/* line 112, ../../rebild/sass/partials/_fonts.scss */
 .icon-minus2:before {
   content: "\e010";
 }
 
-/* line 88, ../../rebild/sass/partials/_fonts.scss */
+/* line 115, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-down2:before {
   content: "\e003";
 }
 
-/* line 91, ../../rebild/sass/partials/_fonts.scss */
+/* line 118, ../../rebild/sass/partials/_fonts.scss */
 .icon-bottom_logo:before {
   content: "\e009";
 }
 
-/* line 94, ../../rebild/sass/partials/_fonts.scss */
+/* line 121, ../../rebild/sass/partials/_fonts.scss */
 .icon-phone:before {
   content: "\f095";
 }
 
-/* line 97, ../../rebild/sass/partials/_fonts.scss */
+/* line 124, ../../rebild/sass/partials/_fonts.scss */
 .icon-envelope:before {
   content: "\f003";
 }
 
-/* line 100, ../../rebild/sass/partials/_fonts.scss */
+/* line 127, ../../rebild/sass/partials/_fonts.scss */
 .icon-home:before {
   content: "\e005";
 }
 
-/* line 103, ../../rebild/sass/partials/_fonts.scss */
+/* line 130, ../../rebild/sass/partials/_fonts.scss */
 .icon-double-angle-right:before {
   content: "\f101";
 }
 
-/* line 106, ../../rebild/sass/partials/_fonts.scss */
+/* line 133, ../../rebild/sass/partials/_fonts.scss */
 .icon-double-angle-left:before {
   content: "\f100";
 }
 
-/* line 109, ../../rebild/sass/partials/_fonts.scss */
+/* line 136, ../../rebild/sass/partials/_fonts.scss */
 .icon-double-angle-down:before {
   content: "\f103";
 }
 
-/* line 112, ../../rebild/sass/partials/_fonts.scss */
+/* line 139, ../../rebild/sass/partials/_fonts.scss */
 .icon-double-angle-up:before {
   content: "\f102";
 }
 
-/* line 115, ../../rebild/sass/partials/_fonts.scss */
+/* line 142, ../../rebild/sass/partials/_fonts.scss */
 .icon-images:before {
   content: "\e00e";
 }
 
-/* line 118, ../../rebild/sass/partials/_fonts.scss */
+/* line 145, ../../rebild/sass/partials/_fonts.scss */
 .icon-menu:before {
   content: "\e000";
 }
 
-/* line 121, ../../rebild/sass/partials/_fonts.scss */
+/* line 148, ../../rebild/sass/partials/_fonts.scss */
 .icon-pil2:before {
   content: "\e014";
 }
 
-/* line 124, ../../rebild/sass/partials/_fonts.scss */
+/* line 151, ../../rebild/sass/partials/_fonts.scss */
 .icon-angle-right:before {
   content: "\e006";
 }
 
-/* line 127, ../../rebild/sass/partials/_fonts.scss */
+/* line 154, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-left2:before {
   content: "\e004";
 }
 
-/* line 130, ../../rebild/sass/partials/_fonts.scss */
+/* line 157, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-up2:before {
   content: "\e002";
 }
 
-/* line 133, ../../rebild/sass/partials/_fonts.scss */
+/* line 160, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-right2:before {
   content: "\e001";
 }
 
-/* line 136, ../../rebild/sass/partials/_fonts.scss */
+/* line 163, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-up:before {
   content: "\f062";
 }
 
-/* line 139, ../../rebild/sass/partials/_fonts.scss */
+/* line 166, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-down:before {
   content: "\f063";
 }
 
-/* line 142, ../../rebild/sass/partials/_fonts.scss */
+/* line 169, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-right:before {
   content: "\f061";
 }
 
-/* line 145, ../../rebild/sass/partials/_fonts.scss */
+/* line 172, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-left:before {
   content: "\f060";
 }
 
-/* line 148, ../../rebild/sass/partials/_fonts.scss */
+/* line 175, ../../rebild/sass/partials/_fonts.scss */
 .icon-close:before {
   content: "\e008";
 }
 
-/* line 151, ../../rebild/sass/partials/_fonts.scss */
+/* line 178, ../../rebild/sass/partials/_fonts.scss */
 .icon-plus:before {
   content: "\e00a";
 }
 
-/* line 154, ../../rebild/sass/partials/_fonts.scss */
+/* line 181, ../../rebild/sass/partials/_fonts.scss */
 .icon-minus:before {
   content: "\e00c";
 }
 
-/* line 157, ../../rebild/sass/partials/_fonts.scss */
+/* line 184, ../../rebild/sass/partials/_fonts.scss */
 .icon-compass:before {
   content: "\e00d";
 }
 
-/* line 160, ../../rebild/sass/partials/_fonts.scss */
+/* line 187, ../../rebild/sass/partials/_fonts.scss */
 .icon-reorder:before {
   content: "\f0c9";
 }
 
-/* line 163, ../../rebild/sass/partials/_fonts.scss */
+/* line 190, ../../rebild/sass/partials/_fonts.scss */
 .icon-rss:before {
   content: "\f09f";
 }
 
-/* line 166, ../../rebild/sass/partials/_fonts.scss */
+/* line 193, ../../rebild/sass/partials/_fonts.scss */
 .icon-facebook:before {
   content: "\f09a";
 }
 
-/* line 169, ../../rebild/sass/partials/_fonts.scss */
+/* line 196, ../../rebild/sass/partials/_fonts.scss */
 .icon-og_bliv_her2:before {
   content: "\e600";
 }
 
-/* line 172, ../../rebild/sass/partials/_fonts.scss */
-.icon-mail:before {
-  content: "\e603";
+/* line 199, ../../rebild/sass/partials/_fonts.scss */
+.icon-enlarge:before {
+  content: "\e90f";
 }
 
-/* line 175, ../../rebild/sass/partials/_fonts.scss */
+/* line 202, ../../rebild/sass/partials/_fonts.scss */
+.icon-zoom-in:before {
+  content: "\e90c";
+}
+
+/* line 205, ../../rebild/sass/partials/_fonts.scss */
 .icon-file-pdf:before {
   content: "\e602";
 }
 
-/* line 178, ../../rebild/sass/partials/_fonts.scss */
+/* line 208, ../../rebild/sass/partials/_fonts.scss */
 .icon-pencil:before {
   content: "\e905";
 }
 
-/* line 181, ../../rebild/sass/partials/_fonts.scss */
+/* line 211, ../../rebild/sass/partials/_fonts.scss */
 .icon-folder:before {
   content: "\e92f";
 }
 
-/* line 184, ../../rebild/sass/partials/_fonts.scss */
+/* line 214, ../../rebild/sass/partials/_fonts.scss */
 .icon-folder-open:before {
   content: "\e930";
 }
 
-/* line 187, ../../rebild/sass/partials/_fonts.scss */
+/* line 217, ../../rebild/sass/partials/_fonts.scss */
 .icon-folder-plus:before {
   content: "\e931";
 }
 
-/* line 190, ../../rebild/sass/partials/_fonts.scss */
+/* line 220, ../../rebild/sass/partials/_fonts.scss */
 .icon-bin:before {
   content: "\e9ac";
 }
 
-/* line 193, ../../rebild/sass/partials/_fonts.scss */
+/* line 223, ../../rebild/sass/partials/_fonts.scss */
+.icon-thumbs-up:before {
+  content: "\e90d";
+}
+
+/* line 226, ../../rebild/sass/partials/_fonts.scss */
+.icon-mail:before {
+  content: "\e603";
+}
+
+/* line 229, ../../rebild/sass/partials/_fonts.scss */
 .icon-mega-phone:before {
   content: "\e601";
 }
@@ -523,7 +577,12 @@ Rebildporten newsletter
 	Opret indhold 
 
 -------------------------------------------------------------------*/
-/* line 163, ../sass/custom.scss */
+/* line 162, ../sass/custom.scss */
+.node-form .manualcrop-style-button-holder {
+  display: inline-block;
+}
+
+/* line 166, ../sass/custom.scss */
 .page-node-add #page, .page-node-edit #page, .page-node #page, .page-user #page, .page-file #page, .page-block #page {
   font-family: Verdana, Arial, sans-serif;
   font-size: 12px;
@@ -536,18 +595,18 @@ Rebildporten newsletter
   /* Horizontal tabs */
   /* Vertical tabs */
 }
-/* line 167, ../sass/custom.scss */
+/* line 170, ../sass/custom.scss */
 .page-node-add #page label, .page-node-edit #page label, .page-node #page label, .page-user #page label, .page-file #page label, .page-block #page label {
   font-size: 1.33333em;
   font-weight: normal;
   margin-bottom: 10px;
 }
-/* line 172, ../sass/custom.scss */
+/* line 175, ../sass/custom.scss */
 .page-node-add #page label.option, .page-node-edit #page label.option, .page-node #page label.option, .page-user #page label.option, .page-file #page label.option, .page-block #page label.option {
   font-size: 1em;
   font-weight: bold;
 }
-/* line 176, ../sass/custom.scss */
+/* line 179, ../sass/custom.scss */
 .page-node-add #page .customised-select, .page-node-edit #page .customised-select, .page-node #page .customised-select, .page-user #page .customised-select, .page-file #page .customised-select, .page-block #page .customised-select {
   background: url("../images/dropdown.png");
   background-repeat: no-repeat;
@@ -555,20 +614,20 @@ Rebildporten newsletter
   height: 20px;
   padding: 1px 0 0 6px;
 }
-/* line 184, ../sass/custom.scss */
+/* line 187, ../sass/custom.scss */
 .page-node-add #page .link-field-column label, .page-node-edit #page .link-field-column label, .page-node #page .link-field-column label, .page-user #page .link-field-column label, .page-file #page .link-field-column label, .page-block #page .link-field-column label {
   font-size: 1em;
   font-weight: bold;
 }
-/* line 189, ../sass/custom.scss */
+/* line 192, ../sass/custom.scss */
 .page-node-add #page .link-attributes, .page-node-edit #page .link-attributes, .page-node #page .link-attributes, .page-user #page .link-attributes, .page-file #page .link-attributes, .page-block #page .link-attributes {
   margin: 5px 0 10px;
 }
-/* line 196, ../sass/custom.scss */
+/* line 199, ../sass/custom.scss */
 .page-node-add #page input[type="radio"], .page-node-edit #page input[type="radio"], .page-node #page input[type="radio"], .page-user #page input[type="radio"], .page-file #page input[type="radio"], .page-block #page input[type="radio"] {
   margin-left: 20px;
 }
-/* line 199, ../sass/custom.scss */
+/* line 202, ../sass/custom.scss */
 .page-node-add #page .form-text, .page-node-edit #page .form-text, .page-node #page .form-text, .page-user #page .form-text, .page-file #page .form-text, .page-block #page .form-text {
   width: 100%;
   padding: 0 0 0 1%;
@@ -584,7 +643,7 @@ Rebildporten newsletter
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 207, ../sass/custom.scss */
+/* line 210, ../sass/custom.scss */
 .page-node-add #page .form-textarea, .page-node-edit #page .form-textarea, .page-node #page .form-textarea, .page-user #page .form-textarea, .page-file #page .form-textarea, .page-block #page .form-textarea {
   background-color: white;
   border: 1px solid #bebfb9;
@@ -596,18 +655,18 @@ Rebildporten newsletter
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 211, ../sass/custom.scss */
+/* line 214, ../sass/custom.scss */
 .page-node-add #page .form-item-title, .page-node-edit #page .form-item-title, .page-node #page .form-item-title, .page-user #page .form-item-title, .page-file #page .form-item-title, .page-block #page .form-item-title {
   background: url("../images/dot.png") repeat-x bottom;
   padding-bottom: 30px;
   margin: 0;
 }
-/* line 215, ../sass/custom.scss */
+/* line 218, ../sass/custom.scss */
 .page-node-add #page .form-item-title .general_field_styling, .page-node-edit #page .form-item-title .general_field_styling, .page-node #page .form-item-title .general_field_styling, .page-user #page .form-item-title .general_field_styling, .page-file #page .form-item-title .general_field_styling, .page-block #page .form-item-title .general_field_styling {
   padding: 0 0 0 1%;
   background: none;
 }
-/* line 220, ../sass/custom.scss */
+/* line 223, ../sass/custom.scss */
 .page-node-add #page .date-clear, .page-node-edit #page .date-clear, .page-node #page .date-clear, .page-user #page .date-clear, .page-file #page .date-clear, .page-block #page .date-clear {
   background-color: white;
   border: 1px solid #bebfb9;
@@ -620,15 +679,15 @@ Rebildporten newsletter
   height: 26px;
   padding-left: 1%;
 }
-/* line 227, ../sass/custom.scss */
+/* line 230, ../sass/custom.scss */
 .page-node-add #page .date-padding, .page-node-edit #page .date-padding, .page-node #page .date-padding, .page-user #page .date-padding, .page-file #page .date-padding, .page-block #page .date-padding {
   padding: 0;
 }
-/* line 231, ../sass/custom.scss */
+/* line 234, ../sass/custom.scss */
 .page-node-add #page .description, .page-node-edit #page .description, .page-node #page .description, .page-user #page .description, .page-file #page .description, .page-block #page .description {
   font-size: 0.91667em;
 }
-/* line 234, ../sass/custom.scss */
+/* line 237, ../sass/custom.scss */
 .page-node-add #page .button.launcher, .page-node-add #page .field-add-more-submit, .page-node-add #page .form-submit, .page-node-edit #page .button.launcher, .page-node-edit #page .field-add-more-submit, .page-node-edit #page .form-submit, .page-node #page .button.launcher, .page-node #page .field-add-more-submit, .page-node #page .form-submit, .page-user #page .button.launcher, .page-user #page .field-add-more-submit, .page-user #page .form-submit, .page-file #page .button.launcher, .page-file #page .field-add-more-submit, .page-file #page .form-submit, .page-block #page .button.launcher, .page-block #page .field-add-more-submit, .page-block #page .form-submit {
   background-color: #7f9dcd;
   color: #fff;
@@ -642,31 +701,31 @@ Rebildporten newsletter
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 247, ../sass/custom.scss */
+/* line 250, ../sass/custom.scss */
 .page-node-add #page #edit-actions, .page-node-edit #page #edit-actions, .page-node #page #edit-actions, .page-user #page #edit-actions, .page-file #page #edit-actions, .page-block #page #edit-actions {
   background: none;
 }
-/* line 250, ../sass/custom.scss */
+/* line 253, ../sass/custom.scss */
 .page-node-add #page .general_field_styling, .page-node-edit #page .general_field_styling, .page-node #page .general_field_styling, .page-user #page .general_field_styling, .page-file #page .general_field_styling, .page-block #page .general_field_styling {
   background: url("../images/dot.png") repeat-x bottom;
   padding: 30px 0;
 }
-/* line 255, ../sass/custom.scss */
+/* line 258, ../sass/custom.scss */
 .page-node-add #page textarea, .page-node-edit #page textarea, .page-node #page textarea, .page-user #page textarea, .page-file #page textarea, .page-block #page textarea {
   width: 100%;
   padding-left: 1%;
 }
-/* line 261, ../sass/custom.scss */
+/* line 264, ../sass/custom.scss */
 .page-node-add #page input.form-autocomplete, .page-node-edit #page input.form-autocomplete, .page-node #page input.form-autocomplete, .page-user #page input.form-autocomplete, .page-file #page input.form-autocomplete, .page-block #page input.form-autocomplete {
   background-position: 100% 10px;
   /* LTR */
 }
-/* line 264, ../sass/custom.scss */
+/* line 267, ../sass/custom.scss */
 .page-node-add #page input.throbbing, .page-node-edit #page input.throbbing, .page-node #page input.throbbing, .page-user #page input.throbbing, .page-file #page input.throbbing, .page-block #page input.throbbing {
   background-position: 100% -11px;
   /* LTR */
 }
-/* line 268, ../sass/custom.scss */
+/* line 271, ../sass/custom.scss */
 .page-node-add #page .field-multiple-table, .page-node-edit #page .field-multiple-table, .page-node #page .field-multiple-table, .page-user #page .field-multiple-table, .page-file #page .field-multiple-table, .page-block #page .field-multiple-table {
   border-radius: 0;
   -o-border-radius: 0;
@@ -677,28 +736,28 @@ Rebildporten newsletter
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
 }
-/* line 277, ../sass/custom.scss */
+/* line 280, ../sass/custom.scss */
 .page-node-add #page .field-multiple-table th, .page-node-edit #page .field-multiple-table th, .page-node #page .field-multiple-table th, .page-user #page .field-multiple-table th, .page-file #page .field-multiple-table th, .page-block #page .field-multiple-table th {
   /* background: none; */
   text-transform: none;
 }
-/* line 280, ../sass/custom.scss */
+/* line 283, ../sass/custom.scss */
 .page-node-add #page .field-multiple-table th label, .page-node-edit #page .field-multiple-table th label, .page-node #page .field-multiple-table th label, .page-user #page .field-multiple-table th label, .page-file #page .field-multiple-table th label, .page-block #page .field-multiple-table th label {
   margin: 0;
   padding: 0;
 }
-/* line 285, ../sass/custom.scss */
+/* line 288, ../sass/custom.scss */
 .page-node-add #page .field-multiple-table .field-multiple-drag, .page-node-edit #page .field-multiple-table .field-multiple-drag, .page-node #page .field-multiple-table .field-multiple-drag, .page-user #page .field-multiple-table .field-multiple-drag, .page-file #page .field-multiple-table .field-multiple-drag, .page-block #page .field-multiple-table .field-multiple-drag {
   border-right: 1px solid #dddddd;
 }
-/* line 287, ../sass/custom.scss */
+/* line 290, ../sass/custom.scss */
 .page-node-add #page .field-multiple-table .field-multiple-drag a, .page-node-edit #page .field-multiple-table .field-multiple-drag a, .page-node #page .field-multiple-table .field-multiple-drag a, .page-user #page .field-multiple-table .field-multiple-drag a, .page-file #page .field-multiple-table .field-multiple-drag a, .page-block #page .field-multiple-table .field-multiple-drag a {
   display: block;
   float: none;
   padding: 0;
   margin-left: 0;
 }
-/* line 294, ../sass/custom.scss */
+/* line 297, ../sass/custom.scss */
 .page-node-add #page .field-multiple-table tr, .page-node-edit #page .field-multiple-table tr, .page-node #page .field-multiple-table tr, .page-user #page .field-multiple-table tr, .page-file #page .field-multiple-table tr, .page-block #page .field-multiple-table tr {
   /* background: none; */
   border-bottom: 20px solid #fff;
@@ -706,98 +765,98 @@ Rebildporten newsletter
   border-left: 0;
   border-top: 0;
 }
-/* line 301, ../sass/custom.scss */
+/* line 304, ../sass/custom.scss */
 .page-node-add #page .field-multiple-table .field-name-field-accordion-title, .page-node-edit #page .field-multiple-table .field-name-field-accordion-title, .page-node #page .field-multiple-table .field-name-field-accordion-title, .page-user #page .field-multiple-table .field-name-field-accordion-title, .page-file #page .field-multiple-table .field-name-field-accordion-title, .page-block #page .field-multiple-table .field-name-field-accordion-title {
   margin-bottom: 10px;
 }
-/* line 307, ../sass/custom.scss */
+/* line 310, ../sass/custom.scss */
 .page-node-add #page fieldset, .page-node-edit #page fieldset, .page-node #page fieldset, .page-user #page fieldset, .page-file #page fieldset, .page-block #page fieldset {
   border: 0;
   padding: 10px 0 0 0;
 }
-/* line 310, ../sass/custom.scss */
+/* line 313, ../sass/custom.scss */
 .page-node-add #page fieldset .fieldset-wrapper, .page-node-edit #page fieldset .fieldset-wrapper, .page-node #page fieldset .fieldset-wrapper, .page-user #page fieldset .fieldset-wrapper, .page-file #page fieldset .fieldset-wrapper, .page-block #page fieldset .fieldset-wrapper {
   padding: 0;
 }
-/* line 313, ../sass/custom.scss */
+/* line 316, ../sass/custom.scss */
 .page-node-add #page fieldset label, .page-node-edit #page fieldset label, .page-node #page fieldset label, .page-user #page fieldset label, .page-file #page fieldset label, .page-block #page fieldset label {
   font-size: 1em;
   font-weight: bold;
 }
-/* line 317, ../sass/custom.scss */
+/* line 320, ../sass/custom.scss */
 .page-node-add #page fieldset .fieldset-legend, .page-node-edit #page fieldset .fieldset-legend, .page-node #page fieldset .fieldset-legend, .page-user #page fieldset .fieldset-legend, .page-file #page fieldset .fieldset-legend, .page-block #page fieldset .fieldset-legend {
   padding: 0;
   text-transform: none;
   font-weight: normal;
   font-size: 1.33333em;
 }
-/* line 322, ../sass/custom.scss */
+/* line 325, ../sass/custom.scss */
 .page-node-add #page fieldset .fieldset-legend a, .page-node-edit #page fieldset .fieldset-legend a, .page-node #page fieldset .fieldset-legend a, .page-user #page fieldset .fieldset-legend a, .page-file #page fieldset .fieldset-legend a, .page-block #page fieldset .fieldset-legend a {
   padding-left: 20px;
 }
-/* line 328, ../sass/custom.scss */
+/* line 331, ../sass/custom.scss */
 .page-node-add #page .field-type-datestamp .fieldset-legend, .page-node-edit #page .field-type-datestamp .fieldset-legend, .page-node #page .field-type-datestamp .fieldset-legend, .page-user #page .field-type-datestamp .fieldset-legend, .page-file #page .field-type-datestamp .fieldset-legend, .page-block #page .field-type-datestamp .fieldset-legend {
   padding: 0;
   text-transform: none;
   font-weight: normal;
   font-size: 1.33333em;
 }
-/* line 336, ../sass/custom.scss */
+/* line 339, ../sass/custom.scss */
 .page-node-add #page .field-group-fieldset, .page-node-edit #page .field-group-fieldset, .page-node #page .field-group-fieldset, .page-user #page .field-group-fieldset, .page-file #page .field-group-fieldset, .page-block #page .field-group-fieldset {
   margin: 30px 0 0 0;
   background: url("../images/dot.png") repeat-x bottom;
   padding-bottom: 30px;
 }
-/* line 340, ../sass/custom.scss */
+/* line 343, ../sass/custom.scss */
 .page-node-add #page .field-group-fieldset .fieldset-legend, .page-node-edit #page .field-group-fieldset .fieldset-legend, .page-node #page .field-group-fieldset .fieldset-legend, .page-user #page .field-group-fieldset .fieldset-legend, .page-file #page .field-group-fieldset .fieldset-legend, .page-block #page .field-group-fieldset .fieldset-legend {
   padding: 0;
   text-transform: none;
   font-size: 1.33333em;
   font-weight: normal;
 }
-/* line 346, ../sass/custom.scss */
+/* line 349, ../sass/custom.scss */
 .page-node-add #page .field-group-fieldset .fieldset-wrapper, .page-node-edit #page .field-group-fieldset .fieldset-wrapper, .page-node #page .field-group-fieldset .fieldset-wrapper, .page-user #page .field-group-fieldset .fieldset-wrapper, .page-file #page .field-group-fieldset .fieldset-wrapper, .page-block #page .field-group-fieldset .fieldset-wrapper {
   padding-left: 20px;
 }
-/* line 348, ../sass/custom.scss */
+/* line 351, ../sass/custom.scss */
 .page-node-add #page .field-group-fieldset .fieldset-wrapper .general_field_styling, .page-node-edit #page .field-group-fieldset .fieldset-wrapper .general_field_styling, .page-node #page .field-group-fieldset .fieldset-wrapper .general_field_styling, .page-user #page .field-group-fieldset .fieldset-wrapper .general_field_styling, .page-file #page .field-group-fieldset .fieldset-wrapper .general_field_styling, .page-block #page .field-group-fieldset .fieldset-wrapper .general_field_styling {
   background: none;
   padding: 15px 0;
 }
-/* line 352, ../sass/custom.scss */
+/* line 355, ../sass/custom.scss */
 .page-node-add #page .field-group-fieldset .fieldset-wrapper .general_field_styling .media-widget .form-item, .page-node-edit #page .field-group-fieldset .fieldset-wrapper .general_field_styling .media-widget .form-item, .page-node #page .field-group-fieldset .fieldset-wrapper .general_field_styling .media-widget .form-item, .page-user #page .field-group-fieldset .fieldset-wrapper .general_field_styling .media-widget .form-item, .page-file #page .field-group-fieldset .fieldset-wrapper .general_field_styling .media-widget .form-item, .page-block #page .field-group-fieldset .fieldset-wrapper .general_field_styling .media-widget .form-item {
   padding-bottom: 5px;
 }
-/* line 357, ../sass/custom.scss */
+/* line 360, ../sass/custom.scss */
 .page-node-add #page .field-group-fieldset .fieldset-wrapper label, .page-node-edit #page .field-group-fieldset .fieldset-wrapper label, .page-node #page .field-group-fieldset .fieldset-wrapper label, .page-user #page .field-group-fieldset .fieldset-wrapper label, .page-file #page .field-group-fieldset .fieldset-wrapper label, .page-block #page .field-group-fieldset .fieldset-wrapper label {
   font-size: 1em;
   font-weight: bold;
 }
-/* line 361, ../sass/custom.scss */
+/* line 364, ../sass/custom.scss */
 .page-node-add #page .field-group-fieldset .fieldset-wrapper .form-item, .page-node-edit #page .field-group-fieldset .fieldset-wrapper .form-item, .page-node #page .field-group-fieldset .fieldset-wrapper .form-item, .page-user #page .field-group-fieldset .fieldset-wrapper .form-item, .page-file #page .field-group-fieldset .fieldset-wrapper .form-item, .page-block #page .field-group-fieldset .fieldset-wrapper .form-item {
   margin: 0;
   padding: 0;
 }
-/* line 368, ../sass/custom.scss */
+/* line 371, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper, .page-node-edit #page .field-group-htabs-wrapper, .page-node #page .field-group-htabs-wrapper, .page-user #page .field-group-htabs-wrapper, .page-file #page .field-group-htabs-wrapper, .page-block #page .field-group-htabs-wrapper {
   padding: 30px 0;
 }
-/* line 370, ../sass/custom.scss */
+/* line 373, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .general_field_styling, .page-node-edit #page .field-group-htabs-wrapper .general_field_styling, .page-node #page .field-group-htabs-wrapper .general_field_styling, .page-user #page .field-group-htabs-wrapper .general_field_styling, .page-file #page .field-group-htabs-wrapper .general_field_styling, .page-block #page .field-group-htabs-wrapper .general_field_styling {
   background: none;
   padding: 0;
 }
-/* line 374, ../sass/custom.scss */
+/* line 377, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs, .page-node #page .field-group-htabs-wrapper .horizontal-tabs, .page-user #page .field-group-htabs-wrapper .horizontal-tabs, .page-file #page .field-group-htabs-wrapper .horizontal-tabs, .page-block #page .field-group-htabs-wrapper .horizontal-tabs {
   border: 0;
 }
-/* line 376, ../sass/custom.scss */
+/* line 379, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list, .page-block #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list {
   border-right: 0;
   border-bottom: 1px solid #d8d8d8;
   background-color: transparent;
 }
-/* line 380, ../sass/custom.scss */
+/* line 383, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li, .page-block #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li {
   -moz-border-radius: 8px 8px 0 0;
   -webkit-border-top-left-radius: 8px;
@@ -809,22 +868,22 @@ Rebildporten newsletter
   margin-top: 10px;
   outline: 0;
 }
-/* line 390, ../sass/custom.scss */
+/* line 393, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a, .page-block #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a {
   color: #000;
   font-weight: normal;
   outline: 0;
 }
-/* line 394, ../sass/custom.scss */
+/* line 397, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a strong, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a strong, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a strong, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a strong, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a strong, .page-block #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a strong {
   font-weight: normal;
 }
-/* line 398, ../sass/custom.scss */
+/* line 401, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a:hover, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a:hover, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a:hover, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a:hover, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a:hover, .page-block #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list li a:hover {
   background-color: transparent;
   outline: 0;
 }
-/* line 404, ../sass/custom.scss */
+/* line 407, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list .selected, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list .selected, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list .selected, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list .selected, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list .selected, .page-block #page .field-group-htabs-wrapper .horizontal-tabs .horizontal-tabs-list .selected {
   background-color: #fff;
   border-top: 1px solid #eeeeee;
@@ -833,20 +892,20 @@ Rebildporten newsletter
   border-right: 1px solid #eeeeee;
   padding: 0 18px 2px;
 }
-/* line 413, ../sass/custom.scss */
+/* line 416, ../sass/custom.scss */
 .page-node-add #page .field-group-htabs-wrapper .horizontal-tabs .field-group-fieldset, .page-node-edit #page .field-group-htabs-wrapper .horizontal-tabs .field-group-fieldset, .page-node #page .field-group-htabs-wrapper .horizontal-tabs .field-group-fieldset, .page-user #page .field-group-htabs-wrapper .horizontal-tabs .field-group-fieldset, .page-file #page .field-group-htabs-wrapper .horizontal-tabs .field-group-fieldset, .page-block #page .field-group-htabs-wrapper .horizontal-tabs .field-group-fieldset {
   background: none;
 }
-/* line 419, ../sass/custom.scss */
+/* line 422, ../sass/custom.scss */
 .page-node-add #page .vertical-tabs, .page-node-edit #page .vertical-tabs, .page-node #page .vertical-tabs, .page-user #page .vertical-tabs, .page-file #page .vertical-tabs, .page-block #page .vertical-tabs {
   margin-top: 30px;
 }
-/* line 421, ../sass/custom.scss */
+/* line 424, ../sass/custom.scss */
 .page-node-add #page .vertical-tabs .general_field_styling, .page-node-edit #page .vertical-tabs .general_field_styling, .page-node #page .vertical-tabs .general_field_styling, .page-user #page .vertical-tabs .general_field_styling, .page-file #page .vertical-tabs .general_field_styling, .page-block #page .vertical-tabs .general_field_styling {
   background: none;
   padding: 0;
 }
-/* line 425, ../sass/custom.scss */
+/* line 428, ../sass/custom.scss */
 .page-node-add #page .vertical-tabs .form-text, .page-node-edit #page .vertical-tabs .form-text, .page-node #page .vertical-tabs .form-text, .page-user #page .vertical-tabs .form-text, .page-file #page .vertical-tabs .form-text, .page-block #page .vertical-tabs .form-text {
   background-color: white;
   border: 1px solid #bebfb9;
@@ -856,7 +915,7 @@ Rebildporten newsletter
   /* @include box-shadow(rgba(black, 0.85) 0 0 3px); */
   height: 30px;
 }
-/* line 429, ../sass/custom.scss */
+/* line 432, ../sass/custom.scss */
 .page-node-add #page .vertical-tabs .vertical-tab-button-error, .page-node-edit #page .vertical-tabs .vertical-tab-button-error, .page-node #page .vertical-tabs .vertical-tab-button-error, .page-user #page .vertical-tabs .vertical-tab-button-error, .page-file #page .vertical-tabs .vertical-tab-button-error, .page-block #page .vertical-tabs .vertical-tab-button-error {
   border: 2px solid red;
 }
@@ -866,22 +925,22 @@ Rebildporten newsletter
 	Workbench
 
 -------------------------------------------------------------------*/
-/* line 443, ../sass/custom.scss */
+/* line 446, ../sass/custom.scss */
 .page-admin-workbench #page {
   min-width: 960px;
 }
-/* line 446, ../sass/custom.scss */
+/* line 449, ../sass/custom.scss */
 .page-admin-workbench #page .tabs-secondary .min-profil {
   float: right;
   width: 28%;
 }
-/* line 449, ../sass/custom.scss */
+/* line 452, ../sass/custom.scss */
 .page-admin-workbench #page .tabs-secondary .min-profil li {
   float: left;
   display: block;
   margin-right: 10px;
 }
-/* line 453, ../sass/custom.scss */
+/* line 456, ../sass/custom.scss */
 .page-admin-workbench #page .tabs-secondary .min-profil li a {
   background-color: #ddd;
   color: #000;
@@ -889,19 +948,19 @@ Rebildporten newsletter
   border-radius: 7px;
   padding: 2px 10px;
 }
-/* line 465, ../sass/custom.scss */
+/* line 468, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .left {
   float: left;
   width: 75%;
   padding-right: 40px;
   box-sizing: border-box;
 }
-/* line 471, ../sass/custom.scss */
+/* line 474, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right {
   float: left;
   width: 25%;
 }
-/* line 474, ../sass/custom.scss */
+/* line 477, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content {
   background-color: white;
   border: 1px solid #bebfb9;
@@ -910,7 +969,7 @@ Rebildporten newsletter
   border-radius: 3px;
   /* @include box-shadow(rgba(black, 0.85) 0 0 3px); */
 }
-/* line 476, ../sass/custom.scss */
+/* line 479, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content h4 {
   padding: 10px;
   border-bottom: 1px solid #bcbdbd;
@@ -922,36 +981,36 @@ Rebildporten newsletter
   text-transform: uppercase;
   vertical-align: middle;
 }
-/* line 487, ../sass/custom.scss */
+/* line 490, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-picture {
   padding: 10px 10px 0 10px;
 }
-/* line 490, ../sass/custom.scss */
+/* line 493, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-field-user-jobtitel {
   padding: 0 10px 0 10px;
   font-style: italic;
   margin: 10px 0;
 }
-/* line 495, ../sass/custom.scss */
+/* line 498, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-field-user-tlf, .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-mail {
   padding: 0 10px 0 10px;
 }
-/* line 498, ../sass/custom.scss */
+/* line 501, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content .views-field.views-field-mail {
   padding-bottom: 10px;
 }
-/* line 501, ../sass/custom.scss */
+/* line 504, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_top .right .view-content p {
   margin: 0;
 }
-/* line 508, ../sass/custom.scss */
+/* line 511, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle .needs_attention {
   float: left;
   width: 75%;
   padding-right: 40px;
   box-sizing: border-box;
 }
-/* line 514, ../sass/custom.scss */
+/* line 517, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle #block-block-16 {
   float: left;
   width: 25%;
@@ -964,7 +1023,7 @@ Rebildporten newsletter
   border-radius: 3px;
   /* @include box-shadow(rgba(black, 0.85) 0 0 3px); */
 }
-/* line 520, ../sass/custom.scss */
+/* line 523, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle #block-block-16 h2 {
   padding: 10px;
   border-bottom: 1px solid #bcbdbd;
@@ -976,15 +1035,15 @@ Rebildporten newsletter
   text-transform: uppercase;
   vertical-align: middle;
 }
-/* line 531, ../sass/custom.scss */
+/* line 534, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle #block-block-16 .content {
   padding: 10px;
 }
-/* line 534, ../sass/custom.scss */
+/* line 537, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_middle #block-block-16 p {
   margin: 0;
 }
-/* line 540, ../sass/custom.scss */
+/* line 543, ../sass/custom.scss */
 .page-admin-workbench #page #min_profil_side .min_profil_bottom .all_recent_content, .page-admin-workbench #page #min_profil_side .min_profil_bottom .content_without_moderation {
   float: left;
   width: 100%;
@@ -995,28 +1054,28 @@ Rebildporten newsletter
 	WYSIWYG editor
 
 -------------------------------------------------------------------*/
-/* line 561, ../sass/custom.scss */
+/* line 564, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mce_removeformat {
   display: none;
 }
-/* line 564, ../sass/custom.scss */
+/* line 567, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mce_pasteword {
   display: none;
 }
-/* line 567, ../sass/custom.scss */
+/* line 570, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mce_paste {
   display: none;
 }
-/* line 570, ../sass/custom.scss */
+/* line 573, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mceFirst {
   background: #f6f6f6;
 }
-/* line 573, ../sass/custom.scss */
+/* line 576, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mceIframeContainer.mceFirst.mceLast {
   border-top: 1px solid #d8d8d8;
   border-bottom: 1px solid #d8d8d8;
 }
-/* line 577, ../sass/custom.scss */
+/* line 580, ../sass/custom.scss */
 .page-node #page .mceEditor .mceLayout .mceListBox {
   border-radius: 0;
   -o-border-radius: 0;
@@ -1027,7 +1086,7 @@ Rebildporten newsletter
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
 }
-/* line 591, ../sass/custom.scss */
+/* line 594, ../sass/custom.scss */
 .page-node #page .filter-wrapper label {
   font-size: 12px;
   font-weight: bold;
@@ -1038,7 +1097,7 @@ Rebildporten newsletter
 	Breadcrumbs
 	
 -------------------------------------------------------------------*/
-/* line 607, ../sass/custom.scss */
+/* line 610, ../sass/custom.scss */
 #branding .breadcrumb {
   font-size: 0.91667em;
   line-height: 1.5;
@@ -1048,14 +1107,14 @@ Rebildporten newsletter
   margin-left: 5px;
   text-shadow: white 1px 1px 1px;
 }
-/* line 615, ../sass/custom.scss */
+/* line 618, ../sass/custom.scss */
 #branding .breadcrumb a, #branding .breadcrumb strong {
   color: #474747;
   text-decoration: none;
   position: relative;
   top: -1px;
 }
-/* line 621, ../sass/custom.scss */
+/* line 624, ../sass/custom.scss */
 #branding .breadcrumb span {
   font-size: 1.25em;
 }
@@ -1065,7 +1124,7 @@ Rebildporten newsletter
 	Views 
 	
 -------------------------------------------------------------------*/
-/* line 632, ../sass/custom.scss */
+/* line 635, ../sass/custom.scss */
 .views-exposed-form .form-item {
   padding: 0;
 }
@@ -1075,7 +1134,7 @@ Rebildporten newsletter
 	Media module
 	
 -------------------------------------------------------------------*/
-/* line 643, ../sass/custom.scss */
+/* line 646, ../sass/custom.scss */
 .page-media .form-submit, .page-media a.button {
   background-color: #7f9dcd;
   color: #fff;
@@ -1089,7 +1148,7 @@ Rebildporten newsletter
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 656, ../sass/custom.scss */
+/* line 659, ../sass/custom.scss */
 .page-media input[type="file"] {
   background-color: white;
   border: 1px solid #bebfb9;
@@ -1101,15 +1160,15 @@ Rebildporten newsletter
   margin-right: 20px;
 }
 
-/* line 664, ../sass/custom.scss */
+/* line 667, ../sass/custom.scss */
 .page-node .media-widget .preview {
   margin: 0;
 }
-/* line 666, ../sass/custom.scss */
+/* line 669, ../sass/custom.scss */
 .page-node .media-widget .preview > div {
   margin-right: 15px;
 }
-/* line 670, ../sass/custom.scss */
+/* line 673, ../sass/custom.scss */
 .page-node .media-widget .button {
   background-color: #7f9dcd;
   color: #fff;
@@ -1125,7 +1184,7 @@ Rebildporten newsletter
   display: inline-block;
 }
 
-/* line 689, ../sass/custom.scss */
+/* line 692, ../sass/custom.scss */
 #file-entity-edit .chzn-choices input[type="text"], #file-entity-edit .chzn-drop input[type="text"], #file-entity-edit--2 .chzn-choices input[type="text"], #file-entity-edit--2 .chzn-drop input[type="text"] {
   border-radius: 0;
   -webkit-border-radius: none;
@@ -1137,7 +1196,7 @@ Rebildporten newsletter
   -moz-box-shadow: transparent 0 0 0;
   box-shadow: transparent 0 0 0;
 }
-/* line 701, ../sass/custom.scss */
+/* line 704, ../sass/custom.scss */
 #file-entity-edit input[type="text"], #file-entity-edit--2 input[type="text"] {
   width: 50%;
   padding: 0 0 0 1%;
@@ -1151,7 +1210,7 @@ Rebildporten newsletter
   /* @include box-shadow(rgba(black, 0.85) 0 0 3px); */
   font-size: 13px;
 }
-/* line 709, ../sass/custom.scss */
+/* line 712, ../sass/custom.scss */
 #file-entity-edit input[type="submit"], #file-entity-edit--2 input[type="submit"] {
   background-color: #7f9dcd;
   color: #fff;
@@ -1165,7 +1224,7 @@ Rebildporten newsletter
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 722, ../sass/custom.scss */
+/* line 725, ../sass/custom.scss */
 #file-entity-edit .button-no, #file-entity-edit--2 .button-no {
   background-color: #7f9dcd;
   color: #fff;
@@ -1180,12 +1239,12 @@ Rebildporten newsletter
   border-radius: 3px;
 }
 
-/* line 737, ../sass/custom.scss */
+/* line 740, ../sass/custom.scss */
 .media-modal-frame .page-file {
   background-color: #fff;
 }
 
-/* line 742, ../sass/custom.scss */
+/* line 745, ../sass/custom.scss */
 #media-browser-page #branding {
   background: #fff;
 }
@@ -1195,15 +1254,15 @@ Rebildporten newsletter
 	BEAN
 	
 -------------------------------------------------------------------*/
-/* line 754, ../sass/custom.scss */
+/* line 757, ../sass/custom.scss */
 .page-block #bean-form .form-item-is-new-revision, .page-block #bean-form .form-item-default-revision, .page-block #bean-form .form-item-view-mode {
   display: none;
 }
-/* line 758, ../sass/custom.scss */
+/* line 761, ../sass/custom.scss */
 .page-block #bean-form #edit-log-wrapper .form-item {
   display: none;
 }
-/* line 763, ../sass/custom.scss */
+/* line 766, ../sass/custom.scss */
 .page-block #bean-form .form-item-default-revision input, .page-block #bean-form .form-item-default-revision label {
   display: none;
 }
@@ -1213,7 +1272,7 @@ Rebildporten newsletter
 	User profile
 	
 -------------------------------------------------------------------*/
-/* line 778, ../sass/custom.scss */
+/* line 781, ../sass/custom.scss */
 .page-user #page #user-profile-form .fieldset-wrapper {
   padding-top: 30px;
 }
@@ -1223,18 +1282,18 @@ Rebildporten newsletter
 	Node Edit
 	
 -------------------------------------------------------------------*/
-/* line 792, ../sass/custom.scss */
+/* line 795, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table,
 .page-node-add #page .field-multiple-table {
   /* Style secondary buttons */
 }
-/* line 794, ../sass/custom.scss */
+/* line 797, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table tr.draggable > td,
 .page-node-add #page .field-multiple-table tr.draggable > td {
   padding: 15px 25px;
   /* Section Type Headline */
 }
-/* line 797, ../sass/custom.scss */
+/* line 800, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table tr.draggable > td > .form-wrapper:first-child,
 .page-node-edit #page .field-multiple-table tr.draggable > td > .ajax-new-content > .form-wrapper:first-child,
 .page-node-add #page .field-multiple-table tr.draggable > td > .form-wrapper:first-child,
@@ -1242,7 +1301,7 @@ Rebildporten newsletter
   margin-top: 5px;
   margin-bottom: 15px;
 }
-/* line 801, ../sass/custom.scss */
+/* line 804, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table tr.draggable > td > .form-wrapper:first-child em,
 .page-node-edit #page .field-multiple-table tr.draggable > td > .ajax-new-content > .form-wrapper:first-child em,
 .page-node-add #page .field-multiple-table tr.draggable > td > .form-wrapper:first-child em,
@@ -1250,42 +1309,44 @@ Rebildporten newsletter
   font-weight: bold;
   font-style: normal;
 }
-/* line 807, ../sass/custom.scss */
+/* line 810, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table tr.draggable > td.field-multiple-drag,
 .page-node-add #page .field-multiple-table tr.draggable > td.field-multiple-drag {
   padding: 15px 5px;
 }
-/* line 810, ../sass/custom.scss */
+/* line 813, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table tr.draggable div[class^="field-type-"],
 .page-node-add #page .field-multiple-table tr.draggable div[class^="field-type-"] {
   margin-bottom: 15px;
 }
-/* line 813, ../sass/custom.scss */
+/* line 816, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table tr.draggable .form-actions,
 .page-node-add #page .field-multiple-table tr.draggable .form-actions {
   margin-bottom: 0;
 }
-/* line 817, ../sass/custom.scss */
+/* line 820, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table input.field-add-more-submit,
 .page-node-add #page .field-multiple-table input.field-add-more-submit {
   margin: 15px 0 15px;
 }
-/* line 821, ../sass/custom.scss */
+/* line 824, ../sass/custom.scss */
 .page-node-edit #page .field-multiple-table input.field-add-more-submit,
 .page-node-edit #page .field-multiple-table input.remove,
 .page-node-edit #page .field-multiple-table a.button.edit,
 .page-node-edit #page .field-multiple-table a.button.browse,
 .page-node-edit #page .field-multiple-table table[id*='field-main-accordion-values'] input[type=submit],
 .page-node-edit #page .field-multiple-table .field-name-field-sec-nav-elment input[type=submit],
+.page-node-edit #page .field-multiple-table .manualcrop-style-button,
 .page-node-add #page .field-multiple-table input.field-add-more-submit,
 .page-node-add #page .field-multiple-table input.remove,
 .page-node-add #page .field-multiple-table a.button.edit,
 .page-node-add #page .field-multiple-table a.button.browse,
 .page-node-add #page .field-multiple-table table[id*='field-main-accordion-values'] input[type=submit],
-.page-node-add #page .field-multiple-table .field-name-field-sec-nav-elment input[type=submit] {
+.page-node-add #page .field-multiple-table .field-name-field-sec-nav-elment input[type=submit],
+.page-node-add #page .field-multiple-table .manualcrop-style-button {
   background: #bbb;
 }
-/* line 830, ../sass/custom.scss */
+/* line 834, ../sass/custom.scss */
 .page-node-edit #page .form-item-field-main-paragraphs-add-more-type,
 .page-node-add #page .form-item-field-main-paragraphs-add-more-type {
   margin: 25px 0 0;
@@ -1296,11 +1357,11 @@ Rebildporten newsletter
 	Rebildporten newsletter
 	
 -------------------------------------------------------------------*/
-/* line 843, ../sass/custom.scss */
+/* line 847, ../sass/custom.scss */
 .page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-header ul.action-links {
   margin-bottom: 2em;
 }
-/* line 845, ../sass/custom.scss */
+/* line 849, ../sass/custom.scss */
 .page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-header ul.action-links li {
   background-color: #7f9dcd;
   color: #fff;
@@ -1315,35 +1376,35 @@ Rebildporten newsletter
   border-radius: 3px;
   margin: 0;
 }
-/* line 858, ../sass/custom.scss */
+/* line 862, ../sass/custom.scss */
 .page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-header ul.action-links li a {
   color: #ffffff;
   background: none;
   padding: 0;
 }
-/* line 865, ../sass/custom.scss */
+/* line 869, ../sass/custom.scss */
 .page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-header .fieldset-legend {
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 870, ../sass/custom.scss */
+/* line 874, ../sass/custom.scss */
 .page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-filters {
   margin-bottom: 2em;
 }
-/* line 872, ../sass/custom.scss */
+/* line 876, ../sass/custom.scss */
 .page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-filters .views-submit-button, .page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-filters .views-reset-button {
   padding-top: 0;
   padding-right: 0;
   position: relative;
   height: 43px;
 }
-/* line 877, ../sass/custom.scss */
+/* line 881, ../sass/custom.scss */
 .page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-filters .views-submit-button input, .page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-filters .views-reset-button input {
   position: absolute;
   bottom: 0;
   margin: 0;
 }
-/* line 883, ../sass/custom.scss */
+/* line 887, ../sass/custom.scss */
 .page-admin-br-nyhedsbreve .view-rebildporten-content-list .view-filters .views-submit-button {
   padding-right: 7em;
 }

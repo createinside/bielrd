@@ -37,121 +37,155 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
 /* line 49, ../../rebild/sass/partials/_fonts.scss */
-.icon-file-pdf:before {
-  content: "\e602";
+.icon-brand:before {
+  content: "\e90e";
+  color: #3b5998;
 }
 
 /* line 53, ../../rebild/sass/partials/_fonts.scss */
-.icon-pencil:before {
-  content: "\e905";
+.icon-instagram:before {
+  content: "\e900";
 }
 
-/* line 57, ../../rebild/sass/partials/_fonts.scss */
-.icon-folder:before {
-  content: "\e92f";
+/* line 56, ../../rebild/sass/partials/_fonts.scss */
+.icon-youtube:before {
+  content: "\e901";
 }
 
-/* line 61, ../../rebild/sass/partials/_fonts.scss */
-.icon-folder-open:before {
-  content: "\e930";
+/* line 59, ../../rebild/sass/partials/_fonts.scss */
+.icon-google-plus:before {
+  content: "\e902";
+}
+
+/* line 62, ../../rebild/sass/partials/_fonts.scss */
+.icon-facebook2:before {
+  content: "\e903";
 }
 
 /* line 65, ../../rebild/sass/partials/_fonts.scss */
-.icon-folder-plus:before {
-  content: "\e931";
+.icon-linkedin:before {
+  content: "\e904";
 }
 
-/* line 69, ../../rebild/sass/partials/_fonts.scss */
-.icon-bin:before {
-  content: "\e9ac";
+/* line 68, ../../rebild/sass/partials/_fonts.scss */
+.icon-twitter:before {
+  content: "\e906";
 }
 
-/* line 73, ../../rebild/sass/partials/_fonts.scss */
-.icon-mega-phone:before {
-  content: "\e601";
+/* line 71, ../../rebild/sass/partials/_fonts.scss */
+.icon-english-flag .path1:before {
+  content: "\e908";
+  color: white;
 }
 
-/* line 77, ../../rebild/sass/partials/_fonts.scss */
+/* line 75, ../../rebild/sass/partials/_fonts.scss */
+.icon-english-flag .path2:before {
+  content: "\e909";
+  margin-left: -1.1318359375em;
+  color: #d00f14;
+}
+
+/* line 80, ../../rebild/sass/partials/_fonts.scss */
+.icon-english-flag .path3:before {
+  content: "\e90a";
+  margin-left: -1.1318359375em;
+  color: #d00f14;
+}
+
+/* line 85, ../../rebild/sass/partials/_fonts.scss */
+.icon-english-flag .path4:before {
+  content: "\e90b";
+  margin-left: -1.1318359375em;
+  color: #00305b;
+}
+
+/* line 90, ../../rebild/sass/partials/_fonts.scss */
+.icon-danish-flag:before {
+  content: "\e907";
+  color: #d00f14;
+}
+
+/* line 94, ../../rebild/sass/partials/_fonts.scss */
 .icon-mobil_logo:before {
   content: "\e007";
 }
 
-/* line 81, ../../rebild/sass/partials/_fonts.scss */
+/* line 97, ../../rebild/sass/partials/_fonts.scss */
 .icon-printer:before {
   content: "\e011";
 }
 
-/* line 85, ../../rebild/sass/partials/_fonts.scss */
+/* line 100, ../../rebild/sass/partials/_fonts.scss */
 .icon-volume:before {
   content: "\e012";
 }
 
-/* line 89, ../../rebild/sass/partials/_fonts.scss */
+/* line 103, ../../rebild/sass/partials/_fonts.scss */
 .icon-money:before {
   content: "\f0d6";
 }
 
-/* line 93, ../../rebild/sass/partials/_fonts.scss */
+/* line 106, ../../rebild/sass/partials/_fonts.scss */
 .icon-search:before {
   content: "\e013";
 }
 
-/* line 97, ../../rebild/sass/partials/_fonts.scss */
+/* line 109, ../../rebild/sass/partials/_fonts.scss */
 .icon-plus2:before {
   content: "\e00f";
 }
 
-/* line 101, ../../rebild/sass/partials/_fonts.scss */
+/* line 112, ../../rebild/sass/partials/_fonts.scss */
 .icon-minus2:before {
   content: "\e010";
 }
 
-/* line 105, ../../rebild/sass/partials/_fonts.scss */
+/* line 115, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-down2:before {
   content: "\e003";
 }
 
-/* line 109, ../../rebild/sass/partials/_fonts.scss */
+/* line 118, ../../rebild/sass/partials/_fonts.scss */
 .icon-bottom_logo:before {
   content: "\e009";
 }
 
-/* line 113, ../../rebild/sass/partials/_fonts.scss */
+/* line 121, ../../rebild/sass/partials/_fonts.scss */
 .icon-phone:before {
   content: "\f095";
 }
 
-/* line 117, ../../rebild/sass/partials/_fonts.scss */
+/* line 124, ../../rebild/sass/partials/_fonts.scss */
 .icon-envelope:before {
   content: "\f003";
 }
 
-/* line 121, ../../rebild/sass/partials/_fonts.scss */
+/* line 127, ../../rebild/sass/partials/_fonts.scss */
 .icon-home:before {
   content: "\e005";
 }
 
-/* line 125, ../../rebild/sass/partials/_fonts.scss */
+/* line 130, ../../rebild/sass/partials/_fonts.scss */
 .icon-double-angle-right:before {
   content: "\f101";
 }
 
-/* line 129, ../../rebild/sass/partials/_fonts.scss */
+/* line 133, ../../rebild/sass/partials/_fonts.scss */
 .icon-double-angle-left:before {
   content: "\f100";
 }
 
-/* line 133, ../../rebild/sass/partials/_fonts.scss */
+/* line 136, ../../rebild/sass/partials/_fonts.scss */
 .icon-double-angle-down:before {
   content: "\f103";
 }
 
-/* line 137, ../../rebild/sass/partials/_fonts.scss */
+/* line 139, ../../rebild/sass/partials/_fonts.scss */
 .icon-double-angle-up:before {
   content: "\f102";
 }
 
-/* line 141, ../../rebild/sass/partials/_fonts.scss */
+/* line 142, ../../rebild/sass/partials/_fonts.scss */
 .icon-images:before {
   content: "\e00e";
 }
@@ -161,89 +195,144 @@ you can use the generic selector below, but it's slower:
   content: "\e000";
 }
 
-/* line 149, ../../rebild/sass/partials/_fonts.scss */
+/* line 148, ../../rebild/sass/partials/_fonts.scss */
 .icon-pil2:before {
   content: "\e014";
 }
 
-/* line 153, ../../rebild/sass/partials/_fonts.scss */
+/* line 151, ../../rebild/sass/partials/_fonts.scss */
 .icon-angle-right:before {
   content: "\e006";
 }
 
-/* line 157, ../../rebild/sass/partials/_fonts.scss */
+/* line 154, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-left2:before {
   content: "\e004";
 }
 
-/* line 161, ../../rebild/sass/partials/_fonts.scss */
+/* line 157, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-up2:before {
   content: "\e002";
 }
 
-/* line 165, ../../rebild/sass/partials/_fonts.scss */
+/* line 160, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-right2:before {
   content: "\e001";
 }
 
-/* line 169, ../../rebild/sass/partials/_fonts.scss */
+/* line 163, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-up:before {
   content: "\f062";
 }
 
-/* line 173, ../../rebild/sass/partials/_fonts.scss */
+/* line 166, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-down:before {
   content: "\f063";
 }
 
-/* line 177, ../../rebild/sass/partials/_fonts.scss */
+/* line 169, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-right:before {
   content: "\f061";
 }
 
-/* line 181, ../../rebild/sass/partials/_fonts.scss */
+/* line 172, ../../rebild/sass/partials/_fonts.scss */
 .icon-arrow-left:before {
   content: "\f060";
 }
 
-/* line 185, ../../rebild/sass/partials/_fonts.scss */
+/* line 175, ../../rebild/sass/partials/_fonts.scss */
 .icon-close:before {
   content: "\e008";
 }
 
-/* line 189, ../../rebild/sass/partials/_fonts.scss */
+/* line 178, ../../rebild/sass/partials/_fonts.scss */
 .icon-plus:before {
   content: "\e00a";
 }
 
-/* line 193, ../../rebild/sass/partials/_fonts.scss */
+/* line 181, ../../rebild/sass/partials/_fonts.scss */
 .icon-minus:before {
   content: "\e00c";
 }
 
-/* line 197, ../../rebild/sass/partials/_fonts.scss */
+/* line 184, ../../rebild/sass/partials/_fonts.scss */
 .icon-compass:before {
   content: "\e00d";
 }
 
-/* line 201, ../../rebild/sass/partials/_fonts.scss */
+/* line 187, ../../rebild/sass/partials/_fonts.scss */
 .icon-reorder:before {
   content: "\f0c9";
 }
 
-/* line 205, ../../rebild/sass/partials/_fonts.scss */
+/* line 190, ../../rebild/sass/partials/_fonts.scss */
 .icon-rss:before {
   content: "\f09f";
 }
 
-/* line 209, ../../rebild/sass/partials/_fonts.scss */
+/* line 193, ../../rebild/sass/partials/_fonts.scss */
 .icon-facebook:before {
   content: "\f09a";
 }
 
-/* line 213, ../../rebild/sass/partials/_fonts.scss */
+/* line 196, ../../rebild/sass/partials/_fonts.scss */
 .icon-og_bliv_her2:before {
   content: "\e600";
+}
+
+/* line 199, ../../rebild/sass/partials/_fonts.scss */
+.icon-enlarge:before {
+  content: "\e90f";
+}
+
+/* line 202, ../../rebild/sass/partials/_fonts.scss */
+.icon-zoom-in:before {
+  content: "\e90c";
+}
+
+/* line 205, ../../rebild/sass/partials/_fonts.scss */
+.icon-file-pdf:before {
+  content: "\e602";
+}
+
+/* line 208, ../../rebild/sass/partials/_fonts.scss */
+.icon-pencil:before {
+  content: "\e905";
+}
+
+/* line 211, ../../rebild/sass/partials/_fonts.scss */
+.icon-folder:before {
+  content: "\e92f";
+}
+
+/* line 214, ../../rebild/sass/partials/_fonts.scss */
+.icon-folder-open:before {
+  content: "\e930";
+}
+
+/* line 217, ../../rebild/sass/partials/_fonts.scss */
+.icon-folder-plus:before {
+  content: "\e931";
+}
+
+/* line 220, ../../rebild/sass/partials/_fonts.scss */
+.icon-bin:before {
+  content: "\e9ac";
+}
+
+/* line 223, ../../rebild/sass/partials/_fonts.scss */
+.icon-thumbs-up:before {
+  content: "\e90d";
+}
+
+/* line 226, ../../rebild/sass/partials/_fonts.scss */
+.icon-mail:before {
+  content: "\e603";
+}
+
+/* line 229, ../../rebild/sass/partials/_fonts.scss */
+.icon-mega-phone:before {
+  content: "\e601";
 }
 
 /* Variables from main theme */
@@ -270,6 +359,9 @@ Button colors
 	Button colors
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
+	Social media colors
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
 
 [VARIABLES]
 
@@ -288,22 +380,27 @@ Layout
 
 [MIXINS]
 
-Blocks
-Backend
-
 -------------------------------------------------------------------*/
-/*------------------------------------------------------------------
-	Blocks
--------------------------------------------------------------------*/
-/*------------------------------------------------------------------
-	Input
--------------------------------------------------------------------*/
-/*------------------------------------------------------------------
-	Backend
--------------------------------------------------------------------*/
-/*------------------------------------------------------------------
-	Nodes
--------------------------------------------------------------------*/
+/*
+==========================================================================
+	Blocks / Grid
+==========================================================================
+*/
+/*
+==========================================================================
+	Forms
+==========================================================================
+*/
+/*
+==========================================================================
+	Text
+==========================================================================
+*/
+/*
+==========================================================================
+	Utilities
+==========================================================================
+*/
 /*
 ========================================================================== 
 	Resets

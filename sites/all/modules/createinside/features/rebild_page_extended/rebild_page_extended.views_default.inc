@@ -63,7 +63,7 @@ function rebild_page_extended_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: Indhold: Kontakt (field_main_contact) */
+  /* Filter criterion: Content: Kontakt (field_main_contact) */
   $handler->display->display_options['filters']['field_main_contact_value']['id'] = 'field_main_contact_value';
   $handler->display->display_options['filters']['field_main_contact_value']['table'] = 'field_data_field_main_contact';
   $handler->display->display_options['filters']['field_main_contact_value']['field'] = 'field_main_contact_value';
