@@ -1,0 +1,18 @@
+name = Nexus
+description = A subtheme of Rebild Subsite.
+core = 7.x
+base theme = rebild_subsite
+
+stylesheets[all][] = css/styles-override.css
+
+regions[header_first] = Header first
+regions[header_second] = Header second
+regions[menu] = Menu
+regions[highlighted] = Highlighted
+regions[breadcrumbs] = Breadcrumbs
+regions[help] = Help
+regions[content] = Content
+regions[sidebar_first] = Sidebar first
+regions[postface] = Postface
+regions[footer] = Footer
+regions[mobile_footer] = Mobile Footer

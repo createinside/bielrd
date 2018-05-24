@@ -1,0 +1,29 @@
+.base-color,
+.region-menu .menu-name-main-menu.menu-level-1 ul.menu li.active-trail a,
+.region-sidebar-first .menu-name-main-menu.menu-level-2 > ul.menu > li > a.active,
+.region-sidebar-first .menu-name-main-menu.menu-level-2 > ul.menu > li > ul.menu > li > a.active-trail,
+a {
+  color: #4d155d;
+}
+
+.banner-front .banner-content a,
+body.front #page-title:after,
+.node-type-page-extended .field-name-field-main-summary:after,
+#sidebar-first .block-block,
+.field-name-field-main-accordion .ui-accordion-header.ui-state-active {
+  background-color: #4d155d;
+}
+
+.block-search .search-toggle svg {
+  fill: #4d155d;
+}
+
+/* Lighter */
+.banner-front .banner-content a:hover {
+  background: #611a75;
+}
+
+/* Darker */
+#sidebar-first .block-block > h2 {
+  background: #370f43;
+}

@@ -40,6 +40,7 @@
       position: relative;
       border-bottom: 1px solid $color-gray-light;
       line-height: $line-height-small;
+      overflow: hidden;
 
       > a {
         font-weight: bold;

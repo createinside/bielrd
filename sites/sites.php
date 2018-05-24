@@ -54,6 +54,12 @@
  * @see http://drupal.org/documentation/install/multi-site
  */
 
+/* Beredskab */
+$sites['beredskab.rebild.dk'] = 'beredskab';
 $sites['beredskab.createinside.com'] = 'beredskab';
-$sites['beredskab.rebild.dev'] = 'beredskab';
-$sites['local.beredskab.rebild'] = 'beredskab';
+$sites['beredskab.rebild.docker.localhost'] = 'beredskab';
+
+/* Nexus */
+$sites['nexus.rebild.dk'] = 'nexus';
+$sites['nexus.createinside.com'] = 'nexus';
+$sites['nexus.rebild.docker.localhost'] = 'nexus';
