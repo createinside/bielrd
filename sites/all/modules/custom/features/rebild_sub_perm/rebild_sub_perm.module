@@ -1,7 +1,5 @@
 <?php
 /**
  * @file
- * Code for the Rebild Subsite Permissions feature.
+ * Drupal needs this blank file.
  */
-
-include_once 'rebild_sub_perm.features.inc';

@@ -16,6 +16,7 @@ function rebild_sub_perm_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'subsite admin' => 'subsite admin',
+      'subsite editor' => 'subsite editor',
     ),
     'module' => 'admin_menu',
   );
@@ -26,6 +27,7 @@ function rebild_sub_perm_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'subsite admin' => 'subsite admin',
+      'subsite editor' => 'subsite editor',
     ),
     'module' => 'system',
   );
@@ -47,6 +49,7 @@ function rebild_sub_perm_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'subsite admin' => 'subsite admin',
+      'subsite editor' => 'subsite editor',
     ),
     'module' => 'node',
   );
@@ -57,6 +60,7 @@ function rebild_sub_perm_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'subsite admin' => 'subsite admin',
+      'subsite editor' => 'subsite editor',
     ),
     'module' => 'contextual',
   );
@@ -77,6 +81,8 @@ function rebild_sub_perm_user_default_permissions() {
     'name' => 'access print',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'print',
   );
@@ -91,22 +97,13 @@ function rebild_sub_perm_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: 'access user profiles'.
-  $permissions['access user profiles'] = array(
-    'name' => 'access user profiles',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'subsite admin' => 'subsite admin',
-    ),
-    'module' => 'user',
-  );
-
   // Exported permission: 'administer blocks'.
   $permissions['administer blocks'] = array(
     'name' => 'administer blocks',
     'roles' => array(
       'administrator' => 'administrator',
       'subsite admin' => 'subsite admin',
+      'subsite editor' => 'subsite editor',
     ),
     'module' => 'block',
   );
@@ -127,6 +124,7 @@ function rebild_sub_perm_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'subsite admin' => 'subsite admin',
+      'subsite editor' => 'subsite editor',
     ),
     'module' => 'node',
   );
@@ -137,6 +135,7 @@ function rebild_sub_perm_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'subsite admin' => 'subsite admin',
+      'subsite editor' => 'subsite editor',
     ),
     'module' => 'redirect',
   );
@@ -157,6 +156,7 @@ function rebild_sub_perm_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'subsite admin' => 'subsite admin',
+      'subsite editor' => 'subsite editor',
     ),
     'module' => 'path',
   );
@@ -180,20 +180,13 @@ function rebild_sub_perm_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: 'change own username'.
-  $permissions['change own username'] = array(
-    'name' => 'change own username',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'user',
-  );
-
   // Exported permission: 'create files'.
   $permissions['create files'] = array(
     'name' => 'create files',
     'roles' => array(
       'administrator' => 'administrator',
+      'subsite admin' => 'subsite admin',
+      'subsite editor' => 'subsite editor',
     ),
     'module' => 'file_entity',
   );
@@ -213,6 +206,7 @@ function rebild_sub_perm_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'subsite admin' => 'subsite admin',
+      'subsite editor' => 'subsite editor',
     ),
     'module' => 'path',
   );
@@ -241,6 +235,7 @@ function rebild_sub_perm_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'subsite admin' => 'subsite admin',
+      'subsite editor' => 'subsite editor',
     ),
     'module' => 'node',
   );
@@ -260,6 +255,7 @@ function rebild_sub_perm_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'subsite admin' => 'subsite admin',
+      'subsite editor' => 'subsite editor',
     ),
     'module' => 'node',
   );
@@ -270,6 +266,7 @@ function rebild_sub_perm_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'subsite admin' => 'subsite admin',
+      'subsite editor' => 'subsite editor',
     ),
     'module' => 'node',
   );
@@ -299,6 +296,7 @@ function rebild_sub_perm_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'subsite admin' => 'subsite admin',
+      'subsite editor' => 'subsite editor',
     ),
     'module' => 'node',
   );
@@ -343,6 +341,7 @@ function rebild_sub_perm_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'subsite admin' => 'subsite admin',
+      'subsite editor' => 'subsite editor',
     ),
     'module' => 'node',
   );
@@ -353,6 +352,7 @@ function rebild_sub_perm_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'subsite admin' => 'subsite admin',
+      'subsite editor' => 'subsite editor',
     ),
     'module' => 'node',
   );
@@ -363,6 +363,7 @@ function rebild_sub_perm_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'subsite admin' => 'subsite admin',
+      'subsite editor' => 'subsite editor',
     ),
     'module' => 'system',
   );

@@ -13,6 +13,12 @@ function rebild_sub_perm_user_default_roles() {
   // Exported role: subsite admin.
   $roles['subsite admin'] = array(
     'name' => 'subsite admin',
+    'weight' => 3,
+  );
+
+  // Exported role: subsite editor.
+  $roles['subsite editor'] = array(
+    'name' => 'subsite editor',
     'weight' => 2,
   );
 
