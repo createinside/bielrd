@@ -85,28 +85,6 @@ function rebild_sub_formatting_strongarm() {
         ),
       ),
     ),
-    3 => array(
-      'name' => 'Admin',
-      'usertab' => 1,
-      'filesize' => '5',
-      'quota' => '0',
-      'tuquota' => '0',
-      'extensions' => 'gif png jpg jpeg',
-      'dimensions' => '0',
-      'filenum' => '0',
-      'directories' => array(
-        0 => array(
-          'name' => 'uploads',
-          'subnav' => 1,
-          'browse' => 1,
-          'upload' => 1,
-          'thumb' => 1,
-          'delete' => 1,
-          'resize' => 0,
-        ),
-      ),
-      'thumbnails' => array(),
-    ),
   );
   $export['imce_profiles'] = $strongarm;
 
