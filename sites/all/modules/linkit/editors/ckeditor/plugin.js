@@ -66,6 +66,26 @@
         }
       });
 
+      /* HACK start */
+      // Add event listener.
+      editor.on('doubleclick', function (evt) {
+        if (evt.data.dialog !== 'link') {
+          return;
+        }
+
+        // Delete the default link dialog.
+        delete evt.data.dialog;
+
+        var element = CKEDITOR.plugins.link.getSelectedLink(editor) || evt.data.element;
+        if (!element.isReadOnly()) {
+          if (element.is('a')) {
+            editor.getSelection().selectElement(element);
+            editor.commands.linkit.exec();
+          }
+        }
+      });
+      /* HACK end */
+
       // Add it to the rightclick menu
       if (editor.addMenuGroup)
       {

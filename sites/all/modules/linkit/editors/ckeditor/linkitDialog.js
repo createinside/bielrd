@@ -43,9 +43,18 @@ Drupal.linkit.editorDialog.ckeditor = {
    *   The link object.
    */
   insertLink : function(link) {
+    
+    /* HACK start */
+    if (link.attributes.anchor != "") {
+      path = link.path.split("#")[0];
+      link.attributes.href = path + "#punkt" + link.attributes.anchor;
+      link.path = link.attributes.href;
+    }
+		/* HACK end */
+
     var linkitCache = Drupal.linkit.getLinkitCache();
     CKEDITOR.tools.callFunction(linkitCache.editor._.linkitFnNum, link, linkitCache.editor);
-  }
+ }
 };
 
 })(jQuery);
