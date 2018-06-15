@@ -1,0 +1,12 @@
+diff --git a/menu_view_unpublished.module b/menu_view_unpublished.module
+index fbc5451..8e37add 100644
+--- a/menu_view_unpublished.module
++++ b/menu_view_unpublished.module
+@@ -49,6 +49,7 @@ function menu_view_unpublished_menu_link_alter(&$item) {
+       }
+       
+       $item['options']['attributes']['class'][] = 'menu-node-unpublished';
++      $item['options']['attributes']['class'] = array_unique($item['options']['attributes']['class']);
+     }
+   }
+ }
