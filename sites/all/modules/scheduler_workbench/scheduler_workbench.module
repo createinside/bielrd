@@ -3,18 +3,13 @@
  * @file
  * Scheduler Workbench module
  *
- * Provides integration between the Scheduler and Workbench Moderation modules
+ * Main functions and hook implementations of Scheduler Workbench Integration.
  */
 
 /**
  * Implements hook_form_node_type_form_alter().
  *
  * Alters node_type forms to add fields to scheduler.
- *
- * @param array $form
- *   Form being altered
- * @param array $form_state
- *   Form state being altered
  */
 function scheduler_workbench_form_node_type_form_alter(&$form, $form_state) {
   $states = array('' => t('--None--')) + workbench_moderation_state_labels();
@@ -49,9 +44,6 @@ function scheduler_workbench_form_node_type_form_alter(&$form, $form_state) {
 
 /**
  * Implements hook_permission().
- *
- * @return array
- *   Array of permissions
  */
 function scheduler_workbench_permission() {
   return array(
@@ -64,11 +56,6 @@ function scheduler_workbench_permission() {
 
 /**
  * Implements hook_form_alter().
- *
- * @param array $form
- *   Form being altered
- * @param array $form_state
- *   Form state being altered
  */
 function scheduler_workbench_form_alter(&$form, $form_state) {
   // Make sure we have scheduler settings.
@@ -128,11 +115,6 @@ function scheduler_workbench_form_alter(&$form, $form_state) {
  * Implements hook_module_implements_alter().
  *
  * Moves form alter hooks to the end to make sure they are after scheduler.
- *
- * @param array $implementations
- *   Module hooks to re-arrange
- * @param string $hook
- *   Hook being altered
  */
 function scheduler_workbench_module_implements_alter(&$implementations, $hook) {
   switch ($hook) {
@@ -147,11 +129,6 @@ function scheduler_workbench_module_implements_alter(&$implementations, $hook) {
 
 /**
  * Implements hook_scheduler_api().
- *
- * @param stdClass $node
- *   Node being scheduled
- * @param string $action
- *   Action being performed on node
  */
 function scheduler_workbench_scheduler_api(&$node, $action) {
   if (!workbench_moderation_node_type_moderated($node->type)) {
@@ -187,4 +164,23 @@ function _scheduler_workbench_scheduler_pre_publish(&$node) {
     $node->workbench_moderation_state_current = $node->workbench_moderation['my_revision']->state;
     $node->workbench_moderation_state_new = $state;
   }
+}
+
+/**
+ * Implements hook_scheduler_allow_publishing().
+ */
+function scheduler_workbench_scheduler_allow_publishing($node) {
+  $allowed = TRUE;
+  if (module_exists('workbench_moderation') && isset($node->workbench_moderation['current']->state)) {
+    $current_state = $node->workbench_moderation['current']->state;
+    $draft_owner = user_load($node->workbench_moderation['current']->uid);
+    $published_state = variable_get('scheduler_publish_moderation_state_' . $node->type, workbench_moderation_state_published());
+
+    // If this state is one that the current user can access, return TRUE.
+    if ($permitted_states = workbench_moderation_states_next($current_state, $draft_owner, $node)) {
+      $allowed = isset($permitted_states[$published_state]);
+    }
+  }
+
+  return $allowed;
 }
