@@ -49,6 +49,7 @@ function menu_view_unpublished_menu_link_alter(&$item) {
       }
       
       $item['options']['attributes']['class'][] = 'menu-node-unpublished';
+      $item['options']['attributes']['class'] = array_unique($item['options']['attributes']['class']);
     }
   }
 }
