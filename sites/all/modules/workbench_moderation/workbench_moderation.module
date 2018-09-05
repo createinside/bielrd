@@ -151,6 +151,12 @@ function workbench_moderation_form_diff_node_revisions_alter(&$form, &$form_stat
   // If this form is appearing under moderation then add a submit function
   // that will keep the user in the moderation tab.
   if (arg(2) == 'moderation') {
+    // For older versions of Diff that don't include #2881771, we'll need to
+    // stash the revision list for the submit callback.
+    if (empty($form_state['revisions'])) {
+      $form_state['revisions'] = node_revision_list(node_load($form['nid']['#value']));
+    }
+
     $form['#submit'][] = 'workbench_moderation_diff_node_revisions_submit';
   }
 }
@@ -159,10 +165,16 @@ function workbench_moderation_form_diff_node_revisions_alter(&$form, &$form_stat
  * Redirects the the diff_node_revisions form when the user is under the moderation tab.
  */
 function workbench_moderation_diff_node_revisions_submit($form, &$form_state) {
-
   // the ids are ordered so the old revision is always on the left
-  $old_vid = min($form_state['values']['old'], $form_state['values']['new']);
-  $new_vid = max($form_state['values']['old'], $form_state['values']['new']);
+  $revisions = $form_state['revisions'];
+  if ($revisions[$form_state['values']['old']]->timestamp > $revisions[$form_state['values']['new']]->timestamp) {
+    $old_vid = $form_state['values']['new'];
+    $new_vid = $form_state['values']['old'];
+  }
+  else {
+    $old_vid = $form_state['values']['old'];
+    $new_vid = $form_state['values']['new'];
+  }
   $form_state['redirect'] =  'node/'. $form_state['values']['nid'] .'/moderation/diff/view/'. $old_vid .'/'. $new_vid;
 }
 
@@ -2423,4 +2435,37 @@ function workbench_moderation_node_export_node_import_alter(&$node, $original_no
     return;
   }
   $node->revision = 1;
+}
+
+/**
+ * Implements hook_drafty_predelete_revision().
+ */
+function workbench_moderation_drafty_predelete_revision($entity_type, $entity_id, $revision_id, $replaced_by) {
+  if ($entity_type == 'node') {
+    $revision = node_load($entity_id, $revision_id);
+
+    // Preserve the revision timestamp and uid from the old revision.
+    db_update('node_revision')
+      ->fields(array(
+        'timestamp' => $revision->revision_timestamp,
+        'uid' => $revision->revision_uid,
+      ))
+      ->condition('vid', $replaced_by)
+      ->execute();
+
+    // Remove the incorrect history from the new revision.
+    db_delete('workbench_moderation_node_history')
+      ->condition('nid', $entity_id)
+      ->condition('vid', $replaced_by)
+      ->execute();
+
+    // And then, move the history from the old revirsion to the new one.
+    db_update('workbench_moderation_node_history')
+      ->fields(array(
+        'vid' => $replaced_by,
+      ))
+      ->condition('nid', $entity_id)
+      ->condition('vid', $revision_id)
+      ->execute();
+  }
 }
