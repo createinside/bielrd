@@ -3,7 +3,7 @@ $ = jQuery;
 /* Max tegn counter på metatag description feltet. Husk at sætte max characters til det samme som feltet foreskriver backend. */
 $(document).ready(function(){   
 
-  $('#edit-metatags-description-value').maxlength({  
+  $('#edit-metatags-und-description-value, #edit-metatags-da-description-value').maxlength({
     events: [], // Array of events to be triggerd   
     maxCharacters: 160, // Karakter limit  
     status: true, // True to show status indicator bewlow the element   
