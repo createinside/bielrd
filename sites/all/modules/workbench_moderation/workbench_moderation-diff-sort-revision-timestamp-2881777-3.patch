@@ -1,0 +1,37 @@
+diff --git a/workbench_moderation.module b/workbench_moderation.module
+index f7aa74a..0bcfc97 100644
+--- a/workbench_moderation.module
++++ b/workbench_moderation.module
+@@ -151,6 +151,12 @@ function workbench_moderation_form_diff_node_revisions_alter(&$form, &$form_stat
+   // If this form is appearing under moderation then add a submit function
+   // that will keep the user in the moderation tab.
+   if (arg(2) == 'moderation') {
++    // For older versions of Diff that don't include #2881771, we'll need to
++    // stash the revision list for the submit callback.
++    if (empty($form_state['revisions'])) {
++      $form_state['revisions'] = node_revision_list(node_load($form['nid']['#value']));
++    }
++
+     $form['#submit'][] = 'workbench_moderation_diff_node_revisions_submit';
+   }
+ }
+@@ -159,10 +165,16 @@ function workbench_moderation_form_diff_node_revisions_alter(&$form, &$form_stat
+  * Redirects the the diff_node_revisions form when the user is under the moderation tab.
+  */
+ function workbench_moderation_diff_node_revisions_submit($form, &$form_state) {
+-
+   // the ids are ordered so the old revision is always on the left
+-  $old_vid = min($form_state['values']['old'], $form_state['values']['new']);
+-  $new_vid = max($form_state['values']['old'], $form_state['values']['new']);
++  $revisions = $form_state['revisions'];
++  if ($revisions[$form_state['values']['old']]->timestamp > $revisions[$form_state['values']['new']]->timestamp) {
++    $old_vid = $form_state['values']['new'];
++    $new_vid = $form_state['values']['old'];
++  }
++  else {
++    $old_vid = $form_state['values']['old'];
++    $new_vid = $form_state['values']['new'];
++  }
+   $form_state['redirect'] =  'node/'. $form_state['values']['nid'] .'/moderation/diff/view/'. $old_vid .'/'. $new_vid;
+ }
+ 

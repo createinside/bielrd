@@ -95,7 +95,7 @@ function workbench_moderation_node_history_view($node) {
   $query->leftJoin('users', 'u', 'r.uid = u.uid');
   $query->addField('n', 'vid', 'live_revision');
   $query->condition('n.nid', $node->nid)
-    ->orderBy('r.vid', 'DESC')
+    ->orderBy('r.timestamp', 'DESC')
     ->fields('r', array('nid', 'vid', 'title', 'log', 'uid', 'timestamp'))
     ->fields('u', array('name'))
     ->limit(30);

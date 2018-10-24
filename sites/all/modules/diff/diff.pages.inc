@@ -9,7 +9,9 @@
  * Menu callback - show latest diff for a given node.
  */
 function diff_latest($node) {
+
   $revisions = node_revision_list($node);
+
   if (count($revisions) < 2 || !diff_node_revision_access($node, 'view')) {
     drupal_goto('node/' . $node->nid);
   }
@@ -32,7 +34,7 @@ function diff_diffs_overview($node) {
 /**
  * Input form to select two revisions.
  */
-function diff_node_revisions($form, $form_state, $node) {
+function diff_node_revisions($form, &$form_state, $node) {
   $form['nid'] = array(
     '#type' => 'hidden',
     '#value' => $node->nid,
@@ -57,6 +59,8 @@ function diff_node_revisions($form, $form_state, $node) {
   else {
     $revisions = $revision_list;
   }
+
+  $form_state['revisions'] = $revisions;
 
   $revert_permission = FALSE;
   if ((user_access('revert revisions') || user_access('administer nodes')) && node_access('update', $node)) {
@@ -146,8 +150,10 @@ function diff_node_revisions_validate($form, &$form_state) {
  */
 function diff_node_revisions_submit($form, &$form_state) {
   // The ids are ordered so the old revision is always on the left.
+
   $old_vid = min($form_state['values']['old'], $form_state['values']['new']);
   $new_vid = max($form_state['values']['old'], $form_state['values']['new']);
+
   if (isset($_GET['destination'])) {
     unset($_GET['destination']);
   }
@@ -181,7 +187,7 @@ function diff_diffs_show($node, $old_vid, $new_vid, $state = NULL) {
   if (node_is_page($node)) {
     drupal_set_title(t('Revisions for %title', array('%title' => $node->title)), PASS_THROUGH);
   }
-  $node_revisions = node_revision_list($node);
+  $node_revisions = diff_node_revision_list($node);
 
   $old_node = node_load($node->nid, $old_vid);
   $new_node = node_load($node->nid, $new_vid);
@@ -652,7 +658,7 @@ function diff_inline_show($node, $vid = 0, $metadata = TRUE) {
   node_build_content($new_node);
   $new = drupal_render($new_node->content);
 
-  $old = $vid ? _diff_get_previous_vid(node_revision_list($node), $vid) : 0;
+  $old = $vid ? _diff_get_previous_vid(diff_node_revision_list($node), $vid) : 0;
   if ($old) {
     $old_node = node_load($node->nid, $old);
     node_build_content($old_node);
