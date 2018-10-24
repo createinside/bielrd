@@ -9,7 +9,9 @@
  * Menu callback - show latest diff for a given node.
  */
 function diff_latest($node) {
-  $revisions = diff_node_revision_list($node);
+
+  $revisions = node_revision_list($node);
+
   if (count($revisions) < 2 || !diff_node_revision_access($node, 'view')) {
     drupal_goto('node/' . $node->nid);
   }
@@ -148,15 +150,10 @@ function diff_node_revisions_validate($form, &$form_state) {
  */
 function diff_node_revisions_submit($form, &$form_state) {
   // The ids are ordered so the old revision is always on the left.
-  $revisions = $form_state['revisions'];
-  if ($revisions[$form_state['values']['old']]->timestamp > $revisions[$form_state['values']['new']]->timestamp) {
-    $old_vid = $form_state['values']['new'];
-    $new_vid = $form_state['values']['old'];
-  }
-  else {
-    $old_vid = $form_state['values']['old'];
-    $new_vid = $form_state['values']['new'];
-  }
+
+  $old_vid = min($form_state['values']['old'], $form_state['values']['new']);
+  $new_vid = max($form_state['values']['old'], $form_state['values']['new']);
+
   if (isset($_GET['destination'])) {
     unset($_GET['destination']);
   }
