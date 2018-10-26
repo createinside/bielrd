@@ -263,80 +263,9 @@ function rebild_preprocess_field(&$variables, $hook) {
  * Implements hook_picture().
  */
 function rebild_picture($variables) {
-
-  // Set alt and title attributes.
-  if (isset($variables['field_file_image_alt_text']['und'][0]['value'])) {
-    $variables["alt"] = $variables['field_file_image_alt_text']['und'][0]['value'];
-    // Title attribute equals value of alt attribute.
-    $variables["title"] = $variables['field_file_image_alt_text']['und'][0]['value'];
-  }
-
-  // Make sure that width and height are proper values
-  // If they exists we'll output them.
-  // @see http://www.w3.org/community/respimg/2012/06/18/florians-compromise/
-  if (isset($variables['width']) && empty($variables['width'])) {
-    unset($variables['width']);
-    unset($variables['height']);
-  }
-  elseif (isset($variables['height']) && empty($variables['height'])) {
-    unset($variables['width']);
-    unset($variables['height']);
-  }
-
-  $sources = array();
-  $output = array();
-
-  // Fallback image, output as source with media query.
-  $sources[] = array(
-    'src' => image_style_url($variables['style_name'], $variables['uri']),
-    'dimensions' => picture_get_image_dimensions($variables),
-  );
-
-  // All breakpoints and multipliers.
-  foreach ($variables['breakpoints'] as $breakpoint_name => $multipliers) {
-    $breakpoint = breakpoints_breakpoint_load_by_fullkey($breakpoint_name);
-    if ($breakpoint) {
-      $new_sources = array();
-      foreach ($multipliers as $multiplier => $image_style) {
-        $new_source = $variables;
-        $new_source['style_name'] = $image_style;
-        $new_source['#media_query'] = picture_get_multiplier_media_query($multiplier, $breakpoint->breakpoint);
-        $new_sources[] = $new_source;
-      }
-
-      foreach ($new_sources as $new_source) {
-        $sources[] = array(
-          'src' => image_style_url($new_source['style_name'], $new_source['uri']),
-          'dimensions' => picture_get_image_dimensions($new_sources[0]),
-          'media' => $new_source['#media_query'],
-        );
-      }
-    }
-  }
-
-  if (!empty($sources)) {
-    $attributes = array();
-    foreach (array('alt', 'title') as $key) {
-      if (isset($variables[$key])) {
-        $attributes['data-' . $key] = $variables[$key];
-      }
-    }
-    $output[] = '<span data-picture' . drupal_attributes($attributes) . '>';
-
-    // Add source tags to the output.
-    foreach ($sources as $source) {
-      $output[] = theme('picture_source', $source);
-    }
-
-    // Output the fallback image.
-    if (empty($variables['path'])) {
-      $variables['path'] = $variables['uri'];
-    }
-
-    $output[] = '<noscript>' . theme('image_style', $variables) . '</noscript>';
-    $output[] = '</span>';
-    return implode("\n", $output);
-  }
+  // Set title attribute same as alt.
+  $variables['title'] = $variables['alt'];
+  return theme_picture($variables);
 }
 
 /**
