@@ -20,8 +20,17 @@ module_load_include('inc', 'taxonomy_menu', 'taxonomy_menu.admin');
  * Implements hook_help().
  */
 function taxonomy_menu_help($path, $arg) {
-  // @TODO Implement the hook. Make documentation available to the user.
-}
+  switch ($path) {
+    case 'admin/help#taxonomy_menu':
+      return '<p>' . t('This module allows you to use a taxonomy vocabulary as
+        a custom menu. You can then place this menu into specific regions on
+        pages. Each taxonomy term in the vocabulary will then be a menu item
+        that you can click on. After you click on one of the menu items
+        (taxonomy terms), you will then be taken to an aggregation page where
+        all items tagged with the taxonomy term will reside. As always, more
+        functionality is being planned with further versions.') . '</p>';
+  }
+ }
 
 /**
  * Implements hook_form_FORM_ID_alter().
@@ -107,6 +116,15 @@ function taxonomy_menu_menu_links_delete($vid) {
   }
   _taxonomy_menu_delete_all($vid);
 
+  // Remove orphaned links.
+  $menu_items = _taxonomy_menu_get_orphaned_menu_items($vid);
+  if (!empty($menu_items)) {
+    $mlids = array_values($menu_items);
+    foreach ($mlids as $mlid) {
+      menu_link_delete($mlid);
+    }
+  }
+
   drupal_set_message(t('The Taxonomy menu has been removed.'), 'status');
 }
 
@@ -165,10 +183,11 @@ function taxonomy_menu_menu_link_prepare($term, $menu_name) {
     $menu_link['expanded'] = 0;
   }
   else {
+    $menu_link['weight'] = $term->weight;
     $menu_link['plid'] = taxonomy_menu_term_get_plid($term, $langcode);
   }
   // Empty terms.
-  $menu_link['hidden'] = isset($is_hidden) ? $is_hidden : 0;
+  $menu_link['hidden'] = isset($is_hidden) ? $is_hidden :  $menu_link['hidden'];
 
   // Menu link title.
   $menu_link['link_title'] = $term->name;
@@ -288,6 +307,7 @@ function taxonomy_menu_menu_link_save($term, $menu_name) {
   // Prepare a menu link based on the settings of the vocabulary edit page and
   // save it.
   $menu_link = taxonomy_menu_menu_link_prepare($term, $menu_name);
+  drupal_alter('taxonomy_menu_link', $menu_link, $term, $menu_name);
   $mlid = menu_link_save($menu_link);
 
   // Let other modules perform actions after the menu item has been saved.
@@ -393,6 +413,13 @@ function _taxonomy_menu_nodeapi_helper($node, $operation) {
     $display_num = taxonomy_menu_variable_get('display_num', $term->vid, TRUE);
     $hide_empty_terms = taxonomy_menu_variable_get('hide_empty_terms', $term->vid, FALSE);
     $term = taxonomy_term_load($tid);
+
+    // taxonomy_term_load($tid) return FALSE if the term was not found
+    // if taxonomy $term is false, then go to the next $term
+    if (!$term = taxonomy_term_load($tid)) {
+      continue;
+    }
+
     if ($term  && $menu_name && $sync && ($display_num || $hide_empty)) {
       switch ($operation) {
         case 'insert':
@@ -636,7 +663,7 @@ function taxonomy_menu_translated_menu_link_alter(&$item, $map) {
             }
             // if display number is selected and $num > 0 then change the title
             elseif (taxonomy_menu_variable_get('display_num', $t->vid, FALSE)) {
-              // if number > 0 and display decendants, then count all of the children
+              // if number > 0 and display descendants, then count all of the children
               if (taxonomy_menu_variable_get('display_descendants', $t->vid, FALSE)) {
                 $num = taxonomy_menu_term_count_nodes($t->tid);
               }
@@ -705,4 +732,3 @@ function taxonomy_menu_variable_get($key, $vid, $default) {
 function taxonomy_menu_variable_set($key, $vid, $value) {
   return variable_set(_taxonomy_menu_build_variable($key, $vid), $value);
 }
-
