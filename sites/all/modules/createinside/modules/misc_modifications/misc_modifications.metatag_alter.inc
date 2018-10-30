@@ -39,25 +39,3 @@ function misc_modifications_metatag_info_alter(&$info) {
   $info['tags']['description']['form']['#required'] = TRUE;
   $info['tags']['title']['form']['#required'] = TRUE;
 }
-
-/**
- * Removes meta tag configurations from the listed entities
- *
- * implements hook_entity_info_alter.
- */
-function misc_modifications_entity_info_alter(&$info) {
-
-	// This array holds all the entitiy machince names where meta tags should be disabled
-	$entities = array("user", "file", "taxonomy_term");
-	$content_types = array("announcement", "featured_article", "self_service", "simplenews");
-
-	foreach($entities as $entity) {
-	  $info[$entity]['metatags'] = FALSE;
-	}
-
-	foreach($content_types as $content_type) {
-		$info["node"]["bundles"][$content_type]["metatags"] = FALSE;
-	}
-}
-
-?>
