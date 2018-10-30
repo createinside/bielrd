@@ -36,11 +36,11 @@ class EntityformUIController extends EntityDefaultUIController {
 
     // Change the overview menu type for the list of entityforms.
     $items[$this->path]['type'] = MENU_LOCAL_TASK;
-    $items['eform/submit/%entityform_empty'] = array(
+    $items['eform/submit/%entityform_type'] = array(
       'title callback' => 'entityform_page_title',
       'title arguments' => array(2, 1),
-      'page callback' => 'entityform_form_wrapper',
-      'page arguments' => array(2, 'submit'),
+      'page callback' => 'entityform_type_submit_page',
+      'page arguments' => array(2),
       'access callback' => 'entityform_access',
       'access arguments' => array('submit', 2),
       'file' => 'entityform.admin.inc',
@@ -76,7 +76,7 @@ class EntityformUIController extends EntityDefaultUIController {
     $types = array_keys(entityform_get_types());
     $controller = entity_ui_controller('entityform');
 
-    // Loading and editing entityform entities
+    // Loading and editing entityform entities.
     $items['entityform/' . $wildcard] = array(
       'page callback' => 'entityform_form_wrapper',
       'page arguments' => array($id_count + 1),
@@ -113,7 +113,7 @@ class EntityformUIController extends EntityDefaultUIController {
       'file path' => drupal_get_path('module', $this->entityInfo['module']),
     );
 
-    // Menu item for viewing entityforms
+    // Menu item for viewing entityforms.
     $items['entityform/' . $wildcard] = array(
       //'title' => 'Title',
       'title callback' => 'entityform_page_title',
@@ -153,10 +153,10 @@ class EntityformUIController extends EntityDefaultUIController {
     module_load_include('inc', 'entityform', 'entityform_type.admin');
     $entityform_type = entityform_type_load($bundle);
     if (!empty($entityform_id)) {
-      $redirect_path = $entityform_type->get_redirect_path(entityform_load($entityform_id));
+      $redirect_path = $entityform_type->get_path_property('redirect_path', entityform_load($entityform_id));
     }
     else {
-      $redirect_path = $entityform_type->get_redirect_path();
+      $redirect_path = $entityform_type->get_path_property('redirect_path');
     }
     if (!empty($redirect_path)) {
       return $redirect_path;
@@ -191,6 +191,42 @@ class EntityformUIController extends EntityDefaultUIController {
 
 }
 
+/**
+ * Page callback: Displays the entityform submission page
+ *
+ * Handle the display of the entityform submission page. If the form is marked
+ * as closed then display the form intro text instead with a 'submissions are
+ * now closed' message. Users with 'administer entityform types'
+ * permission can still view the form as it would be inaccessible otherwise.
+ *
+ * @param $entityform_type
+ *   The entityform type to output.
+ *
+ * @return
+ *   A render array from entity_view or a string message.
+ */
+function entityform_type_submit_page($entityform_type) {
+  $view = entity_view('entityform_type', array($entityform_type), 'full', NULL, TRUE);
+
+  // The form is not closed for new submissions.
+  if (!isset($entityform_type->data['form_status']) || $entityform_type->data['form_status'] != ENTITYFORM_STATUS_CLOSED) {
+    return $view;
+  }
+  else {
+    // The form is closed but show it for administrators anyway with a warning
+    // message.
+    if (user_access('administer entityform types')) {
+      drupal_set_message(t('This form is closed for new submissions and is only being shown because of your administrator role.'));
+      return $view;
+    }
+    else {
+      // When closed display the form intro text instead of the form or access
+      // denied.
+      drupal_set_message(t('Submissions for this form are now closed.'));
+      return empty($entityform_type->data['instruction_pre']['value']) ? '' : $entityform_type->data['instruction_pre']['value'];
+    }
+  }
+}
 
 /**
  * Form callback wrapper: create or edit a entityform.
@@ -208,11 +244,13 @@ class EntityformUIController extends EntityDefaultUIController {
  *     'preview' - Preview on Entityform type management
  * @see entityform_edit_form()
  */
-function entityform_form_wrapper($entityform, $mode = 'submit', $form_context = 'page') {
+function entityform_form_wrapper(Entityform $entityform, $mode = 'submit', $form_context = 'page') {
   $make_form = TRUE;
+
   $entityform_type = entityform_type_load($entityform->type);
+
   if ($form_context == 'page') {
-    drupal_set_title($entityform_type->label);
+    drupal_set_title($entityform_type->getTranslation('label'));
   }
   if (!empty($entityform->is_new)) {
     $draft = FALSE;
@@ -223,7 +261,7 @@ function entityform_form_wrapper($entityform, $mode = 'submit', $form_context = 
       }
     }
     if (!$draft) {
-      // @todo add logic or other resubmit action
+      // @todo add logic or other resubmit action.
       $old_submission = entityform_user_previous_submission($entityform_type->type);
       if ($old_submission) {
         switch ($entityform_type->data['resubmit_action']) {
@@ -235,7 +273,7 @@ function entityform_form_wrapper($entityform, $mode = 'submit', $form_context = 
             drupal_goto($confirm_path[0], $confirm_path[1]);
             break;
           case 'disallow':
-            // @TODO how should this be handled
+            // @todo how should this be handled.
             $entityform_type->get_prop('disallow_resubmit_msg');
             $make_form = FALSE;
             break;
@@ -245,7 +283,7 @@ function entityform_form_wrapper($entityform, $mode = 'submit', $form_context = 
   }
   $output = array();
   if ($mode == 'submit' && (user_access('view own entityform') || user_access('view any entityform'))) {
-    //Only show link if this user has submission that will show up in the selected View
+    // Only show link if this user has a submission that will show up in the selected View.
     if (!empty($entityform_type->data['user_submissions_view'])) {
       $results = views_get_view_result($entityform_type->data['user_submissions_view'], NULL, $entityform_type->type);
       if (!empty($results)) {
@@ -257,24 +295,19 @@ function entityform_form_wrapper($entityform, $mode = 'submit', $form_context = 
       }
     }
   }
-  // Instructions get printed even if form is not created
+  // Instructions get printed even if form is not created.
   if (!empty($entityform_type->data['instruction_pre'])) {
     $output['intro'] = array(
       '#type' => 'markup',
-      '#markup' => "<div class='pre-intructions' >" . _entityform_format_text($entityform_type->data['instruction_pre'], array('entityform_type' => $entityform_type)) . "</div>",
+      '#markup' => "<div class='pre-instructions' >" . $entityform_type->get_prop('instruction_pre') . "</div>",
       '#weight' => -100,
     );
   }
   if ($make_form) {
-    $form = drupal_get_form($entityform->type . '_entityform_edit_form', $entityform, $mode, $form_context);
-    $form['#attributes']['class'][] = 'entityform';
-    if (!empty($entityform->type)) {
-      $form['#attributes']['class'][] = 'entitytype-' . $entityform->type . '-form';
-    }
-    $output += $form;
+    $output += drupal_get_form($entityform->type . '_entityform_edit_form', $entityform, $mode, $form_context);
   }
   if (user_access('administer entityform types')) {
-    //Make contextual likes if user has access
+    // Make contextual links if user has access.
     $contextual_links = array();
     $contextual_links['entityform_edit'] = array(
       'admin/structure/entityform_types/manage',
@@ -285,6 +318,17 @@ function entityform_form_wrapper($entityform, $mode = 'submit', $form_context = 
   return $output;
 }
 
+/**
+ * Form callback wrapper: preview an entityform.
+ *
+ * @param $entityform_type
+ *   The entityform type object being edited by this form.
+ * @see entityform_edit_form()
+ */
+function entityform_form_wrapper_preview(EntityformType $entityform_type) {
+  $entityform = entityform_empty_load($entityform_type->type);
+  return entityform_form_wrapper($entityform, 'submit', 'preview');
+}
 
 /**
  * Form callback wrapper: delete a entityform.
@@ -298,13 +342,12 @@ function entityform_delete_form_wrapper($entityform) {
   return drupal_get_form('entityform_delete_form', $entityform);
 }
 
-
 /**
  * Form callback: create or edit a entityform.
  *
  * @param $entityform
- *   The entityform object to edit or for a create form an empty entityform object
- *     with only a entityform type defined.
+ *   The entityform object to edit or for a create form an empty entityform
+ *   object with only a entityform type defined.
  */
 function entityform_edit_form($form, &$form_state, $entityform, $mode = 'submit', $form_context = 'page') {
   global $user;
@@ -312,6 +355,7 @@ function entityform_edit_form($form, &$form_state, $entityform, $mode = 'submit'
   $is_review = FALSE;
   if (!empty($form_state['values']['op']) && $form_state['values']['op'] == t('Change')) {
     $entityform = $form_state['entityform_preview_entity'];
+    unset($form_state['entityform_preview_entity']);
   }
   else {
     if (!empty($entityform_type->data['preview_page']) && !empty($form_state['entityform_preview_entity'])) {
@@ -319,7 +363,7 @@ function entityform_edit_form($form, &$form_state, $entityform, $mode = 'submit'
       $entityform->uid = $user->uid;
       $is_review = TRUE;
       $form['review'] = entity_get_controller('entityform')->view(array($entityform->entityform_id => $entityform), 'review', NULL, TRUE);
-      drupal_set_message('Please review your submission');
+      drupal_set_message(t('Please review your submission'));
     }
   }
   // Add the field related form elements.
@@ -329,35 +373,40 @@ function entityform_edit_form($form, &$form_state, $entityform, $mode = 'submit'
     field_attach_form('entityform', $entityform, $form, $form_state);
   }
 
+  // Add CSS classes to the form for styling.
+  $form['#attributes']['class'][] = 'entityform';
+  $form['#attributes']['class'][] = 'entitytype-' . $entityform->type . '-form';
+
   $form['actions'] = array(
     '#type' => 'container',
     '#attributes' => array('class' => array('form-actions')),
     '#weight' => 400,
   );
 
-// We add the form's #submit array to this button along with the actual submit
-// handler to preserve any submit handlers added by a form callback_wrapper.
+  // We add the form's #submit array to this button along with the actual submit
+  // handler to preserve any submit handlers added by a form callback_wrapper.
   $submit = array();
 
   if (!empty($form['#submit'])) {
     $submit += $form['#submit'];
   }
   if ($mode == 'submit') {
-    // Determine if we are on Preview Form page
+    // Determine if we are on Preview Form page.
     $entity_info = entity_get_info('entityform_type');
-    //If form is draftable and user is logged in add draft button
+    // Create Draft button so that other modules can activate but don't give access by default.
+    $form['actions']['save'] = array(
+      '#type' => 'submit',
+      '#value' => $entityform_type->get_prop('draft_button_text'),
+      // Causes errors.
+      //'#limit_validation_errors' => array(),
+      '#entityform_draft' => '1',
+      '#submit' => $submit + array('entityform_edit_form_submit'),
+      '#access' => FALSE,
+    );
+    // If form is draftable and user is logged in add draft button.
     if ($entityform_type->data['draftable'] && !empty($user->uid)) {
       if (!$is_review) {
-        //If form is draftable and user is logged in add draft button
-        if ($entityform_type->data['draftable'] && !empty($user->uid)) {
-          $form['actions']['save'] = array(
-            '#type' => 'submit',
-            '#value' => $entityform_type->get_prop('draft_button_text'),
-            //'#limit_validation_errors' => array(), //cause erros
-            '#entityform_draft' => '1',
-            '#submit' => $submit + array('entityform_edit_form_submit'),
-          );
-        }
+        $form['actions']['save']['#access'] = TRUE;
       }
     }
     if ($is_review) {
@@ -402,11 +451,11 @@ function entityform_edit_form($form, &$form_state, $entityform, $mode = 'submit'
     );
   }
 
-// We append the validate handler to #validate in case a form callback_wrapper
-// is used to add validate handlers earlier.
+  // We append the validate handler to #validate in case a form callback_wrapper
+  // is used to add validate handlers earlier.
   $form['#validate'][] = 'entityform_edit_form_validate';
-// Make sure the proper files are loaded if they is form is being called embedded with an ajax callback
-// This happens in image field upload for instance.
+  // Make sure the proper files are loaded if the form has an ajax callback.
+  // This happens in image field upload for instance.
   $form['#after_build'][] = 'entityform_load_required_entityform_admin';
   $form['#after_build'][] = 'entityform_clear_required';
   $form['#validate'][] = 'entityform_set_required';
@@ -432,9 +481,10 @@ function _entityform_type_modify_preview_form(&$form) {
 }
 
 /**
- * Called after_build on entityforms
- * This makes sure that required fields aren't require when saving a Draft.
- * A Draft is not complete so shouldn't enforce required fields
+ * Called via after_build on entityforms.
+ * This makes sure that required fields aren't required when saving a Draft.
+ * A Draft is not complete so it shouldn't enforce required fields.
+ *
  * @param array $form
  * @param array $form_state
  * @return array
@@ -479,14 +529,14 @@ function _entityform_set_all_nested_props(&$form, $props, $must_match = FALSE) {
 }
 
 /*
- * Set form elements back to required
+ * Set form elements back to required.
  */
 function entityform_set_required(&$form, &$form_state) {
   _entityform_set_all_nested_props($form, array('#required' => TRUE), TRUE);
 }
 
 /**
- * Form API validate callback for the entityform form
+ * Form API validate callback for the entityform form.
  */
 function entityform_edit_form_validate(&$form, &$form_state) {
   $entityform = $form_state['entityform'];
@@ -504,23 +554,7 @@ function entityform_edit_form_validate(&$form, &$form_state) {
 function entityform_edit_form_submit(&$form, &$form_state) {
 
   $entityform = entity_ui_controller('entityform')->entityFormSubmitBuildEntity($form, $form_state);
-  $entityform->draft = $form_state['clicked_button']['#entityform_draft'];
-  // Save the entityform and go back to the list of entityforms
-  $entityform_type = entityform_type_load($entityform->type);
-  if (!empty($form_state['clicked_button']['#entityform_change'])) {
-    $form_state['entityform_preview_entity'] = $entityform;
-    $form_state['rebuild'] = TRUE;
-    drupal_set_message('Re-enter');
-    return;
-  }
-  else {
-    if (empty($form_state['clicked_button']['#entityform_after_review']) && !$entityform->draft && $entityform_type->data['preview_page']) {
-      $form_state['entityform_preview_entity'] = $entityform;
-      $form_state['rebuild'] = TRUE;
-      return;
-    }
-  }
-  // Add in created and changed times.
+  // Add in created and changed times. This must be added before preview to get time.
   if ($entityform->is_new = isset($entityform->is_new) ? $entityform->is_new : 0) {
     global $user;
     $entityform->created = time();
@@ -529,18 +563,38 @@ function entityform_edit_form_submit(&$form, &$form_state) {
   }
 
   $entityform->changed = time();
+  $entityform->draft = $form_state['clicked_button']['#entityform_draft'];
+  // Save the entityform and go back to the list of entityforms.
+  $entityform_type = entityform_type_load($entityform->type);
+  if (!empty($form_state['clicked_button']['#entityform_change'])) {
+    $form_state['entityform_preview_entity'] = $entityform;
+    $form_state['rebuild'] = TRUE;
+    drupal_set_message(t('Re-enter'));
+    return;
+  }
+  else {
+    // If this entityform type has preview mode and we are in submit store preview.
+    if (empty($form_state['clicked_button']['#entityform_after_review'])
+      && !$entityform->draft
+      && !empty($entityform_type->data['preview_page'])
+      && $form_state['entityform_form_mode'] == 'submit') {
+      $form_state['entityform_preview_entity'] = $entityform;
+      $form_state['rebuild'] = TRUE;
+      return;
+    }
+  }
 
   $entityform->save();
   if ($form_state['entityform_form_mode'] == 'submit' || !user_access('edit any entityform')) {
     if (empty($entityform->draft)) {
-      $redirect_path = $entityform_type->get_redirect_path($entityform);
+      $redirect_path = $entityform_type->get_path_property('redirect_path', $entityform);
       if (!empty($redirect_path)) {
         $form_state['redirect'] = $redirect_path;
       }
       else {
         global $user;
         if (empty($user->uid)) {
-          //for anonymous users we must store the id of their submussion in the session
+          // For anonymous users we must store the id of their submission in the session.
           drupal_session_start();
           $_SESSION['entityform_submission'] = $entityform->entityform_id;
         }
@@ -551,8 +605,17 @@ function entityform_edit_form_submit(&$form, &$form_state) {
       drupal_set_message($entityform_type->get_prop('submit_confirm_msg', $entityform));
     }
     else {
-      $form_state['redirect'] = entity_ui_controller('entityform')->draft_path($entityform->type);
-      drupal_set_message(t('Your draft submission has been saved.'));
+      // Saving a Draft.
+      $form_state['redirect'] = $entityform_type->get_path_property('draft_redirect_path', $entityform);
+      if (empty($form_state['redirect'])) {
+        // Redirect to standard draft page.
+        drupal_set_message(t('Your draft submission has been saved.'));
+        $form_state['redirect'] = entity_ui_controller('entityform')->draft_path($entityform->type);
+      }
+      else {
+        // Redirecting away from standard draft page. Show text as message.
+        drupal_set_message($entityform_type->get_prop('draft_save_text', $entityform));
+      }
     }
   }
   else {
@@ -587,7 +650,7 @@ function entityform_delete_form($form, &$form_state, $entityform) {
   $entityform_type = entityform_type_load($entityform->type);
   // @todo Where should a non-admin go when canceling?
   $form = confirm_form($form,
-    $entityform_type->get_prop('delete_confirm_msg'),
+    $entityform_type->get_prop('delete_confirm_msg', $entityform),
     "admin/structure/entityform_types/manage/{$entityform->type}/submissions",
     '<p>' . t('This action cannot be undone.') . '</p>',
     t('Delete'),
@@ -599,7 +662,7 @@ function entityform_delete_form($form, &$form_state, $entityform) {
 }
 
 /**
- * Submit callback for entityform_delete_form
+ * Submit callback for entityform_delete_form.
  */
 function entityform_delete_form_submit($form, &$form_state) {
   $entityform = $form_state['entityform'];

@@ -4,9 +4,9 @@ core = 7.x
 dependencies[] = rabbit_hole
 dependencies[] = taxonomy
 
-; Information added by drupal.org packaging script on 2013-09-17
-version = "7.x-2.22"
+; Information added by Drupal.org packaging script on 2017-03-20
+version = "7.x-2.24"
 core = "7.x"
 project = "rabbit_hole"
-datestamp = "1379400541"
+datestamp = "1490001791"
 
