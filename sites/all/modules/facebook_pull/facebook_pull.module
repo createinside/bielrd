@@ -1,9 +1,7 @@
 <?php
-
-
 /**
  * @file
- * Default cache time.
+ * Facebook Pull Module for getting content from Facebook graph.
  */
 
 define('FACEBOOK_PULL_CACHETIME', 1200);
@@ -173,6 +171,13 @@ function facebook_pull_settings($form_state) {
     '#description' => t('How many posts to show in the box by default. If you have not entered a default limit here then it will default to 10.'),
   );
 
+  $form['facebook_pull_fields'] = array(
+    '#type' => 'checkboxes',
+    '#title' => t('Fields to retrieve from Facebook'),
+    '#options' => _facebook_pull_default_options(),
+    '#default_value' => variable_get('facebook_pull_fields', array_keys(_facebook_pull_default_options())),
+  );
+
   return system_settings_form($form);
 }
 
@@ -282,8 +287,9 @@ function _facebook_pull_feed_cached($graph_id, $type, $app_id, $app_secret, $opt
 function _facebook_pull_feed($graph_id, $type, $token, $options = array()) {
   $qs = http_build_query($options, '', '&');
   $url = "https://graph.facebook.com/%s/%s?%s&%s";
-  $fullurl = sprintf($url, $graph_id, $type, $token, $qs);
-  $raw = file_get_contents($fullurl);
+  $full_url = sprintf($url, $graph_id, $type, $token, $qs);
+  $raw = drupal_http_request($full_url);
+  $raw = $raw->data;
   $data = json_decode($raw);
   if (!isset($data->data)) {
     $message = 'Failed to fetch data from the Facebook Graph';
@@ -300,8 +306,9 @@ function _facebook_pull_feed($graph_id, $type, $token, $options = array()) {
  */
 function _facebook_pull_accesstoken($app_id, $app_secret) {
   $endpoint = 'https://graph.facebook.com/oauth/access_token?client_id=%s&client_secret=%s&grant_type=client_credentials';
-  $fullurl = sprintf($endpoint, $app_id, $app_secret);
-  $token = file_get_contents($fullurl);
+  $full_url = sprintf($endpoint, $app_id, $app_secret);
+  $token = drupal_http_request($full_url);
+  $token = $token->data;
 
   if (!$token) {
     $message = 'Failed to fetch data from the Facebook Graph';
@@ -337,9 +344,11 @@ function _facebook_pull_render_block() {
   $graph_id = variable_get('facebook_pull_graph_id', '');
   $type = variable_get('facebook_pull_object_type', '');
   $limit = variable_get('facebook_pull_limit', '');
+  $fields = implode(',', array_filter(variable_get('facebook_pull_fields', _facebook_pull_default_options())));
   $options = array(
     'limit' => $limit,
     'locale' => $language->language,
+    'fields' => $fields,
   );
 
   return facebook_pull_render($graph_id, $type, $app_id, $app_secret, $options);
@@ -411,4 +420,20 @@ function facebook_pull_preprocess_facebook_pull_notes(&$variables) {
       }
     }
   }
+}
+
+/**
+ * Helper function to return default api options array.
+ */
+function _facebook_pull_default_options() {
+  return array(
+    'picture' => 'picture',
+    'message' => 'message',
+    'from' => 'from',
+    'type' => 'type',
+    'created_time' => 'created_time',
+    'link' => 'link',
+    'description' => 'description',
+    'name' => 'name',
+  );
 }

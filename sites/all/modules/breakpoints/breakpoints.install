@@ -88,6 +88,7 @@ function breakpoints_schema() {
         'minimum_version' => 1,
         'current_version' => 1,
       ),
+      'load all callback' => '_breakpoints_breakpoint_load_all_callback',
     ),
   );
   $schema['breakpoint_group'] = array(
@@ -146,13 +147,13 @@ function breakpoints_schema() {
       'admin_title' => 'label',
       'default hook' => 'default_breakpoint_group',
       'export type string' => 'ctools_type',
-      'export callback' => 'breakpoints_breakpoint_group_export',
       'api' => array(
         'owner' => 'breakpoints',
         'api' => 'default_breakpoint_group',
         'minimum_version' => 1,
         'current_version' => 1,
       ),
+      'load all callback' => 'breakpoints_breakpoint_group_load_all',
     ),
   );
   return $schema;
