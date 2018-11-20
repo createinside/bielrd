@@ -22,7 +22,14 @@ $i = 0;
   <li class="item">
   <a href="<?php print $link ?>" target="_blank">
     <div class="facebook-feed-author">
-      <span class="facebook-feed-picture"><img alt="<?php echo $item->from->name; ?>" src="/<?php print drupal_get_path('theme', 'rebild'); ?>/img/rebild-fb.png" /></span>
+      <span class="facebook-feed-picture">
+        <img alt="
+          <?php
+            if(!empty($item->from->name)){
+              echo $item->from->name;
+            }
+          ?>"
+        src="/<?php print drupal_get_path('theme', 'rebild'); ?>/img/rebild-fb.png" /></span>
       <span class="facebook-feed-from">Rebild Kommune</span>
       <span class="facebook-feed-time"><?php echo t('!time ago.', array('!time' => format_interval(time() - strtotime($item->created_time)))); ?></span>
     </div>
