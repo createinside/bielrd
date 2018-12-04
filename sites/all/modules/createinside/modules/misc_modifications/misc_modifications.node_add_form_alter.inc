@@ -60,7 +60,29 @@ function misc_modifications_form_alter(&$form, &$form_state, $form_id) {
 		
 		// Alter submit string
 		$form['field_main_sections']['und']['add_more']['#value'] = 'Tilføj sektion';	
-	}	
+	}
+
+	// Allow publishing node.
+  if (!empty($form['field_main_allow_publishing'])) {
+    $form['#submit'][] = 'misc_modifications_allow_publishing_submit_action';
+  }
 }
 
-?>
+/**
+ * Submit action to auto publish if value set.
+ */
+function misc_modifications_allow_publishing_submit_action($form, &$form_state) {
+
+  if (!empty($form_state['values']['field_main_allow_publishing']['und'][0]['value'])) {
+    // If user has role "fagredaktør".
+    if (user_has_role(4)) {
+      global $user;
+      $logged_name = (user_is_anonymous() ? variable_get('anonymous', t('Anonymous')) : format_username($user));
+
+      $form_state['values']['workbench_moderation_state_new'] = workbench_moderation_state_published();
+      $form_state['values']['revision'] = 1;
+      $form_state['values']['log'] = t('Edited by !user.', array('!user' => $logged_name));
+      $form_state['values']['status'] = 1;
+    }
+  }
+}
