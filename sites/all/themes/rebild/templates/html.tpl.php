@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * @file
  * Alpha's theme implementation to display the basic html structure of a single
@@ -9,10 +9,11 @@
 
 <head<?php print $rdf->profile; ?>>
   <?php print $head; ?>
-  <title><?php print $head_title; ?></title>  
+  <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
   <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="3c5a15b3-4d3e-4613-a636-3b376d3b8927" type="text/javascript" async></script>
 </head>
 <body<?php print $attributes;?>>
 
@@ -22,13 +23,13 @@
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
-	<?php 
+	<?php
 	// Insert mobile menu block region
-	if(isset($region['mobile_menu'])) { 
+	if(isset($region['mobile_menu'])) {
 	?>
 		<div id="region-mobile-menu">
-		  <?php 
-				print render($region['mobile_menu']);   
+		  <?php
+				print render($region['mobile_menu']);
 			?>
 		</div>
 		<div id="mobile-overlay"></div>
