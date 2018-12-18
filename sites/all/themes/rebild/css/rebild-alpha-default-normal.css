@@ -1,0 +1,699 @@
+/* This file will hold styles that are loaded using the same media query as the normal grid. */
+/* If you are using the default media queries provided by Omega, these styles will also
+ *  apply to the widescreen layout unless they are overridden by the widescreen styles. */
+/*------------------------------------------------------------------
+
+[BASE]
+
+-------------------------------------------------------------------*/
+/* Compass */
+/* Modules */
+/*------------------------------------------------------------------
+
+[COLORS]
+
+Main colors
+Text colors
+Background colors
+Button colors
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	Main colors
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	Text colors
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	Background colors
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	Button colors
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	Social media colors
+-------------------------------------------------------------------*/
+/* line 6, ../sass/modules/_extends.scss */
+ul.social-media:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 13, ../sass/modules/_extends.scss */
+ul.social-media {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/*------------------------------------------------------------------
+
+[VARIABLES]
+
+Typography
+Layout
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	Typography
+-------------------------------------------------------------------*/
+/* 12px */
+/*------------------------------------------------------------------
+	Layout
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+
+[MIXINS]
+
+-------------------------------------------------------------------*/
+/*
+==========================================================================
+	Blocks / Grid
+==========================================================================
+*/
+/*
+==========================================================================
+	Forms
+==========================================================================
+*/
+/*
+==========================================================================
+	Text
+==========================================================================
+*/
+/*
+==========================================================================
+	Utilities
+==========================================================================
+*/
+/* Components */
+/* line 5, ../sass/components/_businesscontact.scss */
+#block-bean-business-rebild-contact .field-name-field-sec-txt-img-image {
+  float: left;
+  width: 40%;
+  max-width: 145px;
+  margin: 2px 12px 0 0;
+}
+@media all and (min-width: 740px) {
+  /* line 5, ../sass/components/_businesscontact.scss */
+  #block-bean-business-rebild-contact .field-name-field-sec-txt-img-image {
+    float: none;
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+}
+@media all and (min-width: 980px) {
+  /* line 5, ../sass/components/_businesscontact.scss */
+  #block-bean-business-rebild-contact .field-name-field-sec-txt-img-image {
+    float: left;
+    width: 40%;
+    margin: 2px 12px 0 0;
+  }
+}
+
+/* line 25, ../sass/components/_businesscontact.scss */
+.field-name-field-contact-employees > .field-items > .field-item {
+  padding-bottom: 20px;
+}
+/* line 93, ../sass/modules/_mixins.scss */
+.field-name-field-contact-employees > .field-items > .field-item:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 1, ../sass/components/_businessfrontpage.scss */
+.business-frontpage-info {
+  margin-bottom: 40px !important;
+}
+/* line 3, ../sass/components/_businessfrontpage.scss */
+.business-frontpage-info .content {
+  color: #474747 !important;
+}
+
+/* line 1, ../sass/components/_businesslanguageswitcher.scss */
+#block-br-language-switcher-language-switcher {
+  border-right: 0;
+}
+/* line 4, ../sass/components/_businesslanguageswitcher.scss */
+#region-title #block-br-language-switcher-language-switcher {
+  position: absolute;
+  right: -20px;
+  top: 8px;
+}
+/* line 12, ../sass/components/_businesslanguageswitcher.scss */
+#block-br-language-switcher-language-switcher .content a {
+  display: block;
+}
+/* line 15, ../sass/components/_businesslanguageswitcher.scss */
+#block-br-language-switcher-language-switcher .content a img {
+  width: 25px;
+}
+
+/* line 6, ../sass/components/_socialmedia.scss */
+ul.social-media {
+  display: block;
+  font-size: 13px;
+  margin-left: -10px;
+  margin-right: -10px;
+  position: relative;
+  text-align: center;
+}
+@media all and (min-width: 740px) {
+  /* line 6, ../sass/components/_socialmedia.scss */
+  ul.social-media {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* line 23, ../sass/components/_socialmedia.scss */
+.social-media-fill-color {
+  display: none;
+  height: 55px;
+  position: absolute;
+  z-index: 1;
+  width: 1000px;
+}
+/* line 30, ../sass/components/_socialmedia.scss */
+.social-media-fill-color.social-media-fill-color-left {
+  left: 1px;
+  margin-left: -1000px;
+}
+/* line 35, ../sass/components/_socialmedia.scss */
+.social-media-fill-color.social-media-fill-color-right {
+  right: 1px;
+  margin-right: -1000px;
+}
+@media all and (min-width: 740px) {
+  /* line 23, ../sass/components/_socialmedia.scss */
+  .social-media-fill-color {
+    display: block;
+  }
+}
+
+/* line 46, ../sass/components/_socialmedia.scss */
+li.social-media-service {
+  display: block;
+  float: left;
+  z-index: 2;
+}
+@media all and (min-width: 980px) {
+  /* line 46, ../sass/components/_socialmedia.scss */
+  li.social-media-service {
+    position: relative;
+  }
+}
+/* line 55, ../sass/components/_socialmedia.scss */
+li.social-media-service span.social-media-profiles-trigger, li.social-media-service > a {
+  display: block;
+  color: #ffffff;
+  line-height: 55px;
+  text-transform: uppercase;
+}
+/* line 63, ../sass/components/_socialmedia.scss */
+li.social-media-service a {
+  color: #ffffff;
+  display: block;
+  line-height: 55px;
+  text-decoration: none;
+}
+
+/* line 72, ../sass/components/_socialmedia.scss */
+.social-media-profiles-trigger {
+  cursor: pointer;
+}
+
+/* line 76, ../sass/components/_socialmedia.scss */
+.social-media-profiles-trigger,
+.social-media-profile {
+  transition: background 0.2s ease;
+}
+/* line 80, ../sass/components/_socialmedia.scss */
+.facebook .social-media-profiles-trigger, .facebook
+.social-media-profile {
+  background: #3b5998;
+}
+/* line 82, ../sass/components/_socialmedia.scss */
+.facebook .social-media-profiles-trigger.active, .facebook .social-media-profiles-trigger:hover, .facebook
+.social-media-profile.active, .facebook
+.social-media-profile:hover {
+  background: #2d4373;
+}
+/* line 87, ../sass/components/_socialmedia.scss */
+.twitter .social-media-profiles-trigger, .twitter
+.social-media-profile {
+  background: #00aced;
+}
+/* line 89, ../sass/components/_socialmedia.scss */
+.twitter .social-media-profiles-trigger.active, .twitter .social-media-profiles-trigger:hover, .twitter
+.social-media-profile.active, .twitter
+.social-media-profile:hover {
+  background: #0087ba;
+}
+/* line 94, ../sass/components/_socialmedia.scss */
+.youtube .social-media-profiles-trigger, .youtube
+.social-media-profile {
+  background: #bb0000;
+}
+/* line 96, ../sass/components/_socialmedia.scss */
+.youtube .social-media-profiles-trigger.active, .youtube .social-media-profiles-trigger:hover, .youtube
+.social-media-profile.active, .youtube
+.social-media-profile:hover {
+  background: #880000;
+}
+/* line 101, ../sass/components/_socialmedia.scss */
+.linkedin .social-media-profiles-trigger, .linkedin
+.social-media-profile {
+  background: #007bb6;
+}
+/* line 103, ../sass/components/_socialmedia.scss */
+.linkedin .social-media-profiles-trigger.active, .linkedin .social-media-profiles-trigger:hover, .linkedin
+.social-media-profile.active, .linkedin
+.social-media-profile:hover {
+  background: #005983;
+}
+/* line 108, ../sass/components/_socialmedia.scss */
+.google-plus .social-media-profiles-trigger, .google-plus
+.social-media-profile {
+  background: #dd4b39;
+}
+/* line 110, ../sass/components/_socialmedia.scss */
+.google-plus .social-media-profiles-trigger.active, .google-plus .social-media-profiles-trigger:hover, .google-plus
+.social-media-profile.active, .google-plus
+.social-media-profile:hover {
+  background: #c23321;
+}
+/* line 115, ../sass/components/_socialmedia.scss */
+.instagram .social-media-profiles-trigger, .instagram
+.social-media-profile {
+  background: #517fa4;
+}
+/* line 117, ../sass/components/_socialmedia.scss */
+.instagram .social-media-profiles-trigger.active, .instagram .social-media-profiles-trigger:hover, .instagram
+.social-media-profile.active, .instagram
+.social-media-profile:hover {
+  background: #406582;
+}
+
+/* line 124, ../sass/components/_socialmedia.scss */
+.social-media-service-icon {
+  position: relative;
+  font-size: 1.2em;
+  top: 0.2em;
+}
+/* line 129, ../sass/components/_socialmedia.scss */
+.social-media-profiles .social-media-service-icon {
+  margin-right: 5px;
+}
+/* line 133, ../sass/components/_socialmedia.scss */
+.social-media-service-icon.icon-facebook {
+  font-size: 1.6em;
+}
+/* line 137, ../sass/components/_socialmedia.scss */
+.social-media-service-icon.icon-youtube {
+  font-size: 1.6em;
+}
+/* line 141, ../sass/components/_socialmedia.scss */
+.social-media-service-icon.social-media-service-icon-first-level {
+  font-size: 1.6em;
+  top: 0.25em;
+}
+/* line 145, ../sass/components/_socialmedia.scss */
+.social-media-service-icon.social-media-service-icon-first-level.icon-facebook {
+  font-size: 2em;
+}
+/* line 149, ../sass/components/_socialmedia.scss */
+.social-media-service-icon.social-media-service-icon-first-level.icon-youtube {
+  font-size: 2em;
+}
+
+/* line 157, ../sass/components/_socialmedia.scss */
+.social-media-service-name {
+  display: none;
+}
+@media all and (min-width: 980px) {
+  /* line 157, ../sass/components/_socialmedia.scss */
+  .social-media-service-name {
+    display: inline;
+    padding-left: 10px;
+  }
+}
+
+/* line 166, ../sass/components/_socialmedia.scss */
+ul.social-media-profiles {
+  bottom: 60px;
+  left: 10px;
+  right: 10px;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  transition: opacity 0.5s ease;
+}
+@media all and (min-width: 740px) {
+  /* line 166, ../sass/components/_socialmedia.scss */
+  ul.social-media-profiles {
+    left: 0;
+    right: 0;
+  }
+}
+/* line 180, ../sass/components/_socialmedia.scss */
+ul.social-media-profiles.active {
+  opacity: 1;
+  visibility: visible;
+}
+/* line 186, ../sass/components/_socialmedia.scss */
+ul.social-media-profiles .triangle {
+  border-style: solid;
+  border-width: 3px 5px 0 5px;
+  border-color: #007bff transparent transparent transparent;
+  bottom: -3px;
+  content: "";
+  display: block;
+  height: 0;
+  left: 50%;
+  margin-left: -15px;
+  position: absolute;
+  width: 0;
+}
+@media all and (min-width: 740px) {
+  /* line 186, ../sass/components/_socialmedia.scss */
+  ul.social-media-profiles .triangle {
+    margin-left: -5px;
+  }
+}
+/* line 203, ../sass/components/_socialmedia.scss */
+.facebook ul.social-media-profiles .triangle {
+  border-top-color: #3b5998;
+}
+/* line 206, ../sass/components/_socialmedia.scss */
+.twitter ul.social-media-profiles .triangle {
+  border-top-color: #00aced;
+}
+/* line 209, ../sass/components/_socialmedia.scss */
+.youtube ul.social-media-profiles .triangle {
+  border-top-color: #bb0000;
+}
+/* line 212, ../sass/components/_socialmedia.scss */
+.linkedin ul.social-media-profiles .triangle {
+  border-top-color: #007bb6;
+}
+/* line 215, ../sass/components/_socialmedia.scss */
+.google-plus ul.social-media-profiles .triangle {
+  border-top-color: #dd4b39;
+}
+/* line 218, ../sass/components/_socialmedia.scss */
+.instagram ul.social-media-profiles .triangle {
+  border-top-color: #517fa4;
+}
+/* line 225, ../sass/components/_socialmedia.scss */
+ul.social-media-profiles li {
+  display: block;
+  margin-top: 1px;
+}
+
+/* line 5, ../sass/components/_newsletter.scss */
+.node-type-nl-rp #region-content .node .field-item td, .node-type-nl-br #region-content .node .field-item td {
+  vertical-align: top;
+}
+/* line 7, ../sass/components/_newsletter.scss */
+.node-type-nl-rp #region-content .node .field-item td .field, .node-type-nl-br #region-content .node .field-item td .field {
+  margin-bottom: 0;
+}
+/* line 9, ../sass/components/_newsletter.scss */
+.node-type-nl-rp #region-content .node .field-item td .field a, .node-type-nl-br #region-content .node .field-item td .field a {
+  color: #ffffff;
+}
+
+/* line 20, ../sass/components/_newsletter.scss */
+#region-sidebar-first .block-views {
+  position: relative;
+}
+/* line 22, ../sass/components/_newsletter.scss */
+#region-sidebar-first .block-views .view-rebildporten-content-list {
+  background-color: #f6f6f6;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 27, ../sass/components/_newsletter.scss */
+#region-sidebar-first .block-views .view-rebildporten-content-list .view-header .news_view_all {
+  position: absolute;
+  top: 0;
+  text-transform: uppercase;
+  right: 0;
+  left: auto;
+  padding-top: 2px;
+}
+/* line 34, ../sass/components/_newsletter.scss */
+#region-sidebar-first .block-views .view-rebildporten-content-list .view-header .news_view_all a {
+  text-shadow: white 1px 1px 1px;
+  font-size: 0.8em;
+  color: #474747;
+  text-decoration: none;
+}
+/* line 43, ../sass/components/_newsletter.scss */
+#region-sidebar-first .block-views .view-rebildporten-content-list .view-content {
+  padding: 0 10px 10px;
+  line-height: 1.25em;
+}
+/* line 47, ../sass/components/_newsletter.scss */
+#region-sidebar-first .block-views .view-rebildporten-content-list .views-row {
+  position: relative;
+  padding: 1em;
+}
+/* line 50, ../sass/components/_newsletter.scss */
+#region-sidebar-first .block-views .view-rebildporten-content-list .views-row .views-field-title {
+  height: 1.25em;
+}
+/* line 52, ../sass/components/_newsletter.scss */
+#region-sidebar-first .block-views .view-rebildporten-content-list .views-row .views-field-title a {
+  color: #474747;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+/* line 58, ../sass/components/_newsletter.scss */
+#region-sidebar-first .block-views .view-rebildporten-content-list .views-row .views-field-created {
+  font-style: italic;
+  font-size: 0.91667em;
+  margin-bottom: 3px;
+  margin-top: 3px;
+  height: 1.25em;
+  color: #6b6b6b;
+}
+/* line 67, ../sass/components/_newsletter.scss */
+#region-sidebar-first .block-views .view-rebildporten-content-list .views-row-first {
+  padding: 20px 10px;
+}
+/* line 69, ../sass/components/_newsletter.scss */
+#region-sidebar-first .block-views .view-rebildporten-content-list .views-row-first .news-title {
+  font-weight: bold;
+}
+/* line 73, ../sass/components/_newsletter.scss */
+#region-sidebar-first .block-views .view-rebildporten-content-list .views-row-even {
+  background-color: white;
+}
+
+/*------------------------------------------------------------------
+
+[ALPHA-DEFAULT-NARROW]
+
+General
+Menus
+Frontpage
+Landingpage
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	General
+-------------------------------------------------------------------*/
+/* line 22, ../sass/rebild-alpha-default-normal.scss */
+#page header, #page section, #page footer {
+  font-size: 12px;
+}
+
+/*------------------------------------------------------------------
+	Menus
+-------------------------------------------------------------------*/
+/* Main Menu - (Mega Menu) */
+/* line 35, ../sass/rebild-alpha-default-normal.scss */
+#region-menu ul.ultimenu > li {
+  padding: 0 19px;
+}
+
+/* line 40, ../sass/rebild-alpha-default-normal.scss */
+.ultimenu-flyout {
+  width: 940px;
+  left: -240px;
+}
+
+/*------------------------------------------------------------------
+	Frontpage
+-------------------------------------------------------------------*/
+/* line 51, ../sass/rebild-alpha-default-normal.scss */
+.front #region-content .view .views-row {
+  height: 370px;
+  margin-bottom: 20px;
+}
+/* line 58, ../sass/rebild-alpha-default-normal.scss */
+.front #region-sidebar-first .block {
+  margin-bottom: 20px;
+}
+/* line 61, ../sass/rebild-alpha-default-normal.scss */
+.front #region-sidebar-first .block-news-articles-block {
+  height: 490px;
+}
+
+/*------------------------------------------------------------------
+  Landingpage
+-------------------------------------------------------------------*/
+/* Aktuelt */
+/* line 74, ../sass/rebild-alpha-default-normal.scss */
+.not-front .view-id-rebild_frontpage .views-row {
+  height: 375px;
+  width: 310px;
+}
+
+/* Focus */
+/* line 83, ../sass/rebild-alpha-default-normal.scss */
+.business-theme.not-front .view-id-rebild_frontpage .views-row {
+  width: 300px;
+  margin: 0;
+}
+/* line 86, ../sass/rebild-alpha-default-normal.scss */
+.business-theme.not-front .view-id-rebild_frontpage .views-row .text-wrapper {
+  -moz-transform: translateY(105px);
+  -ms-transform: translateY(105px);
+  -webkit-transform: translateY(105px);
+  transform: translateY(105px);
+}
+/* line 88, ../sass/rebild-alpha-default-normal.scss */
+.business-theme.not-front .view-id-rebild_frontpage .views-row .text-wrapper .featured-title {
+  font-size: 1.33333em;
+  margin-bottom: 16px;
+  height: 2.25em;
+  line-height: 2.25em;
+}
+/* line 93, ../sass/rebild-alpha-default-normal.scss */
+.business-theme.not-front .view-id-rebild_frontpage .views-row .text-wrapper .featured-title div {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.25em;
+}
+/* line 99, ../sass/rebild-alpha-default-normal.scss */
+.business-theme.not-front .view-id-rebild_frontpage .views-row .text-wrapper a {
+  height: 150px;
+  padding: 8px 20px;
+}
+/* line 105, ../sass/rebild-alpha-default-normal.scss */
+.business-theme.not-front .view-id-rebild_frontpage .views-row-2 {
+  margin: 0 20px;
+}
+
+/*------------------------------------------------------------------
+  Nodes
+-------------------------------------------------------------------*/
+/* Basic Page Extended */
+/* line 120, ../sass/rebild-alpha-default-normal.scss */
+#region-content .node-page-extended .field-name-field-main-paragraphs {
+  /* Navigation List */
+}
+/* line 125, ../sass/rebild-alpha-default-normal.scss */
+#region-content .node-page-extended .field-name-field-main-paragraphs .field-name-field-sec-nav-elment > .field-items > .field-item .field-name-field-sec-nav-image {
+  width: auto;
+}
+/* line 128, ../sass/rebild-alpha-default-normal.scss */
+#region-content .node-page-extended .field-name-field-main-paragraphs .field-name-field-sec-nav-elment > .field-items > .field-item h3 {
+  padding-left: 117px;
+}
+/* line 131, ../sass/rebild-alpha-default-normal.scss */
+#region-content .node-page-extended .field-name-field-main-paragraphs .field-name-field-sec-nav-elment > .field-items > .field-item .field-name-field-sec-nav-body {
+  padding-left: 117px;
+}
+/* line 134, ../sass/rebild-alpha-default-normal.scss */
+#region-content .node-page-extended .field-name-field-main-paragraphs .field-name-field-sec-nav-elment > .field-items > .field-item .read-more {
+  padding-left: 117px;
+}
+
+/*------------------------------------------------------------------
+  Blocks
+-------------------------------------------------------------------*/
+/* Calendar - sidebar */
+/* line 152, ../sass/rebild-alpha-default-normal.scss */
+.view-id-calendar_sidebar .view-content .rebild-calendar .calendar_right {
+  max-width: 160px;
+}
+
+/* Calendar - frontpage */
+/* line 162, ../sass/rebild-alpha-default-normal.scss */
+.view-id-calendar_frontpage .rebild-calendar .calendar_right {
+  width: auto;
+  float: none;
+}
+
+/* WCAG */
+/* line 170, ../sass/rebild-alpha-default-normal.scss */
+.wcag-block {
+  font-size: 1em;
+  margin: 0 10px 0 0;
+  padding: 0 10px 0 0;
+}
+
+/* Search */
+/* line 178, ../sass/rebild-alpha-default-normal.scss */
+#region-header-first .block-ci-search {
+  background: url("../img/et_aktivt_liv_sammen.svg") no-repeat 5px 27px;
+  background-size: 160px 58px;
+}
+
+/* Search Autocomplete */
+/* line 186, ../sass/rebild-alpha-default-normal.scss */
+.not-front .ac_results {
+  display: inherit;
+  width: 464px !important;
+}
+
+/* Share buttons */
+/* line 196, ../sass/rebild-alpha-default-normal.scss */
+#region-content .node-share .share_wrapper .share_this {
+  margin-right: 15px;
+  margin-bottom: 2px;
+}
+
+/* 5 shortcuts - frontpage */
+/* line 209, ../sass/rebild-alpha-default-normal.scss */
+#region-postscript-first .block-block .content ul li {
+  margin-bottom: 1.1em;
+}
+
+/* Announcement (Din kommune informerer) */
+/* line 219, ../sass/rebild-alpha-default-normal.scss */
+.block-din-kommune-informerer .announcement-front {
+  padding: 22px 0;
+}
+/* line 221, ../sass/rebild-alpha-default-normal.scss */
+.block-din-kommune-informerer .announcement-front .week-number {
+  height: 63px;
+  width: 25%;
+  padding-top: 0;
+}
+/* line 226, ../sass/rebild-alpha-default-normal.scss */
+.block-din-kommune-informerer .announcement-front .body {
+  height: 63px;
+  width: 75%;
+}
+/* line 229, ../sass/rebild-alpha-default-normal.scss */
+.block-din-kommune-informerer .announcement-front .body h2 {
+  font-size: 1.33333em;
+  margin-bottom: 10px;
+}
+/* line 233, ../sass/rebild-alpha-default-normal.scss */
+.block-din-kommune-informerer .announcement-front .body p {
+  font-size: 1em;
+}

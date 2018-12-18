@@ -1,0 +1,684 @@
+/*------------------------------------------------------------------
+
+[BASE]
+
+-------------------------------------------------------------------*/
+/* Compass */
+/* Modules */
+/*------------------------------------------------------------------
+
+[COLORS]
+
+Main colors
+Text colors
+Background colors
+Button colors
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	Main colors
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	Text colors
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	Background colors
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	Button colors
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	Social media colors
+-------------------------------------------------------------------*/
+/* line 6, ../sass/modules/_extends.scss */
+ul.social-media:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 13, ../sass/modules/_extends.scss */
+ul.social-media {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/*------------------------------------------------------------------
+
+[VARIABLES]
+
+Typography
+Layout
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	Typography
+-------------------------------------------------------------------*/
+/* 12px */
+/*------------------------------------------------------------------
+	Layout
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+
+[MIXINS]
+
+-------------------------------------------------------------------*/
+/*
+==========================================================================
+	Blocks / Grid
+==========================================================================
+*/
+/*
+==========================================================================
+	Forms
+==========================================================================
+*/
+/*
+==========================================================================
+	Text
+==========================================================================
+*/
+/*
+==========================================================================
+	Utilities
+==========================================================================
+*/
+/* Components */
+/* line 5, ../sass/components/_businesscontact.scss */
+#block-bean-business-rebild-contact .field-name-field-sec-txt-img-image {
+  float: left;
+  width: 40%;
+  max-width: 145px;
+  margin: 2px 12px 0 0;
+}
+@media all and (min-width: 740px) {
+  /* line 5, ../sass/components/_businesscontact.scss */
+  #block-bean-business-rebild-contact .field-name-field-sec-txt-img-image {
+    float: none;
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+}
+@media all and (min-width: 980px) {
+  /* line 5, ../sass/components/_businesscontact.scss */
+  #block-bean-business-rebild-contact .field-name-field-sec-txt-img-image {
+    float: left;
+    width: 40%;
+    margin: 2px 12px 0 0;
+  }
+}
+
+/* line 25, ../sass/components/_businesscontact.scss */
+.field-name-field-contact-employees > .field-items > .field-item {
+  padding-bottom: 20px;
+}
+/* line 93, ../sass/modules/_mixins.scss */
+.field-name-field-contact-employees > .field-items > .field-item:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 1, ../sass/components/_businessfrontpage.scss */
+.business-frontpage-info {
+  margin-bottom: 40px !important;
+}
+/* line 3, ../sass/components/_businessfrontpage.scss */
+.business-frontpage-info .content {
+  color: #474747 !important;
+}
+
+/* line 1, ../sass/components/_businesslanguageswitcher.scss */
+#block-br-language-switcher-language-switcher {
+  border-right: 0;
+}
+/* line 4, ../sass/components/_businesslanguageswitcher.scss */
+#region-title #block-br-language-switcher-language-switcher {
+  position: absolute;
+  right: -20px;
+  top: 8px;
+}
+/* line 12, ../sass/components/_businesslanguageswitcher.scss */
+#block-br-language-switcher-language-switcher .content a {
+  display: block;
+}
+/* line 15, ../sass/components/_businesslanguageswitcher.scss */
+#block-br-language-switcher-language-switcher .content a img {
+  width: 25px;
+}
+
+/* line 6, ../sass/components/_socialmedia.scss */
+ul.social-media {
+  display: block;
+  font-size: 13px;
+  margin-left: -10px;
+  margin-right: -10px;
+  position: relative;
+  text-align: center;
+}
+@media all and (min-width: 740px) {
+  /* line 6, ../sass/components/_socialmedia.scss */
+  ul.social-media {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* line 23, ../sass/components/_socialmedia.scss */
+.social-media-fill-color {
+  display: none;
+  height: 55px;
+  position: absolute;
+  z-index: 1;
+  width: 1000px;
+}
+/* line 30, ../sass/components/_socialmedia.scss */
+.social-media-fill-color.social-media-fill-color-left {
+  left: 1px;
+  margin-left: -1000px;
+}
+/* line 35, ../sass/components/_socialmedia.scss */
+.social-media-fill-color.social-media-fill-color-right {
+  right: 1px;
+  margin-right: -1000px;
+}
+@media all and (min-width: 740px) {
+  /* line 23, ../sass/components/_socialmedia.scss */
+  .social-media-fill-color {
+    display: block;
+  }
+}
+
+/* line 46, ../sass/components/_socialmedia.scss */
+li.social-media-service {
+  display: block;
+  float: left;
+  z-index: 2;
+}
+@media all and (min-width: 980px) {
+  /* line 46, ../sass/components/_socialmedia.scss */
+  li.social-media-service {
+    position: relative;
+  }
+}
+/* line 55, ../sass/components/_socialmedia.scss */
+li.social-media-service span.social-media-profiles-trigger, li.social-media-service > a {
+  display: block;
+  color: #ffffff;
+  line-height: 55px;
+  text-transform: uppercase;
+}
+/* line 63, ../sass/components/_socialmedia.scss */
+li.social-media-service a {
+  color: #ffffff;
+  display: block;
+  line-height: 55px;
+  text-decoration: none;
+}
+
+/* line 72, ../sass/components/_socialmedia.scss */
+.social-media-profiles-trigger {
+  cursor: pointer;
+}
+
+/* line 76, ../sass/components/_socialmedia.scss */
+.social-media-profiles-trigger,
+.social-media-profile {
+  transition: background 0.2s ease;
+}
+/* line 80, ../sass/components/_socialmedia.scss */
+.facebook .social-media-profiles-trigger, .facebook
+.social-media-profile {
+  background: #3b5998;
+}
+/* line 82, ../sass/components/_socialmedia.scss */
+.facebook .social-media-profiles-trigger.active, .facebook .social-media-profiles-trigger:hover, .facebook
+.social-media-profile.active, .facebook
+.social-media-profile:hover {
+  background: #2d4373;
+}
+/* line 87, ../sass/components/_socialmedia.scss */
+.twitter .social-media-profiles-trigger, .twitter
+.social-media-profile {
+  background: #00aced;
+}
+/* line 89, ../sass/components/_socialmedia.scss */
+.twitter .social-media-profiles-trigger.active, .twitter .social-media-profiles-trigger:hover, .twitter
+.social-media-profile.active, .twitter
+.social-media-profile:hover {
+  background: #0087ba;
+}
+/* line 94, ../sass/components/_socialmedia.scss */
+.youtube .social-media-profiles-trigger, .youtube
+.social-media-profile {
+  background: #bb0000;
+}
+/* line 96, ../sass/components/_socialmedia.scss */
+.youtube .social-media-profiles-trigger.active, .youtube .social-media-profiles-trigger:hover, .youtube
+.social-media-profile.active, .youtube
+.social-media-profile:hover {
+  background: #880000;
+}
+/* line 101, ../sass/components/_socialmedia.scss */
+.linkedin .social-media-profiles-trigger, .linkedin
+.social-media-profile {
+  background: #007bb6;
+}
+/* line 103, ../sass/components/_socialmedia.scss */
+.linkedin .social-media-profiles-trigger.active, .linkedin .social-media-profiles-trigger:hover, .linkedin
+.social-media-profile.active, .linkedin
+.social-media-profile:hover {
+  background: #005983;
+}
+/* line 108, ../sass/components/_socialmedia.scss */
+.google-plus .social-media-profiles-trigger, .google-plus
+.social-media-profile {
+  background: #dd4b39;
+}
+/* line 110, ../sass/components/_socialmedia.scss */
+.google-plus .social-media-profiles-trigger.active, .google-plus .social-media-profiles-trigger:hover, .google-plus
+.social-media-profile.active, .google-plus
+.social-media-profile:hover {
+  background: #c23321;
+}
+/* line 115, ../sass/components/_socialmedia.scss */
+.instagram .social-media-profiles-trigger, .instagram
+.social-media-profile {
+  background: #517fa4;
+}
+/* line 117, ../sass/components/_socialmedia.scss */
+.instagram .social-media-profiles-trigger.active, .instagram .social-media-profiles-trigger:hover, .instagram
+.social-media-profile.active, .instagram
+.social-media-profile:hover {
+  background: #406582;
+}
+
+/* line 124, ../sass/components/_socialmedia.scss */
+.social-media-service-icon {
+  position: relative;
+  font-size: 1.2em;
+  top: 0.2em;
+}
+/* line 129, ../sass/components/_socialmedia.scss */
+.social-media-profiles .social-media-service-icon {
+  margin-right: 5px;
+}
+/* line 133, ../sass/components/_socialmedia.scss */
+.social-media-service-icon.icon-facebook {
+  font-size: 1.6em;
+}
+/* line 137, ../sass/components/_socialmedia.scss */
+.social-media-service-icon.icon-youtube {
+  font-size: 1.6em;
+}
+/* line 141, ../sass/components/_socialmedia.scss */
+.social-media-service-icon.social-media-service-icon-first-level {
+  font-size: 1.6em;
+  top: 0.25em;
+}
+/* line 145, ../sass/components/_socialmedia.scss */
+.social-media-service-icon.social-media-service-icon-first-level.icon-facebook {
+  font-size: 2em;
+}
+/* line 149, ../sass/components/_socialmedia.scss */
+.social-media-service-icon.social-media-service-icon-first-level.icon-youtube {
+  font-size: 2em;
+}
+
+/* line 157, ../sass/components/_socialmedia.scss */
+.social-media-service-name {
+  display: none;
+}
+@media all and (min-width: 980px) {
+  /* line 157, ../sass/components/_socialmedia.scss */
+  .social-media-service-name {
+    display: inline;
+    padding-left: 10px;
+  }
+}
+
+/* line 166, ../sass/components/_socialmedia.scss */
+ul.social-media-profiles {
+  bottom: 60px;
+  left: 10px;
+  right: 10px;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  transition: opacity 0.5s ease;
+}
+@media all and (min-width: 740px) {
+  /* line 166, ../sass/components/_socialmedia.scss */
+  ul.social-media-profiles {
+    left: 0;
+    right: 0;
+  }
+}
+/* line 180, ../sass/components/_socialmedia.scss */
+ul.social-media-profiles.active {
+  opacity: 1;
+  visibility: visible;
+}
+/* line 186, ../sass/components/_socialmedia.scss */
+ul.social-media-profiles .triangle {
+  border-style: solid;
+  border-width: 3px 5px 0 5px;
+  border-color: #007bff transparent transparent transparent;
+  bottom: -3px;
+  content: "";
+  display: block;
+  height: 0;
+  left: 50%;
+  margin-left: -15px;
+  position: absolute;
+  width: 0;
+}
+@media all and (min-width: 740px) {
+  /* line 186, ../sass/components/_socialmedia.scss */
+  ul.social-media-profiles .triangle {
+    margin-left: -5px;
+  }
+}
+/* line 203, ../sass/components/_socialmedia.scss */
+.facebook ul.social-media-profiles .triangle {
+  border-top-color: #3b5998;
+}
+/* line 206, ../sass/components/_socialmedia.scss */
+.twitter ul.social-media-profiles .triangle {
+  border-top-color: #00aced;
+}
+/* line 209, ../sass/components/_socialmedia.scss */
+.youtube ul.social-media-profiles .triangle {
+  border-top-color: #bb0000;
+}
+/* line 212, ../sass/components/_socialmedia.scss */
+.linkedin ul.social-media-profiles .triangle {
+  border-top-color: #007bb6;
+}
+/* line 215, ../sass/components/_socialmedia.scss */
+.google-plus ul.social-media-profiles .triangle {
+  border-top-color: #dd4b39;
+}
+/* line 218, ../sass/components/_socialmedia.scss */
+.instagram ul.social-media-profiles .triangle {
+  border-top-color: #517fa4;
+}
+/* line 225, ../sass/components/_socialmedia.scss */
+ul.social-media-profiles li {
+  display: block;
+  margin-top: 1px;
+}
+
+/* line 5, ../sass/components/_newsletter.scss */
+.node-type-nl-rp #region-content .node .field-item td, .node-type-nl-br #region-content .node .field-item td {
+  vertical-align: top;
+}
+/* line 7, ../sass/components/_newsletter.scss */
+.node-type-nl-rp #region-content .node .field-item td .field, .node-type-nl-br #region-content .node .field-item td .field {
+  margin-bottom: 0;
+}
+/* line 9, ../sass/components/_newsletter.scss */
+.node-type-nl-rp #region-content .node .field-item td .field a, .node-type-nl-br #region-content .node .field-item td .field a {
+  color: #ffffff;
+}
+
+/* line 20, ../sass/components/_newsletter.scss */
+#region-sidebar-first .block-views {
+  position: relative;
+}
+/* line 22, ../sass/components/_newsletter.scss */
+#region-sidebar-first .block-views .view-rebildporten-content-list {
+  background-color: #f6f6f6;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 27, ../sass/components/_newsletter.scss */
+#region-sidebar-first .block-views .view-rebildporten-content-list .view-header .news_view_all {
+  position: absolute;
+  top: 0;
+  text-transform: uppercase;
+  right: 0;
+  left: auto;
+  padding-top: 2px;
+}
+/* line 34, ../sass/components/_newsletter.scss */
+#region-sidebar-first .block-views .view-rebildporten-content-list .view-header .news_view_all a {
+  text-shadow: white 1px 1px 1px;
+  font-size: 0.8em;
+  color: #474747;
+  text-decoration: none;
+}
+/* line 43, ../sass/components/_newsletter.scss */
+#region-sidebar-first .block-views .view-rebildporten-content-list .view-content {
+  padding: 0 10px 10px;
+  line-height: 1.25em;
+}
+/* line 47, ../sass/components/_newsletter.scss */
+#region-sidebar-first .block-views .view-rebildporten-content-list .views-row {
+  position: relative;
+  padding: 1em;
+}
+/* line 50, ../sass/components/_newsletter.scss */
+#region-sidebar-first .block-views .view-rebildporten-content-list .views-row .views-field-title {
+  height: 1.25em;
+}
+/* line 52, ../sass/components/_newsletter.scss */
+#region-sidebar-first .block-views .view-rebildporten-content-list .views-row .views-field-title a {
+  color: #474747;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+/* line 58, ../sass/components/_newsletter.scss */
+#region-sidebar-first .block-views .view-rebildporten-content-list .views-row .views-field-created {
+  font-style: italic;
+  font-size: 0.91667em;
+  margin-bottom: 3px;
+  margin-top: 3px;
+  height: 1.25em;
+  color: #6b6b6b;
+}
+/* line 67, ../sass/components/_newsletter.scss */
+#region-sidebar-first .block-views .view-rebildporten-content-list .views-row-first {
+  padding: 20px 10px;
+}
+/* line 69, ../sass/components/_newsletter.scss */
+#region-sidebar-first .block-views .view-rebildporten-content-list .views-row-first .news-title {
+  font-weight: bold;
+}
+/* line 73, ../sass/components/_newsletter.scss */
+#region-sidebar-first .block-views .view-rebildporten-content-list .views-row-even {
+  background-color: white;
+}
+
+/*------------------------------------------------------------------
+
+[GENERAL]
+
+-------------------------------------------------------------------*/
+/* line 10, ../sass/partials/_general.scss */
+#block-bean-business-rebild-contact .content,
+.business-frontpage-info .content,
+#region-content .content {
+  /* Text */
+  /* Links */
+  /* Lists */
+}
+/* line 12, ../sass/partials/_general.scss */
+#block-bean-business-rebild-contact .content h1, #block-bean-business-rebild-contact .content h2, #block-bean-business-rebild-contact .content h3, #block-bean-business-rebild-contact .content h4, #block-bean-business-rebild-contact .content h5, #block-bean-business-rebild-contact .content h6,
+.business-frontpage-info .content h1,
+.business-frontpage-info .content h2,
+.business-frontpage-info .content h3,
+.business-frontpage-info .content h4,
+.business-frontpage-info .content h5,
+.business-frontpage-info .content h6,
+#region-content .content h1,
+#region-content .content h2,
+#region-content .content h3,
+#region-content .content h4,
+#region-content .content h5,
+#region-content .content h6 {
+  font-weight: bold;
+  padding-bottom: 0.5em;
+  padding-top: 0.25em;
+}
+/* line 17, ../sass/partials/_general.scss */
+#block-bean-business-rebild-contact .content h1,
+.business-frontpage-info .content h1,
+#region-content .content h1 {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+/* line 21, ../sass/partials/_general.scss */
+#block-bean-business-rebild-contact .content h2,
+.business-frontpage-info .content h2,
+#region-content .content h2 {
+  font-size: 1.25em;
+  line-height: 1.25em;
+}
+/* line 25, ../sass/partials/_general.scss */
+#block-bean-business-rebild-contact .content h3,
+.business-frontpage-info .content h3,
+#region-content .content h3 {
+  font-size: 1.08em;
+  line-height: 1.08em;
+}
+/* line 29, ../sass/partials/_general.scss */
+#block-bean-business-rebild-contact .content h4,
+.business-frontpage-info .content h4,
+#region-content .content h4 {
+  font-size: 1.05em;
+  line-height: 1.05em;
+}
+/* line 33, ../sass/partials/_general.scss */
+#block-bean-business-rebild-contact .content h5,
+.business-frontpage-info .content h5,
+#region-content .content h5 {
+  font-size: 1em;
+  line-height: 1em;
+}
+/* line 37, ../sass/partials/_general.scss */
+#block-bean-business-rebild-contact .content h6,
+.business-frontpage-info .content h6,
+#region-content .content h6 {
+  font-size: 1.0em;
+  line-height: 1.0em;
+}
+/* line 41, ../sass/partials/_general.scss */
+#block-bean-business-rebild-contact .content p,
+.business-frontpage-info .content p,
+#region-content .content p {
+  margin-bottom: 1.25em;
+  line-height: 1.25em;
+  word-wrap: break-word;
+}
+/* line 46, ../sass/partials/_general.scss */
+#block-bean-business-rebild-contact .content p:last-child,
+.business-frontpage-info .content p:last-child,
+#region-content .content p:last-child {
+  margin-bottom: 0;
+}
+/* line 49, ../sass/partials/_general.scss */
+#block-bean-business-rebild-contact .content strong,
+.business-frontpage-info .content strong,
+#region-content .content strong {
+  font-weight: bold;
+}
+/* line 52, ../sass/partials/_general.scss */
+#block-bean-business-rebild-contact .content em,
+.business-frontpage-info .content em,
+#region-content .content em {
+  font-style: italic;
+}
+/* line 55, ../sass/partials/_general.scss */
+#block-bean-business-rebild-contact .content sup,
+.business-frontpage-info .content sup,
+#region-content .content sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+/* line 59, ../sass/partials/_general.scss */
+#block-bean-business-rebild-contact .content sub,
+.business-frontpage-info .content sub,
+#region-content .content sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+/* line 64, ../sass/partials/_general.scss */
+#block-bean-business-rebild-contact .content a,
+.business-frontpage-info .content a,
+#region-content .content a {
+  color: #474747;
+  text-decoration: none;
+}
+/* line 68, ../sass/partials/_general.scss */
+#block-bean-business-rebild-contact .content a:hover,
+.business-frontpage-info .content a:hover,
+#region-content .content a:hover {
+  text-decoration: underline;
+}
+/* line 72, ../sass/partials/_general.scss */
+#block-bean-business-rebild-contact .content ul, #block-bean-business-rebild-contact .content ol,
+.business-frontpage-info .content ul,
+.business-frontpage-info .content ol,
+#region-content .content ul,
+#region-content .content ol {
+  margin-bottom: 1.25em;
+}
+/* line 78, ../sass/partials/_general.scss */
+#block-bean-business-rebild-contact .content ul:last-child,
+#block-bean-business-rebild-contact .content ol:last-child,
+.business-frontpage-info .content ul:last-child,
+.business-frontpage-info .content ol:last-child,
+#region-content .content ul:last-child,
+#region-content .content ol:last-child {
+  margin-bottom: 0;
+}
+/* line 84, ../sass/partials/_general.scss */
+#block-bean-business-rebild-contact .content #content-main ul li,
+.business-frontpage-info .content #content-main ul li,
+#region-content .content #content-main ul li {
+  list-style: disc;
+}
+/* line 89, ../sass/partials/_general.scss */
+#block-bean-business-rebild-contact .content #content-main ol li,
+.business-frontpage-info .content #content-main ol li,
+#region-content .content #content-main ol li {
+  list-style: decimal;
+}
+/* line 95, ../sass/partials/_general.scss */
+#block-bean-business-rebild-contact .content #content-main #region-content-sidebar ul li,
+.business-frontpage-info .content #content-main #region-content-sidebar ul li,
+#region-content .content #content-main #region-content-sidebar ul li {
+  list-style: none;
+  margin-left: 10px;
+}
+/* line 101, ../sass/partials/_general.scss */
+#block-bean-business-rebild-contact .content #content-main #region-content-sidebar ol li,
+.business-frontpage-info .content #content-main #region-content-sidebar ol li,
+#region-content .content #content-main #region-content-sidebar ol li {
+  list-style: none;
+  margin-left: 10px;
+}
+
+/* Contextual links */
+/* line 113, ../sass/partials/_general.scss */
+.page.contextual-links-region .contextual-links-wrapper {
+  z-index: 99999;
+}
+/* line 115, ../sass/partials/_general.scss */
+.page.contextual-links-region .contextual-links-wrapper ul.contextual-links {
+  z-index: 99999;
+}
+
+/* line 4, ../sass/wysiwyg.scss */
+body {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12px;
+}
