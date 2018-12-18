@@ -63,19 +63,6 @@ function edagsorden_importer_form($form, &$form_state) {
   $form['sbsys']['markup'] = array(
     '#markup' => "<p>".l(t('Import'), 'sbsys/sync', array('attributes' => array('class' => array('button'))))."</p>",
   );
-  $form['edagsorden'] = array(
-    '#type' => 'fieldset',
-    '#title' => "eDagsorden",
-  );  
-  $form['edagsorden']['edagsorden_root_url'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Root URL'),
-    '#description' => "Indtast URL'en til roden af eDagsorden Publicerings Service på windows serveren.",
-    '#default_value' => variable_get('edagsorden_root_url', '')
-  );
-  $form['edagsorden']['markup'] = array(
-    '#markup' => "<p>".l(t('Import'), 'edagsorden/sync', array('attributes' => array('class' => array('button'))))."</p>",
-  );
   return system_settings_form($form);
 }
 
@@ -95,9 +82,15 @@ function edagsorden_importer_ctools_plugin_directory($owner, $plugin_type) {
  */
 function edagsorden_importer_cron() {
 
+	// Delete old log messages.
+	db_delete('feeds_log')
+		->condition('request_time', REQUEST_TIME - 86400, '<')
+		->execute();
+
+	// Start import.
 	edagsorden_importer_agenda_import_sbsys();
   watchdog('edagsorden_importer', t("Agendas have been imported from SBSYS on cron"));
-  
+
 	// Feeds Log
   if ($importers = feeds_reschedule()) {
     foreach ($importers as $id) {
@@ -109,10 +102,6 @@ function edagsorden_importer_cron() {
     }
     feeds_reschedule(FALSE);
   }
-  // Expire old log entries.
-  db_delete('feeds_log')
-    ->condition('request_time', REQUEST_TIME - 86400, '<')
-    ->execute();
 }
 
 /**
@@ -121,9 +110,9 @@ function edagsorden_importer_cron() {
  * Link callback to trigger manual import
  */
 function edagsorden_importer_sync() {
-	
+
 	edagsorden_importer_agenda_import_edagsorden();
-	
+
   watchdog('edagsorden_importer', t("Agendas have been imported manually from eDagsorden"));
   drupal_set_message(t("The manual import from eDagsorden has been triggered"));
   drupal_goto("admin/config/services/agenda-importer");
@@ -131,13 +120,19 @@ function edagsorden_importer_sync() {
 
 /**
  * Manual Import - SBSYS
- * 
+ *
  * Link callback to trigger manual import
  */
 function edagsorden_importer_sbsys_sync() {
-	
+
+	// Delete old log messages.
+	db_delete('feeds_log')
+		->condition('request_time', REQUEST_TIME - 86400, '<')
+		->execute();
+
+	// Start import.
 	edagsorden_importer_agenda_import_sbsys();
-	
+
   watchdog('edagsorden_importer', t("Agendas have been imported manually from SBSYS"));
   drupal_set_message(t("The manual import from SBSYS has been triggered"));
   drupal_goto("admin/config/services/agenda-importer");
