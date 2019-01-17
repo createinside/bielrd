@@ -1,0 +1,54 @@
+diff --git a/workbench_moderation.module b/workbench_moderation.module
+index f7aa74a..bcba0df 100644
+--- a/workbench_moderation.module
++++ b/workbench_moderation.module
+@@ -2425,3 +2425,36 @@ function workbench_moderation_node_export_node_import_alter(&$node, $original_no
+   }
+   $node->revision = 1;
+ }
++
++/**
++ * Implements hook_drafty_predelete_revision().
++ */
++function workbench_moderation_drafty_predelete_revision($entity_type, $entity_id, $revision_id, $replaced_by) {
++  if ($entity_type == 'node') {
++    $revision = node_load($entity_id, $revision_id);
++
++    // Preserve the revision timestamp and uid from the old revision.
++    db_update('node_revision')
++      ->fields(array(
++        'timestamp' => $revision->revision_timestamp,
++        'uid' => $revision->revision_uid,
++      ))
++      ->condition('vid', $replaced_by)
++      ->execute();
++
++    // Remove the incorrect history from the new revision.
++    db_delete('workbench_moderation_node_history')
++      ->condition('nid', $entity_id)
++      ->condition('vid', $replaced_by)
++      ->execute();
++
++    // And then, move the history from the old revirsion to the new one.
++    db_update('workbench_moderation_node_history')
++      ->fields(array(
++        'vid' => $replaced_by,
++      ))
++      ->condition('nid', $entity_id)
++      ->condition('vid', $revision_id)
++      ->execute();
++  }
++}
+diff --git a/workbench_moderation.node.inc b/workbench_moderation.node.inc
+index 02ded4e..268e93c 100644
+--- a/workbench_moderation.node.inc
++++ b/workbench_moderation.node.inc
+@@ -100,7 +100,7 @@ function workbench_moderation_node_history_view($node) {
+   $query->leftJoin('users', 'u', 'r.uid = u.uid');
+   $query->addField('n', 'vid', 'live_revision');
+   $query->condition('n.nid', $node->nid)
+-    ->orderBy('r.vid', 'DESC')
++    ->orderBy('r.timestamp', 'DESC')
+     ->fields('r', array('nid', 'vid', 'title', 'log', 'uid', 'timestamp'))
+     ->fields('u', array('name'))
+     ->limit(30);
