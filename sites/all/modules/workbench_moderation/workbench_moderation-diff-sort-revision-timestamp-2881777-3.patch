@@ -34,4 +34,3 @@ index f7aa74a..0bcfc97 100644
 +  }
    $form_state['redirect'] =  'node/'. $form_state['values']['nid'] .'/moderation/diff/view/'. $old_vid .'/'. $new_vid;
  }
- 
