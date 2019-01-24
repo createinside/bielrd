@@ -247,11 +247,15 @@ function workbench_moderation_rules_condition_content_is_live_revision($node) {
  *  TRUE/FALSE depending on if the nodes current state matches selected state.
  */
 function workbench_moderation_rules_condition_contents_current_state($node, $moderation_state) {
-  if (!is_object($node)) {
+  if (!workbench_access_rules_condition_content_is_using_workbench_moderation($node)) {
     return FALSE;
   }
 
-  $state = (!empty($node->workbench_moderation)) ? $node->workbench_moderation['current']->state : $node->workbench_moderation_state_current;
+  if (!workbench_moderation_node_is_current_revision($node)) {
+    return FALSE;
+  }
+
+  $state = (!empty($node->workbench_moderation_state_new)) ? $node->workbench_moderation_state_new : $node->workbench_moderation_state_current;
 
   if ($state != $moderation_state) {
     return FALSE;
@@ -273,11 +277,17 @@ function workbench_moderation_rules_condition_contents_current_state($node, $mod
  *  TRUE/FALSE depending on if the nodes previous state matches selected state.
  */
 function workbench_moderation_rules_condition_contents_previous_state($node, $moderation_state) {
-  if (!is_object($node)) {
+  if (!workbench_access_rules_condition_content_is_using_workbench_moderation($node)) {
     return FALSE;
   }
 
-  if ($node->workbench_moderation['current']->from_state != $moderation_state) {
+  if (!workbench_moderation_node_is_current_revision($node)) {
+    return FALSE;
+  }
+
+  $state = (empty($node->is_new)) ? $node->workbench_moderation['my_revision']->state : $node->workbench_moderation_state_current;
+
+  if ($state != $moderation_state) {
     return FALSE;
   }
 
