@@ -21,6 +21,17 @@ function rebild_revisions_delete_menu() {
 }
 
 /**
+ * Implements hook_permission().
+ */
+function rebild_revisions_delete_permission() {
+  return array(
+    'administer rebild_revisions_delete' => array(
+      'title' => t('Administer revisions delete'),
+    ),
+  );
+}
+
+/**
  * Implements hook_cron().
  */
 function rebild_revisions_delete_cron() {
