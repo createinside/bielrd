@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>jquery.formprefill tests</title>
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.1.1.css">
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://code.jquery.com/qunit/qunit-2.1.1.js"></script>
+  <script src="../jquery.formprefill.js"></script>
+
+<script>
+
+// Stub a store.
+var Store = function() {
+  this.data = {};
+};
+Store.prototype.setItems = function(keys, value) {
+  for (var i = 0, j = keys.length; i < j; i++) {
+    this.data[keys[i]] = value;
+  }
+  return Promise.resolve(true);
+};
+Store.prototype.getFirst = function(keys) {
+  for (var i = 0, j = keys.length; i < j; i++) {
+    if (typeof this.data[keys[i]] !== 'undefined') return Promise.resolve(this.data[keys[i]]);
+  }
+  return Promise.reject(new Error('not found in stubbed store'));
+};
+
+</script>
+<script src="utils.test.js"></script>
+<script src="SessionStorage.test.js"></script>
+<script src="Api.test.js"></script>
+<script src="integration.test.js"></script>
+
+</body>
+</html>
