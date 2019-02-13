@@ -1,0 +1,72 @@
+<?php
+
+/**
+ * @file
+ * Install file.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function webform_draft_authlink_install() {
+
+  // Add draft_authlink column:
+  $table = 'webform_submissions';
+  $field = 'draft_authlink';
+  $spec  = array(
+    'description' => 'The authlink of the submision that gives access to the draft submitted form.',
+    'type' => 'varchar',
+    'length' => 255,
+  );
+  db_add_field($table, $field, $spec);
+
+  $table = 'webform';
+  $field = 'allow_draft_authlink';
+  $spec = array(
+    'description' => 'Boolean value for whether submissions to this form be saved as a draft and access by authlink.',
+    'type' => 'int',
+    'size' => 'tiny',
+    'not null' => TRUE,
+    'default' => 0,
+  );
+  db_add_field($table, $field, $spec);
+}
+
+/**
+ * Implements hook_schema().
+ */
+function webform_draft_authlink_uninstall() {
+
+  // Remove draft_authlink column:
+  $table = 'webform_submissions';
+  $field = 'draft_authlink';
+  db_drop_field($table, $field);
+
+  // Remove draft_authlink column:
+  $table = 'webform';
+  $field = 'allow_draft_authlink';
+  db_drop_field($table, $field);
+  
+}
+
+/**
+ * Implements hook_schema_alter().
+ */
+function webform_draft_authlink_schema_alter(&$schema) {
+
+  // webform: Add allow_draft_authlink field info.
+  $schema['webform']['fields']['allow_draft_authlink'] = array(
+    'description' => 'Boolean value for whether submissions to this form be saved as a draft and access by authlink.',
+    'type' => 'int',
+    'size' => 'tiny',
+    'not null' => TRUE,
+    'default' => 0,
+  );
+
+  // webform_submissions: Add draft_link field info.
+  $schema['webform_submissions']['fields']['draft_authlink'] = array(
+    'description' => 'The authlink of the submision that gives access to the draft submitted form.',
+    'type' => 'varchar',
+    'length' => 255,
+  );
+}

@@ -1,0 +1,13 @@
+name = Webform Draft Authlink
+description = Enables the creation of draft webform submissions and recovery it by authlink.
+core = 7.x
+package = Webform
+;configure = admin/config/content/webform
+dependencies[] = webform
+
+; Information added by Drupal.org packaging script on 2016-04-18
+version = "7.x-1.0"
+core = "7.x"
+project = "webform_draft_authlink"
+datestamp = "1460962440"
+
