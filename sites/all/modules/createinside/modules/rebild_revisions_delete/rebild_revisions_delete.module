@@ -21,6 +21,17 @@ function rebild_revisions_delete_menu() {
 }
 
 /**
+ * Implements hook_permission().
+ */
+function rebild_revisions_delete_permission() {
+  return array(
+    'administer rebild_revisions_delete' => array(
+      'title' => t('Administer revisions delete'),
+    ),
+  );
+}
+
+/**
  * Implements hook_cron().
  */
 function rebild_revisions_delete_cron() {
@@ -65,6 +76,17 @@ function rebild_revisions_delete_run($run_as_batch = FALSE) {
         $revisions_by_nodeid = rebild_revisions_delete_get_revisions_by_node_type($node_type->type);
 
         foreach ($revisions_by_nodeid as $nid => $revisions) {
+          // Get timestamp of current published revision.
+          $current_published_timestamp = FALSE;
+          foreach ($revisions as $revision) {
+            if ($revision->node_current_published_vid == $revision->vid) {
+              $current_published_timestamp = $revision->timestamp;
+              break;
+            }
+          }
+          if (!$current_published_timestamp) {
+            continue;
+          }
 
           $revisions_amount = count($revisions);
           if ($revisions_amount > $node_type_config['minimum_revisions_to_keep']) {
@@ -73,15 +95,20 @@ function rebild_revisions_delete_run($run_as_batch = FALSE) {
             $revisions_possible_delete = array_slice($revisions, 0, $revisions_amount_possible_delete);
 
             foreach ($revisions_possible_delete as $revision) {
-              if ($revision->timestamp < $timestamp_older_than_days_back_limit) {
-                if ($run_as_batch) {
-                  $batch['operations'][] = array(
-                    'rebild_revisions_delete_revision_delete',
-                    array($revision),
-                  );
-                }
-                else {
-                  rebild_revisions_delete_revision_delete($revision);
+
+              // Only revisions older than current published can be deleted.
+              if ($revision->timestamp < $current_published_timestamp) {
+                // Only revisions older than time limit can be deleted.
+                if ($revision->timestamp < $timestamp_older_than_days_back_limit) {
+                  if ($run_as_batch) {
+                    $batch['operations'][] = array(
+                      'rebild_revisions_delete_revision_delete',
+                      array($revision),
+                    );
+                  }
+                  else {
+                    rebild_revisions_delete_revision_delete($revision);
+                  }
                 }
               }
             }
@@ -124,12 +151,15 @@ function rebild_revisions_delete_clean_workbench_moderation_history() {
  *   Revision object.
  */
 function rebild_revisions_delete_revision_delete($revision) {
-  node_revision_delete($revision->vid);
+  $revision_deleted = node_revision_delete($revision->vid);
 
-  db_delete('workbench_moderation_node_history')
-    ->condition('nid', $revision->nid)
-    ->condition('vid', $revision->vid)
-    ->execute();
+  if ($revision_deleted === TRUE) {
+    db_delete('workbench_moderation_node_history')
+      ->condition('nid', $revision->nid)
+      ->condition('vid', $revision->vid)
+      ->condition('is_current', '0', '=')
+      ->execute();
+  }
 }
 
 /**
@@ -148,6 +178,7 @@ function rebild_revisions_delete_get_revisions_by_node_type($type) {
   $query = db_select('node_revision', 'nr');
   $query->join('node', 'n', 'nr.nid = n.nid');
   $query->fields('n', array('type'));
+  $query->addField('n', 'vid', 'node_current_published_vid');
   $query->fields('nr', array('nid', 'vid', 'timestamp', 'title'));
   $query->condition('n.type', $type);
   $revisions = $query->execute()->fetchAll();
