@@ -1,0 +1,79 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function bellcom_webform_schema() {
+  $schema['bellcom_webform'] = array(
+    'description' => 'Database containing the settings of bellcom_webform.',
+    'fields' => array(
+      'nid' => array(
+        'description' => 'The node identifier of a bellcom_webform.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'enabled' => array(
+        'description' => 'Show if a pdf will be generated: 0: OFF, 1: ON.',
+        'type' => 'int',
+        'size' => 'tiny',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+
+      'data' => array(
+        'type' => 'blob',
+        'size' => 'big',
+        'serialize' => TRUE,
+        'description' => 'Serialized data containing the bellcom_webform properties.',
+      ),
+    ),
+    'primary key' => array('nid'),
+  );
+
+  $schema['bellcom_webform_custom_pdf_name'] = array(
+    'description' => 'Database containing the settings of bellcom_webform.',
+    'fields' => array(
+      'nid' => array(
+        'description' => 'The node identifier of a bellcom_webform.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'name' => array(
+        'description' => 'The custom PDF name.',
+        'type' => 'varchar',
+        'length' => 255,
+      ),
+    ),
+    'primary key' => array('nid'),
+  );
+
+  return $schema;
+}
+
+/**
+ * Creates the database schema for storing custom names for PDF rendered files
+ */
+function bellcom_webform_update_7101() {
+  $schema['bellcom_webform_custom_pdf_name'] = array(
+    'description' => 'Database containing the settings of bellcom_webform.',
+    'fields' => array(
+      'nid' => array(
+        'description' => 'The node identifier of a bellcom_webform.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'name' => array(
+        'description' => 'The custom PDF name.',
+        'type' => 'varchar',
+        'length' => 255,
+      ),
+    ),
+    'primary key' => array('nid'),
+  );
+
+  db_create_table('bellcom_webform_custom_pdf_name', $schema['bellcom_webform_custom_pdf_name']);
+}

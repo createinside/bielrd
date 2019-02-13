@@ -1,0 +1,8 @@
+name = OS2forms Encrypt
+core = 7.x
+package = OS2Forms
+version = 7.x-1.0
+dependencies[] = encrypt
+dependencies[] = webform_encrypt
+features[features_api][] = api:2
+project path = sites/all/modules/os2forms/submodules

@@ -1,0 +1,28 @@
+<?php
+  
+/**
+ * Implemnts hook_webform_component_info().
+ */
+function bellcom_webform_date_popup_webform_component_info() {
+  $components = array();
+  $components['date_popup'] = array(
+    'label' => t('Date popup'),
+    'description' => t('Create date popup as alaternative of standard webform date field.'),
+    'features' => array(
+      'csv' => FALSE,
+      'email' => TRUE,
+      'email_address' => FALSE,
+      'email_name' => FALSE,
+      'required' => FALSE,
+      'title_display' => TRUE,
+      'title_inline' => FALSE,
+      'conditional' => FALSE,
+      'group' => FALSE,
+      'spam_analysis' => FALSE,
+      'attachment' => FALSE,
+    ),
+    'file' => 'components/date_popup.inc',
+  );
+  return $components;
+} 
+

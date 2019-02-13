@@ -1,0 +1,135 @@
+<?php
+module_load_include('inc', 'bellcom_webform', 'includes/bellcom_webform.custom_pdf_name');
+module_load_include('inc', 'bellcom_webform', 'includes/bellcom_webform.xml_generation');
+module_load_include('inc', 'bellcom_webform', 'includes/bellcom_webform.settings');
+
+/**
+ * Implements hook_menu().
+ */
+function bellcom_webform_menu() {
+  $items = array();
+
+  $items['node/%webform_menu/webform/sbsys_xml'] = array(
+    'title' => 'SBSYS XML',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('bellcom_webform_sbsys_settings_form', 1),
+    'access callback' => 'node_access',
+    'access arguments' => array('update', 1),
+    'file' => 'includes/bellcom_webform.settings.inc',
+    'weight' => 4,
+    'type' => MENU_LOCAL_TASK,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_theme_registry_alter
+ */
+function bellcom_webform_theme_registry_alter(&$theme_registry) {
+  $theme_registry['webform2pdf_filename']['function'] = 'bellcom_webform_webform2pdf_filename';
+}
+
+function bellcom_webform_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'webform2pdf_edit_form') {
+    $name = db_select('bellcom_webform_custom_pdf_name', 'b')
+      ->fields('b', array('name'))
+      ->condition('nid', $form['nid']['#value'])
+      ->execute()
+      ->fetchField();
+
+    $form['base']['bellcom_webform_custom_pdf_name'] = array(
+      '#title' => t('Custom PDF name'),
+      '#type' => 'textfield',
+      '#maxlength' => 255,
+      '#default_value' => $name,
+      '#description' => t('Provide a custom PDF name e.g. <i>myform.pdf</i>, if none is specified a default one will be used. <br>
+      <b>Please note that extension (.pdf) is a mandatory part of the name</b><br><br>
+      Available tokens: <br>
+      <b>@nid</b> => node id of the form<br>
+      <b>@sid</b> => submission id
+      '),
+    );
+
+    $form['#submit'][] = 'bellcom_webform_custom_pdf_name_form_submit';
+  }
+}
+
+/*
+* bellcom_webform_mail_alter: hook_mail_alter
+*/
+function bellcom_webform_mail_alter(&$message) {
+  if (($message['id'] == 'webform_submission') && isset($message['params']['node']) && isset($message['params']['submission'])) {
+    $node = $message['params']['node'];
+    $submission = $message['params']['submission'];
+    $config = bellcom_webform_get_setting($node->nid);
+
+    $filename = 'os2forms.xml';
+    if ($config['enabled']) {
+      // Generating submission id.
+      if ($config['anonymize_submission'] && module_exists('os2forms_server_communication')) {
+        $generated_submission_id = os2forms_server_communication_generate_submission_id();
+        $submission_id_cid = (string) _os2forms_server_communication_get_cid_by_form_key($node->nid, 'submission_id');
+        $message['params']['submission']->data[$submission_id_cid][0] = $generated_submission_id;
+      }
+
+      $html_capable = variable_get('webform_email_html_capable', FALSE);
+
+      if ($html_capable) {
+        if (module_exists('mimemail')) {
+          $attachment = new stdClass;
+          $attachment->filecontent = bellcom_webform_module_sbsys_xml($message['params']);
+          $attachment->filename = $filename;
+          $attachment->filemime = 'text/xml';
+          $message['params']['attachments'][] = $attachment;
+        }
+      }
+      else {
+        //find existing trenner
+        preg_match('/\multipart\/mixed;\ boundary=\"(.*)\"/', $message['headers']['Content-Type'], $matches);
+        $trenner = $matches[1];
+
+        //remove message end
+        $message['body'][0] = str_replace("--$trenner--", '', $message['body'][0]);
+
+        //and new content
+        $message['body'][0] .= "\n\n--" . $trenner . "\n";
+        $message['body'][0] .= "Content-Type: text/xml; name=\"$filename\"\n";
+        $message['body'][0] .= "Content-Transfer-Encoding: base64\n";
+        $message['body'][0] .= "Content-Disposition: attachment; filename=\"$filename\"\n\n";
+        $message['body'][0] .= chunk_split(base64_encode(
+          bellcom_webform_module_sbsys_xml($message['params'])
+        ));
+        $message['body'][0] .= "\n\n";
+        $message['body'][0] .= "--" . $trenner . "--";
+      }
+
+      // Scheduling submission to be cleared.
+      if ($config['anonymize_submission'] && module_exists('os2forms_server_communication')) {
+        os2forms_server_communication_schedule_submission_clearing($node->nid, $submission->sid, $generated_submission_id);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ *
+ * Make sure that our mail_alter is called AFTER the same hook provided in webform2pdf
+ */
+function bellcom_webform_module_implements_alter(&$implementations, $hook) {
+  if ($hook == 'mail_alter') {
+    $group = $implementations['bellcom_webform'];
+    unset($implementations['bellcom_webform']);
+    $implementations['bellcom_webform'] = $group;
+  }
+}
+
+function bellcom_webform_hide_submit_alter(&$hide_submit_settings) {
+  $current_path = current_path();
+
+  //$hide_submit_settings['hide_submit']['hide_submit_status'] = FALSE;
+  if (strpos($current_path, 'node/') !== 0) {
+    $hide_submit_settings['hide_submit']['hide_submit_status'] = FALSE;
+  }
+}

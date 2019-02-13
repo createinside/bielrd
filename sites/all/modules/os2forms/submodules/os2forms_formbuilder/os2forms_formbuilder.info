@@ -1,0 +1,12 @@
+name = OS2forms Formbuilder
+core = 7.x
+package = OS2Forms
+version = 7.x-1.0
+dependencies[] = ctools
+dependencies[] = form_builder
+dependencies[] = form_builder_webform
+dependencies[] = options_element
+dependencies[] = webform_draggable_list
+dependencies[] = webform_draggable_list_formbuilder
+features[features_api][] = api:2
+project path = sites/all/modules/os2forms/submodules

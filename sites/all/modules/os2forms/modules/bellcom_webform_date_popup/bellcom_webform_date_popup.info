@@ -1,0 +1,9 @@
+name = Bellcom Webform Date Popup
+description = Date popup component for webforms
+core = 7.x
+package = Bellcom
+stylesheets[all][] = css/bootstrap-datepicker3.min.css
+stylesheets[all][] = css/bellcom_webform_date_popup.css
+scripts[] = js/bootstrap-datepicker.min.js
+scripts[]=  js/bootstrap-datepicker.da.min.js
+scripts[]=  js/init.js
