@@ -20,7 +20,7 @@
  */
 function omega_pager($vars) {
   global $pager_page_array, $pager_total;
-  
+
   $tags = $vars['tags'];
   $element = $vars['element'];
   $parameters = $vars['parameters'];
@@ -46,7 +46,7 @@ function omega_pager($vars) {
     $i = $i + ($pager_max - $pager_last);
     $pager_last = $pager_max;
   }
-  
+
   if ($i <= 0) {
     // Adjust "center" if at start of query.
     $pager_last = $pager_last + (1 - $i);
@@ -66,7 +66,7 @@ function omega_pager($vars) {
         'data' => $li_first,
       );
     }
-    
+
     if ($li_previous) {
       $items[] = array(
         'class' => array('pager-previous'),
@@ -82,7 +82,7 @@ function omega_pager($vars) {
           'data' => '…',
         );
       }
-      
+
       // Now generate the actual pager piece.
       for (; $i <= $pager_last && $i <= $pager_max; $i++) {
         if ($i < $pager_current) {
@@ -91,14 +91,14 @@ function omega_pager($vars) {
             'data' => theme('pager_previous', array('text' => $i, 'element' => $element, 'interval' => ($pager_current - $i), 'parameters' => $parameters)),
           );
         }
-        
+
         if ($i == $pager_current) {
           $items[] = array(
             'class' => array('pager-current'),
             'data' => $i,
           );
         }
-        
+
         if ($i > $pager_current) {
           $items[] = array(
             'class' => array('pager-item'),
@@ -106,7 +106,7 @@ function omega_pager($vars) {
           );
         }
       }
-      
+
       if ($i < $pager_max) {
         $items[] = array(
           'class' => array('pager-ellipsis'),
@@ -114,7 +114,7 @@ function omega_pager($vars) {
         );
       }
     }
-    
+
     // End generation.
     if ($li_next) {
       $items[] = array(
@@ -128,7 +128,7 @@ function omega_pager($vars) {
         'data' => $li_last,
       );
     }
-    
+
     return '<h2 class="element-invisible">' . t('Pages') . '</h2>' . theme('item_list', array(
       'items' => $items,
       'attributes' => array('class' => array('pager', 'clearfix')),
@@ -153,7 +153,7 @@ function omega_item_list($vars) {
   if (!empty($items)) {
     $output .= "<$type" . drupal_attributes($attributes) . '>';
     $num_items = count($items);
-    
+
     foreach ($items as $i => $item) {
       $attributes = array();
       $children = array();
@@ -173,34 +173,34 @@ function omega_item_list($vars) {
       else {
         $data = $item;
       }
-      
+
       if (count($children) > 0) {
         // Render nested list.
         $data .= theme_item_list(array('items' => $children, 'title' => NULL, 'type' => $type, 'attributes' => $attributes));
       }
-      
+
       if ($i == 0) {
         $attributes['class'][] = 'first';
       }
-      
+
       if ($i == $num_items - 1) {
         $attributes['class'][] = 'last';
       }
-      
+
       $output .= '<li' . drupal_attributes($attributes) . '>' . $data . "</li>";
     }
-    
+
     $output .= "</$type>";
   }
-  
+
   $output .= '</div>';
-  
+
   return $output;
 }
 
 /**
  * Implements hook_views_mini_pager().
- * 
+ *
  * This custom theming for views_mini_pager changes the previous/next
  * links to remove theme completely when not present to avoid the
  * &nbsp; messing up the spacing/theming in the list.
@@ -230,7 +230,7 @@ function omega_views_mini_pager($vars) {
       'parameters' => $parameters,
     )
   );
-  
+
   if (empty($li_previous)) {
     $li_previous = "";
   }
@@ -243,7 +243,7 @@ function omega_views_mini_pager($vars) {
       'parameters' => $parameters,
     )
   );
-  
+
   if (empty($li_next)) {
     $li_next = "";
   }
@@ -263,7 +263,7 @@ function omega_views_mini_pager($vars) {
       'class' => array('pager-next'),
       'data' => $li_next,
     );
-    
+
     return theme('item_list',
       array(
         'items' => $items,
@@ -280,14 +280,14 @@ function omega_views_mini_pager($vars) {
  */
 function omega_links($vars) {
   global $language_url;
-  
+
   $links = $vars['links'];
   $attributes = $vars['attributes'];
   $heading = $vars['heading'];
-  
+
   $output = '';
 
-  if (count($links) > 0) {
+  if (is_array($links) && (count($links) > 0)) {
     // Treat the heading first if it is present to prepend it to the list of links.
     if (!empty($heading)) {
       if (is_string($heading)) {
@@ -298,12 +298,12 @@ function omega_links($vars) {
           'level' => 'h2',
         );
       }
-      
+
       $output .= '<' . $heading['level'];
       if (!empty($heading['class'])) {
         $output .= drupal_attributes(array('class' => $heading['class']));
       }
-      
+
       $output .= '>' . check_plain($heading['text']) . '</' . $heading['level'] . '>';
     }
 
@@ -319,20 +319,20 @@ function omega_links($vars) {
       if ($i == 1) {
         $class[] = 'first';
       }
-      
+
       if ($i == $num_links) {
         $class[] = 'last';
       }
-      
+
       if (isset($link['href']) && ($link['href'] == $_GET['q'] || ($link['href'] == '<front>' && drupal_is_front_page())) && (empty($link['language']) || $link['language']->language == $language_url->language)) {
         $class[] = 'active';
       }
-      
+
       // Add a class for has a sub-menu
       if(isset($link['below'])) {
         $class[] = 'has-subitems';
       }
-      
+
       $output .= '<li' . drupal_attributes(array('class' => $class)) . '>';
 
       if (isset($link['href'])) {
@@ -344,15 +344,15 @@ function omega_links($vars) {
         if (empty($link['html'])) {
           $link['title'] = check_plain($link['title']);
         }
-        
+
         $span_attributes = '';
         if (isset($link['attributes'])) {
           $span_attributes = drupal_attributes($link['attributes']);
         }
-        
+
         $output .= '<span' . $span_attributes . '>' . $link['title'] . '</span>';
       }
-      
+
       // Theme in nested links in the UL
       if(isset($link['below'])) {
         $output .= theme('links', array(
@@ -362,7 +362,7 @@ function omega_links($vars) {
           ),
         ));
       }
-      
+
       $i++;
       $output .= "</li>";
     }
@@ -411,7 +411,7 @@ function omega_menu_local_task($vars) {
     if (empty($link['localized_options']['html'])) {
       $link['title'] = check_plain($link['title']);
     }
-    
+
     $link['localized_options']['html'] = TRUE;
     $link_text = t('!local-task-title!active', array('!local-task-title' => $link['title'], '!active' => $active));
   }
