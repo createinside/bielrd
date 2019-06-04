@@ -46,7 +46,10 @@ function diff_node_revisions($form, &$form_state, $node) {
     // split the array.
     $page = isset($_GET['page']) ? $_GET['page'] : '0';
     $revision_chunks = array_chunk($revision_list, REVISION_LIST_SIZE);
-    $revisions = $revision_chunks[$page];
+    $revisions = array();
+    foreach ($revision_chunks[$page] as $revision) {
+      $revisions[$revision->vid] = $revision;
+    }
     // Set up global pager variables as would 'pager_query' do.
     // These variables are then used in the theme('pager') call later.
     global $pager_page_array, $pager_total, $pager_total_items;
