@@ -1,5 +1,5 @@
 diff --git a/diff.module b/diff.module
-index d3050e3..b26d57a 100644
+index a8193c0..536947e 100644
 --- a/diff.module
 +++ b/diff.module
 @@ -265,8 +265,9 @@ function diff_entity_info_alter(&$entity_info) {
@@ -33,7 +33,7 @@ index d3050e3..b26d57a 100644
      }
      $build['#prefix'] = isset($build['#prefix']) ? "<div id='diff-inline-{$node->nid}'>" . $build['#prefix'] : "<div id='diff-inline-{$node->nid}'>";
 diff --git a/diff.pages.inc b/diff.pages.inc
-index 285eb1e..9a586e5 100644
+index 285eb1e..7c3ec88 100644
 --- a/diff.pages.inc
 +++ b/diff.pages.inc
 @@ -9,7 +9,7 @@
@@ -54,7 +54,19 @@ index 285eb1e..9a586e5 100644
    $form['nid'] = array(
      '#type' => 'hidden',
      '#value' => $node->nid,
-@@ -58,6 +58,8 @@ function diff_node_revisions($form, $form_state, $node) {
+@@ -46,7 +46,10 @@ function diff_node_revisions($form, $form_state, $node) {
+     // split the array.
+     $page = isset($_GET['page']) ? $_GET['page'] : '0';
+     $revision_chunks = array_chunk($revision_list, REVISION_LIST_SIZE);
+-    $revisions = $revision_chunks[$page];
++    $revisions = array();
++    foreach ($revision_chunks[$page] as $revision) {
++      $revisions[$revision->vid] = $revision;
++    }
+     // Set up global pager variables as would 'pager_query' do.
+     // These variables are then used in the theme('pager') call later.
+     global $pager_page_array, $pager_total, $pager_total_items;
+@@ -58,6 +61,8 @@ function diff_node_revisions($form, $form_state, $node) {
      $revisions = $revision_list;
    }
  
@@ -63,7 +75,7 @@ index 285eb1e..9a586e5 100644
    $revert_permission = FALSE;
    if ((user_access('revert revisions') || user_access('administer nodes')) && node_access('update', $node)) {
      $revert_permission = TRUE;
-@@ -146,8 +148,15 @@ function diff_node_revisions_validate($form, &$form_state) {
+@@ -146,8 +151,15 @@ function diff_node_revisions_validate($form, &$form_state) {
   */
  function diff_node_revisions_submit($form, &$form_state) {
    // The ids are ordered so the old revision is always on the left.
@@ -81,7 +93,7 @@ index 285eb1e..9a586e5 100644
    if (isset($_GET['destination'])) {
      unset($_GET['destination']);
    }
-@@ -181,7 +190,7 @@ function diff_diffs_show($node, $old_vid, $new_vid, $state = NULL) {
+@@ -181,7 +193,7 @@ function diff_diffs_show($node, $old_vid, $new_vid, $state = NULL) {
    if (node_is_page($node)) {
      drupal_set_title(t('Revisions for %title', array('%title' => $node->title)), PASS_THROUGH);
    }
@@ -90,7 +102,7 @@ index 285eb1e..9a586e5 100644
  
    $old_node = node_load($node->nid, $old_vid);
    $new_node = node_load($node->nid, $new_vid);
-@@ -652,7 +661,7 @@ function diff_inline_show($node, $vid = 0, $metadata = TRUE) {
+@@ -652,7 +664,7 @@ function diff_inline_show($node, $vid = 0, $metadata = TRUE) {
    node_build_content($new_node);
    $new = drupal_render($new_node->content);
  
