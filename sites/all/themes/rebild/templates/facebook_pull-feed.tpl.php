@@ -59,7 +59,7 @@ $i = 0;
   <span class="icon-brand"></span>
   <p>
     <strong>Følg os på Facebook</strong>
-    <span>Det gør mere end 7.000</span>
+    <span>Det gør mere end 8.000</span>
   </p>
   </a>
 </div>
