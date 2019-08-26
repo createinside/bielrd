@@ -106,6 +106,6 @@
       </div>
     <?php endif; ?>
     <div class="print-links"><?php print theme('print_url_list'); ?></div>
-    <?php print $print['footer_scripts']; ?>
+    <?php print $footer_scripts; ?>
   </body>
 </html>
