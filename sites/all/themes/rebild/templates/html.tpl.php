@@ -14,6 +14,29 @@
   <?php print $scripts; ?>
   <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="3c5a15b3-4d3e-4613-a636-3b376d3b8927" type="text/javascript" async></script>
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2279212298795210');
+    fbq('init', '2434939169898709');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1"
+    src="https://www.facebook.com/tr?id=2279212298795210&ev=PageView
+    &noscript=1"/>
+    <img height="1" width="1"
+    src="https://www.facebook.com/tr?id=2434939169898709&ev=PageView
+    &noscript=1"/>
+  </noscript>
+  <!-- End Facebook Pixel Code -->
 </head>
 <body<?php print $attributes;?>>
 
