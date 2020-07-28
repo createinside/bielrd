@@ -44,21 +44,22 @@
  * @ingroup themeable
  */
 ?>
-
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <?php if (!$label_hidden): ?>
     <div class="field-label"<?php print $title_attributes; ?>><?php print $label ?>:&nbsp;</div>
   <?php endif; ?>
   <?php 
-	  $com_ids = ""; 
-	  $i=0;
-		foreach ($items as $delta => $item):
-			if($i!=0) $com_ids .= " ";
-			$com_ids .= render($item);
-			$i++;
-		endforeach;
-	?>
+    $com_ids = "";
+    $i = 0;
+    foreach ($items as $delta => $item) {
+      if ($i != 0) {
+        $com_ids .= " ";
+      }
+      $com_ids .= render($item);
+      $i++;
+    }
+  ?>
   <div class="field-items"<?php print $content_attributes; ?>>
-	 	<?php print views_embed_view("agenda_overview", "embedded_page", $com_ids); ?>
+    <?php print views_embed_view("agenda_overview", "embedded_page", $com_ids); ?>
   </div>
 </div>
