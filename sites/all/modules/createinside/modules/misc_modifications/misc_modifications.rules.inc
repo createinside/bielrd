@@ -1,39 +1,39 @@
 <?php
 
 function misc_modifications_rules_action_info() {
-	$actions = array(
+  $actions = array(
     'misc_modifications_action_1' => array(
       'group' => t('MISC'),
       'label' => t('node->workbench_moderation[updating_live_revision] = 1'),
-	    'parameter' => array(
-	      'node' => array(
-	      	'type' => 'node',
-					'label' => 'Node',
-	      ),
-			),
+      'parameter' => array(
+        'node' => array(
+          'type' => 'node',
+          'label' => 'Node',
+        ),
+      ),
     ),
     'misc_modifications_action_2' => array(
       'group' => t('MISC'),
       'label' => t('subscription_email->field_subscription_attach_view[LANGUAGE_NONE][0][view_id] = subscription_news:nyheder'),
-	    'parameter' => array(
-	      'subscription_email' => array(
-	      	'type' => 'node',
-					'label' => 'Node',
-	      ),
-			),
+      'parameter' => array(
+        'subscription_email' => array(
+          'type' => 'node',
+          'label' => 'Node',
+        ),
+      ),
     ),
     'misc_modifications_action_3' => array(
       'group' => t('MISC'),
       'label' => t('subscription_email->field_subscription_attach_view[LANGUAGE_NONE][0][view_id] = subscription_offerings:nyheder;'),
-	    'parameter' => array(
-	      'subscription_email' => array(
-	      	'type' => 'node',
-					'label' => 'Node',
-	      ),
-			),
+      'parameter' => array(
+        'subscription_email' => array(
+          'type' => 'node',
+          'label' => 'Node',
+        ),
+      ),
     ),
-	);
-	return $actions;
+  );
+  return $actions;
 }
 
 function misc_modifications_action_1($node) {
