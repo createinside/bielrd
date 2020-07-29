@@ -26,7 +26,7 @@ function mail_subscription_rules_event_info() {
 
 /**
  * Implements hook_rules_action_info()
-**/ 
+ */
 function mail_subscription_rules_action_info() {
 	$actions = array(
 	  'mail_subscription_send' => array(
