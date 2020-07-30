@@ -1,4 +1,5 @@
 <?php
+
 function misc_modifications_views_pre_view(&$view, &$display_id, &$args) {
   if(
     $view->name == 'agenda_overview'

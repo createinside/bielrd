@@ -24,4 +24,7 @@ include_once 'misc_modifications.blocks.inc';
 // Changes to header of view "agenda_overview" with display "embedded_page".
 include_once 'misc_modifications.views.inc';
 
+// Changes to rules.
+include_once 'misc_modifications.rules.inc';
+
 // eof
