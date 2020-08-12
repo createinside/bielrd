@@ -1,21 +1,30 @@
 <?php 
-/**
-* Inkluder filer hvori vi foretager vores modifikationer.
-**/
 
-// Ændringer til Metatag modulet, er inkluderet her, felter er gjort required og andre helt fjernet.
+// Changes to Metatag module, fields are made required and others completely removed
 include_once 'misc_modifications.metatag_alter.inc';
-// Ændringer til Wysiwyg editor (TinyMCE), skjuler hjælpetekster vha. restriktioner på definerede felter.
+
+// Changes to Wysiwyg editor (TinyMCE), hides help texts using restrictions on defined fields
 include_once 'misc_modifications.wysiwyg_alter.inc';
-// Ændringer til workbench landingpage - My profile. Tilføjer classer, views og menu items.
+
+// Changes to workbench landingpage - My profile. Adds classes, views and menu items
 include_once 'misc_modifications.workbench_alter.inc';
-// Ændringer til page node form 
+
+// Changes to page node form.
 include_once 'misc_modifications.node_add_form_alter.inc';
-//Ændringer til visning af nodes.
+
+// Changes to view of nodes.
 include_once 'misc_modifications.node_view_alter.inc';
-// Fix til redirect modulet - fjerner bug med Infinite Loops. 
+
+// Fix to redirect modulet - removes bug with Infinite Loops.
 include_once 'misc_modifications.redirect_fix.inc';
-// Custom blocks - user menu block
+
+// Custom blocks - user menu block.
 include_once 'misc_modifications.blocks.inc';
 
-?>
+// Changes to header of view "agenda_overview" with display "embedded_page".
+include_once 'misc_modifications.views.inc';
+
+// Changes to rules.
+include_once 'misc_modifications.rules.inc';
+
+// eof
